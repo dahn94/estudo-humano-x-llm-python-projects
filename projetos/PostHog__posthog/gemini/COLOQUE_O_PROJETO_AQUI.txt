@@ -1,1 +1,0 @@
-Coloque aqui o projeto gemini gerado com prompts/PostHog__posthog/prompt_recriacao.txt.

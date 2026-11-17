@@ -1,0 +1,41 @@
+# Ferramentas do estudo, com as versões congeladas em configuracao/ferramentas.yaml.
+#   docker compose up -d sonarqube        servidor (via scripts/sonarqube.py preparar)
+#   semgrep e scanner são chamados por scripts/analisar.py com `docker compose run`.
+name: vulnerabilidades-humano-vs-llm
+
+services:
+  sonarqube:
+    image: sonarqube:26.9.0.129388-community
+    ports:
+      - "127.0.0.1:9000:9000"
+    environment:
+      SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: "true"
+    volumes:
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+      - sonarqube_logs:/opt/sonarqube/logs
+
+  semgrep:
+    image: semgrep/semgrep:1.176.1
+    profiles: [ferramentas]
+    working_dir: /src
+    environment:
+      SEMGREP_SEND_METRICS: "off"
+      SEMGREP_ENABLE_VERSION_CHECK: "0"
+    volumes:
+      - ./configuracao:/regras:ro
+
+  scanner:
+    # 12.1.0.3233 = versão da imagem; 8.0.1 = SonarScanner CLI embutido
+    image: sonarsource/sonar-scanner-cli:12.1.0.3233_8.0.1
+    platform: linux/amd64  # a imagem só é publicada para amd64
+    profiles: [ferramentas]
+    environment:
+      SONAR_HOST_URL: http://sonarqube:9000
+      SONAR_SCANNER_JAVA_OPTS: "-Xms256m -Xmx2048m"
+    depends_on: [sonarqube]
+
+volumes:
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_logs:

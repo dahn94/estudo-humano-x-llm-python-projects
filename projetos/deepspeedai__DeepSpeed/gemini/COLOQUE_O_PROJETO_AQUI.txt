@@ -1,1 +1,0 @@
-Coloque aqui o projeto gemini gerado com prompts/deepspeedai__DeepSpeed/prompt_recriacao.txt.

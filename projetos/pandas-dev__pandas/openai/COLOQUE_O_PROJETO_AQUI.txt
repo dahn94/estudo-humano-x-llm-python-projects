@@ -1,1 +1,0 @@
-Coloque aqui o projeto openai gerado com prompts/pandas-dev__pandas/prompt_recriacao.txt.

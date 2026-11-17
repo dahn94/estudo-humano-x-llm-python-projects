@@ -1,1 +1,0 @@
-Coloque aqui o projeto gemini gerado com prompts/frappe__erpnext/prompt_recriacao.txt.

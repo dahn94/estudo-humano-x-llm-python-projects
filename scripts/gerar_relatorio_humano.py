@@ -8,7 +8,7 @@ import yaml
 
 
 ROOT = Path(__file__).resolve().parent.parent
-OUTPUT_DIR = ROOT / "resultados" / "resultados_scan_humano"
+OUTPUT_DIR = ROOT / "resultados" / "humano"
 
 
 def limpar_caminho(valor: str) -> str:

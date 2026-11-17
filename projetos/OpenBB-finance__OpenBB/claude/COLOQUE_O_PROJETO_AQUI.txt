@@ -1,1 +1,0 @@
-Coloque aqui o projeto claude gerado com prompts/OpenBB-finance__OpenBB/prompt_recriacao.txt.

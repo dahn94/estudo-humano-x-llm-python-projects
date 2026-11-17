@@ -1,1 +1,0 @@
-Coloque aqui o projeto claude gerado com prompts/PaddlePaddle__PaddleOCR/prompt_recriacao.txt.

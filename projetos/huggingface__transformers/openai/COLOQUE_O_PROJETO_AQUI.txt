@@ -1,1 +1,0 @@
-Coloque aqui o projeto openai gerado com prompts/huggingface__transformers/prompt_recriacao.txt.

@@ -1,1 +1,0 @@
-Coloque aqui o projeto gemini gerado com prompts/ageitgey__face_recognition/prompt_recriacao.txt.

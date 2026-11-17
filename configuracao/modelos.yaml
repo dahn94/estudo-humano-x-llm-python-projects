@@ -1,18 +1,16 @@
+# Modelos avaliados (seção 2.5 do artigo). Uma geração por modelo e projeto.
+# Entrada: prompts/<slug>/prompt_recriacao.txt. Saída: projetos/<slug>/<origem>/, sem edição manual.
+# Metadados de cada geração (data, versão exata, temperatura) vão em
+# projetos/<slug>/<origem>/metadata_geracao.json e entram na tabela final.
 execucoes_por_modelo: 1
 
 modelos:
   openai:
-    versao: ""
-    temperatura: ""
-    api_key_env: "OPENAI_API_KEY"
-  gemini:
-    versao: ""
-    temperatura: ""
-    api_key_env: "GEMINI_API_KEY"
+    sigla: GPT
+    modelo: "GPT-6 Astra"
   claude:
-    versao: ""
-    temperatura: ""
-    api_key_env: "ANTHROPIC_API_KEY"
-
-# Preencher versão, temperatura e data da geração antes do experimento.
-# Nunca colocar chaves de API neste arquivo.
+    sigla: CLD
+    modelo: "Claude Opus 5.5"
+  gemini:
+    sigla: GEM
+    modelo: "Gemini 3.8 Flash"

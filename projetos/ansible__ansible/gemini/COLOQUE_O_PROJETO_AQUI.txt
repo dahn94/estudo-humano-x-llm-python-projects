@@ -1,1 +1,0 @@
-Coloque aqui o projeto gemini gerado com prompts/ansible__ansible/prompt_recriacao.txt.

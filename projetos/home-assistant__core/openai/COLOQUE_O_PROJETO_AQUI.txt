@@ -1,1 +1,0 @@
-Coloque aqui o projeto openai gerado com prompts/home-assistant__core/prompt_recriacao.txt.

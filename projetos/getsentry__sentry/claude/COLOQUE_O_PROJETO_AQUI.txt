@@ -1,1 +1,0 @@
-Coloque aqui o projeto claude gerado com prompts/getsentry__sentry/prompt_recriacao.txt.

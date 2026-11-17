@@ -1,1 +1,0 @@
-PROMPT PENDENTE: gerar apos a coleta do README de hankcs/HanLP no commit 27f5ded76f9afed7da34ab7cba4fef0a66d523cc.

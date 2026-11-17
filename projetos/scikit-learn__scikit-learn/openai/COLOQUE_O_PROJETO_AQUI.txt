@@ -1,1 +1,0 @@
-Coloque aqui o projeto openai gerado com prompts/scikit-learn__scikit-learn/prompt_recriacao.txt.

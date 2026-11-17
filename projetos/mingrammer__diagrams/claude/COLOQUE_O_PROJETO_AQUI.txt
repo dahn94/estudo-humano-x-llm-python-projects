@@ -1,1 +1,0 @@
-Coloque aqui o projeto claude gerado com prompts/mingrammer__diagrams/prompt_recriacao.txt.

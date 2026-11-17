@@ -1,1 +1,0 @@
-Coloque aqui o projeto gemini gerado com prompts/httpie__cli/prompt.txt.

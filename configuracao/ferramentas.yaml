@@ -1,16 +1,19 @@
+# Versões congeladas; as imagens Docker correspondentes estão em compose.yaml.
 semgrep:
   produto: "Semgrep OSS"
   versao: "1.176.1"
-  regras: "p/default"
-  metricas: "off"
-  escopo: "todos os arquivos suportados pela politica"
+  imagem: "semgrep/semgrep:1.176.1"
+  regras: "configuracao/semgrep-regras.yaml"   # conjunto que gerou dados_brutos/semgrep (check_id nos JSONs)
+  parametros: "--json --metrics off --timeout 30 --timeout-threshold 5"
 
 sonarqube:
   produto: "SonarQube Community Build"
   versao: "26.9.0.129388"
+  imagem: "sonarqube:26.9.0.129388-community"
   quality_profile: "Sonar way"
-  scanner: "8.0.1.6346"
+  scanner: "SonarScanner CLI 8.0.1 (imagem sonarsource/sonar-scanner-cli:12.1.0.3233_8.0.1)"
   escopo: "**/*.py"
+  exclusoes: "**/.git/**,**/.venv/**,**/venv/**,**/vendor/**,**/vendors/**,**/third_party/**,**/node_modules/**,**/build/**,**/dist/**"
 
 comparacao:
   normalizar_por_kloc: true

@@ -1,1 +1,0 @@
-Coloque aqui o projeto claude gerado com prompts/freqtrade__freqtrade/prompt_recriacao.txt.

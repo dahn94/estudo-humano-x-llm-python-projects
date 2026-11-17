@@ -1,1 +1,0 @@
-Coloque aqui o projeto claude gerado com prompts/ray-project__ray/prompt_recriacao.txt.

@@ -1,1 +1,0 @@
-Coloque aqui o projeto openai gerado com prompts/freqtrade__freqtrade/prompt_recriacao.txt.

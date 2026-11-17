@@ -1,1 +1,0 @@
-Coloque aqui o projeto openai gerado com prompts/apache__superset/prompt_recriacao.txt.
