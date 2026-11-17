@@ -1,0 +1,1100 @@
+O QUE E ESTE ARQUIVO
+================================================================================
+Este e o prompt que deve ser enviado ao ChatGPT, Gemini ou Claude para recriar o projeto.
+Ele contem somente informacoes documentais publicas e a arquitetura textual inferida; o corpo do
+codigo-fonte humano nao foi incluido. A resposta da IA devera ser salva separadamente e depois
+avaliada pelas mesmas ferramentas Semgrep e SonarQube usadas no projeto humano.
+
+INSTRUCAO PARA A IA
+================================================================================
+Crie do zero um projeto Python funcionalmente semelhante ao descrito abaixo.
+REGRAS OBRIGATORIAS:
+- Nao procure, copie, traduza ou reproduza o codigo-fonte do repositorio original.
+- Use apenas README, documentacao e manifestos fornecidos neste prompt.
+- Implemente as funcionalidades publicas documentadas, validacao de entrada, tratamento de erros e testes proprios.
+- Nao inclua segredos, credenciais, caminhos absolutos ou dependencias desnecessarias.
+- Entregue todos os arquivos completos e um README de execucao.
+
+REFERENCIA: 3b1b/manim
+COMMIT DOCUMENTAL: e59d83980622638e2b622302bce7dbb859b31e1b
+
+README:
+
+--- README.md ---
+![logo](logo/cropped.png)
+
+[![Build Status](https://travis-ci.org/3b1b/manim.svg?branch=master)](https://travis-ci.org/3b1b/manim)
+[![Documentation](https://img.shields.io/badge/docs-EulerTour-blue.svg)](https://www.eulertour.com/learn/manim/)
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://choosealicense.com/licenses/mit/)
+[![Manim Subreddit](https://img.shields.io/reddit/subreddit-subscribers/manim.svg?color=ff4301&label=reddit)](https://www.reddit.com/r/manim/)
+[![Manim Discord](https://img.shields.io/discord/581738731934056449.svg?label=discord)](https://discord.gg/mMRrZQW)
+
+Manim is an animation engine for explanatory math videos. It's used to create precise animations programmatically, as seen in the videos at [3Blue1Brown](https://www.3blue1brown.com/).
+
+This repository contains the version of manim used by 3Blue1Brown.  There is also a community maintained version at https://github.com/ManimCommunity/manim/. To get help or to join the development effort, please join the discord.
+
+## Installation
+Manim runs on Python 3.8.
+
+System requirements are [FFmpeg](https://ffmpeg.org/), [OpenGL](https://www.opengl.org//) and [latex](https://www.latex-project.org) (optional, if you want to use LaTeX).
+
+For more options, take a look at the [Using manim](#using-manim) sections further below.
+
+### Directly
+
+If you want to hack on manimlib itself, clone this repository and in that directory execute:
+
+```sh
+# Install python requirements
+python3 -m pip install -r requirements.txt
+
+# Try it out
+python3 ./manim.py example_scenes.py SquareToCircle
+```
+
+### Directly (Windows)
+1. [Install FFmpeg](https://www.wikihow.com/Install-FFmpeg-on-Windows).
+2. Install a LaTeX distribution. [MiKTeX](https://miktex.org/download) is recommended.
+3. Install the remaining Python packages.
+    ```sh
+    git clone https://github.com/3b1b/manim.git
+    cd manim
+    pip3 install -r requirements.txt
+    python3 manim.py example_scenes.py SquareToCircle
+    ```
+
+
+## Anaconda Install
+
+* Install latex as above. 
+* Create a conda environment using `conda env create -f environment.yml`
+* **WINDOWS ONLY** Install `pyreadline` via `pip install pyreadline`. 
+
+
+### Using `virtualenv` and `virtualenvwrapper`
+After installing `virtualenv` and `virtualenvwrapper`
+```sh
+git clone https://github.com/3b1b/manim.git
+mkvirtualenv -a manim -r requirements.txt manim
+python3 -m manim example_scenes.py SquareToCircle
+```
+
+### Using Docker
+Since it's a bit tricky to get all the dependencies set up just right, there is a Dockerfile and Compose file provided in this repo as well as [a premade image on Docker Hub](https://hub.docker.com/r/eulertour/manim/tags/). The Dockerfile contains instructions on how to build a manim image, while the Compose file contains instructions on how to run the image.
+
+The prebuilt container image has manim repository included.
+`INPUT_PATH` is where the container looks for scene files. You must set the `INPUT_PATH`
+environment variable to the absolute path containing your scene file and the
+`OUTPUT_PATH` environment variable to the directory where you want media to be written.
+
+1. [Install Docker](https://docs.docker.com)
+2. [Install Docker Compose](https://docs.docker.com/compose/install/)
+3. Render an animation:
+```sh
+INPUT_PATH=/path/to/dir/containing/source/code \
+OUTPUT_PATH=/path/to/output/ \
+docker-compose run manim example_scenes.py SquareToCircle -l
+```
+The command needs to be run as root if your username is not in the docker group.
+
+You can replace `example.scenes.py` with any relative path from your `INPUT_PATH`.
+
+![docker diagram](./manim_docker_diagram.png)
+
+After running the output will say files ready at `/tmp/output/`, which refers to path inside the container. Your `OUTPUT_PATH` is bind mounted to this `/tmp/output` so any changes made by the container to `/tmp/output` will be mirrored on your `OUTPUT_PATH`. `/media/` will be created in `OUTPUT_PATH`.
+
+`-p` won't work as manim would look for video player in the container system, which it does not have.
+
+The first time you execute the above command, Docker will pull the image from Docker Hub and cache it. Any subsequent runs until the image is evicted will use the cached image.
+Note that the image doesn't have any development tools installed and can't preview animations. Its purpose is building and testing only.
+
+## Using manim
+Try running the following:
+```sh
+python3 -m manim example_scenes.py SquareToCircle
+```
+This should pop up a window playing a simple scene.
+
+Some useful flags include:
+* `-w` to write the scene to a file
+* `-o` to write the scene to a file and open the result
+* `-s` to skip to the end and just show the final frame.
+* `-n <number>` to skip ahead to the `n`'th animation of a scene.
+* `-f` to show the file in finder (for OSX).
+
+Set `MEDIA_DIR` environment variable to specify where the image and animation files will be written.
+
+Look through [https://github.com/3b1b/videos](https://github.com/3b1b/videos) to see the code for previous 3b1b videos. Note, however, that developments are often made to the library without considering backwards compatibility with those old projects. To run an old project with a guarantee that it will work, you will have to go back to the commit which completed that project.
+
+### Documentation
+Documentation is in progress at [eulertour.com/learn/manim](https://www.eulertour.com/learn/manim/).
+
+### Walkthrough
+Todd Zimmerman put together a [tutorial](https://talkingphysics.wordpress.com/2019/01/08/getting-started-animating-with-manim-and-python-3-7/) on getting started with manim, which has been updated to run on Python 3.7.
+
+
+## Contributing
+Is always welcome. In particular, there is a dire need for tests and documentation.
+
+
+## License
+This project falls under the MIT license.
+
+
+DOCUMENTACAO PUBLICA:
+
+--- about.rst ---
+About
+=====
+
+Animating technical concepts is traditionally pretty tedious, since it can be
+difficult to make the animations precise enough to convey them accurately.
+``Manim`` uses Python to generate animations programmatically, which makes it
+possible to specify exactly how each one should run.
+
+This project is still very much a work in progress, but I hope that the
+information here will make it easier for newcomers to get started using
+``Manim``.
+
+--- animation.rst ---
+Animation
+=========
+
+
+
+The simplest of which is ``Scene.add``. The object appears on the first frame
+without any animation::
+
+  class NoAnimation(Scene):
+      def construct(self):
+          square = Square()
+          self.add(square))
+
+Animation are used in conjunction with ``scene.Play``
+
+Fade
+----
+
+.. raw:: html
+
+    <video width="560" height="315" controls>
+        <source src="_static/AnimationFadeIn.mp4" type="video/mp4">
+    </video>
+
+.. code-block:: python
+
+  class AnimationFadeIn(Scene):
+      def construct(self):
+          square = Square()
+
+          anno = TextMobject("Fade In")
+          anno.shift(2 * DOWN)
+          self.add(anno)
+          self.play(FadeIn(square))
+
+.. raw:: html
+
+    <video width="560" height="315" controls>
+        <source src="_static/AnimationFadeOut.mp4" type="video/mp4">
+    </video>
+
+.. code-block:: python
+
+  class AnimationFadeOut(Scene):
+      def construct(self):
+          square = Square()
+
+          anno = TextMobject("Fade Out")
+          anno.shift(2 * DOWN)
+          self.add(anno)
+          self.add(square)
+          self.play(FadeOut(square))
+
+
+
+.. raw:: html
+
+    <video width="560" height="315" controls>
+        <source src="_static/AnimationFadeInFrom.mp4" type="video/mp4">
+    </video>
+
+.. code-block:: python
+
+  class AnimationFadeIn(Scene):
+      def construct(self):
+          square = Square()
+          for label, edge in zip(
+              ["LEFT", "RIGHT", "UP", "DOWN"], [LEFT, RIGHT, UP, DOWN]
+          ):
+              anno = TextMobject(f"Fade In from {label}")
+              anno.shift(2 * DOWN)
+              self.add(anno)
+
+              self.play(FadeIn(square, edge))
+              self.remove(anno, square)
+
+
+
+.. raw:: html
+
+    <video width="560" height="315" controls>
+        <source src="_static/AnimationFadeOutAndShift.mp4" type="video/mp4">
+    </video>
+
+.. code-block:: python
+
+  class AnimationFadeOut(Scene):
+      def construct(self):
+          square = Square()
+          for label, edge in zip(
+              ["LEFT", "RIGHT", "UP", "DOWN"], [LEFT, RIGHT, UP, DOWN]
+          ):
+              anno = TextMobject(f"Fade Out and shift {label}")
+              anno.shift(2 * DOWN)
+              self.add(anno)
+
+              self.play(FadeOut(square, edge))
+              self.remove(anno, square)
+
+
+
+.. raw:: html
+
+    <video width="560" height="315" controls>
+        <source src="_static/AnimationFadeInFromLarge.mp4" type="video/mp4">
+    </video>
+
+.. code-block:: python
+
+  class AnimationFadeInFromLarge(Scene):
+      def construct(self):
+          square = Square()
+
+          for factor in [0.1, 0.5, 0.8, 1, 2, 5]:
+              anno = TextMobject(f"Fade In from large scale\_factor={factor}")
+              anno.shift(2 * DOWN)
+              self.add(anno)
+
+              self.play(FadeInFromLarge(square, scale_factor=factor))
+              self.remove(anno, square)
+
+.. raw:: html
+
+    <video width="560" height="315" controls>
+        <source src="_static/AnimationFadeInFromPoint.mp4" type="video/mp4">
+    </video>
+
+.. code-block:: python
+
+  class AnimationFadeInFromPoint(Scene):
+      def construct(self):
+          square = Square()
+          for i in range(-6, 7, 2):
+              anno = TextMobject(f"Fade In from point {i}")
+              anno.shift(2 * DOWN)
+              self.add(anno)
+              self.play(FadeInFromPoint(square, point=i))
+              self.remove(anno, square)
+
+
+
+Grow
+----
+
+.. raw:: html
+
+    <video width="560" height="315" controls>
+        <source src="_static/AnimationGrowFromEdge.mp4" type="video/mp4">
+    </video>
+
+.. code-block:: python
+
+  class AnimationGrowFromEdge(Scene):
+      def construct(self):
+
+          for label, edge in zip(
+              ["LEFT", "RIGHT", "UP", "DOWN"], [LEFT, RIGHT, UP, DOWN]
+          ):
+              anno = TextMobject(f"Grow from {label} edge")
+              anno.shift(2 * DOWN)
+              self.add(anno)
+              square = Square()
+              self.play(GrowFromEdge(square, edge))
+              self.remove(anno, square)
+
+
+
+.. raw:: html
+
+    <video width="560" height="315" controls>
+        <source src="_static/AnimationGrowFromCenter.mp4" type="video/mp4">
+    </video>
+
+.. code-block:: python
+
+  class AnimationGrowFromCenter(Scene):
+      def construct(self):
+          square = Square()
+
+          anno = TextMobject("Grow from center")
+          anno.shift(2 * DOWN)
+          self.add(anno)
+
+          self.play(GrowFromCenter(square))
+
+
+
+
+Diagonal Directions
+-------------------
+
+You can combine cardinal directions to form diagonal animations
+
+.. raw:: html
+
+    <video width="560" height="315" controls>
+        <source src="_static/AnimationFadeInFromDiagonal.mp4" type="video/mp4">
+    </video>
+
+.. code-block:: python
+
+  class AnimationFadeInFromDiagonal(Scene):
+      def construct(self):
+          square = Square()
+          for diag in [UP + LEFT, UP + RIGHT, DOWN + LEFT, DOWN + RIGHT]:
+              self.play(FadeIn(square, diag))
+
+.. note::
+    You can also use the abbreviated forms like ``UL, UR, DL, DR``.
+    See :ref:`ref-directions`.
+
+--- constants.rst ---
+Manim Constants
+===============
+
+The ``constants.py`` under ``manimlib/`` contains variables that are used
+during setup and running manim. Some variables are not documented here as they are
+only used internally by manim.
+
+Directories
+-----------
+
+    MEDIA_DIR
+              The directory where ``VIDEO_DIR`` and ``TEX_DIR`` will be created,
+              if they aren't specified via flags.
+    VIDEO_DIR
+              Used to store the scenes rendered by Manim. When a scene is
+              finished rendering, it will be stored under
+              ``VIDEO_DIR/module_name/scene_name/quality/scene_name.mp4``.
+              Created under ``MEDIA_DIR`` by default.
+    TEX_DIR
+              Files written by Latex are stored here. It also acts as a cache
+              so that the files aren't rewritten each time Latex is needed.
+
+Those directories are created if they don't exist.
+
+Tex
+---
+    TEX_USE_CTEX
+              A boolean value. Change it to True if you need to use Chinese typesetting.
+    TEX_TEXT_TO_REPLACE
+              Placeholder text used by manim when generating tex files
+    TEMPLATE_TEX_FILE
+              By default ``manimlib/tex_template.tex`` is used. If ``TEX_USE_CTEX``
+              is set to True then ``manimlib/ctex_template.tex`` is used.
+
+Numerical Constants
+-------------------
+
+    PI
+            alias to ``numpy.pi``
+    TAU
+            PI * 2
+
+    DEGREES
+            TAU / 360
+
+Camera Configuration
+--------------------
+
+Render setting presets
+
+    PRODUCTION_QUALITY_CAMERA_CONFIG
+            2560x1440 @ 60fps # This is the default when rendering a scene
+    HIGH_QUALITY_CAMERA_CONFIG
+            1920x1080 @ 60fps. # Used when the ``-h`` or ``--high_quality`` flag
+            is passed.
+    MEDIUM_QUALITY_CAMERA_CONFIG
+            1280x720 @ 30fps. # Used when the ``-m`` or ``--medium_quality``
+            flag is passed.
+    LOW_QUALITY_CAMERA_CONFIG
+            854x480 @ 15fps. # Used when the ``-l`` or ``--low_quality`` flag is
+            passed.
+
+.. _ref-directions:
+
+Coordinates
+-----------
+
+Used for 2d/3d animations and placements::
+
+    ORIGIN
+    UP
+    DOWN
+    RIGHT
+    LEFT
+    IN # 3d camera only, away from camera
+    OUT # 3d camera only, close to camera
+
+    UL = UP + LEFT # diagonal abbreviations. You can use either one
+    UR = UP + RIGHT
+    DL = DOWN + LEFT
+    DR = DOWN + RIGHT
+
+    TOP
+    BOTTOM
+    LEFT_SIDE
+    RIGHT_SIDE``
+
+Colors
+------
+
+    COLOR_MAP
+            A predefined color maps
+    PALETTE
+            A list of color hex strings, derived from COLOR_MAP
+
+--- coordinate.rst ---
+Coordinate
+==========
+
+By default, the scene in manim is made up by 8 x 14 grid. The grid is addressed using a numpy
+array in the form of [x, y, z]. For 2D animations only the x and y axes are used.
+
+.. code-block:: python
+
+  class DotMap(Scene):
+      def construct(self):
+          dots = dict()
+          annos = dict()
+          var_index = 0
+          for x in range(-7, 8):
+              for y in range(-4, 5):
+                  annos[f"{x}{y}"] = TexMobject(f"({x}, {y})")
+                  dots[f"{var_index}"] = Dot(np.array([x, y, 0]))
+                  var_index = var_index + 1
+          for anno, dot in zip(annos.values(), dots.values()):
+              self.add(anno)
+              self.add(dot)
+              self.wait(0.2)
+              self.remove(anno)
+
+.. raw:: html
+
+    <video width="700" height="394" controls>
+        <source src="_static/coordinate/DotMap.mp4" type="video/mp4">
+    </video>
+
+.. note::
+  You can place objects outside this boundary, but it won't show up in the render.
+
+Using Coordinates
+-----------------
+
+Coordinates are used for creating geometries (`VMobject` in manim) and animations.
+
+Here coordinates are used to create this Polygon
+
+.. code-block:: python
+
+  class CoorPolygon(Scene):
+      def construct(self):
+          for x in range(-7, 8):
+              for y in range(-4, 5):
+                  self.add(Dot(np.array([x, y, 0]), color=DARK_GREY))
+          polygon = Polygon(
+              np.array([3, 2, 0]),
+              np.array([1, -1, 0]),
+              np.array([-5, -4, 0]),
+              np.array([-4, 4, 0]))
+          self.add(polygon)
+
+
+.. Image:: assets/coordinate/CoorPolygon.png
+   :width: 700px
+
+Coordinate Aliasing
+-------------------
+
+From some animations typing a ``np.array`` everytime you need a coordinate can be tedious.
+Manim provides aliases to the most common coordinates::
+
+  UP == np.array([0, 1, 0])
+  DOWN == np.array([0, -1, 0])
+  LEFT ==  np.array([-1, 0, 0])
+  RIGHT == np.array([1, 0, 0])
+  UL == np.array([-1, 1, 0])
+  DL == np.array([-1, -1, 0])
+  UR == np.array([1, 1, 0])
+  DR == np.array([1, -1, 0])
+
+Here coordinates are used for animations
+
+.. code-block:: python
+
+  class CoorAlias(Scene):
+      def construct(self):
+          for x in range(-7, 8):
+              for y in range(-4, 5):
+                  self.add(Dot(np.array([x, y, 0]), color=DARK_GREY))
+
+          aliases = {
+              "UP": UP,
+              "np.array([0,1,0])": np.array([0, 1, 0]),
+              "DOWN": DOWN,
+              "np.array([0,-1,0])": np.array([0, -1, 0]),
+              "LEFT": LEFT,
+              "np.array([-1,0,0])": np.array([-1, 0, 0]),
+              "RIGHT": RIGHT,
+              "np.array([1,0,0])": np.array([1, 0, 0]),
+              "UL": UL,
+              "np.array([-1,1,0])": np.array([-1, 1, 0]),
+              "DL": DL,
+              "np.array([-1,-1,0])": np.array([-1, -1, 0]),
+              "UR": UR,
+              "np.array([1,1,0])": np.array([1, 1, 0]),
+              "DR": DR,
+              "np.array([1,-1,0])": np.array([1, -1, 0])}
+          circle = Circle(color=RED, radius=0.5)
+          self.add(circle)
+          self.wait(0.5)
+
+          for text, aliase in aliases.items():
+              anno = TexMobject(f"\\texttt{{{text}}}")
+              self.play(Write(anno, run_time=0.2))
+              self.play(ApplyMethod(circle.shift, aliase))
+              self.wait(0.2)
+              self.play(FadeOut(anno, run_time=0.2))
+
+.. raw:: html
+
+    <video width="700" height="394" controls>
+        <source src="_static/coordinate/CoorAlias.mp4" type="video/mp4">
+    </video>
+
+Coordinate Arithmetic
+---------------------
+
+Numpy array allows arithmetic operations::
+
+  >>> numpy.array([2,2,0]) + 4
+  array([6, 6, 4])
+
+  >>> np.array([1, -3, 0]) + np.array([-4, 2, 0])
+  array([-3, -1,  0])
+
+  >>> np.array([2, 2, 0]) - np.array([3,6, 0])
+  array([-1, -4,  0])
+
+  >>> numpy.array([2,2,0]) - 3
+  array([-1, -1, -3])
+
+  >>> np.array([1, -3, 0]) * 3
+  array([ 3, -9,  0])
+
+  >>> numpy.array([2,2,0]) / 2
+  array([1., 1., 0.])
+
+  >>> numpy.array([2,2,0]) / numpy.array([1, 4, 0])
+  __main__:1: RuntimeWarning: invalid value encountered in true_divide
+  array([2. , 0.5, nan])
+
+.. code-block:: python
+
+  class CoorArithmetic(Scene):
+      def construct(self):
+          for x in range(-7, 8):
+              for y in range(-4, 5):
+                  self.add(Dot(np.array([x, y, 0]), color=DARK_GREY))
+
+          circle = Circle(color=RED, radius=0.5)
+          self.add(circle)
+          self.wait(0.5)
+
+          aliases = {
+              "LEFT * 3": LEFT * 3,
+              "UP + RIGHT / 2": UP + RIGHT / 2,
+              "DOWN + LEFT * 2": DOWN + LEFT * 2,
+              "RIGHT * 3.75 * DOWN": RIGHT * 3.75 * DOWN,
+              # certain arithmetic won't work as you expected
+              # In [4]: RIGHT * 3.75 * DOWN
+              # Out[4]: array([ 0., -0.,  0.])
+              "RIGHT * 3.75 + DOWN": RIGHT * 3.75 + DOWN}
+
+          for text, aliase in aliases.items():
+              anno = TexMobject(f"\\texttt{{{text}}}")
+              self.play(Write(anno, run_time=0.2))
+              self.play(ApplyMethod(circle.shift, aliase))
+              self.wait(0.2)
+              self.play(FadeOut(anno, run_time=0.2))
+
+.. raw:: html
+
+    <video width="700" height="394" controls>
+        <source src="_static/coordinate/CoorArithmetic.mp4" type="video/mp4">
+    </video>
+
+--- animating_mobjects.rst ---
+Animating Mobjects
+==================
+
+Learn about animations.
+
+--- index.rst ---
+Getting Started
+===============
+
+Todd Zimmerman put together `a very nice tutorial`_ on getting started with
+``manim``, which has been updated to run on python 3.7. Note that you'll want
+to change `from big_ol_pile_of_manim_imports import *` to `from
+manimlib.imports import *` to work with the current codebase.
+
+.. _a very nice tutorial: https://talkingphysics.wordpress.com/2019/01/08/getting-started-animating-with-manim-and-python-3-7/
+
+.. toctree::
+    :caption: Contents
+    :maxdepth: 2
+
+    learning_by_example
+    mathematical_objects
+    animating_mobjects
+    making_a_scene
+
+--- learning_by_example.rst ---
+Learning by Example
+===================
+
+SquareToCircle
+--------------
+
+``example_scenes.py`` contains simple examples that we can use to learn about manim.
+
+Go ahead and try out the ``SquareToCircle`` scene by running it with ``$ manim example_scenes.py SquareToCircle -p``
+in manim directory.
+
+.. code-block:: python
+   :linenos:
+
+   from manimlib.imports import *
+
+   class SquareToCircle(Scene):
+       def construct(self):
+           circle = Circle()
+           square = Square()
+           square.flip(RIGHT)
+           square.rotate(-3 * TAU / 8)
+           circle.set_fill(PINK, opacity=0.5)
+
+           self.play(ShowCreation(square))
+           self.play(Transform(square, circle))
+           self.play(FadeOut(square))
+
+.. raw:: html
+
+   <video width="560" height="315" controls>
+       <source src="../_static/SquareToCircle.mp4" type="video/mp4">
+   </video>
+
+
+.. note::
+
+  The flag ``-p`` plays the rendered video with default video player.
+
+  Other frequently used flags are:
+
+    * ``-l`` for rendering video in lower resolution (which renders faster)
+    * ``-s`` to show the last frame of the video.
+
+  Run ``manim -h`` all the available flags (``python -m manim -h`` if you installed it to a venv)
+
+
+Let's step through each line of ``SquareToCircle``
+
+.. code-block:: python
+   :lineno-start: 3
+
+   class SquareToCircle(Scene):
+
+You create videos in manim by writing :class:`~scene.scene.Scene` classes.
+
+Each :class:`~scene.scene.Scene` in manim is self-contained. That means everything
+you created under this scene does not exist outside the class.
+
+.. code-block:: python
+   :lineno-start: 4
+
+   def construct(self):
+
+:meth:`~scene.scene.Scene.construct` specifies what is displayed on the screen
+when the :class:`~scene.scene.Scene` is rendered to video.
+
+.. code-block:: python
+   :lineno-start: 5
+
+   circle = Circle()
+   square = Square()
+
+``Circle()`` and ``Square()`` create :class:`~mobject.geometry.Circle` and :class:`~mobject.geometry.Square`.
+
+Both of these are instances of :class:`~mobject.mobject.Mobject` subclasses, the base class for objects in manim. Note
+that instantiating a :class:`~mobject.mobject.Mobject` does not add it to the
+:class:`~scene.scene.Scene`, so you wouldn't see anything if you were to render
+the :class:`~scene.scene.Scene` at this point.
+
+.. code-block:: python
+   :lineno-start: 7
+
+   square.flip(RIGHT)
+   square.rotate(-3 * TAU / 8)
+   circle.set_fill(PINK, opacity=0.5)
+
+``flip()`` ``rotate()`` ``set_fill()`` apply various modifications to the mobjects before animating
+them.  The call to :meth:`~mobject.mobject.Mobject.flip` flips the
+:class:`~mobject.geometry.Square` across the RIGHT vector.  This is equivalent
+to a refection across the x-axis.
+
+The call to :meth:`~mobject.mobject.Mobject.rotate` rotates the
+:class:`~mobject.geometry.Square` 3/8ths of a full rotation counterclockwise.
+
+The call to :meth:`~mobject.mobject.Mobject.set_fill` sets
+the fill color for the :class:`~mobject.geometry.Circle` to pink, and its opacity to 0.5.
+
+.. code-block:: python
+   :lineno-start: 11
+
+   self.play(ShowCreation(square))
+   self.play(Transform(square, circle))
+   self.play(FadeOut(square))
+
+To generated animation, :class:`~animation.animation.Animation` classes are used.
+
+Each :class:`~animation.animation.Animation` takes one or more :class:`~mobject.mobject.Mobject` instances as arguments, which it animates
+when passed to :meth:`~scene.scene.Scene.play`. This is how video is typically
+created in manim.
+
+:class:`~mobject.mobject.Mobject` instances are automatically
+added to the :class:`~scene.scene.Scene` when they are animated. You can add a
+:class:`~mobject.mobject.Mobject` to the :class:`~scene.scene.Scene` manually
+by passing it as an argument to :meth:`~scene.scene.Scene.add`.
+
+
+:class:`~animation.creation.ShowCreation` draws a :class:`~mobject.mobject.Mobject` to the screen.
+
+:class:`~animation.transform.Transform` morphs one :class:`~mobject.mobject.Mobject` into another.
+
+:class:`~animation.creation.FadeOut` fades a :class:`~mobject.mobject.Mobject` out of the :class:`~scene.scene.Scene`.
+
+.. note::
+
+  Only the first argument to :class:`~animation.transform.Transform` is modified,
+  the second is not added to the :class:`~scene.scene.Scene`. :class:`~animation.tranform.Transform`
+  only changes the appearance but not the underlying properties.
+
+  After the call to ``transform()`` ``square`` is still a :class:`~mobject.geometry.Square` instance
+  but with the shape of :class:`~mobject.geometry.Circle`.
+
+--- making_a_scene.rst ---
+Making a Scene
+==============
+
+A scene is what renders when manim is executed. Each scene contains mobjects, which can then be animated as
+previously explained. In code, a scene is a class that extends ``Scene`` and implements the ``construct``
+function, like so. Manim will execute this function to render the scene.
+
+.. code-block:: python
+   :linenos:
+
+   from manimlib.imports import *
+
+   class ExampleScene(Scene):
+       def construct(self):
+           # Add and animate mobjects here
+--- mathematical_objects.rst ---
+Mathematical Objects
+====================
+
+Everything that appears on screen in a manim video is a
+:class:`~mobject.mobject.Mobject`, or Mathematical Object. A
+:class:`~mobject.mobject.Mobject`'s appearance is determined by 3
+factors:
+
+* ``m.points``, an Nx3 ``numpy.array`` specifying how to draw ``m``
+* ``m``'s style attributes, such as ``m.color``, ``m.stroke_width``, and
+  ``m.fill_opacity``
+* ``m.submobjects``, a list of :class:`~mobject.mobject.Mobject` instances that
+  are considered part of ``m``
+
+--- index.rst ---
+.. Manim documentation master file, created by
+   sphinx-quickstart on Mon May 27 14:19:19 2019.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to Manim's documentation!
+=================================
+
+These docs are generated from the master branch of the
+`Manim repo <https://github.com/3b1b/manim>`_. You can contribute by submitting
+a pull request there.
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Contents
+
+    about
+    installation/index
+    getting_started/index
+    coordinate
+    animation
+    constants
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
+--- index.rst ---
+Installation
+============
+
+Instructions on installing Manim
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Contents
+
+    linux
+    mac
+    windows
+
+--- linux.rst ---
+Linux
+=====
+
+Ubuntu
+------
+
+Install system libraries::
+
+    # apt install sox ffmpeg libcairo2 libcairo2-dev
+
+Install Latex distribution::
+
+    # apt install texlive-full
+
+Install manim via pypi::
+
+    # pip3 install manimlib
+
+OR Install manim via the git repository with venv::
+
+    $ git clone https://github.com/3b1b/manim
+    $ cd manim
+    $ python3 -m venv ./
+    $ source bin/activate
+    $ pip3 install -r requirement.txt
+
+To use manim in virtual environment you need to activate the environment with
+the ``activate`` binary by doing ``source bin/activate``, to exit use the ``deactivate`` command.
+
+.. note:: The git repository is updated first before the one on pypi. The git repository also
+          includes project files used to produce 3b1b videos. Some of the old projects might not
+          work as due to api changes.
+
+
+.. note:: The required latex packages are dictated by
+          ``manimlib/tex_template.tex`` which ``texlive-full`` will satisfy. The download size
+          can be quite large. If you wish to install only the packages required to use
+          manim, substitude ``texlive-full`` with::
+
+            texlive texlive-latex-extra texlive-fonts-extra
+            texlive-latex-recommended texlive-science texlive-fonts-extra tipa
+
+Arch Linux
+----------
+Install system libraries::
+
+    # pacman -S cairo ffmpeg opencv sox
+
+Install Latex distribution::
+
+    # pacman -S texlive-most
+
+OR install python-manimlib_:sup:`AUR` package::
+
+    $ git clone https://aur.archlinux.org/python-manimlib.git
+    $ cd python-manimlib
+    $ makepkg -si
+
+You can use AUR helpers such as yay_:sup:`AUR`::
+
+    $ yay -S python-manimlib
+
+.. _python-manimlib: https://aur.archlinux.org/packages/python-manimlib/
+.. _yay: https://aur.archlinux.org/packages/yay/
+
+--- mac.rst ---
+Mac
+===
+
+The simplest way to install the system dependencies on Mac OS X is with Homebrew.
+Mac come preinstalled with python2, but to use manim, python3 is required
+
+1. Install python3 https://docs.python.org/3/using/mac.html
+2. Install Cairo: ``brew install cairo``
+3. Install Sox: ``brew install sox``
+4. Install ffmpeg: ``brew install ffmpeg``
+5. Install latex (MacTeX): ``brew cask install mactex``
+6. Install manimlib ``pip install manimlib`` (or ``pip install --user manimlib`` to just yourself)
+
+--- windows.rst ---
+Windows
+=======
+
+Install System Libraries
+------------------------
+
+Make sure you have *Python 3* for Windows installed first:
+
+https://www.python.org/downloads/windows/
+
+Install ffmpeg:
+
+https://ffmpeg.org/download.html#build-windows
+
+Install sox:
+
+http://sox.sourceforge.net/Main/HomePage
+
+Install a latex distribution. On Windows MikTex is commonly used:
+
+https://miktex.org/howto/install-miktex
+
+Path configuration
+------------------
+
+To invoke commandline without supplying path to the binary
+the PATH environment needs to be configured. Below are template examples, please change
+the path according to your username and specific python version. Assuming all the
+softwares are installed with no alteration to the installation paths::
+
+  C:\Users\$username\AppData\local\Programs\Python\Python$version\
+  C:\Users\$username\AppData\local\Programs\Python\Python$version\Scripts\
+  C:\MikTex\miktex\bin\x64\
+  C:\ffmpeg\bin\
+
+The path entries should be separated by semicolon.
+
+Installing python packages and manim
+------------------------------------
+
+Make sure you can start pip using ``pip`` in your commandline. Then do
+``pip install pyreadline`` for the ``readline`` package.
+
+Grab the pycairo wheel binary ``pycairo‑1.18.0‑cp37‑cp37m‑win32.whl`` from https://www.lfd.uci.edu/~gohlke/pythonlibs/#pycairo
+and install it via ``python -m pip install C:\absolute\path\to\the\whl\file``
+
+clone the manim repository if you have git ``git clone https://github.com/3b1b/manim`` or download the zip file from
+the repository page with ``Clone or download`` button and unzip it.
+
+Open the commandline within the manim directory with ``Shift + Right click`` on an empty space in the folder and select ``open command window here``
+
+Install manim python dependencies with ``pip install -r requirements.txt``
+
+Test the installation
+---------------------
+
+Type in ``python -m manim -h`` and if nothing went wrong during the installation process you should see the help text.
+
+Use ``python -m manim example_scenes.py SquareToCircle -pl`` to render the example scene and the file should play after rendering. The movie file should be
+in ``media/videos/example_scenes/480p15``
+
+
+MANIFESTOS PUBLICOS:
+
+--- setup.py ---
+#!/usr/bin/env python
+
+from setuptools import setup
+
+setup(
+    setup_requires=['pbr'],
+    pbr=True,
+)
+
+--- setup.cfg ---
+[metadata]
+name = manimlib
+author = Grant Sanderson
+author-email= grant@3blue1brown.com
+summary = Animation engine for explanatory math videos
+description-file = README.md
+description-content-type = text/markdown; charset=UTF-8
+home-page = https://github.com/3b1b/manim
+project_urls =
+    Bug Tracker = https://github.com/3b1b/manim/issues
+    Documentation = https://eulertour.com/learn/manim
+    Source Code = https://github.com/3b1b/manim
+license = MIT
+
+[files]
+packages = manimlib
+
+[entry_points]
+console_scripts =
+    manim = manimlib:main
+
+--- requirements.txt ---
+argparse==1.4.0
+pycairo==1.19.1
+colour==0.1.5
+numpy==1.16.4
+Pillow==5.2.0
+progressbar==2.5
+scipy==1.5.4
+tqdm==4.24.0
+mapbox-earcut==0.12.10
+moderngl==5.5.4
+moderngl_window==2.3.0
+pydub==0.23.0
+PyOpenGL==3.1.5
+pyreadline==2.1; sys_platform == 'win32'
+
+
+ARQUITETURA TEXTUAL INFERIDA:
+PROJETO
+|
++-- Documentacao e configuracao
+|   +-- LICENSE.md
+|   +-- README.md
+|   +-- example_scenes.py
+|   +-- manim.py
+|   +-- requirements.txt
+|   +-- setup.cfg
+|   +-- setup.py
+|
++-- Modulos/dominios visiveis
+|   +-- .github/
+|   +-- docs/
+|   +-- logo/
+|   +-- manimlib/
+|
++-- Entradas e interfaces descritas no README
+|   +-- configuracao/parametros
+|   +-- processamento principal
+|   +-- saidas/resultados
+|
++-- Testes proprios a serem criados pela IA

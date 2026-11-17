@@ -1,0 +1,1 @@
+Coloque aqui o projeto openai gerado com prompts/scrapy__scrapy/prompt_recriacao.txt.

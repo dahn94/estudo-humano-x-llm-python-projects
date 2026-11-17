@@ -1,0 +1,58 @@
+{
+  "component": {
+    "key": "human-manimcommunity__manim",
+    "name": "Humano - ManimCommunity__manim",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "bugs",
+        "value": "11",
+        "bestValue": false
+      },
+      {
+        "metric": "complexity",
+        "value": "3281"
+      },
+      {
+        "metric": "code_smells",
+        "value": "353",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_reliability_issues",
+        "value": "13",
+        "bestValue": false
+      },
+      {
+        "metric": "ncloc",
+        "value": "20116"
+      },
+      {
+        "metric": "software_quality_maintainability_issues",
+        "value": "351",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_security_issues",
+        "value": "4",
+        "bestValue": false
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "4",
+        "bestValue": false
+      },
+      {
+        "metric": "security_hotspots",
+        "value": "0",
+        "bestValue": true
+      }
+    ]
+  },
+  "issues_summary": {
+    "issues": [],
+    "paging": {
+      "total": 0
+    }
+  }
+}

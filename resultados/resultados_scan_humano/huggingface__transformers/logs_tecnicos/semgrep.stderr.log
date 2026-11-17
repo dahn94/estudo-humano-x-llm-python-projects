@@ -1,0 +1,21 @@
+               
+               
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 528 files tracked by git with 5 Code rules:
+  Scanning 528 files with 5 python rules.
+                
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ Scan completed successfully.
+ • Findings: 27 (27 blocking)
+ • Rules run: 5
+ • Targets scanned: 528
+ • Parsed lines: ~99.8%
+ • Scan skipped: 
+   ◦ Files matching .semgrepignore patterns: 160
+ • For a detailed list of skipped files and lines, run semgrep with the --verbose flag
+Ran 5 rules on 528 files: 27 findings.

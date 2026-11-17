@@ -1,0 +1,4399 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 37 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: coqui-ai/TTS
+####################################################################################################
+Repositorio: https://github.com/coqui-ai/TTS
+Commit analisado: 4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c
+Link do commit: https://github.com/coqui-ai/TTS/commit/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 17551
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 7
+  ERROR: 4
+  WARNING: 3
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 428
+  Vulnerabilidades: 62
+  Bugs: 6
+  Code smells: 360
+  Security hotspots: 0
+  Complexidade: 2362
+  Linhas analisadas pelo SonarQube: 15211
+  Severidades: BLOCKER=2, CRITICAL=84, INFO=32, MAJOR=140, MINOR=170
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 86
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L86
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 2]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 97
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L97
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 3]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 110
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L110
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 4]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 124
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L124
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 5]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: TTS/tts/tf/utils/generic_utils.py
+Linha: 22
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/utils/generic_utils.py#L22
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 6]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: TTS/tts/tf/utils/io.py
+Linha: 20
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/utils/io.py#L20
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 7]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: TTS/vocoder/tf/utils/io.py
+Linha: 20
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/tf/utils/io.py#L20
+Descricao: pickle pode executar código durante a desserialização.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SONARQUBE 1]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/compute_embeddings.py
+Linha: 100
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/compute_embeddings.py#L100
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 2]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S8521
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/compute_statistics.py
+Linha: 35
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/compute_statistics.py#L35
+Descricao: Remove this unnecessary "keys()" call.
+
+[SONARQUBE 3]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/convert_melgan_torch_to_tf.py
+Linha: 41
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/convert_melgan_torch_to_tf.py#L41
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 4]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/convert_tacotron2_torch_to_tf.py
+Linha: 46
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/convert_tacotron2_torch_to_tf.py#L46
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 5]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/convert_tacotron2_torch_to_tf.py
+Linha: 71
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/convert_tacotron2_torch_to_tf.py#L71
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 6]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S5443
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/distribute.py
+Linha: 57
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/distribute.py#L57
+Descricao: Make sure publicly writable directories are used safely here.
+
+[SONARQUBE 7]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/synthesize.py
+Linha: 22
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/synthesize.py#L22
+Descricao: Rename this parameter "CONFIG" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 8]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S8521
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/synthesize.py
+Linha: 129
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/synthesize.py#L129
+Descricao: Remove this unnecessary "keys()" call.
+
+[SONARQUBE 9]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8519
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/synthesize.py
+Linha: 144
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/synthesize.py#L144
+Descricao: Replace "list(...)[0]" with "next(iter(...))" to avoid materializing the entire iterable.
+
+[SONARQUBE 10]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/synthesize.py
+Linha: 150
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/synthesize.py#L150
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 11]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/synthesize.py
+Linha: 162
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/synthesize.py#L162
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 12]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_encoder.py
+Linha: 51
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_encoder.py#L51
+Descricao: Remove this commented out code.
+
+[SONARQUBE 13]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_encoder.py
+Linha: 63
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_encoder.py#L63
+Descricao: Remove the unused local variable "epoch_time".
+
+[SONARQUBE 14]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_encoder.py
+Linha: 84
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_encoder.py#L84
+Descricao: Remove this commented out code.
+
+[SONARQUBE 15]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1134
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_encoder.py
+Linha: 118
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_encoder.py#L118
+Descricao: Take the required action to fix the issue indicated by this "FIXME" comment.
+
+[SONARQUBE 16]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_encoder.py
+Linha: 157
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_encoder.py#L157
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 17]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_encoder.py
+Linha: 160
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_encoder.py#L160
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 18]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_encoder.py
+Linha: 162
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_encoder.py#L162
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 19]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_encoder.py
+Linha: 269
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_encoder.py#L269
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 20]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 40
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L40
+Descricao: Refactor this function to reduce its Cognitive Complexity from 23 to the 15 allowed.
+
+[SONARQUBE 21]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S8521
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 50
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L50
+Descricao: Remove this unnecessary "keys()" call.
+
+[SONARQUBE 22]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S8521
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 51
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L51
+Descricao: Remove this unnecessary "keys()" call.
+
+[SONARQUBE 23]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 122
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L122
+Descricao: Refactor this function to reduce its Cognitive Complexity from 27 to the 15 allowed.
+
+[SONARQUBE 24]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 122
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L122
+Descricao: Remove the unused function parameter "ap".
+
+[SONARQUBE 25]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 141
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L141
+Descricao: Replace the unused local variable "item_idx" with "_".
+
+[SONARQUBE 26]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 161
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L161
+Descricao: Refactor this function to reduce its Cognitive Complexity from 45 to the 15 allowed.
+
+[SONARQUBE 27]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 180
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L180
+Descricao: Replace the unused local variable "item_idx" with "_".
+
+[SONARQUBE 28]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 231
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L231
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 29]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 240
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L240
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 30]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 324
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L324
+Descricao: Refactor this function to reduce its Cognitive Complexity from 46 to the 15 allowed.
+
+[SONARQUBE 31]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 326
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L326
+Descricao: Remove the unused local variable "epoch_time".
+
+[SONARQUBE 32]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 335
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L335
+Descricao: Replace the unused local variable "item_idx" with "_".
+
+[SONARQUBE 33]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 360
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L360
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 34]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 369
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L369
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 35]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 426
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L426
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 36]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 462
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L462
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 37]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1134
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 471
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L471
+Descricao: Take the required action to fix the issue indicated by this "FIXME" comment.
+
+[SONARQUBE 38]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 472
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L472
+Descricao: Refactor this function to reduce its Cognitive Complexity from 21 to the 15 allowed.
+
+[SONARQUBE 39]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S8521
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 477
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L477
+Descricao: Remove this unnecessary "keys()" call.
+
+[SONARQUBE 40]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S8521
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 490
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L490
+Descricao: Remove this unnecessary "keys()" call.
+
+[SONARQUBE 41]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S8521
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 492
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L492
+Descricao: Remove this unnecessary "keys()" call.
+
+[SONARQUBE 42]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 504
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L504
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 43]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 506
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L506
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 44]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 512
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L512
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 45]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2612
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 637
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L637
+Descricao: Make sure this permission is safe.
+
+[SONARQUBE 46]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2612
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 638
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L638
+Descricao: Make sure this permission is safe.
+
+[SONARQUBE 47]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_glow_tts.py
+Linha: 652
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_glow_tts.py#L652
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 48]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 42
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L42
+Descricao: Refactor this function to reduce its Cognitive Complexity from 23 to the 15 allowed.
+
+[SONARQUBE 49]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S8521
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 52
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L52
+Descricao: Remove this unnecessary "keys()" call.
+
+[SONARQUBE 50]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S8521
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 53
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L53
+Descricao: Remove this unnecessary "keys()" call.
+
+[SONARQUBE 51]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 132
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L132
+Descricao: Refactor this function to reduce its Cognitive Complexity from 76 to the 15 allowed.
+
+[SONARQUBE 52]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 240
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L240
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 53]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 249
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L249
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 54]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 331
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L331
+Descricao: Refactor this function to reduce its Cognitive Complexity from 67 to the 15 allowed.
+
+[SONARQUBE 55]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 333
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L333
+Descricao: Remove the unused local variable "epoch_time".
+
+[SONARQUBE 56]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 383
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L383
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 57]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 392
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L392
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 58]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 402
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L402
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 59]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 449
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L449
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 60]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 484
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L484
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 61]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1134
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 493
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L493
+Descricao: Take the required action to fix the issue indicated by this "FIXME" comment.
+
+[SONARQUBE 62]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 494
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L494
+Descricao: Refactor this function to reduce its Cognitive Complexity from 37 to the 15 allowed.
+
+[SONARQUBE 63]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S8521
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 499
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L499
+Descricao: Remove this unnecessary "keys()" call.
+
+[SONARQUBE 64]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S8521
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 512
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L512
+Descricao: Remove this unnecessary "keys()" call.
+
+[SONARQUBE 65]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S8521
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 514
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L514
+Descricao: Remove this unnecessary "keys()" call.
+
+[SONARQUBE 66]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 539
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L539
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 67]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 555
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L555
+Descricao: Remove this commented out code.
+
+[SONARQUBE 68]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2612
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 698
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L698
+Descricao: Make sure this permission is safe.
+
+[SONARQUBE 69]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2612
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 699
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L699
+Descricao: Make sure this permission is safe.
+
+[SONARQUBE 70]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_tacotron.py
+Linha: 713
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_tacotron.py#L713
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 71]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 66
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L66
+Descricao: Rename this local variable "c_G" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 72]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 66
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L66
+Descricao: Rename this local variable "x_G" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 73]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 67
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L67
+Descricao: Rename this local variable "x_D" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 74]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 67
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L67
+Descricao: Rename this local variable "c_D" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 75]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 86
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L86
+Descricao: Rename this parameter "optimizer_G" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 76]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 86
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L86
+Descricao: Rename this parameter "criterion_G" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 77]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 86
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L86
+Descricao: Rename this parameter "model_D" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 78]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 86
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L86
+Descricao: Rename this parameter "optimizer_D" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 79]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 86
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L86
+Descricao: Refactor this function to reduce its Cognitive Complexity from 82 to the 15 allowed.
+
+[SONARQUBE 80]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 86
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L86
+Descricao: Rename this parameter "model_G" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 81]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 86
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L86
+Descricao: Rename this parameter "criterion_D" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 82]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 87
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L87
+Descricao: Rename this parameter "scheduler_D" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 83]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 87
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L87
+Descricao: Rename this parameter "scheduler_G" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 84]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 104
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L104
+Descricao: Rename this local variable "y_D" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 85]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 104
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L104
+Descricao: Rename this local variable "c_D" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 86]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 104
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L104
+Descricao: Rename this local variable "c_G" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 87]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 104
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L104
+Descricao: Rename this local variable "y_G" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 88]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 116
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L116
+Descricao: Rename this local variable "y_G_sub" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 89]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 131
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L131
+Descricao: Rename this local variable "D_out_fake" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 90]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 134
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L134
+Descricao: Rename this local variable "D_out_real" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 91]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 151
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L151
+Descricao: Rename this local variable "loss_G_dict" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 92]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 153
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L153
+Descricao: Rename this local variable "loss_G" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 93]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 165
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L165
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 94]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 204
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L204
+Descricao: Rename this local variable "loss_D_dict" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 95]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 205
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L205
+Descricao: Rename this local variable "loss_D" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 96]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8519
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 227
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L227
+Descricao: Replace "list(...)[0]" with "next(iter(...))" to avoid materializing the entire iterable.
+
+[SONARQUBE 97]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 227
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L227
+Descricao: Rename this local variable "current_lr_G" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 98]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8519
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 228
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L228
+Descricao: Replace "list(...)[0]" with "next(iter(...))" to avoid materializing the entire iterable.
+
+[SONARQUBE 99]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 228
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L228
+Descricao: Rename this local variable "current_lr_D" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 100]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 231
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L231
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 101]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 295
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L295
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 102]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 302
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L302
+Descricao: Rename this parameter "model_D" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 103]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 302
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L302
+Descricao: Refactor this function to reduce its Cognitive Complexity from 58 to the 15 allowed.
+
+[SONARQUBE 104]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 302
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L302
+Descricao: Rename this parameter "criterion_G" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 105]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 302
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L302
+Descricao: Rename this parameter "criterion_D" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 106]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 302
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L302
+Descricao: Rename this parameter "model_G" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 107]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 306
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L306
+Descricao: Remove the unused local variable "epoch_time".
+
+[SONARQUBE 108]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 314
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L314
+Descricao: Rename this local variable "c_G" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 109]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 314
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L314
+Descricao: Rename this local variable "y_G" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 110]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 326
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L326
+Descricao: Rename this local variable "y_G_sub" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 111]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 338
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L338
+Descricao: Rename this local variable "D_out_fake" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 112]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 341
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L341
+Descricao: Rename this local variable "D_out_real" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 113]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 359
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L359
+Descricao: Rename this local variable "loss_G_dict" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 114]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 362
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L362
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 115]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 402
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L402
+Descricao: Rename this local variable "loss_D_dict" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 116]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 414
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L414
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 117]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1134
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 443
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L443
+Descricao: Take the required action to fix the issue indicated by this "FIXME" comment.
+
+[SONARQUBE 118]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 444
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L444
+Descricao: Refactor this function to reduce its Cognitive Complexity from 21 to the 15 allowed.
+
+[SONARQUBE 119]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 490
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L490
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 120]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2612
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 644
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L644
+Descricao: Make sure this permission is safe.
+
+[SONARQUBE 121]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2612
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 645
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L645
+Descricao: Make sure this permission is safe.
+
+[SONARQUBE 122]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_gan.py
+Linha: 659
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_gan.py#L659
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 123]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavegrad.py
+Linha: 82
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavegrad.py#L82
+Descricao: Refactor this function to reduce its Cognitive Complexity from 45 to the 15 allowed.
+
+[SONARQUBE 124]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavegrad.py
+Linha: 150
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavegrad.py#L150
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 125]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8519
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavegrad.py
+Linha: 162
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavegrad.py#L162
+Descricao: Replace "list(...)[0]" with "next(iter(...))" to avoid materializing the entire iterable.
+
+[SONARQUBE 126]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavegrad.py
+Linha: 165
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavegrad.py#L165
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 127]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1066
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavegrad.py
+Linha: 196
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavegrad.py#L196
+Descricao: Merge this if statement with the enclosing one.
+
+[SONARQUBE 128]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavegrad.py
+Linha: 220
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavegrad.py#L220
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 129]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavegrad.py
+Linha: 227
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavegrad.py#L227
+Descricao: Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.
+
+[SONARQUBE 130]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavegrad.py
+Linha: 230
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavegrad.py#L230
+Descricao: Remove the unused local variable "epoch_time".
+
+[SONARQUBE 131]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavegrad.py
+Linha: 258
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavegrad.py#L258
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 132]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavegrad.py
+Linha: 269
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavegrad.py#L269
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 133]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavegrad.py
+Linha: 312
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavegrad.py#L312
+Descricao: Refactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.
+
+[SONARQUBE 134]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavegrad.py
+Linha: 349
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavegrad.py#L349
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 135]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2612
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavegrad.py
+Linha: 491
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavegrad.py#L491
+Descricao: Make sure this permission is safe.
+
+[SONARQUBE 136]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2612
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavegrad.py
+Linha: 492
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavegrad.py#L492
+Descricao: Make sure this permission is safe.
+
+[SONARQUBE 137]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavegrad.py
+Linha: 506
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavegrad.py#L506
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 138]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 12
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L12
+Descricao: Remove this commented out code.
+
+[SONARQUBE 139]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 56
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L56
+Descricao: Remove this commented out code.
+
+[SONARQUBE 140]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 84
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L84
+Descricao: Refactor this function to reduce its Cognitive Complexity from 43 to the 15 allowed.
+
+[SONARQUBE 141]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8519
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 146
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L146
+Descricao: Replace "list(...)[0]" with "next(iter(...))" to avoid materializing the entire iterable.
+
+[SONARQUBE 142]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 151
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L151
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 143]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 152
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L152
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 144]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 198
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L198
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 145]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 231
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L231
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 146]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 242
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L242
+Descricao: Remove the unused local variable "epoch_time".
+
+[SONARQUBE 147]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 264
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L264
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 148]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 271
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L271
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 149]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 285
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L285
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 150]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1134
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 314
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L314
+Descricao: Take the required action to fix the issue indicated by this "FIXME" comment.
+
+[SONARQUBE 151]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 315
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L315
+Descricao: Refactor this function to reduce its Cognitive Complexity from 23 to the 15 allowed.
+
+[SONARQUBE 152]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 322
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L322
+Descricao: Remove this commented out code.
+
+[SONARQUBE 153]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 383
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L383
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 154]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 409
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L409
+Descricao: Remove this commented out code.
+
+[SONARQUBE 155]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2612
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 519
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L519
+Descricao: Make sure this permission is safe.
+
+[SONARQUBE 156]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2612
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 520
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L520
+Descricao: Make sure this permission is safe.
+
+[SONARQUBE 157]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/train_vocoder_wavernn.py
+Linha: 534
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/train_vocoder_wavernn.py#L534
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 158]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/bin/tune_wavegrad.py
+Linha: 61
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/bin/tune_wavegrad.py#L61
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 159]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/server/server.py
+Linha: 34
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/server/server.py#L34
+Descricao: Define a constant instead of duplicating this literal 'checkpoint.pth.tar' 3 times.
+
+[SONARQUBE 160]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/server/server.py
+Linha: 35
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/server/server.py#L35
+Descricao: Define a constant instead of duplicating this literal 'config.json' 3 times.
+
+[SONARQUBE 161]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4502
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/server/server.py
+Linha: 66
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/server/server.py#L66
+Descricao: Make sure disabling CSRF protection is safe here.
+
+[SONARQUBE 162]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6965
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/server/server.py
+Linha: 68
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/server/server.py#L68
+Descricao: Specify the HTTP methods this route should accept.
+
+[SONARQUBE 163]
+Tipo: VULNERABILITY
+Severidade: BLOCKER
+Regra: python:S8392
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/server/server.py
+Linha: 82
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/server/server.py#L82
+Descricao: Avoid binding the application to all network interfaces.
+
+[SONARQUBE 164]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/server/synthesizer.py
+Linha: 16
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/server/synthesizer.py#L16
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 165]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/server/synthesizer.py
+Linha: 62
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/server/synthesizer.py#L62
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 166]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/server/synthesizer.py
+Linha: 70
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/server/synthesizer.py#L70
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 167]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/server/synthesizer.py
+Linha: 84
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/server/synthesizer.py#L84
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 168]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/server/synthesizer.py
+Linha: 94
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/server/synthesizer.py#L94
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 169]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/server/synthesizer.py
+Linha: 121
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/server/synthesizer.py#L121
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 170]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/server/synthesizer.py
+Linha: 128
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/server/synthesizer.py#L128
+Descricao: Remove this commented out code.
+
+[SONARQUBE 171]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/server/synthesizer.py
+Linha: 135
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/server/synthesizer.py#L135
+Descricao: Refactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.
+
+[SONARQUBE 172]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/dataset.py
+Linha: 80
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/dataset.py#L80
+Descricao: Remove this commented out code.
+
+[SONARQUBE 173]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/dataset.py
+Linha: 101
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/dataset.py#L101
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 174]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/dataset.py
+Linha: 103
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/dataset.py#L103
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 175]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/dataset.py
+Linha: 107
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/dataset.py#L107
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 176]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/dataset.py
+Linha: 119
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/dataset.py#L119
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 177]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/dataset.py
+Linha: 122
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/dataset.py#L122
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 178]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/dataset.py
+Linha: 144
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/dataset.py#L144
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 179]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/dataset.py
+Linha: 146
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/dataset.py#L146
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 180]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/dataset.py
+Linha: 158
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/dataset.py#L158
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 181]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/dataset.py
+Linha: 162
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/dataset.py#L162
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 182]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6929
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/losses.py
+Linha: 68
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/losses.py#L68
+Descricao: Provide a value for the dim argument.
+
+[SONARQUBE 183]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/losses.py
+Linha: 84
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/losses.py#L84
+Descricao: Rename this local variable "L_row" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 184]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/losses.py
+Linha: 99
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/losses.py#L99
+Descricao: Rename this local variable "L_row" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 185]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/model.py
+Linha: 56
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/model.py#L56
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 186]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 36
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L36
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 187]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 37
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L37
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 188]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 38
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L38
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 189]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 39
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L39
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 190]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 41
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L41
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 191]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 43
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L43
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 192]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 44
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L44
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 193]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 45
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L45
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 194]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 46
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L46
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 195]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 47
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L47
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 196]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 48
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L48
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 197]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 49
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L49
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 198]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 50
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L50
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 199]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 52
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L52
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 200]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 103
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L103
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 201]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 151
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L151
+Descricao: Refactor this function to reduce its Cognitive Complexity from 24 to the 15 allowed.
+
+[SONARQUBE 202]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/utils/prepare_voxceleb.py
+Linha: 187
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/prepare_voxceleb.py#L187
+Descricao: Remove this commented out code.
+
+[SONARQUBE 203]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6730
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/speaker_encoder/utils/visual.py
+Linha: 26
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/speaker_encoder/utils/visual.py#L26
+Descricao: Replace this deprecated "numpy" type alias with the builtin type "float".
+
+[SONARQUBE 204]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/datasets/TTSDataset.py
+Linha: 17
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/datasets/TTSDataset.py#L17
+Descricao: Method "__init__" has 17 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 205]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/datasets/TTSDataset.py
+Linha: 142
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/datasets/TTSDataset.py#L142
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 206]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/datasets/TTSDataset.py
+Linha: 162
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/datasets/TTSDataset.py#L162
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 207]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/datasets/TTSDataset.py
+Linha: 183
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/datasets/TTSDataset.py#L183
+Descricao: Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.
+
+[SONARQUBE 208]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/datasets/TTSDataset.py
+Linha: 229
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/datasets/TTSDataset.py#L229
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 209]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/datasets/preprocess.py
+Linha: 55
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/datasets/preprocess.py#L55
+Descricao: Remove this commented out code.
+
+[SONARQUBE 210]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/datasets/preprocess.py
+Linha: 107
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/datasets/preprocess.py#L107
+Descricao: Remove this commented out code.
+
+[SONARQUBE 211]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/common_layers.py
+Linha: 120
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/common_layers.py#L120
+Descricao: Rename this parameter "K" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 212]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/common_layers.py
+Linha: 124
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/common_layers.py#L124
+Descricao: Remove this commented out code.
+
+[SONARQUBE 213]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/common_layers.py
+Linha: 378
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/common_layers.py#L378
+Descricao: Rename this parameter "attn_K" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 214]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/glow_tts/encoder.py
+Linha: 33
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/glow_tts/encoder.py#L33
+Descricao: Method "__init__" has 15 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 215]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1854
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/glow_tts/monotonic_align/__init__.py
+Linha: 23
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/glow_tts/monotonic_align/__init__.py#L23
+Descricao: Remove this assignment to local variable 'path'; the value is never used.
+
+[SONARQUBE 216]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/glow_tts/normalization.py
+Linha: 87
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/glow_tts/normalization.py#L87
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 217]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/glow_tts/transformer.py
+Linha: 154
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/glow_tts/transformer.py#L154
+Descricao: Remove this commented out code.
+
+[SONARQUBE 218]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/gst_layers.py
+Linha: 78
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/gst_layers.py#L78
+Descricao: Replace the unused local variable "memory" with "_".
+
+[SONARQUBE 219]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/gst_layers.py
+Linha: 165
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/gst_layers.py#L165
+Descricao: Remove this commented out code.
+
+[SONARQUBE 220]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/gst_layers.py
+Linha: 170
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/gst_layers.py#L170
+Descricao: Remove this commented out code.
+
+[SONARQUBE 221]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/losses.py
+Linha: 279
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/losses.py#L279
+Descricao: Refactor this function to reduce its Cognitive Complexity from 38 to the 15 allowed.
+
+[SONARQUBE 222]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/losses.py
+Linha: 339
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/losses.py#L339
+Descricao: Remove this commented out code.
+
+[SONARQUBE 223]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/tacotron.py
+Linha: 81
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/tacotron.py#L81
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 224]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/tacotron.py
+Linha: 123
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/tacotron.py#L123
+Descricao: Rename this parameter "K" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 225]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5717
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/tacotron.py
+Linha: 125
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/tacotron.py#L125
+Descricao: Change this default value to "None" and initialize this parameter inside the function/method.
+
+[SONARQUBE 226]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/tacotron.py
+Linha: 137
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/tacotron.py#L137
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 227]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/tacotron.py
+Linha: 147
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/tacotron.py#L147
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 228]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/tacotron.py
+Linha: 197
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/tacotron.py#L197
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 229]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/tacotron.py
+Linha: 198
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/tacotron.py#L198
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 230]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/tacotron.py
+Linha: 202
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/tacotron.py#L202
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 231]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/tacotron.py
+Linha: 291
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/tacotron.py#L291
+Descricao: Method "__init__" has 15 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 232]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/tacotron.py
+Linha: 293
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/tacotron.py#L293
+Descricao: Rename this parameter "attn_K" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 233]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/tacotron.py
+Linha: 367
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/tacotron.py#L367
+Descricao: Replace the unused loop index "idx" with "_".
+
+[SONARQUBE 234]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/tacotron2.py
+Linha: 147
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/tacotron2.py#L147
+Descricao: Method "__init__" has 14 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 235]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/tacotron2.py
+Linha: 149
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/tacotron2.py#L149
+Descricao: Rename this parameter "attn_K" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 236]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/tacotron2.py
+Linha: 219
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/tacotron2.py#L219
+Descricao: Remove this commented out code.
+
+[SONARQUBE 237]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/tacotron2.py
+Linha: 388
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/tacotron2.py#L388
+Descricao: Replace the unused local variable "t" with "_".
+
+[SONARQUBE 238]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1854
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/layers/tacotron2.py
+Linha: 422
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/layers/tacotron2.py#L422
+Descricao: Remove this assignment to local variable 'memory'; the value is never used.
+
+[SONARQUBE 239]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/models/glow_tts.py
+Linha: 14
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/models/glow_tts.py#L14
+Descricao: Method "__init__" has 27 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 240]
+Tipo: BUG
+Severidade: MINOR
+Regra: python:S1226
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/models/glow_tts.py
+Linha: 124
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/models/glow_tts.py#L124
+Descricao: Introduce a new variable or use its initial value before reassigning 'attn'.
+
+[SONARQUBE 241]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/models/tacotron.py
+Linha: 95
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/models/tacotron.py#L95
+Descricao: Remove parameter characters or provide default value.
+
+[SONARQUBE 242]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/models/tacotron.py
+Linha: 95
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/models/tacotron.py#L95
+Descricao: Remove parameter text_lengths or provide default value.
+
+[SONARQUBE 243]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8495
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/models/tacotron.py
+Linha: 95
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/models/tacotron.py#L95
+Descricao: Refactor this function to always return tuples of the same length.
+
+[SONARQUBE 244]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/models/tacotron.py
+Linha: 95
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/models/tacotron.py#L95
+Descricao: Remove parameter mel_specs or provide default value.
+
+[SONARQUBE 245]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/models/tacotron2.py
+Linha: 8
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/models/tacotron2.py#L8
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 246]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/models/tacotron2.py
+Linha: 95
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/models/tacotron2.py#L95
+Descricao: Remove parameter text or provide default value.
+
+[SONARQUBE 247]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/models/tacotron2.py
+Linha: 95
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/models/tacotron2.py#L95
+Descricao: Remove parameter text_lengths or provide default value.
+
+[SONARQUBE 248]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8495
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/models/tacotron2.py
+Linha: 95
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/models/tacotron2.py#L95
+Descricao: Refactor this function to always return tuples of the same length.
+
+[SONARQUBE 249]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/models/tacotron_abstract.py
+Linha: 11
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/models/tacotron_abstract.py#L11
+Descricao: Method "__init__" has 27 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 250]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/models/tacotron_abstract.py
+Linha: 26
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/models/tacotron_abstract.py#L26
+Descricao: Rename this parameter "attn_K" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 251]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/models/tacotron_abstract.py
+Linha: 159
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/models/tacotron_abstract.py#L159
+Descricao: Remove this commented out code.
+
+[SONARQUBE 252]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/layers/common_layers.py
+Linha: 4
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/layers/common_layers.py#L4
+Descricao: Remove this commented out code.
+
+[SONARQUBE 253]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/layers/common_layers.py
+Linha: 189
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/layers/common_layers.py#L189
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 254]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/layers/common_layers.py
+Linha: 214
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/layers/common_layers.py#L214
+Descricao: Remove this commented out code.
+
+[SONARQUBE 255]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/layers/tacotron2.py
+Linha: 5
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/layers/tacotron2.py#L5
+Descricao: Remove this commented out code.
+
+[SONARQUBE 256]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/layers/tacotron2.py
+Linha: 60
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/layers/tacotron2.py#L60
+Descricao: Method "__init__" has 16 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 257]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/layers/tacotron2.py
+Linha: 62
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/layers/tacotron2.py#L62
+Descricao: Rename this parameter "attn_K" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 258]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/layers/tacotron2.py
+Linha: 91
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/layers/tacotron2.py#L91
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 259]
+Tipo: BUG
+Severidade: MINOR
+Regra: python:S1226
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/layers/tacotron2.py
+Linha: 200
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/layers/tacotron2.py#L200
+Descricao: Introduce a new variable or use its initial value before reassigning 'stop_flag'.
+
+[SONARQUBE 260]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/layers/tacotron2.py
+Linha: 247
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/layers/tacotron2.py#L247
+Descricao: Remove this commented out code.
+
+[SONARQUBE 261]
+Tipo: BUG
+Severidade: MINOR
+Regra: python:S1226
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/layers/tacotron2.py
+Linha: 263
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/layers/tacotron2.py#L263
+Descricao: Introduce a new variable or use its initial value before reassigning 'stop_flag'.
+
+[SONARQUBE 262]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/layers/tacotron2.py
+Linha: 273
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/layers/tacotron2.py#L273
+Descricao: Remove this commented out code.
+
+[SONARQUBE 263]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/models/tacotron2.py
+Linha: 10
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/models/tacotron2.py#L10
+Descricao: Method "__init__" has 18 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 264]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/models/tacotron2.py
+Linha: 19
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/models/tacotron2.py#L19
+Descricao: Rename this parameter "attn_K" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 265]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/models/tacotron2.py
+Linha: 40
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/models/tacotron2.py#L40
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 266]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S4144
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/models/tacotron2.py
+Linha: 93
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/models/tacotron2.py#L93
+Descricao: Update this function so that its implementation is not identical to inference on line 77.
+
+[SONARQUBE 267]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/models/tacotron2.py
+Linha: 105
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/models/tacotron2.py#L105
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 268]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/utils/convert_torch_to_tf_utils.py
+Linha: 16
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/utils/convert_torch_to_tf_utils.py#L16
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 269]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/utils/convert_torch_to_tf_utils.py
+Linha: 20
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/utils/convert_torch_to_tf_utils.py#L20
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 270]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/utils/convert_torch_to_tf_utils.py
+Linha: 45
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/utils/convert_torch_to_tf_utils.py#L45
+Descricao: Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.
+
+[SONARQUBE 271]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8519
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/utils/generic_utils.py
+Linha: 30
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/utils/generic_utils.py#L30
+Descricao: Replace "list(...)[0]" with "next(iter(...))" to avoid materializing the entire iterable.
+
+[SONARQUBE 272]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/utils/generic_utils.py
+Linha: 65
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/utils/generic_utils.py#L65
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 273]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/utils/generic_utils.py
+Linha: 66
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/utils/generic_utils.py#L66
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 274]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/utils/generic_utils.py
+Linha: 69
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/utils/generic_utils.py#L69
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 275]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/utils/generic_utils.py
+Linha: 72
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/utils/generic_utils.py#L72
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 276]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/utils/generic_utils.py
+Linha: 80
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/utils/generic_utils.py#L80
+Descricao: Rename this local variable "MyModel" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 277]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8519
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/tf/utils/io.py
+Linha: 28
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/tf/utils/io.py#L28
+Descricao: Replace "list(...)[0]" with "next(iter(...))" to avoid materializing the entire iterable.
+
+[SONARQUBE 278]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/generic_utils.py
+Linha: 16
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/generic_utils.py#L16
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 279]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/generic_utils.py
+Linha: 22
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/generic_utils.py#L22
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 280]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/generic_utils.py
+Linha: 49
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/generic_utils.py#L49
+Descricao: Rename this local variable "MyModel" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 281]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/io.py
+Linha: 12
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/io.py#L12
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 282]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/io.py
+Linha: 15
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/io.py#L15
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 283]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/speakers.py
+Linha: 34
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/speakers.py#L34
+Descricao: Refactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.
+
+[SONARQUBE 284]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/speakers.py
+Linha: 34
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/speakers.py#L34
+Descricao: Rename this parameter "OUT_PATH" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 285]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8519
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/speakers.py
+Linha: 47
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/speakers.py#L47
+Descricao: Replace "list(...)[0]" with "next(iter(...))" to avoid materializing the entire iterable.
+
+[SONARQUBE 286]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7492
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/speakers.py
+Linha: 52
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/speakers.py#L52
+Descricao: Unpack this comprehension expression
+
+[SONARQUBE 287]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8519
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/speakers.py
+Linha: 58
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/speakers.py#L58
+Descricao: Replace "list(...)[0]" with "next(iter(...))" to avoid materializing the entire iterable.
+
+[SONARQUBE 288]
+Tipo: BUG
+Severidade: BLOCKER
+Regra: python:S5632
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/speakers.py
+Linha: 60
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/speakers.py#L60
+Descricao: Change this code so that it raises an object deriving from BaseException.
+
+[SONARQUBE 289]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/ssim.py
+Linha: 15
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/ssim.py#L15
+Descricao: Rename this local variable "_1D_window" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 290]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/ssim.py
+Linha: 16
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/ssim.py#L16
+Descricao: Rename this local variable "_2D_window" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 291]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6979
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/ssim.py
+Linha: 17
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/ssim.py#L17
+Descricao: Replace this call with a call to "torch.tensor".
+
+[SONARQUBE 292]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/synthesis.py
+Linha: 10
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/synthesis.py#L10
+Descricao: Rename this parameter "CONFIG" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 293]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/synthesis.py
+Linha: 51
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/synthesis.py#L51
+Descricao: Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.
+
+[SONARQUBE 294]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/synthesis.py
+Linha: 51
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/synthesis.py#L51
+Descricao: Rename this parameter "CONFIG" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 295]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/synthesis.py
+Linha: 77
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/synthesis.py#L77
+Descricao: Rename this parameter "CONFIG" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 296]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/synthesis.py
+Linha: 84
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/synthesis.py#L84
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 297]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/synthesis.py
+Linha: 90
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/synthesis.py#L90
+Descricao: Rename this parameter "CONFIG" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 298]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/synthesis.py
+Linha: 104
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/synthesis.py#L104
+Descricao: Remove this commented out code.
+
+[SONARQUBE 299]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/synthesis.py
+Linha: 141
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/synthesis.py#L141
+Descricao: Rename this parameter "CONFIG" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 300]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/synthesis.py
+Linha: 167
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/synthesis.py#L167
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 301]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/synthesis.py
+Linha: 168
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/synthesis.py#L168
+Descricao: Rename this parameter "CONFIG" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 302]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/synthesis.py
+Linha: 180
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/synthesis.py#L180
+Descricao: Remove this commented out code.
+
+[SONARQUBE 303]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/synthesis.py
+Linha: 185
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/synthesis.py#L185
+Descricao: Refactor this function to reduce its Cognitive Complexity from 20 to the 15 allowed.
+
+[SONARQUBE 304]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/synthesis.py
+Linha: 187
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/synthesis.py#L187
+Descricao: Rename this parameter "CONFIG" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 305]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/synthesis.py
+Linha: 237
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/synthesis.py#L237
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 306]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1871
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/synthesis.py
+Linha: 242
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/synthesis.py#L242
+Descricao: Either merge this branch with the identical one on line "238" or change one of the implementations.
+
+[SONARQUBE 307]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7500
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/__init__.py
+Linha: 14
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/__init__.py#L14
+Descricao: Replace this comprehension with passing the iterable to the dict constructor call
+
+[SONARQUBE 308]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7500
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/__init__.py
+Linha: 17
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/__init__.py#L17
+Descricao: Replace this comprehension with passing the iterable to the dict constructor call
+
+[SONARQUBE 309]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/__init__.py
+Linha: 22
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/__init__.py#L22
+Descricao: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+[SONARQUBE 310]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/__init__.py
+Linha: 28
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/__init__.py#L28
+Descricao: Refactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.
+
+[SONARQUBE 311]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7500
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/__init__.py
+Linha: 110
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/__init__.py#L110
+Descricao: Replace this comprehension with passing the iterable to the dict constructor call
+
+[SONARQUBE 312]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7500
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/__init__.py
+Linha: 164
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/__init__.py#L164
+Descricao: Replace this comprehension with passing the iterable to the dict constructor call
+
+[SONARQUBE 313]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/__init__.py
+Linha: 181
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/__init__.py#L181
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 314]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7504
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/__init__.py
+Linha: 191
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/__init__.py#L191
+Descricao: Remove this unnecessary `list()` call on an already iterable object.
+
+[SONARQUBE 315]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/cleaners.py
+Linha: 87
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/cleaners.py#L87
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 316]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6353
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/cmudict.py
+Linha: 55
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/cmudict.py#L55
+Descricao: Use concise character class syntax '\d' instead of '[0-9]'.
+
+[SONARQUBE 317]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6353
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/number_norm.py
+Linha: 8
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/number_norm.py#L8
+Descricao: Use concise character class syntax '\d' instead of '[0-9]'.
+
+[SONARQUBE 318]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6353
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/number_norm.py
+Linha: 8
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/number_norm.py#L8
+Descricao: Use concise character class syntax '\d' instead of '[0-9]'.
+
+[SONARQUBE 319]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/number_norm.py
+Linha: 9
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/number_norm.py#L9
+Descricao: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+[SONARQUBE 320]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6353
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/number_norm.py
+Linha: 9
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/number_norm.py#L9
+Descricao: Use concise character class syntax '\d' instead of '[0-9]'.
+
+[SONARQUBE 321]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6353
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/number_norm.py
+Linha: 9
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/number_norm.py#L9
+Descricao: Use concise character class syntax '\d' instead of '[0-9]'.
+
+[SONARQUBE 322]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6035
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/number_norm.py
+Linha: 10
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/number_norm.py#L10
+Descricao: Replace this alternation with a character class.
+
+[SONARQUBE 323]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6353
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/number_norm.py
+Linha: 10
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/number_norm.py#L10
+Descricao: Use concise character class syntax '\d' instead of '[0-9]'.
+
+[SONARQUBE 324]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/number_norm.py
+Linha: 11
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/number_norm.py#L11
+Descricao: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+[SONARQUBE 325]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6353
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/number_norm.py
+Linha: 11
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/number_norm.py#L11
+Descricao: Use concise character class syntax '\d' instead of '[0-9]'.
+
+[SONARQUBE 326]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6353
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/number_norm.py
+Linha: 12
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/number_norm.py#L12
+Descricao: Use concise character class syntax '\d' instead of '[0-9]'.
+
+[SONARQUBE 327]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/number_norm.py
+Linha: 62
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/number_norm.py#L62
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 328]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7508
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/symbols.py
+Linha: 10
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/symbols.py#L10
+Descricao: Remove this redundant call.
+
+[SONARQUBE 329]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6353
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/time.py
+Linha: 7
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/time.py#L7
+Descricao: Use concise character class syntax '\d' instead of '[0-9]'.
+
+[SONARQUBE 330]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6353
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/text/time.py
+Linha: 9
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/text/time.py#L9
+Descricao: Use concise character class syntax '\d' instead of '[0-9]'.
+
+[SONARQUBE 331]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/tts/utils/visual.py
+Linha: 65
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/tts/utils/visual.py#L65
+Descricao: Rename this parameter "CONFIG" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 332]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/audio.py
+Linha: 12
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/audio.py#L12
+Descricao: Method "__init__" has 26 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 333]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1244
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/audio.py
+Linha: 73
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/audio.py#L73
+Descricao: Do not perform equality checks with floating point values.
+
+[SONARQUBE 334]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/audio.py
+Linha: 110
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/audio.py#L110
+Descricao: Rename this parameter "S" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 335]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/audio.py
+Linha: 110
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/audio.py#L110
+Descricao: Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.
+
+[SONARQUBE 336]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/audio.py
+Linha: 125
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/audio.py#L125
+Descricao: Rename this local variable "S_norm" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 337]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/audio.py
+Linha: 139
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/audio.py#L139
+Descricao: Rename this parameter "S" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 338]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/audio.py
+Linha: 139
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/audio.py#L139
+Descricao: Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.
+
+[SONARQUBE 339]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/audio.py
+Linha: 142
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/audio.py#L142
+Descricao: Rename this local variable "S_denorm" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 340]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/audio.py
+Linha: 274
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/audio.py#L274
+Descricao: Rename this parameter "S" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 341]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/audio.py
+Linha: 275
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/audio.py#L275
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 342]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/audio.py
+Linha: 276
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/audio.py#L276
+Descricao: Rename this local variable "S_complex" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 343]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6730
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/audio.py
+Linha: 276
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/audio.py#L276
+Descricao: Replace this deprecated "numpy" type alias with the builtin type "complex".
+
+[SONARQUBE 344]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/audio.py
+Linha: 349
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/audio.py#L349
+Descricao: Remove this commented out code.
+
+[SONARQUBE 345]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/console_logger.py
+Linha: 19
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/console_logger.py#L19
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 346]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/console_logger.py
+Linha: 40
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/console_logger.py#L40
+Descricao: Define a constant instead of duplicating this literal "     | > " 4 times.
+
+[SONARQUBE 347]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/console_logger.py
+Linha: 60
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/console_logger.py#L60
+Descricao: Remove the unused function parameter "epoch".
+
+[SONARQUBE 348]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/console_logger.py
+Linha: 83
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/console_logger.py#L83
+Descricao: Remove the unused function parameter "epoch".
+
+[SONARQUBE 349]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/distribute.py
+Linha: 75
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/distribute.py#L75
+Descricao: Refactor this function to reduce its Cognitive Complexity from 28 to the 15 allowed.
+
+[SONARQUBE 350]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7504
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/distribute.py
+Linha: 104
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/distribute.py#L104
+Descricao: Remove this unnecessary `list()` call on an already iterable object.
+
+[SONARQUBE 351]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/generic_utils.py
+Linha: 23
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/generic_utils.py#L23
+Descricao: Remove this commented out code.
+
+[SONARQUBE 352]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/generic_utils.py
+Linha: 139
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/generic_utils.py#L139
+Descricao: Refactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.
+
+[SONARQUBE 353]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5361
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/io.py
+Linha: 39
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/io.py#L39
+Descricao: Replace this "re.sub()" call by a "str.replace()" function call.
+
+[SONARQUBE 354]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/radam.py
+Linha: 25
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/radam.py#L25
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 355]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/radam.py
+Linha: 31
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/radam.py#L31
+Descricao: Refactor this function to reduce its Cognitive Complexity from 36 to the 15 allowed.
+
+[SONARQUBE 356]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/radam.py
+Linha: 67
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/radam.py#L67
+Descricao: Rename this local variable "N_sma" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 357]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/radam.py
+Linha: 71
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/radam.py#L71
+Descricao: Rename this local variable "N_sma_max" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 358]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/tensorboard_logger.py
+Linha: 40
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/tensorboard_logger.py#L40
+Descricao: Define a constant instead of duplicating this literal '{}/{}' 3 times.
+
+[SONARQUBE 359]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7492
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/utils/training.py
+Linha: 77
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/utils/training.py#L77
+Descricao: Unpack this comprehension expression
+
+[SONARQUBE 360]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/datasets/gan_dataset.py
+Linha: 77
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/datasets/gan_dataset.py#L77
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 361]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/datasets/gan_dataset.py
+Linha: 79
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/datasets/gan_dataset.py#L79
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 362]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/datasets/gan_dataset.py
+Linha: 117
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/datasets/gan_dataset.py#L117
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 363]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/datasets/preprocess.py
+Linha: 42
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/datasets/preprocess.py#L42
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 364]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/datasets/preprocess.py
+Linha: 61
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/datasets/preprocess.py#L61
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 365]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/datasets/wavegrad_dataset.py
+Linha: 101
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/datasets/wavegrad_dataset.py#L101
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 366]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/datasets/wavernn_dataset.py
+Linha: 45
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/datasets/wavernn_dataset.py#L45
+Descricao: Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.
+
+[SONARQUBE 367]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/datasets/wavernn_dataset.py
+Linha: 71
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/datasets/wavernn_dataset.py#L71
+Descricao: Define a constant instead of duplicating this literal "/quant/" 3 times.
+
+[SONARQUBE 368]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/datasets/wavernn_dataset.py
+Linha: 71
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/datasets/wavernn_dataset.py#L71
+Descricao: Define a constant instead of duplicating this literal "/mel/" 3 times.
+
+[SONARQUBE 369]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/datasets/wavernn_dataset.py
+Linha: 92
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/datasets/wavernn_dataset.py#L92
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 370]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/layers/losses.py
+Linha: 46
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/layers/losses.py#L46
+Descricao: Rename this local variable "y_hat_M" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 371]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/layers/losses.py
+Linha: 47
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/layers/losses.py#L47
+Descricao: Rename this local variable "y_M" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 372]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6929
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/layers/losses.py
+Linha: 51
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/layers/losses.py#L51
+Descricao: Provide a value for the dim argument.
+
+[SONARQUBE 373]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6929
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/layers/losses.py
+Linha: 51
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/layers/losses.py#L51
+Descricao: Provide a value for the dim argument.
+
+[SONARQUBE 374]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/layers/losses.py
+Linha: 99
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/layers/losses.py#L99
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 375]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1542
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/layers/losses.py
+Linha: 152
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/layers/losses.py#L152
+Descricao: Rename function "_apply_G_adv_loss" to match the regular expression ^[a-z_][a-z0-9_]*$.
+
+[SONARQUBE 376]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1542
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/layers/losses.py
+Linha: 167
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/layers/losses.py#L167
+Descricao: Rename function "_apply_D_loss" to match the regular expression ^[a-z_][a-z0-9_]*$.
+
+[SONARQUBE 377]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/layers/losses.py
+Linha: 196
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/layers/losses.py#L196
+Descricao: Rename this parameter "C" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 378]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/layers/losses.py
+Linha: 252
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/layers/losses.py#L252
+Descricao: Use the opposite operator ("is") instead.
+
+[SONARQUBE 379]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/layers/losses.py
+Linha: 271
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/layers/losses.py#L271
+Descricao: Rename this parameter "C" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 380]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/layers/losses.py
+Linha: 289
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/layers/losses.py#L289
+Descricao: Rename this local variable "mse_D_real_loss" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 381]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/layers/losses.py
+Linha: 289
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/layers/losses.py#L289
+Descricao: Rename this local variable "mse_D_loss" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 382]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/layers/losses.py
+Linha: 289
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/layers/losses.py#L289
+Descricao: Rename this local variable "mse_D_fake_loss" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 383]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/layers/losses.py
+Linha: 299
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/layers/losses.py#L299
+Descricao: Rename this local variable "hinge_D_real_loss" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 384]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/layers/losses.py
+Linha: 299
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/layers/losses.py#L299
+Descricao: Rename this local variable "hinge_D_loss" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 385]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/layers/losses.py
+Linha: 299
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/layers/losses.py#L299
+Descricao: Rename this local variable "hinge_D_fake_loss" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 386]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/layers/melgan.py
+Linha: 33
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/layers/melgan.py#L33
+Descricao: Replace the unused loop index "i" with "_".
+
+[SONARQUBE 387]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/layers/pqmf.py
+Linha: 11
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/layers/pqmf.py#L11
+Descricao: Rename this parameter "N" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 388]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/layers/pqmf.py
+Linha: 25
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/layers/pqmf.py#L25
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 389]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/models/melgan_multiscale_discriminator.py
+Linha: 34
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/models/melgan_multiscale_discriminator.py#L34
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 390]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/models/melgan_multiscale_discriminator.py
+Linha: 35
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/models/melgan_multiscale_discriminator.py#L35
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 391]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/models/parallel_wavegan_generator.py
+Linha: 16
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/models/parallel_wavegan_generator.py#L16
+Descricao: Method "__init__" has 14 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 392]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5717
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/models/parallel_wavegan_generator.py
+Linha: 29
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/models/parallel_wavegan_generator.py#L29
+Descricao: Change this default value to "None" and initialize this parameter inside the function/method.
+
+[SONARQUBE 393]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/models/random_window_discriminator.py
+Linha: 208
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/models/random_window_discriminator.py#L208
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 394]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/models/random_window_discriminator.py
+Linha: 217
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/models/random_window_discriminator.py#L217
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 395]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1854
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/models/wavegrad.py
+Linha: 121
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/models/wavegrad.py#L121
+Descricao: Remove this assignment to local variable 'noise_level'; the value is never used.
+
+[SONARQUBE 396]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/models/wavegrad.py
+Linha: 134
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/models/wavegrad.py#L134
+Descricao: Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.
+
+[SONARQUBE 397]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/models/wavernn.py
+Linha: 151
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/models/wavernn.py#L151
+Descricao: Method "__init__" has 14 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 398]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/models/wavernn.py
+Linha: 263
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/models/wavernn.py#L263
+Descricao: Refactor this function to reduce its Cognitive Complexity from 29 to the 15 allowed.
+
+[SONARQUBE 399]
+Tipo: BUG
+Severidade: MINOR
+Regra: python:S1226
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/models/wavernn.py
+Linha: 448
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/models/wavernn.py#L448
+Descricao: Introduce a new variable or use its initial value before reassigning 'target'.
+
+[SONARQUBE 400]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/tf/layers/pqmf.py
+Linha: 8
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/tf/layers/pqmf.py#L8
+Descricao: Rename this parameter "N" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 401]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/tf/models/melgan_generator.py
+Linha: 55
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/tf/models/melgan_generator.py#L55
+Descricao: Remove this commented out code.
+
+[SONARQUBE 402]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/tf/models/melgan_generator.py
+Linha: 63
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/tf/models/melgan_generator.py#L63
+Descricao: Remove this commented out code.
+
+[SONARQUBE 403]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/tf/models/melgan_generator.py
+Linha: 85
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/tf/models/melgan_generator.py#L85
+Descricao: Remove this commented out code.
+
+[SONARQUBE 404]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1134
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/tf/models/melgan_generator.py
+Linha: 100
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/tf/models/melgan_generator.py#L100
+Descricao: Take the required action to fix the issue indicated by this "FIXME" comment.
+
+[SONARQUBE 405]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/tf/models/melgan_generator.py
+Linha: 105
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/tf/models/melgan_generator.py#L105
+Descricao: Remove this commented out code.
+
+[SONARQUBE 406]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S4144
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/tf/models/melgan_generator.py
+Linha: 118
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/tf/models/melgan_generator.py#L118
+Descricao: Update this function so that its implementation is not identical to inference on line 97.
+
+[SONARQUBE 407]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1134
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/tf/models/melgan_generator.py
+Linha: 121
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/tf/models/melgan_generator.py#L121
+Descricao: Take the required action to fix the issue indicated by this "FIXME" comment.
+
+[SONARQUBE 408]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/tf/models/melgan_generator.py
+Linha: 126
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/tf/models/melgan_generator.py#L126
+Descricao: Remove this commented out code.
+
+[SONARQUBE 409]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1134
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/tf/models/multiband_melgan_generator.py
+Linha: 36
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/tf/models/multiband_melgan_generator.py#L36
+Descricao: Take the required action to fix the issue indicated by this "FIXME" comment.
+
+[SONARQUBE 410]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S4144
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/tf/models/multiband_melgan_generator.py
+Linha: 50
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/tf/models/multiband_melgan_generator.py#L50
+Descricao: Update this function so that its implementation is not identical to inference on line 33.
+
+[SONARQUBE 411]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1134
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/tf/models/multiband_melgan_generator.py
+Linha: 53
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/tf/models/multiband_melgan_generator.py#L53
+Descricao: Take the required action to fix the issue indicated by this "FIXME" comment.
+
+[SONARQUBE 412]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/tf/utils/generic_utils.py
+Linha: 12
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/tf/utils/generic_utils.py#L12
+Descricao: Rename this local variable "MyModel" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 413]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S108
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/tf/utils/generic_utils.py
+Linha: 25
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/tf/utils/generic_utils.py#L25
+Descricao: Either remove or fill this block of code.
+
+[SONARQUBE 414]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/utils/distribution.py
+Linha: 13
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/utils/distribution.py#L13
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 415]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/utils/distribution.py
+Linha: 94
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/utils/distribution.py#L94
+Descricao: Remove this commented out code.
+
+[SONARQUBE 416]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/utils/distribution.py
+Linha: 100
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/utils/distribution.py#L100
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 417]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/utils/generic_utils.py
+Linha: 47
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/utils/generic_utils.py#L47
+Descricao: Rename this local variable "MyModel" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 418]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/utils/generic_utils.py
+Linha: 70
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/utils/generic_utils.py#L70
+Descricao: Rename this local variable "MyModel" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 419]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S108
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/utils/generic_utils.py
+Linha: 83
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/utils/generic_utils.py#L83
+Descricao: Either remove or fill this block of code.
+
+[SONARQUBE 420]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/utils/generic_utils.py
+Linha: 134
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/utils/generic_utils.py#L134
+Descricao: Rename this local variable "MyModel" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 421]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/utils/generic_utils.py
+Linha: 190
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/utils/generic_utils.py#L190
+Descricao: Remove this commented out code.
+
+[SONARQUBE 422]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/utils/io.py
+Linha: 11
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/utils/io.py#L11
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 423]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: TTS/vocoder/utils/io.py
+Linha: 14
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/TTS/vocoder/utils/io.py#L14
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 424]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: notebooks/dataset_analysis/analyze.py
+Linha: 97
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/notebooks/dataset_analysis/analyze.py#L97
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 425]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: notebooks/dataset_analysis/analyze.py
+Linha: 118
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/notebooks/dataset_analysis/analyze.py#L118
+Descricao: Define a constant instead of duplicating this literal "character lengths" 5 times.
+
+[SONARQUBE 426]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: notebooks/dataset_analysis/analyze.py
+Linha: 157
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/notebooks/dataset_analysis/analyze.py#L157
+Descricao: Refactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.
+
+[SONARQUBE 427]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: notebooks/dataset_analysis/analyze.py
+Linha: 185
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/notebooks/dataset_analysis/analyze.py#L185
+Descricao: Define a constant instead of duplicating this literal "figure.figsize" 3 times.
+
+[SONARQUBE 428]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3415
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/test_text_cleaners.py
+Linha: 7
+Link do codigo: https://github.com/coqui-ai/TTS/blob/4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c/tests/test_text_cleaners.py#L7
+Descricao: Unify assertion argument order in this file; both "actual first" and "expected first" conventions are used.
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE coqui-ai/TTS
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

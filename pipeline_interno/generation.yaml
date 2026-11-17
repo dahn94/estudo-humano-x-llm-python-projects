@@ -1,0 +1,21 @@
+prompts_file: "workspace/output/prompts.jsonl"
+generated_root: "workspace/generated"
+secrets_file: "secrets/providers.env"
+
+providers:
+  openai:
+    model: "gpt-5-mini"
+    api_key_env: "OPENAI_API_KEY"
+  gemini:
+    model: "gemini-2.5-flash"
+    api_key_env: "GEMINI_API_KEY"
+  claude:
+    model: "claude-sonnet-4-5"
+    api_key_env: "ANTHROPIC_API_KEY"
+
+generation:
+  temperature: 0
+  max_output_tokens: 4096
+  retries: 3
+  retry_delay_seconds: 2
+

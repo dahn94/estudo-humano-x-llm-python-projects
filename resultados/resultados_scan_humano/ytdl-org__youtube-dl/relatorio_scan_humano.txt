@@ -1,0 +1,83 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 4 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: ytdl-org/youtube-dl
+####################################################################################################
+Repositorio: https://github.com/ytdl-org/youtube-dl
+Commit analisado: 40d66e07dfef72fbef761ac720b82eb77deb7398
+Link do commit: https://github.com/ytdl-org/youtube-dl/commit/40d66e07dfef72fbef761ac720b82eb77deb7398
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 133002
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 3
+  ERROR: 3
+  WARNING: 0
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 0
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 0
+  Security hotspots: 0
+  Complexidade: 14313
+  Linhas analisadas pelo SonarQube: 126677
+  Severidades: nenhuma
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: devscripts/make_issue_template.py
+Linha: 20
+Link do codigo: https://github.com/ytdl-org/youtube-dl/blob/40d66e07dfef72fbef761ac720b82eb77deb7398/devscripts/make_issue_template.py#L20
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 2]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: setup.py
+Linha: 36
+Link do codigo: https://github.com/ytdl-org/youtube-dl/blob/40d66e07dfef72fbef761ac720b82eb77deb7398/setup.py#L36
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 3]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: youtube_dl/postprocessor/execafterdownload.py
+Linha: 26
+Link do codigo: https://github.com/ytdl-org/youtube-dl/blob/40d66e07dfef72fbef761ac720b82eb77deb7398/youtube_dl/postprocessor/execafterdownload.py#L26
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE ytdl-org/youtube-dl
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

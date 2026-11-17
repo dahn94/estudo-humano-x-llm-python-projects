@@ -1,0 +1,164 @@
+21:44:56.323 INFO  Scanner configuration file: /mnt/c/Users/felipe.fidelis/OneDrive - Vision Cybersecurity/Área de Trabalho/trabalho mestrado/python_prellm_pipeline/pipeline_interno/tools/sonar-scanner/conf/sonar-scanner.properties
+21:44:56.333 INFO  Project root configuration file: NONE
+21:44:56.369 INFO  SonarScanner CLI 8.0.1.6346
+21:44:56.376 INFO  Linux 6.18.33.2-microsoft-standard-WSL2 amd64
+21:44:58.244 INFO  Communicating with SonarQube Community Build 26.9.0.129388
+21:44:58.250 INFO  JRE provisioning is disabled
+21:44:58.251 INFO  The java executable in the PATH will be used
+21:44:58.511 INFO  SONAR_SCANNER_JAVA_OPTS=-Xms256m -Xmx2048m
+21:44:58.830 INFO  Starting SonarScanner Engine...
+21:44:58.832 INFO  Java 21.0.12 Ubuntu (64-bit)
+21:45:00.095 INFO  Load global settings
+21:45:00.221 INFO  Load global settings (done) | time=124ms
+21:45:00.225 INFO  Server id: 147B411E-AaCHMJYtDFq3q1fqGHiY
+21:45:00.237 INFO  Loading required plugins
+21:45:00.238 INFO  Load plugins index
+21:45:00.271 INFO  Load plugins index (done) | time=34ms
+21:45:00.272 INFO  Load/download plugins
+21:45:00.306 INFO  Load/download plugins (done) | time=35ms
+21:45:00.633 INFO  Process project properties
+21:45:00.653 INFO  Process project properties (done) | time=20ms
+21:45:00.666 INFO  Project key: human-psf__black
+21:45:00.668 INFO  Base dir: /home/felipefidelis/prellm_psf__black_vHt7
+21:45:00.669 INFO  Working dir: /home/felipefidelis/prellm_psf__black_vHt7/.scannerwork
+21:45:00.682 INFO  Load project settings for component key: 'human-psf__black'
+21:45:00.728 INFO  Load quality profiles
+21:45:00.952 INFO  Load quality profiles (done) | time=225ms
+21:45:00.989 WARN  SCM provider autodetection failed. Please use "sonar.scm.provider" to define SCM of your project, or disable the SCM Sensor in the project settings.
+21:45:00.999 INFO  Load active rules
+21:45:01.464 INFO  Load active rules (done) | time=465ms
+21:45:01.472 INFO  Load analysis cache
+21:45:01.485 INFO  Load analysis cache (404) | time=13ms
+21:45:01.594 INFO  Preprocessing files...
+21:45:01.675 INFO  1 language detected in 97 preprocessed files (done) | time=81ms
+21:45:01.676 INFO  0 files ignored because of inclusion/exclusion patterns
+21:45:01.677 INFO  Loading plugins for detected languages
+21:45:01.678 INFO  Load/download plugins
+21:45:01.691 INFO  Load/download plugins (done) | time=13ms
+21:45:01.857 INFO  Load project repositories
+21:45:01.870 INFO  Load project repositories (done) | time=13ms
+21:45:01.898 INFO  Indexing files...
+21:45:01.899 INFO  Project configuration:
+21:45:01.900 INFO    Included sources: **/*.py
+21:45:01.901 INFO    Excluded sources: **/.git/**, **/.venv/**, **/venv/**, **/vendor/**, **/vendors/**, **/third_party/**, **/node_modules/**, **/build/**, **/dist/**
+21:45:01.920 INFO  97 files indexed (done) | time=22ms
+21:45:01.921 INFO  Quality profile for py: Sonar way
+21:45:01.922 INFO  ------------- Run sensors on module Humano - psf__black
+21:45:01.973 INFO  Load metrics repository
+21:45:02.015 INFO  Load metrics repository (done) | time=41ms
+21:45:02.665 INFO  Sensor IaC YAML File Type Classification Sensor [iac]
+21:45:02.670 INFO  Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=4ms
+21:45:02.671 INFO  Sensor IaC hadolint report Sensor [iac]
+21:45:02.672 INFO  Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+21:45:02.673 INFO  Sensor Java Config Sensor [iac]
+21:45:02.674 INFO  There are no files to be analyzed for the Java language
+21:45:02.675 INFO  Sensor Java Config Sensor [iac] (done) | time=0ms
+21:45:02.676 INFO  Sensor IaC Docker Sensor [iac]
+21:45:02.677 INFO  There are no files to be analyzed for the Docker language
+21:45:02.678 INFO  Sensor IaC Docker Sensor [iac] (done) | time=3ms
+21:45:02.679 INFO  Sensor Python Sensor [python]
+21:45:03.024 INFO  Starting global symbols computation
+21:45:03.027 INFO  96 source files to be analyzed
+21:45:03.337 WARN  Failed to build control flow graph in file [tests/data/long_strings_flag_disabled.py]: Invalid return outside of a function
+21:45:04.176 WARN  Failed to build control flow graph in file [tests/data/long_strings__edge_case.py]: Invalid return outside of a function
+21:45:04.774 WARN  Failed to build control flow graph in file [tests/data/trailing_comma_optional_parens3.py]: Invalid return outside of a function
+21:45:05.120 WARN  Failed to build control flow graph in file [tests/data/expression.py]: Invalid return outside of a function
+21:45:05.756 WARN  Failed to build control flow graph in file [tests/data/pep_572.py]: Invalid return outside of a function
+21:45:05.922 WARN  Failed to build control flow graph in file [tests/data/long_strings.py]: Invalid return outside of a function
+21:45:06.076 INFO  96/96 source files have been analyzed
+21:45:06.077 INFO  Finished step global symbols computation in 3051ms
+21:45:06.177 INFO  Starting rules execution
+21:45:06.178 INFO  96 source files to be analyzed
+21:45:06.182 WARN  Test files were detected using a path heuristic because "sonar.tests" is not set. To improve the analysis accuracy, it is recommended to configure it, e.g.: "sonar.tests=src/test".
+21:45:06.498 WARN  Failed to build control flow graph in file [tests/data/long_strings_flag_disabled.py]: Invalid return outside of a function
+21:45:07.889 WARN  Failed to build control flow graph in file [tests/data/long_strings__edge_case.py]: Invalid return outside of a function
+21:45:10.058 WARN  Unable to analyze file: tests/data/async_as_identifier.py
+java.lang.IllegalStateException: Expression IDENTIFIER not correctly translated to strongly typed AST
+	at org.sonar.python.tree.PythonTreeMaker.expression(PythonTreeMaker.java:1273)
+	at org.sonar.python.tree.PythonTreeMaker.expression(PythonTreeMaker.java:1231)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	at org.sonar.python.tree.PythonTreeMaker.expressionList(PythonTreeMaker.java:792)
+	at org.sonar.python.tree.PythonTreeMaker.assignment(PythonTreeMaker.java:758)
+	at org.sonar.python.tree.PythonTreeMaker.statement(PythonTreeMaker.java:204)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:575)
+	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:616)
+	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:622)
+	at java.base/java.util.stream.ReferencePipeline.toList(ReferencePipeline.java:627)
+	at org.sonar.python.tree.PythonTreeMaker.fileInput(PythonTreeMaker.java:114)
+	at org.sonar.plugins.python.PythonScanner.createVisitorContext(PythonScanner.java:199)
+	at org.sonar.plugins.python.PythonScanner.scanFile(PythonScanner.java:156)
+	at org.sonar.plugins.python.Scanner.processFile(Scanner.java:103)
+	at org.sonar.plugins.python.Scanner.lambda$processFiles$1(Scanner.java:69)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188)
+
+21:45:10.150 WARN  Failed to build control flow graph in file [tests/data/trailing_comma_optional_parens3.py]: Invalid return outside of a function
+21:45:10.717 WARN  Failed to build control flow graph in file [tests/data/expression.py]: Invalid return outside of a function
+21:45:12.308 WARN  Failed to build control flow graph in file [tests/data/pep_572.py]: Invalid return outside of a function
+21:45:12.566 WARN  Failed to build control flow graph in file [tests/data/long_strings.py]: Invalid return outside of a function
+21:45:13.633 INFO  96/96 source files have been analyzed
+21:45:13.634 INFO  Finished step rules execution in 7456ms
+21:45:13.635 INFO  The Python analyzer was able to leverage cached data from previous analyses for 0 out of 96 files. These files were not parsed.
+21:45:13.637 INFO  Sensor Python Sensor [python] (done) | time=10963ms
+21:45:13.638 INFO  Sensor Cobertura Sensor for Python coverage [python]
+21:45:13.644 INFO  Sensor Cobertura Sensor for Python coverage [python] (done) | time=6ms
+21:45:13.645 INFO  Sensor PythonXUnitSensor [python]
+21:45:13.648 INFO  Sensor PythonXUnitSensor [python] (done) | time=4ms
+21:45:13.650 INFO  Sensor Python Dependency Sensor [python]
+21:45:13.654 INFO  Sensor Python Dependency Sensor [python] (done) | time=5ms
+21:45:13.655 INFO  Sensor TextAndSecretsSensor [text]
+21:45:13.672 INFO  Available processors: 8
+21:45:13.673 INFO  Using 8 threads for analysis.
+21:45:13.893 INFO  The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test", "tests", "mock" or "mocks"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+21:45:13.922 INFO  Start fetching files for the text and secrets analysis
+21:45:13.937 INFO  Using Git CLI to retrieve dirty files
+21:45:13.939 WARN  Retrieving only language associated files, make sure to run the analysis inside a git repository to make use of inclusions specified via "sonar.text.inclusions"
+21:45:13.940 INFO  Starting the text and secrets analysis
+21:45:13.942 INFO  96 source files to be analyzed for the text and secrets analysis
+21:45:14.431 INFO  96/96 source files have been analyzed for the text and secrets analysis
+21:45:14.432 INFO  Skipped 69 file(s) in the secrets analysis due to automatic test file detection
+21:45:14.433 INFO  Sensor TextAndSecretsSensor [text] (done) | time=778ms
+21:45:14.434 INFO  ------------- Run sensors on project
+21:45:14.577 INFO  Sensor IaC Project Sensor [iac]
+21:45:14.580 INFO  Sensor IaC Project Sensor [iac] (done) | time=1ms
+21:45:14.581 INFO  Sensor Zero Coverage Sensor
+21:45:14.612 INFO  Sensor Zero Coverage Sensor (done) | time=32ms
+21:45:14.618 INFO  ------------- Gather SCA dependencies on project
+21:45:14.619 INFO  Dependency analysis skipped
+21:45:14.626 INFO  SCM Publisher No SCM system was detected. You can use the 'sonar.scm.provider' property to explicitly specify it.
+21:45:14.731 INFO  CPD Executor 17 files had no CPD blocks
+21:45:14.732 INFO  CPD Executor Calculating CPD for 78 files
+21:45:15.023 INFO  CPD Executor CPD calculation finished (done) | time=291ms
+21:45:15.272 INFO  Analysis report generated in 237ms, dir size=12.7 MB
+21:45:15.749 INFO  Analysis report compressed in 476ms, zip size=4.6 MB
+21:45:16.467 INFO  Analysis report uploaded in 718ms
+21:45:16.471 INFO  ANALYSIS SUCCESSFUL, you can find the results at: http://localhost:9000/dashboard?id=human-psf__black
+21:45:16.473 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+21:45:16.474 INFO  More about the report processing at http://localhost:9000/api/ce/task?id=861436df-ca2a-4b9d-a9f7-73bdf680edb0
+21:45:16.492 INFO  Analysis total time: 16.134 s
+21:45:16.522 INFO  SonarScanner Engine completed successfully
+21:45:16.581 INFO  EXECUTION SUCCESS
+21:45:16.583 INFO  Total time: 20.280s

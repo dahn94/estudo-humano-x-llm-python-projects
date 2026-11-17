@@ -1,0 +1,356 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 9 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: sherlock-project/sherlock
+####################################################################################################
+Repositorio: https://github.com/sherlock-project/sherlock
+Commit analisado: d404fe73fc79448fa868d126d28f0d3ea0502a43
+Link do commit: https://github.com/sherlock-project/sherlock/commit/d404fe73fc79448fa868d126d28f0d3ea0502a43
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 1452
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 0
+  ERROR: 0
+  WARNING: 0
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 30
+  Vulnerabilidades: 1
+  Bugs: 0
+  Code smells: 29
+  Security hotspots: 0
+  Complexidade: 140
+  Linhas analisadas pelo SonarQube: 814
+  Severidades: CRITICAL=9, INFO=1, MAJOR=5, MINOR=15
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SONARQUBE 1]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S3626
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/notify.py
+Linha: 35
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/notify.py#L35
+Descricao: Remove this redundant return.
+
+[SONARQUBE 2]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S3626
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/notify.py
+Linha: 54
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/notify.py#L54
+Descricao: Remove this redundant return.
+
+[SONARQUBE 3]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S3626
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/notify.py
+Linha: 73
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/notify.py#L73
+Descricao: Remove this redundant return.
+
+[SONARQUBE 4]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S3626
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/notify.py
+Linha: 92
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/notify.py#L92
+Descricao: Remove this redundant return.
+
+[SONARQUBE 5]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S3626
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/notify.py
+Linha: 139
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/notify.py#L139
+Descricao: Remove this redundant return.
+
+[SONARQUBE 6]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/notify.py
+Linha: 141
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/notify.py#L141
+Descricao: Add a default value to parameter message.
+
+[SONARQUBE 7]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S3626
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/notify.py
+Linha: 165
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/notify.py#L165
+Descricao: Remove this redundant return.
+
+[SONARQUBE 8]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/notify.py
+Linha: 167
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/notify.py#L167
+Descricao: Refactor this function to reduce its Cognitive Complexity from 29 to the 15 allowed.
+
+[SONARQUBE 9]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/notify.py
+Linha: 221
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/notify.py#L221
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 10]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S3626
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/notify.py
+Linha: 242
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/notify.py#L242
+Descricao: Remove this redundant return.
+
+[SONARQUBE 11]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S3626
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/result.py
+Linha: 71
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/result.py#L71
+Descricao: Remove this redundant return.
+
+[SONARQUBE 12]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5717
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/sherlock.py
+Linha: 34
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/sherlock.py#L34
+Descricao: Change this default value to "None" and initialize this parameter inside the function/method.
+
+[SONARQUBE 13]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S3626
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/sherlock.py
+Linha: 71
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/sherlock.py#L71
+Descricao: Remove this redundant return.
+
+[SONARQUBE 14]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/sherlock.py
+Linha: 97
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/sherlock.py#L97
+Descricao: Remove the unused function parameter "error_type".
+
+[SONARQUBE 15]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/sherlock.py
+Linha: 97
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/sherlock.py#L97
+Descricao: Remove the unused function parameter "social_network".
+
+[SONARQUBE 16]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/sherlock.py
+Linha: 128
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/sherlock.py#L128
+Descricao: Refactor this function to reduce its Cognitive Complexity from 77 to the 15 allowed.
+
+[SONARQUBE 17]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/sherlock.py
+Linha: 301
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/sherlock.py#L301
+Descricao: Replace the unused local variable "expection_text" with "_".
+
+[SONARQUBE 18]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/sherlock.py
+Linha: 314
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/sherlock.py#L314
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 19]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/sherlock.py
+Linha: 318
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/sherlock.py#L318
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 20]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/sherlock.py
+Linha: 363
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/sherlock.py#L363
+Descricao: Use the opposite operator ("<") instead.
+
+[SONARQUBE 21]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/sherlock.py
+Linha: 436
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/sherlock.py#L436
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 22]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/sherlock.py
+Linha: 443
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/sherlock.py#L443
+Descricao: Refactor this function to reduce its Cognitive Complexity from 55 to the 15 allowed.
+
+[SONARQUBE 23]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/sherlock.py
+Linha: 539
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/sherlock.py#L539
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 24]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/sherlock.py
+Linha: 541
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/sherlock.py#L541
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 25]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S3626
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/sites.py
+Linha: 60
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/sites.py#L60
+Descricao: Remove this redundant return.
+
+[SONARQUBE 26]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/sites.py
+Linha: 76
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/sites.py#L76
+Descricao: Refactor this function to reduce its Cognitive Complexity from 20 to the 15 allowed.
+
+[SONARQUBE 27]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/sites.py
+Linha: 120
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/sites.py#L120
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 28]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S3626
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/sites.py
+Linha: 175
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/sites.py#L175
+Descricao: Remove this redundant return.
+
+[SONARQUBE 29]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5899
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: sherlock/tests/base.py
+Linha: 204
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/sherlock/tests/base.py#L204
+Descricao: Rename this method so that it starts with "test" or remove this unused helper.
+
+[SONARQUBE 30]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: site_list.py
+Linha: 8
+Link do codigo: https://github.com/sherlock-project/sherlock/blob/d404fe73fc79448fa868d126d28f0d3ea0502a43/site_list.py#L8
+Descricao: Replace this constructor call with a literal.
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE sherlock-project/sherlock
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

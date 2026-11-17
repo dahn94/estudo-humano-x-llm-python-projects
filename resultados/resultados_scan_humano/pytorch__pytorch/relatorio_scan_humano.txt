@@ -1,0 +1,434 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 5 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: pytorch/pytorch
+####################################################################################################
+Repositorio: https://github.com/pytorch/pytorch
+Commit analisado: 749f8b78508c43f9e6331f2395a4202785068442
+Link do commit: https://github.com/pytorch/pytorch/commit/749f8b78508c43f9e6331f2395a4202785068442
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 429938
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 42
+  ERROR: 22
+  WARNING: 20
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 0
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 0
+  Security hotspots: 0
+  Complexidade: 58523
+  Linhas analisadas pelo SonarQube: 365765
+  Severidades: nenhuma
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: benchmarks/fastrnns/profile.py
+Linha: 57
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/benchmarks/fastrnns/profile.py#L57
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 2]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: benchmarks/sparse/matmul_dlmc_bench.py
+Linha: 185
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/benchmarks/sparse/matmul_dlmc_bench.py#L185
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 3]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: caffe2/contrib/aten/gen_op.py
+Linha: 236
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/caffe2/contrib/aten/gen_op.py#L236
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 4]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: caffe2/contrib/gloo/gloo_test.py
+Linha: 160
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/caffe2/contrib/gloo/gloo_test.py#L160
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 5]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: caffe2/contrib/playground/checkpoint.py
+Linha: 32
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/caffe2/contrib/playground/checkpoint.py#L32
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 6]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: caffe2/python/schema_test.py
+Linha: 45
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/caffe2/python/schema_test.py#L45
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 7]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: scripts/release_notes/common.py
+Linha: 75
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/scripts/release_notes/common.py#L75
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 8]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: tools/autograd/gen_autograd.py
+Linha: 121
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/tools/autograd/gen_autograd.py#L121
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 9]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: tools/autograd/gen_python_functions.py
+Linha: 262
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/tools/autograd/gen_python_functions.py#L262
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 10]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: tools/autograd/load_derivatives.py
+Linha: 25
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/tools/autograd/load_derivatives.py#L25
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 11]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: tools/autograd/utils.py
+Linha: 91
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/tools/autograd/utils.py#L91
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 12]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: tools/clang_tidy.py
+Linha: 176
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/tools/clang_tidy.py#L176
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 13]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: tools/code_coverage/package/oss/utils.py
+Linha: 94
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/tools/code_coverage/package/oss/utils.py#L94
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 14]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: tools/codegen/gen.py
+Linha: 86
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/tools/codegen/gen.py#L86
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 15]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: tools/codegen/selective_build/selector.py
+Linha: 64
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/tools/codegen/selective_build/selector.py#L64
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 16]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: tools/codegen/selective_build/selector.py
+Linha: 70
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/tools/codegen/selective_build/selector.py#L70
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 17]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: torch/distributed/distributed_c10d.py
+Linha: 1410
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/distributed/distributed_c10d.py#L1410
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 18]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: torch/distributed/rpc/internal.py
+Linha: 145
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/distributed/rpc/internal.py#L145
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 19]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: torch/fx/experimental/rewriter.py
+Linha: 39
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/fx/experimental/rewriter.py#L39
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 20]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: torch/fx/graph_module.py
+Linha: 26
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/fx/graph_module.py#L26
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 21]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: torch/jit/annotations.py
+Linha: 148
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/jit/annotations.py#L148
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 22]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: torch/jit/annotations.py
+Linha: 156
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/jit/annotations.py#L156
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 23]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: torch/jit/unsupported_tensor_ops.py
+Linha: 7
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/jit/unsupported_tensor_ops.py#L7
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 24]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: torch/multiprocessing/queue.py
+Linha: 22
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/multiprocessing/queue.py#L22
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 25]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: torch/package/importer.py
+Linha: 160
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/package/importer.py#L160
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 26]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: torch/testing/_internal/jit_utils.py
+Linha: 51
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/testing/_internal/jit_utils.py#L51
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 27]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: torch/testing/_internal/jit_utils.py
+Linha: 191
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/testing/_internal/jit_utils.py#L191
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 28]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: torch/utils/benchmark/examples/blas_compare.py
+Linha: 121
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/utils/benchmark/examples/blas_compare.py#L121
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 29]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: torch/utils/benchmark/examples/blas_compare.py
+Linha: 156
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/utils/benchmark/examples/blas_compare.py#L156
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 30]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: torch/utils/benchmark/examples/blas_compare.py
+Linha: 196
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/utils/benchmark/examples/blas_compare.py#L196
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 31]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: torch/utils/benchmark/examples/blas_compare_setup.py
+Linha: 96
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/utils/benchmark/examples/blas_compare_setup.py#L96
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 32]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: torch/utils/benchmark/examples/blas_compare_setup.py
+Linha: 113
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/utils/benchmark/examples/blas_compare_setup.py#L113
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 33]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: torch/utils/benchmark/examples/blas_compare_setup.py
+Linha: 146
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/utils/benchmark/examples/blas_compare_setup.py#L146
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 34]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: torch/utils/benchmark/examples/blas_compare_setup.py
+Linha: 161
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/utils/benchmark/examples/blas_compare_setup.py#L161
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 35]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: torch/utils/benchmark/examples/blas_compare_setup.py
+Linha: 173
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/utils/benchmark/examples/blas_compare_setup.py#L173
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 36]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: torch/utils/benchmark/examples/blas_compare_setup.py
+Linha: 183
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/utils/benchmark/examples/blas_compare_setup.py#L183
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 37]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: torch/utils/benchmark/examples/compare.py
+Linha: 85
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/utils/benchmark/examples/compare.py#L85
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 38]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: torch/utils/benchmark/examples/end_to_end.py
+Linha: 359
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/utils/benchmark/examples/end_to_end.py#L359
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 39]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: torch/utils/benchmark/examples/end_to_end.py
+Linha: 366
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/utils/benchmark/examples/end_to_end.py#L366
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 40]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: torch/utils/bottleneck/__main__.py
+Linha: 75
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/utils/bottleneck/__main__.py#L75
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 41]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: torch/utils/bottleneck/__main__.py
+Linha: 96
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/utils/bottleneck/__main__.py#L96
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 42]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: torch/utils/collect_env.py
+Linha: 42
+Link do codigo: https://github.com/pytorch/pytorch/blob/749f8b78508c43f9e6331f2395a4202785068442/torch/utils/collect_env.py#L42
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE pytorch/pytorch
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

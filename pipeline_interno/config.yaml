@@ -1,0 +1,45 @@
+
+# Data-limite do baseline humano.
+cutoff_date: "2020-12-31"
+
+# Pasta de trabalho local.
+workspace: "./workspace"
+
+# Comece com poucos repositórios e aumente depois.
+repositories:
+  - "TheAlgorithms/Python"
+  - "bottlepy/bottle"
+
+# Diretórios ignorados na coleta de código humano.
+excluded_dirs:
+  - ".git"
+  - ".github"
+  - ".venv"
+  - "venv"
+  - "env"
+  - "build"
+  - "dist"
+  - "__pycache__"
+  - "tests"
+  - "test"
+  - "docs"
+  - "doc"
+
+# Filtros para evitar funções pequenas ou gigantes demais.
+min_function_lines: 8
+max_function_lines: 180
+
+# Para o MVP, exigir docstring ajuda muito a criar prompts sem ler o corpo.
+require_docstring: true
+min_docstring_chars: 35
+
+# Evita pegar funções genéricas demais.
+blocked_function_names:
+  - "main"
+  - "get"
+  - "set"
+  - "run"
+  - "test"
+
+# Evita que um único projeto domine o dataset.
+max_functions_per_repo: 100

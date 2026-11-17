@@ -1,0 +1,1041 @@
+O QUE E ESTE ARQUIVO
+================================================================================
+Este e o prompt que deve ser enviado ao ChatGPT, Gemini ou Claude para recriar o projeto.
+Ele contem somente informacoes documentais publicas e a arquitetura textual inferida; o corpo do
+codigo-fonte humano nao foi incluido. A resposta da IA devera ser salva separadamente e depois
+avaliada pelas mesmas ferramentas Semgrep e SonarQube usadas no projeto humano.
+
+INSTRUCAO PARA A IA
+================================================================================
+Crie do zero um projeto Python funcionalmente semelhante ao descrito abaixo.
+REGRAS OBRIGATORIAS:
+- Nao procure, copie, traduza ou reproduza o codigo-fonte do repositorio original.
+- Use apenas README, documentacao e manifestos fornecidos neste prompt.
+- Implemente as funcionalidades publicas documentadas, validacao de entrada, tratamento de erros e testes proprios.
+- Nao inclua segredos, credenciais, caminhos absolutos ou dependencias desnecessarias.
+- Entregue todos os arquivos completos e um README de execucao.
+
+REFERENCIA: ManimCommunity/manim
+COMMIT DOCUMENTAL: e16f9a6cc4da677c6f0fc4e7ba8d7025f9d6bb10
+
+README:
+
+--- README.md ---
+<p align="center">
+    <a href="https://www.manim.community/"><img src="https://raw.githubusercontent.com/ManimCommunity/manim/master/logo/cropped.png"></a>
+    <br />
+    <br />
+    <a href="https://pypi.org/project/manim/"><img src="https://img.shields.io/pypi/v/manim.svg?style=flat&logo=pypi" alt="PyPI Latest Release"></a>
+    <a href="http://choosealicense.com/licenses/mit/"><img src="https://img.shields.io/badge/license-MIT-red.svg?style=flat" alt="MIT License"></a>
+    <a href="https://www.reddit.com/r/manim/"><img src="https://img.shields.io/reddit/subreddit-subscribers/manim.svg?color=orange&label=reddit&logo=reddit" alt="Reddit" href=></a>
+    <a href="https://twitter.com/manim_community/"><img src="https://img.shields.io/twitter/url/https/twitter.com/cloudposse.svg?style=social&label=Follow%20%40manim_community" alt="Twitter">
+    <a href="https://discord.gg/mMRrZQW"><img src="https://img.shields.io/discord/581738731934056449.svg?label=discord&color=yellow&logo=discord" alt="Discord"></a>
+    <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black">
+    <a href="https://docs.manim.community/"><img src="https://readthedocs.org/projects/manimce/badge/?version=latest" alt="Documentation Status"></a>
+    <a href="https://hub.docker.com/r/manimcommunity/manim"><img src="https://img.shields.io/docker/v/manimcommunity/manim?color=%23099cec&label=docker%20image&logo=docker" alt="Docker image"> </a>
+    <a href="https://pepy.tech/project/manim"><img src="https://pepy.tech/badge/manim/month?" alt="Downloads"> </a>
+    <img src="https://github.com/ManimCommunity/manim/workflows/CI/badge.svg" alt="CI">
+    <br />
+    <br />
+    <i>An animation engine for explanatory math videos</i>
+</p>
+<hr />
+
+
+Manim is an animation engine for explanatory math videos. It's used to create precise animations programmatically, as demonstrated in the videos of [3Blue1Brown](https://www.3blue1brown.com/).
+
+> NOTE: This repository is maintained by the Manim Community, and is not associated with Grant Sanderson or 3Blue1Brown in any way (although we are definitely indebted to him for providing his work to the world). If you would like to study how Grant makes his videos, head over to his repository ([3b1b/manim](https://github.com/3b1b/manim)). This fork is updated more frequently than his, and it's recommended to use this fork if you'd like to use Manim for your own projects.
+
+## Table of Contents:
+
+-  [Installation](#installation)
+-  [Usage](#usage)
+-  [Documentation](#documentation)
+-  [Help with Manim](#help-with-manim)
+-  [Contributing](#contributing)
+-  [License](#license)
+
+## Installation
+
+Manim requires a few dependencies that must be installed prior to using it. Please visit the [Documentation](https://docs.manim.community/en/latest/installation.html) and follow the appropriate instructions for your operating system.
+
+Once the dependencies have been installed, run the following in a terminal window:
+
+```bash
+pip install manim
+```
+
+## Usage
+
+Manim is an extremely versatile package. The following is an example `Scene` you can construct:
+
+```python
+from manim import *
+
+class SquareToCircle(Scene):
+    def construct(self):
+        circle = Circle()
+        square = Square()
+        square.flip(RIGHT)
+        square.rotate(-3 * TAU / 8)
+        circle.set_fill(PINK, opacity=0.5)
+
+        self.play(ShowCreation(square))
+        self.play(Transform(square, circle))
+        self.play(FadeOut(square))
+```
+
+In order to view the output of this scene, save the code in a file called `example.py`. Then, run the following in a terminal window:
+
+```sh
+manim example.py SquareToCircle -p -ql
+```
+
+You should see your native video player program pop up and play a simple scene in which a square is transformed into a circle. You may find some more simple examples within this
+[GitHub repository](master/example_scenes). You can also visit the [official gallery](https://docs.manim.community/en/latest/examples.html) for more advanced examples.
+
+## Command line arguments
+
+The general usage of Manim is as follows:
+
+![manim-illustration](https://raw.githubusercontent.com/ManimCommunity/manim/master/docs/source/_static/command.png)
+
+The `-p` flag in the command above is for previewing, meaning the video file will automatically open when it is done rendering. The `-ql` flag is for a faster rendering at a lower quality.
+
+Some other useful flags include:
+
+-  `-s` to skip to the end and just show the final frame.
+-  `-n <number>` to skip ahead to the `n`'th animation of a scene.
+-  `-f` show the file in the file browser.
+
+For a thorough list of command line arguments, visit the [documentation](https://docs.manim.community/en/latest/tutorials/configuration.html).
+
+## Documentation
+
+Documentation is in progress at [ReadTheDocs](https://docs.manim.community/).
+
+## Help with Manim
+
+If you need help installing or using Manim, feel free to reach out to our [Discord
+Server](https://discord.gg/mMRrZQW) or [Reddit Community](https://www.reddit.com/r/manim). If you would like to submit bug report or feature request, please open an issue.
+
+## Contributing
+
+Contributions to Manim are always welcome. In particular, there is a dire need for tests and documentation. For contribution guidelines, please see the [documentation](https://docs.manim.community/en/latest/contributing.html).
+
+Most developers on the project use [Poetry](https://python-poetry.org/docs/) for management. You'll want to have poetry installed and available in your environment. You can learn more `poetry` and how to use it at its [documentation](https://docs.manim.community/en/latest/installation/for_dev.html).
+
+## License
+
+The software is double-licensed under the MIT license, with copyright by 3blue1brown LLC (see LICENSE), and copyright by Manim Community Developers (see LICENSE.community).
+
+
+DOCUMENTACAO PUBLICA:
+
+--- class.rst ---
+{{ fullname | escape | underline}}
+
+.. currentmodule:: {{ module }}
+
+.. autoclass:: {{ objname }}
+   :show-inheritance:
+   :members:
+
+   {% block methods %}
+   {%- if methods %}
+   .. rubric:: {{ _('Methods') }}
+
+   .. autosummary::
+      :nosignatures:
+      {% for item in methods if item != '__init__' and item not in inherited_members %}
+      ~{{ name }}.{{ item }}
+      {%- endfor %}
+   {%- endif %}
+   {%- endblock %}
+
+   {% block attributes %}
+   {%- if attributes %}
+   .. rubric:: {{ _('Attributes') }}
+
+   .. autosummary::
+     {% for item in attributes %}
+     ~{{ name }}.{{ item }}
+     {%- endfor %}
+   {%- endif %}
+   {% endblock %}
+
+--- module.rst ---
+{{ fullname | escape | underline }}
+
+.. currentmodule:: {{ fullname }}
+
+.. automodule:: {{ fullname }}
+
+   {% block attributes %}
+   {% if attributes %}
+   .. rubric:: Module Attributes
+
+   .. autosummary::
+   {% for item in attributes %}
+      {{ item }}
+   {%- endfor %}
+   {% endif %}
+   {% endblock %}
+
+   {% block classes %}
+   {% if classes %}
+   .. rubric:: Classes
+
+   .. autosummary::
+      :toctree: .
+      :nosignatures:
+      {% for class in classes %}
+        {{ class }}
+      {% endfor %}
+   {% endif %}
+   {% endblock %}
+
+   {% block functions %}
+   {% if functions %}
+   .. rubric:: {{ _('Functions') }}
+
+   {% for item in functions %}
+   .. autofunction:: {{ item }}
+   {%- endfor %}
+   {% endif %}
+   {% endblock %}
+
+   {% block exceptions %}
+   {% if exceptions %}
+   .. rubric:: {{ _('Exceptions') }}
+
+   .. autosummary::
+   {% for item in exceptions %}
+      {{ item }}
+   {%- endfor %}
+   {% endif %}
+   {% endblock %}
+
+{% block modules %}
+{% if modules %}
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+{% for item in modules %}
+   {{ item }}
+{%- endfor %}
+{% endif %}
+{% endblock %}
+
+--- changelog.rst ---
+#########
+Changelog
+#########
+
+.. contents:: Release history
+   :depth: 1
+   :local:
+   :backlinks: none
+
+
+****************
+Upcoming release
+****************
+
+:Date: TBD
+
+Changes for the upcoming release are tracked `in our GitHub wiki <https://github.com/ManimCommunity/manim/wiki/Changelog-for-next-release>`_.
+
+
+******
+v0.1.1
+******
+
+:Date: December 1, 2020
+
+Changes since Manim Community release v0.1.0
+
+Plugins
+=======
+
+#. Provided a standardized method for plugin discoverability, creation,
+   installation, and usage. See the :ref:`documentation <plugins>`.
+
+Fixes
+=====
+
+#. JsRender is optional to install. (via :pr:`697`).
+#. Allow importing modules from the same directory as the input
+   file when using ``manim`` from the command line (via :pr:`724`).
+#. Remove some unnecessary or unpythonic methods from :class:`~.Scene`
+   (``get_mobjects``, ``add_mobjects_among``, ``get_mobject_copies``),
+   via :pr:`758`.
+#. Fix formatting of :class:`~.Code` (via :pr:`798`).
+
+Configuration
+=============
+
+#. Removed the ``skip_animations`` config option and added the
+   ``Renderer.skip_animations`` attribute instead (via :pr:`696`).
+#. The global ``config`` dict has been replaced by a global ``config`` instance
+   of the new class :class:`~.ManimConfig`.  This class has a dict-like API, so
+   this should not break user code, only make it more robust.  See the
+   Configuration tutorial for details.
+#. Added the option to configure a directory for external assets (via :pr:`649`).
+
+
+Documentation
+=============
+
+#. Add ``:issue:`` and ``:pr:`` directives for simplifying linking to issues and
+   pull requests on GitHub (via :pr:`685`).
+#. Add a ``skip-manim`` tag for skipping the ``.. manim::`` directive when
+   building the documentation locally (via :pr:`796`).
+
+
+Mobjects, Scenes, and Animations
+================================
+
+#. The ``alignment`` attribute to Tex and MathTex has been removed in favour of ``tex_environment``.
+#. :class:`~.Text` now uses Pango for rendering. ``PangoText`` has been removed. The old implementation is still available as a fallback as :class:`~.CairoText`.
+#. Variations of :class:`~.Dot` have been added as :class:`~.AnnotationDot`
+   (a bigger dot with bolder stroke) and :class:`~.LabeledDot` (a dot containing a
+   label).
+#. Scene.set_variables_as_attrs has been removed (via :pr:`692`).
+#. Ensure that the axes for graphs (:class:`GraphScene`) always intersect (:pr:`580`).
+#. Now Mobject.add_updater does not call the newly-added updater by default
+   (use ``call_updater=True`` instead) (via :pr:`710`)
+#. VMobject now has methods to determine and change the direction of the points (via :pr:`647`).
+#. Added BraceBetweenPoints (via :pr:`693`).
+#. Added ArcPolygon and ArcPolygonFromArcs (via :pr:`707`).
+#. Added Cutout (via :pr:`760`).
+#. Added Mobject raise not implemented errors for dunder methods and implementations for VGroup dunder methods (via :pr:`790`).
+#. Added :class:`~.ManimBanner` for a animated version of our logo and banner (via :pr:`729`)
+#. The background color of a scene can now be changed reliably by setting, e.g.,
+   ``self.camera.background_color = RED`` (via :pr:`716`).
+
+
+
+******
+v0.1.0
+******
+
+:Date: October 21, 2020
+
+This is the first release of manimce after forking from 3b1b/manim.  As such,
+developers have focused on cleaning up and refactoring the codebase while still
+maintaining backwards compatibility wherever possible.
+
+
+New Features
+============
+
+Command line
+------------
+
+#. Output of 'manim --help' has been improved
+#. Implement logging with the :code:`rich` library and a :code:`logger` object instead of plain ol' prints
+#. Added a flag :code:`--dry_run`, which doesn’t write any media
+#. Allow for running manim with :code:`python3 -m manim`
+#. Refactored Tex Template management. You can now use custom templates with command line args using :code:`--tex_template`!
+#. Re-add :code:`--save_frames` flag, which will save each frame as a png
+#. Re-introduce manim feature that allows you to type manim code in :code:`stdin` if you pass a minus sign :code:`(-)` as filename
+#. Added the :code:`--custom_folders` flag which yields a simpler output folder structure
+#. Re-implement GIF export with the :code:`-i` flag (using this flag outputs ONLY a .gif file, and no .mp4 file)
+#. Added a :code:`--verbose` flag
+#. You can save the logs to a file by using :code:`--log_to_file`
+#. Read :code:`tex_template` from config file if not specified by :code:`--tex_template`.
+#. Add experimental javascript rendering with :code:`--use_js_renderer`
+#. Add :code:`-q/--quality [k|p|h|m|l]` flag and removed :code:`-m/-l` flags.
+#. Removed :code:`--sound` flag
+
+
+Config system
+-------------
+
+#. Implement a :code:`manim.cfg` config file system, that consolidates the global configuration, the command line argument parsing, and some of the constants defined in :code:`constants.py`
+#. Added utilities for manipulating Manim’s :code:`.cfg` files.
+#. Added a subcommand structure for easier use of utilities managing :code:`.cfg` files
+#. Also some variables have been moved from ``constants.py`` to the new config system:
+
+    #. ``FRAME_HEIGHT`` to ``config["frame_width"]``
+    #. ``TOP`` to ``config["frame_height"] / 2 * UP``
+    #. ``BOTTOM`` to ``config["frame_height"] / 2 * DOWN``
+    #. ``LEFT_SIDE`` to ``config["frame_width"] / 2 * LEFT``
+    #. ``RIGHT_SIDE`` to ``config["frame_width"] / 2 * RIGHT``
+    #. ``self.camera.frame_rate`` to ``config["frame_rate"]``
+
+
+
+
+Mobjects, Scenes, and Animations
+--------------------------------
+
+#. Add customizable left and right bracket for :code:`Matrix` mobject and :code:`set_row_colors` method for matrix mobject
+#. Add :code:`AddTeXLetterByLetter` animation
+#. Enhanced GraphScene
+
+    #. You can now add arrow tips to axes
+    #. extend axes a bit at the start and/or end
+    #. have invisible axes
+    #. highlight the area between two curves
+#. ThreeDScene now supports 3dillusion_camera_rotation
+#. Add :code:`z_index` for manipulating depth of Objects on scene.
+#. Add a :code:`VDict` class: a :code:`VDict` is to a :code:`VGroup` what a :code:`dict` is to a :code:`list`
+#. Added Scene-caching feature. Now, if a partial movie file is unchanged in your code, it isn’t rendered again! [HIGHLY UNSTABLE We're working on it ;)]
+#. Most :code:`get_` and :code:`set_` methods have been removed in favor of instance attributes and properties
+#. The :code:`Container` class has been made into an AbstractBaseClass, i.e. in cannot be instantiated.  Instead, use one of its children classes
+#. The ``TextMobject`` and ``TexMobject`` objects have been deprecated, due to their confusing names, in favour of ``Tex`` and ``MathTex``. You can still, however, continue to use ``TextMobject`` and ``TexMobject``, albeit with Deprecation Warnings constantly reminding you to switch.
+#. Add a :code:`Variable` class for displaying text that continuously updates to reflect the value of a python variable.
+#. The ``Tex`` and ``MathTex`` objects allow you to specify a custom TexTemplate using the ``template`` keyword argument.
+#. :code:`VGroup` now supports printing the class names of contained mobjects and :code:`VDict` supports printing the internal dict of mobjects
+#. Add all the standard easing functions
+#. :code:`Scene` now renders when :code:`Scene.render()` is called rather than upon instantiation.
+#. :code:`ValueTracker` now supports increment using the `+=` operator (in addition to the already existing `increment_value` method)
+#. Add :class:`PangoText` for rendering texts using Pango.
+
+
+Documentation
+=============
+
+#. Added clearer installation instructions, tutorials, examples, and API reference [WIP]
+
+
+Fixes
+=====
+
+#. Initialization of directories has been moved to :code:`config.py`, and a bunch of bugs associated to file structure generation have been fixed
+#. Nonfunctional file :code:`media_dir.txt` has been removed
+#. Nonfunctional :code:`if` statements in :code:`scene_file_writer.py` have been removed
+#. Fix a bug where trying to render the example scenes without specifying the scene would show all scene objects in the library
+#. Many :code:`Exceptions` have been replaced for more specific exception subclasses
+#. Fixed a couple of subtle bugs in :code:`ArcBetweenPoints`
+
+
+Of interest to developers
+=========================
+
+#. Python code formatting is now enforced by using the :code:`black` tool
+#. PRs now require two approving code reviews from community devs before they can be merged
+#. Added tests to ensure stuff doesn’t break between commits (For developers) [Uses Github CI, and Pytest]
+#. Add contribution guidelines (for developers)
+#. Added autogenerated documentation with sphinx and autodoc/autosummary [WIP]
+#. Made manim internally use relative imports
+#. Since the introduction of the :code:`TexTemplate` class, the files :code:`tex_template.tex` and :code:`ctex_template.tex` have been removed
+#. Added logging tests tools.
+#. Added ability to save logs in json
+#. Move to Poetry.
+#. Colors have moved to an Enum
+
+Other Changes
+=============
+
+#. Cleanup 3b1b Specific Files
+#. Rename package from manimlib to manim
+#. Move all imports to :code:`__init__`, so :code:`from manim import *` replaces :code:`from manimlib.imports import *`
+#. Global dir variable handling has been removed. Instead :code:`initialize_directories`, if needed, overrides the values from the cfg files at runtime.
+
+--- contributing.rst ---
+############
+Contributing
+############
+
+Thank you for contributing to Manim!  However you have decided to contribute or
+interact with the community, please always be civil and respect other members
+of the community.  Manim is a free open source software for mathematical
+animations, and as such we welcome **everyone** who is interested in
+mathematics, pedagogy, computer animations, open-source, software development,
+and beyond.  Manim accepts contributions of many kinds, detailed below.
+
+Many ways of contributing will involve writing, reading, testing, or
+refactoring code.  As our repository is a Fork of `Manim by
+3b1b <https://github.com/3b1b/manim>`_, contributing in this way can be a bit
+confusing.  Here is a short guide on how to do it.
+
+
+Setup Manim and version control
+===============================
+
+#. *Make a fork of this repository on Github.*
+   You will need an account with Github. This will allow you to make pull requests (PR)
+   to the ManimCommunity repo later on.
+
+#. *Clone your fork.*
+   You can clone your Github fork by running:
+
+   .. code-block:: shell
+
+      git clone <your-fork-url>
+      cd manim
+
+   GitHub will provide both a SSH (``git@github.com:<your-username>/manim.git``) and
+   HTTPS (``https://github.com/<your-username>/manim.git``) URL for cloning the repo.
+   You can use whichever one you are setup for.
+
+   .. WARNING::
+
+      Do not ``git clone`` the original ManimCommunity repository.  You must
+      clone your own fork.  After this step, there are three different
+      repositories to keep track of: the original ManimCommunity repo, your own
+      fork of it, and your local repository.
+
+#. Make ``git`` aware of the ManimCommunity repo.
+
+   .. code-block:: shell
+
+      git remote add upstream https://github.com/ManimCommunity/manim.git
+      git fetch upstream
+
+   After these commands, your local repository can keep track of your fork
+   (referred to as 'origin') as well as the main ManimCommunity repository
+   (referred to as 'upstream').
+
+#. *Install manim.*
+   See the :doc:`installation instructions for developers <installation/for_dev>` for
+   details.
+
+You are now ready to work on manim!
+
+
+Changing manim's source code
+============================
+
+#. *Choose the branch for your changes.*
+   To work on the ManimCommunity master branch, you can change to it with:
+
+   .. code-block:: shell
+
+      git checkout -b master upstream/master
+
+   If you are starting a new branch, execute
+
+   .. code-block:: shell
+
+      git checkout -b <new branch name>
+
+#. *Write some awesome code!*
+   You're ready to make changes in your local repository, add them, and commit
+   them.
+
+#. *Update docstrings and documentation.*
+   Update the docstrings (the text in triple quotation marks) of any functions
+   or classes you change and include them with any new functions you add.
+   There is a `Wiki Entry for
+   Documentation <https://github.com/ManimCommunity/manim/wiki/Documentation-guidelines-(WIP)>`_
+   with more information about how we prefer our code to be documented. The content
+   of the docstrings will be rendered in the :doc:`reference manual <reference>`.
+
+   .. tip::
+
+      Use the :mod:`manim directive for Sphinx <.manim_directive>` to add examples
+      to the documentation!
+
+      .. autosummary::
+         :toctree: reference
+
+         manim_directive
+
+#. *Add new or update existing tests.*
+   Depending on the changes you are making you will need to update or add new tests.
+   It is strongly preferred that you include tests with your PR. Details of our testing
+   system are explained in the
+   `corresponding Wiki Entry <https://github.com/ManimCommunity/manim/wiki/Testing>`_.
+
+As far as development on your local machine goes, these are the main steps you
+should follow.
+
+Polishing your changes and submitting them for review
+=====================================================
+
+As soon as you are ready to share your local changes with the community
+so that they can be discussed, go through the following steps to open a
+pull request.
+
+.. NOTE::
+
+   To open a pull request (PR), you do not need to have everything
+   (code / documentation / tests) complete and ready to go.  However, the more complete
+   your PR is, the easier it will be for community developers to review it, and the
+   quicker it will be merged.  If you open a PR that is still under development
+   and you want a quick overview or start some discussion about planned
+   yet-to-be-implemented changes, please mark your PR as a draft.
+
+#. *Update your GitHub fork with local changes.*
+   To make your changes visible in your GitHub fork, instead of typing in
+   ``git push`` as usual, you need to enter the command below.
+
+   .. code-block:: shell
+
+      git push -u origin <branch name>
+
+   Doing so creates a new branch with the updated contents of your fork on
+   GitHub (the 'origin').
+
+#. *Make a Pull Request on Github.*
+   In order to make the ManimCommunity development team aware of your changes,
+   you can make a Pull Request to the Manim Community repository from your fork.
+
+   .. WARNING::
+
+      Make sure to select ``ManimCommunity/manim`` instead of ``3b1b/manim``
+      as the base repository!
+
+   Choose the branch with your changes from your fork as the head
+   repository - see the screenshot below.
+
+   .. image:: /_static/pull-requests.PNG
+      :align: center
+
+   Please make sure you follow the template (this is the default
+   text you are shown when first opening the 'New Pull Request' page).
+
+
+Your changes are eligible to be merged, if
+
+#. there are no merge conflicts,
+#. and if the tests in our pipeline passes.
+
+You can check for merge conflicts between the current upstream/master and
+your branch by executing ``git pull upstream master`` locally. If this
+generates any merge conflicts, you need to resolve them and push an
+updated version of the branch to your fork of the repository.
+
+Our pipeline consists of a series of different tests that ensure
+that manim still works as intended and that the code you added
+sticks to our coding conventions.
+
+- *Code style*: We use the code style imposed
+  by `Black <https://black.readthedocs.io/en/stable/>`_. The pipeline
+  makes sure that the (Python) files changed in your pull request
+  also adhere to this code style. If this step of the pipeline fails,
+  fix your code style by running ``black <file or directory>`` to
+  automatically format your files.
+
+- *Tests*: The pipeline runs manim's test suite on different operating systems
+  (the latest versions of Ubuntu, MacOS, and Windows) for different versions of Python.
+  The test suite consists of two different kinds of tests: integration tests
+  and doctests. You can run them locally by executing ``poetry run pytest``
+  and ``poetry run pytest --doctest-modules manim``, respectively, from the
+  root directory of your cloned fork.
+
+- *Documentation*: We also build a version of the documentation corresponding
+  to your pull request. Make sure not to introduce any Sphinx errors, and have
+  a look at the built HTML files to see whether the formatting of the documentation
+  you added looks like you intended. You can build the documentation locally
+  by running ``make html`` from the ``docs`` directory.
+
+Finally, if the pipeline passes and you are satisfied with your changes: wait for
+feedback and iterate over requested changes. You will likely be asked to edit or
+modify your PR in one way or another during this process.
+This is not an indictment of your work, but rather a strong signal that the
+community wants to merge your changes! Overall, in order for your PR to be merged
+at least two approving code reviews from core community developers are required.
+
+
+Further useful guidelines
+=========================
+
+#. When submitting a PR, please make special note of whether your proposed
+   changes will result in breaking changes.
+
+#. When submitting a PR, make sure that your proposed changes are as general as
+   possible, and ready to be taken advantage of by all of manim's users.  In
+   particular, leave out any machine-specific configurations, or any personal
+   information it may contain.
+
+#. If you are a maintainer, please label issues and PRs appropriately and
+   frequently.
+
+#. When opening a new issue, if there are old issues that are related, link
+   them in your new issue (even if the old ones are closed).
+
+#. When submitting a code review, it is highly recommended that you adhere to
+   `these general guidelines <https://conventionalcomments.org/>`_.  Similarly,
+   when crafting commit messages, it is highly recommended that you adhere to
+   `these guidelines <https://www.conventionalcommits.org/en/v1.0.0/>`_.
+
+#. If you find stale or inactive issues that seem to be irrelevant, please post
+   a comment saying 'This issue should be closed', and a community developer
+   will take a look.
+
+#. Please do as much as possible to keep issues, PRs, and development in
+   general as tidy as possible.
+
+
+You can find examples for the ``docs`` in many places:
+In ``Example Gallery`` , ``Tutorials`` , ``Reference Classes`` and ``Reference Modules``.
+In case you are contributing, please have a look at this flowchart:
+
+.. raw:: html
+
+    <div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;url&quot;:&quot;https://drive.google.com/uc?id=1aKyJTloYB97IhrzwqEENOu-WQyuVWMjM&amp;export=download&quot;}"></div>
+    <script type="text/javascript" src="https://viewer.diagrams.net/embed2.js?&fetch=https%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1aKyJTloYB97IhrzwqEENOu-WQyuVWMjM%26export%3Ddownload"></script>
+
+**Thank you for contributing!**
+
+
+--- examples.rst ---
+###############
+Example Gallery
+###############
+
+This gallery contains a collection of best practice code snippets
+together with their corresponding video/image output, illustrating
+different functionalities all across the library.
+These are all under the MIT licence, so feel free to copy & paste them to your projects.
+Enjoy this taste of Manim!
+
+.. tip::
+
+   This gallery is not the only place in our documentation where you can see explicit
+   code and video examples: there are many more in our
+   :doc:`reference manual </reference>` -- see, for example, our documentation for
+   the modules :mod:`~.tex_mobject`, :mod:`~.geometry`, :mod:`~.moving_camera_scene`,
+   and many more.
+
+   Also, visit our `Twitter <https://twitter.com/manim_community/>`_ for more
+   *manimations*!
+
+
+.. contents:: Overview of thematic video categories
+   :backlinks: none
+   :local:
+
+
+Basic Concepts
+==============
+
+.. manim:: ManimCELogo
+    :save_last_frame:
+    :ref_classes: MathTex Circle Square Triangle
+
+    class ManimCELogo(Scene):
+        def construct(self):
+            self.camera.background_color = "#ece6e2"
+            logo_green = "#87c2a5"
+            logo_blue = "#525893"
+            logo_red = "#e07a5f"
+            logo_black = "#343434"
+            ds_m = MathTex(r"\mathbb{M}", fill_color=logo_black).scale(7)
+            ds_m.shift(2.25 * LEFT + 1.5 * UP)
+            circle = Circle(color=logo_green, fill_opacity=1).shift(LEFT)
+            square = Square(color=logo_blue, fill_opacity=1).shift(UP)
+            triangle = Triangle(color=logo_red, fill_opacity=1).shift(RIGHT)
+            logo = VGroup(triangle, square, circle, ds_m)  # order matters
+            logo.move_to(ORIGIN)
+            self.add(logo)
+
+
+
+.. manim:: BraceAnnotation
+    :save_last_frame:
+    :ref_classes: Brace
+    :ref_functions: Brace.get_text Brace.get_tex
+
+    class BraceAnnotation(Scene):
+        def construct(self):
+            dot = Dot([-2, -1, 0])
+            dot2 = Dot([2, 1, 0])
+            line = Line(dot.get_center(), dot2.get_center()).set_color(ORANGE)
+            b1 = Brace(line)
+            b1text = b1.get_text("Horizontal distance")
+            b2 = Brace(line, direction=line.copy().rotate(PI / 2).get_unit_vector())
+            b2text = b2.get_tex("x-x_1")
+            self.add(line, dot, dot2, b1, b2, b1text, b2text)
+
+.. manim:: VectorArrow
+    :save_last_frame:
+    :ref_classes: Dot Arrow NumberPlane Text
+
+    class VectorArrow(Scene):
+        def construct(self):
+            dot = Dot(ORIGIN)
+            arrow = Arrow(ORIGIN, [2, 2, 0], buff=0)
+            numberplane = NumberPlane()
+            origin_text = Text('(0, 0)').next_to(dot, DOWN)
+            tip_text = Text('(2, 2)').next_to(arrow.get_end(), RIGHT)
+            self.add(numberplane, dot, arrow, origin_text, tip_text)
+
+.. manim:: GradientImageFromArray
+    :save_last_frame:
+    :ref_classes: ImageMobject
+
+    class GradientImageFromArray(Scene):
+        def construct(self):
+            n = 256
+            imageArray = np.uint8(
+                [[i * 256 / n for i in range(0, n)] for _ in range(0, n)]
+            )
+            image = ImageMobject(imageArray).scale(2)
+            self.add(image)
+
+.. manim:: BezierSpline
+    :save_last_frame:
+    :ref_classes: Line VGroup
+    :ref_functions: VMobject.add_cubic_bezier_curve
+
+    class BezierSpline(Scene):
+        def construct(self):
+            np.random.seed(42)
+            area = 4
+
+            x1 = np.random.randint(-area, area)
+            y1 = np.random.randint(-area, area)
+            p1 = np.array([x1, y1, 0])
+            destination_dot1 = Dot(point=p1).set_color(BLUE)
+
+            x2 = np.random.randint(-area, area)
+            y2 = np.random.randint(-area, area)
+            p2 = np.array([x2, y2, 0])
+            destination_dot2 = Dot(p2).set_color(RED)
+
+            deltaP = p1 - p2
+            deltaPNormalized = deltaP / get_norm(deltaP)
+
+            theta = np.radians(90)
+            r = np.array(
+                (
+                    (np.cos(theta), -np.sin(theta), 0),
+                    (np.sin(theta), np.cos(theta), 0),
+                    (0, 0, 0),
+                )
+            )
+            senk = r.dot(deltaPNormalized)
+            offset = 0.1
+            offset_along = 0.5
+            offset_connect = 0.25
+
+            dest_line1_point1 = p1 + senk * offset - deltaPNormalized * offset_along
+            dest_line1_point2 = p2 + senk * offset + deltaPNormalized * offset_along
+            dest_line2_point1 = p1 - senk * offset - deltaPNormalized * offset_along
+            dest_line2_point2 = p2 - senk * offset + deltaPNormalized * offset_along
+            s1 = p1 - offset_connect * deltaPNormalized
+            s2 = p2 + offset_connect * deltaPNormalized
+            dest_line1 = Line(dest_line1_point1, dest_line1_point2)
+            dest_line2 = Line(dest_line2_point1, dest_line2_point2)
+
+            Lp1s1 = Line(p1, s1)
+
+            Lp1s1.add_cubic_bezier_curve(
+                s1,
+                s1 - deltaPNormalized * 0.1,
+                dest_line2_point1 + deltaPNormalized * 0.1,
+                dest_line2_point1 - deltaPNormalized * 0.01,
+            )
+            Lp1s1.add_cubic_bezier_curve(
+                s1,
+                s1 - deltaPNormalized * 0.1,
+                dest_line1_point1 + deltaPNormalized * 0.1,
+                dest_line1_point1,
+            )
+
+            Lp2s2 = Line(p2, s2)
+
+            Lp2s2.add_cubic_bezier_curve(
+                s2,
+                s2 + deltaPNormalized * 0.1,
+                dest_line2_point2 - deltaPNormalized * 0.1,
+                dest_line2_point2,
+            )
+            Lp2s2.add_cubic_bezier_curve(
+                s2,
+                s2 + deltaPNormalized * 0.1,
+                dest_line1_point2 - deltaPNormalized * 0.1,
+                dest_line1_point2,
+            )
+
+            mobjects = VGroup(
+                Lp1s1, Lp2s2, dest_line1, dest_line2, destination_dot1, destination_dot2
+            )
+
+            mobjects.scale(2)
+            self.add(mobjects)
+
+
+Animations
+==========
+
+.. manim:: PointMovingOnShapes
+    :ref_classes: Circle Dot Line GrowFromCenter Transform MoveAlongPath Rotating
+
+    class PointMovingOnShapes(Scene):
+        def construct(self):
+            circle = Circle(radius=1, color=BLUE)
+            dot = Dot()
+            dot2 = dot.copy().shift(RIGHT)
+            self.add(dot)
+
+            line = Line([3, 0, 0], [5, 0, 0])
+            self.add(line)
+
+            self.play(GrowFromCenter(circle))
+            self.play(Transform(dot, dot2))
+            self.play(MoveAlongPath(dot, circle), run_time=2, rate_func=linear)
+            self.play(Rotating(dot, about_point=[2, 0, 0]), run_time=1.5)
+            self.wait()
+
+.. manim:: MovingAround
+    :ref_functions: Mobject.shift VMobject.set_fill Mobject.scale Mobject.rotate
+
+    class MovingAround(Scene):
+        def construct(self):
+            square = Square(color=BLUE, fill_opacity=1)
+
+            self.play(square.animate.shift(LEFT))
+            self.play(square.animate.set_fill(ORANGE))
+            self.play(square.animate.scale(0.3))
+            self.play(square.animate.rotate(0.4))
+
+.. manim:: MovingFrameBox
+    :ref_modules: manim.mobject.svg.tex_mobject
+    :ref_classes: MathTex SurroundingRectangle
+
+    class MovingFrameBox(Scene):
+        def construct(self):
+            text=MathTex(
+                "\\frac{d}{dx}f(x)g(x)=","f(x)\\frac{d}{dx}g(x)","+",
+                "g(x)\\frac{d}{dx}f(x)"
+            )
+            self.play(Write(text))
+            framebox1 = SurroundingRectangle(text[1], buff = .1)
+            framebox2 = SurroundingRectangle(text[3], buff = .1)
+            self.play(
+                ShowCreation(framebox1),
+            )
+            self.wait()
+            self.play(
+                ReplacementTransform(framebox1,framebox2),
+            )
+            self.wait()
+
+.. manim:: RotationUpdater
+    :ref_functions: Mobject.add_updater Mobject.remove_updater
+
+    class RotationUpdater(Scene):
+        def construct(self):
+            def updater_forth(mobj, dt):
+                mobj.rotate_about_origin(dt)
+            def updater_back(mobj, dt):
+                mobj.rotate_about_origin(-dt)
+            line_reference = Line(ORIGIN, LEFT).set_color(WHITE)
+            line_moving = Line(ORIGIN, LEFT).set_color(YELLOW)
+            line_moving.add_updater(updater_forth)
+            self.add(line_reference, line_moving)
+            self.wait(2)
+            line_moving.remove_updater(updater_forth)
+            line_moving.add_updater(updater_back)
+            self.wait(2)
+            line_moving.remove_updater(updater_back)
+            self.wait(0.5)
+
+.. manim:: PointWithTrace
+    :ref_classes: Rotating
+    :ref_functions: VMobject.set_points_as_corners Mobject.add_updater
+
+    class PointWithTrace(Scene):
+        def construct(self):
+            path = VMobject()
+            dot = Dot()
+            path.set_points_as_corners([dot.get_center(), dot.get_center()])
+            def update_path(path):
+                previo
+
+MANIFESTOS PUBLICOS:
+
+--- pyproject.toml ---
+[tool.poetry]
+name = "manim"
+version = "0.1.1"
+description = "Animation engine for explanatory math videos."
+authors = ["The Manim Community Developers","3b1b <grant@3blue1brown.com>"]
+license="MIT"
+readme="README.md"
+repository="https://github.com/manimcommunity/manim"
+documentation="https://docs.manim.community/"
+classifiers= [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Multimedia :: Graphics",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Natural Language :: English",
+    ]
+exclude = ["scripts/","logo/","readme-assets/"]
+packages = [
+    { include = "manim" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+colour = "*"
+numpy = "*"
+Pillow = "*"
+progressbar = "*"
+scipy = "*"
+tqdm = "*"
+pydub = "*"
+pygments = "*"
+rich = "^6.0"
+pycairo = "^1.19"
+manimpango = "^0.1.4"
+grpcio =  { version = "1.33.*", optional = true }
+grpcio-tools = { version = "1.33.*", optional = true }
+watchdog = { version = "*", optional = true }
+networkx = "^2.5"
+
+[tool.poetry.extras]
+js_renderer = ["grpcio","grpcio-tools","watchdog"]
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.0"
+pylint = "*"
+guzzle_sphinx_theme = "*"
+recommonmark = "*"
+matplotlib = "^3.3.2"
+
+[tool.poetry.dev-dependencies.black]
+version = "^20.8b1"
+allow-prereleases = false
+python = "^3.6"
+markers = "platform_python_implementation == 'CPython'"
+
+[tool.pytest.ini_options]
+markers = "slow: Mark the test as slow. Can be skipped with --skip_slow"
+
+[tool.poetry.plugins]
+[tool.poetry.plugins."console_scripts"]
+"manim" = "manim.__main__:main"
+"manimce" = "manim.__main__:main"
+
+[build-system]
+requires = ["setuptools","poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+ARQUITETURA TEXTUAL INFERIDA:
+PROJETO
+|
++-- Documentacao e configuracao
+|   +-- README.md
+|   +-- pyproject.toml
+|
++-- Modulos/dominios visiveis
+|   +-- .github/
+|   +-- docker/
+|   +-- docs/
+|   +-- example_scenes/
+|   +-- manim/
+|   +-- scripts/
+|   +-- tests/
+|
++-- Entradas e interfaces descritas no README
+|   +-- configuracao/parametros
+|   +-- processamento principal
+|   +-- saidas/resultados
+|
++-- Testes proprios a serem criados pela IA

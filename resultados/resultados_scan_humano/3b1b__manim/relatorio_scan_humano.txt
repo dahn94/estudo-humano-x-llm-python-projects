@@ -1,0 +1,3845 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 8 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: 3b1b/manim
+####################################################################################################
+Repositorio: https://github.com/3b1b/manim
+Commit analisado: e59d83980622638e2b622302bce7dbb859b31e1b
+Link do commit: https://github.com/3b1b/manim/commit/e59d83980622638e2b622302bce7dbb859b31e1b
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 16057
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 1
+  ERROR: 1
+  WARNING: 0
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 378
+  Vulnerabilidades: 3
+  Bugs: 3
+  Code smells: 372
+  Security hotspots: 0
+  Complexidade: 2846
+  Linhas analisadas pelo SonarQube: 14732
+  Severidades: BLOCKER=1, CRITICAL=82, INFO=73, MAJOR=131, MINOR=91
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: manimlib/config.py
+Linha: 170
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/config.py#L170
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SONARQUBE 1]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: example_scenes.py
+Linha: 3
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/example_scenes.py#L3
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 2]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: logo/logo.py
+Linha: 1
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/logo/logo.py#L1
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 3]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: logo/logo.py
+Linha: 121
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/logo/logo.py#L121
+Descricao: Remove the unused local variable "pendiente_recta".
+
+[SONARQUBE 4]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/animation.py
+Linha: 134
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/animation.py#L134
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 5]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/composition.py
+Linha: 149
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/composition.py#L149
+Descricao: Rename this parameter "AnimationClass" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 6]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/creation.py
+Linha: 26
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/creation.py#L26
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 7]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/creation.py
+Linha: 61
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/creation.py#L61
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 8]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/creation.py
+Linha: 89
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/creation.py#L89
+Descricao: Remove parameter submob or provide default value.
+
+[SONARQUBE 9]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/creation.py
+Linha: 89
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/creation.py#L89
+Descricao: Remove parameter start or provide default value.
+
+[SONARQUBE 10]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/creation.py
+Linha: 89
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/creation.py#L89
+Descricao: Remove parameter outline or provide default value.
+
+[SONARQUBE 11]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/creation.py
+Linha: 153
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/creation.py#L153
+Descricao: Remove this commented out code.
+
+[SONARQUBE 12]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/creation.py
+Linha: 160
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/creation.py#L160
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 13]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/growing.py
+Linha: 2
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/growing.py#L2
+Descricao: Remove this commented out code.
+
+[SONARQUBE 14]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/indication.py
+Linha: 3
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/indication.py#L3
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 15]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/numbers.py
+Linha: 21
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/numbers.py#L21
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 16]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/specialized.py
+Linha: 28
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/specialized.py#L28
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 17]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5780
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/specialized.py
+Linha: 58
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/specialized.py#L58
+Descricao: Change or remove duplicates of this key.
+
+[SONARQUBE 18]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/specialized.py
+Linha: 67
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/specialized.py#L67
+Descricao: Replace the unused loop index "x" with "_".
+
+[SONARQUBE 19]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/transform.py
+Linha: 62
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/transform.py#L62
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 20]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/transform.py
+Linha: 98
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/transform.py#L98
+Descricao: Remove parameter submob or provide default value.
+
+[SONARQUBE 21]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/transform.py
+Linha: 98
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/transform.py#L98
+Descricao: Remove parameter target_copy or provide default value.
+
+[SONARQUBE 22]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/transform.py
+Linha: 98
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/transform.py#L98
+Descricao: Remove parameter start or provide default value.
+
+[SONARQUBE 23]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/transform.py
+Linha: 143
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/transform.py#L143
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 24]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/transform.py
+Linha: 166
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/transform.py#L166
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 25]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/transform.py
+Linha: 235
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/transform.py#L235
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 26]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/transform.py
+Linha: 255
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/transform.py#L255
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 27]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/animation/transform.py
+Linha: 294
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/animation/transform.py#L294
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 28]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/camera.py
+Linha: 9
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/camera.py#L9
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 29]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/camera.py
+Linha: 66
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/camera.py#L66
+Descricao: Rename this local variable "curr_rot_T" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 30]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/camera.py
+Linha: 67
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/camera.py#L67
+Descricao: Rename this local variable "added_rot_T" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 31]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/camera.py
+Linha: 68
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/camera.py#L68
+Descricao: Rename this local variable "new_rot_T" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 32]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/camera.py
+Linha: 69
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/camera.py#L69
+Descricao: Rename this local variable "Fz" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 33]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/camera.py
+Linha: 72
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/camera.py#L72
+Descricao: Rename this local variable "partial_rot_T" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 34]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/camera.py
+Linha: 77
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/camera.py#L77
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 35]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/camera.py
+Linha: 97
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/camera.py#L97
+Descricao: Remove the unused function parameter "gamma".
+
+[SONARQUBE 36]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/camera.py
+Linha: 123
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/camera.py#L123
+Descricao: Add a default value to parameter path_func.
+
+[SONARQUBE 37]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/camera.py
+Linha: 135
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/camera.py#L135
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 38]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/camera.py
+Linha: 234
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/camera.py#L234
+Descricao: Remove the unused function parameter "pixel_array".
+
+[SONARQUBE 39]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/camera.py
+Linha: 262
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/camera.py#L262
+Descricao: Remove this commented out code.
+
+[SONARQUBE 40]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/camera.py
+Linha: 307
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/camera.py#L307
+Descricao: Replace the unused local variable "fw" with "_".
+
+[SONARQUBE 41]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/camera.py
+Linha: 413
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/camera.py#L413
+Descricao: Replace the unused local variable "pw" with "_".
+
+[SONARQUBE 42]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/camera.py
+Linha: 414
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/camera.py#L414
+Descricao: Replace the unused local variable "fw" with "_".
+
+[SONARQUBE 43]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/camera.py
+Linha: 415
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/camera.py#L415
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 44]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/mapping_camera.py
+Linha: 8
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/mapping_camera.py#L8
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 45]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/mapping_camera.py
+Linha: 12
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/mapping_camera.py#L12
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 46]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/mapping_camera.py
+Linha: 42
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/mapping_camera.py#L42
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 47]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/mapping_camera.py
+Linha: 45
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/mapping_camera.py#L45
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 48]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/mapping_camera.py
+Linha: 106
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/mapping_camera.py#L106
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 49]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/moving_camera.py
+Linha: 38
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/moving_camera.py#L38
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 50]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/moving_camera.py
+Linha: 60
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/moving_camera.py#L60
+Descricao: Remove the unused function parameter "pixel_array".
+
+[SONARQUBE 51]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/moving_camera.py
+Linha: 66
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/moving_camera.py#L66
+Descricao: Remove this commented out code.
+
+[SONARQUBE 52]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/camera/moving_camera.py
+Linha: 69
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/camera/moving_camera.py#L69
+Descricao: Remove this commented out code.
+
+[SONARQUBE 53]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/constants.py
+Linha: 13
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/constants.py#L13
+Descricao: Refactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.
+
+[SONARQUBE 54]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/constants.py
+Linha: 265
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/constants.py#L265
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 55]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7504
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/constants.py
+Linha: 282
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/constants.py#L282
+Descricao: Remove this unnecessary `list()` call on an already iterable object.
+
+[SONARQUBE 56]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/container/container.py
+Linha: 7
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/container/container.py#L7
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 57]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/container/container.py
+Linha: 15
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/container/container.py#L15
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 58]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/container/container.py
+Linha: 19
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/container/container.py#L19
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 59]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7496
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/extract_scene.py
+Linha: 50
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/extract_scene.py#L50
+Descricao: Replace this dict constructor call by a dict literal.
+
+[SONARQUBE 60]
+Tipo: BUG
+Severidade: BLOCKER
+Regra: python:S930
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/extract_scene.py
+Linha: 109
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/extract_scene.py#L109
+Descricao: Add 1 missing arguments; 'main' expects 1 positional arguments.
+
+[SONARQUBE 61]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/changing.py
+Linha: 1
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/changing.py#L1
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 62]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/changing.py
+Linha: 26
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/changing.py#L26
+Descricao: Replace the unused loop index "x" with "_".
+
+[SONARQUBE 63]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/coordinate_systems.py
+Linha: 4
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/coordinate_systems.py#L4
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 64]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/coordinate_systems.py
+Linha: 15
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/coordinate_systems.py#L15
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 65]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/coordinate_systems.py
+Linha: 31
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/coordinate_systems.py#L31
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 66]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/coordinate_systems.py
+Linha: 31
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/coordinate_systems.py#L31
+Descricao: Define a constant instead of duplicating this literal "Not implemented" 3 times.
+
+[SONARQUBE 67]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/coordinate_systems.py
+Linha: 34
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/coordinate_systems.py#L34
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 68]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/coordinate_systems.py
+Linha: 45
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/coordinate_systems.py#L45
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 69]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7496
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/coordinate_systems.py
+Linha: 171
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/coordinate_systems.py#L171
+Descricao: Replace this list comprehension by a generator.
+
+[SONARQUBE 70]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/frame.py
+Linha: 1
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/frame.py#L1
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 71]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/functions.py
+Linha: 1
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/functions.py#L1
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 72]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/functions.py
+Linha: 12
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/functions.py#L12
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 73]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/geometry.py
+Linha: 3
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/geometry.py#L3
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 74]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/geometry.py
+Linha: 83
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/geometry.py#L83
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 75]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/geometry.py
+Linha: 160
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/geometry.py#L160
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 76]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/geometry.py
+Linha: 291
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/geometry.py#L291
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 77]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/geometry.py
+Linha: 405
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/geometry.py#L405
+Descricao: Remove the unused function parameter "buff".
+
+[SONARQUBE 78]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/geometry.py
+Linha: 615
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/geometry.py#L615
+Descricao: Rename this local variable "rot_T" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 79]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/matrix.py
+Linha: 3
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/matrix.py#L3
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 80]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/matrix.py
+Linha: 19
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/matrix.py#L19
+Descricao: Replace the unused local variable "n_rows" with "_".
+
+[SONARQUBE 81]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8518
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/matrix.py
+Linha: 94
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/matrix.py#L94
+Descricao: Unpack the value from 'enumerate()' directly instead of using an index lookup.
+
+[SONARQUBE 82]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 13
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L13
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 83]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 28
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L28
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 84]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 29
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L29
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 85]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 96
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L96
+Descricao: Rename this local variable "GroupClass" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 86]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 126
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L126
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 87]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7504
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 170
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L170
+Descricao: Remove this unnecessary `list()` call on an already iterable object.
+
+[SONARQUBE 88]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 182
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L182
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 89]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 196
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L196
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 90]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7504
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 212
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L212
+Descricao: Remove this unnecessary `list()` call on an already iterable object.
+
+[SONARQUBE 91]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 358
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L358
+Descricao: Remove the unused function parameter "axes".
+
+[SONARQUBE 92]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 362
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L362
+Descricao: Rename this local variable "rot_matrix_T" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 93]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1542
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 412
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L412
+Descricao: Rename function "R3_func" to match the regular expression ^[a-z_][a-z0-9_]*$.
+
+[SONARQUBE 94]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1763
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 620
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L620
+Descricao: Delete this unreachable code or refactor the code to make it reachable.
+
+[SONARQUBE 95]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 643
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L643
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 96]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 647
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L647
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 97]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 662
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L662
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 98]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 704
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L704
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 99]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 704
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L704
+Descricao: Define a constant instead of duplicating this literal "Not implemented" 4 times.
+
+[SONARQUBE 100]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 707
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L707
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 101]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 720
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L720
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 102]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 794
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L794
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 103]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 921
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L921
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 104]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 939
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L939
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 105]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 1056
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L1056
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 106]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 1086
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L1086
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 107]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 1128
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L1128
+Descricao: Replace the unused loop index "k" with "_".
+
+[SONARQUBE 108]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 1140
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L1140
+Descricao: Replace the unused loop index "k" with "_".
+
+[SONARQUBE 109]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 1181
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L1181
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 110]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 1197
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L1197
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 111]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 1304
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L1304
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 112]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7492
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 1309
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L1309
+Descricao: Unpack this comprehension expression
+
+[SONARQUBE 113]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/mobject.py
+Linha: 1310
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/mobject.py#L1310
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 114]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/number_line.py
+Linha: 1
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/number_line.py#L1
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 115]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/numbers.py
+Linha: 1
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/numbers.py#L1
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 116]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/numbers.py
+Linha: 6
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/numbers.py#L6
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 117]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/numbers.py
+Linha: 22
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/numbers.py#L22
+Descricao: Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.
+
+[SONARQUBE 118]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7496
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/numbers.py
+Linha: 92
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/numbers.py#L92
+Descricao: Replace this dict constructor call by a dict literal.
+
+[SONARQUBE 119]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/probability.py
+Linha: 1
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/probability.py#L1
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 120]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/probability.py
+Linha: 28
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/probability.py#L28
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 121]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/shape_matchers.py
+Linha: 1
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/shape_matchers.py#L1
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 122]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/shape_matchers.py
+Linha: 42
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/shape_matchers.py#L42
+Descricao: Remove the unused function parameter "stroke_color".
+
+[SONARQUBE 123]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/shape_matchers.py
+Linha: 43
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/shape_matchers.py#L43
+Descricao: Remove the unused function parameter "stroke_width".
+
+[SONARQUBE 124]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/shape_matchers.py
+Linha: 44
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/shape_matchers.py#L44
+Descricao: Remove the unused function parameter "fill_color".
+
+[SONARQUBE 125]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/shape_matchers.py
+Linha: 46
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/shape_matchers.py#L46
+Descricao: Remove the unused function parameter "family".
+
+[SONARQUBE 126]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/brace.py
+Linha: 4
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/brace.py#L4
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 127]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/drawings.py
+Linha: 6
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/drawings.py#L6
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 128]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/drawings.py
+Linha: 255
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/drawings.py#L255
+Descricao: Replace the unused loop index "x" with "_".
+
+[SONARQUBE 129]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/drawings.py
+Linha: 339
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/drawings.py#L339
+Descricao: Replace the unused loop index "x" with "_".
+
+[SONARQUBE 130]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/drawings.py
+Linha: 385
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/drawings.py#L385
+Descricao: Remove this commented out code.
+
+[SONARQUBE 131]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/drawings.py
+Linha: 448
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/drawings.py#L448
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 132]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/drawings.py
+Linha: 464
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/drawings.py#L464
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 133]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/drawings.py
+Linha: 606
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/drawings.py#L606
+Descricao: Add missing parameters aligned_edge coor_mask.
+
+[SONARQUBE 134]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/drawings.py
+Linha: 836
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/drawings.py#L836
+Descricao: Remove this commented out code.
+
+[SONARQUBE 135]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/drawings.py
+Linha: 925
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/drawings.py#L925
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 136]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7496
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/drawings.py
+Linha: 943
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/drawings.py#L943
+Descricao: Replace this dict constructor call by a dict literal.
+
+[SONARQUBE 137]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/drawings.py
+Linha: 950
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/drawings.py#L950
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 138]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/drawings.py
+Linha: 1028
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/drawings.py#L1028
+Descricao: Remove this commented out code.
+
+[SONARQUBE 139]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/drawings.py
+Linha: 1106
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/drawings.py#L1106
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 140]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/svg_mobject.py
+Linha: 21
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/svg_mobject.py#L21
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 141]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/svg_mobject.py
+Linha: 71
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/svg_mobject.py#L71
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 142]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/svg_mobject.py
+Linha: 86
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/svg_mobject.py#L86
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 143]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/svg_mobject.py
+Linha: 126
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/svg_mobject.py#L126
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 144]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/svg_mobject.py
+Linha: 147
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/svg_mobject.py#L147
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 145]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/svg_mobject.py
+Linha: 267
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/svg_mobject.py#L267
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 146]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/svg_mobject.py
+Linha: 283
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/svg_mobject.py#L283
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 147]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/svg_mobject.py
+Linha: 297
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/svg_mobject.py#L297
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 148]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/svg_mobject.py
+Linha: 304
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/svg_mobject.py#L304
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 149]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/svg_mobject.py
+Linha: 313
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/svg_mobject.py#L313
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 150]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/svg_mobject.py
+Linha: 320
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/svg_mobject.py#L320
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 151]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/svg_mobject.py
+Linha: 324
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/svg_mobject.py#L324
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 152]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/svg_mobject.py
+Linha: 326
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/svg_mobject.py#L326
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 153]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/svg_mobject.py
+Linha: 338
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/svg_mobject.py#L338
+Descricao: Rename this local variable "all_childNodes_have_id" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 154]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7496
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/svg_mobject.py
+Linha: 348
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/svg_mobject.py#L348
+Descricao: Replace this dict constructor call by a dict literal.
+
+[SONARQUBE 155]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/svg_mobject.py
+Linha: 364
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/svg_mobject.py#L364
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 156]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/svg_mobject.py
+Linha: 434
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/svg_mobject.py#L434
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 157]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/svg_mobject.py
+Linha: 458
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/svg_mobject.py#L458
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 158]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/tex_mobject.py
+Linha: 4
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/tex_mobject.py#L4
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 159]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7504
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/tex_mobject.py
+Linha: 226
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/tex_mobject.py#L226
+Descricao: Remove this unnecessary `list()` call on an already iterable object.
+
+[SONARQUBE 160]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/tex_mobject.py
+Linha: 244
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/tex_mobject.py#L244
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 161]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/tex_mobject.py
+Linha: 294
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/tex_mobject.py#L294
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 162]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/text_mobject.py
+Linha: 7
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/text_mobject.py#L7
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 163]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6353
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/text_mobject.py
+Linha: 87
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/text_mobject.py#L87
+Descricao: Use concise quantifier syntax '*' instead of '{0,}'.
+
+[SONARQUBE 164]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6353
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/text_mobject.py
+Linha: 87
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/text_mobject.py#L87
+Descricao: Use concise quantifier syntax '*' instead of '{0,}'.
+
+[SONARQUBE 165]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7504
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/text_mobject.py
+Linha: 119
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/text_mobject.py#L119
+Descricao: Remove this unnecessary `list()` call on an already iterable object.
+
+[SONARQUBE 166]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7504
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/text_mobject.py
+Linha: 125
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/text_mobject.py#L125
+Descricao: Remove this unnecessary `list()` call on an already iterable object.
+
+[SONARQUBE 167]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/text_mobject.py
+Linha: 152
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/text_mobject.py#L152
+Descricao: Refactor this function to reduce its Cognitive Complexity from 31 to the 15 allowed.
+
+[SONARQUBE 168]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7504
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/svg/text_mobject.py
+Linha: 158
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/svg/text_mobject.py#L158
+Descricao: Remove this unnecessary `list()` call on an already iterable object.
+
+[SONARQUBE 169]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/three_dimensions.py
+Linha: 3
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/three_dimensions.py#L3
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 170]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/three_dimensions.py
+Linha: 23
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/three_dimensions.py#L23
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 171]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/three_dimensions.py
+Linha: 35
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/three_dimensions.py#L35
+Descricao: Replace the unused local variable "du_points" with "_".
+
+[SONARQUBE 172]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/three_dimensions.py
+Linha: 35
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/three_dimensions.py#L35
+Descricao: Replace the unused local variable "dv_points" with "_".
+
+[SONARQUBE 173]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/image_mobject.py
+Linha: 5
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/image_mobject.py#L5
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 174]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/image_mobject.py
+Linha: 57
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/image_mobject.py#L57
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 175]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/image_mobject.py
+Linha: 68
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/image_mobject.py#L68
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 176]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/image_mobject.py
+Linha: 69
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/image_mobject.py#L69
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 177]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/point_cloud_mobject.py
+Linha: 1
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/point_cloud_mobject.py#L1
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 178]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/point_cloud_mobject.py
+Linha: 39
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/point_cloud_mobject.py#L39
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 179]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1763
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/point_cloud_mobject.py
+Linha: 68
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/point_cloud_mobject.py#L68
+Descricao: Delete this unreachable code or refactor the code to make it reachable.
+
+[SONARQUBE 180]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1515
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/point_cloud_mobject.py
+Linha: 110
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/point_cloud_mobject.py#L110
+Descricao: Add a parameter to the parent lambda function and use variable "num_points" as its default value; The value of "num_points" might change at the next loop iteration.
+
+[SONARQUBE 181]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1515
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/point_cloud_mobject.py
+Linha: 123
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/point_cloud_mobject.py#L123
+Descricao: Add a parameter to the parent lambda function and use variable "indices" as its default value; The value of "indices" might change at the next loop iteration.
+
+[SONARQUBE 182]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/point_cloud_mobject.py
+Linha: 126
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/point_cloud_mobject.py#L126
+Descricao: Add missing parameters family.
+
+[SONARQUBE 183]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7492
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/point_cloud_mobject.py
+Linha: 183
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/point_cloud_mobject.py#L183
+Descricao: Unpack this comprehension expression
+
+[SONARQUBE 184]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/point_cloud_mobject.py
+Linha: 184
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/point_cloud_mobject.py#L184
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 185]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/surface.py
+Linha: 4
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/surface.py#L4
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 186]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/surface.py
+Linha: 72
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/surface.py#L72
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 187]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/surface.py
+Linha: 109
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/surface.py#L109
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 188]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/surface.py
+Linha: 217
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/surface.py#L217
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 189]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/surface.py
+Linha: 250
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/surface.py#L250
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 190]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/vectorized_mobject.py
+Linha: 8
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/vectorized_mobject.py#L8
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 191]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/vectorized_mobject.py
+Linha: 48
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/vectorized_mobject.py#L48
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 192]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/vectorized_mobject.py
+Linha: 289
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/vectorized_mobject.py#L289
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 193]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/vectorized_mobject.py
+Linha: 331
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/vectorized_mobject.py#L331
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 194]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/vectorized_mobject.py
+Linha: 368
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/vectorized_mobject.py#L368
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 195]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/vectorized_mobject.py
+Linha: 384
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/vectorized_mobject.py#L384
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 196]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/vectorized_mobject.py
+Linha: 538
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/vectorized_mobject.py#L538
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 197]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/vectorized_mobject.py
+Linha: 557
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/vectorized_mobject.py#L557
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 198]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/vectorized_mobject.py
+Linha: 592
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/vectorized_mobject.py#L592
+Descricao: Remove this commented out code.
+
+[SONARQUBE 199]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/vectorized_mobject.py
+Linha: 715
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/vectorized_mobject.py#L715
+Descricao: Replace the unused loop index "mob" with "_".
+
+[SONARQUBE 200]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/vectorized_mobject.py
+Linha: 776
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/vectorized_mobject.py#L776
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 201]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/vectorized_mobject.py
+Linha: 800
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/vectorized_mobject.py#L800
+Descricao: Replace the unused loop index "x" with "_".
+
+[SONARQUBE 202]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/vectorized_mobject.py
+Linha: 1022
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/vectorized_mobject.py#L1022
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 203]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/vectorized_mobject.py
+Linha: 1063
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/vectorized_mobject.py#L1063
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 204]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7492
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/vectorized_mobject.py
+Linha: 1079
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/vectorized_mobject.py#L1079
+Descricao: Unpack this comprehension expression
+
+[SONARQUBE 205]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/types/vectorized_mobject.py
+Linha: 1080
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/types/vectorized_mobject.py#L1080
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 206]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/vector_field.py
+Linha: 7
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/vector_field.py#L7
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 207]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/vector_field.py
+Linha: 22
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/vector_field.py#L22
+Descricao: Remove this commented out code.
+
+[SONARQUBE 208]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/vector_field.py
+Linha: 53
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/vector_field.py#L53
+Descricao: Remove the unused function parameter "flip_alphas".
+
+[SONARQUBE 209]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/vector_field.py
+Linha: 62
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/vector_field.py#L62
+Descricao: Remove this commented out code.
+
+[SONARQUBE 210]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/vector_field.py
+Linha: 80
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/vector_field.py#L80
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 211]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/vector_field.py
+Linha: 191
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/vector_field.py#L191
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 212]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/vector_field.py
+Linha: 233
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/vector_field.py#L233
+Descricao: Replace the unused loop index "t" with "_".
+
+[SONARQUBE 213]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/vector_field.py
+Linha: 278
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/vector_field.py#L278
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 214]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/vector_field.py
+Linha: 279
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/vector_field.py#L279
+Descricao: Replace the unused loop index "n" with "_".
+
+[SONARQUBE 215]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/vector_field.py
+Linha: 285
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/vector_field.py#L285
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 216]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/vector_field.py
+Linha: 312
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/vector_field.py#L312
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 217]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/vector_field.py
+Linha: 331
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/vector_field.py#L331
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 218]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/mobject/vector_field.py
+Linha: 336
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/mobject/vector_field.py#L336
+Descricao: Add missing parameters recursive.
+
+[SONARQUBE 219]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/arithmetic.py
+Linha: 4
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/arithmetic.py#L4
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 220]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/arithmetic.py
+Linha: 12
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/arithmetic.py#L12
+Descricao: Remove parameter start_terms or provide default value.
+
+[SONARQUBE 221]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/arithmetic.py
+Linha: 13
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/arithmetic.py#L13
+Descricao: Remove parameter end_terms or provide default value.
+
+[SONARQUBE 222]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/arithmetic.py
+Linha: 14
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/arithmetic.py#L14
+Descricao: Remove parameter index_map or provide default value.
+
+[SONARQUBE 223]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5717
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/arithmetic.py
+Linha: 19
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/arithmetic.py#L19
+Descricao: Change this default value to "None" and initialize this parameter inside the function/method.
+
+[SONARQUBE 224]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7504
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/arithmetic.py
+Linha: 35
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/arithmetic.py#L35
+Descricao: Remove this unnecessary `list()` call on an already iterable object.
+
+[SONARQUBE 225]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/combinatorics.py
+Linha: 1
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/combinatorics.py#L1
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 226]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/combinatorics.py
+Linha: 20
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/combinatorics.py#L20
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 227]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/combinatorics.py
+Linha: 23
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/combinatorics.py#L23
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 228]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/combinatorics.py
+Linha: 36
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/combinatorics.py#L36
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 229]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/combinatorics.py
+Linha: 37
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/combinatorics.py#L37
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 230]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/combinatorics.py
+Linha: 40
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/combinatorics.py#L40
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 231]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/combinatorics.py
+Linha: 72
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/combinatorics.py#L72
+Descricao: Remove the unused function parameter "unused_kwargsn".
+
+[SONARQUBE 232]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1542
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/combinatorics.py
+Linha: 90
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/combinatorics.py#L90
+Descricao: Rename function "combinationMobject" to match the regular expression ^[a-z_][a-z0-9_]*$.
+
+[SONARQUBE 233]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/complex_transformation_scene.py
+Linha: 4
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/complex_transformation_scene.py#L4
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 234]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/complex_transformation_scene.py
+Linha: 10
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/complex_transformation_scene.py#L10
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 235]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/complex_transformation_scene.py
+Linha: 16
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/complex_transformation_scene.py#L16
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 236]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/complex_transformation_scene.py
+Linha: 96
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/complex_transformation_scene.py#L96
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 237]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/complex_transformation_scene.py
+Linha: 148
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/complex_transformation_scene.py#L148
+Descricao: Remove this commented out code.
+
+[SONARQUBE 238]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/counting.py
+Linha: 5
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/counting.py#L5
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 239]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/counting.py
+Linha: 81
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/counting.py#L81
+Descricao: Replace the unused loop index "x" with "_".
+
+[SONARQUBE 240]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/counting.py
+Linha: 175
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/counting.py#L175
+Descricao: Remove the unused function parameter "place".
+
+[SONARQUBE 241]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/counting.py
+Linha: 175
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/counting.py#L175
+Descricao: Remove the unused function parameter "num".
+
+[SONARQUBE 242]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/counting.py
+Linha: 178
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/counting.py#L178
+Descricao: Remove the unused function parameter "place".
+
+[SONARQUBE 243]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/counting.py
+Linha: 204
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/counting.py#L204
+Descricao: Replace the unused loop index "x" with "_".
+
+[SONARQUBE 244]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/counting.py
+Linha: 222
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/counting.py#L222
+Descricao: Remove this commented out code.
+
+[SONARQUBE 245]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/counting.py
+Linha: 236
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/counting.py#L236
+Descricao: Add missing parameters place.
+
+[SONARQUBE 246]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/fractals.py
+Linha: 3
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/fractals.py#L3
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 247]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/fractals.py
+Linha: 4
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/fractals.py#L4
+Descricao: Remove this commented out code.
+
+[SONARQUBE 248]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/fractals.py
+Linha: 30
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/fractals.py#L30
+Descricao: Replace the unused loop index "x" with "_".
+
+[SONARQUBE 249]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/fractals.py
+Linha: 38
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/fractals.py#L38
+Descricao: Remove this commented out code.
+
+[SONARQUBE 250]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/fractals.py
+Linha: 54
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/fractals.py#L54
+Descricao: Remove this commented out code.
+
+[SONARQUBE 251]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/fractals.py
+Linha: 102
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/fractals.py#L102
+Descricao: Replace the unused loop index "x" with "_".
+
+[SONARQUBE 252]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/fractals.py
+Linha: 112
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/fractals.py#L112
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 253]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/fractals.py
+Linha: 112
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/fractals.py#L112
+Descricao: Define a constant instead of duplicating this literal "Not implemented" 4 times.
+
+[SONARQUBE 254]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/fractals.py
+Linha: 115
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/fractals.py#L115
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 255]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/fractals.py
+Linha: 221
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/fractals.py#L221
+Descricao: Replace the unused loop index "x" with "_".
+
+[SONARQUBE 256]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/fractals.py
+Linha: 241
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/fractals.py#L241
+Descricao: Remove this commented out code.
+
+[SONARQUBE 257]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/fractals.py
+Linha: 294
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/fractals.py#L294
+Descricao: Add missing parameters family.
+
+[SONARQUBE 258]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/fractals.py
+Linha: 339
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/fractals.py#L339
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 259]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/fractals.py
+Linha: 363
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/fractals.py#L363
+Descricao: Replace the unused loop index "x" with "_".
+
+[SONARQUBE 260]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/fractals.py
+Linha: 419
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/fractals.py#L419
+Descricao: Replace the unused loop index "count" with "_".
+
+[SONARQUBE 261]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/fractals.py
+Linha: 424
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/fractals.py#L424
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 262]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/fractals.py
+Linha: 522
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/fractals.py#L522
+Descricao: Remove this commented out code.
+
+[SONARQUBE 263]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/fractals.py
+Linha: 565
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/fractals.py#L565
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 264]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/fractals.py
+Linha: 584
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/fractals.py#L584
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 265]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/graph_theory.py
+Linha: 7
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/graph_theory.py#L7
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 266]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/graph_theory.py
+Linha: 26
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/graph_theory.py#L26
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 267]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/graph_theory.py
+Linha: 280
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/graph_theory.py#L280
+Descricao: Remove the unused local variable "time_per_edge".
+
+[SONARQUBE 268]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7496
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/graph_theory.py
+Linha: 298
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/graph_theory.py#L298
+Descricao: Replace this set constructor call by a set literal.
+
+[SONARQUBE 269]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7496
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/graph_theory.py
+Linha: 299
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/graph_theory.py#L299
+Descricao: Replace this set constructor call by a set literal.
+
+[SONARQUBE 270]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7496
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/graph_theory.py
+Linha: 325
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/graph_theory.py#L325
+Descricao: Replace this dict constructor call by a dict literal.
+
+[SONARQUBE 271]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7496
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/graph_theory.py
+Linha: 329
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/graph_theory.py#L329
+Descricao: Replace this dict constructor call by a dict literal.
+
+[SONARQUBE 272]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 1
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L1
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 273]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 9
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L9
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 274]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 53
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L53
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 275]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 68
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L68
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 276]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 83
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L83
+Descricao: Add missing parameters aligned_edge coor_mask.
+
+[SONARQUBE 277]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 133
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L133
+Descricao: Remove this commented out code.
+
+[SONARQUBE 278]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 171
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L171
+Descricao: Replace the unused local variable "r" with "_".
+
+[SONARQUBE 279]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 194
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L194
+Descricao: Replace the unused local variable "upper_ray" with "_".
+
+[SONARQUBE 280]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 194
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L194
+Descricao: Replace the unused local variable "lower_ray" with "_".
+
+[SONARQUBE 281]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 214
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L214
+Descricao: Rename this local variable "rotated_RIGHT" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 282]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 215
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L215
+Descricao: Rename this local variable "projected_RIGHT" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 283]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 256
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L256
+Descricao: Rename this local variable "projected_RIGHT" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 284]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 270
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L270
+Descricao: Replace the unused local variable "u" with "_".
+
+[SONARQUBE 285]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 274
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L274
+Descricao: Replace the unused local variable "l" with "_".
+
+[SONARQUBE 286]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 279
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L279
+Descricao: Remove this commented out code.
+
+[SONARQUBE 287]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6660
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 288
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L288
+Descricao: Use the `isinstance()` function here.
+
+[SONARQUBE 288]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 290
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L290
+Descricao: Remove this commented out code.
+
+[SONARQUBE 289]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 295
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L295
+Descricao: Remove this commented out code.
+
+[SONARQUBE 290]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6660
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 305
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L305
+Descricao: Use `not isinstance()` here.
+
+[SONARQUBE 291]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6660
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 318
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L318
+Descricao: Use the `isinstance()` function here.
+
+[SONARQUBE 292]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6660
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 322
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L322
+Descricao: Use `not isinstance()` here.
+
+[SONARQUBE 293]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 420
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L420
+Descricao: Remove this commented out code.
+
+[SONARQUBE 294]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 453
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L453
+Descricao: Remove this commented out code.
+
+[SONARQUBE 295]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 471
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L471
+Descricao: Add missing parameters dt recursive.
+
+[SONARQUBE 296]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 479
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L479
+Descricao: Remove this commented out code.
+
+[SONARQUBE 297]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1854
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 525
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L525
+Descricao: Remove this assignment to local variable 'point'; the value is never used.
+
+[SONARQUBE 298]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1542
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/light.py
+Linha: 598
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/light.py#L598
+Descricao: Rename function "ScreenTracker" to match the regular expression ^[a-z_][a-z0-9_]*$.
+
+[SONARQUBE 299]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/matrix_multiplication.py
+Linha: 7
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/matrix_multiplication.py#L7
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 300]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/matrix_multiplication.py
+Linha: 29
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/matrix_multiplication.py#L29
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 301]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/once_useful_constructs/region.py
+Linha: 4
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/once_useful_constructs/region.py#L4
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 302]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/graph_scene.py
+Linha: 6
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/graph_scene.py#L6
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 303]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/graph_scene.py
+Linha: 22
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/graph_scene.py#L22
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 304]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/graph_scene.py
+Linha: 65
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/graph_scene.py#L65
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 305]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/graph_scene.py
+Linha: 254
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/graph_scene.py#L254
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 306]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/graph_scene.py
+Linha: 447
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/graph_scene.py#L447
+Descricao: Rename this local variable "T_label" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 307]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/graph_scene.py
+Linha: 496
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/graph_scene.py#L496
+Descricao: Rename this local variable "left_T_label" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 308]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/graph_scene.py
+Linha: 496
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/graph_scene.py#L496
+Descricao: Rename this local variable "right_T_label" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 309]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/graph_scene.py
+Linha: 536
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/graph_scene.py#L536
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 310]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/reconfigurable_scene.py
+Linha: 2
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/reconfigurable_scene.py#L2
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 311]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/sample_space_scene.py
+Linha: 5
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/sample_space_scene.py#L5
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 312]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene.py
+Linha: 16
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene.py#L16
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 313]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7492
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene.py
+Linha: 165
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene.py#L165
+Descricao: Unpack this comprehension expression
+
+[SONARQUBE 314]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene.py
+Linha: 268
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene.py#L268
+Descricao: Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.
+
+[SONARQUBE 315]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene.py
+Linha: 320
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene.py#L320
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 316]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene.py
+Linha: 325
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene.py#L325
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 317]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene.py
+Linha: 480
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene.py#L480
+Descricao: Replace the unused loop index "n" with "_".
+
+[SONARQUBE 318]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene.py
+Linha: 519
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene.py#L519
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 319]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene.py
+Linha: 527
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene.py#L527
+Descricao: Remove the unused function parameter "d_point".
+
+[SONARQUBE 320]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene.py
+Linha: 530
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene.py#L530
+Descricao: Remove the unused function parameter "modifiers".
+
+[SONARQUBE 321]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene.py
+Linha: 530
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene.py#L530
+Descricao: Remove the unused function parameter "buttons".
+
+[SONARQUBE 322]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene.py
+Linha: 536
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene.py#L536
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 323]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene.py
+Linha: 539
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene.py#L539
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 324]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene.py
+Linha: 550
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene.py#L550
+Descricao: Remove the unused function parameter "modifiers".
+
+[SONARQUBE 325]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene.py
+Linha: 554
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene.py#L554
+Descricao: Remove the unused function parameter "modifiers".
+
+[SONARQUBE 326]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene.py
+Linha: 565
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene.py#L565
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 327]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene.py
+Linha: 568
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene.py#L568
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 328]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene.py
+Linha: 571
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene.py#L571
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 329]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene_file_writer.py
+Linha: 21
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene_file_writer.py#L21
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 330]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene_file_writer.py
+Linha: 28
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene_file_writer.py#L28
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 331]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene_file_writer.py
+Linha: 143
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene_file_writer.py#L143
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 332]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene_file_writer.py
+Linha: 217
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene_file_writer.py#L217
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 333]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/scene_file_writer.py
+Linha: 338
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/scene_file_writer.py#L338
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 334]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/three_d_scene.py
+Linha: 20
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/three_d_scene.py#L20
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 335]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/three_d_scene.py
+Linha: 23
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/three_d_scene.py#L23
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 336]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/three_d_scene.py
+Linha: 45
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/three_d_scene.py#L45
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 337]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7492
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/three_d_scene.py
+Linha: 87
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/three_d_scene.py#L87
+Descricao: Unpack this comprehension expression
+
+[SONARQUBE 338]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/vector_space_scene.py
+Linha: 11
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/vector_space_scene.py#L11
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 339]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/vector_space_scene.py
+Linha: 38
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/vector_space_scene.py#L38
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 340]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/vector_space_scene.py
+Linha: 194
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/vector_space_scene.py#L194
+Descricao: Replace the unused local variable "brackets" with "_".
+
+[SONARQUBE 341]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5780
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/vector_space_scene.py
+Linha: 290
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/vector_space_scene.py#L290
+Descricao: Change or remove duplicates of this key.
+
+[SONARQUBE 342]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/vector_space_scene.py
+Linha: 352
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/vector_space_scene.py#L352
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 343]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/vector_space_scene.py
+Linha: 441
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/vector_space_scene.py#L441
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 344]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/zoomed_scene.py
+Linha: 4
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/zoomed_scene.py#L4
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 345]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/scene/zoomed_scene.py
+Linha: 12
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/scene/zoomed_scene.py#L12
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 346]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/shader_wrapper.py
+Linha: 35
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/shader_wrapper.py#L35
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 347]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/shader_wrapper.py
+Linha: 36
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/shader_wrapper.py#L36
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 348]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5603
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/stream_starter.py
+Linha: 11
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/stream_starter.py#L11
+Descricao: Remove this unused class declaration.
+
+[SONARQUBE 349]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/bezier.py
+Linha: 268
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/bezier.py#L268
+Descricao: Rename this local variable "Tm" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 350]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/bezier.py
+Linha: 287
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/bezier.py#L287
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 351]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/color.py
+Linha: 19
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/color.py#L19
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 352]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/color.py
+Linha: 104
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/color.py#L104
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 353]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/config_ops.py
+Linha: 5
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/config_ops.py#L5
+Descricao: Rename this parameter "Class" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 354]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/config_ops.py
+Linha: 9
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/config_ops.py#L9
+Descricao: Rename this local variable "Child" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 355]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/config_ops.py
+Linha: 37
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/config_ops.py#L37
+Descricao: Rename this local variable "Class" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 356]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/config_ops.py
+Linha: 59
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/config_ops.py#L59
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 357]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7504
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/config_ops.py
+Linha: 74
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/config_ops.py#L74
+Descricao: Remove this unnecessary `list()` call on an already iterable object.
+
+[SONARQUBE 358]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/file_ops.py
+Linha: 31
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/file_ops.py#L31
+Descricao: Refactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.
+
+[SONARQUBE 359]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S7505
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/file_ops.py
+Linha: 59
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/file_ops.py#L59
+Descricao: Replace this map call with a comprehension.
+
+[SONARQUBE 360]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/iterables.py
+Linha: 32
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/iterables.py#L32
+Descricao: Rename this parameter "Class" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 361]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7492
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/iterables.py
+Linha: 33
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/iterables.py#L33
+Descricao: Unpack this comprehension expression
+
+[SONARQUBE 362]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/paths.py
+Linha: 38
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/paths.py#L38
+Descricao: Rename this local variable "rot_matrix_T" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 363]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/sounds.py
+Linha: 22
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/sounds.py#L22
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 364]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/space_ops.py
+Linha: 19
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/space_ops.py#L19
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 365]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/space_ops.py
+Linha: 74
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/space_ops.py#L74
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 366]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/space_ops.py
+Linha: 180
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/space_ops.py#L180
+Descricao: Remove the unused function parameter "fall_back".
+
+[SONARQUBE 367]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1542
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/space_ops.py
+Linha: 222
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/space_ops.py#L222
+Descricao: Rename function "complex_to_R3" to match the regular expression ^[a-z_][a-z0-9_]*$.
+
+[SONARQUBE 368]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1542
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/space_ops.py
+Linha: 226
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/space_ops.py#L226
+Descricao: Rename function "R3_to_complex" to match the regular expression ^[a-z_][a-z0-9_]*$.
+
+[SONARQUBE 369]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1542
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/space_ops.py
+Linha: 230
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/space_ops.py#L230
+Descricao: Rename function "complex_func_to_R3_func" to match the regular expression ^[a-z_][a-z0-9_]*$.
+
+[SONARQUBE 370]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/space_ops.py
+Linha: 257
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/space_ops.py#L257
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 371]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/space_ops.py
+Linha: 335
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/space_ops.py#L335
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 372]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/space_ops.py
+Linha: 339
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/space_ops.py#L339
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 373]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/space_ops.py
+Linha: 371
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/space_ops.py#L371
+Descricao: Replace the unused loop index "x" with "_".
+
+[SONARQUBE 374]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/space_ops.py
+Linha: 372
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/space_ops.py#L372
+Descricao: Remove this commented out code.
+
+[SONARQUBE 375]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/space_ops.py
+Linha: 387
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/space_ops.py#L387
+Descricao: Refactor this function to reduce its Cognitive Complexity from 24 to the 15 allowed.
+
+[SONARQUBE 376]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/space_ops.py
+Linha: 393
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/space_ops.py#L393
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 377]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/tex_file_writing.py
+Linha: 64
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/tex_file_writing.py#L64
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 378]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: manimlib/utils/tex_file_writing.py
+Linha: 71
+Link do codigo: https://github.com/3b1b/manim/blob/e59d83980622638e2b622302bce7dbb859b31e1b/manimlib/utils/tex_file_writing.py#L71
+Descricao: Remove the unused function parameter "regen_if_exists".
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE 3b1b/manim
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

@@ -1,0 +1,746 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 44 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: gradio-app/gradio
+####################################################################################################
+Repositorio: https://github.com/gradio-app/gradio
+Commit analisado: f888d2b637141e275321769f0e836ecb7a1cf603
+Link do commit: https://github.com/gradio-app/gradio/commit/f888d2b637141e275321769f0e836ecb7a1cf603
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 4404
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 0
+  ERROR: 0
+  WARNING: 0
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 69
+  Vulnerabilidades: 4
+  Bugs: 2
+  Code smells: 63
+  Security hotspots: 0
+  Complexidade: 670
+  Linhas analisadas pelo SonarQube: 3690
+  Severidades: BLOCKER=2, CRITICAL=19, INFO=1, MAJOR=24, MINOR=23
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SONARQUBE 1]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/digit_classifier.py
+Linha: 25
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/digit_classifier.py#L25
+Descricao: Remove this commented out code.
+
+[SONARQUBE 2]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/form_graph.py
+Linha: 17
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/form_graph.py#L17
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 3]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/main_note.py
+Linha: 24
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/main_note.py#L24
+Descricao: Remove the unused local variable "x".
+
+[SONARQUBE 4]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/matrix_transpose.py
+Linha: 17
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/matrix_transpose.py#L17
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 5]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/matrix_transpose.py
+Linha: 18
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/matrix_transpose.py#L18
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 6]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/matrix_transpose.py
+Linha: 19
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/matrix_transpose.py#L19
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 7]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/outbreak_forecast.py
+Linha: 12
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/outbreak_forecast.py#L12
+Descricao: Remove the unused local variable "day_count".
+
+[SONARQUBE 8]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/outbreak_forecast.py
+Linha: 13
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/outbreak_forecast.py#L13
+Descricao: Remove the unused local variable "pop_count".
+
+[SONARQUBE 9]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/stock_forecast.py
+Linha: 18
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/stock_forecast.py#L18
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 10]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/stop_sign_detection.py
+Linha: 6
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/stop_sign_detection.py#L6
+Descricao: Remove this commented out code.
+
+[SONARQUBE 11]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6709
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/titanic_survival.py
+Linha: 53
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/titanic_survival.py#L53
+Descricao: Provide a seed for the random_state parameter.
+
+[SONARQUBE 12]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6973
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/titanic_survival.py
+Linha: 53
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/titanic_survival.py#L53
+Descricao: Add the missing hyperparameters min_samples_leaf and max_features for this Scikit-learn estimator.
+
+[SONARQUBE 13]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/utils/FCN8s_keras.py
+Linha: 2
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/utils/FCN8s_keras.py#L2
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 14]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/utils/FCN8s_keras.py
+Linha: 5
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/utils/FCN8s_keras.py#L5
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 15]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1542
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/utils/FCN8s_keras.py
+Linha: 8
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/utils/FCN8s_keras.py#L8
+Descricao: Rename function "FCN" to match the regular expression ^[a-z_][a-z0-9_]*$.
+
+[SONARQUBE 16]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/utils/FCN8s_keras.py
+Linha: 21
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/utils/FCN8s_keras.py#L21
+Descricao: Remove the unused local variable "CHANNEL_AXIS".
+
+[SONARQUBE 17]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/utils/FCN8s_keras.py
+Linha: 94
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/utils/FCN8s_keras.py#L94
+Descricao: Remove this commented out code.
+
+[SONARQUBE 18]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6983
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/utils/bert.py
+Linha: 55
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/utils/bert.py#L55
+Descricao: Specify the `num_workers` parameter.
+
+[SONARQUBE 19]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/utils/utils.py
+Linha: 152
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/utils/utils.py#L152
+Descricao: Function "squad_examples_to_features" has 14 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 20]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/utils/utils.py
+Linha: 152
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/utils/utils.py#L152
+Descricao: Refactor this function to reduce its Cognitive Complexity from 25 to the 15 allowed.
+
+[SONARQUBE 21]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/utils/utils.py
+Linha: 161
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/utils/utils.py#L161
+Descricao: Remove this commented out code.
+
+[SONARQUBE 22]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/utils/utils.py
+Linha: 166
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/utils/utils.py#L166
+Descricao: Remove this commented out code.
+
+[SONARQUBE 23]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/utils/utils.py
+Linha: 297
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/utils/utils.py#L297
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 24]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/utils/utils.py
+Linha: 297
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/utils/utils.py#L297
+Descricao: Remove the unused function parameter "verbose_logging".
+
+[SONARQUBE 25]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: demo/utils/utils.py
+Linha: 404
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/demo/utils/utils.py#L404
+Descricao: Refactor this function to reduce its Cognitive Complexity from 47 to the 15 allowed.
+
+[SONARQUBE 26]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/component.py
+Linha: 22
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/component.py#L22
+Descricao: Remove the unused function parameter "dir".
+
+[SONARQUBE 27]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/embeddings.py
+Linha: 20
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/embeddings.py#L20
+Descricao: Rename this local variable "embeddings_2D" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 28]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/embeddings.py
+Linha: 27
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/embeddings.py#L27
+Descricao: Rename this local variable "embeddings_2D" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 29]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/inputs.py
+Linha: 139
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/inputs.py#L139
+Descricao: Define a constant instead of duplicating this literal "Unknown type: " 13 times.
+
+[SONARQUBE 30]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5720
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/inputs.py
+Linha: 182
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/inputs.py#L182
+Descricao: Rename "text" to "self" or add the missing "self" parameter.
+
+[SONARQUBE 31]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/inputs.py
+Linha: 252
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/inputs.py#L252
+Descricao: Remove the unused local variable "neighbors".
+
+[SONARQUBE 32]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/inputs.py
+Linha: 427
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/inputs.py#L427
+Descricao: Define a constant instead of duplicating this literal ". Please choose from: 'value', 'index'." 6 times.
+
+[SONARQUBE 33]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/inputs.py
+Linha: 684
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/inputs.py#L684
+Descricao: Rename this local variable "segVal" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 34]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/interface.py
+Linha: 46
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/interface.py#L46
+Descricao: Method "__init__" has 23 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 35]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/interface.py
+Linha: 46
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/interface.py#L46
+Descricao: Refactor this function to reduce its Cognitive Complexity from 26 to the 15 allowed.
+
+[SONARQUBE 36]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/interface.py
+Linha: 119
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/interface.py#L119
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 37]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/interface.py
+Linha: 184
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/interface.py#L184
+Descricao: Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.
+
+[SONARQUBE 38]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/interface.py
+Linha: 234
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/interface.py#L234
+Descricao: Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.
+
+[SONARQUBE 39]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/interface.py
+Linha: 284
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/interface.py#L284
+Descricao: Refactor this function to reduce its Cognitive Complexity from 24 to the 15 allowed.
+
+[SONARQUBE 40]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8518
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/interface.py
+Linha: 295
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/interface.py#L295
+Descricao: Unpack the value from 'enumerate()' directly instead of using an index lookup.
+
+[SONARQUBE 41]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/interface.py
+Linha: 340
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/interface.py#L340
+Descricao: Use the opposite operator ("!=") instead.
+
+[SONARQUBE 42]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S108
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/interface.py
+Linha: 347
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/interface.py#L347
+Descricao: Either remove or fill this block of code.
+
+[SONARQUBE 43]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S3626
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/interface.py
+Linha: 367
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/interface.py#L367
+Descricao: Remove this redundant continue.
+
+[SONARQUBE 44]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/interface.py
+Linha: 369
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/interface.py#L369
+Descricao: Refactor this function to reduce its Cognitive Complexity from 50 to the 15 allowed.
+
+[SONARQUBE 45]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/interface.py
+Linha: 388
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/interface.py#L388
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 46]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/interface.py
+Linha: 462
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/interface.py#L462
+Descricao: Remove the unused local variable "r".
+
+[SONARQUBE 47]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/interface.py
+Linha: 505
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/interface.py#L505
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 48]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/interpretation.py
+Linha: 7
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/interpretation.py#L7
+Descricao: Use the opposite operator ("!=") instead.
+
+[SONARQUBE 49]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6660
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/interpretation.py
+Linha: 15
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/interpretation.py#L15
+Descricao: Use the `isinstance()` function here.
+
+[SONARQUBE 50]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6660
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/interpretation.py
+Linha: 27
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/interpretation.py#L27
+Descricao: Use the `isinstance()` function here.
+
+[SONARQUBE 51]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4502
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/networking.py
+Linha: 39
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/networking.py#L39
+Descricao: Make sure disabling CSRF protection is safe here.
+
+[SONARQUBE 52]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S5122
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/networking.py
+Linha: 43
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/networking.py#L43
+Descricao: Make sure this permissive CORS policy is safe here.
+
+[SONARQUBE 53]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/networking.py
+Linha: 142
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/networking.py#L142
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 54]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/networking.py
+Linha: 200
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/networking.py#L200
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 55]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/outputs.py
+Linha: 69
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/outputs.py#L69
+Descricao: Define a constant instead of duplicating this literal "Unknown type: " 4 times.
+
+[SONARQUBE 56]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/outputs.py
+Linha: 125
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/outputs.py#L125
+Descricao: Remove this commented out code.
+
+[SONARQUBE 57]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/outputs.py
+Linha: 159
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/outputs.py#L159
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 58]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/processing_utils.py
+Linha: 40
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/processing_utils.py#L40
+Descricao: Rename this local variable "PIL_image" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 59]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/processing_utils.py
+Linha: 90
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/processing_utils.py#L90
+Descricao: Rename this parameter "NFFT" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 60]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S108
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/processing_utils.py
+Linha: 116
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/processing_utils.py#L116
+Descricao: Either remove or fill this block of code.
+
+[SONARQUBE 61]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/processing_utils.py
+Linha: 120
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/processing_utils.py#L120
+Descricao: Use the opposite operator ("is not") instead.
+
+[SONARQUBE 62]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/processing_utils.py
+Linha: 146
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/processing_utils.py#L146
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 63]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/tunneling.py
+Linha: 31
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/tunneling.py#L31
+Descricao: Replace the unused local variable "x" with "_".
+
+[SONARQUBE 64]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/tunneling.py
+Linha: 31
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/tunneling.py#L31
+Descricao: Replace the unused local variable "w" with "_".
+
+[SONARQUBE 65]
+Tipo: BUG
+Severidade: BLOCKER
+Regra: python:S2275
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/tunneling.py
+Linha: 83
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/tunneling.py#L83
+Descricao: Fix this formatted string's syntax.
+
+[SONARQUBE 66]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/utils.py
+Linha: 18
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/utils.py#L18
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 67]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/utils.py
+Linha: 18
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/utils.py#L18
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 68]
+Tipo: BUG
+Severidade: BLOCKER
+Regra: python:S930
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: gradio/utils.py
+Linha: 45
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/gradio/utils.py#L45
+Descricao: Remove 1 unexpected arguments; 'error_analytics' expects 1 positional arguments.
+
+[SONARQUBE 69]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: test/test_inputs.py
+Linha: 130
+Link do codigo: https://github.com/gradio-app/gradio/blob/f888d2b637141e275321769f0e836ecb7a1cf603/test/test_inputs.py#L130
+Descricao: Consider using "assertFalse" instead.
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE gradio-app/gradio
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

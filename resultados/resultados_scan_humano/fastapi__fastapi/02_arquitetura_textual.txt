@@ -1,0 +1,50 @@
+O QUE E ESTE ARQUIVO
+================================================================================
+Este arquivo e um desenho textual da estrutura e do fluxo funcional esperados para o projeto.
+Ele foi inferido somente da documentacao publica e ajuda a IA e o time a visualizar os
+componentes principais. Nao representa necessariamente a arquitetura interna real do codigo
+humano e deve ser validado antes do experimento.
+
+DESENHO TEXTUAL INFERIDO DA DOCUMENTACAO
+================================================================================
+
+Legenda: estrutura inferida; deve ser validada pelo time antes do experimento.
+
+PROJETO
+|
++-- Documentacao e configuracao
+|   +-- CONTRIBUTING.md
+|   +-- README.md
+|   +-- pyproject.toml
+|
++-- Modulos/dominios visiveis
+|   +-- .github/
+|   +-- docs/
+|   +-- docs_src/
+|   +-- fastapi/
+|   +-- pending_tests/
+|   +-- scripts/
+|   +-- tests/
+|
++-- Entradas e interfaces descritas no README
+|   +-- configuracao/parametros
+|   +-- processamento principal
+|   +-- saidas/resultados
+|
++-- Testes proprios a serem criados pela IA
+
+FLUXO FUNCIONAL
+
+Usuario/cliente
+    |
+    v
+Interface publica descrita no README
+    |
+    v
+Validacao e configuracao
+    |
+    v
+Logica funcional recriada pela IA
+    |
+    v
+Saidas descritas + logs + tratamento de erros

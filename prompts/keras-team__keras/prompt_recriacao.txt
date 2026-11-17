@@ -1,0 +1,73 @@
+O QUE E ESTE ARQUIVO
+================================================================================
+Este e o prompt que deve ser enviado ao ChatGPT, Gemini ou Claude para recriar o projeto.
+Ele contem somente informacoes documentais publicas e a arquitetura textual inferida; o corpo do
+codigo-fonte humano nao foi incluido. A resposta da IA devera ser salva separadamente e depois
+avaliada pelas mesmas ferramentas Semgrep e SonarQube usadas no projeto humano.
+
+INSTRUCAO PARA A IA
+================================================================================
+Crie do zero um projeto Python funcionalmente semelhante ao descrito abaixo.
+REGRAS OBRIGATORIAS:
+- Nao procure, copie, traduza ou reproduza o codigo-fonte do repositorio original.
+- Use apenas README, documentacao e manifestos fornecidos neste prompt.
+- Implemente as funcionalidades publicas documentadas, validacao de entrada, tratamento de erros e testes proprios.
+- Nao inclua segredos, credenciais, caminhos absolutos ou dependencias desnecessarias.
+- Entregue todos os arquivos completos e um README de execucao.
+
+REFERENCIA: keras-team/keras
+COMMIT DOCUMENTAL: 6a46d5259d079a58a9d32ad31a9e9da9c0ea563f
+
+README:
+
+--- README.md ---
+# Keras: Deep Learning for Python
+
+![Keras logo](https://s3.amazonaws.com/keras.io/img/keras-logo-2018-large-1200.png)
+
+## Under Construction
+
+In the near future, this repository will be used once again
+for developing the Keras codebase. For the time being, the Keras codebase
+is being developed at
+[tensorflow/tensorflow](https://github.com/tensorflow/tensorflow/), and any
+PR or issue should be directed there.
+
+
+DOCUMENTACAO PUBLICA:
+
+
+MANIFESTOS PUBLICOS:
+
+--- requirements.txt ---
+absl-py ~= 0.10
+h5py ~= 2.10.0
+keras_preprocessing ~= 1.1.2
+numpy ~= 1.19.2
+pandas
+pydot
+scipy ~= 1.5.2
+six ~= 1.15.0
+tf-nightly-gpu
+portpicker
+pyyaml
+Pillow
+
+
+ARQUITETURA TEXTUAL INFERIDA:
+PROJETO
+|
++-- Documentacao e configuracao
+|   +-- CONTRIBUTING.md
+|   +-- README.md
+|   +-- requirements.txt
+|
++-- Modulos/dominios visiveis
+|   +-- keras/
+|
++-- Entradas e interfaces descritas no README
+|   +-- configuracao/parametros
+|   +-- processamento principal
+|   +-- saidas/resultados
+|
++-- Testes proprios a serem criados pela IA

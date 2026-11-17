@@ -1,0 +1,34 @@
+rules:
+  - id: python-dangerous-eval
+    languages: [python]
+    severity: ERROR
+    message: Uso de eval pode permitir execução de código não confiável.
+    pattern: eval(...)
+
+  - id: python-dangerous-exec
+    languages: [python]
+    severity: ERROR
+    message: Uso de exec pode permitir execução de código não confiável.
+    pattern: exec(...)
+
+  - id: python-shell-true
+    languages: [python]
+    severity: ERROR
+    message: subprocess com shell=True aumenta o risco de injeção de comandos.
+    pattern-either:
+      - pattern: subprocess.$F(..., shell=True, ...)
+      - pattern: $OBJ.$F(..., shell=True, ...)
+
+  - id: python-unsafe-yaml-load
+    languages: [python]
+    severity: WARNING
+    message: Use yaml.safe_load para dados não confiáveis.
+    pattern: yaml.load(...)
+
+  - id: python-insecure-pickle-load
+    languages: [python]
+    severity: WARNING
+    message: pickle pode executar código durante a desserialização.
+    pattern-either:
+      - pattern: pickle.load(...)
+      - pattern: pickle.loads(...)

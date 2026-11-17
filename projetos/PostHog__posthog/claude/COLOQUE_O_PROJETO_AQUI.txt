@@ -1,0 +1,1 @@
+Coloque aqui o projeto claude gerado com prompts/PostHog__posthog/prompt_recriacao.txt.

@@ -1,0 +1,110 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 47 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: psf/black
+####################################################################################################
+Repositorio: https://github.com/psf/black
+Commit analisado: 33d861371533d64a54af419798f1ddfa692f388c
+Link do commit: https://github.com/psf/black/commit/33d861371533d64a54af419798f1ddfa692f388c
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 103013
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 6
+  ERROR: 3
+  WARNING: 3
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 0
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 0
+  Security hotspots: 0
+  Complexidade: 2969
+  Linhas analisadas pelo SonarQube: 99827
+  Severidades: nenhuma
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: src/black/__init__.py
+Linha: 6720
+Link do codigo: https://github.com/psf/black/blob/33d861371533d64a54af419798f1ddfa692f388c/src/black/__init__.py#L6720
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 2]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: src/blib2to3/pgen2/conv.py
+Linha: 186
+Link do codigo: https://github.com/psf/black/blob/33d861371533d64a54af419798f1ddfa692f388c/src/blib2to3/pgen2/conv.py#L186
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 3]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: src/blib2to3/pgen2/conv.py
+Linha: 212
+Link do codigo: https://github.com/psf/black/blob/33d861371533d64a54af419798f1ddfa692f388c/src/blib2to3/pgen2/conv.py#L212
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 4]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: src/blib2to3/pgen2/grammar.py
+Linha: 122
+Link do codigo: https://github.com/psf/black/blob/33d861371533d64a54af419798f1ddfa692f388c/src/blib2to3/pgen2/grammar.py#L122
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 5]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: src/blib2to3/pgen2/grammar.py
+Linha: 127
+Link do codigo: https://github.com/psf/black/blob/33d861371533d64a54af419798f1ddfa692f388c/src/blib2to3/pgen2/grammar.py#L127
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 6]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: src/blib2to3/pgen2/pgen.py
+Linha: 117
+Link do codigo: https://github.com/psf/black/blob/33d861371533d64a54af419798f1ddfa692f388c/src/blib2to3/pgen2/pgen.py#L117
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE psf/black
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

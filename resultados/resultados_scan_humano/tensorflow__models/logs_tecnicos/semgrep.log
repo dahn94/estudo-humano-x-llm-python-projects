@@ -1,0 +1,7 @@
+2026-09-22 15:36:46,808 - semgrep.output - INFO - ✅ Scan completed successfully.
+ • Findings: 18 (18 blocking)
+ • Rules run: 5
+ • Targets scanned: 1505
+ • Parsed lines: ~100.0%
+ • No ignore information available
+Ran 5 rules on 1505 files: 18 findings.

@@ -1,0 +1,1123 @@
+O QUE E ESTE ARQUIVO
+================================================================================
+Este e o prompt que deve ser enviado ao ChatGPT, Gemini ou Claude para recriar o projeto.
+Ele contem somente informacoes documentais publicas e a arquitetura textual inferida; o corpo do
+codigo-fonte humano nao foi incluido. A resposta da IA devera ser salva separadamente e depois
+avaliada pelas mesmas ferramentas Semgrep e SonarQube usadas no projeto humano.
+
+INSTRUCAO PARA A IA
+================================================================================
+Crie do zero um projeto Python funcionalmente semelhante ao descrito abaixo.
+REGRAS OBRIGATORIAS:
+- Nao procure, copie, traduza ou reproduza o codigo-fonte do repositorio original.
+- Use apenas README, documentacao e manifestos fornecidos neste prompt.
+- Implemente as funcionalidades publicas documentadas, validacao de entrada, tratamento de erros e testes proprios.
+- Nao inclua segredos, credenciais, caminhos absolutos ou dependencias desnecessarias.
+- Entregue todos os arquivos completos e um README de execucao.
+
+REFERENCIA: mingrammer/diagrams
+COMMIT DOCUMENTAL: d875b73e3e586e58305264a1396224c83c7b8951
+
+README:
+
+--- README.md ---
+![diagrams logo](assets/img/diagrams.png)
+
+# Diagrams
+
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+[![pypi version](https://badge.fury.io/py/diagrams.svg)](https://badge.fury.io/py/diagrams)
+![python version](https://img.shields.io/badge/python-3.6%2C3.7%2C3.8-blue?logo=python)
+![Run tests](https://github.com/mingrammer/diagrams/workflows/Run%20tests/badge.svg?branch=master)
+[![todos](https://badgen.net/https/api.tickgit.com/badgen/github.com/mingrammer/diagrams?label=todos)](https://www.tickgit.com/browse?repo=github.com/mingrammer/diagrams)
+
+![on premise provider](https://img.shields.io/badge/provider-OnPremise-orange?color=5f87bf)
+![aws provider](https://img.shields.io/badge/provider-AWS-orange?logo=amazon-aws&color=ff9900)
+![azure provider](https://img.shields.io/badge/provider-Azure-orange?logo=microsoft-azure&color=0089d6)
+![gcp provider](https://img.shields.io/badge/provider-GCP-orange?logo=google-cloud&color=4285f4)
+![kubernetes provider](https://img.shields.io/badge/provider-Kubernetes-orange?logo=kubernetes&color=326ce5)
+![alibaba cloud provider](https://img.shields.io/badge/provider-AlibabaCloud-orange)
+![oracle cloud provider](https://img.shields.io/badge/provider-OracleCloud-orange?logo=oracle&color=f80000)
+![openstack provider](https://img.shields.io/badge/provider-OpenStack-orange?logo=openstack&color=da1a32)
+![firebase provider](https://img.shields.io/badge/provider-Firebase-orange?logo=firebase&color=FFCA28)
+![outscale provider](https://img.shields.io/badge/provider-OutScale-orange?color=5f87bf)
+![elastic provider](https://img.shields.io/badge/provider-Elastic-orange?logo=elastic&color=005571)
+![generic provider](https://img.shields.io/badge/provider-Generic-orange?color=5f87bf)
+![programming provider](https://img.shields.io/badge/provider-Programming-orange?color=5f87bf)
+![saas provider](https://img.shields.io/badge/provider-SaaS-orange?color=5f87bf)
+
+<a href="https://www.buymeacoffee.com/mingrammer" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
+**Diagram as Code**.
+
+Diagrams lets you draw the cloud system architecture **in Python code**. It was born for **prototyping** a new system architecture design without any design tools. You can also describe or visualize the existing system architecture as well. Diagrams currently supports main major providers including: `AWS`, `Azure`, `GCP`, `Kubernetes`, `Alibaba Cloud`, `Oracle Cloud` etc... It also supports `On-Premise` nodes, `SaaS` and major `Programming` frameworks and languages.
+
+**Diagram as Code** also allows you to **track** the architecture diagram changes in any **version control** system.
+
+>  NOTE: It does not control any actual cloud resources nor does it generate cloud formation or terraform code. It is just for drawing the cloud system architecture diagrams.
+
+## Getting Started
+
+It requires **Python 3.6** or higher, check your Python version first.
+
+It uses [Graphviz](https://www.graphviz.org/) to render the diagram, so you need to [install Graphviz](https://graphviz.gitlab.io/download/) to use **diagrams**. After installing graphviz (or already have it), install the **diagrams**.
+
+> macOS users can download the Graphviz via `brew install graphviz` if you're using [Homebrew](https://brew.sh).
+
+```shell
+# using pip (pip3)
+$ pip install diagrams
+
+# using pipenv
+$ pipenv install diagrams
+
+# using poetry
+$ poetry add diagrams
+```
+
+You can start with [quick start](https://diagrams.mingrammer.com/docs/getting-started/installation#quick-start). Check out [guides](https://diagrams.mingrammer.com/docs/guides/diagram) for more details, and you can find all available nodes list in [here](https://diagrams.mingrammer.com/docs/nodes/aws).
+
+## Examples
+
+| Event Processing                                             | Stateful Architecture                                        | Advanced Web Service                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![event processing](https://diagrams.mingrammer.com/img/event_processing_diagram.png) | ![stateful architecture](https://diagrams.mingrammer.com/img/stateful_architecture_diagram.png) | ![advanced web service with on-premise](https://diagrams.mingrammer.com/img/advanced_web_service_with_on-premise.png) |
+
+You can find all the examples on the [examples](https://diagrams.mingrammer.com/docs/getting-started/examples) page.
+
+## Contributing
+
+To contribute to diagram, check out [contribution guidelines](CONTRIBUTING.md).
+
+> Let me know if you are using diagrams! I'll add you in showcase page. (I'm working on it!) :)
+
+## Who uses it?
+
+[![GitPitch](https://gitpitch.com/gpimg/logo.png)](https://gitpitch.com/)
+
+[GitPitch](https://gitpitch.com/) is the perfect slide deck solution for Tech Conferences, Training, Developer Advocates, and Educators. Diagrams is now available as a dedicated [Cloud Diagram Markdown Widget](https://docs.gitpitch.com/#/diagrams/cloud-architecture) so you can use Diagrams directly on any slide for conferences, meetups, and training.
+
+[Cloudiscovery](https://github.com/Cloud-Architects/cloudiscovery) helps you to analyze resources in your cloud (AWS/GCP/Azure/Alibaba/IBM) account. It allows you to create a diagram of analyzed cloud resource map based on this Diagrams library, so you can draw the your existing cloud infrastructure with Cloudicovery.
+
+[Airflow Diagrams](https://github.com/feluelle/airflow-diagrams) is an Airflow plugin that aims to easily visualise your Airflow DAGs on service level from providers like AWS, GCP, Azure, etc. via diagrams.
+
+## Other languages
+
+- If you are familiar to Go, you can use [go-diagrams](https://github.com/blushft/go-diagrams) as well.
+
+## License
+
+[MIT](LICENSE)
+
+
+DOCUMENTACAO PUBLICA:
+
+--- examples.md ---
+---
+id: examples
+title: Examples
+---
+
+Here are some more examples.
+
+## Grouped Workers on AWS
+
+```python
+from diagrams import Diagram
+from diagrams.aws.compute import EC2
+from diagrams.aws.database import RDS
+from diagrams.aws.network import ELB
+
+with Diagram("Grouped Workers", show=False, direction="TB"):
+    ELB("lb") >> [EC2("worker1"),
+                  EC2("worker2"),
+                  EC2("worker3"),
+                  EC2("worker4"),
+                  EC2("worker5")] >> RDS("events")
+```
+
+![grouped workers diagram](/img/grouped_workers_diagram.png)
+
+## Clustered Web Services
+
+```python
+from diagrams import Cluster, Diagram
+from diagrams.aws.compute import ECS
+from diagrams.aws.database import ElastiCache, RDS
+from diagrams.aws.network import ELB
+from diagrams.aws.network import Route53
+
+with Diagram("Clustered Web Services", show=False):
+    dns = Route53("dns")
+    lb = ELB("lb")
+
+    with Cluster("Services"):
+        svc_group = [ECS("web1"),
+                     ECS("web2"),
+                     ECS("web3")]
+
+    with Cluster("DB Cluster"):
+        db_master = RDS("userdb")
+        db_master - [RDS("userdb ro")]
+
+    memcached = ElastiCache("memcached")
+
+    dns >> lb >> svc_group
+    svc_group >> db_master
+    svc_group >> memcached
+```
+
+![clustered web services diagram](/img/clustered_web_services_diagram.png)
+
+## Event Processing on AWS
+
+```python
+from diagrams import Cluster, Diagram
+from diagrams.aws.compute import ECS, EKS, Lambda
+from diagrams.aws.database import Redshift
+from diagrams.aws.integration import SQS
+from diagrams.aws.storage import S3
+
+with Diagram("Event Processing", show=False):
+    source = EKS("k8s source")
+
+    with Cluster("Event Flows"):
+        with Cluster("Event Workers"):
+            workers = [ECS("worker1"),
+                       ECS("worker2"),
+                       ECS("worker3")]
+
+        queue = SQS("event queue")
+
+        with Cluster("Processing"):
+            handlers = [Lambda("proc1"),
+                        Lambda("proc2"),
+                        Lambda("proc3")]
+
+    store = S3("events store")
+    dw = Redshift("analytics")
+
+    source >> workers >> queue >> handlers
+    handlers >> store
+    handlers >> dw
+```
+
+![event processing diagram](/img/event_processing_diagram.png)
+
+## Message Collecting System on GCP
+
+```python
+from diagrams import Cluster, Diagram
+from diagrams.gcp.analytics import BigQuery, Dataflow, PubSub
+from diagrams.gcp.compute import AppEngine, Functions
+from diagrams.gcp.database import BigTable
+from diagrams.gcp.iot import IotCore
+from diagrams.gcp.storage import GCS
+
+with Diagram("Message Collecting", show=False):
+    pubsub = PubSub("pubsub")
+
+    with Cluster("Source of Data"):
+        [IotCore("core1"),
+         IotCore("core2"),
+         IotCore("core3")] >> pubsub
+
+    with Cluster("Targets"):
+        with Cluster("Data Flow"):
+            flow = Dataflow("data flow")
+
+        with Cluster("Data Lake"):
+            flow >> [BigQuery("bq"),
+                     GCS("storage")]
+
+        with Cluster("Event Driven"):
+            with Cluster("Processing"):
+                flow >> AppEngine("engine") >> BigTable("bigtable")
+
+            with Cluster("Serverless"):
+                flow >> Functions("func") >> AppEngine("appengine")
+
+    pubsub >> flow
+```
+
+![message collecting diagram](/img/message_collecting_diagram.png)
+
+## Exposed Pod with 3 Replicas on Kubernetes
+
+```python
+from diagrams import Diagram
+from diagrams.k8s.clusterconfig import HPA
+from diagrams.k8s.compute import Deployment, Pod, ReplicaSet
+from diagrams.k8s.network import Ingress, Service
+
+with Diagram("Exposed Pod with 3 Replicas", show=False):
+    net = Ingress("domain.com") >> Service("svc")
+    net >> [Pod("pod1"),
+            Pod("pod2"),
+            Pod("pod3")] << ReplicaSet("rs") << Deployment("dp") << HPA("hpa")
+
+```
+
+![exposed pod with 3 replicas diagram](/img/exposed_pod_with_3_replicas_diagram.png)
+
+## Stateful Architecture on Kubernetes
+
+```python
+from diagrams import Cluster, Diagram
+from diagrams.k8s.compute import Pod, StatefulSet
+from diagrams.k8s.network import Service
+from diagrams.k8s.storage import PV, PVC, StorageClass
+
+with Diagram("Stateful Architecture", show=False):
+    with Cluster("Apps"):
+        svc = Service("svc")
+        sts = StatefulSet("sts")
+
+        apps = []
+        for _ in range(3):
+            pod = Pod("pod")
+            pvc = PVC("pvc")
+            pod - sts - pvc
+            apps.append(svc >> pod >> pvc)
+
+    apps << PV("pv") << StorageClass("sc")
+```
+
+![stateful architecture diagram](/img/stateful_architecture_diagram.png)
+
+## Advanced Web Service with On-Premise
+
+```python
+from diagrams import Cluster, Diagram
+from diagrams.onprem.analytics import Spark
+from diagrams.onprem.compute import Server
+from diagrams.onprem.database import PostgreSQL
+from diagrams.onprem.inmemory import Redis
+from diagrams.onprem.logging import Fluentd
+from diagrams.onprem.monitoring import Grafana, Prometheus
+from diagrams.onprem.network import Nginx
+from diagrams.onprem.queue import Kafka
+
+with Diagram("Advanced Web Service with On-Premise", show=False):
+    ingress = Nginx("ingress")
+
+    metrics = Prometheus("metric")
+    metrics << Grafana("monitoring")
+
+    with Cluster("Service Cluster"):
+        grpcsvc = [
+            Server("grpc1"),
+            Server("grpc2"),
+            Server("grpc3")]
+
+    with Cluster("Sessions HA"):
+        master = Redis("session")
+        master - Redis("replica") << metrics
+        grpcsvc >> master
+
+    with Cluster("Database HA"):
+        master = PostgreSQL("users")
+        master - PostgreSQL("slave") << metrics
+        grpcsvc >> master
+
+    aggregator = Fluentd("logging")
+    aggregator >> Kafka("stream") >> Spark("analytics")
+
+    ingress >> grpcsvc >> aggregator
+```
+
+![advanced web service with on-premise diagram](/img/advanced_web_service_with_on-premise.png)
+
+## Advanced Web Service with On-Premise (with colors and labels)
+
+```python
+from diagrams import Cluster, Diagram, Edge
+from diagrams.onprem.analytics import Spark
+from diagrams.onprem.compute import Server
+from diagrams.onprem.database import PostgreSQL
+from diagrams.onprem.inmemory import Redis
+from diagrams.onprem.logging import Fluentd
+from diagrams.onprem.monitoring import Grafana, Prometheus
+from diagrams.onprem.network import Nginx
+from diagrams.onprem.queue import Kafka
+
+with Diagram(name="Advanced Web Service with On-Premise (colored)", show=False):
+    ingress = Nginx("ingress")
+
+    metrics = Prometheus("metric")
+    metrics << Edge(color="firebrick", style="dashed") << Grafana("monitoring")
+
+    with Cluster("Service Cluster"):
+        grpcsvc = [
+            Server("grpc1"),
+            Server("grpc2"),
+            Server("grpc3")]
+
+    with Cluster("Sessions HA"):
+        master = Redis("session")
+        master - Edge(color="brown", style="dashed") - Redis("replica") << Edge(label="collect") << metrics
+        grpcsvc >> Edge(color="brown") >> master
+
+    with Cluster("Database HA"):
+        master = PostgreSQL("users")
+        master - Edge(color="brown", style="dotted") - PostgreSQL("slave") << Edge(label="collect") << metrics
+        grpcsvc >> Edge(color="black") >> master
+
+    aggregator = Fluentd("logging")
+    aggregator >> Edge(label="parse") >> Kafka("stream") >> Edge(color="black", style="bold") >> Spark("analytics")
+
+    ingress >> Edge(color="darkgreen") << grpcsvc >> Edge(color="darkorange") >> aggregator
+```
+
+![advanced web service with on-premise diagram colored](/img/advanced_web_service_with_on-premise_colored.png)
+
+## RabbitMQ Consumers with Custom Nodes
+
+```python
+from urllib.request import urlretrieve
+
+from diagrams import Cluster, Diagram
+from diagrams.aws.database import Aurora
+from diagrams.custom import Custom
+from diagrams.k8s.compute import Pod
+
+# Download an image to be used into a Custom Node class
+rabbitmq_url = "https://jpadilla.github.io/rabbitmqapp/assets/img/icon.png"
+rabbitmq_icon = "rabbitmq.png"
+urlretrieve(rabbitmq_url, rabbitmq_icon)
+
+with Diagram("Broker Consumers", show=False):
+    with Cluster("Consumers"):
+        consumers = [
+            Pod("worker"),
+            Pod("worker"),
+            Pod("worker")]
+
+    queue = Custom("Message queue", rabbitmq_icon)
+
+    queue >> consumers >> Aurora("Database")
+```
+
+![rabbitmq consumers diagram](/img/rabbitmq_consumers_diagram.png)
+--- installation.md ---
+---
+id: installation
+title: Installation
+---
+
+It requires **Python 3.6** or higher, check your Python version first.
+
+It uses [Graphviz](https://www.graphviz.org/) to render the diagram, so you need to [install Graphviz](https://graphviz.gitlab.io/download/) to use **diagrams**. After installing graphviz (or already have it), install the **diagrams**.
+
+> macOS users can download the Graphviz via `brew install graphviz` if you're using [Homebrew](https://brew.sh). Similarly, Windows users with [Chocolatey](https://chocolatey.org) installed can run `choco install graphviz`.
+
+```shell
+# using pip (pip3)
+$ pip install diagrams
+
+# using pipenv
+$ pipenv install diagrams
+
+# using poetry
+$ poetry add diagrams
+```
+
+## Quick Start
+
+```python
+# diagram.py
+from diagrams import Diagram
+from diagrams.aws.compute import EC2
+from diagrams.aws.database import RDS
+from diagrams.aws.network import ELB
+
+with Diagram("Web Service", show=False):
+    ELB("lb") >> EC2("web") >> RDS("userdb")
+```
+
+This code generates below diagram.
+
+```shell
+$ python diagram.py
+```
+
+![web service diagram](/img/web_service_diagram.png)
+
+It will be saved as `web_service.png` on your working directory.
+
+## Next
+
+See more [Examples](/docs/getting-started/examples) or see [Guides](/docs/guides/diagram) page for more details.
+
+--- cluster.md ---
+---
+id: cluster
+title: Clusters
+---
+
+Cluster allows you group (or clustering) the nodes in an isolated group.
+
+## Basic
+
+Cluster represents a local cluster context.
+
+You can create a cluster context with Cluster class. And you can also connect the nodes in a cluster to other nodes outside a cluster.
+
+```python
+from diagrams import Cluster, Diagram
+from diagrams.aws.compute import ECS
+from diagrams.aws.database import RDS
+from diagrams.aws.network import Route53
+
+with Diagram("Simple Web Service with DB Cluster", show=False):
+    dns = Route53("dns")
+    web = ECS("service")
+
+    with Cluster("DB Cluster"):
+        db_master = RDS("master")
+        db_master - [RDS("slave1"),
+                     RDS("slave2")]
+
+    dns >> web >> db_master
+```
+
+![simple web service with db cluster diagram](/img/simple_web_service_with_db_cluster_diagram.png)
+
+## Nested Clusters
+
+Nested clustering is also possible.
+
+```python
+from diagrams import Cluster, Diagram
+from diagrams.aws.compute import ECS, EKS, Lambda
+from diagrams.aws.database import Redshift
+from diagrams.aws.integration import SQS
+from diagrams.aws.storage import S3
+
+with Diagram("Event Processing", show=False):
+    source = EKS("k8s source")
+
+    with Cluster("Event Flows"):
+        with Cluster("Event Workers"):
+            workers = [ECS("worker1"),
+                       ECS("worker2"),
+                       ECS("worker3")]
+
+        queue = SQS("event queue")
+
+        with Cluster("Processing"):
+            handlers = [Lambda("proc1"),
+                        Lambda("proc2"),
+                        Lambda("proc3")]
+
+    store = S3("events store")
+    dw = Redshift("analytics")
+
+    source >> workers >> queue >> handlers
+    handlers >> store
+    handlers >> dw
+```
+
+![event processing diagram](/img/event_processing_diagram.png)
+
+> There is no depth limit of nesting. Feel free to create nested clusters as deep as you want.
+--- diagram.md ---
+---
+id: diagram
+title: Diagrams
+---
+
+Diagram is a primary object representing a diagram.
+
+## Basic
+
+Diagram represents a global diagram context.
+
+You can create a diagram context with Diagram class. The first parameter of Diagram constructor will be used for output filename.
+
+```python
+from diagrams import Diagram
+from diagrams.aws.compute import EC2
+
+with Diagram("Simple Diagram"):
+    EC2("web")
+```
+
+And if you run the above script with below command,
+
+```shell
+$ python diagram.py
+```
+
+It will generate an image file with single `EC2` node drawn as `simple_diagram.png` on your working directory, and open that created image file immediately.
+
+## Jupyter Notebooks
+
+Diagrams can be also rendered directly inside the notebook as like this:
+
+```python
+from diagrams import Diagram
+from diagrams.aws.compute import EC2
+
+with Diagram("Simple Diagram") as diag:
+    EC2("web")
+diag
+```
+
+## Options
+
+You can specify the output file format with `outformat` parameter. Default is **png**.
+
+> (png, jpg, svg, and pdf) are allowed.
+
+```python
+from diagrams import Diagram
+from diagrams.aws.compute import EC2
+
+with Diagram("Simple Diagram", outformat="jpg"):
+    EC2("web")
+```
+
+You can specify the output filename with `filename` parameter. The extension shouldn't be included, it's determined by the `outformat` parameter.
+
+```python
+from diagrams import Diagram
+from diagrams.aws.compute import EC2
+
+with Diagram("Simple Diagram", filename="my_diagram"):
+    EC2("web")
+```
+
+You can also disable the automatic file opening by setting the `show` parameter as **false**. Default is **true**.
+
+```python
+from diagrams import Diagram
+from diagrams.aws.compute import EC2
+
+with Diagram("Simple Diagram", show=False):
+    EC2("web")
+```
+
+It allows custom Graphviz dot attributes options.
+
+> `graph_attr`, `node_attr` and `edge_attr` are supported. Here is a [reference link](https://www.graphviz.org/doc/info/attrs.html).
+
+```python
+from diagrams import Diagram
+from diagrams.aws.compute import EC2
+
+graph_attr = {
+	"fontsize": "45",
+	"bgcolor": "transparent"
+}
+
+with Diagram("Simple Diagram", show=False, graph_attr=graph_attr):
+    EC2("web")
+```
+
+--- edge.md ---
+---
+id: edge
+title: Edges
+---
+
+Edge is representing an edge between Nodes.
+
+## Basic
+
+Edge is an object representing a connection between Nodes with some additional properties.
+
+An edge object contains three attributes: **label**, **color** and **style** which mirror corresponding graphviz edge attributes.
+
+```python
+from diagrams import Cluster, Diagram, Edge
+from diagrams.onprem.analytics import Spark
+from diagrams.onprem.compute import Server
+from diagrams.onprem.database import PostgreSQL
+from diagrams.onprem.inmemory import Redis
+from diagrams.onprem.logging import Fluentd
+from diagrams.onprem.monitoring import Grafana, Prometheus
+from diagrams.onprem.network import Nginx
+from diagrams.onprem.queue import Kafka
+
+with Diagram(name="Advanced Web Service with On-Premise (colored)", show=False):
+    ingress = Nginx("ingress")
+
+    metrics = Prometheus("metric")
+    metrics << Edge(color="firebrick", style="dashed") << Grafana("monitoring")
+
+    with Cluster("Service Cluster"):
+        grpcsvc = [
+            Server("grpc1"),
+            Server("grpc2"),
+            Server("grpc3")]
+
+    with Cluster("Sessions HA"):
+        master = Redis("session")
+        master - Edge(color="brown", style="dashed") - Redis("replica") << Edge(label="collect") << metrics
+        grpcsvc >> Edge(color="brown") >> master
+
+    with Cluster("Database HA"):
+        master = PostgreSQL("users")
+        master - Edge(color="brown", style="dotted") - PostgreSQL("slave") << Edge(label="collect") << metrics
+        grpcsvc >> Edge(color="black") >> master
+
+    aggregator = Fluentd("logging")
+    aggregator >> Edge(label="parse") >> Kafka("stream") >> Edge(color="black", style="bold") >> Spark("analytics")
+
+    ingress >> Edge(color="darkgreen") << grpcsvc >> Edge(color="darkorange") >> aggregator
+```
+
+![advanced web service with on-premise diagram colored](/img/advanced_web_service_with_on-premise_colored.png)
+
+--- node.md ---
+---
+id: node
+title: Nodes
+---
+
+Node is a second object representing a node or system component.
+
+## Basic
+
+Node is an abstract concept that represents a single system component object. 
+
+A node object consists of three parts: **provider**, **resource type** and **name**. You may already have seen each part in the previous example.
+
+```python
+from diagrams import Diagram
+from diagrams.aws.compute import EC2
+
+with Diagram("Simple Diagram"):
+    EC2("web")
+```
+
+In above example, the `EC2` is a node of `compute` resource type which provided by `aws` provider.
+
+You can use other node objects in a similar manner like:
+
+```python
+# aws resources
+from diagrams.aws.compute import ECS, Lambda
+from diagrams.aws.database import RDS, ElastiCache
+from diagrams.aws.network import ELB, Route53, VPC
+...
+
+# azure resources
+from diagrams.azure.compute import FunctionApps
+from diagrams.azure.storage import BlobStorage
+...
+
+# alibaba cloud resources
+from diagrams.alibabacloud.compute import ECS
+from diagrams.alibabacloud.storage import ObjectTableStore
+...
+
+# gcp resources
+from diagrams.gcp.compute import AppEngine, GKE
+from diagrams.gcp.ml import AutoML 
+...
+
+# k8s resources
+from diagrams.k8s.compute import Pod, StatefulSet
+from diagrams.k8s.network import Service
+from diagrams.k8s.storage import PV, PVC, StorageClass
+...
+
+# oracle resources
+from diagrams.oci.compute import VirtualMachine, Container
+from diagrams.oci.network import Firewall
+from diagrams.oci.storage import Filestorage, Storagegateway
+```
+
+You can find all available nodes list in [Here](https://diagrams.mingrammer.com/docs/nodes/aws).
+
+## Data Flow
+
+You can represent data flow by connecting the nodes with these operators: `>>`, `<<` and `-`.
+
+* **>>**: Connect nodes in left to right direction. 
+* **<<**: Connect nodes in right to left direction.
+* **-**: Connect nodes in no direction. Undirected.
+
+```python
+from diagrams import Diagram
+from diagrams.aws.compute import EC2
+from diagrams.aws.database import RDS
+from diagrams.aws.network import ELB
+from diagrams.aws.storage import S3
+
+with Diagram("Web Services", show=False):
+    ELB("lb") >> EC2("web") >> RDS("userdb") >> S3("store")
+    ELB("lb") >> EC2("web") >> RDS("userdb") << EC2("stat")
+    (ELB("lb") >> EC2("web")) - EC2("web") >> RDS("userdb")
+```
+
+> Be careful when using the `-` and any shift operators together, which could cause unexpected results due to operator precedence. 
+
+![web services diagram](/img/web_services_diagram.png)
+
+> The order of rendered diagrams is the reverse of the declaration order.
+
+You can change the data flow direction with `direction` parameter. Default is **LR**.
+
+> (TB, BT, LR and RL) are allowed.
+
+```python
+from diagrams import Diagram
+from diagrams.aws.compute import EC2
+from diagrams.aws.database import RDS
+from diagrams.aws.network import ELB
+
+with Diagram("Workers", show=False, direction="TB"):
+    lb = ELB("lb")
+    db = RDS("events")
+    lb >> EC2("worker1") >> db
+    lb >> EC2("worker2") >> db
+    lb >> EC2("worker3") >> db
+    lb >> EC2("worker4") >> db
+    lb >> EC2("worker5") >> db
+```
+
+![workers diagram](/img/workers_diagram.png)
+
+## Group Data Flow
+
+Above worker example has too many redundant flows. In this case, you can group nodes into a list so that all nodes are connected to other nodes at once.
+
+```python
+from diagrams import Diagram
+from diagrams.aws.compute import EC2
+from diagrams.aws.database import RDS
+from diagrams.aws.network import ELB
+
+with Diagram("Grouped Workers", show=False, direction="TB"):
+    ELB("lb") >> [EC2("worker1"),
+                  EC2("worker2"),
+                  EC2("worker3"),
+                  EC2("worker4"),
+                  EC2("worker5")] >> RDS("events")
+```
+
+![grouped workers diagram](/img/grouped_workers_diagram.png)
+
+> You can't connect two **lists** directly because shift/arithmetic operations between lists are not allowed in Python.
+
+--- alibabacloud.md ---
+---
+id: alibabacloud
+title: AlibabaCloud
+---
+
+Node classes list of alibabacloud provider.
+
+## alibabacloud.analytics
+
+- **diagrams.alibabacloud.analytics.AnalyticDb**
+- **diagrams.alibabacloud.analytics.ClickHouse**
+- **diagrams.alibabacloud.analytics.DataLakeAnalytics**
+- **diagrams.alibabacloud.analytics.ElaticMapReduce**
+- **diagrams.alibabacloud.analytics.OpenSearch**
+
+## alibabacloud.application
+
+- **diagrams.alibabacloud.application.ApiGateway**
+- **diagrams.alibabacloud.application.BeeBot**
+- **diagrams.alibabacloud.application.BlockchainAsAService**
+- **diagrams.alibabacloud.application.CloudCallCenter**
+- **diagrams.alibabacloud.application.CodePipeline**
+- **diagrams.alibabacloud.application.DirectMail**
+- **diagrams.alibabacloud.application.LogService**, **SLS** (alias)
+- **diagrams.alibabacloud.application.MessageNotificationService**, **MNS** (alias)
+- **diagrams.alibabacloud.application.NodeJsPerformancePlatform**
+- **diagrams.alibabacloud.application.OpenSearch**
+- **diagrams.alibabacloud.application.PerformanceTestingService**, **PTS** (alias)
+- **diagrams.alibabacloud.application.RdCloud**
+- **diagrams.alibabacloud.application.SmartConversationAnalysis**, **SCA** (alias)
+- **diagrams.alibabacloud.application.Yida**
+
+## alibabacloud.communication
+
+- **diagrams.alibabacloud.communication.DirectMail**
+- **diagrams.alibabacloud.communication.MobilePush**
+
+## alibabacloud.compute
+
+- **diagrams.alibabacloud.compute.AutoScaling**, **ESS** (alias)
+- **diagrams.alibabacloud.compute.BatchCompute**
+- **diagrams.alibabacloud.compute.ContainerRegistry**
+- **diagrams.alibabacloud.compute.ContainerService**
+- **diagrams.alibabacloud.compute.ElasticComputeService**, **ECS** (alias)
+- **diagrams.alibabacloud.compute.ElasticContainerInstance**, **ECI** (alias)
+- **diagrams.alibabacloud.compute.ElasticHighPerformanceComputing**, **EHPC** (alias)
+- **diagrams.alibabacloud.compute.ElasticSearch**
+- **diagrams.alibabacloud.compute.FunctionCompute**, **FC** (alias)
+- **diagrams.alibabacloud.compute.OperationOrchestrationService**, **OOS** (alias)
+- **diagrams.alibabacloud.compute.ResourceOrchestrationService**, **ROS** (alias)
+- **diagrams.alibabacloud.compute.ServerLoadBalancer**, **SLB** (alias)
+- **diagrams.alibabacloud.compute.ServerlessAppEngine**, **SAE** (alias)
+- **diagrams.alibabacloud.compute.SimpleApplicationServer**, **SAS** (alias)
+- **diagrams.alibabacloud.compute.WebAppService**, **WAS** (alias)
+
+## alibabacloud.database
+
+- **diagrams.alibabacloud.database.ApsaradbCassandra**
+- **diagrams.alibabacloud.database.ApsaradbHbase**
+- **diagrams.alibabacloud.database.ApsaradbMemcache**
+- **diagrams.alibabacloud.database.ApsaradbMongodb**
+- **diagrams.alibabacloud.database.ApsaradbOceanbase**
+- **diagrams.alibabacloud.database.ApsaradbPolardb**
+- **diagrams.alibabacloud.database.ApsaradbPostgresql**
+- **diagrams.alibabacloud.database.ApsaradbPpas**
+- **diagrams.alibabacloud.database.ApsaradbRedis**
+- **diagrams.alibabacloud.database.ApsaradbSqlserver**
+- **diagrams.alibabacloud.database.DataManagementService**, **DMS** (alias)
+- **diagrams.alibabacloud.database.DataTransmissionService**, **DTS** (alias)
+- **diagrams.alibabacloud.database.DatabaseBackupService**, **DBS** (alias)
+- **diagrams.alibabacloud.database.DisributeRelationalDatabaseService**, **DRDS** (alias)
+- **diagrams.alibabacloud.database.GraphDatabaseService**, **GDS** (alias)
+- **diagrams.alibabacloud.database.HybriddbForMysql**
+- **diagrams.alibabacloud.database.RelationalDatabaseService**, **RDS** (alias)
+
+## alibabacloud.iot
+
+- **diagrams.alibabacloud.iot.IotInternetDeviceId**
+- **diagrams.alibabacloud.iot.IotLinkWan**
+- **diagrams.alibabacloud.iot.IotMobileConnectionPackage**
+- **diagrams.alibabacloud.iot.IotPlatform**
+
+## alibabacloud.network
+
+- **diagrams.alibabacloud.network.Cdn**
+- **diagrams.alibabacloud.network.CloudEnterpriseNetwork**, **CEN** (alias)
+- **diagrams.alibabacloud.network.ElasticIpAddress**, **EIP** (alias)
+- **diagrams.alibabacloud.network.ExpressConnect**
+- **diagrams.alibabacloud.network.NatGateway**
+- **diagrams.alibabacloud.network.ServerLoadBalancer**, **SLB** (alias)
+- **diagrams.alibabacloud.network.SmartAccessGateway**
+- **diagrams.alibabacloud.network.VirtualPrivateCloud**, **VPC** (alias)
+- **diagrams.alibabacloud.network.VpnGateway**
+
+## alibabacloud.security
+
+- **diagrams.alibabacloud.security.AntiBotService**, **ABS** (alias)
+- **diagrams.alibabacloud.security.AntiDdosBasic**
+- **diagrams.alibabacloud.security.AntiDdosPro**
+- **diagrams.alibabacloud.security.AntifraudService**, **AS** (alias)
+- **diagrams.alibabacloud.security.BastionHost**
+- **diagrams.alibabacloud.security.CloudFirewall**, **CFW** (alias)
+- **diagrams.alibabacloud.security.CloudSecurityScanner**
+- **diagrams.alibabacloud.security.ContentModeration**, **CM** (alias)
+- **diagrams.alibabacloud.security.CrowdsourcedSecurityTesting**
+- **diagrams.alibabacloud.security.DataEncryptionService**, **DES** (alias)
+- **diagrams.alibabacloud.security.DbAudit**
+- **diagrams.alibabacloud.security.GameShield**
+- **diagrams.alibabacloud.security.IdVerification**
+- **diagrams.alibabacloud.security.ManagedSecurityService**
+- **diagrams.alibabacloud.security.SecurityCenter**
+- **diagrams.alibabacloud.security.ServerGuard**
+- **diagrams.alibabacloud.security.SslCertificates**
+- **diagrams.alibabacloud.security.WebApplicationFirewall**, **WAF** (alias)
+
+## alibabacloud.storage
+
+- **diagrams.alibabacloud.storage.CloudStorageGateway**
+- **diagrams.alibabacloud.storage.FileStorageHdfs**, **HDFS** (alias)
+- **diagrams.alibabacloud.storage.FileStorageNas**, **NAS** (alias)
+- **diagrams.alibabacloud.storage.HybridBackupRecovery**, **HBR** (alias)
+- **diagrams.alibabacloud.storage.HybridCloudDisasterRecovery**, **HDR** (alias)
+- **diagrams.alibabacloud.storage.Imm**
+- **diagrams.alibabacloud.storage.ObjectStorageService**, **OSS** (alias)
+- **diagrams.alibabacloud.storage.ObjectTableStore**, **OTS** (alias)
+
+## alibabacloud.web
+
+- **diagrams.alibabacloud.web.Dns**
+- **diagrams.alibabacloud.web.Domain**
+
+--- aws.md ---
+---
+id: aws
+title: AWS
+---
+
+Node classes list of aws provider.
+
+## aws.analytics
+
+- **diagrams.aws.analytics.Analytics**
+- **diagrams.aws.analytics.Athena**
+- **diagrams.aws.analytics.CloudsearchSearchDocuments**
+- **diagrams.aws.analytics.Cloudsearch**
+- **diagrams.aws.analytics.DataPipeline**
+- **diagrams.aws.analytics.ElasticsearchService**, **ES** (alias)
+- **diagrams.aws.analytics.EMRCluster**
+- **diagrams.aws.analytics.EMRHdfsCluster**
+- **diagrams.aws.analytics.EMR**
+- **diagrams.aws.analytics.GlueCrawlers**
+- **diagrams.aws.analytics.GlueDataCatalog**
+- **diagrams.aws.analytics.Glue**
+- **diagrams.aws.analytics.KinesisDataAnalytics**
+- **diagrams.aws.analytics.KinesisDataFirehose**
+- **diagrams.aws.analytics.KinesisDataStreams**
+- **diagrams.aws.analytics.KinesisVideoStreams**
+- **diagrams.aws.analytics.Kinesis**
+- **diagrams.aws.analytics.LakeFormation**
+- **diagrams.aws.analytics.ManagedStreamingForKafka**
+- **diagrams.aws.analytics.Quicksight**
+- **diagrams.aws.analytics.RedshiftDenseComputeNode**
+- **diagrams.aws.analytics.RedshiftDenseStorageNode**
+- **diagrams.aws.analytics.Redshift**
+
+## aws.ar
+
+- **diagrams.aws.ar.Sumerian**
+
+## aws.blockchain
+
+- **diagrams.aws.blockchain.ManagedBlockchain**
+- **diagrams.aws.blockchain.QuantumLedgerDatabaseQldb**, **QLDB** (alias)
+
+## aws.business
+
+- **diagrams.aws.business.AlexaForBusiness**, **A4B** (alias)
+- **diagrams.aws.business.Chime**
+- **diagrams.aws.business.Workmail**
+
+## aws.compute
+
+- **diagrams.aws.compute.ApplicationAutoScaling**, **AutoScaling** (alias)
+- **diagrams.aws.compute.Batch**
+- **diagrams.aws.compute.Compute**
+- **diagrams.aws.compute.EC2ContainerRegistry**, **ECR** (alias)
+- **diagrams.aws.compute.EC2**
+- **diagrams.aws.compute.ElasticBeanstalk**, **EB** (alias)
+- **diagrams.aws.compute.ElasticContainerService**, **ECS** (alias)
+- **diagrams.aws.compute.ElasticKubernetesService**, **EKS** (alias)
+- **diagrams.aws.compute.Fargate**
+- **diagrams.aws.compute.Lambda**
+- **diagrams.aws.compute.Lightsail**
+- **diagrams.aws.compute.Outposts**
+- **diagrams.aws.compute.ServerlessApplicationRepository**, **SAR** (alias)
+- **diagrams.aws.compute.ThinkboxDeadline**
+- **diagrams.aws.compute.ThinkboxDraft**
+- **diagrams.aws.compute.ThinkboxFrost**
+- **diagrams.aws.compute.ThinkboxKrakatoa**
+- **diagrams.aws.compute.ThinkboxSequoia**
+- **diagrams.aws.compute.ThinkboxStoke**
+- **diagrams.aws.compute.ThinkboxXmesh**
+- **diagrams.aws.compute.VmwareCloudOnAWS**
+
+## aws.cost
+
+- **diagrams.aws.cost.Budgets**
+- **diagrams.aws.cost.CostAndUsageReport**
+- **diagrams.aws.cost.CostExplorer**
+- **diagrams.aws.cost.ReservedInstanceReporting**
+- **diagrams.aws.cost.SavingsPlans**
+
+## aws.database
+
+- **diagrams.aws.database.Aurora**
+- **diagrams.aws.database.DatabaseMigrationService**, **DMS** (alias)
+- **diagrams.aws.database.Database**, **DB** (alias)
+- **diagrams.aws.database.DocumentdbMongodbCompatibility**, **DocumentDB** (alias)
+- **diagrams.aws.database.DynamodbDax**, **DAX** (alias)
+- **diagrams.aws.database.DynamodbGlobalSecondaryIndex**, **DynamodbGSI** (alias)
+- **diagrams.aws.database.DynamodbTable**
+- **diagrams.aws.database.Dynamodb**, **DDB** (alias)
+- **diagrams.aws.database.Elasticache**, **ElastiCache** (alias)
+- **diagrams.aws.database.Neptune**
+- **diagrams.aws.database.QuantumLedgerDatabaseQldb**, **QLDB** (alias)
+- **diagrams.aws.database.RDSOnVmware**
+- **diagrams.aws.database.RDS**
+- **diagrams.aws.database.Redshift**
+- **diagrams.aws.database.Timestream**
+
+## aws.devtools
+
+- **diagrams.aws.devtools.CloudDevelopmentKit**
+- **diagrams.aws.devtools.Cloud9**
+- **diagrams.aws.devtools.Codebuild**
+- **diagrams.aws.devtools.Codecommit**
+- **diagrams.aws.devtools.Codedeploy**
+- **diagrams.aws.devtools.Codepipeline**
+- **diagrams.aws.devtools.Codestar**
+- **diagrams.aws.devtools.CommandLineInterface**, **CLI** (alias)
+- **diagrams.aws.devtools.DeveloperTools**, **DevTools** (alias)
+- **diagrams.aws.devtools.ToolsAndSdks**
+- **diagrams.aws.devtools.XRay**
+
+## aws.enablement
+
+- **diagrams.aws.enablement.Iq**
+- **diagrams.aws.enablement.ManagedServices**
+- **diagrams.aws.enablement.ProfessionalServices**
+- **diagrams.aws.enablement.Support**
+
+## aws.enduser
+
+- **diagrams.aws.enduser.Appstream20**
+- **diagrams.aws.enduser.Workdocs**
+- **diagrams.aws.enduser.Worklink**
+- **diagrams.aws.enduser.Workspaces**
+
+## aws.engagement
+
+- **diagrams.aws.engagement.Connect**
+- **diagrams.aws.engagem
+
+MANIFESTOS PUBLICOS:
+
+--- pyproject.toml ---
+[tool.poetry]
+name = "diagrams"
+version = "0.18.0"
+description = "Diagram as Code"
+license = "MIT"
+authors = ["mingrammer <mingrammer@gmail.com>"]
+readme = "README.md"
+homepage = "https://diagrams.mingrammer.com"
+repository = "https://github.com/mingrammer/diagrams"
+include = ["resources/**/*"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+graphviz = ">=0.13.2,<0.17.0"
+jinja2 = "^2.10"
+contextvars = { version = "^2.4", python = "~3.6" }
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2"
+pylint = "^2.4"
+black = {version = "^19.0", allow-prereleases = true}
+rope = "^0.14.0"
+isort = "^4.3"
+
+[tool.black]
+line-length = 120
+
+
+ARQUITETURA TEXTUAL INFERIDA:
+PROJETO
+|
++-- Documentacao e configuracao
+|   +-- CHANGELOG.md
+|   +-- CONTRIBUTING.md
+|   +-- DEVELOPMENT.md
+|   +-- README.md
+|   +-- config.py
+|   +-- pyproject.toml
+|
++-- Modulos/dominios visiveis
+|   +-- diagrams/
+|   +-- docs/
+|   +-- scripts/
+|   +-- tests/
+|
++-- Entradas e interfaces descritas no README
+|   +-- configuracao/parametros
+|   +-- processamento principal
+|   +-- saidas/resultados
+|
++-- Testes proprios a serem criados pela IA

@@ -1,0 +1,120 @@
+15:55:23.562 INFO  Scanner configuration file: /mnt/c/Users/felipe.fidelis/OneDrive - Vision Cybersecurity/Área de Trabalho/trabalho mestrado/python_prellm_pipeline/pipeline_interno/tools/sonar-scanner/conf/sonar-scanner.properties
+15:55:23.572 INFO  Project root configuration file: NONE
+15:55:23.591 INFO  SonarScanner CLI 8.0.1.6346
+15:55:23.598 INFO  Linux 6.18.33.2-microsoft-standard-WSL2 amd64
+15:55:25.077 INFO  Communicating with SonarQube Community Build 26.9.0.129388
+15:55:25.079 INFO  JRE provisioning is disabled
+15:55:25.081 INFO  The java executable in the PATH will be used
+15:55:25.263 INFO  SONAR_SCANNER_JAVA_OPTS=-Xms256m -Xmx4096m
+15:55:25.618 INFO  Starting SonarScanner Engine...
+15:55:25.619 INFO  Java 21.0.12 Ubuntu (64-bit)
+15:55:26.869 INFO  Load global settings
+15:55:26.970 INFO  Load global settings (done) | time=99ms
+15:55:26.974 INFO  Server id: 147B411E-AaCHMJYtDFq3q1fqGHiY
+15:55:26.989 INFO  Loading required plugins
+15:55:26.990 INFO  Load plugins index
+15:55:27.011 INFO  Load plugins index (done) | time=21ms
+15:55:27.013 INFO  Load/download plugins
+15:55:27.044 INFO  Load/download plugins (done) | time=33ms
+15:55:27.364 INFO  Process project properties
+15:55:27.378 INFO  Process project properties (done) | time=15ms
+15:55:27.392 INFO  Project key: human-odoo__odoo
+15:55:27.393 INFO  Base dir: /home/felipefidelis/prellm_odoo__odoo_b8Jz
+15:55:27.395 INFO  Working dir: /home/felipefidelis/prellm_odoo__odoo_b8Jz/.scannerwork
+15:55:27.405 INFO  Load project settings for component key: 'human-odoo__odoo'
+15:55:27.444 INFO  Load quality profiles
+15:55:27.520 INFO  Load quality profiles (done) | time=76ms
+15:55:27.563 WARN  SCM provider autodetection failed. Please use "sonar.scm.provider" to define SCM of your project, or disable the SCM Sensor in the project settings.
+15:55:27.576 INFO  Load active rules
+15:55:27.980 INFO  Load active rules (done) | time=404ms
+15:55:27.995 INFO  Load analysis cache
+15:55:28.015 INFO  Load analysis cache (404) | time=21ms
+15:55:28.145 INFO  Preprocessing files...
+15:55:28.994 INFO  1 language detected in 4460 preprocessed files (done) | time=848ms
+15:55:28.995 INFO  0 files ignored because of inclusion/exclusion patterns
+15:55:28.997 INFO  Loading plugins for detected languages
+15:55:28.998 INFO  Load/download plugins
+15:55:29.005 INFO  Load/download plugins (done) | time=7ms
+15:55:29.129 INFO  Load project repositories
+15:55:29.141 INFO  Load project repositories (done) | time=12ms
+15:55:29.165 INFO  Indexing files...
+15:55:29.167 INFO  Project configuration:
+15:55:29.169 INFO    Included sources: **/*.py
+15:55:29.170 INFO    Excluded sources: **/.git/**, **/.venv/**, **/venv/**, **/vendor/**, **/vendors/**, **/third_party/**, **/node_modules/**, **/build/**, **/dist/**
+15:55:29.264 INFO  4460 files indexed (done) | time=98ms
+15:55:29.267 INFO  Quality profile for py: Sonar way
+15:55:29.268 INFO  ------------- Run sensors on module Humano - odoo__odoo
+15:55:29.320 INFO  Load metrics repository
+15:55:29.357 INFO  Load metrics repository (done) | time=37ms
+15:55:30.049 INFO  Sensor IaC YAML File Type Classification Sensor [iac]
+15:55:30.083 INFO  Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=33ms
+15:55:30.084 INFO  Sensor IaC hadolint report Sensor [iac]
+15:55:30.086 INFO  Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+15:55:30.088 INFO  Sensor Java Config Sensor [iac]
+15:55:30.089 INFO  There are no files to be analyzed for the Java language
+15:55:30.090 INFO  Sensor Java Config Sensor [iac] (done) | time=0ms
+15:55:30.091 INFO  Sensor IaC Docker Sensor [iac]
+15:55:30.164 INFO  There are no files to be analyzed for the Docker language
+15:55:30.166 INFO  Sensor IaC Docker Sensor [iac] (done) | time=79ms
+15:55:30.167 INFO  Sensor Python Sensor [python]
+15:55:30.811 INFO  Starting global symbols computation
+15:55:30.817 INFO  4460 source files to be analyzed
+15:55:40.818 INFO  1259/4460 files analyzed, current files: res_users.py, payment_transaction.py, test_event_internals.py, ...
+15:55:50.819 INFO  3333/4460 files analyzed, current files: account_move.py, test_analytic_account.py, hr_attendance.py, ...
+15:55:55.259 INFO  4460/4460 source files have been analyzed
+15:55:55.260 INFO  Finished step global symbols computation in 24445ms
+15:55:55.751 INFO  Starting rules execution
+15:55:55.752 INFO  4460 source files to be analyzed
+15:55:56.106 WARN  Test files were detected using a path heuristic because "sonar.tests" is not set. To improve the analysis accuracy, it is recommended to configure it, e.g.: "sonar.tests=src/test".
+15:56:05.755 INFO  479/4460 files analyzed, current files: fields.py, sale_order_line.py, event_registration.py, ...
+15:56:15.756 INFO  1286/4460 files analyzed, current files: res_users.py, account_payment_register.py, res_partner_bank.py, ...
+15:56:25.756 INFO  2433/4460 files analyzed, current files: test_move.py, repair.py, l10n_multilang.py, ...
+15:56:35.758 INFO  3574/4460 files analyzed, current files: stock_warehouse.py, portal.py, project.py, ...
+15:56:42.065 INFO  4460/4460 source files have been analyzed
+15:56:42.066 INFO  Finished step rules execution in 46313ms
+15:56:42.067 INFO  The Python analyzer was able to leverage cached data from previous analyses for 0 out of 4460 files. These files were not parsed.
+15:56:42.068 INFO  Sensor Python Sensor [python] (done) | time=71903ms
+15:56:42.069 INFO  Sensor Cobertura Sensor for Python coverage [python]
+15:56:42.157 INFO  Sensor Cobertura Sensor for Python coverage [python] (done) | time=88ms
+15:56:42.158 INFO  Sensor PythonXUnitSensor [python]
+15:56:42.225 INFO  Sensor PythonXUnitSensor [python] (done) | time=68ms
+15:56:42.227 INFO  Sensor Python Dependency Sensor [python]
+15:56:42.230 INFO  Sensor Python Dependency Sensor [python] (done) | time=4ms
+15:56:42.231 INFO  Sensor TextAndSecretsSensor [text]
+15:56:42.285 INFO  Available processors: 8
+15:56:42.286 INFO  Using 8 threads for analysis.
+15:56:42.501 INFO  The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test", "tests", "mock" or "mocks"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+15:56:42.524 INFO  Start fetching files for the text and secrets analysis
+15:56:42.543 INFO  Using Git CLI to retrieve dirty files
+15:56:42.547 WARN  Retrieving only language associated files, make sure to run the analysis inside a git repository to make use of inclusions specified via "sonar.text.inclusions"
+15:56:42.551 INFO  Starting the text and secrets analysis
+15:56:42.553 INFO  4460 source files to be analyzed for the text and secrets analysis
+15:56:43.670 INFO  4460/4460 source files have been analyzed for the text and secrets analysis
+15:56:43.671 INFO  Skipped 1059 file(s) in the secrets analysis due to automatic test file detection
+15:56:43.672 INFO  Sensor TextAndSecretsSensor [text] (done) | time=1442ms
+15:56:43.674 INFO  ------------- Run sensors on project
+15:56:43.803 INFO  Sensor IaC Project Sensor [iac]
+15:56:43.805 INFO  Sensor IaC Project Sensor [iac] (done) | time=1ms
+15:56:43.805 INFO  Sensor Zero Coverage Sensor
+15:56:44.056 INFO  Sensor Zero Coverage Sensor (done) | time=250ms
+15:56:44.057 INFO  ------------- Gather SCA dependencies on project
+15:56:44.059 INFO  Dependency analysis skipped
+15:56:44.062 INFO  SCM Publisher No SCM system was detected. You can use the 'sonar.scm.provider' property to explicitly specify it.
+15:56:44.297 INFO  CPD Executor 1505 files had no CPD blocks
+15:56:44.300 INFO  CPD Executor Calculating CPD for 2955 files
+15:56:44.982 INFO  CPD Executor CPD calculation finished (done) | time=684ms
+15:56:45.733 INFO  Analysis report generated in 662ms, dir size=67.5 MB
+15:56:49.108 INFO  Analysis report compressed in 3374ms, zip size=39.4 MB
+15:56:49.686 INFO  Analysis report uploaded in 578ms
+15:56:49.692 INFO  ANALYSIS SUCCESSFUL, you can find the results at: http://localhost:9000/dashboard?id=human-odoo__odoo
+15:56:49.694 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+15:56:49.695 INFO  More about the report processing at http://localhost:9000/api/ce/task?id=5c0b0ed2-61c0-42c1-bb00-99f261f3d119
+15:56:50.039 INFO  Analysis total time: 1:22.956 s
+15:56:50.079 INFO  SonarScanner Engine completed successfully
+15:56:50.156 INFO  EXECUTION SUCCESS
+15:56:50.157 INFO  Total time: 1:26.610s

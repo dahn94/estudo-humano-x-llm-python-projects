@@ -1,0 +1,3081 @@
+{
+  "component": {
+    "key": "human-sherlock-project__sherlock",
+    "name": "Humano - sherlock-project__sherlock",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "bugs",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "complexity",
+        "value": "140"
+      },
+      {
+        "metric": "code_smells",
+        "value": "29",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_reliability_issues",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "ncloc",
+        "value": "814"
+      },
+      {
+        "metric": "software_quality_maintainability_issues",
+        "value": "29",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_security_issues",
+        "value": "1",
+        "bestValue": false
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "1",
+        "bestValue": false
+      },
+      {
+        "metric": "security_hotspots",
+        "value": "0",
+        "bestValue": true
+      }
+    ]
+  },
+  "issues_summary": {
+    "issues": [
+      {
+        "key": "b58cb3d5-da30-422f-9d78-cc5aa209512d",
+        "rule": "python:S3626",
+        "severity": "MINOR",
+        "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 35,
+        "hash": "e70c4df10ef0983b9c8c31bd06b2a2c3",
+        "textRange": {
+          "startLine": 35,
+          "endLine": 35,
+          "startOffset": 8,
+          "endOffset": 14
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this redundant return.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "redundant",
+          "clumsy"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "0bc19447-0cc6-4084-9924-47a4676c19a6",
+        "rule": "python:S3626",
+        "severity": "MINOR",
+        "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 54,
+        "hash": "e70c4df10ef0983b9c8c31bd06b2a2c3",
+        "textRange": {
+          "startLine": 54,
+          "endLine": 54,
+          "startOffset": 8,
+          "endOffset": 14
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this redundant return.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "redundant",
+          "clumsy"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "fa4f35c6-e1a1-4022-a601-a5aabf5bc7a0",
+        "rule": "python:S3626",
+        "severity": "MINOR",
+        "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 73,
+        "hash": "e70c4df10ef0983b9c8c31bd06b2a2c3",
+        "textRange": {
+          "startLine": 73,
+          "endLine": 73,
+          "startOffset": 8,
+          "endOffset": 14
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this redundant return.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "redundant",
+          "clumsy"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "9cfa2b0d-cf73-469b-adfd-61e5c74fa522",
+        "rule": "python:S3626",
+        "severity": "MINOR",
+        "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 92,
+        "hash": "e70c4df10ef0983b9c8c31bd06b2a2c3",
+        "textRange": {
+          "startLine": 92,
+          "endLine": 92,
+          "startOffset": 8,
+          "endOffset": 14
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this redundant return.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "redundant",
+          "clumsy"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "3608a353-5a1f-4ef1-9cee-471111cf3b6f",
+        "rule": "python:S3626",
+        "severity": "MINOR",
+        "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 139,
+        "hash": "e70c4df10ef0983b9c8c31bd06b2a2c3",
+        "textRange": {
+          "startLine": 139,
+          "endLine": 139,
+          "startOffset": 8,
+          "endOffset": 14
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this redundant return.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "redundant",
+          "clumsy"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "0551f486-7742-4637-8899-c0e0cd395718",
+        "rule": "python:S2638",
+        "severity": "CRITICAL",
+        "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 141,
+        "hash": "d91990b2c91fb1f8628757d8e3019ddc",
+        "textRange": {
+          "startLine": 141,
+          "endLine": 141,
+          "startOffset": 20,
+          "endOffset": 27
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 141,
+                  "endLine": 141,
+                  "startOffset": 20,
+                  "endOffset": 27
+                },
+                "msg": "Add a default value to parameter message.",
+                "msgFormattings": []
+              },
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 37,
+                  "endLine": 37,
+                  "startOffset": 8,
+                  "endOffset": 13
+                },
+                "msg": "Overridden method's definition",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Add a default value to parameter message.",
+        "effort": "15min",
+        "debt": "15min",
+        "author": "",
+        "tags": [
+          "suspicious"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "621dcf86-d932-49a0-8df5-a919fa3e1b53",
+        "rule": "python:S3626",
+        "severity": "MINOR",
+        "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 165,
+        "hash": "e70c4df10ef0983b9c8c31bd06b2a2c3",
+        "textRange": {
+          "startLine": 165,
+          "endLine": 165,
+          "startOffset": 8,
+          "endOffset": 14
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this redundant return.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "redundant",
+          "clumsy"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "9a9b5761-f107-4dc9-8580-78c5eae9c082",
+        "rule": "python:S3776",
+        "severity": "CRITICAL",
+        "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 167,
+        "hash": "d350612413443030e446b96dc75265c1",
+        "textRange": {
+          "startLine": 167,
+          "endLine": 167,
+          "startOffset": 8,
+          "endOffset": 14
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 182,
+                  "endLine": 182,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 182,
+                  "endLine": 182,
+                  "startOffset": 33,
+                  "endOffset": 35
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 184,
+                  "endLine": 184,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 188,
+                  "endLine": 188,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 189,
+                  "endLine": 189,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 198,
+                  "endLine": 198,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 201,
+                  "endLine": 201,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 202,
+                  "endLine": 202,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 203,
+                  "endLine": 203,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 210,
+                  "endLine": 210,
+                  "startOffset": 16,
+                  "endOffset": 20
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 213,
+                  "endLine": 213,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 214,
+                  "endLine": 214,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 215,
+                  "endLine": 215,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 222,
+                  "endLine": 222,
+                  "startOffset": 16,
+                  "endOffset": 20
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 225,
+                  "endLine": 225,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 226,
+                  "endLine": 226,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 228,
+                  "endLine": 228,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 234,
+                  "endLine": 234,
+                  "startOffset": 16,
+                  "endOffset": 20
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+                "textRange": {
+                  "startLine": 237,
+                  "endLine": 237,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Refactor this function to reduce its Cognitive Complexity from 29 to the 15 allowed.",
+        "effort": "19min",
+        "debt": "19min",
+        "author": "",
+        "tags": [
+          "brain-overload"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "FOCUSED",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "66ae61b9-f28e-47f1-a756-6fb72ef11ebf",
+        "rule": "python:S3457",
+        "severity": "MAJOR",
+        "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 221,
+        "hash": "231051b9e47d576980a5edf6199f6752",
+        "textRange": {
+          "startLine": 221,
+          "endLine": 221,
+          "startOffset": 40,
+          "endOffset": 44
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Add replacement fields or use a normal string instead of an f-string.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "confusing"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "LOGICAL",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "d6769ac8-96d0-45f9-a3e7-e95a44a7b1a4",
+        "rule": "python:S3626",
+        "severity": "MINOR",
+        "component": "human-sherlock-project__sherlock:sherlock/notify.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 242,
+        "hash": "e70c4df10ef0983b9c8c31bd06b2a2c3",
+        "textRange": {
+          "startLine": 242,
+          "endLine": 242,
+          "startOffset": 8,
+          "endOffset": 14
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this redundant return.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "redundant",
+          "clumsy"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "de18e44e-c7cf-43f3-9f75-399f84d6c10e",
+        "rule": "python:S3626",
+        "severity": "MINOR",
+        "component": "human-sherlock-project__sherlock:sherlock/result.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 71,
+        "hash": "e70c4df10ef0983b9c8c31bd06b2a2c3",
+        "textRange": {
+          "startLine": 71,
+          "endLine": 71,
+          "startOffset": 8,
+          "endOffset": 14
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this redundant return.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "redundant",
+          "clumsy"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "f68fa656-985b-401a-8dc0-a43362d678e7",
+        "rule": "python:S5717",
+        "severity": "CRITICAL",
+        "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 34,
+        "hash": "ffa6ac270b154b87827b19301d061e19",
+        "textRange": {
+          "startLine": 34,
+          "endLine": 34,
+          "startOffset": 35,
+          "endOffset": 43
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 81,
+                  "endLine": 81,
+                  "startOffset": 16,
+                  "endOffset": 33
+                },
+                "msg": "The parameter is modified.",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 86,
+                  "endLine": 86,
+                  "startOffset": 16,
+                  "endOffset": 33
+                },
+                "msg": "The parameter is modified.",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 89,
+                  "endLine": 89,
+                  "startOffset": 12,
+                  "endOffset": 29
+                },
+                "msg": "The parameter is modified.",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Change this default value to \"None\" and initialize this parameter inside the function/method.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "bad-practice",
+          "pitfall"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "LOGICAL",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "5f9de674-e5cc-4c34-80bd-efed509a593a",
+        "rule": "python:S3626",
+        "severity": "MINOR",
+        "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 71,
+        "hash": "e70c4df10ef0983b9c8c31bd06b2a2c3",
+        "textRange": {
+          "startLine": 71,
+          "endLine": 71,
+          "startOffset": 12,
+          "endOffset": 18
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this redundant return.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "redundant",
+          "clumsy"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "72737fe9-690a-491e-8584-e6914a8a6bc8",
+        "rule": "python:S1172",
+        "severity": "MAJOR",
+        "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 97,
+        "hash": "84dc2f4a965121cedfa2b42a4398d0dc",
+        "textRange": {
+          "startLine": 97,
+          "endLine": 97,
+          "startOffset": 33,
+          "endOffset": 43
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused function parameter \"error_type\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "75c4046b-9a29-413b-a438-75fa44605b76",
+        "rule": "python:S1172",
+        "severity": "MAJOR",
+        "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 97,
+        "hash": "84dc2f4a965121cedfa2b42a4398d0dc",
+        "textRange": {
+          "startLine": 97,
+          "endLine": 97,
+          "startOffset": 45,
+          "endOffset": 59
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused function parameter \"social_network\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "ee74ae2f-c1b1-497f-82cd-5dcc2ec8d498",
+        "rule": "python:S3776",
+        "severity": "CRITICAL",
+        "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 128,
+        "hash": "fecf593a1d7c9b8dc4f423f3e5353114",
+        "textRange": {
+          "startLine": 128,
+          "endLine": 128,
+          "startOffset": 4,
+          "endOffset": 12
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 166,
+                  "endLine": 166,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 166,
+                  "endLine": 166,
+                  "startOffset": 11,
+                  "endOffset": 13
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 170,
+                  "endLine": 170,
+                  "startOffset": 4,
+                  "endOffset": 8
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 177,
+                  "endLine": 177,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 179,
+                  "endLine": 179,
+                  "startOffset": 4,
+                  "endOffset": 8
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 191,
+                  "endLine": 191,
+                  "startOffset": 4,
+                  "endOffset": 7
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 205,
+                  "endLine": 205,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 214,
+                  "endLine": 214,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 214,
+                  "endLine": 214,
+                  "startOffset": 23,
+                  "endOffset": 26
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 224,
+                  "endLine": 224,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 228,
+                  "endLine": 228,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 231,
+                  "endLine": 231,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 236,
+                  "endLine": 236,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 236,
+                  "endLine": 236,
+                  "startOffset": 55,
+                  "endOffset": 58
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 242,
+                  "endLine": 242,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 248,
+                  "endLine": 248,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 253,
+                  "endLine": 253,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 259,
+                  "endLine": 259,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 266,
+                  "endLine": 266,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 276,
+                  "endLine": 276,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 284,
+                  "endLine": 284,
+                  "startOffset": 4,
+                  "endOffset": 7
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 292,
+                  "endLine": 292,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 308,
+                  "endLine": 308,
+                  "startOffset": 8,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 314,
+                  "endLine": 314,
+                  "startOffset": 8,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 318,
+                  "endLine": 318,
+                  "startOffset": 8,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 321,
+                  "endLine": 321,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 328,
+                  "endLine": 328,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 338,
+                  "endLine": 338,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 341,
+                  "endLine": 341,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+4 (incl 3 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 343,
+                  "endLine": 343,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 345,
+                  "endLine": 345,
+                  "startOffset": 16,
+                  "endOffset": 19
+                },
+                "msg": "+4 (incl 3 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 346,
+                  "endLine": 346,
+                  "startOffset": 20,
+                  "endOffset": 22
+                },
+                "msg": "+5 (incl 4 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 349,
+                  "endLine": 349,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 355,
+                  "endLine": 355,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 361,
+                  "endLine": 361,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 363,
+                  "endLine": 363,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 363,
+                  "endLine": 363,
+                  "startOffset": 40,
+                  "endOffset": 42
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 369,
+                  "endLine": 369,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 375,
+                  "endLine": 375,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 381,
+                  "endLine": 381,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 387,
+                  "endLine": 387,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 393,
+                  "endLine": 393,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Refactor this function to reduce its Cognitive Complexity from 77 to the 15 allowed.",
+        "effort": "1h7min",
+        "debt": "1h7min",
+        "author": "",
+        "tags": [
+          "brain-overload"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "FOCUSED",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "9b831634-db19-4597-aa2b-2364a66f78e5",
+        "rule": "python:S1481",
+        "severity": "MINOR",
+        "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 301,
+        "hash": "c0480ddb72f29afe73289cd59b465ec8",
+        "textRange": {
+          "startLine": 301,
+          "endLine": 301,
+          "startOffset": 23,
+          "endOffset": 37
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace the unused local variable \"expection_text\" with \"_\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "7425f74b-5b26-4880-9c50-56941e3de6d8",
+        "rule": "python:S5754",
+        "severity": "CRITICAL",
+        "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 314,
+        "hash": "3e264f5fbab10735799511f21ca70842",
+        "textRange": {
+          "startLine": 314,
+          "endLine": 314,
+          "startOffset": 8,
+          "endOffset": 14
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Specify an exception class to catch or reraise the exception",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "error-handling",
+          "bad-practice",
+          "suspicious"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "01bf4fe8-b095-446d-8c82-31ded9e8118b",
+        "rule": "python:S5754",
+        "severity": "CRITICAL",
+        "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 318,
+        "hash": "3e264f5fbab10735799511f21ca70842",
+        "textRange": {
+          "startLine": 318,
+          "endLine": 318,
+          "startOffset": 8,
+          "endOffset": 14
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Specify an exception class to catch or reraise the exception",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "error-handling",
+          "bad-practice",
+          "suspicious"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "c11a66f6-373b-45a3-a1cd-6cb68c6e782c",
+        "rule": "python:S1940",
+        "severity": "MINOR",
+        "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 363,
+        "hash": "a6356379c8a8b39a31b4707d69b88a52",
+        "textRange": {
+          "startLine": 363,
+          "endLine": 363,
+          "startOffset": 15,
+          "endOffset": 39
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Use the opposite operator (\"<\") instead.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "pitfall"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "e11d19e2-2431-439e-acbd-01cc6da8a334",
+        "rule": "python:S5754",
+        "severity": "CRITICAL",
+        "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 436,
+        "hash": "3e264f5fbab10735799511f21ca70842",
+        "textRange": {
+          "startLine": 436,
+          "endLine": 436,
+          "startOffset": 4,
+          "endOffset": 10
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Specify an exception class to catch or reraise the exception",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "error-handling",
+          "bad-practice",
+          "suspicious"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "1171288a-df4f-4d46-a2c2-bbaa30ac42c9",
+        "rule": "python:S3776",
+        "severity": "CRITICAL",
+        "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 443,
+        "hash": "36999f0b7d2b4dd75cc52066ae8a601f",
+        "textRange": {
+          "startLine": 443,
+          "endLine": 443,
+          "startOffset": 4,
+          "endOffset": 8
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 530,
+                  "endLine": 530,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 534,
+                  "endLine": 534,
+                  "startOffset": 4,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 540,
+                  "endLine": 540,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 540,
+                  "endLine": 540,
+                  "startOffset": 16,
+                  "endOffset": 19
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 544,
+                  "endLine": 544,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 547,
+                  "endLine": 547,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 547,
+                  "endLine": 547,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 552,
+                  "endLine": 552,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 552,
+                  "endLine": 552,
+                  "startOffset": 31,
+                  "endOffset": 34
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 557,
+                  "endLine": 557,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 557,
+                  "endLine": 557,
+                  "startOffset": 31,
+                  "endOffset": 34
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 564,
+                  "endLine": 564,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 566,
+                  "endLine": 566,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 568,
+                  "endLine": 568,
+                  "startOffset": 4,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 576,
+                  "endLine": 576,
+                  "startOffset": 4,
+                  "endOffset": 7
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 579,
+                  "endLine": 579,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 582,
+                  "endLine": 582,
+                  "startOffset": 4,
+                  "endOffset": 8
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 588,
+                  "endLine": 588,
+                  "startOffset": 8,
+                  "endOffset": 11
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 590,
+                  "endLine": 590,
+                  "startOffset": 12,
+                  "endOffset": 15
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 591,
+                  "endLine": 591,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+4 (incl 3 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 594,
+                  "endLine": 594,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 598,
+                  "endLine": 598,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 601,
+                  "endLine": 601,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 611,
+                  "endLine": 611,
+                  "startOffset": 4,
+                  "endOffset": 7
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 620,
+                  "endLine": 620,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 622,
+                  "endLine": 622,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 627,
+                  "endLine": 627,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 632,
+                  "endLine": 632,
+                  "startOffset": 12,
+                  "endOffset": 15
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 634,
+                  "endLine": 634,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 639,
+                  "endLine": 639,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 641,
+                  "endLine": 641,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 658,
+                  "endLine": 658,
+                  "startOffset": 16,
+                  "endOffset": 19
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+                "textRange": {
+                  "startLine": 660,
+                  "endLine": 660,
+                  "startOffset": 20,
+                  "endOffset": 22
+                },
+                "msg": "+4 (incl 3 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Refactor this function to reduce its Cognitive Complexity from 55 to the 15 allowed.",
+        "effort": "45min",
+        "debt": "45min",
+        "author": "",
+        "tags": [
+          "brain-overload"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "FOCUSED",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "53531e6d-5e8e-47a2-8fec-b56e200db379",
+        "rule": "python:S1135",
+        "severity": "INFO",
+        "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 539,
+        "hash": "d621e3b2cbf5c2cd99e64a3543a803e6",
+        "textRange": {
+          "startLine": 539,
+          "endLine": 539,
+          "startOffset": 4,
+          "endOffset": 36
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Complete the task associated to this \"TODO\" comment.",
+        "effort": "0min",
+        "debt": "0min",
+        "author": "",
+        "tags": [
+          "cwe"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "INFO"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "772c3702-7303-45ae-a4f1-e7c34486b62d",
+        "rule": "python:S112",
+        "severity": "MAJOR",
+        "component": "human-sherlock-project__sherlock:sherlock/sherlock.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 541,
+        "hash": "aed1989658a58ffc392be5a43fbfc107",
+        "textRange": {
+          "startLine": 541,
+          "endLine": 541,
+          "startOffset": 14,
+          "endOffset": 72
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace this generic exception class with a more specific one.",
+        "effort": "20min",
+        "debt": "20min",
+        "author": "",
+        "tags": [
+          "cwe",
+          "error-handling"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "9d99e16f-b578-43af-a31e-ef48da961bec",
+        "rule": "python:S3626",
+        "severity": "MINOR",
+        "component": "human-sherlock-project__sherlock:sherlock/sites.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 60,
+        "hash": "e70c4df10ef0983b9c8c31bd06b2a2c3",
+        "textRange": {
+          "startLine": 60,
+          "endLine": 60,
+          "startOffset": 8,
+          "endOffset": 14
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this redundant return.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "redundant",
+          "clumsy"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "3cf2be69-4f75-43d9-ad10-4a3bd0c35bc2",
+        "rule": "python:S3776",
+        "severity": "CRITICAL",
+        "component": "human-sherlock-project__sherlock:sherlock/sites.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 76,
+        "hash": "5c48a3ab24b8881ef5ca15da0eef7259",
+        "textRange": {
+          "startLine": 76,
+          "endLine": 76,
+          "startOffset": 8,
+          "endOffset": 16
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sites.py",
+                "textRange": {
+                  "startLine": 110,
+                  "endLine": 110,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sites.py",
+                "textRange": {
+                  "startLine": 117,
+                  "endLine": 117,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sites.py",
+                "textRange": {
+                  "startLine": 120,
+                  "endLine": 120,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sites.py",
+                "textRange": {
+                  "startLine": 120,
+                  "endLine": 120,
+                  "startOffset": 52,
+                  "endOffset": 54
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sites.py",
+                "textRange": {
+                  "startLine": 124,
+                  "endLine": 124,
+                  "startOffset": 12,
+                  "endOffset": 18
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sites.py",
+                "textRange": {
+                  "startLine": 129,
+                  "endLine": 129,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sites.py",
+                "textRange": {
+                  "startLine": 132,
+                  "endLine": 132,
+                  "startOffset": 16,
+                  "endOffset": 22
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sites.py",
+                "textRange": {
+                  "startLine": 136,
+                  "endLine": 136,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sites.py",
+                "textRange": {
+                  "startLine": 140,
+                  "endLine": 140,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sites.py",
+                "textRange": {
+                  "startLine": 146,
+                  "endLine": 146,
+                  "startOffset": 20,
+                  "endOffset": 26
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sites.py",
+                "textRange": {
+                  "startLine": 150,
+                  "endLine": 150,
+                  "startOffset": 12,
+                  "endOffset": 18
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sites.py",
+                "textRange": {
+                  "startLine": 158,
+                  "endLine": 158,
+                  "startOffset": 8,
+                  "endOffset": 11
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-sherlock-project__sherlock:sherlock/sites.py",
+                "textRange": {
+                  "startLine": 169,
+                  "endLine": 169,
+                  "startOffset": 12,
+                  "endOffset": 18
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Refactor this function to reduce its Cognitive Complexity from 20 to the 15 allowed.",
+        "effort": "10min",
+        "debt": "10min",
+        "author": "",
+        "tags": [
+          "brain-overload"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "FOCUSED",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "a6df56ca-9462-492c-90dc-30053ef468bf",
+        "rule": "python:S5332",
+        "severity": "MINOR",
+        "component": "human-sherlock-project__sherlock:sherlock/sites.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 120,
+        "hash": "646ba0827f5271dd437bc7a717e53495",
+        "textRange": {
+          "startLine": 120,
+          "endLine": 120,
+          "startOffset": 11,
+          "endOffset": 20
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Using HTTP protocol is insecure. Use HTTPS instead.",
+        "effort": "30min",
+        "debt": "30min",
+        "author": "",
+        "tags": [
+          "cwe",
+          "former-hotspot"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "VULNERABILITY",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "7f69f654-960a-4ee0-a917-05ba03813858",
+        "rule": "python:S3626",
+        "severity": "MINOR",
+        "component": "human-sherlock-project__sherlock:sherlock/sites.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 175,
+        "hash": "e70c4df10ef0983b9c8c31bd06b2a2c3",
+        "textRange": {
+          "startLine": 175,
+          "endLine": 175,
+          "startOffset": 8,
+          "endOffset": 14
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this redundant return.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "redundant",
+          "clumsy"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "81ecb81e-da10-4b31-ab6f-a6e98d9a9349",
+        "rule": "python:S5899",
+        "severity": "MAJOR",
+        "component": "human-sherlock-project__sherlock:sherlock/tests/base.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 204,
+        "hash": "f6238e161355068e184a0686668cf9b3",
+        "textRange": {
+          "startLine": 204,
+          "endLine": 204,
+          "startOffset": 8,
+          "endOffset": 28
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename this method so that it starts with \"test\" or remove this unused helper.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "tests",
+          "unittest",
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "LOGICAL",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "5ba8eace-53bb-4878-8307-c9e8c1a1918d",
+        "rule": "python:S7498",
+        "severity": "MINOR",
+        "component": "human-sherlock-project__sherlock:site_list.py",
+        "project": "human-sherlock-project__sherlock",
+        "line": 8,
+        "hash": "956590265a0bad4637e05c53c481b60e",
+        "textRange": {
+          "startLine": 8,
+          "endLine": 8,
+          "startOffset": 7,
+          "endOffset": 11
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace this constructor call with a literal.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [],
+        "creationDate": "2026-09-22T18:30:25+0000",
+        "updateDate": "2026-09-22T18:30:25+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      }
+    ],
+    "paging": {
+      "total": 30
+    }
+  }
+}

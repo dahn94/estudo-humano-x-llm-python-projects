@@ -1,0 +1,191 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 19 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: ansible/ansible
+####################################################################################################
+Repositorio: https://github.com/ansible/ansible
+Commit analisado: 42bc03f0f5740f2340fcdbe75557920552622ac3
+Link do commit: https://github.com/ansible/ansible/commit/42bc03f0f5740f2340fcdbe75557920552622ac3
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 205788
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 15
+  ERROR: 12
+  WARNING: 3
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 0
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 0
+  Security hotspots: 0
+  Complexidade: 29960
+  Linhas analisadas pelo SonarQube: 172884
+  Severidades: nenhuma
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: hacking/test-module.py
+Linha: 232
+Link do codigo: https://github.com/ansible/ansible/blob/42bc03f0f5740f2340fcdbe75557920552622ac3/hacking/test-module.py#L232
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 2]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: hacking/test-module.py
+Linha: 261
+Link do codigo: https://github.com/ansible/ansible/blob/42bc03f0f5740f2340fcdbe75557920552622ac3/hacking/test-module.py#L261
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 3]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: hacking/test-module.py
+Linha: 263
+Link do codigo: https://github.com/ansible/ansible/blob/42bc03f0f5740f2340fcdbe75557920552622ac3/hacking/test-module.py#L263
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 4]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: lib/ansible/cli/__init__.py
+Linha: 421
+Link do codigo: https://github.com/ansible/ansible/blob/42bc03f0f5740f2340fcdbe75557920552622ac3/lib/ansible/cli/__init__.py#L421
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 5]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: lib/ansible/cli/__init__.py
+Linha: 434
+Link do codigo: https://github.com/ansible/ansible/blob/42bc03f0f5740f2340fcdbe75557920552622ac3/lib/ansible/cli/__init__.py#L434
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 6]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: lib/ansible/config/manager.py
+Linha: 318
+Link do codigo: https://github.com/ansible/ansible/blob/42bc03f0f5740f2340fcdbe75557920552622ac3/lib/ansible/config/manager.py#L318
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 7]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: lib/ansible/module_utils/service.py
+Linha: 254
+Link do codigo: https://github.com/ansible/ansible/blob/42bc03f0f5740f2340fcdbe75557920552622ac3/lib/ansible/module_utils/service.py#L254
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 8]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: lib/ansible/module_utils/six/__init__.py
+Linha: 724
+Link do codigo: https://github.com/ansible/ansible/blob/42bc03f0f5740f2340fcdbe75557920552622ac3/lib/ansible/module_utils/six/__init__.py#L724
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 9]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: lib/ansible/plugins/lookup/lines.py
+Linha: 56
+Link do codigo: https://github.com/ansible/ansible/blob/42bc03f0f5740f2340fcdbe75557920552622ac3/lib/ansible/plugins/lookup/lines.py#L56
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 10]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: lib/ansible/plugins/lookup/pipe.py
+Linha: 70
+Link do codigo: https://github.com/ansible/ansible/blob/42bc03f0f5740f2340fcdbe75557920552622ac3/lib/ansible/plugins/lookup/pipe.py#L70
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 11]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: lib/ansible/plugins/strategy/__init__.py
+Linha: 1353
+Link do codigo: https://github.com/ansible/ansible/blob/42bc03f0f5740f2340fcdbe75557920552622ac3/lib/ansible/plugins/strategy/__init__.py#L1353
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 12]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: lib/ansible/plugins/strategy/__init__.py
+Linha: 1376
+Link do codigo: https://github.com/ansible/ansible/blob/42bc03f0f5740f2340fcdbe75557920552622ac3/lib/ansible/plugins/strategy/__init__.py#L1376
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 13]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: lib/ansible/template/safe_eval.py
+Linha: 147
+Link do codigo: https://github.com/ansible/ansible/blob/42bc03f0f5740f2340fcdbe75557920552622ac3/lib/ansible/template/safe_eval.py#L147
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 14]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: lib/ansible/utils/collection_loader/_collection_finder.py
+Linha: 377
+Link do codigo: https://github.com/ansible/ansible/blob/42bc03f0f5740f2340fcdbe75557920552622ac3/lib/ansible/utils/collection_loader/_collection_finder.py#L377
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 15]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: lib/ansible/utils/collection_loader/_collection_meta.py
+Linha: 28
+Link do codigo: https://github.com/ansible/ansible/blob/42bc03f0f5740f2340fcdbe75557920552622ac3/lib/ansible/utils/collection_loader/_collection_meta.py#L28
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE ansible/ansible
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

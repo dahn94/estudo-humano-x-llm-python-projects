@@ -1,0 +1,687 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 7 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: nvbn/thefuck
+####################################################################################################
+Repositorio: https://github.com/nvbn/thefuck
+Commit analisado: 55922e4dbeedaca384e83406f2fa87c5a8e152fb
+Link do commit: https://github.com/nvbn/thefuck/commit/55922e4dbeedaca384e83406f2fa87c5a8e152fb
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 12498
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 9
+  ERROR: 9
+  WARNING: 0
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 55
+  Vulnerabilidades: 0
+  Bugs: 2
+  Code smells: 53
+  Security hotspots: 0
+  Complexidade: 2085
+  Linhas analisadas pelo SonarQube: 12143
+  Severidades: CRITICAL=4, MAJOR=38, MINOR=13
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: release.py
+Linha: 27
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/release.py#L27
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 2]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: release.py
+Linha: 28
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/release.py#L28
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 3]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: release.py
+Linha: 29
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/release.py#L29
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 4]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: release.py
+Linha: 30
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/release.py#L30
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 5]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: release.py
+Linha: 31
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/release.py#L31
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 6]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: release.py
+Linha: 35
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/release.py#L35
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 7]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: release.py
+Linha: 36
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/release.py#L36
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 8]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: release.py
+Linha: 37
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/release.py#L37
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 9]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: thefuck/output_readers/rerun.py
+Linha: 60
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/output_readers/rerun.py#L60
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SONARQUBE 1]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: fastentrypoints.py
+Linha: 97
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/fastentrypoints.py#L97
+Descricao: Use the opposite operator ("not in") instead.
+
+[SONARQUBE 2]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: fastentrypoints.py
+Linha: 105
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/fastentrypoints.py#L105
+Descricao: Use the opposite operator ("not in") instead.
+
+[SONARQUBE 3]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S9080
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/conftest.py
+Linha: 32
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/tests/conftest.py#L32
+Descricao: Replace this "request.addfinalizer()" call with a yield-based teardown.
+
+[SONARQUBE 4]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8997
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/rules/test_cat_dir.py
+Linha: 38
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/tests/rules/test_cat_dir.py#L38
+Descricao: Use the "monkeypatch" fixture for temporary modifications instead of manually modifying global state.
+
+[SONARQUBE 5]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S9078
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/rules/test_git_push_force.py
+Linha: 41
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/tests/rules/test_git_push_force.py#L41
+Descricao: Remove this duplicate test case.
+
+[SONARQUBE 6]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S9078
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/rules/test_git_push_force.py
+Linha: 42
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/tests/rules/test_git_push_force.py#L42
+Descricao: Remove this duplicate test case.
+
+[SONARQUBE 7]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S9078
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/rules/test_git_push_pull.py
+Linha: 55
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/tests/rules/test_git_push_pull.py#L55
+Descricao: Remove this duplicate test case.
+
+[SONARQUBE 8]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S9078
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/rules/test_git_push_pull.py
+Linha: 56
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/tests/rules/test_git_push_pull.py#L56
+Descricao: Remove this duplicate test case.
+
+[SONARQUBE 9]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S9078
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/rules/test_git_two_dashes.py
+Linha: 34
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/tests/rules/test_git_two_dashes.py#L34
+Descricao: Remove this duplicate test case.
+
+[SONARQUBE 10]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S9078
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/rules/test_pacman.py
+Linha: 41
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/tests/rules/test_pacman.py#L41
+Descricao: Remove this duplicate test case.
+
+[SONARQUBE 11]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S9074
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/shells/conftest.py
+Linha: 15
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/tests/shells/conftest.py#L15
+Descricao: Remove this mark; it has no effect on fixtures.
+
+[SONARQUBE 12]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3415
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/test_utils.py
+Linha: 38
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/tests/test_utils.py#L38
+Descricao: Unify assertion argument order in this file; both "actual first" and "expected first" conventions are used.
+
+[SONARQUBE 13]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/output_readers/read_log.py
+Linha: 15
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/output_readers/read_log.py#L15
+Descricao: Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.
+
+[SONARQUBE 14]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/output_readers/read_log.py
+Linha: 54
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/output_readers/read_log.py#L54
+Descricao: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+[SONARQUBE 15]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/adb_unknown_command.py
+Linha: 52
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/adb_unknown_command.py#L52
+Descricao: Use the opposite operator ("!=") instead.
+
+[SONARQUBE 16]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/adb_unknown_command.py
+Linha: 52
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/adb_unknown_command.py#L52
+Descricao: Use the opposite operator ("not in") instead.
+
+[SONARQUBE 17]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8513
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/apt_invalid_operation.py
+Linha: 22
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/apt_invalid_operation.py#L22
+Descricao: Replace chained "startswith" calls with a single call using a tuple argument.
+
+[SONARQUBE 18]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8513
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/apt_invalid_operation.py
+Linha: 37
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/apt_invalid_operation.py#L37
+Descricao: Replace chained "startswith" calls with a single call using a tuple argument.
+
+[SONARQUBE 19]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6395
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/az_cli.py
+Linha: 5
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/az_cli.py#L5
+Descricao: Unwrap this unnecessarily grouped subpattern.
+
+[SONARQUBE 20]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/az_cli.py
+Linha: 5
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/az_cli.py#L5
+Descricao: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+[SONARQUBE 21]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/az_cli.py
+Linha: 6
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/az_cli.py#L6
+Descricao: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+[SONARQUBE 22]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/cargo.py
+Linha: 5
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/cargo.py#L5
+Descricao: Remove the unused function parameter "command".
+
+[SONARQUBE 23]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/cd_parent.py
+Linha: 15
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/cd_parent.py#L15
+Descricao: Remove the unused function parameter "command".
+
+[SONARQUBE 24]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1110
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/composer_not_command.py
+Linha: 7
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/composer_not_command.py#L7
+Descricao: Remove those redundant parentheses.
+
+[SONARQUBE 25]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/dirty_untar.py
+Linha: 36
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/dirty_untar.py#L36
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 26]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/dirty_untar.py
+Linha: 41
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/dirty_untar.py#L41
+Descricao: Remove the unused function parameter "command".
+
+[SONARQUBE 27]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/dirty_unzip.py
+Linha: 45
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/dirty_unzip.py#L45
+Descricao: Remove the unused function parameter "command".
+
+[SONARQUBE 28]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5361
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/fix_alt_space.py
+Linha: 15
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/fix_alt_space.py#L15
+Descricao: Replace this "re.sub()" call by a "str.replace()" function call.
+
+[SONARQUBE 29]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/git_rebase_no_changes.py
+Linha: 12
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/git_rebase_no_changes.py#L12
+Descricao: Remove the unused function parameter "command".
+
+[SONARQUBE 30]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5361
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/git_remote_delete.py
+Linha: 13
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/git_remote_delete.py#L13
+Descricao: Replace this "re.sub()" call by a "str.replace()" function call.
+
+[SONARQUBE 31]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/heroku_multiple_apps.py
+Linha: 11
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/heroku_multiple_apps.py#L11
+Descricao: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+[SONARQUBE 32]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6326
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/mercurial.py
+Linha: 9
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/mercurial.py#L9
+Descricao: Replace spaces with quantifier `{4}`.
+
+[SONARQUBE 33]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/missing_space_before_subcommand.py
+Linha: 12
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/missing_space_before_subcommand.py#L12
+Descricao: Use the opposite operator ("not in") instead.
+
+[SONARQUBE 34]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/no_such_file.py
+Linha: 27
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/no_such_file.py#L27
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 35]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/npm_missing_script.py
+Linha: 16
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/npm_missing_script.py#L16
+Descricao: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+[SONARQUBE 36]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1066
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/path_from_history.py
+Linha: 20
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/path_from_history.py#L20
+Descricao: Merge this if statement with the enclosing one.
+
+[SONARQUBE 37]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8513
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/path_from_history.py
+Linha: 35
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/path_from_history.py#L35
+Descricao: Replace chained "startswith" calls with a single call using a tuple argument.
+
+[SONARQUBE 38]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1871
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/prove_recursively.py
+Linha: 9
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/prove_recursively.py#L9
+Descricao: Either merge this branch with the identical one on line "7" or change one of the implementations.
+
+[SONARQUBE 39]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/rails_migrations_pending.py
+Linha: 5
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/rails_migrations_pending.py#L5
+Descricao: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+[SONARQUBE 40]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/sl_ls.py
+Linha: 13
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/sl_ls.py#L13
+Descricao: Remove the unused function parameter "command".
+
+[SONARQUBE 41]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/ssh_known_hosts.py
+Linha: 27
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/ssh_known_hosts.py#L27
+Descricao: Remove the unused function parameter "command".
+
+[SONARQUBE 42]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7492
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/switch_lang.py
+Linha: 56
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/switch_lang.py#L56
+Descricao: Unpack this comprehension expression
+
+[SONARQUBE 43]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S8510
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/switch_lang.py
+Linha: 92
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/switch_lang.py#L92
+Descricao: Rename this loop variable; it shadows the outer loop variable "ch".
+
+[SONARQUBE 44]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/touch.py
+Linha: 13
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/touch.py#L13
+Descricao: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+[SONARQUBE 45]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/unknown_command.py
+Linha: 6
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/unknown_command.py#L6
+Descricao: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+[SONARQUBE 46]
+Tipo: BUG
+Severidade: MINOR
+Regra: python:S5842
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/unknown_command.py
+Linha: 7
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/unknown_command.py#L7
+Descricao: Rework this part of the regex to not match the empty string.
+
+[SONARQUBE 47]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/unknown_command.py
+Linha: 11
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/unknown_command.py#L11
+Descricao: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+[SONARQUBE 48]
+Tipo: BUG
+Severidade: MINOR
+Regra: python:S5842
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/rules/unknown_command.py
+Linha: 12
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/rules/unknown_command.py#L12
+Descricao: Rework this part of the regex to not match the empty string.
+
+[SONARQUBE 49]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7494
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/shells/bash.py
+Linha: 65
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/shells/bash.py#L65
+Descricao: Replace dict constructor call with a dictionary comprehension.
+
+[SONARQUBE 50]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/shells/generic.py
+Linha: 49
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/shells/generic.py#L49
+Descricao: Remove the unused function parameter "command_script".
+
+[SONARQUBE 51]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7494
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/shells/tcsh.py
+Linha: 23
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/shells/tcsh.py#L23
+Descricao: Replace dict constructor call with a dictionary comprehension.
+
+[SONARQUBE 52]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7494
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/shells/zsh.py
+Linha: 70
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/shells/zsh.py#L70
+Descricao: Replace dict constructor call with a dictionary comprehension.
+
+[SONARQUBE 53]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6326
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/specific/npm.py
+Linha: 20
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/specific/npm.py#L20
+Descricao: Replace spaces with quantifier `{2}`.
+
+[SONARQUBE 54]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/utils.py
+Linha: 59
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/utils.py#L59
+Descricao: Replace the unused local variable "fname" with "_".
+
+[SONARQUBE 55]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: thefuck/utils.py
+Linha: 331
+Link do codigo: https://github.com/nvbn/thefuck/blob/55922e4dbeedaca384e83406f2fa87c5a8e152fb/thefuck/utils.py#L331
+Descricao: Use the opposite operator ("!=") instead.
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE nvbn/thefuck
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

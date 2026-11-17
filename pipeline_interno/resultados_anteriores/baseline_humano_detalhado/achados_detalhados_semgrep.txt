@@ -1,0 +1,1967 @@
+BASELINE HUMANO — ACHADOS DETALHADOS DO SEMGREP E SONARQUBE
+============================================================
+
+RESUMO GERAL
+============
+
+Repositórios analisados: 2
+Semgrep — total de achados: 27
+Semgrep — ERROR: 2
+Semgrep — WARNING: 20
+Semgrep — INFO: 5
+Semgrep — erros operacionais: 1
+SonarQube — total de issues: 144
+SonarQube — vulnerabilidades: 5
+SonarQube — bugs: 2
+SonarQube — code smells: 137
+SonarQube — severidades: BLOCKER=2, CRITICAL=26, INFO=1, MAJOR=35, MINOR=80
+
+CWEs encontradas pelo Semgrep:
+- CWE-1333: Inefficient Regular Expression Complexity: 1 ocorrência(s)
+- CWE-134: Use of Externally-Controlled Format String: 3 ocorrência(s)
+- CWE-1357: Reliance on Insufficiently Trustworthy Component: 2 ocorrência(s)
+- CWE-319: Cleartext Transmission of Sensitive Information: 1 ocorrência(s)
+- CWE-327: Use of a Broken or Risky Cryptographic Algorithm: 2 ocorrência(s)
+- CWE-353: Missing Support for Integrity Check: 2 ocorrência(s)
+- CWE-502: Deserialization of Untrusted Data: 8 ocorrência(s)
+- CWE-732: Incorrect Permission Assignment for Critical Resource: 2 ocorrência(s)
+- CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'): 3 ocorrência(s)
+- CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection'): 2 ocorrência(s)
+- CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection'): 3 ocorrência(s)
+SonarQube — CWE: não fornecida diretamente na resposta bruta de issues consultada.
+
+RESUMO POR REPOSITÓRIO
+=======================
+
+Repositório: anxolerd/dvpwa
+GitHub: https://github.com/anxolerd/dvpwa
+Commit utilizado: b11d0415f86cc2285158d2f07c81cd9777d8fffb
+Link do commit: https://github.com/anxolerd/dvpwa/commit/b11d0415f86cc2285158d2f07c81cd9777d8fffb
+Semgrep: 9 achados — ERROR=1, WARNING=5, INFO=3; erros operacionais=1
+SonarQube: 3 issues — vulnerabilidades=1, bugs=0, code smells=2
+SonarQube — severidades: CRITICAL=1, MINOR=2
+CWEs do Semgrep: CWE-1333: Inefficient Regular Expression Complexity (1); CWE-134: Use of Externally-Controlled Format String (3); CWE-327: Use of a Broken or Risky Cryptographic Algorithm (1); CWE-732: Incorrect Permission Assignment for Critical Resource (2); CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') (2)
+CWE do SonarQube: não fornecida diretamente no relatório bruto consultado
+Classificação: COM ACHADOS
+
+Repositório: bottlepy/bottle
+GitHub: https://github.com/bottlepy/bottle
+Commit utilizado: b3fa1d687c3170416a3ada7d69715a9077b748a9
+Link do commit: https://github.com/bottlepy/bottle/commit/b3fa1d687c3170416a3ada7d69715a9077b748a9
+Semgrep: 18 achados — ERROR=1, WARNING=15, INFO=2; erros operacionais=0
+SonarQube: 141 issues — vulnerabilidades=4, bugs=2, code smells=135
+SonarQube — severidades: BLOCKER=2, CRITICAL=25, INFO=1, MAJOR=35, MINOR=78
+CWEs do Semgrep: CWE-1357: Reliance on Insufficiently Trustworthy Component (2); CWE-319: Cleartext Transmission of Sensitive Information (1); CWE-327: Use of a Broken or Risky Cryptographic Algorithm (1); CWE-353: Missing Support for Integrity Check (2); CWE-502: Deserialization of Untrusted Data (8); CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') (3); CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection') (3)
+CWE do SonarQube: não fornecida diretamente no relatório bruto consultado
+Classificação: COM ACHADOS
+
+DETALHAMENTO COMPLETO
+======================
+
+Cada achado identifica a ferramenta, regra, severidade, arquivo, linha e código no commit analisado.
+CWE é exibida quando a ferramenta a fornece no relatório bruto.
+Os achados das duas ferramentas não devem ser somados, pois podem representar o mesmo problema.
+
+########################################################################
+REPOSITÓRIO: anxolerd/dvpwa
+GitHub: https://github.com/anxolerd/dvpwa
+Commit utilizado: b11d0415f86cc2285158d2f07c81cd9777d8fffb
+Link do commit: https://github.com/anxolerd/dvpwa/commit/b11d0415f86cc2285158d2f07c81cd9777d8fffb
+Linhas Python aproximadas: 674
+########################################################################
+
+--------------------------- // SEMGREP // ---------------------------
+
+Total de achados do Semgrep: 9
+
+ACHADO SEMGREP 1
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: yaml.docker-compose.security.no-new-privileges.no-new-privileges
+CWE: CWE-732: Incorrect Permission Assignment for Critical Resource
+Arquivo: docker-compose.yml
+Linha: 11
+Link do código: https://github.com/anxolerd/dvpwa/blob/b11d0415f86cc2285158d2f07c81cd9777d8fffb/docker-compose.yml#L11
+Descrição: Service 'redis' allows for privilege escalation via setuid or setgid binaries. Add 'no-new-privileges:true' in 'security_opt' to prevent this.
+
+ACHADO SEMGREP 2
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: yaml.docker-compose.security.writable-filesystem-service.writable-filesystem-service
+CWE: CWE-732: Incorrect Permission Assignment for Critical Resource
+Arquivo: docker-compose.yml
+Linha: 11
+Link do código: https://github.com/anxolerd/dvpwa/blob/b11d0415f86cc2285158d2f07c81cd9777d8fffb/docker-compose.yml#L11
+Descrição: Service 'redis' is running with a writable root filesystem. This may allow malicious applications to download and run additional payloads, or modify container files. If an application inside a container has to save something temporarily consider using a tmpfs. Add 'read_only: true' to this service to prevent this.
+
+ACHADO SEMGREP 3
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: python.lang.security.audit.formatted-sql-query.formatted-sql-query
+CWE: CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
+Arquivo: sqli/dao/student.py
+Linha: 45
+Link do código: https://github.com/anxolerd/dvpwa/blob/b11d0415f86cc2285158d2f07c81cd9777d8fffb/sqli/dao/student.py#L45
+Descrição: Detected possible formatted SQL query. Use parameterized queries instead.
+
+ACHADO SEMGREP 4
+Ferramenta: Semgrep
+Severidade: ERROR
+Regra: python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query
+CWE: CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
+Arquivo: sqli/dao/student.py
+Linha: 45
+Link do código: https://github.com/anxolerd/dvpwa/blob/b11d0415f86cc2285158d2f07c81cd9777d8fffb/sqli/dao/student.py#L45
+Descrição: Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy provides TextualSQL to easily used prepared statement with named parameters. For complex SQL composition, use SQL Expression Language or Schema Definition Language. In most cases, SQLAlchemy ORM will be a better option.
+
+ACHADO SEMGREP 5
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: python.lang.security.audit.md5-used-as-password.md5-used-as-password
+CWE: CWE-327: Use of a Broken or Risky Cryptographic Algorithm
+Arquivo: sqli/dao/user.py
+Linha: 41
+Link do código: https://github.com/anxolerd/dvpwa/blob/b11d0415f86cc2285158d2f07c81cd9777d8fffb/sqli/dao/user.py#L41
+Descrição: It looks like MD5 is used as a password hash. MD5 is not considered a secure password hash because it can be cracked by an attacker in a short amount of time. Use a suitable password hashing function such as scrypt. You can use `hashlib.scrypt`.
+
+ACHADO SEMGREP 6
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp
+CWE: CWE-1333: Inefficient Regular Expression Complexity
+Arquivo: sqli/static/js/materialize.js
+Linha: 565
+Link do código: https://github.com/anxolerd/dvpwa/blob/b11d0415f86cc2285158d2f07c81cd9777d8fffb/sqli/static/js/materialize.js#L565
+Descrição: RegExp() called with a `t` function argument, this might allow an attacker to cause a Regular Expression Denial-of-Service (ReDoS) within your application as RegExP blocks the main thread. For this reason, it is recommended to use hardcoded regexes instead. If your regex is run on user-controlled input, consider performing input validation or use a regex checking/sanitization library such as https://www.npmjs.com/package/recheck to verify that the regex does not appear vulnerable to ReDoS.
+
+ACHADO SEMGREP 7
+Ferramenta: Semgrep
+Severidade: INFO
+Regra: javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring
+CWE: CWE-134: Use of Externally-Controlled Format String
+Arquivo: sqli/static/js/materialize.js
+Linha: 645
+Link do código: https://github.com/anxolerd/dvpwa/blob/b11d0415f86cc2285158d2f07c81cd9777d8fffb/sqli/static/js/materialize.js#L645
+Descrição: Detected string concatenation with a non-literal variable in a util.format / console.log function. If an attacker injects a format specifier in the string, it will forge the log message. Try to use constant values for the format string.
+
+ACHADO SEMGREP 8
+Ferramenta: Semgrep
+Severidade: INFO
+Regra: javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring
+CWE: CWE-134: Use of Externally-Controlled Format String
+Arquivo: sqli/static/js/materialize.js
+Linha: 661
+Link do código: https://github.com/anxolerd/dvpwa/blob/b11d0415f86cc2285158d2f07c81cd9777d8fffb/sqli/static/js/materialize.js#L661
+Descrição: Detected string concatenation with a non-literal variable in a util.format / console.log function. If an attacker injects a format specifier in the string, it will forge the log message. Try to use constant values for the format string.
+
+ACHADO SEMGREP 9
+Ferramenta: Semgrep
+Severidade: INFO
+Regra: javascript.lang.security.audit.unsafe-formatstring.unsafe-formatstring
+CWE: CWE-134: Use of Externally-Controlled Format String
+Arquivo: sqli/static/js/materialize.js
+Linha: 699
+Link do código: https://github.com/anxolerd/dvpwa/blob/b11d0415f86cc2285158d2f07c81cd9777d8fffb/sqli/static/js/materialize.js#L699
+Descrição: Detected string concatenation with a non-literal variable in a util.format / console.log function. If an attacker injects a format specifier in the string, it will forge the log message. Try to use constant values for the format string.
+
+ERROS OPERACIONAIS DO SEMGREP
+Tipo: Timeout
+Nível: warn
+Regra: javascript.express.security.audit.express-ssrf.express-ssrf
+Arquivo: sqli/static/js/materialize.js
+Observação: falha operacional do scanner; não contabilizada como vulnerabilidade.
+
+-------------------------- // SONARQUBE // --------------------------
+
+Escopo: somente arquivos Python (**/*.py)
+Total de issues do SonarQube: 3
+
+ACHADO SONARQUBE 1
+Ferramenta: SonarQube
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: não informada no relatório bruto consultado
+Arquivo: sqli/dao/user.py
+Linha: 41
+Link do código: https://github.com/anxolerd/dvpwa/blob/b11d0415f86cc2285158d2f07c81cd9777d8fffb/sqli/dao/user.py#L41
+Descrição: Make sure that hashing data is safe here.
+
+ACHADO SONARQUBE 2
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7503
+CWE: não informada no relatório bruto consultado
+Arquivo: sqli/middlewares.py
+Linha: 61
+Link do código: https://github.com/anxolerd/dvpwa/blob/b11d0415f86cc2285158d2f07c81cd9777d8fffb/sqli/middlewares.py#L61
+Descrição: Use asynchronous features in this function or remove the `async` keyword.
+
+ACHADO SONARQUBE 3
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7503
+CWE: não informada no relatório bruto consultado
+Arquivo: sqli/middlewares.py
+Linha: 68
+Link do código: https://github.com/anxolerd/dvpwa/blob/b11d0415f86cc2285158d2f07c81cd9777d8fffb/sqli/middlewares.py#L68
+Descrição: Use asynchronous features in this function or remove the `async` keyword.
+
+CLASSIFICAÇÃO DO PROJETO: COM ACHADOS
+
+
+########################################################################
+REPOSITÓRIO: bottlepy/bottle
+GitHub: https://github.com/bottlepy/bottle
+Commit utilizado: b3fa1d687c3170416a3ada7d69715a9077b748a9
+Link do commit: https://github.com/bottlepy/bottle/commit/b3fa1d687c3170416a3ada7d69715a9077b748a9
+Linhas Python aproximadas: 8372
+########################################################################
+
+--------------------------- // SEMGREP // ---------------------------
+
+Total de achados do Semgrep: 18
+
+ACHADO SEMGREP 1
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag
+CWE: CWE-1357: Reliance on Insufficiently Trustworthy Component; CWE-353: Missing Support for Integrity Check
+Arquivo: .github/workflows/run_tests.yml
+Linha: 12
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/.github/workflows/run_tests.yml#L12
+Descrição: GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.
+
+ACHADO SEMGREP 2
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: yaml.github-actions.security.github-actions-mutable-action-tag.github-actions-mutable-action-tag
+CWE: CWE-1357: Reliance on Insufficiently Trustworthy Component; CWE-353: Missing Support for Integrity Check
+Arquivo: .github/workflows/run_tests.yml
+Linha: 14
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/.github/workflows/run_tests.yml#L14
+Descrição: GitHub Actions step uses a mutable tag or branch reference. Tags and branch names can be silently repointed by the action owner, enabling supply-chain attacks — as seen in the trivy-action and kics-github-action compromises. Pin the reference to a full 40-character commit SHA instead, e.g. `uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608`.
+
+ACHADO SEMGREP 3
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: python.lang.security.audit.exec-detected.exec-detected
+CWE: CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')
+Arquivo: bottle.py
+Linha: 160
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L160
+Descrição: Detected the use of exec(). exec() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.
+
+ACHADO SEMGREP 4
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: python.lang.security.deserialization.pickle.avoid-cPickle
+CWE: CWE-502: Deserialization of Untrusted Data
+Arquivo: bottle.py
+Linha: 1236
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L1236
+Descrição: Avoid using `cPickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.
+
+ACHADO SEMGREP 5
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: python.lang.security.deserialization.pickle.avoid-pickle
+CWE: CWE-502: Deserialization of Untrusted Data
+Arquivo: bottle.py
+Linha: 1236
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L1236
+Descrição: Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.
+
+ACHADO SEMGREP 6
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: python.lang.security.deserialization.pickle.avoid-cPickle
+CWE: CWE-502: Deserialization of Untrusted Data
+Arquivo: bottle.py
+Linha: 1872
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L1872
+Descrição: Avoid using `cPickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.
+
+ACHADO SEMGREP 7
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: python.lang.security.deserialization.pickle.avoid-pickle
+CWE: CWE-502: Deserialization of Untrusted Data
+Arquivo: bottle.py
+Linha: 1872
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L1872
+Descrição: Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.
+
+ACHADO SEMGREP 8
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: python.lang.security.insecure-hash-algorithms.insecure-hash-algorithm-sha1
+CWE: CWE-327: Use of a Broken or Risky Cryptographic Algorithm
+Arquivo: bottle.py
+Linha: 2923
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L2923
+Descrição: Detected SHA1 hash algorithm which is considered insecure. SHA1 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.
+
+ACHADO SEMGREP 9
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: python.lang.security.deserialization.pickle.avoid-cPickle
+CWE: CWE-502: Deserialization of Untrusted Data
+Arquivo: bottle.py
+Linha: 3080
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3080
+Descrição: Avoid using `cPickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.
+
+ACHADO SEMGREP 10
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: python.lang.security.deserialization.pickle.avoid-pickle
+CWE: CWE-502: Deserialization of Untrusted Data
+Arquivo: bottle.py
+Linha: 3080
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3080
+Descrição: Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.
+
+ACHADO SEMGREP 11
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: python.lang.security.deserialization.pickle.avoid-cPickle
+CWE: CWE-502: Deserialization of Untrusted Data
+Arquivo: bottle.py
+Linha: 3095
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3095
+Descrição: Avoid using `cPickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.
+
+ACHADO SEMGREP 12
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: python.lang.security.deserialization.pickle.avoid-pickle
+CWE: CWE-502: Deserialization of Untrusted Data
+Arquivo: bottle.py
+Linha: 3095
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3095
+Descrição: Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format.
+
+ACHADO SEMGREP 13
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: python.lang.security.audit.eval-detected.eval-detected
+CWE: CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')
+Arquivo: bottle.py
+Linha: 3618
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3618
+Descrição: Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.
+
+ACHADO SEMGREP 14
+Ferramenta: Semgrep
+Severidade: INFO
+Regra: python.lang.security.audit.mako-templates-detected.mako-templates-detected
+CWE: CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')
+Arquivo: bottle.py
+Linha: 3888
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3888
+Descrição: Mako templates do not provide a global HTML escaping mechanism. This means you must escape all sensitive data in your templates using '| u' for URL escaping or '| h' for HTML escaping. If you are using Mako to serve web content, consider using a system such as Jinja2 which enables global escaping.
+
+ACHADO SEMGREP 15
+Ferramenta: Semgrep
+Severidade: INFO
+Regra: python.lang.security.audit.mako-templates-detected.mako-templates-detected
+CWE: CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')
+Arquivo: bottle.py
+Linha: 3890
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3890
+Descrição: Mako templates do not provide a global HTML escaping mechanism. This means you must escape all sensitive data in your templates using '| u' for URL escaping or '| h' for HTML escaping. If you are using Mako to serve web content, consider using a system such as Jinja2 which enables global escaping.
+
+ACHADO SEMGREP 16
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: python.flask.security.xss.audit.direct-use-of-jinja2.direct-use-of-jinja2
+CWE: CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')
+Arquivo: bottle.py
+Linha: 3926
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3926
+Descrição: Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method 'render_template()' and templates with a '.html' extension in order to prevent XSS.
+
+ACHADO SEMGREP 17
+Ferramenta: Semgrep
+Severidade: WARNING
+Regra: python.lang.security.audit.exec-detected.exec-detected
+CWE: CWE-95: Improper Neutralization of Directives in Dynamically Evaluated Code ('Eval Injection')
+Arquivo: bottle.py
+Linha: 4009
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L4009
+Descrição: Detected the use of exec(). exec() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources.
+
+ACHADO SEMGREP 18
+Ferramenta: Semgrep
+Severidade: ERROR
+Regra: javascript.lang.security.detect-insecure-websocket.detect-insecure-websocket
+CWE: CWE-319: Cleartext Transmission of Sensitive Information
+Arquivo: docs/async.rst
+Linha: 119
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/docs/async.rst#L119
+Descrição: Insecure WebSocket Detected. WebSocket Secure (wss) should be used for all WebSocket connections.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+-------------------------- // SONARQUBE // --------------------------
+
+Escopo: somente arquivos Python (**/*.py)
+Total de issues do SonarQube: 141
+
+ACHADO SONARQUBE 1
+Ferramenta: SonarQube
+Tipo: BUG
+Severidade: BLOCKER
+Regra: python:S930
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 3368
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3368
+Descrição: Add 1 missing arguments; 'depr' expects 4 positional arguments.
+
+ACHADO SONARQUBE 2
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 1028
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L1028
+Descrição: Define a constant instead of duplicating this literal 'bottle.exc_info' 3 times.
+
+ACHADO SONARQUBE 3
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8997
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_exc.py
+Linha: 28
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_exc.py#L28
+Descrição: Use the "monkeypatch" fixture for temporary modifications instead of manually modifying global state.
+
+ACHADO SONARQUBE 4
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 2845
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L2845
+Descrição: Refactor this function to reduce its Cognitive Complexity from 34 to the 15 allowed.
+
+ACHADO SONARQUBE 5
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_sendfile.py
+Linha: 151
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_sendfile.py#L151
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 6
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S8512
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 4039
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L4039
+Descrição: Remove this assignment; "_re_tok" is assigned again on line 4083.
+
+ACHADO SONARQUBE 7
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 472
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L472
+Descrição: Refactor this function to reduce its Cognitive Complexity from 32 to the 15 allowed.
+
+ACHADO SONARQUBE 8
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S8512
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 4052
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L4052
+Descrição: Remove this assignment; "_re_inl" is assigned again on line 4079.
+
+ACHADO SONARQUBE 9
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S8512
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 4079
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L4079
+Descrição: Remove this assignment; "_re_inl" is assigned again on line 4084.
+
+ACHADO SONARQUBE 10
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6395
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 3021
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3021
+Descrição: Unwrap this unnecessarily grouped subpattern.
+
+ACHADO SONARQUBE 11
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3415
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 25
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L25
+Descrição: Unify assertion argument order in this file; both "actual first" and "expected first" conventions are used.
+
+ACHADO SONARQUBE 12
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 1819
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L1819
+Descrição: Refactor this function to reduce its Cognitive Complexity from 24 to the 15 allowed.
+
+ACHADO SONARQUBE 13
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 3639
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3639
+Descrição: Refactor this function to reduce its Cognitive Complexity from 48 to the 15 allowed.
+
+ACHADO SONARQUBE 14
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 3759
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3759
+Descrição: Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.
+
+ACHADO SONARQUBE 15
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5918
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_sendfile.py
+Linha: 67
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_sendfile.py#L67
+Descrição: Skip this test explicitly.
+
+ACHADO SONARQUBE 16
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S8714
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 667
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L667
+Descrição: Replace this try/except block with "self.assertRaises()".
+
+ACHADO SONARQUBE 17
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 4138
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L4138
+Descrição: Refactor this function to reduce its Cognitive Complexity from 32 to the 15 allowed.
+
+ACHADO SONARQUBE 18
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 1234
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L1234
+Descrição: Rename this variable; it shadows a builtin.
+
+ACHADO SONARQUBE 19
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 3078
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3078
+Descrição: Define a constant instead of duplicating this literal "Do not use this API directly." 3 times.
+
+ACHADO SONARQUBE 20
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3415
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_wsgi.py
+Linha: 112
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_wsgi.py#L112
+Descrição: Unify assertion argument order in this file; both "actual first" and "expected first" conventions are used.
+
+ACHADO SONARQUBE 21
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3415
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_config.py
+Linha: 33
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_config.py#L33
+Descrição: Unify assertion argument order in this file; both "actual first" and "expected first" conventions are used.
+
+ACHADO SONARQUBE 22
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 1026
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L1026
+Descrição: Define a constant instead of duplicating this literal 'wsgi.errors' 4 times.
+
+ACHADO SONARQUBE 23
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 2012
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L2012
+Descrição: Remove the unused function parameter "route".
+
+ACHADO SONARQUBE 24
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_config.py
+Linha: 104
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_config.py#L104
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 25
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_config.py
+Linha: 128
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_config.py#L128
+Descrição: Consider using "assertNotIn" instead.
+
+ACHADO SONARQUBE 26
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_config.py
+Linha: 129
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_config.py#L129
+Descrição: Consider using "assertNotIn" instead.
+
+ACHADO SONARQUBE 27
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_config.py
+Linha: 130
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_config.py#L130
+Descrição: Consider using "assertNotIn" instead.
+
+ACHADO SONARQUBE 28
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_config.py
+Linha: 141
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_config.py#L141
+Descrição: Consider using "assertNotIn" instead.
+
+ACHADO SONARQUBE 29
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_config.py
+Linha: 142
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_config.py#L142
+Descrição: Consider using "assertNotIn" instead.
+
+ACHADO SONARQUBE 30
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 982
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L982
+Descrição: Replace this constructor call with a literal.
+
+ACHADO SONARQUBE 31
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 4372
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L4372
+Descrição: Refactor this function to reduce its Cognitive Complexity from 21 to the 15 allowed.
+
+ACHADO SONARQUBE 32
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 374
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L374
+Descrição: Refactor this function to reduce its Cognitive Complexity from 33 to the 15 allowed.
+
+ACHADO SONARQUBE 33
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 1034
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L1034
+Descrição: Refactor this function to reduce its Cognitive Complexity from 28 to the 15 allowed.
+
+ACHADO SONARQUBE 34
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5713
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 4407
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L4407
+Descrição: Remove this redundant Exception class; it derives from another which is already caught.
+
+ACHADO SONARQUBE 35
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 3526
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3526
+Descrição: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+ACHADO SONARQUBE 36
+Ferramenta: SonarQube
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 2923
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L2923
+Descrição: Make sure that hashing data is safe here.
+
+ACHADO SONARQUBE 37
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6659
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 2903
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L2903
+Descrição: Use `startswith` here.
+
+ACHADO SONARQUBE 38
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_sendfile.py
+Linha: 101
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_sendfile.py#L101
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 39
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_sendfile.py
+Linha: 107
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_sendfile.py#L107
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 40
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_sendfile.py
+Linha: 113
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_sendfile.py#L113
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 41
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5899
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_wsgi.py
+Linha: 52
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_wsgi.py#L52
+Descrição: Rename this method so that it starts with "test" or remove this unused helper.
+
+ACHADO SONARQUBE 42
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_wsgi.py
+Linha: 59
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_wsgi.py#L59
+Descrição: Consider using "assertNotIn" instead.
+
+ACHADO SONARQUBE 43
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 1300
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L1300
+Descrição: Define a constant instead of duplicating this literal 'application/json' 3 times.
+
+ACHADO SONARQUBE 44
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 3023
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3023
+Descrição: Refactor this function to reduce its Cognitive Complexity from 23 to the 15 allowed.
+
+ACHADO SONARQUBE 45
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3415
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_mount.py
+Linha: 42
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_mount.py#L42
+Descrição: Unify assertion argument order in this file; both "actual first" and "expected first" conventions are used.
+
+ACHADO SONARQUBE 46
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 1592
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L1592
+Descrição: Define a constant instead of duplicating this literal 'bottle.request.ext.%s' 3 times.
+
+ACHADO SONARQUBE 47
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 692
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L692
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 48
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5918
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 653
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L653
+Descrição: Skip this test explicitly.
+
+ACHADO SONARQUBE 49
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 303
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L303
+Descrição: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+ACHADO SONARQUBE 50
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S7505
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 593
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L593
+Descrição: Replace this map call with a comprehension.
+
+ACHADO SONARQUBE 51
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: BLOCKER
+Regra: python:S1845
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 1548
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L1548
+Descrição: Rename method "get" to prevent any misunderstanding/clash with field "GET" defined on line 1394
+
+ACHADO SONARQUBE 52
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7500
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 2331
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L2331
+Descrição: Replace this comprehension with passing the iterable to the collection constructor call
+
+ACHADO SONARQUBE 53
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5717
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 3640
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3640
+Descrição: Change this default value to "None" and initialize this parameter inside the function/method.
+
+ACHADO SONARQUBE 54
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7494
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 4306
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L4306
+Descrição: Replace dict constructor call with a dictionary comprehension.
+
+ACHADO SONARQUBE 55
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 1349
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L1349
+Descrição: Define a constant instead of duplicating this literal 'wsgi.input' 5 times.
+
+ACHADO SONARQUBE 56
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8519
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 594
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L594
+Descrição: Replace "list(...)[0]" with "next(iter(...))" to avoid materializing the entire iterable.
+
+ACHADO SONARQUBE 57
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 1059
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L1059
+Descrição: Complete the task associated to this "TODO" comment.
+
+ACHADO SONARQUBE 58
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 410
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L410
+Descrição: Consider using "assertIsNone" instead.
+
+ACHADO SONARQUBE 59
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 402
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L402
+Descrição: Consider using "assertIsNone" instead.
+
+ACHADO SONARQUBE 60
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 1319
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L1319
+Descrição: Refactor this function to reduce its Cognitive Complexity from 23 to the 15 allowed.
+
+ACHADO SONARQUBE 61
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 333
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L333
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 62
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 334
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L334
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 63
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 335
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L335
+Descrição: Consider using "assertNotIn" instead.
+
+ACHADO SONARQUBE 64
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_sendfile.py
+Linha: 80
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_sendfile.py#L80
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 65
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_config.py
+Linha: 34
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_config.py#L34
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 66
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_config.py
+Linha: 63
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_config.py#L63
+Descrição: Consider using "assertIs" instead.
+
+ACHADO SONARQUBE 67
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7494
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 678
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L678
+Descrição: Replace dict constructor call with a dictionary comprehension.
+
+ACHADO SONARQUBE 68
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7496
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 491
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L491
+Descrição: Replace this set constructor call by a set literal.
+
+ACHADO SONARQUBE 69
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3415
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_router.py
+Linha: 97
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_router.py#L97
+Descrição: Unify assertion argument order in this file; both "actual first" and "expected first" conventions are used.
+
+ACHADO SONARQUBE 70
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S6903
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 1809
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L1809
+Descrição: Don't use `datetime.datetime.utcfromtimestamp` to create this datetime object.
+
+ACHADO SONARQUBE 71
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5958
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_router.py
+Linha: 90
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_router.py#L90
+Descrição: This assertion is too broad; use a more specific exception type or check the exception message.
+
+ACHADO SONARQUBE 72
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S8714
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_stpl.py
+Linha: 256
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_stpl.py#L256
+Descrição: Remove this try/except block and let the test fail naturally if an exception is raised.
+
+ACHADO SONARQUBE 73
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3415
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_resources.py
+Linha: 12
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_resources.py#L12
+Descrição: Unify assertion argument order in this file; both "actual first" and "expected first" conventions are used.
+
+ACHADO SONARQUBE 74
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_resources.py
+Linha: 20
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_resources.py#L20
+Descrição: Consider using "assertFalse" instead.
+
+ACHADO SONARQUBE 75
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_resources.py
+Linha: 22
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_resources.py#L22
+Descrição: Consider using "assertTrue" instead.
+
+ACHADO SONARQUBE 76
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 1414
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L1414
+Descrição: Replace this constructor call with a literal.
+
+ACHADO SONARQUBE 77
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 460
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L460
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 78
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_resources.py
+Linha: 69
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_resources.py#L69
+Descrição: Consider using "assertIsNone" instead.
+
+ACHADO SONARQUBE 79
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7504
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 3764
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3764
+Descrição: Remove this unnecessary `list()` call on an already iterable object.
+
+ACHADO SONARQUBE 80
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7504
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 3774
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3774
+Descrição: Remove this unnecessary `list()` call on an already iterable object.
+
+ACHADO SONARQUBE 81
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6659
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 3004
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3004
+Descrição: Use `not` and `startswith` here.
+
+ACHADO SONARQUBE 82
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7494
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 2100
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L2100
+Descrição: Replace dict constructor call with a dictionary comprehension.
+
+ACHADO SONARQUBE 83
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 2271
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L2271
+Descrição: Add missing parameters type.
+
+ACHADO SONARQUBE 84
+Ferramenta: SonarQube
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S905
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 552
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L552
+Descrição: Remove or refactor this statement; it has no side effects.
+
+ACHADO SONARQUBE 85
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7494
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 1690
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L1690
+Descrição: Replace dict constructor call with a dictionary comprehension.
+
+ACHADO SONARQUBE 86
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 165
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L165
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 87
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 166
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L166
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 88
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 327
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L327
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 89
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 328
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L328
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 90
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 329
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L329
+Descrição: Consider using "assertNotIn" instead.
+
+ACHADO SONARQUBE 91
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 345
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L345
+Descrição: Consider using "assertNotIn" instead.
+
+ACHADO SONARQUBE 92
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 346
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L346
+Descrição: Consider using "assertNotIn" instead.
+
+ACHADO SONARQUBE 93
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 347
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L347
+Descrição: Consider using "assertNotIn" instead.
+
+ACHADO SONARQUBE 94
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 350
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L350
+Descrição: Consider using "assertNotIn" instead.
+
+ACHADO SONARQUBE 95
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 359
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L359
+Descrição: Consider using "assertNotIn" instead.
+
+ACHADO SONARQUBE 96
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 363
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L363
+Descrição: Consider using "assertIsNone" instead.
+
+ACHADO SONARQUBE 97
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 373
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L373
+Descrição: Consider using "assertIsNone" instead.
+
+ACHADO SONARQUBE 98
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8997
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 532
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L532
+Descrição: Use the "monkeypatch" fixture for temporary modifications instead of manually modifying global state.
+
+ACHADO SONARQUBE 99
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8997
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 538
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L538
+Descrição: Use the "monkeypatch" fixture for temporary modifications instead of manually modifying global state.
+
+ACHADO SONARQUBE 100
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8997
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 559
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L559
+Descrição: Use the "monkeypatch" fixture for temporary modifications instead of manually modifying global state.
+
+ACHADO SONARQUBE 101
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8997
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 565
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L565
+Descrição: Use the "monkeypatch" fixture for temporary modifications instead of manually modifying global state.
+
+ACHADO SONARQUBE 102
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8997
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 571
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L571
+Descrição: Use the "monkeypatch" fixture for temporary modifications instead of manually modifying global state.
+
+ACHADO SONARQUBE 103
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8997
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 577
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L577
+Descrição: Use the "monkeypatch" fixture for temporary modifications instead of manually modifying global state.
+
+ACHADO SONARQUBE 104
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 423
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L423
+Descrição: Consider using "assertIsNone" instead.
+
+ACHADO SONARQUBE 105
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 445
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L445
+Descrição: Consider using "assertIsNone" instead.
+
+ACHADO SONARQUBE 106
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S100
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 1397
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L1397
+Descrição: Rename method "POST" to match the regular expression ^[a-z_][a-z0-9_]*$.
+
+ACHADO SONARQUBE 107
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8997
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_contextlocals.py
+Linha: 38
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_contextlocals.py#L38
+Descrição: Use the "monkeypatch" fixture for temporary modifications instead of manually modifying global state.
+
+ACHADO SONARQUBE 108
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 137
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L137
+Descrição: Consider using "assertEqual" instead.
+
+ACHADO SONARQUBE 109
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 138
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L138
+Descrição: Consider using "assertEqual" instead.
+
+ACHADO SONARQUBE 110
+Ferramenta: SonarQube
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: não informada no relatório bruto consultado
+Arquivo: docs/conf.py
+Linha: 22
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/docs/conf.py#L22
+Descrição: Using HTTP protocol is insecure. Use HTTPS instead.
+
+ACHADO SONARQUBE 111
+Ferramenta: SonarQube
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: não informada no relatório bruto consultado
+Arquivo: docs/conf.py
+Linha: 23
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/docs/conf.py#L23
+Descrição: Using HTTP protocol is insecure. Use HTTPS instead.
+
+ACHADO SONARQUBE 112
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 2072
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L2072
+Descrição: Remove the unused function parameter "path".
+
+ACHADO SONARQUBE 113
+Ferramenta: SonarQube
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: não informada no relatório bruto consultado
+Arquivo: setup.py
+Linha: 18
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/setup.py#L18
+Descrição: Using HTTP protocol is insecure. Use HTTPS instead.
+
+ACHADO SONARQUBE 114
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5958
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_router.py
+Linha: 89
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_router.py#L89
+Descrição: This assertion is too broad; use a more specific exception type or check the exception message.
+
+ACHADO SONARQUBE 115
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6659
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 2325
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L2325
+Descrição: Use `startswith` here.
+
+ACHADO SONARQUBE 116
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 911
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L911
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 117
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 136
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L136
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 118
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 905
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L905
+Descrição: Consider using "assertNotIn" instead.
+
+ACHADO SONARQUBE 119
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 906
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L906
+Descrição: Consider using "assertIsNone" instead.
+
+ACHADO SONARQUBE 120
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5899
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_securecookies.py
+Linha: 15
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_securecookies.py#L15
+Descrição: Rename this method so that it starts with "test" or remove this unused helper.
+
+ACHADO SONARQUBE 121
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_securecookies.py
+Linha: 40
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_securecookies.py#L40
+Descrição: Consider using "assertIsNone" instead.
+
+ACHADO SONARQUBE 122
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5899
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_wsgi.py
+Linha: 61
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_wsgi.py#L61
+Descrição: Rename this method so that it starts with "test" or remove this unused helper.
+
+ACHADO SONARQUBE 123
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_wsgi.py
+Linha: 70
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_wsgi.py#L70
+Descrição: Consider using "assertNotIn" instead.
+
+ACHADO SONARQUBE 124
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8997
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_wsgi.py
+Linha: 441
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_wsgi.py#L441
+Descrição: Use the "monkeypatch" fixture for temporary modifications instead of manually modifying global state.
+
+ACHADO SONARQUBE 125
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3415
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_mdict.py
+Linha: 28
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_mdict.py#L28
+Descrição: Unify assertion argument order in this file; both "actual first" and "expected first" conventions are used.
+
+ACHADO SONARQUBE 126
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 122
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L122
+Descrição: Consider using "assertNotIn" instead.
+
+ACHADO SONARQUBE 127
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8997
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_outputfilter.py
+Linha: 74
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_outputfilter.py#L74
+Descrição: Use the "monkeypatch" fixture for temporary modifications instead of manually modifying global state.
+
+ACHADO SONARQUBE 128
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8997
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_outputfilter.py
+Linha: 68
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_outputfilter.py#L68
+Descrição: Use the "monkeypatch" fixture for temporary modifications instead of manually modifying global state.
+
+ACHADO SONARQUBE 129
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_outputfilter.py
+Linha: 196
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_outputfilter.py#L196
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 130
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_outputfilter.py
+Linha: 197
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_outputfilter.py#L197
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 131
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 117
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L117
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 132
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 184
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L184
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 133
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_environ.py
+Linha: 185
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_environ.py#L185
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 134
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_wsgi.py
+Linha: 172
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_wsgi.py#L172
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 135
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_wsgi.py
+Linha: 173
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_wsgi.py#L173
+Descrição: Consider using "assertIn" instead.
+
+ACHADO SONARQUBE 136
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5958
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_jinja2.py
+Linha: 29
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_jinja2.py#L29
+Descrição: This assertion is too broad; use a more specific exception type or check the exception message.
+
+ACHADO SONARQUBE 137
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5958
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_jinja2.py
+Linha: 33
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_jinja2.py#L33
+Descrição: This assertion is too broad; use a more specific exception type or check the exception message.
+
+ACHADO SONARQUBE 138
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_sendfile.py
+Linha: 43
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_sendfile.py#L43
+Descrição: Consider using "assertIsNone" instead.
+
+ACHADO SONARQUBE 139
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5958
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_mako.py
+Linha: 26
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_mako.py#L26
+Descrição: This assertion is too broad; use a more specific exception type or check the exception message.
+
+ACHADO SONARQUBE 140
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5958
+CWE: não informada no relatório bruto consultado
+Arquivo: test/test_mako.py
+Linha: 30
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/test/test_mako.py#L30
+Descrição: This assertion is too broad; use a more specific exception type or check the exception message.
+
+ACHADO SONARQUBE 141
+Ferramenta: SonarQube
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: não informada no relatório bruto consultado
+Arquivo: bottle.py
+Linha: 3762
+Link do código: https://github.com/bottlepy/bottle/blob/b3fa1d687c3170416a3ada7d69715a9077b748a9/bottle.py#L3762
+Descrição: Replace this constructor call with a literal.
+
+CLASSIFICAÇÃO DO PROJETO: COM ACHADOS
+

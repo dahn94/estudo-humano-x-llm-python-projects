@@ -1,0 +1,4400 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 38 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: streamlit/streamlit
+####################################################################################################
+Repositorio: https://github.com/streamlit/streamlit
+Commit analisado: 3c96ea7e9b849b5ddc27a5c086eae4368361feba
+Link do commit: https://github.com/streamlit/streamlit/commit/3c96ea7e9b849b5ddc27a5c086eae4368361feba
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 33643
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 6
+  ERROR: 5
+  WARNING: 1
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 429
+  Vulnerabilidades: 39
+  Bugs: 35
+  Code smells: 355
+  Security hotspots: 0
+  Complexidade: 3308
+  Linhas analisadas pelo SonarQube: 22194
+  Severidades: CRITICAL=96, INFO=24, MAJOR=190, MINOR=119
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: lib/streamlit/caching.py
+Linha: 282
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/caching.py#L282
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 2]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: lib/streamlit/caching.py
+Linha: 731
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/caching.py#L731
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 3]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: lib/streamlit/script_runner.py
+Linha: 332
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/script_runner.py#L332
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 4]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: scripts/run_e2e_tests.py
+Linha: 157
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/scripts/run_e2e_tests.py#L157
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 5]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: scripts/run_e2e_tests.py
+Linha: 174
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/scripts/run_e2e_tests.py#L174
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 6]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: scripts/run_e2e_tests.py
+Linha: 180
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/scripts/run_e2e_tests.py#L180
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SONARQUBE 1]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: docs/api-examples-source/charts.area_chart.py
+Linha: 5
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/docs/api-examples-source/charts.area_chart.py#L5
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 2]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: docs/api-examples-source/charts.bar_chart.py
+Linha: 5
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/docs/api-examples-source/charts.bar_chart.py#L5
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 3]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: docs/api-examples-source/charts.line_chart.py
+Linha: 5
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/docs/api-examples-source/charts.line_chart.py#L5
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 4]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: docs/api-examples-source/charts.map.py
+Linha: 6
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/docs/api-examples-source/charts.map.py#L6
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 5]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: docs/api-examples-source/charts.plotly_chart.py
+Linha: 6
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/docs/api-examples-source/charts.plotly_chart.py#L6
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 6]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: docs/api-examples-source/charts.plotly_chart.py
+Linha: 7
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/docs/api-examples-source/charts.plotly_chart.py#L7
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 7]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: docs/api-examples-source/charts.plotly_chart.py
+Linha: 8
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/docs/api-examples-source/charts.plotly_chart.py#L8
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 8]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: docs/api-examples-source/charts.pyplot.py
+Linha: 5
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/docs/api-examples-source/charts.pyplot.py#L5
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 9]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: docs/api-examples-source/charts.vega_lite_chart.py
+Linha: 5
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/docs/api-examples-source/charts.vega_lite_chart.py#L5
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 10]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: docs/api-examples-source/data.dataframe.py
+Linha: 5
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/docs/api-examples-source/data.dataframe.py#L5
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 11]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: docs/api-examples-source/data.table.py
+Linha: 5
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/docs/api-examples-source/data.table.py#L5
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 12]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: docs/api-examples-source/layout.columns2.py
+Linha: 5
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/docs/api-examples-source/layout.columns2.py#L5
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 13]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: docs/api-examples-source/layout.container1.py
+Linha: 9
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/docs/api-examples-source/layout.container1.py#L9
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 14]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: docs/api-examples-source/widget.text_area.py
+Linha: 4
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/docs/api-examples-source/widget.text_area.py#L4
+Descricao: Remove the unused function parameter "x".
+
+[SONARQUBE 15]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: docs/conf.py
+Linha: 170
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/docs/conf.py#L170
+Descricao: Define a constant instead of duplicating this literal "Streamlit Documentation" 3 times.
+
+[SONARQUBE 16]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/components_declare_component.py
+Linha: 17
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/components_declare_component.py#L17
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 17]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/components_iframe.py
+Linha: 17
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/components_iframe.py#L17
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 18]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_add_rows.py
+Linha: 158
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_add_rows.py#L158
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 19]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_altair_chart.py
+Linha: 20
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_altair_chart.py#L20
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 20]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_area_chart.py
+Linha: 19
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_area_chart.py#L19
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 21]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_dataframe_dimension_spec.py
+Linha: 22
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_dataframe_dimension_spec.py#L22
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 22]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_dataframe_sizes.py
+Linha: 53
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_dataframe_sizes.py#L53
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 23]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_dataframe_sizes.py
+Linha: 61
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_dataframe_sizes.py#L61
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 24]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_dataframe_sizes.py
+Linha: 63
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_dataframe_sizes.py#L63
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 25]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_dataframe_sizes.py
+Linha: 70
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_dataframe_sizes.py#L70
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 26]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_dataframe_sizes.py
+Linha: 78
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_dataframe_sizes.py#L78
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 27]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_dataframe_sizes.py
+Linha: 80
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_dataframe_sizes.py#L80
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 28]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_dataframe_sort_column.py
+Linha: 6
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_dataframe_sort_column.py#L6
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 29]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_latex.py
+Linha: 24
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_latex.py#L24
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 30]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_line_chart.py
+Linha: 19
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_line_chart.py#L19
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 31]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S905
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_magic.py
+Linha: 26
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_magic.py#L26
+Descricao: Remove or refactor this statement; it has no side effects.
+
+[SONARQUBE 32]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5797
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_magic.py
+Linha: 30
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_magic.py#L30
+Descricao: Replace this expression; used as a condition it will always be constant.
+
+[SONARQUBE 33]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5797
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_magic.py
+Linha: 33
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_magic.py#L33
+Descricao: Replace this expression; used as a condition it will always be constant.
+
+[SONARQUBE 34]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S108
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_magic.py
+Linha: 34
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_magic.py#L34
+Descricao: Either remove or fill this block of code.
+
+[SONARQUBE 35]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5797
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_magic.py
+Linha: 35
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_magic.py#L35
+Descricao: Replace this expression; used as a condition it will always be constant.
+
+[SONARQUBE 36]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5797
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_magic.py
+Linha: 38
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_magic.py#L38
+Descricao: Replace this expression; used as a condition it will always be constant.
+
+[SONARQUBE 37]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S108
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_magic.py
+Linha: 39
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_magic.py#L39
+Descricao: Either remove or fill this block of code.
+
+[SONARQUBE 38]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1751
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_magic.py
+Linha: 47
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_magic.py#L47
+Descricao: Refactor this loop to do more than one iteration.
+
+[SONARQUBE 39]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S108
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_magic.py
+Linha: 57
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_magic.py#L57
+Descricao: Either remove or fill this block of code.
+
+[SONARQUBE 40]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S2737
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_magic.py
+Linha: 66
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_magic.py#L66
+Descricao: Add logic to this except clause or eliminate it and rethrow the exception automatically.
+
+[SONARQUBE 41]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S108
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_magic.py
+Linha: 74
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_magic.py#L74
+Descricao: Either remove or fill this block of code.
+
+[SONARQUBE 42]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S905
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_magic.py
+Linha: 80
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_magic.py#L80
+Descricao: Remove or refactor this statement; it has no side effects.
+
+[SONARQUBE 43]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7503
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_magic.py
+Linha: 86
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_magic.py#L86
+Descricao: Use asynchronous features in this function or remove the `async` keyword.
+
+[SONARQUBE 44]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S905
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_magic.py
+Linha: 87
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_magic.py#L87
+Descricao: Remove or refactor this statement; it has no side effects.
+
+[SONARQUBE 45]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S108
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_magic.py
+Linha: 110
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_magic.py#L110
+Descricao: Either remove or fill this block of code.
+
+[SONARQUBE 46]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5603
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_magic.py
+Linha: 129
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_magic.py#L129
+Descricao: Remove this unused class declaration.
+
+[SONARQUBE 47]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_map.py
+Linha: 25
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_map.py#L25
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 48]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S7505
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_multiselect.py
+Linha: 33
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_multiselect.py#L33
+Descricao: Replace this map call with a comprehension.
+
+[SONARQUBE 49]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_plotly_chart.py
+Linha: 20
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_plotly_chart.py#L20
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 50]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_plotly_chart.py
+Linha: 21
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_plotly_chart.py#L21
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 51]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_plotly_chart.py
+Linha: 22
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_plotly_chart.py#L22
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 52]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_pydeck_chart.py
+Linha: 29
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_pydeck_chart.py#L29
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 53]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_pyplot.py
+Linha: 20
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_pyplot.py#L20
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 54]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_pyplot_kwargs.py
+Linha: 31
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_pyplot_kwargs.py#L31
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 55]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_pyplot_kwargs.py
+Linha: 32
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_pyplot_kwargs.py#L32
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 56]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_pyplot_kwargs.py
+Linha: 33
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_pyplot_kwargs.py#L33
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 57]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_reuse_label.py
+Linha: 38
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_reuse_label.py#L38
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 58]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_table_styling.py
+Linha: 51
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_table_styling.py#L51
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 59]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_table_styling.py
+Linha: 72
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_table_styling.py#L72
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 60]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_table_styling.py
+Linha: 77
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_table_styling.py#L77
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 61]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: e2e/scripts/st_vega_lite_chart.py
+Linha: 21
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/e2e/scripts/st_vega_lite_chart.py#L21
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 62]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/animation.py
+Linha: 22
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/animation.py#L22
+Descricao: Remove this commented out code.
+
+[SONARQUBE 63]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/audio.py
+Linha: 38
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/audio.py#L38
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 64]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1066
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/audio.py
+Linha: 41
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/audio.py#L41
+Descricao: Merge this if statement with the enclosing one.
+
+[SONARQUBE 65]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/audio.py
+Linha: 123
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/audio.py#L123
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 66]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/audio.py
+Linha: 127
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/audio.py#L127
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 67]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/caching.py
+Linha: 31
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/caching.py#L31
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 68]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/caching.py
+Linha: 90
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/caching.py#L90
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 69]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/images.py
+Linha: 147
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/images.py#L147
+Descricao: Replace the unused loop index "i" with "_".
+
+[SONARQUBE 70]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/images.py
+Linha: 150
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/images.py#L150
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 71]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/images.py
+Linha: 150
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/images.py#L150
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 72]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/images.py
+Linha: 151
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/images.py#L151
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 73]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S5443
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/images.py
+Linha: 197
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/images.py#L197
+Descricao: Make sure publicly writable directories are used safely here.
+
+[SONARQUBE 74]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/images.py
+Linha: 208
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/images.py#L208
+Descricao: Define a constant instead of duplicating this literal "image.png" 5 times.
+
+[SONARQUBE 75]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/images.py
+Linha: 245
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/images.py#L245
+Descricao: Define a constant instead of duplicating this literal "/tmp/image.png" 3 times.
+
+[SONARQUBE 76]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S5443
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/images.py
+Linha: 245
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/images.py#L245
+Descricao: Make sure publicly writable directories are used safely here.
+
+[SONARQUBE 77]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S5443
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/images.py
+Linha: 245
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/images.py#L245
+Descricao: Make sure publicly writable directories are used safely here.
+
+[SONARQUBE 78]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S5443
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/images.py
+Linha: 248
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/images.py#L248
+Descricao: Make sure publicly writable directories are used safely here.
+
+[SONARQUBE 79]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/images.py
+Linha: 294
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/images.py#L294
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 80]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/mnist-cnn.py
+Linha: 78
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/mnist-cnn.py#L78
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 81]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/mnist-cnn.py
+Linha: 123
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/mnist-cnn.py#L123
+Descricao: Remove this commented out code.
+
+[SONARQUBE 82]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/plotly_example.py
+Linha: 36
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/plotly_example.py#L36
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 83]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/plotly_example.py
+Linha: 46
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/plotly_example.py#L46
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 84]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/plotly_example.py
+Linha: 53
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/plotly_example.py#L53
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 85]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/plotly_example.py
+Linha: 62
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/plotly_example.py#L62
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 86]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/plotly_example.py
+Linha: 77
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/plotly_example.py#L77
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 87]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/plotly_example.py
+Linha: 78
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/plotly_example.py#L78
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 88]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/plotly_example.py
+Linha: 79
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/plotly_example.py#L79
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 89]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/run_on_save.py
+Linha: 43
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/run_on_save.py#L43
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 90]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/run_on_save.py
+Linha: 78
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/run_on_save.py#L78
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 91]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S7632
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/syntax_error.py
+Linha: 22
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/syntax_error.py#L22
+Descricao: Fix the syntax of this issue suppression comment.
+
+[SONARQUBE 92]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/video.py
+Linha: 38
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/video.py#L38
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 93]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1066
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/video.py
+Linha: 41
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/video.py#L41
+Descricao: Merge this if statement with the enclosing one.
+
+[SONARQUBE 94]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/video.py
+Linha: 79
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/video.py#L79
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 95]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/video.py
+Linha: 80
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/examples/video.py#L80
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 96]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/__init__.py
+Linha: 306
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/__init__.py#L306
+Descricao: Replace the unused local variable "exc_tb" with "_".
+
+[SONARQUBE 97]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/bootstrap.py
+Linha: 77
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/bootstrap.py#L77
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 98]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/bootstrap.py
+Linha: 150
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/bootstrap.py#L150
+Descricao: Define a constant instead of duplicating this literal "browser.serverAddress" 4 times.
+
+[SONARQUBE 99]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/bootstrap.py
+Linha: 152
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/bootstrap.py#L152
+Descricao: Define a constant instead of duplicating this literal "server.address" 4 times.
+
+[SONARQUBE 100]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/caching.py
+Linha: 259
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/caching.py#L259
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 101]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/caching.py
+Linha: 267
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/caching.py#L267
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 102]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5713
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/caching.py
+Linha: 306
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/caching.py#L306
+Descricao: Remove this redundant Exception class; it derives from another which is already caught.
+
+[SONARQUBE 103]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/caching.py
+Linha: 349
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/caching.py#L349
+Descricao: Refactor this function to reduce its Cognitive Complexity from 25 to the 15 allowed.
+
+[SONARQUBE 104]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/caching.py
+Linha: 481
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/caching.py#L481
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 105]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/caching.py
+Linha: 541
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/caching.py#L541
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 106]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/caching.py
+Linha: 673
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/caching.py#L673
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 107]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/caching.py
+Linha: 695
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/caching.py#L695
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 108]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/caching.py
+Linha: 774
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/caching.py#L774
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 109]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/case_converters.py
+Linha: 71
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/case_converters.py#L71
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 110]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6659
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/cli.py
+Linha: 207
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/cli.py#L207
+Descricao: Use `endswith` here.
+
+[SONARQUBE 111]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/code_util.py
+Linha: 41
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/code_util.py#L41
+Descricao: Rename this local variable "startIndex" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 112]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/commands/page_config.py
+Linha: 138
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/commands/page_config.py#L138
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 113]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/commands/page_config.py
+Linha: 142
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/commands/page_config.py#L142
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 114]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/commands/page_config.py
+Linha: 143
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/commands/page_config.py#L143
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 115]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/components/v1/components.py
+Linha: 78
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/components/v1/components.py#L78
+Descricao: Refactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.
+
+[SONARQUBE 116]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/components/v1/components.py
+Linha: 162
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/components/v1/components.py#L162
+Descricao: Catch a more specific exception or reraise the exception
+
+[SONARQUBE 117]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/components/v1/components.py
+Linha: 238
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/components/v1/components.py#L238
+Descricao: Use the opposite operator ("!=") instead.
+
+[SONARQUBE 118]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/config.py
+Linha: 44
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/config.py#L44
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 119]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/config.py
+Linha: 199
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/config.py#L199
+Descricao: Define a constant instead of duplicating this literal "global.sharingMode" 3 times.
+
+[SONARQUBE 120]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/config.py
+Linha: 241
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/config.py#L241
+Descricao: Define a constant instead of duplicating this literal "global.logLevel" 3 times.
+
+[SONARQUBE 121]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/config.py
+Linha: 311
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/config.py#L311
+Descricao: Define a constant instead of duplicating this literal "global.developmentMode" 6 times.
+
+[SONARQUBE 122]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/config.py
+Linha: 514
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/config.py#L514
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 123]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/config.py
+Linha: 777
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/config.py#L777
+Descricao: Refactor this function to reduce its Cognitive Complexity from 35 to the 15 allowed.
+
+[SONARQUBE 124]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/config.py
+Linha: 1008
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/config.py#L1008
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 125]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5799
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/config.py
+Linha: 1029
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/config.py#L1029
+Descricao: Merge these implicitly concatenated strings; or did you forget a comma?
+
+[SONARQUBE 126]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/config.py
+Linha: 1047
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/config.py#L1047
+Descricao: Define a constant instead of duplicating this literal "s3.url" 4 times.
+
+[SONARQUBE 127]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/credentials.py
+Linha: 129
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/credentials.py#L129
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 128]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/credentials.py
+Linha: 137
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/credentials.py#L137
+Descricao: Remove the unused local variable "e".
+
+[SONARQUBE 129]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/credentials.py
+Linha: 141
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/credentials.py#L141
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 130]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5713
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/credentials.py
+Linha: 158
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/credentials.py#L158
+Descricao: Remove this redundant Exception class; it derives from another which is already caught.
+
+[SONARQUBE 131]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/credentials.py
+Linha: 192
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/credentials.py#L192
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 132]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/delta_generator.py
+Linha: 346
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/delta_generator.py#L346
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 133]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/data_frame_proto.py
+Linha: 193
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/data_frame_proto.py#L193
+Descricao: Refactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.
+
+[SONARQUBE 134]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/data_frame_proto.py
+Linha: 248
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/data_frame_proto.py#L248
+Descricao: Refactor this function to reduce its Cognitive Complexity from 21 to the 15 allowed.
+
+[SONARQUBE 135]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/data_frame_proto.py
+Linha: 314
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/data_frame_proto.py#L314
+Descricao: Refactor this function to reduce its Cognitive Complexity from 21 to the 15 allowed.
+
+[SONARQUBE 136]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6660
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/data_frame_proto.py
+Linha: 323
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/data_frame_proto.py#L323
+Descricao: Use the `isinstance()` function here.
+
+[SONARQUBE 137]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6660
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/data_frame_proto.py
+Linha: 325
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/data_frame_proto.py#L325
+Descricao: Use the `isinstance()` function here.
+
+[SONARQUBE 138]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/data_frame_proto.py
+Linha: 326
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/data_frame_proto.py#L326
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 139]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/data_frame_proto.py
+Linha: 327
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/data_frame_proto.py#L327
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 140]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6660
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/data_frame_proto.py
+Linha: 334
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/data_frame_proto.py#L334
+Descricao: Use the `isinstance()` function here.
+
+[SONARQUBE 141]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6660
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/data_frame_proto.py
+Linha: 344
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/data_frame_proto.py#L344
+Descricao: Use the `isinstance()` function here.
+
+[SONARQUBE 142]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6660
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/data_frame_proto.py
+Linha: 349
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/data_frame_proto.py#L349
+Descricao: Use the `isinstance()` function here.
+
+[SONARQUBE 143]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6730
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/data_frame_proto.py
+Linha: 396
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/data_frame_proto.py#L396
+Descricao: Replace this deprecated "numpy" type alias with the builtin type "object".
+
+[SONARQUBE 144]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/data_frame_proto.py
+Linha: 408
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/data_frame_proto.py#L408
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 145]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/data_frame_proto.py
+Linha: 515
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/data_frame_proto.py#L515
+Descricao: Refactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.
+
+[SONARQUBE 146]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/data_frame_proto.py
+Linha: 543
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/data_frame_proto.py#L543
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 147]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/file_uploader.py
+Linha: 27
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/file_uploader.py#L27
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 148]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/file_uploader.py
+Linha: 100
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/file_uploader.py#L100
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 149]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/image_proto.py
+Linha: 106
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/image_proto.py#L106
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 150]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1542
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/image_proto.py
+Linha: 184
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/image_proto.py#L184
+Descricao: Rename function "_PIL_to_bytes" to match the regular expression ^[a-z_][a-z0-9_]*$.
+
+[SONARQUBE 151]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1542
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/image_proto.py
+Linha: 196
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/image_proto.py#L196
+Descricao: Rename function "_BytesIO_to_bytes" to match the regular expression ^[a-z_][a-z0-9_]*$.
+
+[SONARQUBE 152]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/image_proto.py
+Linha: 203
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/image_proto.py#L203
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 153]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/image_proto.py
+Linha: 231
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/image_proto.py#L231
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 154]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/image_proto.py
+Linha: 250
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/image_proto.py#L250
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 155]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/image_proto.py
+Linha: 268
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/image_proto.py#L268
+Descricao: Refactor this function to reduce its Cognitive Complexity from 27 to the 15 allowed.
+
+[SONARQUBE 156]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/image_proto.py
+Linha: 273
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/image_proto.py#L273
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 157]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/image_proto.py
+Linha: 337
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/image_proto.py#L337
+Descricao: Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.
+
+[SONARQUBE 158]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6660
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/image_proto.py
+Linha: 373
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/image_proto.py#L373
+Descricao: Use the `isinstance()` function here.
+
+[SONARQUBE 159]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/layouts.py
+Linha: 66
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/layouts.py#L66
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 160]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/lib/dicttools.py
+Linha: 57
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/lib/dicttools.py#L57
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 161]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/lib/dicttools.py
+Linha: 66
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/lib/dicttools.py#L66
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 162]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/lib/dicttools.py
+Linha: 76
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/lib/dicttools.py#L76
+Descricao: Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.
+
+[SONARQUBE 163]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7504
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/lib/dicttools.py
+Linha: 119
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/lib/dicttools.py#L119
+Descricao: Remove this unnecessary `list()` call on an already iterable object.
+
+[SONARQUBE 164]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/lib/dicttools.py
+Linha: 131
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/lib/dicttools.py#L131
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 165]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S108
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/media_proto.py
+Linha: 168
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/media_proto.py#L168
+Descricao: Either remove or fill this block of code.
+
+[SONARQUBE 166]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/multiselect.py
+Linha: 25
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/multiselect.py#L25
+Descricao: Refactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.
+
+[SONARQUBE 167]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/number_input.py
+Linha: 26
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/number_input.py#L26
+Descricao: Refactor this function to reduce its Cognitive Complexity from 53 to the 15 allowed.
+
+[SONARQUBE 168]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/number_input.py
+Linha: 92
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/number_input.py#L92
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 169]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S7505
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/number_input.py
+Linha: 119
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/number_input.py#L119
+Descricao: Replace this map call with a comprehension.
+
+[SONARQUBE 170]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S7505
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/number_input.py
+Linha: 127
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/number_input.py#L127
+Descricao: Replace this map call with a comprehension.
+
+[SONARQUBE 171]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/progress.py
+Linha: 46
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/progress.py#L46
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 172]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S7505
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/select_slider.py
+Linha: 100
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/select_slider.py#L100
+Descricao: Replace this map call with a comprehension.
+
+[SONARQUBE 173]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S7505
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/select_slider.py
+Linha: 132
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/select_slider.py#L132
+Descricao: Replace this map call with a comprehension.
+
+[SONARQUBE 174]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/slider.py
+Linha: 27
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/slider.py#L27
+Descricao: Refactor this function to reduce its Cognitive Complexity from 49 to the 15 allowed.
+
+[SONARQUBE 175]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/slider.py
+Linha: 219
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/slider.py#L219
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 176]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S7505
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/slider.py
+Linha: 228
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/slider.py#L228
+Descricao: Replace this map call with a comprehension.
+
+[SONARQUBE 177]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S7505
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/slider.py
+Linha: 229
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/slider.py#L229
+Descricao: Replace this map call with a comprehension.
+
+[SONARQUBE 178]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/time_widgets.py
+Linha: 141
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/time_widgets.py#L141
+Descricao: Define a constant instead of duplicating this literal "%Y/%m/%d" 4 times.
+
+[SONARQUBE 179]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/vega_lite.py
+Linha: 103
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/vega_lite.py#L103
+Descricao: Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.
+
+[SONARQUBE 180]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/vega_lite.py
+Linha: 118
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/vega_lite.py#L118
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 181]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7496
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/vega_lite.py
+Linha: 170
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/vega_lite.py#L170
+Descricao: Replace this set constructor call by a set literal.
+
+[SONARQUBE 182]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/elements/write.py
+Linha: 37
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/elements/write.py#L37
+Descricao: Refactor this function to reduce its Cognitive Complexity from 25 to the 15 allowed.
+
+[SONARQUBE 183]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/errors.py
+Linha: 108
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/errors.py#L108
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 184]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S905
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/file_util.py
+Linha: 62
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/file_util.py#L62
+Descricao: Remove or refactor this statement; it has no side effects.
+
+[SONARQUBE 185]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S905
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/file_util.py
+Linha: 87
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/file_util.py#L87
+Descricao: Remove or refactor this statement; it has no side effects.
+
+[SONARQUBE 186]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/forward_msg_cache.py
+Linha: 53
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/forward_msg_cache.py#L53
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 187]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/git_util.py
+Linha: 6
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/git_util.py#L6
+Descricao: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+[SONARQUBE 188]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/git_util.py
+Linha: 7
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/git_util.py#L7
+Descricao: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+[SONARQUBE 189]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/git_util.py
+Linha: 30
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/git_util.py#L30
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 190]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 138
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L138
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 191]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1066
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 283
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L283
+Descricao: Merge this if statement with the enclosing one.
+
+[SONARQUBE 192]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1066
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 287
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L287
+Descricao: Merge this if statement with the enclosing one.
+
+[SONARQUBE 193]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 357
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L357
+Descricao: Catch a more specific exception or reraise the exception
+
+[SONARQUBE 194]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 382
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L382
+Descricao: Refactor this function to reduce its Cognitive Complexity from 75 to the 15 allowed.
+
+[SONARQUBE 195]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 402
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L402
+Descricao: Catch a more specific exception or reraise the exception
+
+[SONARQUBE 196]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 417
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L417
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 197]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 423
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L423
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 198]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 452
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L452
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 199]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 458
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L458
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 200]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 482
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L482
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 201]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 498
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L498
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 202]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 511
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L511
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 203]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 598
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L598
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 204]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 615
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L615
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 205]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 620
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L620
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 206]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 624
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L624
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 207]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 630
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L630
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 208]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 637
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L637
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 209]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 645
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L645
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 210]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 648
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L648
+Descricao: Catch a more specific exception or reraise the exception
+
+[SONARQUBE 211]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 656
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L656
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 212]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 688
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L688
+Descricao: Refactor this function to reduce its Cognitive Complexity from 34 to the 15 allowed.
+
+[SONARQUBE 213]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 938
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L938
+Descricao: Remove the unused local variable "additional_explanation".
+
+[SONARQUBE 214]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hashing.py
+Linha: 948
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hashing.py#L948
+Descricao: Remove the unused local variable "object_desc_specific".
+
+[SONARQUBE 215]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hello/demos.py
+Linha: 195
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hello/demos.py#L195
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 216]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hello/demos.py
+Linha: 199
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hello/demos.py#L199
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 217]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1542
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hello/demos.py
+Linha: 225
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hello/demos.py#L225
+Descricao: Rename function "get_UN_data" to match the regular expression ^[a-z_][a-z0-9_]*$.
+
+[SONARQUBE 218]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/hello/hello.py
+Linha: 93
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/hello/hello.py#L93
+Descricao: Replace the unused loop index "i" with "_".
+
+[SONARQUBE 219]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5799
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/logger.py
+Linha: 32
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/logger.py#L32
+Descricao: Merge these implicitly concatenated strings; or did you forget a comma?
+
+[SONARQUBE 220]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S8521
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/logger.py
+Linha: 119
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/logger.py#L119
+Descricao: Remove this unnecessary "keys()" call.
+
+[SONARQUBE 221]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1871
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/magic.py
+Linha: 164
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/magic.py#L164
+Descricao: Either merge this branch with the identical one on line "159" or change one of the implementations.
+
+[SONARQUBE 222]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1871
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/magic.py
+Linha: 169
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/magic.py#L169
+Descricao: Either merge this branch with the identical one on line "159" or change one of the implementations.
+
+[SONARQUBE 223]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/media_file_manager.py
+Linha: 53
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/media_file_manager.py#L53
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 224]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/media_file_manager.py
+Linha: 112
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/media_file_manager.py#L112
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 225]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S7505
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/media_file_manager.py
+Linha: 126
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/media_file_manager.py#L126
+Descricao: Replace this map call with a comprehension.
+
+[SONARQUBE 226]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7504
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/media_file_manager.py
+Linha: 129
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/media_file_manager.py#L129
+Descricao: Remove this unnecessary `list()` call on an already iterable object.
+
+[SONARQUBE 227]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/media_file_manager.py
+Linha: 208
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/media_file_manager.py#L208
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 228]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/metrics.py
+Linha: 22
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/metrics.py#L22
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 229]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/metrics.py
+Linha: 25
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/metrics.py#L25
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 230]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/metrics.py
+Linha: 31
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/metrics.py#L31
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 231]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/metrics.py
+Linha: 34
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/metrics.py#L34
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 232]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/metrics.py
+Linha: 37
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/metrics.py#L37
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 233]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/metrics.py
+Linha: 78
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/metrics.py#L78
+Descricao: Remove the unused local variable "e".
+
+[SONARQUBE 234]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/metrics_util.py
+Linha: 28
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/metrics_util.py#L28
+Descricao: Define a constant instead of duplicating this literal "/etc/machine-id" 3 times.
+
+[SONARQUBE 235]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/metrics_util.py
+Linha: 29
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/metrics_util.py#L29
+Descricao: Define a constant instead of duplicating this literal "/var/lib/dbus/machine-id" 3 times.
+
+[SONARQUBE 236]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/net_util.py
+Linha: 27
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/net_util.py#L27
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 237]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1313
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/net_util.py
+Linha: 85
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/net_util.py#L85
+Descricao: Make sure using this hardcoded IP address "8.8.8.8" is safe here.
+
+[SONARQUBE 238]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/net_util.py
+Linha: 101
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/net_util.py#L101
+Descricao: Remove the unused local variable "e".
+
+[SONARQUBE 239]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/report.py
+Linha: 59
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/report.py#L59
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 240]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/report_queue.py
+Linha: 42
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/report_queue.py#L42
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 241]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/report_queue.py
+Linha: 105
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/report_queue.py#L105
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 242]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/report_session.py
+Linha: 233
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/report_session.py#L233
+Descricao: Refactor this function to reduce its Cognitive Complexity from 20 to the 15 allowed.
+
+[SONARQUBE 243]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/report_session.py
+Linha: 259
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/report_session.py#L259
+Descricao: Define a constant instead of duplicating this literal "server.liveSave" 4 times.
+
+[SONARQUBE 244]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/report_session.py
+Linha: 354
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/report_session.py#L354
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 245]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/script_request_queue.py
+Linha: 101
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/script_request_queue.py#L101
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 246]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/script_runner.py
+Linha: 133
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/script_runner.py#L133
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 247]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/script_runner.py
+Linha: 288
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/script_runner.py#L288
+Descricao: Catch a more specific exception or reraise the exception
+
+[SONARQUBE 248]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/script_runner.py
+Linha: 340
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/script_runner.py#L340
+Descricao: Catch a more specific exception or reraise the exception
+
+[SONARQUBE 249]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/script_runner.py
+Linha: 346
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/script_runner.py#L346
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 250]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5709
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/script_runner.py
+Linha: 364
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/script_runner.py#L364
+Descricao: Derive this class from "Exception" instead of "BaseException".
+
+[SONARQUBE 251]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/script_runner.py
+Linha: 397
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/script_runner.py#L397
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 252]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/script_runner.py
+Linha: 404
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/script_runner.py#L404
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 253]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/routes.py
+Linha: 66
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/routes.py#L66
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 254]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/routes.py
+Linha: 113
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/routes.py#L113
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 255]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/routes.py
+Linha: 187
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/routes.py#L187
+Descricao: Remove this commented out code.
+
+[SONARQUBE 256]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5799
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/routes.py
+Linha: 236
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/routes.py#L236
+Descricao: Merge these implicitly concatenated strings; or did you forget a comma?
+
+[SONARQUBE 257]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/server.py
+Linha: 124
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/server.py#L124
+Descricao: Define a constant instead of duplicating this literal "server.port" 4 times.
+
+[SONARQUBE 258]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/server.py
+Linha: 128
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/server.py#L128
+Descricao: Define a constant instead of duplicating this literal "server.address" 3 times.
+
+[SONARQUBE 259]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/server.py
+Linha: 158
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/server.py#L158
+Descricao: Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.
+
+[SONARQUBE 260]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/server.py
+Linha: 325
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/server.py#L325
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 261]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/server.py
+Linha: 330
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/server.py#L330
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 262]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/server.py
+Linha: 332
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/server.py#L332
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 263]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/server.py
+Linha: 337
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/server.py#L337
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 264]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/server.py
+Linha: 345
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/server.py#L345
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 265]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/server.py
+Linha: 359
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/server.py#L359
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 266]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/server.py
+Linha: 363
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/server.py#L363
+Descricao: Define a constant instead of duplicating this literal "global.developmentMode" 3 times.
+
+[SONARQUBE 267]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/server.py
+Linha: 406
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/server.py#L406
+Descricao: Refactor this function to reduce its Cognitive Complexity from 28 to the 15 allowed.
+
+[SONARQUBE 268]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S108
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/server.py
+Linha: 411
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/server.py#L411
+Descricao: Either remove or fill this block of code.
+
+[SONARQUBE 269]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S108
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/server.py
+Linha: 421
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/server.py#L421
+Descricao: Either remove or fill this block of code.
+
+[SONARQUBE 270]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S108
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/server.py
+Linha: 444
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/server.py#L444
+Descricao: Either remove or fill this block of code.
+
+[SONARQUBE 271]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7504
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/server.py
+Linha: 453
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/server.py#L453
+Descricao: Remove this unnecessary `list()` call on an already iterable object.
+
+[SONARQUBE 272]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/server.py
+Linha: 458
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/server.py#L458
+Descricao: Remove the unused local variable "e".
+
+[SONARQUBE 273]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/server.py
+Linha: 700
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/server.py#L700
+Descricao: Catch a more specific exception or reraise the exception
+
+[SONARQUBE 274]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/server_util.py
+Linha: 27
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/server_util.py#L27
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 275]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/upload_file_request_handler.py
+Linha: 101
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/upload_file_request_handler.py#L101
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 276]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/upload_file_request_handler.py
+Linha: 104
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/upload_file_request_handler.py#L104
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 277]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/server/upload_file_request_handler.py
+Linha: 124
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/server/upload_file_request_handler.py#L124
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 278]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/storage/abstract_storage.py
+Linha: 154
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/storage/abstract_storage.py#L154
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 279]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S108
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/storage/file_storage.py
+Linha: 81
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/storage/file_storage.py#L81
+Descricao: Either remove or fill this block of code.
+
+[SONARQUBE 280]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/storage/s3_storage.py
+Linha: 46
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/storage/s3_storage.py#L46
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 281]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/storage/s3_storage.py
+Linha: 61
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/storage/s3_storage.py#L61
+Descricao: Define a constant instead of duplicating this literal "{USER}" 4 times.
+
+[SONARQUBE 282]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/storage/s3_storage.py
+Linha: 72
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/storage/s3_storage.py#L72
+Descricao: Define a constant instead of duplicating this literal "index.html" 3 times.
+
+[SONARQUBE 283]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/type_util.py
+Linha: 134
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/type_util.py#L134
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 284]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S2737
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/type_util.py
+Linha: 297
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/type_util.py#L297
+Descricao: Add logic to this except clause or eliminate it and rethrow the exception automatically.
+
+[SONARQUBE 285]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/url_util.py
+Linha: 58
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/url_util.py#L58
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 286]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/util.py
+Linha: 104
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/util.py#L104
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 287]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/version.py
+Linha: 93
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/version.py#L93
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 288]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/version.py
+Linha: 101
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/version.py#L101
+Descricao: Catch a more specific exception or reraise the exception
+
+[SONARQUBE 289]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S4144
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/watcher/event_based_file_watcher.py
+Linha: 335
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/watcher/event_based_file_watcher.py#L335
+Descricao: Update this function so that its implementation is not identical to on_created on line 330.
+
+[SONARQUBE 290]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S4144
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/watcher/event_based_file_watcher.py
+Linha: 340
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/watcher/event_based_file_watcher.py#L340
+Descricao: Update this function so that its implementation is not identical to on_created on line 330.
+
+[SONARQUBE 291]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/watcher/local_sources_watcher.py
+Linha: 161
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/watcher/local_sources_watcher.py#L161
+Descricao: Refactor this function to reduce its Cognitive Complexity from 21 to the 15 allowed.
+
+[SONARQUBE 292]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/streamlit/watcher/util.py
+Linha: 64
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/streamlit/watcher/util.py#L64
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 293]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/bootstrap_test.py
+Linha: 87
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/bootstrap_test.py#L87
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 294]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/bootstrap_test.py
+Linha: 90
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/bootstrap_test.py#L90
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 295]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/bootstrap_test.py
+Linha: 106
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/bootstrap_test.py#L106
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 296]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/bootstrap_test.py
+Linha: 107
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/bootstrap_test.py#L107
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 297]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/bootstrap_test.py
+Linha: 129
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/bootstrap_test.py#L129
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 298]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/bootstrap_test.py
+Linha: 130
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/bootstrap_test.py#L130
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 299]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/bootstrap_test.py
+Linha: 154
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/bootstrap_test.py#L154
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 300]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/bootstrap_test.py
+Linha: 155
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/bootstrap_test.py#L155
+Descricao: Consider using "assertNotIn" instead.
+
+[SONARQUBE 301]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/bootstrap_test.py
+Linha: 179
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/bootstrap_test.py#L179
+Descricao: Consider using "assertNotIn" instead.
+
+[SONARQUBE 302]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/bootstrap_test.py
+Linha: 180
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/bootstrap_test.py#L180
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 303]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/bootstrap_test.py
+Linha: 199
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/bootstrap_test.py#L199
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 304]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/bootstrap_test.py
+Linha: 200
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/bootstrap_test.py#L200
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 305]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/bootstrap_test.py
+Linha: 223
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/bootstrap_test.py#L223
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 306]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/bootstrap_test.py
+Linha: 224
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/bootstrap_test.py#L224
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 307]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/bootstrap_test.py
+Linha: 248
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/bootstrap_test.py#L248
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 308]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/bootstrap_test.py
+Linha: 249
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/bootstrap_test.py#L249
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 309]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/bootstrap_test.py
+Linha: 273
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/bootstrap_test.py#L273
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 310]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/bootstrap_test.py
+Linha: 274
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/bootstrap_test.py#L274
+Descricao: Consider using "assertNotIn" instead.
+
+[SONARQUBE 311]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/bootstrap_test.py
+Linha: 283
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/bootstrap_test.py#L283
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 312]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5899
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/caching_test.py
+Linha: 413
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/caching_test.py#L413
+Descricao: Rename this method so that it starts with "test" or remove this unused helper.
+
+[SONARQUBE 313]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5899
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/caching_test.py
+Linha: 423
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/caching_test.py#L423
+Descricao: Rename this method so that it starts with "test" or remove this unused helper.
+
+[SONARQUBE 314]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5899
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/caching_test.py
+Linha: 433
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/caching_test.py#L433
+Descricao: Rename this method so that it starts with "test" or remove this unused helper.
+
+[SONARQUBE 315]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3415
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/cli_test.py
+Linha: 51
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/cli_test.py#L51
+Descricao: Unify assertion argument order in this file; both "actual first" and "expected first" conventions are used.
+
+[SONARQUBE 316]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/cli_test.py
+Linha: 71
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/cli_test.py#L71
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 317]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/cli_test.py
+Linha: 79
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/cli_test.py#L79
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 318]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/cli_test.py
+Linha: 117
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/cli_test.py#L117
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 319]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/components_test.py
+Linha: 187
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/components_test.py#L187
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 320]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3415
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_option_test.py
+Linha: 53
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_option_test.py#L53
+Descricao: Unify assertion argument order in this file; both "actual first" and "expected first" conventions are used.
+
+[SONARQUBE 321]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_option_test.py
+Linha: 55
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_option_test.py#L55
+Descricao: Consider using "assertIsNone" instead.
+
+[SONARQUBE 322]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3415
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 65
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L65
+Descricao: Unify assertion argument order in this file; both "actual first" and "expected first" conventions are used.
+
+[SONARQUBE 323]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 111
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L111
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 324]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 117
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L117
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 325]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 379
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L379
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 326]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 389
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L389
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 327]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 432
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L432
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 328]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 440
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L440
+Descricao: Consider using "assertFalse" instead.
+
+[SONARQUBE 329]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 452
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L452
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 330]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 455
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L455
+Descricao: Consider using "assertFalse" instead.
+
+[SONARQUBE 331]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 459
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L459
+Descricao: Consider using "assertFalse" instead.
+
+[SONARQUBE 332]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 462
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L462
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 333]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 481
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L481
+Descricao: Consider using "assertIsNone" instead.
+
+[SONARQUBE 334]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 482
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L482
+Descricao: Consider using "assertIsNone" instead.
+
+[SONARQUBE 335]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 483
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L483
+Descricao: Consider using "assertIsNone" instead.
+
+[SONARQUBE 336]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 484
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L484
+Descricao: Consider using "assertIsNone" instead.
+
+[SONARQUBE 337]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 494
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L494
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 338]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 500
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L500
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 339]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 513
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L513
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 340]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 521
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L521
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 341]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/config_test.py
+Linha: 579
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/config_test.py#L579
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 342]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3415
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/credentials_test.py
+Linha: 47
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/credentials_test.py#L47
+Descricao: Unify assertion argument order in this file; both "actual first" and "expected first" conventions are used.
+
+[SONARQUBE 343]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/credentials_test.py
+Linha: 48
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/credentials_test.py#L48
+Descricao: Consider using "assertIsNone" instead.
+
+[SONARQUBE 344]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5958
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/credentials_test.py
+Linha: 133
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/credentials_test.py#L133
+Descricao: This assertion is too broad; use a more specific exception type or check the exception message.
+
+[SONARQUBE 345]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/credentials_test.py
+Linha: 236
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/credentials_test.py#L236
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 346]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/data_frame_proto_test.py
+Linha: 190
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/data_frame_proto_test.py#L190
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 347]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/data_frame_proto_test.py
+Linha: 512
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/data_frame_proto_test.py#L512
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 348]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/data_frame_proto_test.py
+Linha: 579
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/data_frame_proto_test.py#L579
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 349]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5958
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/delta_generator_test.py
+Linha: 124
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/delta_generator_test.py#L124
+Descricao: This assertion is too broad; use a more specific exception type or check the exception message.
+
+[SONARQUBE 350]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5958
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/delta_generator_test.py
+Linha: 132
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/delta_generator_test.py#L132
+Descricao: This assertion is too broad; use a more specific exception type or check the exception message.
+
+[SONARQUBE 351]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5958
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/delta_generator_test.py
+Linha: 700
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/delta_generator_test.py#L700
+Descricao: This assertion is too broad; use a more specific exception type or check the exception message.
+
+[SONARQUBE 352]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3415
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/file_util_test.py
+Linha: 44
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/file_util_test.py#L44
+Descricao: Unify assertion argument order in this file; both "actual first" and "expected first" conventions are used.
+
+[SONARQUBE 353]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/file_util_test.py
+Linha: 59
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/file_util_test.py#L59
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 354]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/forward_msg_cache_test.py
+Linha: 98
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/forward_msg_cache_test.py#L98
+Descricao: Consider using "assertIsNone" instead.
+
+[SONARQUBE 355]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 81
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L81
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 356]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 85
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L85
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 357]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 92
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L92
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 358]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 111
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L111
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 359]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 118
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L118
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 360]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 151
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L151
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 361]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 157
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L157
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 362]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 169
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L169
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 363]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 189
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L189
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 364]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 193
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L193
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 365]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 225
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L225
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 366]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 226
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L226
+Descricao: Consider using "assertIsNotNone" instead.
+
+[SONARQUBE 367]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 227
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L227
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 368]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 234
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L234
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 369]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 252
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L252
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 370]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 257
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L257
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 371]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 261
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L261
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 372]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 265
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L265
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 373]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 269
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L269
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 374]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 367
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L367
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 375]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 386
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L386
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 376]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 393
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L393
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 377]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 409
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L409
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 378]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 416
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L416
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 379]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 423
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L423
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 380]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 430
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L430
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 381]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 435
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L435
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 382]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 478
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L478
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 383]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 485
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L485
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 384]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 529
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L529
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 385]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 530
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L530
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 386]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 616
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L616
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 387]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/hashing_test.py
+Linha: 619
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/hashing_test.py#L619
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 388]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5958
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/map_test.py
+Linha: 83
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/map_test.py#L83
+Descricao: This assertion is too broad; use a more specific exception type or check the exception message.
+
+[SONARQUBE 389]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5958
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/map_test.py
+Linha: 91
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/map_test.py#L91
+Descricao: This assertion is too broad; use a more specific exception type or check the exception message.
+
+[SONARQUBE 390]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3415
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/metrics_test.py
+Linha: 56
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/metrics_test.py#L56
+Descricao: Unify assertion argument order in this file; both "actual first" and "expected first" conventions are used.
+
+[SONARQUBE 391]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/metrics_test.py
+Linha: 65
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/metrics_test.py#L65
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 392]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/net_util_test.py
+Linha: 38
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/net_util_test.py#L38
+Descricao: Consider using "assertIsNone" instead.
+
+[SONARQUBE 393]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/net_util_test.py
+Linha: 52
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/net_util_test.py#L52
+Descricao: Consider using "assertIsNone" instead.
+
+[SONARQUBE 394]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S8714
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/report_context_test.py
+Linha: 50
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/report_context_test.py#L50
+Descricao: Remove this try/except block and let the test fail naturally if an exception is raised.
+
+[SONARQUBE 395]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3415
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/report_queue_test.py
+Linha: 65
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/report_queue_test.py#L65
+Descricao: Unify assertion argument order in this file; both "actual first" and "expected first" conventions are used.
+
+[SONARQUBE 396]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/script_request_queue_test.py
+Linha: 102
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/script_request_queue_test.py#L102
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 397]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/server_test.py
+Linha: 552
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/server_test.py#L552
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 398]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/server_test.py
+Linha: 583
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/server_test.py#L583
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 399]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/storage/s3_storage_test.py
+Linha: 40
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/storage/s3_storage_test.py#L40
+Descricao: Consider using "assertIsNone" instead.
+
+[SONARQUBE 400]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/streamlit_test.py
+Linha: 69
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/streamlit_test.py#L69
+Descricao: Consider using "assertFalse" instead.
+
+[SONARQUBE 401]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/streamlit_test.py
+Linha: 74
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/streamlit_test.py#L74
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 402]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/streamlit_test.py
+Linha: 78
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/streamlit_test.py#L78
+Descricao: Consider using "assertFalse" instead.
+
+[SONARQUBE 403]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/streamlit_test.py
+Linha: 83
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/streamlit_test.py#L83
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 404]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3415
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/uploaded_file_manager_test.py
+Linha: 40
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/uploaded_file_manager_test.py#L40
+Descricao: Unify assertion argument order in this file; both "actual first" and "expected first" conventions are used.
+
+[SONARQUBE 405]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/util_test.py
+Linha: 31
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/util_test.py#L31
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 406]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S5863
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/util_test.py
+Linha: 32
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/util_test.py#L32
+Descricao: Replace this assertion to not have the same actual and expected expression.
+
+[SONARQUBE 407]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/util_test.py
+Linha: 62
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/util_test.py#L62
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 408]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/util_test.py
+Linha: 63
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/util_test.py#L63
+Descricao: Consider using "assertFalse" instead.
+
+[SONARQUBE 409]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/util_test.py
+Linha: 74
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/util_test.py#L74
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 410]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/watcher/local_sources_watcher_test.py
+Linha: 111
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/watcher/local_sources_watcher_test.py#L111
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 411]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/watcher/local_sources_watcher_test.py
+Linha: 142
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/watcher/local_sources_watcher_test.py#L142
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 412]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/widgets_test.py
+Linha: 42
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/widgets_test.py#L42
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 413]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/widgets_test.py
+Linha: 43
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/widgets_test.py#L43
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 414]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/widgets_test.py
+Linha: 56
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/widgets_test.py#L56
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 415]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/widgets_test.py
+Linha: 61
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/widgets_test.py#L61
+Descricao: Consider using "assertIsNone" instead.
+
+[SONARQUBE 416]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/widgets_test.py
+Linha: 85
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/widgets_test.py#L85
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 417]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/widgets_test.py
+Linha: 86
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/widgets_test.py#L86
+Descricao: Consider using "assertTrue" instead.
+
+[SONARQUBE 418]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5958
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/write_test.py
+Linha: 197
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/write_test.py#L197
+Descricao: This assertion is too broad; use a more specific exception type or check the exception message.
+
+[SONARQUBE 419]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: lib/tests/streamlit/write_test.py
+Linha: 228
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/lib/tests/streamlit/write_test.py#L228
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 420]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/add_license_headers.py
+Linha: 30
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/scripts/add_license_headers.py#L30
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 421]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/add_license_headers.py
+Linha: 69
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/scripts/add_license_headers.py#L69
+Descricao: Define a constant instead of duplicating this literal "/**\n * @license\n" 4 times.
+
+[SONARQUBE 422]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/add_license_headers.py
+Linha: 83
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/scripts/add_license_headers.py#L83
+Descricao: Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.
+
+[SONARQUBE 423]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/run_all_examples.py
+Linha: 43
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/scripts/run_all_examples.py#L43
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 424]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/update_name.py
+Linha: 36
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/scripts/update_name.py#L36
+Descricao: Remove the unused function parameter "python".
+
+[SONARQUBE 425]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/update_name.py
+Linha: 41
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/scripts/update_name.py#L41
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 426]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/update_name.py
+Linha: 55
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/scripts/update_name.py#L55
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 427]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S2737
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/update_version.py
+Linha: 80
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/scripts/update_version.py#L80
+Descricao: Add logic to this except clause or eliminate it and rethrow the exception automatically.
+
+[SONARQUBE 428]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/update_version.py
+Linha: 88
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/scripts/update_version.py#L88
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 429]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/update_version.py
+Linha: 106
+Link do codigo: https://github.com/streamlit/streamlit/blob/3c96ea7e9b849b5ddc27a5c086eae4368361feba/scripts/update_version.py#L106
+Descricao: Replace this generic exception class with a more specific one.
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE streamlit/streamlit
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

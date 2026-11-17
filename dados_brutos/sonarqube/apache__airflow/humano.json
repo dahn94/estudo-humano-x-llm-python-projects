@@ -1,0 +1,58 @@
+{
+  "component": {
+    "key": "human-apache__airflow",
+    "name": "Humano - apache__airflow",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "bugs",
+        "value": "23",
+        "bestValue": false
+      },
+      {
+        "metric": "complexity",
+        "value": "23232"
+      },
+      {
+        "metric": "code_smells",
+        "value": "1458",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_reliability_issues",
+        "value": "46",
+        "bestValue": false
+      },
+      {
+        "metric": "ncloc",
+        "value": "227636"
+      },
+      {
+        "metric": "software_quality_maintainability_issues",
+        "value": "1446",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_security_issues",
+        "value": "60",
+        "bestValue": false
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "60",
+        "bestValue": false
+      },
+      {
+        "metric": "security_hotspots",
+        "value": "0",
+        "bestValue": true
+      }
+    ]
+  },
+  "issues_summary": {
+    "issues": [],
+    "paging": {
+      "total": 0
+    }
+  }
+}

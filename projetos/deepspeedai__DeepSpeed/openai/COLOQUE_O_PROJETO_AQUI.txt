@@ -1,0 +1,1 @@
+Coloque aqui o projeto openai gerado com prompts/deepspeedai__DeepSpeed/prompt_recriacao.txt.

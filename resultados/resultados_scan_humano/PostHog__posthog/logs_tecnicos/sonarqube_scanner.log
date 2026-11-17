@@ -1,0 +1,114 @@
+21:45:57.106 INFO  Scanner configuration file: /mnt/c/Users/felipe.fidelis/OneDrive - Vision Cybersecurity/Área de Trabalho/trabalho mestrado/python_prellm_pipeline/pipeline_interno/tools/sonar-scanner/conf/sonar-scanner.properties
+21:45:57.113 INFO  Project root configuration file: NONE
+21:45:57.126 INFO  SonarScanner CLI 8.0.1.6346
+21:45:57.133 INFO  Linux 6.18.33.2-microsoft-standard-WSL2 amd64
+21:45:58.333 INFO  Communicating with SonarQube Community Build 26.9.0.129388
+21:45:58.335 INFO  JRE provisioning is disabled
+21:45:58.336 INFO  The java executable in the PATH will be used
+21:45:58.495 INFO  SONAR_SCANNER_JAVA_OPTS=-Xms256m -Xmx2048m
+21:45:58.816 INFO  Starting SonarScanner Engine...
+21:45:58.818 INFO  Java 21.0.12 Ubuntu (64-bit)
+21:45:59.912 INFO  Load global settings
+21:46:00.002 INFO  Load global settings (done) | time=86ms
+21:46:00.006 INFO  Server id: 147B411E-AaCHMJYtDFq3q1fqGHiY
+21:46:00.023 INFO  Loading required plugins
+21:46:00.031 INFO  Load plugins index
+21:46:00.046 INFO  Load plugins index (done) | time=24ms
+21:46:00.048 INFO  Load/download plugins
+21:46:00.080 INFO  Load/download plugins (done) | time=33ms
+21:46:00.392 INFO  Process project properties
+21:46:00.406 INFO  Process project properties (done) | time=14ms
+21:46:00.417 INFO  Project key: human-posthog__posthog
+21:46:00.419 INFO  Base dir: /home/felipefidelis/prellm_PostHog__posthog_4sin
+21:46:00.421 INFO  Working dir: /home/felipefidelis/prellm_PostHog__posthog_4sin/.scannerwork
+21:46:00.430 INFO  Load project settings for component key: 'human-posthog__posthog'
+21:46:00.465 INFO  Load quality profiles
+21:46:00.522 INFO  Load quality profiles (done) | time=57ms
+21:46:00.557 WARN  SCM provider autodetection failed. Please use "sonar.scm.provider" to define SCM of your project, or disable the SCM Sensor in the project settings.
+21:46:00.571 INFO  Load active rules
+21:46:00.924 INFO  Load active rules (done) | time=354ms
+21:46:00.934 INFO  Load analysis cache
+21:46:00.947 INFO  Load analysis cache (404) | time=13ms
+21:46:01.041 INFO  Preprocessing files...
+21:46:01.193 INFO  1 language detected in 418 preprocessed files (done) | time=151ms
+21:46:01.195 INFO  0 files ignored because of inclusion/exclusion patterns
+21:46:01.196 INFO  Loading plugins for detected languages
+21:46:01.197 INFO  Load/download plugins
+21:46:01.205 INFO  Load/download plugins (done) | time=8ms
+21:46:01.376 INFO  Load project repositories
+21:46:01.386 INFO  Load project repositories (done) | time=10ms
+21:46:01.415 INFO  Indexing files...
+21:46:01.416 INFO  Project configuration:
+21:46:01.418 INFO    Included sources: **/*.py
+21:46:01.419 INFO    Excluded sources: **/.git/**, **/.venv/**, **/venv/**, **/vendor/**, **/vendors/**, **/third_party/**, **/node_modules/**, **/build/**, **/dist/**
+21:46:01.451 INFO  418 files indexed (done) | time=36ms
+21:46:01.453 INFO  Quality profile for py: Sonar way
+21:46:01.455 INFO  ------------- Run sensors on module Humano - PostHog__posthog
+21:46:01.498 INFO  Load metrics repository
+21:46:01.528 INFO  Load metrics repository (done) | time=30ms
+21:46:02.110 INFO  Sensor IaC YAML File Type Classification Sensor [iac]
+21:46:02.116 INFO  Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=6ms
+21:46:02.118 INFO  Sensor IaC hadolint report Sensor [iac]
+21:46:02.120 INFO  Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+21:46:02.121 INFO  Sensor Java Config Sensor [iac]
+21:46:02.122 INFO  There are no files to be analyzed for the Java language
+21:46:02.123 INFO  Sensor Java Config Sensor [iac] (done) | time=0ms
+21:46:02.124 INFO  Sensor IaC Docker Sensor [iac]
+21:46:02.125 INFO  There are no files to be analyzed for the Docker language
+21:46:02.126 INFO  Sensor IaC Docker Sensor [iac] (done) | time=7ms
+21:46:02.127 INFO  Sensor Python Sensor [python]
+21:46:02.527 INFO  Starting global symbols computation
+21:46:02.531 INFO  418 source files to be analyzed
+21:46:06.112 INFO  418/418 source files have been analyzed
+21:46:06.114 INFO  Finished step global symbols computation in 3584ms
+21:46:06.264 INFO  Starting rules execution
+21:46:06.266 INFO  418 source files to be analyzed
+21:46:06.272 WARN  Test files were detected using a path heuristic because "sonar.tests" is not set. To improve the analysis accuracy, it is recommended to configure it, e.g.: "sonar.tests=src/test".
+21:46:13.537 INFO  418/418 source files have been analyzed
+21:46:13.539 INFO  Finished step rules execution in 7272ms
+21:46:13.540 INFO  The Python analyzer was able to leverage cached data from previous analyses for 0 out of 418 files. These files were not parsed.
+21:46:13.541 INFO  Sensor Python Sensor [python] (done) | time=11415ms
+21:46:13.542 INFO  Sensor Cobertura Sensor for Python coverage [python]
+21:46:13.556 INFO  Sensor Cobertura Sensor for Python coverage [python] (done) | time=15ms
+21:46:13.558 INFO  Sensor PythonXUnitSensor [python]
+21:46:13.575 INFO  Sensor PythonXUnitSensor [python] (done) | time=17ms
+21:46:13.576 INFO  Sensor Python Dependency Sensor [python]
+21:46:13.579 INFO  Sensor Python Dependency Sensor [python] (done) | time=4ms
+21:46:13.580 INFO  Sensor TextAndSecretsSensor [text]
+21:46:13.606 INFO  Available processors: 8
+21:46:13.607 INFO  Using 8 threads for analysis.
+21:46:13.865 INFO  The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test", "tests", "mock" or "mocks"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+21:46:13.889 INFO  Start fetching files for the text and secrets analysis
+21:46:13.904 INFO  Using Git CLI to retrieve dirty files
+21:46:13.907 WARN  Retrieving only language associated files, make sure to run the analysis inside a git repository to make use of inclusions specified via "sonar.text.inclusions"
+21:46:13.908 INFO  Starting the text and secrets analysis
+21:46:13.910 INFO  418 source files to be analyzed for the text and secrets analysis
+21:46:14.168 INFO  418/418 source files have been analyzed for the text and secrets analysis
+21:46:14.169 INFO  Skipped 92 file(s) in the secrets analysis due to automatic test file detection
+21:46:14.170 INFO  Sensor TextAndSecretsSensor [text] (done) | time=591ms
+21:46:14.173 INFO  ------------- Run sensors on project
+21:46:14.317 INFO  Sensor IaC Project Sensor [iac]
+21:46:14.319 INFO  Sensor IaC Project Sensor [iac] (done) | time=1ms
+21:46:14.320 INFO  Sensor Zero Coverage Sensor
+21:46:14.372 INFO  Sensor Zero Coverage Sensor (done) | time=52ms
+21:46:14.373 INFO  ------------- Gather SCA dependencies on project
+21:46:14.376 INFO  Dependency analysis skipped
+21:46:14.381 INFO  SCM Publisher No SCM system was detected. You can use the 'sonar.scm.provider' property to explicitly specify it.
+21:46:14.424 INFO  CPD Executor 91 files had no CPD blocks
+21:46:14.425 INFO  CPD Executor Calculating CPD for 327 files
+21:46:14.529 INFO  CPD Executor CPD calculation finished (done) | time=105ms
+21:46:14.768 INFO  Analysis report generated in 220ms, dir size=4.6 MB
+21:46:15.109 INFO  Analysis report compressed in 341ms, zip size=2.8 MB
+21:46:15.560 INFO  Analysis report uploaded in 450ms
+21:46:15.566 INFO  ANALYSIS SUCCESSFUL, you can find the results at: http://localhost:9000/dashboard?id=human-posthog__posthog
+21:46:15.568 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+21:46:15.569 INFO  More about the report processing at http://localhost:9000/api/ce/task?id=e178cdd9-115b-460e-b18f-7e81103511c9
+21:46:15.620 INFO  Analysis total time: 15.489 s
+21:46:15.661 INFO  SonarScanner Engine completed successfully
+21:46:15.711 INFO  EXECUTION SUCCESS
+21:46:15.713 INFO  Total time: 18.618s

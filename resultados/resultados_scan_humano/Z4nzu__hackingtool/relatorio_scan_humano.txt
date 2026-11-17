@@ -1,0 +1,206 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 13 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: Z4nzu/hackingtool
+####################################################################################################
+Repositorio: https://github.com/Z4nzu/hackingtool
+Commit analisado: 768b722efe3f3bfe9ac1a491b737c2e5a69de790
+Link do commit: https://github.com/Z4nzu/hackingtool/commit/768b722efe3f3bfe9ac1a491b737c2e5a69de790
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 1989
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 0
+  ERROR: 0
+  WARNING: 0
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 15
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 15
+  Security hotspots: 0
+  Complexidade: 127
+  Linhas analisadas pelo SonarQube: 1943
+  Severidades: CRITICAL=7, MAJOR=4, MINOR=4
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SONARQUBE 1]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: core.py
+Linha: 27
+Link do codigo: https://github.com/Z4nzu/hackingtool/blob/768b722efe3f3bfe9ac1a491b737c2e5a69de790/core.py#L27
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 2]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: core.py
+Linha: 59
+Link do codigo: https://github.com/Z4nzu/hackingtool/blob/768b722efe3f3bfe9ac1a491b737c2e5a69de790/core.py#L59
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 3]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: core.py
+Linha: 74
+Link do codigo: https://github.com/Z4nzu/hackingtool/blob/768b722efe3f3bfe9ac1a491b737c2e5a69de790/core.py#L74
+Descricao: Define a constant instead of duplicating this literal "[{:2}] {}" 5 times.
+
+[SONARQUBE 4]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: core.py
+Linha: 85
+Link do codigo: https://github.com/Z4nzu/hackingtool/blob/768b722efe3f3bfe9ac1a491b737c2e5a69de790/core.py#L85
+Descricao: Define a constant instead of duplicating this literal "\n\nPress ENTER to continue:" 6 times.
+
+[SONARQUBE 5]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: core.py
+Linha: 100
+Link do codigo: https://github.com/Z4nzu/hackingtool/blob/768b722efe3f3bfe9ac1a491b737c2e5a69de790/core.py#L100
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 6]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: core.py
+Linha: 106
+Link do codigo: https://github.com/Z4nzu/hackingtool/blob/768b722efe3f3bfe9ac1a491b737c2e5a69de790/core.py#L106
+Descricao: Rename this local variable "INSTALL_COMMAND" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 7]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: core.py
+Linha: 120
+Link do codigo: https://github.com/Z4nzu/hackingtool/blob/768b722efe3f3bfe9ac1a491b737c2e5a69de790/core.py#L120
+Descricao: Rename this local variable "UNINSTALL_COMMAND" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 8]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: core.py
+Linha: 124
+Link do codigo: https://github.com/Z4nzu/hackingtool/blob/768b722efe3f3bfe9ac1a491b737c2e5a69de790/core.py#L124
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 9]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: core.py
+Linha: 127
+Link do codigo: https://github.com/Z4nzu/hackingtool/blob/768b722efe3f3bfe9ac1a491b737c2e5a69de790/core.py#L127
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 10]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: core.py
+Linha: 133
+Link do codigo: https://github.com/Z4nzu/hackingtool/blob/768b722efe3f3bfe9ac1a491b737c2e5a69de790/core.py#L133
+Descricao: Rename this local variable "RUN_COMMAND" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 11]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: core.py
+Linha: 137
+Link do codigo: https://github.com/Z4nzu/hackingtool/blob/768b722efe3f3bfe9ac1a491b737c2e5a69de790/core.py#L137
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 12]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: core.py
+Linha: 140
+Link do codigo: https://github.com/Z4nzu/hackingtool/blob/768b722efe3f3bfe9ac1a491b737c2e5a69de790/core.py#L140
+Descricao: Remove the unused function parameter "dir_to_check".
+
+[SONARQUBE 13]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: core.py
+Linha: 158
+Link do codigo: https://github.com/Z4nzu/hackingtool/blob/768b722efe3f3bfe9ac1a491b737c2e5a69de790/core.py#L158
+Descricao: Remove this commented out code.
+
+[SONARQUBE 14]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: core.py
+Linha: 182
+Link do codigo: https://github.com/Z4nzu/hackingtool/blob/768b722efe3f3bfe9ac1a491b737c2e5a69de790/core.py#L182
+Descricao: Remove the unused local variable "e".
+
+[SONARQUBE 15]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5799
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: hackingtool.py
+Linha: 114
+Link do codigo: https://github.com/Z4nzu/hackingtool/blob/768b722efe3f3bfe9ac1a491b737c2e5a69de790/hackingtool.py#L114
+Descricao: Merge these implicitly concatenated strings; or did you forget a comma?
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE Z4nzu/hackingtool
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

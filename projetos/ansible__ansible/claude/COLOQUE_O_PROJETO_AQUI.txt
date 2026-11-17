@@ -1,0 +1,1 @@
+Coloque aqui o projeto claude gerado com prompts/ansible__ansible/prompt_recriacao.txt.

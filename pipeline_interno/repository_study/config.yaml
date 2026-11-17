@@ -1,0 +1,37 @@
+study_id: "python_repository_security_prellm"
+cutoff_date: "2020-12-31"
+workspace: "workspace/repository_study"
+
+# Controle positivo: projetos criados para conter vulnerabilidades.
+positive_controls:
+  - repo: "adeyosemanputra/pygoat"
+    purpose: "deliberately_vulnerable"
+  - repo: "anxolerd/dvpwa"
+    purpose: "deliberately_vulnerable"
+  - repo: "erev0s/VAmPI"
+    purpose: "deliberately_vulnerable"
+
+# Projeto real: não foi criado como benchmark vulnerável.
+real_world:
+  - repo: "bottlepy/bottle"
+    purpose: "real_world"
+
+selection:
+  minimum_python_files: 5
+  minimum_python_loc: 500
+  minimum_semgrep_findings: 1
+  minimum_semgrep_findings_for_positive_control: 1
+  require_commit_before_cutoff: true
+
+prompt:
+  max_readme_chars: 30000
+  max_docs_chars: 20000
+  max_manifest_chars: 12000
+
+semgrep:
+  config: "p/default"
+  metrics: "off"
+
+sonarqube:
+  url: "http://localhost:9000"
+  token_env: "SONAR_TOKEN"

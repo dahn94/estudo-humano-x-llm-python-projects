@@ -1,0 +1,2394 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 36 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: 9001/copyparty
+####################################################################################################
+Repositorio: https://github.com/9001/copyparty
+Commit analisado: e1f4b960e8e581f2f997fe706886091fa3195d2a
+Link do commit: https://github.com/9001/copyparty/commit/e1f4b960e8e581f2f997fe706886091fa3195d2a
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 5258
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 2
+  ERROR: 1
+  WARNING: 1
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 232
+  Vulnerabilidades: 8
+  Bugs: 6
+  Code smells: 218
+  Security hotspots: 0
+  Complexidade: 1026
+  Linhas analisadas pelo SonarQube: 4806
+  Severidades: CRITICAL=134, INFO=19, MAJOR=62, MINOR=17
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: copyparty/broker_mpw.py
+Linha: 74
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/broker_mpw.py#L74
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 2]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: setup.py
+Linha: 52
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/setup.py#L52
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SONARQUBE 1]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 74
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L74
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 2]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 83
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L83
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 3]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 106
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L106
+Descricao: Add a nested comment explaining why this function is empty, or complete the implementation.
+
+[SONARQUBE 4]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1763
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 112
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L112
+Descricao: Delete this unreachable code or refactor the code to make it reachable.
+
+[SONARQUBE 5]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S7505
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 113
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L113
+Descricao: Replace this map call with a comprehension.
+
+[SONARQUBE 6]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1763
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 113
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L113
+Descricao: Delete this unreachable code or refactor the code to make it reachable.
+
+[SONARQUBE 7]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1763
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 136
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L136
+Descricao: Delete this unreachable code or refactor the code to make it reachable.
+
+[SONARQUBE 8]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1763
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 145
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L145
+Descricao: Delete this unreachable code or refactor the code to make it reachable.
+
+[SONARQUBE 9]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S6903
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 164
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L164
+Descricao: Don't use `datetime.datetime.utcnow` to create this datetime object.
+
+[SONARQUBE 10]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 237
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L237
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 11]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 244
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L244
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 12]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S5527
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 252
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L252
+Descricao: Enable server hostname verification on this SSL/TLS connection.
+
+[SONARQUBE 13]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4830
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 252
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L252
+Descricao: Enable server certificate validation on this SSL/TLS connection.
+
+[SONARQUBE 14]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4423
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 254
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L254
+Descricao: Use a stronger protocol, or upgrade to Python 3.10+ which uses secure defaults.
+
+[SONARQUBE 15]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4830
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 254
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L254
+Descricao: Enable server certificate validation on this SSL/TLS connection.
+
+[SONARQUBE 16]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 267
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L267
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 17]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 288
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L288
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 18]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5717
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 291
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L291
+Descricao: Change this default value to "None" and initialize this parameter inside the function/method.
+
+[SONARQUBE 19]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 300
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L300
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 20]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 358
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L358
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 21]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 366
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L366
+Descricao: Refactor this function to reduce its Cognitive Complexity from 20 to the 15 allowed.
+
+[SONARQUBE 22]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 370
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L370
+Descricao: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+[SONARQUBE 23]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 404
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L404
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 24]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 517
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L517
+Descricao: Refactor this function to reduce its Cognitive Complexity from 47 to the 15 allowed.
+
+[SONARQUBE 25]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 609
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L609
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 26]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 713
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L713
+Descricao: Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.
+
+[SONARQUBE 27]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1763
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 743
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L743
+Descricao: Delete this unreachable code or refactor the code to make it reachable.
+
+[SONARQUBE 28]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5797
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 744
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L744
+Descricao: Replace this expression; used as a condition it will always be constant.
+
+[SONARQUBE 29]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 754
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L754
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 30]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 762
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L762
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 31]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 774
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L774
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 32]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 792
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L792
+Descricao: Remove this commented out code.
+
+[SONARQUBE 33]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5797
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 818
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L818
+Descricao: Replace this expression; used as a condition it will always be constant.
+
+[SONARQUBE 34]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 862
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L862
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 35]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 865
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L865
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 36]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 896
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L896
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 37]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 897
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L897
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 38]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 907
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L907
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 39]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 927
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L927
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 40]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1313
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 927
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L927
+Descricao: Make sure using this hardcoded IP address "192.168.1.69" is safe here.
+
+[SONARQUBE 41]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 929
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L929
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 42]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1313
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 929
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L929
+Descricao: Make sure using this hardcoded IP address "192.168.1.69" is safe here.
+
+[SONARQUBE 43]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 958
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L958
+Descricao: Remove this commented out code.
+
+[SONARQUBE 44]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuse.py
+Linha: 983
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuse.py#L983
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 45]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 29
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L29
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 46]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 72
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L72
+Descricao: Add a nested comment explaining why this function is empty, or complete the implementation.
+
+[SONARQUBE 47]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 126
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L126
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 48]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 131
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L131
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 49]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 133
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L133
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 50]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 138
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L138
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 51]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 146
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L146
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 52]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 159
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L159
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 53]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 168
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L168
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 54]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 179
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L179
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 55]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 195
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L195
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 56]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 273
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L273
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 57]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5797
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 292
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L292
+Descricao: Replace this expression; used as a condition it will always be constant.
+
+[SONARQUBE 58]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 325
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L325
+Descricao: Refactor this function to reduce its Cognitive Complexity from 49 to the 15 allowed.
+
+[SONARQUBE 59]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5797
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 330
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L330
+Descricao: Replace this expression; used as a condition it will always be constant.
+
+[SONARQUBE 60]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 401
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L401
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 61]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 410
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L410
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 62]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5797
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 472
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L472
+Descricao: Replace this expression; used as a condition it will always be constant.
+
+[SONARQUBE 63]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5797
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 487
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L487
+Descricao: Replace this expression; used as a condition it will always be constant.
+
+[SONARQUBE 64]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 507
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L507
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 65]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 513
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L513
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 66]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 523
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L523
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 67]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: bin/copyparty-fuseb.py
+Linha: 543
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/bin/copyparty-fuseb.py#L543
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 68]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/__main__.py
+Linha: 35
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/__main__.py#L35
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 69]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/__main__.py
+Linha: 58
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/__main__.py#L58
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 70]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/__main__.py
+Linha: 81
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/__main__.py#L81
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 71]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5717
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/authsrv.py
+Linha: 15
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/authsrv.py#L15
+Descricao: Change this default value to "None" and initialize this parameter inside the function/method.
+
+[SONARQUBE 72]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5717
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/authsrv.py
+Linha: 15
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/authsrv.py#L15
+Descricao: Change this default value to "None" and initialize this parameter inside the function/method.
+
+[SONARQUBE 73]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/authsrv.py
+Linha: 35
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/authsrv.py#L35
+Descricao: Define a constant instead of duplicating this literal "{}/{}" 3 times.
+
+[SONARQUBE 74]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/authsrv.py
+Linha: 54
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/authsrv.py#L54
+Descricao: Remove this commented out code.
+
+[SONARQUBE 75]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/authsrv.py
+Linha: 71
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/authsrv.py#L71
+Descricao: Remove this commented out code.
+
+[SONARQUBE 76]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/authsrv.py
+Linha: 164
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/authsrv.py#L164
+Descricao: Refactor this function to reduce its Cognitive Complexity from 23 to the 15 allowed.
+
+[SONARQUBE 77]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/authsrv.py
+Linha: 186
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/authsrv.py#L186
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 78]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/authsrv.py
+Linha: 202
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/authsrv.py#L202
+Descricao: Refactor this function to reduce its Cognitive Complexity from 47 to the 15 allowed.
+
+[SONARQUBE 79]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/authsrv.py
+Linha: 226
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/authsrv.py#L226
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 80]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S7512
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/authsrv.py
+Linha: 274
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/authsrv.py#L274
+Descricao: Modify this loop to iterate over the dictionary's values.
+
+[SONARQUBE 81]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7500
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/authsrv.py
+Linha: 282
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/authsrv.py#L282
+Descricao: Replace this comprehension with passing the iterable to the collection constructor call
+
+[SONARQUBE 82]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/authsrv.py
+Linha: 285
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/authsrv.py#L285
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 83]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/authsrv.py
+Linha: 304
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/authsrv.py#L304
+Descricao: Remove this commented out code.
+
+[SONARQUBE 84]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5797
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/broker_mp.py
+Linha: 54
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/broker_mp.py#L54
+Descricao: Replace this expression; used as a condition it will always be constant.
+
+[SONARQUBE 85]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/broker_mp.py
+Linha: 76
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/broker_mp.py#L76
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 86]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/broker_mp.py
+Linha: 112
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/broker_mp.py#L112
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 87]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8517
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/broker_mp.py
+Linha: 132
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/broker_mp.py#L132
+Descricao: Use "min()" instead of sorting to find this value.
+
+[SONARQUBE 88]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/broker_mp.py
+Linha: 140
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/broker_mp.py#L140
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 89]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/broker_mpw.py
+Linha: 94
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/broker_mpw.py#L94
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 90]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/broker_thr.py
+Linha: 40
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/broker_thr.py#L40
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 91]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/broker_util.py
+Linha: 14
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/broker_util.py#L14
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 92]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/broker_util.py
+Linha: 20
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/broker_util.py#L20
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 93]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 50
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L50
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 94]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 52
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L52
+Descricao: Refactor this function to reduce its Cognitive Complexity from 42 to the 15 allowed.
+
+[SONARQUBE 95]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 68
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L68
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 96]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 182
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L182
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 97]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 186
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L186
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 98]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 192
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L192
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 99]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 201
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L201
+Descricao: Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.
+
+[SONARQUBE 100]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 207
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L207
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 101]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 264
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L264
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 102]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 275
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L275
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 103]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 289
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L289
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 104]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5727
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 299
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L299
+Descricao: Remove this identity check; it will always be False.
+
+[SONARQUBE 105]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 355
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L355
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 106]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 373
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L373
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 107]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 399
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L399
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 108]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 402
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L402
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 109]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 464
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L464
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 110]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 509
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L509
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 111]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 557
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L557
+Descricao: Refactor this function to reduce its Cognitive Complexity from 25 to the 15 allowed.
+
+[SONARQUBE 112]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 602
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L602
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 113]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 632
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L632
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 114]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 663
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L663
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 115]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 670
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L670
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 116]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 683
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L683
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 117]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 727
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L727
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 118]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 731
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L731
+Descricao: Define a constant instead of duplicating this literal ".hist" 3 times.
+
+[SONARQUBE 119]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 732
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L732
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 120]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S6903
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 756
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L756
+Descricao: Don't use `datetime.datetime.utcfromtimestamp` to create this datetime object.
+
+[SONARQUBE 121]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 775
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L775
+Descricao: Refactor this function to reduce its Cognitive Complexity from 48 to the 15 allowed.
+
+[SONARQUBE 122]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 791
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L791
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 123]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 838
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L838
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 124]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 869
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L869
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 125]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 871
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L871
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 126]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 932
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L932
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 127]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 953
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L953
+Descricao: Remove this commented out code.
+
+[SONARQUBE 128]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 959
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L959
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 129]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 987
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L987
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 130]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 992
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L992
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 131]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 1006
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L1006
+Descricao: Refactor this function to reduce its Cognitive Complexity from 54 to the 15 allowed.
+
+[SONARQUBE 132]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 1049
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L1049
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 133]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 1072
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L1072
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 134]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S6903
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 1088
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L1088
+Descricao: Don't use `datetime.datetime.utcfromtimestamp` to create this datetime object.
+
+[SONARQUBE 135]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 1093
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L1093
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 136]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5797
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 1109
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L1109
+Descricao: Replace this expression; used as a condition it will always be constant.
+
+[SONARQUBE 137]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 1111
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L1111
+Descricao: Remove the unused local variable "md".
+
+[SONARQUBE 138]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 1125
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L1125
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 139]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S2772
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 1127
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L1127
+Descricao: Remove this unneeded "pass".
+
+[SONARQUBE 140]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 1145
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L1145
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 141]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpcli.py
+Linha: 1149
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpcli.py#L1149
+Descricao: Remove this commented out code.
+
+[SONARQUBE 142]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S5247
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpconn.py
+Linha: 51
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpconn.py#L51
+Descricao: Make sure disabling auto-escaping feature is safe here.
+
+[SONARQUBE 143]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/httpconn.py
+Linha: 77
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/httpconn.py#L77
+Descricao: Refactor this function to reduce its Cognitive Complexity from 24 to the 15 allowed.
+
+[SONARQUBE 144]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/stolen/surrogateescape.py
+Linha: 122
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/stolen/surrogateescape.py#L122
+Descricao: Refactor this function to reduce its Cognitive Complexity from 21 to the 15 allowed.
+
+[SONARQUBE 145]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/stolen/surrogateescape.py
+Linha: 167
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/stolen/surrogateescape.py#L167
+Descricao: Remove this commented out code.
+
+[SONARQUBE 146]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6537
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/svchub.py
+Linha: 31
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/svchub.py#L31
+Descricao: Consider replacing this octal escape sequence with a Unicode or hexadecimal sequence instead.
+
+[SONARQUBE 147]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/svchub.py
+Linha: 68
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/svchub.py#L68
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 148]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S6903
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/svchub.py
+Linha: 76
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/svchub.py#L76
+Descricao: Don't use `datetime.datetime.utcfromtimestamp` to create this datetime object.
+
+[SONARQUBE 149]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S6903
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/svchub.py
+Linha: 95
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/svchub.py#L95
+Descricao: Don't use `datetime.datetime.utcfromtimestamp` to create this datetime object.
+
+[SONARQUBE 150]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/svchub.py
+Linha: 102
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/svchub.py#L102
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 151]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1871
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/svchub.py
+Linha: 113
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/svchub.py#L113
+Descricao: Either merge this branch with the identical one on line "111" or change one of the implementations.
+
+[SONARQUBE 152]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/svchub.py
+Linha: 125
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/svchub.py#L125
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 153]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/svchub.py
+Linha: 126
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/svchub.py#L126
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 154]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/tcpsrv.py
+Linha: 43
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/tcpsrv.py#L43
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 155]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/tcpsrv.py
+Linha: 50
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/tcpsrv.py#L50
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 156]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/tcpsrv.py
+Linha: 74
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/tcpsrv.py#L74
+Descricao: Refactor this function to reduce its Cognitive Complexity from 21 to the 15 allowed.
+
+[SONARQUBE 157]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/tcpsrv.py
+Linha: 80
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/tcpsrv.py#L80
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 158]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/tcpsrv.py
+Linha: 84
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/tcpsrv.py#L84
+Descricao: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+[SONARQUBE 159]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/tcpsrv.py
+Linha: 90
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/tcpsrv.py#L90
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 160]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1313
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/tcpsrv.py
+Linha: 96
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/tcpsrv.py#L96
+Descricao: Make sure using this hardcoded IP address "10.255.255.255" is safe here.
+
+[SONARQUBE 161]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1313
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/tcpsrv.py
+Linha: 97
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/tcpsrv.py#L97
+Descricao: Make sure using this hardcoded IP address "172.31.255.255" is safe here.
+
+[SONARQUBE 162]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1313
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/tcpsrv.py
+Linha: 98
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/tcpsrv.py#L98
+Descricao: Make sure using this hardcoded IP address "192.168.255.255" is safe here.
+
+[SONARQUBE 163]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1313
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/tcpsrv.py
+Linha: 99
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/tcpsrv.py#L99
+Descricao: Make sure using this hardcoded IP address "239.255.255.255" is safe here.
+
+[SONARQUBE 164]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/tcpsrv.py
+Linha: 105
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/tcpsrv.py#L105
+Descricao: Remove this commented out code.
+
+[SONARQUBE 165]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/tcpsrv.py
+Linha: 120
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/tcpsrv.py#L120
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 166]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/up2k.py
+Linha: 34
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/up2k.py#L34
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 167]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/up2k.py
+Linha: 55
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/up2k.py#L55
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 168]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/up2k.py
+Linha: 74
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/up2k.py#L74
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 169]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/up2k.py
+Linha: 111
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/up2k.py#L111
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 170]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/up2k.py
+Linha: 118
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/up2k.py#L118
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 171]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/up2k.py
+Linha: 141
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/up2k.py#L141
+Descricao: Remove the unused local variable "ex".
+
+[SONARQUBE 172]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/up2k.py
+Linha: 202
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/up2k.py#L202
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 173]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/up2k.py
+Linha: 236
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/up2k.py#L236
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 174]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/util.py
+Linha: 94
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/util.py#L94
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 175]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/util.py
+Linha: 102
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/util.py#L102
+Descricao: Refactor this function to reduce its Cognitive Complexity from 34 to the 15 allowed.
+
+[SONARQUBE 176]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/util.py
+Linha: 168
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/util.py#L168
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 177]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/util.py
+Linha: 187
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/util.py#L187
+Descricao: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+[SONARQUBE 178]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/util.py
+Linha: 190
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/util.py#L190
+Descricao: Refactor this function to reduce its Cognitive Complexity from 33 to the 15 allowed.
+
+[SONARQUBE 179]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/util.py
+Linha: 221
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/util.py#L221
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 180]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/util.py
+Linha: 226
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/util.py#L226
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 181]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/util.py
+Linha: 232
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/util.py#L232
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 182]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/util.py
+Linha: 266
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/util.py#L266
+Descricao: Refactor this function to reduce its Cognitive Complexity from 28 to the 15 allowed.
+
+[SONARQUBE 183]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/util.py
+Linha: 291
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/util.py#L291
+Descricao: Use the opposite operator ("not in") instead.
+
+[SONARQUBE 184]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S108
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/util.py
+Linha: 373
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/util.py#L373
+Descricao: Either remove or fill this block of code.
+
+[SONARQUBE 185]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/util.py
+Linha: 379
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/util.py#L379
+Descricao: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+[SONARQUBE 186]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/util.py
+Linha: 517
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/util.py#L517
+Descricao: Remove this commented out code.
+
+[SONARQUBE 187]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/util.py
+Linha: 594
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/util.py#L594
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 188]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/util.py
+Linha: 609
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/util.py#L609
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 189]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/util.py
+Linha: 640
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/util.py#L640
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 190]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8786
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/util.py
+Linha: 662
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/util.py#L662
+Descricao: Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.
+
+[SONARQUBE 191]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6353
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: copyparty/util.py
+Linha: 662
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/copyparty/util.py#L662
+Descricao: Use concise character class syntax '\d' instead of '[0-9]'.
+
+[SONARQUBE 192]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S8510
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: docs/unirange.py
+Linha: 9
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/docs/unirange.py#L9
+Descricao: Rename this loop variable; it shadows the outer loop variable "v".
+
+[SONARQUBE 193]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/fusefuzz.py
+Linha: 29
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/fusefuzz.py#L29
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 194]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/fusefuzz.py
+Linha: 34
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/fusefuzz.py#L34
+Descricao: Refactor this function to reduce its Cognitive Complexity from 60 to the 15 allowed.
+
+[SONARQUBE 195]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/fusefuzz.py
+Linha: 73
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/fusefuzz.py#L73
+Descricao: Replace the unused local variable "vb" with "_".
+
+[SONARQUBE 196]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 88
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L88
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 197]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 101
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L101
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 198]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 107
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L107
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 199]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 113
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L113
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 200]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 128
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L128
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 201]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 199
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L199
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 202]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 205
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L205
+Descricao: Refactor this function to reduce its Cognitive Complexity from 32 to the 15 allowed.
+
+[SONARQUBE 203]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 238
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L238
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 204]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 240
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L240
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 205]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S905
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 248
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L248
+Descricao: Remove or refactor this statement; it has no side effects.
+
+[SONARQUBE 206]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 255
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L255
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 207]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4790
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 299
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L299
+Descricao: Make sure that hashing data is safe here.
+
+[SONARQUBE 208]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 306
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L306
+Descricao: Refactor this function to reduce its Cognitive Complexity from 23 to the 15 allowed.
+
+[SONARQUBE 209]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 320
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L320
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 210]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 332
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L332
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 211]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 337
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L337
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 212]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 351
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L351
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 213]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 359
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L359
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 214]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 364
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L364
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 215]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 367
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L367
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 216]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 377
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L377
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 217]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 383
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L383
+Descricao: Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.
+
+[SONARQUBE 218]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 388
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L388
+Descricao: Replace the unused loop index "n" with "_".
+
+[SONARQUBE 219]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 395
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L395
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 220]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 401
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L401
+Descricao: Remove the unused local variable "dpos".
+
+[SONARQUBE 221]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 439
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L439
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 222]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 457
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L457
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 223]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 464
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L464
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 224]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 480
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L480
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 225]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 509
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L509
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 226]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/sfx.py
+Linha: 542
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/sfx.py#L542
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 227]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/speedtest-fs.py
+Linha: 111
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/scripts/speedtest-fs.py#L111
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 228]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: setup.py
+Linha: 61
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/setup.py#L61
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 229]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: setup.py
+Linha: 64
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/setup.py#L64
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 230]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: setup.py
+Linha: 72
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/setup.py#L72
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 231]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: setup.py
+Linha: 77
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/setup.py#L77
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 232]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: setup.py
+Linha: 152
+Link do codigo: https://github.com/9001/copyparty/blob/e1f4b960e8e581f2f997fe706886091fa3195d2a/setup.py#L152
+Descricao: Remove this commented out code.
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE 9001/copyparty
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

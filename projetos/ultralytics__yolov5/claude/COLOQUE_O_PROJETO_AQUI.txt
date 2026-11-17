@@ -1,0 +1,1 @@
+Coloque aqui o projeto claude gerado com prompts/ultralytics__yolov5/prompt_recriacao.txt.

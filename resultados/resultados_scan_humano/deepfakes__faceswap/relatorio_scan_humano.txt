@@ -1,0 +1,191 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 26 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: deepfakes/faceswap
+####################################################################################################
+Repositorio: https://github.com/deepfakes/faceswap
+Commit analisado: b67f91ea0b9d75bd9a2b1c312eedc7ff2e47a2b1
+Link do commit: https://github.com/deepfakes/faceswap/commit/b67f91ea0b9d75bd9a2b1c312eedc7ff2e47a2b1
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 47835
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 15
+  ERROR: 13
+  WARNING: 2
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 0
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 0
+  Security hotspots: 0
+  Complexidade: 6298
+  Linhas analisadas pelo SonarQube: 31243
+  Severidades: nenhuma
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: lib/gui/menu.py
+Linha: 252
+Link do codigo: https://github.com/deepfakes/faceswap/blob/b67f91ea0b9d75bd9a2b1c312eedc7ff2e47a2b1/lib/gui/menu.py#L252
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 2]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: lib/gui/menu.py
+Linha: 305
+Link do codigo: https://github.com/deepfakes/faceswap/blob/b67f91ea0b9d75bd9a2b1c312eedc7ff2e47a2b1/lib/gui/menu.py#L305
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 3]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: lib/gui/menu.py
+Linha: 384
+Link do codigo: https://github.com/deepfakes/faceswap/blob/b67f91ea0b9d75bd9a2b1c312eedc7ff2e47a2b1/lib/gui/menu.py#L384
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 4]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: lib/gui/menu.py
+Linha: 416
+Link do codigo: https://github.com/deepfakes/faceswap/blob/b67f91ea0b9d75bd9a2b1c312eedc7ff2e47a2b1/lib/gui/menu.py#L416
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 5]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: lib/serializer.py
+Linha: 197
+Link do codigo: https://github.com/deepfakes/faceswap/blob/b67f91ea0b9d75bd9a2b1c312eedc7ff2e47a2b1/lib/serializer.py#L197
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 6]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: lib/serializer.py
+Linha: 227
+Link do codigo: https://github.com/deepfakes/faceswap/blob/b67f91ea0b9d75bd9a2b1c312eedc7ff2e47a2b1/lib/serializer.py#L227
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 7]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: lib/sysinfo.py
+Linha: 98
+Link do codigo: https://github.com/deepfakes/faceswap/blob/b67f91ea0b9d75bd9a2b1c312eedc7ff2e47a2b1/lib/sysinfo.py#L98
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 8]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: lib/sysinfo.py
+Linha: 108
+Link do codigo: https://github.com/deepfakes/faceswap/blob/b67f91ea0b9d75bd9a2b1c312eedc7ff2e47a2b1/lib/sysinfo.py#L108
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 9]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: lib/sysinfo.py
+Linha: 120
+Link do codigo: https://github.com/deepfakes/faceswap/blob/b67f91ea0b9d75bd9a2b1c312eedc7ff2e47a2b1/lib/sysinfo.py#L120
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 10]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: lib/sysinfo.py
+Linha: 130
+Link do codigo: https://github.com/deepfakes/faceswap/blob/b67f91ea0b9d75bd9a2b1c312eedc7ff2e47a2b1/lib/sysinfo.py#L130
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 11]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: lib/sysinfo.py
+Linha: 140
+Link do codigo: https://github.com/deepfakes/faceswap/blob/b67f91ea0b9d75bd9a2b1c312eedc7ff2e47a2b1/lib/sysinfo.py#L140
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 12]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: lib/sysinfo.py
+Linha: 157
+Link do codigo: https://github.com/deepfakes/faceswap/blob/b67f91ea0b9d75bd9a2b1c312eedc7ff2e47a2b1/lib/sysinfo.py#L157
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 13]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: setup.py
+Linha: 216
+Link do codigo: https://github.com/deepfakes/faceswap/blob/b67f91ea0b9d75bd9a2b1c312eedc7ff2e47a2b1/setup.py#L216
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 14]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: setup.py
+Linha: 444
+Link do codigo: https://github.com/deepfakes/faceswap/blob/b67f91ea0b9d75bd9a2b1c312eedc7ff2e47a2b1/setup.py#L444
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 15]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: tools/manual/frameviewer/frame.py
+Linha: 646
+Link do codigo: https://github.com/deepfakes/faceswap/blob/b67f91ea0b9d75bd9a2b1c312eedc7ff2e47a2b1/tools/manual/frameviewer/frame.py#L646
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE deepfakes/faceswap
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

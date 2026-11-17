@@ -1,0 +1,117 @@
+21:46:37.190 INFO  Scanner configuration file: /mnt/c/Users/felipe.fidelis/OneDrive - Vision Cybersecurity/Área de Trabalho/trabalho mestrado/python_prellm_pipeline/pipeline_interno/tools/sonar-scanner/conf/sonar-scanner.properties
+21:46:37.199 INFO  Project root configuration file: NONE
+21:46:37.217 INFO  SonarScanner CLI 8.0.1.6346
+21:46:37.226 INFO  Linux 6.18.33.2-microsoft-standard-WSL2 amd64
+21:46:38.406 INFO  Communicating with SonarQube Community Build 26.9.0.129388
+21:46:38.410 INFO  JRE provisioning is disabled
+21:46:38.424 INFO  The java executable in the PATH will be used
+21:46:38.578 INFO  SONAR_SCANNER_JAVA_OPTS=-Xms256m -Xmx2048m
+21:46:38.899 INFO  Starting SonarScanner Engine...
+21:46:38.901 INFO  Java 21.0.12 Ubuntu (64-bit)
+21:46:40.015 INFO  Load global settings
+21:46:40.090 INFO  Load global settings (done) | time=74ms
+21:46:40.093 INFO  Server id: 147B411E-AaCHMJYtDFq3q1fqGHiY
+21:46:40.105 INFO  Loading required plugins
+21:46:40.106 INFO  Load plugins index
+21:46:40.125 INFO  Load plugins index (done) | time=21ms
+21:46:40.128 INFO  Load/download plugins
+21:46:40.152 INFO  Load/download plugins (done) | time=26ms
+21:46:40.418 INFO  Process project properties
+21:46:40.435 INFO  Process project properties (done) | time=17ms
+21:46:40.449 INFO  Project key: human-frappe__erpnext
+21:46:40.451 INFO  Base dir: /home/felipefidelis/prellm_frappe__erpnext_mP1c
+21:46:40.452 INFO  Working dir: /home/felipefidelis/prellm_frappe__erpnext_mP1c/.scannerwork
+21:46:40.465 INFO  Load project settings for component key: 'human-frappe__erpnext'
+21:46:40.501 INFO  Load quality profiles
+21:46:40.559 INFO  Load quality profiles (done) | time=58ms
+21:46:40.597 WARN  SCM provider autodetection failed. Please use "sonar.scm.provider" to define SCM of your project, or disable the SCM Sensor in the project settings.
+21:46:40.607 INFO  Load active rules
+21:46:40.969 INFO  Load active rules (done) | time=361ms
+21:46:40.979 INFO  Load analysis cache
+21:46:40.997 INFO  Load analysis cache (404) | time=15ms
+21:46:41.104 INFO  Preprocessing files...
+21:46:41.878 INFO  1 language detected in 3612 preprocessed files (done) | time=771ms
+21:46:41.879 INFO  0 files ignored because of inclusion/exclusion patterns
+21:46:41.882 INFO  Loading plugins for detected languages
+21:46:41.883 INFO  Load/download plugins
+21:46:41.891 INFO  Load/download plugins (done) | time=9ms
+21:46:42.025 INFO  Load project repositories
+21:46:42.035 INFO  Load project repositories (done) | time=10ms
+21:46:42.053 INFO  Indexing files...
+21:46:42.054 INFO  Project configuration:
+21:46:42.056 INFO    Included sources: **/*.py
+21:46:42.057 INFO    Excluded sources: **/.git/**, **/.venv/**, **/venv/**, **/vendor/**, **/vendors/**, **/third_party/**, **/node_modules/**, **/build/**, **/dist/**
+21:46:42.142 INFO  3612 files indexed (done) | time=88ms
+21:46:42.144 INFO  Quality profile for py: Sonar way
+21:46:42.145 INFO  ------------- Run sensors on module Humano - frappe__erpnext
+21:46:42.185 INFO  Load metrics repository
+21:46:42.211 INFO  Load metrics repository (done) | time=26ms
+21:46:42.815 INFO  Sensor IaC YAML File Type Classification Sensor [iac]
+21:46:42.840 INFO  Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=25ms
+21:46:42.842 INFO  Sensor IaC hadolint report Sensor [iac]
+21:46:42.843 INFO  Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+21:46:42.843 INFO  Sensor Java Config Sensor [iac]
+21:46:42.844 INFO  There are no files to be analyzed for the Java language
+21:46:42.845 INFO  Sensor Java Config Sensor [iac] (done) | time=0ms
+21:46:42.846 INFO  Sensor IaC Docker Sensor [iac]
+21:46:42.910 INFO  There are no files to be analyzed for the Docker language
+21:46:42.912 INFO  Sensor IaC Docker Sensor [iac] (done) | time=68ms
+21:46:42.913 INFO  Sensor Python Sensor [python]
+21:46:43.677 INFO  Starting global symbols computation
+21:46:43.680 INFO  3610 source files to be analyzed
+21:46:53.689 INFO  2405/3610 files analyzed, current files: queries.py, __init__.py, test_pick_list.py, ...
+21:46:57.617 INFO  3610/3610 source files have been analyzed
+21:46:57.619 INFO  Finished step global symbols computation in 13938ms
+21:46:57.885 INFO  Starting rules execution
+21:46:57.887 INFO  3610 source files to be analyzed
+21:46:58.500 WARN  Test files were detected using a path heuristic because "sonar.tests" is not set. To improve the analysis accuracy, it is recommended to configure it, e.g.: "sonar.tests=src/test".
+21:47:07.890 INFO  1074/3610 files analyzed, current files: taxes_and_totals.py, accounts_controller.py, test_vehicle_log.py, ...
+21:47:17.891 INFO  2814/3610 files analyzed, current files: course_wise_assessment_report.py, hotel_room_reservation.py, test_process_loan_security_shortfall.py, ...
+21:47:21.258 INFO  3610/3610 source files have been analyzed
+21:47:21.260 INFO  Finished step rules execution in 23372ms
+21:47:21.261 INFO  The Python analyzer was able to leverage cached data from previous analyses for 0 out of 3610 files. These files were not parsed.
+21:47:21.262 INFO  Sensor Python Sensor [python] (done) | time=38351ms
+21:47:21.263 INFO  Sensor Cobertura Sensor for Python coverage [python]
+21:47:21.372 INFO  Sensor Cobertura Sensor for Python coverage [python] (done) | time=109ms
+21:47:21.374 INFO  Sensor PythonXUnitSensor [python]
+21:47:21.454 INFO  Sensor PythonXUnitSensor [python] (done) | time=81ms
+21:47:21.455 INFO  Sensor Python Dependency Sensor [python]
+21:47:21.460 INFO  Sensor Python Dependency Sensor [python] (done) | time=5ms
+21:47:21.461 INFO  Sensor TextAndSecretsSensor [text]
+21:47:21.533 INFO  Available processors: 8
+21:47:21.534 INFO  Using 8 threads for analysis.
+21:47:21.773 INFO  The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test", "tests", "mock" or "mocks"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+21:47:21.800 INFO  Start fetching files for the text and secrets analysis
+21:47:21.818 INFO  Using Git CLI to retrieve dirty files
+21:47:21.821 WARN  Retrieving only language associated files, make sure to run the analysis inside a git repository to make use of inclusions specified via "sonar.text.inclusions"
+21:47:21.825 INFO  Starting the text and secrets analysis
+21:47:21.827 INFO  3610 source files to be analyzed for the text and secrets analysis
+21:47:22.441 INFO  3610/3610 source files have been analyzed for the text and secrets analysis
+21:47:22.442 INFO  Skipped 495 file(s) in the secrets analysis due to automatic test file detection
+21:47:22.444 INFO  Sensor TextAndSecretsSensor [text] (done) | time=983ms
+21:47:22.446 INFO  ------------- Run sensors on project
+21:47:22.611 INFO  Sensor IaC Project Sensor [iac]
+21:47:22.612 INFO  Sensor IaC Project Sensor [iac] (done) | time=1ms
+21:47:22.613 INFO  Sensor Zero Coverage Sensor
+21:47:22.766 INFO  Sensor Zero Coverage Sensor (done) | time=153ms
+21:47:22.768 INFO  ------------- Gather SCA dependencies on project
+21:47:22.774 INFO  Dependency analysis skipped
+21:47:22.777 INFO  SCM Publisher No SCM system was detected. You can use the 'sonar.scm.provider' property to explicitly specify it.
+21:47:22.944 INFO  CPD Executor 2242 files had no CPD blocks
+21:47:22.945 INFO  CPD Executor Calculating CPD for 1368 files
+21:47:23.262 INFO  CPD Executor CPD calculation finished (done) | time=317ms
+21:47:23.814 INFO  Analysis report generated in 474ms, dir size=21.9 MB
+21:47:25.722 INFO  Analysis report compressed in 1907ms, zip size=15.4 MB
+21:47:26.151 INFO  Analysis report uploaded in 429ms
+21:47:26.155 INFO  ANALYSIS SUCCESSFUL, you can find the results at: http://localhost:9000/dashboard?id=human-frappe__erpnext
+21:47:26.156 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+21:47:26.157 INFO  More about the report processing at http://localhost:9000/api/ce/task?id=35eda10a-8130-4a75-afe3-7ed29b8073bd
+21:47:26.416 INFO  Analysis total time: 46.228 s
+21:47:26.463 INFO  SonarScanner Engine completed successfully
+21:47:26.507 INFO  EXECUTION SUCCESS
+21:47:26.509 INFO  Total time: 49.334s

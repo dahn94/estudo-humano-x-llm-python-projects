@@ -1,0 +1,1 @@
+Coloque aqui o projeto claude gerado com prompts/hankcs__HanLP/prompt.txt.

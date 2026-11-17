@@ -1,0 +1,1 @@
+Coloque aqui o projeto claude gerado com prompts/commaai__openpilot/prompt_recriacao.txt.

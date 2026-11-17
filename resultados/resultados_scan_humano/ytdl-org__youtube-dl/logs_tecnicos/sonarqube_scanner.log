@@ -1,0 +1,116 @@
+15:26:27.210 INFO  Scanner configuration file: /mnt/c/Users/felipe.fidelis/OneDrive - Vision Cybersecurity/Área de Trabalho/trabalho mestrado/python_prellm_pipeline/pipeline_interno/tools/sonar-scanner/conf/sonar-scanner.properties
+15:26:27.219 INFO  Project root configuration file: NONE
+15:26:27.234 INFO  SonarScanner CLI 8.0.1.6346
+15:26:27.242 INFO  Linux 6.18.33.2-microsoft-standard-WSL2 amd64
+15:26:28.515 INFO  Communicating with SonarQube Community Build 26.9.0.129388
+15:26:28.518 INFO  JRE provisioning is disabled
+15:26:28.519 INFO  The java executable in the PATH will be used
+15:26:28.696 INFO  SONAR_SCANNER_JAVA_OPTS=-Xms256m -Xmx4096m
+15:26:28.998 INFO  Starting SonarScanner Engine...
+15:26:29.000 INFO  Java 21.0.12 Ubuntu (64-bit)
+15:26:30.196 INFO  Load global settings
+15:26:30.296 INFO  Load global settings (done) | time=98ms
+15:26:30.300 INFO  Server id: 147B411E-AaCHMJYtDFq3q1fqGHiY
+15:26:30.312 INFO  Loading required plugins
+15:26:30.314 INFO  Load plugins index
+15:26:30.329 INFO  Load plugins index (done) | time=16ms
+15:26:30.330 INFO  Load/download plugins
+15:26:30.355 INFO  Load/download plugins (done) | time=26ms
+15:26:30.670 INFO  Process project properties
+15:26:30.685 INFO  Process project properties (done) | time=15ms
+15:26:30.700 INFO  Project key: human-ytdl-org__youtube-dl
+15:26:30.702 INFO  Base dir: /home/felipefidelis/prellm_ytdl_org__youtube_dl_I4QG
+15:26:30.704 INFO  Working dir: /home/felipefidelis/prellm_ytdl_org__youtube_dl_I4QG/.scannerwork
+15:26:30.715 INFO  Load project settings for component key: 'human-ytdl-org__youtube-dl'
+15:26:30.757 INFO  Load quality profiles
+15:26:30.819 INFO  Load quality profiles (done) | time=62ms
+15:26:30.865 WARN  SCM provider autodetection failed. Please use "sonar.scm.provider" to define SCM of your project, or disable the SCM Sensor in the project settings.
+15:26:30.879 INFO  Load active rules
+15:26:31.290 INFO  Load active rules (done) | time=410ms
+15:26:31.302 INFO  Load analysis cache
+15:26:31.325 INFO  Load analysis cache (404) | time=21ms
+15:26:31.471 INFO  Preprocessing files...
+15:26:31.743 INFO  1 language detected in 855 preprocessed files (done) | time=270ms
+15:26:31.745 INFO  0 files ignored because of inclusion/exclusion patterns
+15:26:31.748 INFO  Loading plugins for detected languages
+15:26:31.749 INFO  Load/download plugins
+15:26:31.755 INFO  Load/download plugins (done) | time=7ms
+15:26:31.927 INFO  Load project repositories
+15:26:31.937 INFO  Load project repositories (done) | time=10ms
+15:26:31.961 INFO  Indexing files...
+15:26:31.962 INFO  Project configuration:
+15:26:31.964 INFO    Included sources: **/*.py
+15:26:31.965 INFO    Excluded sources: **/.git/**, **/.venv/**, **/venv/**, **/vendor/**, **/vendors/**, **/third_party/**, **/node_modules/**, **/build/**, **/dist/**
+15:26:32.023 INFO  855 files indexed (done) | time=62ms
+15:26:32.024 INFO  Quality profile for py: Sonar way
+15:26:32.026 INFO  ------------- Run sensors on module Humano - ytdl-org__youtube-dl
+15:26:32.083 INFO  Load metrics repository
+15:26:32.118 INFO  Load metrics repository (done) | time=35ms
+15:26:32.794 INFO  Sensor IaC YAML File Type Classification Sensor [iac]
+15:26:32.806 INFO  Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=12ms
+15:26:32.808 INFO  Sensor IaC hadolint report Sensor [iac]
+15:26:32.809 INFO  Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+15:26:32.810 INFO  Sensor Java Config Sensor [iac]
+15:26:32.811 INFO  There are no files to be analyzed for the Java language
+15:26:32.812 INFO  Sensor Java Config Sensor [iac] (done) | time=0ms
+15:26:32.813 INFO  Sensor IaC Docker Sensor [iac]
+15:26:32.830 INFO  There are no files to be analyzed for the Docker language
+15:26:32.832 INFO  Sensor IaC Docker Sensor [iac] (done) | time=22ms
+15:26:32.833 INFO  Sensor Python Sensor [python]
+15:26:33.292 INFO  Starting global symbols computation
+15:26:33.296 INFO  855 source files to be analyzed
+15:26:41.205 INFO  855/855 source files have been analyzed
+15:26:41.206 INFO  Finished step global symbols computation in 7910ms
+15:26:41.355 INFO  Starting rules execution
+15:26:41.357 INFO  855 source files to be analyzed
+15:26:41.362 WARN  Test files were detected using a path heuristic because "sonar.tests" is not set. To improve the analysis accuracy, it is recommended to configure it, e.g.: "sonar.tests=src/test".
+15:26:51.357 INFO  287/855 files analyzed, current files: generic.py, drtv.py, nhl.py, ...
+15:27:01.361 INFO  781/855 files analyzed, current files: utils.py, common.py, nbc.py, ...
+15:27:04.322 INFO  855/855 source files have been analyzed
+15:27:04.323 INFO  Finished step rules execution in 22967ms
+15:27:04.324 INFO  The Python analyzer was able to leverage cached data from previous analyses for 0 out of 855 files. These files were not parsed.
+15:27:04.325 INFO  Sensor Python Sensor [python] (done) | time=31494ms
+15:27:04.326 INFO  Sensor Cobertura Sensor for Python coverage [python]
+15:27:04.349 INFO  Sensor Cobertura Sensor for Python coverage [python] (done) | time=23ms
+15:27:04.350 INFO  Sensor PythonXUnitSensor [python]
+15:27:04.371 INFO  Sensor PythonXUnitSensor [python] (done) | time=22ms
+15:27:04.372 INFO  Sensor Python Dependency Sensor [python]
+15:27:04.375 INFO  Sensor Python Dependency Sensor [python] (done) | time=4ms
+15:27:04.376 INFO  Sensor TextAndSecretsSensor [text]
+15:27:04.411 INFO  Available processors: 8
+15:27:04.413 INFO  Using 8 threads for analysis.
+15:27:04.699 INFO  The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test", "tests", "mock" or "mocks"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+15:27:04.730 INFO  Start fetching files for the text and secrets analysis
+15:27:04.752 INFO  Using Git CLI to retrieve dirty files
+15:27:04.756 WARN  Retrieving only language associated files, make sure to run the analysis inside a git repository to make use of inclusions specified via "sonar.text.inclusions"
+15:27:04.758 INFO  Starting the text and secrets analysis
+15:27:04.760 INFO  855 source files to be analyzed for the text and secrets analysis
+15:27:05.688 INFO  855/855 source files have been analyzed for the text and secrets analysis
+15:27:05.689 INFO  Skipped 32 file(s) in the secrets analysis due to automatic test file detection
+15:27:05.691 INFO  Sensor TextAndSecretsSensor [text] (done) | time=1314ms
+15:27:05.693 INFO  ------------- Run sensors on project
+15:27:05.839 INFO  Sensor IaC Project Sensor [iac]
+15:27:05.841 INFO  Sensor IaC Project Sensor [iac] (done) | time=1ms
+15:27:05.842 INFO  Sensor Zero Coverage Sensor
+15:27:05.921 INFO  Sensor Zero Coverage Sensor (done) | time=80ms
+15:27:05.923 INFO  ------------- Gather SCA dependencies on project
+15:27:05.926 INFO  Dependency analysis skipped
+15:27:05.929 INFO  SCM Publisher No SCM system was detected. You can use the 'sonar.scm.provider' property to explicitly specify it.
+15:27:06.095 INFO  CPD Executor 3 files had no CPD blocks
+15:27:06.096 INFO  CPD Executor Calculating CPD for 852 files
+15:27:06.332 INFO  CPD Executor CPD calculation finished (done) | time=236ms
+15:27:06.755 INFO  Analysis report generated in 356ms, dir size=16.7 MB
+15:27:07.713 INFO  Analysis report compressed in 958ms, zip size=9.8 MB
+15:27:08.005 INFO  Analysis report uploaded in 292ms
+15:27:08.009 INFO  ANALYSIS SUCCESSFUL, you can find the results at: http://localhost:9000/dashboard?id=human-ytdl-org__youtube-dl
+15:27:08.010 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+15:27:08.011 INFO  More about the report processing at http://localhost:9000/api/ce/task?id=d7a9de16-ebf5-45d6-a5e2-975027b4d7da
+15:27:08.093 INFO  Analysis total time: 37.693 s
+15:27:08.124 INFO  SonarScanner Engine completed successfully
+15:27:08.168 INFO  EXECUTION SUCCESS
+15:27:08.170 INFO  Total time: 40.972s

@@ -1,0 +1,74 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 48 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: ManimCommunity/manim
+####################################################################################################
+Repositorio: https://github.com/ManimCommunity/manim
+Commit analisado: e16f9a6cc4da677c6f0fc4e7ba8d7025f9d6bb10
+Link do commit: https://github.com/ManimCommunity/manim/commit/e16f9a6cc4da677c6f0fc4e7ba8d7025f9d6bb10
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 27744
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 2
+  ERROR: 2
+  WARNING: 0
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 0
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 0
+  Security hotspots: 0
+  Complexidade: 3281
+  Linhas analisadas pelo SonarQube: 20116
+  Severidades: nenhuma
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: docs/source/manim_directive.py
+Linha: 234
+Link do codigo: https://github.com/ManimCommunity/manim/blob/e16f9a6cc4da677c6f0fc4e7ba8d7025f9d6bb10/docs/source/manim_directive.py#L234
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 2]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: manim/utils/module_ops.py
+Linha: 25
+Link do codigo: https://github.com/ManimCommunity/manim/blob/e16f9a6cc4da677c6f0fc4e7ba8d7025f9d6bb10/manim/utils/module_ops.py#L25
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE ManimCommunity/manim
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

@@ -1,0 +1,1076 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 18 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: OpenBB-finance/OpenBB
+####################################################################################################
+Repositorio: https://github.com/OpenBB-finance/OpenBB
+Commit analisado: c87d328cb758c57f98d5518828880cf52432c28f
+Link do commit: https://github.com/OpenBB-finance/OpenBB/commit/c87d328cb758c57f98d5518828880cf52432c28f
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 1557
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 0
+  ERROR: 0
+  WARNING: 0
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 102
+  Vulnerabilidades: 0
+  Bugs: 1
+  Code smells: 101
+  Security hotspots: 0
+  Complexidade: 154
+  Linhas analisadas pelo SonarQube: 1399
+  Severidades: CRITICAL=81, MAJOR=2, MINOR=19
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SONARQUBE 1]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_cli.py
+Linha: 26
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_cli.py#L26
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 2]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_cli.py
+Linha: 110
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_cli.py#L110
+Descricao: Refactor this function to reduce its Cognitive Complexity from 38 to the 15 allowed.
+
+[SONARQUBE 3]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_cli.py
+Linha: 117
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_cli.py#L117
+Descricao: Remove the unused local variable "b_intraday".
+
+[SONARQUBE 4]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_cli.py
+Linha: 124
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_cli.py#L124
+Descricao: Replace the unused local variable "d_stock_metadata" with "_".
+
+[SONARQUBE 5]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_cli.py
+Linha: 150
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_cli.py#L150
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 6]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 7
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L7
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 7]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 26
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L26
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 8]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 41
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L41
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 9]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 42
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L42
+Descricao: Define a constant instead of duplicating this literal "ERROR!\n" 13 times.
+
+[SONARQUBE 10]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 54
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L54
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 11]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 65
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L65
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 12]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 81
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L81
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 13]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 99
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L99
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 14]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 111
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L111
+Descricao: Define a constant instead of duplicating this literal 'Number of latest info' 4 times.
+
+[SONARQUBE 15]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 112
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L112
+Descricao: Define a constant instead of duplicating this literal 'Quarter fundamental data' 9 times.
+
+[SONARQUBE 16]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 116
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L116
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 17]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 124
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L124
+Descricao: Define a constant instead of duplicating this literal 'display.max_colwidth' 11 times.
+
+[SONARQUBE 18]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 140
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L140
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 19]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 155
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L155
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 20]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 180
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L180
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 21]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 203
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L203
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 22]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 251
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L251
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 23]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 267
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L267
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 24]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 285
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L285
+Descricao: Define a constant instead of duplicating this literal "Fiscal Date Ending" 11 times.
+
+[SONARQUBE 25]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 301
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L301
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 26]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 306
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L306
+Descricao: Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.
+
+[SONARQUBE 27]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 320
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L320
+Descricao: Define a constant instead of duplicating this literal 'Use Financial Modeling Prep instead of Alpha Vantage' 3 times.
+
+[SONARQUBE 28]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 324
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L324
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 29]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 351
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L351
+Descricao: Define a constant instead of duplicating this literal 'Final link' 6 times.
+
+[SONARQUBE 30]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 363
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L363
+Descricao: Replace the unused local variable "d_fd_metadata" with "_".
+
+[SONARQUBE 31]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 377
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L377
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 32]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 399
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L399
+Descricao: Define a constant instead of duplicating this literal 'Number of informations' 5 times.
+
+[SONARQUBE 33]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 405
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L405
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 34]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 439
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L439
+Descricao: Replace the unused local variable "d_fd_metadata" with "_".
+
+[SONARQUBE 35]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 454
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L454
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 36]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 460
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L460
+Descricao: Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.
+
+[SONARQUBE 37]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 481
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L481
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 38]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 519
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L519
+Descricao: Replace the unused local variable "d_fd_metadata" with "_".
+
+[SONARQUBE 39]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 534
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L534
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 40]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 564
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L564
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 41]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 593
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L593
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 42]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 624
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L624
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 43]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 653
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L653
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 44]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 681
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L681
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 45]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_fundamental_analysis.py
+Linha: 709
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_fundamental_analysis.py#L709
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 46]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_helper_funcs.py
+Linha: 26
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_helper_funcs.py#L26
+Descricao: Replace the unused local variable "pfig" with "_".
+
+[SONARQUBE 47]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_helper_funcs.py
+Linha: 26
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_helper_funcs.py#L26
+Descricao: Rename this local variable "axVolume" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 48]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_helper_funcs.py
+Linha: 29
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_helper_funcs.py#L29
+Descricao: Rename this local variable "axPrice" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 49]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_helper_funcs.py
+Linha: 29
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_helper_funcs.py#L29
+Descricao: Remove the unused local variable "axPrice".
+
+[SONARQUBE 50]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_helper_funcs.py
+Linha: 68
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_helper_funcs.py#L68
+Descricao: Rename this local variable "axPrice" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 51]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_helper_funcs.py
+Linha: 68
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_helper_funcs.py#L68
+Descricao: Replace the unused local variable "pfig" with "_".
+
+[SONARQUBE 52]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_helper_funcs.py
+Linha: 74
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_helper_funcs.py#L74
+Descricao: Rename this local variable "axTa" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 53]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_helper_funcs.py
+Linha: 83
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_helper_funcs.py#L83
+Descricao: Define a constant instead of duplicating this literal "tab:blue" 3 times.
+
+[SONARQUBE 54]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_helper_funcs.py
+Linha: 99
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_helper_funcs.py#L99
+Descricao: Remove this commented out code.
+
+[SONARQUBE 55]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_menu.py
+Linha: 7
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_menu.py#L7
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 56]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_menu.py
+Linha: 15
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_menu.py#L15
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 57]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_menu.py
+Linha: 23
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_menu.py#L23
+Descricao: Replace the unused local variable "d_meta_data" with "_".
+
+[SONARQUBE 58]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_menu.py
+Linha: 23
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_menu.py#L23
+Descricao: Replace the unused local variable "df_sectors" with "_".
+
+[SONARQUBE 59]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_menu.py
+Linha: 41
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_menu.py#L41
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 60]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_menu.py
+Linha: 61
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_menu.py#L61
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 61]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_menu.py
+Linha: 77
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_menu.py#L77
+Descricao: Replace the unused local variable "d_stock_metadata" with "_".
+
+[SONARQUBE 62]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_menu.py
+Linha: 82
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_menu.py#L82
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 63]
+Tipo: BUG
+Severidade: MINOR
+Regra: python:S1226
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_menu.py
+Linha: 99
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_menu.py#L99
+Descricao: Introduce a new variable or use its initial value before reassigning 'df_stock'.
+
+[SONARQUBE 64]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_menu.py
+Linha: 99
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_menu.py#L99
+Descricao: Refactor this function to reduce its Cognitive Complexity from 20 to the 15 allowed.
+
+[SONARQUBE 65]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_menu.py
+Linha: 112
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_menu.py#L112
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 66]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_menu.py
+Linha: 132
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_menu.py#L132
+Descricao: Replace the unused local variable "d_stock_metadata" with "_".
+
+[SONARQUBE 67]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_menu.py
+Linha: 137
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_menu.py#L137
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 68]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7504
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_menu.py
+Linha: 147
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_menu.py#L147
+Descricao: Remove this unnecessary `list()` call on an already iterable object.
+
+[SONARQUBE 69]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7504
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_menu.py
+Linha: 162
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_menu.py#L162
+Descricao: Remove this unnecessary `list()` call on an already iterable object.
+
+[SONARQUBE 70]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 6
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L6
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 71]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 25
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L25
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 72]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 35
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L35
+Descricao: Define a constant instead of duplicating this literal '5. adjusted close' 22 times.
+
+[SONARQUBE 73]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 39
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L39
+Descricao: Define a constant instead of duplicating this literal '4. close' 24 times.
+
+[SONARQUBE 74]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 41
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L41
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 75]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 42
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L42
+Descricao: Define a constant instead of duplicating this literal "ERROR!\n" 12 times.
+
+[SONARQUBE 76]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 62
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L62
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 77]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 78
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L78
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 78]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 84
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L84
+Descricao: Remove the unused function parameter "s_interval".
+
+[SONARQUBE 79]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 93
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L93
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 80]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 101
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L101
+Descricao: Define a constant instead of duplicating this literal '3. low' 12 times.
+
+[SONARQUBE 81]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 101
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L101
+Descricao: Define a constant instead of duplicating this literal '2. high' 12 times.
+
+[SONARQUBE 82]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 102
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L102
+Descricao: Define a constant instead of duplicating this literal '5. volume' 4 times.
+
+[SONARQUBE 83]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 105
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L105
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 84]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 125
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L125
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 85]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 143
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L143
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 86]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 172
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L172
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 87]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 190
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L190
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 88]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 211
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L211
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 89]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 229
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L229
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 90]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 254
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L254
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 91]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 272
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L272
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 92]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 292
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L292
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 93]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 310
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L310
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 94]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 335
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L335
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 95]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 351
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L351
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 96]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 377
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L377
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 97]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 396
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L396
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 98]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 420
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L420
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 99]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 433
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L433
+Descricao: Define a constant instead of duplicating this literal '6. volume' 3 times.
+
+[SONARQUBE 100]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 453
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L453
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 101]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 473
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L473
+Descricao: Reraise this exception to stop the application as the user expects
+
+[SONARQUBE 102]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: stock_market_technical_analysis.py
+Linha: 489
+Link do codigo: https://github.com/OpenBB-finance/OpenBB/blob/c87d328cb758c57f98d5518828880cf52432c28f/stock_market_technical_analysis.py#L489
+Descricao: Specify an exception class to catch or reraise the exception
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE OpenBB-finance/OpenBB
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

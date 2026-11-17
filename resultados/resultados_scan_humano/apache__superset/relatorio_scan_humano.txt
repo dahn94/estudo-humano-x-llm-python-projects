@@ -1,0 +1,65 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 16 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: apache/superset
+####################################################################################################
+Repositorio: https://github.com/apache/superset
+Commit analisado: f3ab1f41eebcd8dfe0379e81dd7083f1a9efa52f
+Link do commit: https://github.com/apache/superset/commit/f3ab1f41eebcd8dfe0379e81dd7083f1a9efa52f
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 100520
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 1
+  ERROR: 1
+  WARNING: 0
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 0
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 0
+  Security hotspots: 0
+  Complexidade: 8585
+  Linhas analisadas pelo SonarQube: 78599
+  Severidades: nenhuma
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: superset/cli.py
+Linha: 620
+Link do codigo: https://github.com/apache/superset/blob/f3ab1f41eebcd8dfe0379e81dd7083f1a9efa52f/superset/cli.py#L620
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE apache/superset
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

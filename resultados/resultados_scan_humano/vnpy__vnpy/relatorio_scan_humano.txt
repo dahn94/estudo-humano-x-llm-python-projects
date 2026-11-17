@@ -1,0 +1,137 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 39 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: vnpy/vnpy
+####################################################################################################
+Repositorio: https://github.com/vnpy/vnpy
+Commit analisado: 19a9a864dffd5acd40f889cbc831dd229c2f4b51
+Link do commit: https://github.com/vnpy/vnpy/commit/19a9a864dffd5acd40f889cbc831dd229c2f4b51
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 206596
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 9
+  ERROR: 9
+  WARNING: 0
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 0
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 0
+  Security hotspots: 0
+  Complexidade: 23929
+  Linhas analisadas pelo SonarQube: 188305
+  Severidades: nenhuma
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: vnpy/api/xtp/generator/generate_struct_common.py
+Linha: 48
+Link do codigo: https://github.com/vnpy/vnpy/blob/19a9a864dffd5acd40f889cbc831dd229c2f4b51/vnpy/api/xtp/generator/generate_struct_common.py#L48
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 2]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: vnpy/api/xtp/generator/generate_struct_common.py
+Linha: 49
+Link do codigo: https://github.com/vnpy/vnpy/blob/19a9a864dffd5acd40f889cbc831dd229c2f4b51/vnpy/api/xtp/generator/generate_struct_common.py#L49
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 3]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: vnpy/api/xtp/generator/generate_struct_oms.py
+Linha: 60
+Link do codigo: https://github.com/vnpy/vnpy/blob/19a9a864dffd5acd40f889cbc831dd229c2f4b51/vnpy/api/xtp/generator/generate_struct_oms.py#L60
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 4]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: vnpy/api/xtp/generator/generate_struct_oms.py
+Linha: 61
+Link do codigo: https://github.com/vnpy/vnpy/blob/19a9a864dffd5acd40f889cbc831dd229c2f4b51/vnpy/api/xtp/generator/generate_struct_oms.py#L61
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 5]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: vnpy/api/xtp/generator/generate_struct_quotes.py
+Linha: 60
+Link do codigo: https://github.com/vnpy/vnpy/blob/19a9a864dffd5acd40f889cbc831dd229c2f4b51/vnpy/api/xtp/generator/generate_struct_quotes.py#L60
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 6]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: vnpy/api/xtp/generator/generate_struct_quotes.py
+Linha: 61
+Link do codigo: https://github.com/vnpy/vnpy/blob/19a9a864dffd5acd40f889cbc831dd229c2f4b51/vnpy/api/xtp/generator/generate_struct_quotes.py#L61
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 7]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: vnpy/app/market_radar/engine.py
+Linha: 258
+Link do codigo: https://github.com/vnpy/vnpy/blob/19a9a864dffd5acd40f889cbc831dd229c2f4b51/vnpy/app/market_radar/engine.py#L258
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 8]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: vnpy/app/spread_trading/base.py
+Linha: 481
+Link do codigo: https://github.com/vnpy/vnpy/blob/19a9a864dffd5acd40f889cbc831dd229c2f4b51/vnpy/app/spread_trading/base.py#L481
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 9]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: vnpy/app/spread_trading/ui/widget.py
+Linha: 1036
+Link do codigo: https://github.com/vnpy/vnpy/blob/19a9a864dffd5acd40f889cbc831dd229c2f4b51/vnpy/app/spread_trading/ui/widget.py#L1036
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE vnpy/vnpy
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

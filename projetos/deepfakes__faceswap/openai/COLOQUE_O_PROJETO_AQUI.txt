@@ -1,0 +1,1 @@
+Coloque aqui o projeto openai gerado com prompts/deepfakes__faceswap/prompt_recriacao.txt.

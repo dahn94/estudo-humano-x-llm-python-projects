@@ -1,0 +1,15 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - AGUARDANDO SCANS
+====================================================================================================
+
+GitHub: sqlmapproject/sqlmap
+Repositorio: https://github.com/sqlmapproject/sqlmap
+Commit analisado: ae6a812ee116e167cb57748d0505fc08ca193d7f
+Link do commit: https://github.com/sqlmapproject/sqlmap/commit/ae6a812ee116e167cb57748d0505fc08ca193d7f
+Status: AGUARDANDO SEMGREP E/OU SONARQUBE
+
+Arquivos ainda nao encontrados:
+  - dados_brutos/semgrep/sqlmapproject__sqlmap/humano.json
+  - dados_brutos/sonarqube/sqlmapproject__sqlmap/humano.json
+
+Campos ausentes nao representam zero achado.

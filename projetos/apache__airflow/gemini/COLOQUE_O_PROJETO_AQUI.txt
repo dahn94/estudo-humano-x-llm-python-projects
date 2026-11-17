@@ -1,0 +1,1 @@
+Coloque aqui o projeto gemini gerado com prompts/apache__airflow/prompt_recriacao.txt.

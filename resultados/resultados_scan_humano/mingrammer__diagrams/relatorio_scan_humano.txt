@@ -1,0 +1,186 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 46 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: mingrammer/diagrams
+####################################################################################################
+Repositorio: https://github.com/mingrammer/diagrams
+Commit analisado: d875b73e3e586e58305264a1396224c83c7b8951
+Link do commit: https://github.com/mingrammer/diagrams/commit/d875b73e3e586e58305264a1396224c83c7b8951
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 5036
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 0
+  ERROR: 0
+  WARNING: 0
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 13
+  Vulnerabilidades: 1
+  Bugs: 2
+  Code smells: 10
+  Security hotspots: 0
+  Complexidade: 207
+  Linhas analisadas pelo SonarQube: 4509
+  Severidades: INFO=8, MAJOR=5
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SONARQUBE 1]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: config.py
+Linha: 90
+Link do codigo: https://github.com/mingrammer/diagrams/blob/d875b73e3e586e58305264a1396224c83c7b8951/config.py#L90
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 2]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: diagrams/__init__.py
+Linha: 63
+Link do codigo: https://github.com/mingrammer/diagrams/blob/d875b73e3e586e58305264a1396224c83c7b8951/diagrams/__init__.py#L63
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 3]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: diagrams/__init__.py
+Linha: 77
+Link do codigo: https://github.com/mingrammer/diagrams/blob/d875b73e3e586e58305264a1396224c83c7b8951/diagrams/__init__.py#L77
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 4]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: diagrams/__init__.py
+Linha: 78
+Link do codigo: https://github.com/mingrammer/diagrams/blob/d875b73e3e586e58305264a1396224c83c7b8951/diagrams/__init__.py#L78
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 5]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1134
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: diagrams/__init__.py
+Linha: 210
+Link do codigo: https://github.com/mingrammer/diagrams/blob/d875b73e3e586e58305264a1396224c83c7b8951/diagrams/__init__.py#L210
+Descricao: Take the required action to fix the issue indicated by this "FIXME" comment.
+
+[SONARQUBE 6]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: diagrams/__init__.py
+Linha: 396
+Link do codigo: https://github.com/mingrammer/diagrams/blob/d875b73e3e586e58305264a1396224c83c7b8951/diagrams/__init__.py#L396
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 7]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S3984
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: diagrams/__init__.py
+Linha: 405
+Link do codigo: https://github.com/mingrammer/diagrams/blob/d875b73e3e586e58305264a1396224c83c7b8951/diagrams/__init__.py#L405
+Descricao: Raise this exception or remove this useless statement.
+
+[SONARQUBE 8]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S3984
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: diagrams/__init__.py
+Linha: 407
+Link do codigo: https://github.com/mingrammer/diagrams/blob/d875b73e3e586e58305264a1396224c83c7b8951/diagrams/__init__.py#L407
+Descricao: Raise this exception or remove this useless statement.
+
+[SONARQUBE 9]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S5247
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/generate.py
+Linha: 14
+Link do codigo: https://github.com/mingrammer/diagrams/blob/d875b73e3e586e58305264a1396224c83c7b8951/scripts/generate.py#L14
+Descricao: Make sure disabling auto-escaping feature is safe here.
+
+[SONARQUBE 10]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/generate.py
+Linha: 31
+Link do codigo: https://github.com/mingrammer/diagrams/blob/d875b73e3e586e58305264a1396224c83c7b8951/scripts/generate.py#L31
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 11]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/generate.py
+Linha: 32
+Link do codigo: https://github.com/mingrammer/diagrams/blob/d875b73e3e586e58305264a1396224c83c7b8951/scripts/generate.py#L32
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 12]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: scripts/generate.py
+Linha: 46
+Link do codigo: https://github.com/mingrammer/diagrams/blob/d875b73e3e586e58305264a1396224c83c7b8951/scripts/generate.py#L46
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 13]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/test_diagram.py
+Linha: 132
+Link do codigo: https://github.com/mingrammer/diagrams/blob/d875b73e3e586e58305264a1396224c83c7b8951/tests/test_diagram.py#L132
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE mingrammer/diagrams
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

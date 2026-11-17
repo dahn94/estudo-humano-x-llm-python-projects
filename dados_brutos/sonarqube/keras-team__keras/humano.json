@@ -1,0 +1,58 @@
+{
+  "component": {
+    "key": "human-keras-team__keras",
+    "name": "Humano - keras-team__keras",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "bugs",
+        "value": "15",
+        "bestValue": false
+      },
+      {
+        "metric": "complexity",
+        "value": "19742"
+      },
+      {
+        "metric": "code_smells",
+        "value": "820",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_reliability_issues",
+        "value": "61",
+        "bestValue": false
+      },
+      {
+        "metric": "ncloc",
+        "value": "130818"
+      },
+      {
+        "metric": "software_quality_maintainability_issues",
+        "value": "805",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_security_issues",
+        "value": "7",
+        "bestValue": false
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "7",
+        "bestValue": false
+      },
+      {
+        "metric": "security_hotspots",
+        "value": "0",
+        "bestValue": true
+      }
+    ]
+  },
+  "issues_summary": {
+    "issues": [],
+    "paging": {
+      "total": 0
+    }
+  }
+}

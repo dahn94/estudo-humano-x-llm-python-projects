@@ -1,0 +1,2510 @@
+{
+  "component": {
+    "key": "human-ageitgey__face_recognition",
+    "name": "Humano - ageitgey__face_recognition",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "bugs",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "complexity",
+        "value": "242"
+      },
+      {
+        "metric": "code_smells",
+        "value": "36",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_reliability_issues",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "ncloc",
+        "value": "1473"
+      },
+      {
+        "metric": "software_quality_maintainability_issues",
+        "value": "36",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_security_issues",
+        "value": "7",
+        "bestValue": false
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "7",
+        "bestValue": false
+      },
+      {
+        "metric": "security_hotspots",
+        "value": "0",
+        "bestValue": true
+      }
+    ]
+  },
+  "issues_summary": {
+    "issues": [
+      {
+        "key": "c7afea6a-a3c3-47fb-97da-c956ab5d64f0",
+        "rule": "python:S3776",
+        "severity": "CRITICAL",
+        "component": "human-ageitgey__face_recognition:examples/blink_detection.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 21,
+        "hash": "36999f0b7d2b4dd75cc52066ae8a601f",
+        "textRange": {
+          "startLine": 21,
+          "endLine": 21,
+          "startOffset": 4,
+          "endOffset": 8
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/blink_detection.py",
+                "textRange": {
+                  "startLine": 33,
+                  "endLine": 33,
+                  "startOffset": 4,
+                  "endOffset": 9
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/blink_detection.py",
+                "textRange": {
+                  "startLine": 44,
+                  "endLine": 44,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/blink_detection.py",
+                "textRange": {
+                  "startLine": 48,
+                  "endLine": 48,
+                  "startOffset": 12,
+                  "endOffset": 15
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/blink_detection.py",
+                "textRange": {
+                  "startLine": 63,
+                  "endLine": 63,
+                  "startOffset": 40,
+                  "endOffset": 43
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/blink_detection.py",
+                "textRange": {
+                  "startLine": 65,
+                  "endLine": 65,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+4 (incl 3 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/blink_detection.py",
+                "textRange": {
+                  "startLine": 68,
+                  "endLine": 68,
+                  "startOffset": 16,
+                  "endOffset": 20
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/blink_detection.py",
+                "textRange": {
+                  "startLine": 71,
+                  "endLine": 71,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+4 (incl 3 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/blink_detection.py",
+                "textRange": {
+                  "startLine": 73,
+                  "endLine": 73,
+                  "startOffset": 20,
+                  "endOffset": 25
+                },
+                "msg": "+5 (incl 4 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/blink_detection.py",
+                "textRange": {
+                  "startLine": 76,
+                  "endLine": 76,
+                  "startOffset": 24,
+                  "endOffset": 26
+                },
+                "msg": "+6 (incl 5 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/blink_detection.py",
+                "textRange": {
+                  "startLine": 83,
+                  "endLine": 83,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Refactor this function to reduce its Cognitive Complexity from 29 to the 15 allowed.",
+        "effort": "19min",
+        "debt": "19min",
+        "author": "",
+        "tags": [
+          "brain-overload"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "FOCUSED",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "53c30ca8-d781-4e6d-8670-5e7e5ae6d164",
+        "rule": "python:S1481",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:examples/blink_detection.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 25,
+        "hash": "f85f6628d961fffedb25de8a907d8a47",
+        "textRange": {
+          "startLine": 25,
+          "endLine": 25,
+          "startOffset": 4,
+          "endOffset": 7
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/blink_detection.py",
+                "textRange": {
+                  "startLine": 34,
+                  "endLine": 34,
+                  "startOffset": 8,
+                  "endOffset": 11
+                },
+                "msg": "Assignment to unused local variable \"ret\".",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Replace the unused local variable \"ret\" with \"_\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "be9fe368-eb9d-43a9-956e-c044c95a544b",
+        "rule": "python:S1854",
+        "severity": "MAJOR",
+        "component": "human-ageitgey__face_recognition:examples/blink_detection.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 30,
+        "hash": "46f47c3c8cf540a2409a4614ef2b597c",
+        "textRange": {
+          "startLine": 30,
+          "endLine": 30,
+          "startOffset": 4,
+          "endOffset": 74
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/blink_detection.py",
+                "textRange": {
+                  "startLine": 45,
+                  "endLine": 45,
+                  "startOffset": 12,
+                  "endOffset": 82
+                },
+                "msg": "'face_landmarks_list' is reassigned here.",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Remove this assignment to local variable 'face_landmarks_list'; the value is never used.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "cwe",
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "LOGICAL",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "129013c4-b3e7-4c68-99b6-3c7f267a4aa2",
+        "rule": "python:S3776",
+        "severity": "CRITICAL",
+        "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 46,
+        "hash": "9d5807d3ec85522745c384490bbb90c3",
+        "textRange": {
+          "startLine": 46,
+          "endLine": 46,
+          "startOffset": 4,
+          "endOffset": 9
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+                "textRange": {
+                  "startLine": 75,
+                  "endLine": 75,
+                  "startOffset": 4,
+                  "endOffset": 7
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+                "textRange": {
+                  "startLine": 76,
+                  "endLine": 76,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+                "textRange": {
+                  "startLine": 80,
+                  "endLine": 80,
+                  "startOffset": 8,
+                  "endOffset": 11
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+                "textRange": {
+                  "startLine": 84,
+                  "endLine": 84,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+                "textRange": {
+                  "startLine": 86,
+                  "endLine": 86,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+4 (incl 3 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+                "textRange": {
+                  "startLine": 87,
+                  "endLine": 87,
+                  "startOffset": 105,
+                  "endOffset": 107
+                },
+                "msg": "+5 (incl 4 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+                "textRange": {
+                  "startLine": 88,
+                  "endLine": 88,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+                "textRange": {
+                  "startLine": 94,
+                  "endLine": 94,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+                "textRange": {
+                  "startLine": 96,
+                  "endLine": 96,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+                "textRange": {
+                  "startLine": 104,
+                  "endLine": 104,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Refactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.",
+        "effort": "12min",
+        "debt": "12min",
+        "author": "",
+        "tags": [
+          "brain-overload"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "FOCUSED",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "c7e6cb81-bdd5-481a-8e82-b99adfde7265",
+        "rule": "python:S117",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 111,
+        "hash": "067b2f61e5c6c7a00f6697486565f5dc",
+        "textRange": {
+          "startLine": 111,
+          "endLine": 111,
+          "startOffset": 12,
+          "endOffset": 22
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename this parameter \"X_img_path\" to match the regular expression ^[_a-z][a-z0-9_]*$.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "convention"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "IDENTIFIABLE",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "8f44e831-7be6-491d-864d-54ed0b5fcb7f",
+        "rule": "python:S112",
+        "severity": "MAJOR",
+        "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 124,
+        "hash": "06d79530b6b7c6b2c29d1dcf7726c872",
+        "textRange": {
+          "startLine": 124,
+          "endLine": 124,
+          "startOffset": 14,
+          "endOffset": 68
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace this generic exception class with a more specific one.",
+        "effort": "20min",
+        "debt": "20min",
+        "author": "",
+        "tags": [
+          "cwe",
+          "error-handling"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "94f59b91-5187-44e5-8c79-138915090380",
+        "rule": "python:S112",
+        "severity": "MAJOR",
+        "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 127,
+        "hash": "c87f3e4d76da5d61fc394f32f8e660f2",
+        "textRange": {
+          "startLine": 127,
+          "endLine": 127,
+          "startOffset": 14,
+          "endOffset": 90
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace this generic exception class with a more specific one.",
+        "effort": "20min",
+        "debt": "20min",
+        "author": "",
+        "tags": [
+          "cwe",
+          "error-handling"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "4eda64ad-2ace-4a3f-93bd-54cc6bce474b",
+        "rule": "python:S117",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 135,
+        "hash": "7647b7e417ad143d44733a9d3723371c",
+        "textRange": {
+          "startLine": 135,
+          "endLine": 135,
+          "startOffset": 4,
+          "endOffset": 9
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename this local variable \"X_img\" to match the regular expression ^[_a-z][a-z0-9_]*$.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "convention"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "IDENTIFIABLE",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "5b2f92c2-5687-49ae-bff1-628a2bc334b9",
+        "rule": "python:S117",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 136,
+        "hash": "54e42e7c525a5b434ddd5ad41913eac6",
+        "textRange": {
+          "startLine": 136,
+          "endLine": 136,
+          "startOffset": 4,
+          "endOffset": 20
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename this local variable \"X_face_locations\" to match the regular expression ^[_a-z][a-z0-9_]*$.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "convention"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "IDENTIFIABLE",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "f1edb7d7-6ded-4fc2-95c7-7406b3a80b33",
+        "rule": "python:S1481",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 173,
+        "hash": "8744ebae7f746e881fbfe9a16d58c321",
+        "textRange": {
+          "startLine": 173,
+          "endLine": 173,
+          "startOffset": 8,
+          "endOffset": 18
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace the unused local variable \"text_width\" with \"_\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "4a2ca2dd-ef18-45cd-b95d-4809786672c6",
+        "rule": "python:S1192",
+        "severity": "CRITICAL",
+        "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 192,
+        "hash": "b5973c6952413f312f0331324d1912b5",
+        "textRange": {
+          "startLine": 192,
+          "endLine": 192,
+          "startOffset": 33,
+          "endOffset": 52
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+                "textRange": {
+                  "startLine": 193,
+                  "endLine": 193,
+                  "startOffset": 38,
+                  "endOffset": 57
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/face_recognition_knn.py",
+                "textRange": {
+                  "startLine": 206,
+                  "endLine": 206,
+                  "startOffset": 53,
+                  "endOffset": 72
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Define a constant instead of duplicating this literal \"knn_examples/test\" 3 times.",
+        "effort": "6min",
+        "debt": "6min",
+        "author": "",
+        "tags": [
+          "design"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "DISTINCT",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "1a8fd8df-36d2-4227-8e6e-38804a365a14",
+        "rule": "python:S117",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:examples/facerec_from_webcam_multiprocessing.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 35,
+        "hash": "3e8d2e2a932e1b7e29f0d8cc0be62b11",
+        "textRange": {
+          "startLine": 35,
+          "endLine": 35,
+          "startOffset": 29,
+          "endOffset": 35
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename this parameter \"Global\" to match the regular expression ^[_a-z][a-z0-9_]*$.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "convention"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "IDENTIFIABLE",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "947d54ae-ecf6-4544-821c-4af394dc7db0",
+        "rule": "python:S125",
+        "severity": "MAJOR",
+        "component": "human-ageitgey__face_recognition:examples/facerec_from_webcam_multiprocessing.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 38,
+        "hash": "e62e426fe1ddae8e955adb96608345b5",
+        "textRange": {
+          "startLine": 38,
+          "endLine": 38,
+          "startOffset": 4,
+          "endOffset": 75
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this commented out code.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "455a7fda-681a-4ade-8f45-e4ef1caefe84",
+        "rule": "python:S1481",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:examples/facerec_from_webcam_multiprocessing.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 47,
+        "hash": "468f5d860eb5e575c2180f3f11379cab",
+        "textRange": {
+          "startLine": 47,
+          "endLine": 47,
+          "startOffset": 12,
+          "endOffset": 15
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace the unused local variable \"ret\" with \"_\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "2a3e9806-151e-42c9-8977-c24bc1d8423a",
+        "rule": "python:S117",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:examples/facerec_from_webcam_multiprocessing.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 58,
+        "hash": "81e59b423ec288e7f6ba14ee49f4a238",
+        "textRange": {
+          "startLine": 58,
+          "endLine": 58,
+          "startOffset": 58,
+          "endOffset": 64
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename this parameter \"Global\" to match the regular expression ^[_a-z][a-z0-9_]*$.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "convention"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "IDENTIFIABLE",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "45c75ef1-43f7-456c-9799-186b22f65aee",
+        "rule": "python:S3776",
+        "severity": "CRITICAL",
+        "component": "human-ageitgey__face_recognition:examples/facerec_ipcamera_knn.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 51,
+        "hash": "9d5807d3ec85522745c384490bbb90c3",
+        "textRange": {
+          "startLine": 51,
+          "endLine": 51,
+          "startOffset": 4,
+          "endOffset": 9
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/facerec_ipcamera_knn.py",
+                "textRange": {
+                  "startLine": 80,
+                  "endLine": 80,
+                  "startOffset": 4,
+                  "endOffset": 7
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/facerec_ipcamera_knn.py",
+                "textRange": {
+                  "startLine": 81,
+                  "endLine": 81,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/facerec_ipcamera_knn.py",
+                "textRange": {
+                  "startLine": 85,
+                  "endLine": 85,
+                  "startOffset": 8,
+                  "endOffset": 11
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/facerec_ipcamera_knn.py",
+                "textRange": {
+                  "startLine": 89,
+                  "endLine": 89,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/facerec_ipcamera_knn.py",
+                "textRange": {
+                  "startLine": 91,
+                  "endLine": 91,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+4 (incl 3 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/facerec_ipcamera_knn.py",
+                "textRange": {
+                  "startLine": 92,
+                  "endLine": 92,
+                  "startOffset": 105,
+                  "endOffset": 107
+                },
+                "msg": "+5 (incl 4 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/facerec_ipcamera_knn.py",
+                "textRange": {
+                  "startLine": 93,
+                  "endLine": 93,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/facerec_ipcamera_knn.py",
+                "textRange": {
+                  "startLine": 99,
+                  "endLine": 99,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/facerec_ipcamera_knn.py",
+                "textRange": {
+                  "startLine": 101,
+                  "endLine": 101,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-ageitgey__face_recognition:examples/facerec_ipcamera_knn.py",
+                "textRange": {
+                  "startLine": 109,
+                  "endLine": 109,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Refactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.",
+        "effort": "12min",
+        "debt": "12min",
+        "author": "",
+        "tags": [
+          "brain-overload"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "FOCUSED",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "fc83cb73-c5ec-4e8b-96cf-6396d8d87632",
+        "rule": "python:S117",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:examples/facerec_ipcamera_knn.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 116,
+        "hash": "d0e3306589954c581e29d7ae99361ff3",
+        "textRange": {
+          "startLine": 116,
+          "endLine": 116,
+          "startOffset": 12,
+          "endOffset": 19
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename this parameter \"X_frame\" to match the regular expression ^[_a-z][a-z0-9_]*$.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "convention"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "IDENTIFIABLE",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "4f6f8f89-6b8a-4709-bed0-6993acdf1082",
+        "rule": "python:S112",
+        "severity": "MAJOR",
+        "component": "human-ageitgey__face_recognition:examples/facerec_ipcamera_knn.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 129,
+        "hash": "c87f3e4d76da5d61fc394f32f8e660f2",
+        "textRange": {
+          "startLine": 129,
+          "endLine": 129,
+          "startOffset": 14,
+          "endOffset": 90
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace this generic exception class with a more specific one.",
+        "effort": "20min",
+        "debt": "20min",
+        "author": "",
+        "tags": [
+          "cwe",
+          "error-handling"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "bec77ff2-21fd-496e-b798-45eadf508f74",
+        "rule": "python:S117",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:examples/facerec_ipcamera_knn.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 136,
+        "hash": "45c46ef24a18373206931e834640270a",
+        "textRange": {
+          "startLine": 136,
+          "endLine": 136,
+          "startOffset": 4,
+          "endOffset": 20
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename this local variable \"X_face_locations\" to match the regular expression ^[_a-z][a-z0-9_]*$.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "convention"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "IDENTIFIABLE",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "e3aff78f-5e1c-4d73-9a98-b93407292d98",
+        "rule": "python:S1481",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:examples/facerec_ipcamera_knn.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 178,
+        "hash": "8744ebae7f746e881fbfe9a16d58c321",
+        "textRange": {
+          "startLine": 178,
+          "endLine": 178,
+          "startOffset": 8,
+          "endOffset": 18
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace the unused local variable \"text_width\" with \"_\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "5fd089c2-c3f3-4ff7-a122-b69635ad316a",
+        "rule": "python:S5332",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:examples/facerec_ipcamera_knn.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 198,
+        "hash": "c8fc78c33a4e154d3a9f1ae46e1370dd",
+        "textRange": {
+          "startLine": 198,
+          "endLine": 198,
+          "startOffset": 10,
+          "endOffset": 50
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Using HTTP protocol is insecure. Use HTTPS instead.",
+        "effort": "30min",
+        "debt": "30min",
+        "author": "",
+        "tags": [
+          "cwe",
+          "former-hotspot"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "VULNERABILITY",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "d77de4f9-5625-45aa-af0b-5c2861f8e9fd",
+        "rule": "python:S125",
+        "severity": "MAJOR",
+        "component": "human-ageitgey__face_recognition:examples/facerec_on_raspberry_pi_Simplified_Chinese.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 1,
+        "hash": "b263c11e5d23ea54c4df17d448959f51",
+        "textRange": {
+          "startLine": 1,
+          "endLine": 1,
+          "startOffset": 0,
+          "endOffset": 20
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this commented out code.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "fd5eb542-c7af-4d87-8aec-0ba7e65759c8",
+        "rule": "python:S1940",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:examples/recognize_faces_in_pictures.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 29,
+        "hash": "70cc4657f6eaaaf33d0c9c15523e9aa2",
+        "textRange": {
+          "startLine": 29,
+          "endLine": 29,
+          "startOffset": 81,
+          "endOffset": 100
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Use the opposite operator (\"not in\") instead.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "pitfall"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "28c8896c-d145-42c9-a6ff-0ac58205c4f9",
+        "rule": "python:S4502",
+        "severity": "CRITICAL",
+        "component": "human-ageitgey__face_recognition:examples/web_service_example.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 25,
+        "hash": "179643042db29a9995dc460d16749c31",
+        "textRange": {
+          "startLine": 25,
+          "endLine": 25,
+          "startOffset": 6,
+          "endOffset": 21
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Make sure disabling CSRF protection is safe here.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "cwe",
+          "django",
+          "flask",
+          "former-hotspot"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "VULNERABILITY",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "9ef21c39-a2fb-42f1-ab64-2bc9e059dd03",
+        "rule": "python:S4507",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:examples/web_service_example.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 113,
+        "hash": "91a652aef2161dc1830d6698f141ab3f",
+        "textRange": {
+          "startLine": 113,
+          "endLine": 113,
+          "startOffset": 39,
+          "endOffset": 49
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Make sure this debug feature is deactivated before delivering the code in production.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "cwe",
+          "error-handling",
+          "debug",
+          "user-experience",
+          "former-hotspot"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "VULNERABILITY",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "da916f33-c8ad-4afe-99f5-44f972b8e70b",
+        "rule": "python:S8392",
+        "severity": "BLOCKER",
+        "component": "human-ageitgey__face_recognition:examples/web_service_example.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 113,
+        "hash": "91a652aef2161dc1830d6698f141ab3f",
+        "textRange": {
+          "startLine": 113,
+          "endLine": 113,
+          "startOffset": 4,
+          "endOffset": 11
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Avoid binding the application to all network interfaces.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "fastapi",
+          "least-privilege",
+          "uvicorn",
+          "flask",
+          "deployment",
+          "network"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "VULNERABILITY",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "BLOCKER"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "1e53a416-1cdc-46bc-947f-2ed284a623c3",
+        "rule": "python:S4502",
+        "severity": "CRITICAL",
+        "component": "human-ageitgey__face_recognition:examples/web_service_example_Simplified_Chinese.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 21,
+        "hash": "179643042db29a9995dc460d16749c31",
+        "textRange": {
+          "startLine": 21,
+          "endLine": 21,
+          "startOffset": 6,
+          "endOffset": 21
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Make sure disabling CSRF protection is safe here.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "cwe",
+          "django",
+          "flask",
+          "former-hotspot"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "VULNERABILITY",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "3106f619-6454-4476-8eb7-891e10d58f7a",
+        "rule": "python:S4507",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:examples/web_service_example_Simplified_Chinese.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 110,
+        "hash": "91a652aef2161dc1830d6698f141ab3f",
+        "textRange": {
+          "startLine": 110,
+          "endLine": 110,
+          "startOffset": 39,
+          "endOffset": 49
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Make sure this debug feature is deactivated before delivering the code in production.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "cwe",
+          "error-handling",
+          "debug",
+          "user-experience",
+          "former-hotspot"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "VULNERABILITY",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "dc4a5207-4845-48cd-a835-ac78a9e05c8f",
+        "rule": "python:S8392",
+        "severity": "BLOCKER",
+        "component": "human-ageitgey__face_recognition:examples/web_service_example_Simplified_Chinese.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 110,
+        "hash": "91a652aef2161dc1830d6698f141ab3f",
+        "textRange": {
+          "startLine": 110,
+          "endLine": 110,
+          "startOffset": 4,
+          "endOffset": 11
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Avoid binding the application to all network interfaces.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "fastapi",
+          "least-privilege",
+          "uvicorn",
+          "flask",
+          "deployment",
+          "network"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "VULNERABILITY",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "BLOCKER"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "9bae7b40-78f3-46dd-8df4-53a0c481aa58",
+        "rule": "python:S5906",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:tests/test_face_recognition.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 253,
+        "hash": "b34500bf7bd23a10bdac29e187a03fab",
+        "textRange": {
+          "startLine": 253,
+          "endLine": 253,
+          "startOffset": 8,
+          "endOffset": 60
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Consider using \"assertIn\" instead.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "tests",
+          "unittest"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "51614105-687c-48c4-8c8b-4cce3148c266",
+        "rule": "python:S5906",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:tests/test_face_recognition.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 264,
+        "hash": "ea1a6514cd2cbbbac638f6fe24868a31",
+        "textRange": {
+          "startLine": 264,
+          "endLine": 264,
+          "startOffset": 8,
+          "endOffset": 55
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Consider using \"assertIn\" instead.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "tests",
+          "unittest"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "65210e83-736d-46df-9905-7ec362ff5054",
+        "rule": "python:S5906",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:tests/test_face_recognition.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 275,
+        "hash": "ea1a6514cd2cbbbac638f6fe24868a31",
+        "textRange": {
+          "startLine": 275,
+          "endLine": 275,
+          "startOffset": 8,
+          "endOffset": 55
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Consider using \"assertIn\" instead.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "tests",
+          "unittest"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "03ae0277-cd76-42fb-aa52-3db8a97cbc2a",
+        "rule": "python:S5906",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:tests/test_face_recognition.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 286,
+        "hash": "ea1a6514cd2cbbbac638f6fe24868a31",
+        "textRange": {
+          "startLine": 286,
+          "endLine": 286,
+          "startOffset": 8,
+          "endOffset": 55
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Consider using \"assertIn\" instead.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "tests",
+          "unittest"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "cf9461b6-4bee-4f92-b73d-a0712026ddb1",
+        "rule": "python:S5906",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:tests/test_face_recognition.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 297,
+        "hash": "ea1a6514cd2cbbbac638f6fe24868a31",
+        "textRange": {
+          "startLine": 297,
+          "endLine": 297,
+          "startOffset": 8,
+          "endOffset": 55
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Consider using \"assertIn\" instead.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "tests",
+          "unittest"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "886613ed-6f0e-4579-915b-0ae6c5605496",
+        "rule": "python:S5906",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:tests/test_face_recognition.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 304,
+        "hash": "b34500bf7bd23a10bdac29e187a03fab",
+        "textRange": {
+          "startLine": 304,
+          "endLine": 304,
+          "startOffset": 8,
+          "endOffset": 60
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Consider using \"assertIn\" instead.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "tests",
+          "unittest"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "b02fcd8f-5a5f-47f6-bf42-2a1aea0d53ac",
+        "rule": "python:S5906",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:tests/test_face_recognition.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 313,
+        "hash": "7c2a14287f174ab43dbfb20555bf2855",
+        "textRange": {
+          "startLine": 313,
+          "endLine": 313,
+          "startOffset": 8,
+          "endOffset": 48
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Consider using \"assertIn\" instead.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "tests",
+          "unittest"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "664097b7-a18b-45c0-a7f4-1cf419d45363",
+        "rule": "python:S5906",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:tests/test_face_recognition.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 322,
+        "hash": "51bd596dec86c490087a9bfebe902151",
+        "textRange": {
+          "startLine": 322,
+          "endLine": 322,
+          "startOffset": 8,
+          "endOffset": 67
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Consider using \"assertIn\" instead.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "tests",
+          "unittest"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "3260254d-9aa9-4b32-b6d1-fbaafc9a7391",
+        "rule": "python:S5906",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:tests/test_face_recognition.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 323,
+        "hash": "5f5d7b675a9e026ae6db600a0d7080aa",
+        "textRange": {
+          "startLine": 323,
+          "endLine": 323,
+          "startOffset": 8,
+          "endOffset": 53
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Consider using \"assertIn\" instead.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "tests",
+          "unittest"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "fff82918-1337-47fe-9143-c203a157841f",
+        "rule": "python:S5906",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:tests/test_face_recognition.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 324,
+        "hash": "9736f48e16f78048ffa3ed427048b459",
+        "textRange": {
+          "startLine": 324,
+          "endLine": 324,
+          "startOffset": 8,
+          "endOffset": 54
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Consider using \"assertIn\" instead.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "tests",
+          "unittest"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "e6b12988-72ec-4ab0-8223-1f0a2a2f7e94",
+        "rule": "python:S5906",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:tests/test_face_recognition.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 325,
+        "hash": "0733b234724f0903508a68b658a6afb5",
+        "textRange": {
+          "startLine": 325,
+          "endLine": 325,
+          "startOffset": 8,
+          "endOffset": 54
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Consider using \"assertIn\" instead.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "tests",
+          "unittest"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "4c0d977e-740e-447a-a738-448b3aafe8ff",
+        "rule": "python:S5906",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:tests/test_face_recognition.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 326,
+        "hash": "8c9e8fcb878844aec8bfa593a704cc7f",
+        "textRange": {
+          "startLine": 326,
+          "endLine": 326,
+          "startOffset": 8,
+          "endOffset": 53
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Consider using \"assertIn\" instead.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "tests",
+          "unittest"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "8db18a7f-0d32-4d0f-87b6-f5e62895a0be",
+        "rule": "python:S5906",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:tests/test_face_recognition.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 335,
+        "hash": "ea1a6514cd2cbbbac638f6fe24868a31",
+        "textRange": {
+          "startLine": 335,
+          "endLine": 335,
+          "startOffset": 8,
+          "endOffset": 55
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Consider using \"assertIn\" instead.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "tests",
+          "unittest"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "e4bc5e03-7076-4bf2-8814-e2b795c36ac4",
+        "rule": "python:S5906",
+        "severity": "MINOR",
+        "component": "human-ageitgey__face_recognition:tests/test_face_recognition.py",
+        "project": "human-ageitgey__face_recognition",
+        "line": 344,
+        "hash": "ea1a6514cd2cbbbac638f6fe24868a31",
+        "textRange": {
+          "startLine": 344,
+          "endLine": 344,
+          "startOffset": 8,
+          "endOffset": 55
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Consider using \"assertIn\" instead.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "tests",
+          "unittest"
+        ],
+        "creationDate": "2026-09-22T18:51:31+0000",
+        "updateDate": "2026-09-22T18:51:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      }
+    ],
+    "paging": {
+      "total": 43
+    }
+  }
+}

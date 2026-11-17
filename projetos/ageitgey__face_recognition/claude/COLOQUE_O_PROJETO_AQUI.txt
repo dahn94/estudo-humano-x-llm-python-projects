@@ -1,0 +1,1 @@
+Coloque aqui o projeto claude gerado com prompts/ageitgey__face_recognition/prompt_recriacao.txt.

@@ -1,0 +1,686 @@
+O QUE E ESTE ARQUIVO
+================================================================================
+Este e o prompt que deve ser enviado ao ChatGPT, Gemini ou Claude para recriar o projeto.
+Ele contem somente informacoes documentais publicas e a arquitetura textual inferida; o corpo do
+codigo-fonte humano nao foi incluido. A resposta da IA devera ser salva separadamente e depois
+avaliada pelas mesmas ferramentas Semgrep e SonarQube usadas no projeto humano.
+
+INSTRUCAO PARA A IA
+================================================================================
+Crie do zero um projeto Python funcionalmente semelhante ao descrito abaixo.
+REGRAS OBRIGATORIAS:
+- Nao procure, copie, traduza ou reproduza o codigo-fonte do repositorio original.
+- Use apenas README, documentacao e manifestos fornecidos neste prompt.
+- Implemente as funcionalidades publicas documentadas, validacao de entrada, tratamento de erros e testes proprios.
+- Nao inclua segredos, credenciais, caminhos absolutos ou dependencias desnecessarias.
+- Entregue todos os arquivos completos e um README de execucao.
+
+REFERENCIA: pandas-dev/pandas
+COMMIT DOCUMENTAL: c15f3df7b112350e2af19ccc5401601e54c9b722
+
+README:
+
+--- README.md ---
+<div align="center">
+  <img src="https://dev.pandas.io/static/img/pandas.svg"><br>
+</div>
+
+-----------------
+
+# pandas: powerful Python data analysis toolkit
+[![PyPI Latest Release](https://img.shields.io/pypi/v/pandas.svg)](https://pypi.org/project/pandas/)
+[![Conda Latest Release](https://anaconda.org/conda-forge/pandas/badges/version.svg)](https://anaconda.org/anaconda/pandas/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3509134.svg)](https://doi.org/10.5281/zenodo.3509134)
+[![Package Status](https://img.shields.io/pypi/status/pandas.svg)](https://pypi.org/project/pandas/)
+[![License](https://img.shields.io/pypi/l/pandas.svg)](https://github.com/pandas-dev/pandas/blob/master/LICENSE)
+[![Travis Build Status](https://travis-ci.org/pandas-dev/pandas.svg?branch=master)](https://travis-ci.org/pandas-dev/pandas)
+[![Azure Build Status](https://dev.azure.com/pandas-dev/pandas/_apis/build/status/pandas-dev.pandas?branch=master)](https://dev.azure.com/pandas-dev/pandas/_build/latest?definitionId=1&branch=master)
+[![Coverage](https://codecov.io/github/pandas-dev/pandas/coverage.svg?branch=master)](https://codecov.io/gh/pandas-dev/pandas)
+[![Downloads](https://anaconda.org/conda-forge/pandas/badges/downloads.svg)](https://pandas.pydata.org)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pydata/pandas)
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+## What is it?
+
+**pandas** is a Python package that provides fast, flexible, and expressive data
+structures designed to make working with "relational" or "labeled" data both
+easy and intuitive. It aims to be the fundamental high-level building block for
+doing practical, **real world** data analysis in Python. Additionally, it has
+the broader goal of becoming **the most powerful and flexible open source data
+analysis / manipulation tool available in any language**. It is already well on
+its way towards this goal.
+
+## Main Features
+Here are just a few of the things that pandas does well:
+
+  - Easy handling of [**missing data**][missing-data] (represented as
+    `NaN`, `NA`, or `NaT`) in floating point as well as non-floating point data
+  - Size mutability: columns can be [**inserted and
+    deleted**][insertion-deletion] from DataFrame and higher dimensional
+    objects
+  - Automatic and explicit [**data alignment**][alignment]: objects can
+    be explicitly aligned to a set of labels, or the user can simply
+    ignore the labels and let `Series`, `DataFrame`, etc. automatically
+    align the data for you in computations
+  - Powerful, flexible [**group by**][groupby] functionality to perform
+    split-apply-combine operations on data sets, for both aggregating
+    and transforming data
+  - Make it [**easy to convert**][conversion] ragged,
+    differently-indexed data in other Python and NumPy data structures
+    into DataFrame objects
+  - Intelligent label-based [**slicing**][slicing], [**fancy
+    indexing**][fancy-indexing], and [**subsetting**][subsetting] of
+    large data sets
+  - Intuitive [**merging**][merging] and [**joining**][joining] data
+    sets
+  - Flexible [**reshaping**][reshape] and [**pivoting**][pivot-table] of
+    data sets
+  - [**Hierarchical**][mi] labeling of axes (possible to have multiple
+    labels per tick)
+  - Robust IO tools for loading data from [**flat files**][flat-files]
+    (CSV and delimited), [**Excel files**][excel], [**databases**][db],
+    and saving/loading data from the ultrafast [**HDF5 format**][hdfstore]
+  - [**Time series**][timeseries]-specific functionality: date range
+    generation and frequency conversion, moving window statistics,
+    date shifting and lagging
+
+
+   [missing-data]: https://pandas.pydata.org/pandas-docs/stable/user_guide/missing_data.html
+   [insertion-deletion]: https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html#column-selection-addition-deletion
+   [alignment]: https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html?highlight=alignment#intro-to-data-structures
+   [groupby]: https://pandas.pydata.org/pandas-docs/stable/user_guide/groupby.html#group-by-split-apply-combine
+   [conversion]: https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html#dataframe
+   [slicing]: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#slicing-ranges
+   [fancy-indexing]: https://pandas.pydata.org/pandas-docs/stable/user_guide/advanced.html#advanced
+   [subsetting]: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#boolean-indexing
+   [merging]: https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html#database-style-dataframe-or-named-series-joining-merging
+   [joining]: https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html#joining-on-index
+   [reshape]: https://pandas.pydata.org/pandas-docs/stable/user_guide/reshaping.html
+   [pivot-table]: https://pandas.pydata.org/pandas-docs/stable/user_guide/reshaping.html
+   [mi]: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#hierarchical-indexing-multiindex
+   [flat-files]: https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html#csv-text-files
+   [excel]: https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html#excel-files
+   [db]: https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html#sql-queries
+   [hdfstore]: https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html#hdf5-pytables
+   [timeseries]: https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#time-series-date-functionality
+
+## Where to get it
+The source code is currently hosted on GitHub at:
+https://github.com/pandas-dev/pandas
+
+Binary installers for the latest released version are available at the [Python
+Package Index (PyPI)](https://pypi.org/project/pandas) and on [Conda](https://docs.conda.io/en/latest/).
+
+```sh
+# conda
+conda install pandas
+```
+
+```sh
+# or PyPI
+pip install pandas
+```
+
+## Dependencies
+- [NumPy - Adds support for large, multi-dimensional arrays, matrices and high-level mathematical functions to operate on these arrays](https://www.numpy.org)
+- [python-dateutil - Provides powerful extensions to the standard datetime module](https://labix.org/python-dateutil)
+- [pytz - Brings the Olson tz database into Python which allows accurate and cross platform timezone calculations](https://pythonhosted.org/pytz)
+
+See the [full installation instructions](https://pandas.pydata.org/pandas-docs/stable/install.html#dependencies) for minimum supported versions of required, recommended and optional dependencies.
+
+## Installation from sources
+To install pandas from source you need [Cython](https://cython.org/) in addition to the normal
+dependencies above. Cython can be installed from PyPI:
+
+```sh
+pip install cython
+```
+
+In the `pandas` directory (same one where you found this file after
+cloning the git repo), execute:
+
+```sh
+python setup.py install
+```
+
+or for installing in [development mode](https://pip.pypa.io/en/latest/reference/pip_install.html#editable-installs):
+
+
+```sh
+python -m pip install -e . --no-build-isolation --no-use-pep517
+```
+
+If you have `make`, you can also use `make develop` to run the same command.
+
+or alternatively
+
+```sh
+python setup.py develop
+```
+
+See the full instructions for [installing from source](https://pandas.pydata.org/pandas-docs/stable/install.html#installing-from-source).
+
+## License
+[BSD 3](LICENSE)
+
+## Documentation
+The official documentation is hosted on PyData.org: https://pandas.pydata.org/pandas-docs/stable
+
+## Background
+Work on ``pandas`` started at [AQR](https://www.aqr.com/) (a quantitative hedge fund) in 2008 and
+has been under active development since then.
+
+## Getting Help
+
+For usage questions, the best place to go to is [StackOverflow](https://stackoverflow.com/questions/tagged/pandas).
+Further, general questions and discussions can also take place on the [pydata mailing list](https://groups.google.com/forum/?fromgroups#!forum/pydata).
+
+## Discussion and Development
+Most development discussions take place on GitHub in this repo. Further, the [pandas-dev mailing list](https://mail.python.org/mailman/listinfo/pandas-dev) can also be used for specialized discussions or design issues, and a [Gitter channel](https://gitter.im/pydata/pandas) is available for quick development related questions.
+
+## Contributing to pandas [![Open Source Helpers](https://www.codetriage.com/pandas-dev/pandas/badges/users.svg)](https://www.codetriage.com/pandas-dev/pandas)
+
+All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome.
+
+A detailed overview on how to contribute can be found in the **[contributing guide](https://pandas.pydata.org/docs/dev/development/contributing.html)**. There is also an [overview](.github/CONTRIBUTING.md) on GitHub.
+
+If you are simply looking to start working with the pandas codebase, navigate to the [GitHub "issues" tab](https://github.com/pandas-dev/pandas/issues) and start looking through interesting issues. There are a number of issues listed under [Docs](https://github.com/pandas-dev/pandas/issues?labels=Docs&sort=updated&state=open) and [good first issue](https://github.com/pandas-dev/pandas/issues?labels=good+first+issue&sort=updated&state=open) where you could start out.
+
+You can also triage issues which may include reproducing bug reports, or asking for vital information such as version numbers or reproduction instructions. If you would like to start triaging issues, one easy way to get started is to [subscribe to pandas on CodeTriage](https://www.codetriage.com/pandas-dev/pandas).
+
+Or maybe through using pandas you have an idea of your own or are looking for something in the documentation and thinking ‘this can be improved’...you can do something about it!
+
+Feel free to ask questions on the [mailing list](https://groups.google.com/forum/?fromgroups#!forum/pydata) or on [Gitter](https://gitter.im/pydata/pandas).
+
+As contributors and maintainers to this project, you are expected to abide by pandas' code of conduct. More information can be found at: [Contributor Code of Conduct](https://github.com/pandas-dev/pandas/blob/master/.github/CODE_OF_CONDUCT.md)
+
+
+DOCUMENTACAO PUBLICA:
+
+
+MANIFESTOS PUBLICOS:
+
+--- pyproject.toml ---
+[build-system]
+# Minimum requirements for the build system to execute.
+# See https://github.com/scipy/scipy/pull/10431 for the AIX issue.
+requires = [
+    "setuptools",
+    "wheel",
+    "Cython>=0.29.21,<3",  # Note: sync with setup.py
+    "numpy==1.16.5; python_version=='3.7' and platform_system!='AIX'",
+    "numpy==1.17.3; python_version=='3.8' and platform_system!='AIX'",
+    "numpy==1.16.5; python_version=='3.7' and platform_system=='AIX'",
+    "numpy==1.17.3; python_version=='3.8' and platform_system=='AIX'",
+    "numpy; python_version>='3.9'",
+]
+
+[tool.black]
+target-version = ['py37', 'py38']
+exclude = '''
+(
+    asv_bench/env
+  | \.egg
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.nox
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | setup.py
+)
+'''
+
+--- setup.py ---
+#!/usr/bin/env python3
+
+"""
+Parts of this file were taken from the pyzmq project
+(https://github.com/zeromq/pyzmq) which have been permitted for use under the
+BSD license. Parts are from lxml (https://github.com/lxml/lxml)
+"""
+
+import argparse
+from distutils.command.build import build
+from distutils.sysconfig import get_config_vars
+from distutils.version import LooseVersion
+import multiprocessing
+import os
+from os.path import join as pjoin
+import platform
+import shutil
+import sys
+
+import numpy
+from setuptools import Command, Extension, find_packages, setup
+from setuptools.command.build_ext import build_ext as _build_ext
+
+import versioneer
+
+cmdclass = versioneer.get_cmdclass()
+
+
+def is_platform_windows():
+    return sys.platform == "win32" or sys.platform == "cygwin"
+
+
+def is_platform_mac():
+    return sys.platform == "darwin"
+
+
+min_numpy_ver = "1.16.5"
+min_cython_ver = "0.29.21"  # note: sync with pyproject.toml
+
+try:
+    from Cython import Tempita, __version__ as _CYTHON_VERSION
+    from Cython.Build import cythonize
+
+    _CYTHON_INSTALLED = _CYTHON_VERSION >= LooseVersion(min_cython_ver)
+except ImportError:
+    _CYTHON_VERSION = None
+    _CYTHON_INSTALLED = False
+    cythonize = lambda x, *args, **kwargs: x  # dummy func
+
+
+_pxi_dep_template = {
+    "algos": ["_libs/algos_common_helper.pxi.in", "_libs/algos_take_helper.pxi.in"],
+    "hashtable": [
+        "_libs/hashtable_class_helper.pxi.in",
+        "_libs/hashtable_func_helper.pxi.in",
+        "_libs/khash_for_primitive_helper.pxi.in",
+    ],
+    "index": ["_libs/index_class_helper.pxi.in"],
+    "sparse": ["_libs/sparse_op_helper.pxi.in"],
+    "interval": ["_libs/intervaltree.pxi.in"],
+}
+
+_pxifiles = []
+_pxi_dep = {}
+for module, files in _pxi_dep_template.items():
+    pxi_files = [pjoin("pandas", x) for x in files]
+    _pxifiles.extend(pxi_files)
+    _pxi_dep[module] = pxi_files
+
+
+class build_ext(_build_ext):
+    @classmethod
+    def render_templates(cls, pxifiles):
+        for pxifile in pxifiles:
+            # build pxifiles first, template extension must be .pxi.in
+            assert pxifile.endswith(".pxi.in")
+            outfile = pxifile[:-3]
+
+            if (
+                os.path.exists(outfile)
+                and os.stat(pxifile).st_mtime < os.stat(outfile).st_mtime
+            ):
+                # if .pxi.in is not updated, no need to output .pxi
+                continue
+
+            with open(pxifile) as f:
+                tmpl = f.read()
+            pyxcontent = Tempita.sub(tmpl)
+
+            with open(outfile, "w") as f:
+                f.write(pyxcontent)
+
+    def build_extensions(self):
+        # if building from c files, don't need to
+        # generate template output
+        if _CYTHON_INSTALLED:
+            self.render_templates(_pxifiles)
+
+        super().build_extensions()
+
+
+DESCRIPTION = "Powerful data structures for data analysis, time series, and statistics"
+LONG_DESCRIPTION = """
+**pandas** is a Python package that provides fast, flexible, and expressive data
+structures designed to make working with structured (tabular, multidimensional,
+potentially heterogeneous) and time series data both easy and intuitive. It
+aims to be the fundamental high-level building block for doing practical,
+**real world** data analysis in Python. Additionally, it has the broader goal
+of becoming **the most powerful and flexible open source data analysis /
+manipulation tool available in any language**. It is already well on its way
+toward this goal.
+
+pandas is well suited for many different kinds of data:
+
+  - Tabular data with heterogeneously-typed columns, as in an SQL table or
+    Excel spreadsheet
+  - Ordered and unordered (not necessarily fixed-frequency) time series data.
+  - Arbitrary matrix data (homogeneously typed or heterogeneous) with row and
+    column labels
+  - Any other form of observational / statistical data sets. The data actually
+    need not be labeled at all to be placed into a pandas data structure
+
+The two primary data structures of pandas, Series (1-dimensional) and DataFrame
+(2-dimensional), handle the vast majority of typical use cases in finance,
+statistics, social science, and many areas of engineering. For R users,
+DataFrame provides everything that R's ``data.frame`` provides and much
+more. pandas is built on top of `NumPy <https://www.numpy.org>`__ and is
+intended to integrate well within a scientific computing environment with many
+other 3rd party libraries.
+
+Here are just a few of the things that pandas does well:
+
+  - Easy handling of **missing data** (represented as NaN) in floating point as
+    well as non-floating point data
+  - Size mutability: columns can be **inserted and deleted** from DataFrame and
+    higher dimensional objects
+  - Automatic and explicit **data alignment**: objects can be explicitly
+    aligned to a set of labels, or the user can simply ignore the labels and
+    let `Series`, `DataFrame`, etc. automatically align the data for you in
+    computations
+  - Powerful, flexible **group by** functionality to perform
+    split-apply-combine operations on data sets, for both aggregating and
+    transforming data
+  - Make it **easy to convert** ragged, differently-indexed data in other
+    Python and NumPy data structures into DataFrame objects
+  - Intelligent label-based **slicing**, **fancy indexing**, and **subsetting**
+    of large data sets
+  - Intuitive **merging** and **joining** data sets
+  - Flexible **reshaping** and pivoting of data sets
+  - **Hierarchical** labeling of axes (possible to have multiple labels per
+    tick)
+  - Robust IO tools for loading data from **flat files** (CSV and delimited),
+    Excel files, databases, and saving / loading data from the ultrafast **HDF5
+    format**
+  - **Time series**-specific functionality: date range generation and frequency
+    conversion, moving window statistics, date shifting and lagging.
+
+Many of these principles are here to address the shortcomings frequently
+experienced using other languages / scientific research environments. For data
+scientists, working with data is typically divided into multiple stages:
+munging and cleaning data, analyzing / modeling it, then organizing the results
+of the analysis into a form suitable for plotting or tabular display. pandas is
+the ideal tool for all of these tasks.
+"""
+
+DISTNAME = "pandas"
+LICENSE = "BSD"
+AUTHOR = "The PyData Development Team"
+EMAIL = "pydata@googlegroups.com"
+URL = "https://pandas.pydata.org"
+DOWNLOAD_URL = ""
+PROJECT_URLS = {
+    "Bug Tracker": "https://github.com/pandas-dev/pandas/issues",
+    "Documentation": "https://pandas.pydata.org/pandas-docs/stable/",
+    "Source Code": "https://github.com/pandas-dev/pandas",
+}
+CLASSIFIERS = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Cython",
+    "Topic :: Scientific/Engineering",
+]
+
+
+class CleanCommand(Command):
+    """Custom distutils command to clean the .so and .pyc files."""
+
+    user_options = [("all", "a", "")]
+
+    def initialize_options(self):
+        self.all = True
+        self._clean_me = []
+        self._clean_trees = []
+
+        base = pjoin("pandas", "_libs", "src")
+        tsbase = pjoin("pandas", "_libs", "tslibs", "src")
+        dt = pjoin(tsbase, "datetime")
+        util = pjoin("pandas", "util")
+        parser = pjoin(base, "parser")
+        ujson_python = pjoin(base, "ujson", "python")
+        ujson_lib = pjoin(base, "ujson", "lib")
+        self._clean_exclude = [
+            pjoin(dt, "np_datetime.c"),
+            pjoin(dt, "np_datetime_strings.c"),
+            pjoin(parser, "tokenizer.c"),
+            pjoin(parser, "io.c"),
+            pjoin(ujson_python, "ujson.c"),
+            pjoin(ujson_python, "objToJSON.c"),
+            pjoin(ujson_python, "JSONtoObj.c"),
+            pjoin(ujson_python, "date_conversions.c"),
+            pjoin(ujson_lib, "ultrajsonenc.c"),
+            pjoin(ujson_lib, "ultrajsondec.c"),
+            pjoin(util, "move.c"),
+        ]
+
+        for root, dirs, files in os.walk("pandas"):
+            for f in files:
+                filepath = pjoin(root, f)
+                if filepath in self._clean_exclude:
+                    continue
+
+                if os.path.splitext(f)[-1] in (
+                    ".pyc",
+                    ".so",
+                    ".o",
+                    ".pyo",
+                    ".pyd",
+                    ".c",
+                    ".cpp",
+                    ".orig",
+                ):
+                    self._clean_me.append(filepath)
+            for d in dirs:
+                if d == "__pycache__":
+                    self._clean_trees.append(pjoin(root, d))
+
+        # clean the generated pxi files
+        for pxifile in _pxifiles:
+            pxifile = pxifile.replace(".pxi.in", ".pxi")
+            self._clean_me.append(pxifile)
+
+        for d in ("build", "dist"):
+            if os.path.exists(d):
+                self._clean_trees.append(d)
+
+    def finalize_options(self):
+        pass
+
+    def run(self):
+        for clean_me in self._clean_me:
+            try:
+                os.unlink(clean_me)
+            except OSError:
+                pass
+        for clean_tree in self._clean_trees:
+            try:
+                shutil.rmtree(clean_tree)
+            except OSError:
+                pass
+
+
+# we need to inherit from the versioneer
+# class as it encodes the version info
+sdist_class = cmdclass["sdist"]
+
+
+class CheckSDist(sdist_class):
+    """Custom sdist that ensures Cython has compiled all pyx files to c."""
+
+    _pyxfiles = [
+        "pandas/_libs/lib.pyx",
+        "pandas/_libs/hashtable.pyx",
+        "pandas/_libs/tslib.pyx",
+        "pandas/_libs/index.pyx",
+        "pandas/_libs/internals.pyx",
+        "pandas/_libs/algos.pyx",
+        "pandas/_libs/join.pyx",
+        "pandas/_libs/indexing.pyx",
+        "pandas/_libs/interval.pyx",
+        "pandas/_libs/hashing.pyx",
+        "pandas/_libs/missing.pyx",
+        "pandas/_libs/reduction.pyx",
+        "pandas/_libs/testing.pyx",
+        "pandas/_libs/sparse.pyx",
+        "pandas/_libs/ops.pyx",
+        "pandas/_libs/parsers.pyx",
+        "pandas/_libs/tslibs/base.pyx",
+        "pandas/_libs/tslibs/ccalendar.pyx",
+        "pandas/_libs/tslibs/dtypes.pyx",
+        "pandas/_libs/tslibs/period.pyx",
+        "pandas/_libs/tslibs/strptime.pyx",
+        "pandas/_libs/tslibs/np_datetime.pyx",
+        "pandas/_libs/tslibs/timedeltas.pyx",
+        "pandas/_libs/tslibs/timestamps.pyx",
+        "pandas/_libs/tslibs/timezones.pyx",
+        "pandas/_libs/tslibs/conversion.pyx",
+        "pandas/_libs/tslibs/fields.pyx",
+        "pandas/_libs/tslibs/offsets.pyx",
+        "pandas/_libs/tslibs/parsing.pyx",
+        "pandas/_libs/tslibs/tzconversion.pyx",
+        "pandas/_libs/tslibs/vectorized.pyx",
+        "pandas/_libs/window/indexers.pyx",
+        "pandas/_libs/writers.pyx",
+        "pandas/io/sas/sas.pyx",
+    ]
+
+    _cpp_pyxfiles = [
+        "pandas/_libs/window/aggregations.pyx",
+    ]
+
+    def initialize_options(self):
+        sdist_class.initialize_options(self)
+
+    def run(self):
+        if "cython" in cmdclass:
+            self.run_command("cython")
+        else:
+            # If we are not running cython then
+            # compile the extensions correctly
+            pyx_files = [(self._pyxfiles, "c"), (self._cpp_pyxfiles, "cpp")]
+
+            for pyxfiles, extension in pyx_files:
+                for pyxfile in pyxfiles:
+                    sourcefile = pyxfile[:-3] + extension
+                    msg = (
+                        f"{extension}-source file '{sourcefile}' not found.\n"
+                        "Run 'setup.py cython' before sdist."
+                    )
+                    assert os.path.isfile(sourcefile), msg
+        sdist_class.run(self)
+
+
+class CheckingBuildExt(build_ext):
+    """
+    Subclass build_ext to get clearer report if Cython is necessary.
+    """
+
+    def check_cython_extensions(self, extensions):
+        for ext in extensions:
+            for src in ext.sources:
+                if not os.path.exists(src):
+                    print(f"{ext.name}: -> [{ext.sources}]")
+                    raise Exception(
+                        f"""Cython-generated file '{src}' not found.
+                Cython is required to compile pandas from a development branch.
+                Please install Cython or download a release package of pandas.
+                """
+                    )
+
+    def build_extensions(self):
+        self.check_cython_extensions(self.extensions)
+        build_ext.build_extensions(self)
+
+
+class CythonCommand(build_ext):
+    """
+    Custom distutils command subclassed from Cython.Distutils.build_ext
+    to compile pyx->c, and stop there. All this does is override the
+    C-compile method build_extension() with a no-op.
+    """
+
+    def build_extension(self, ext):
+        pass
+
+
+class DummyBuildSrc(Command):
+    """numpy's build_src command interferes with Cython's build_ext."""
+
+    user_options = []
+
+    def initialize_options(self):
+        self.py_modules_dict = {}
+
+    def finalize_options(self):
+        pass
+
+    def run(self):
+        pass
+
+
+cmdclass.update({"clean": CleanCommand, "build": build})
+cmdclass["build_ext"] = CheckingBuildExt
+
+if _CYTHON_INSTALLED:
+    suffix = ".pyx"
+    cmdclass["cython"] = CythonCommand
+else:
+    suffix = ".c"
+    cmdclass["build_src"] = DummyBuildSrc
+
+# ----------------------------------------------------------------------
+# Preparation of compiler arguments
+
+debugging_symbols_requested = "--with-debugging-symbols" in sys.argv
+if debugging_symbols_requested:
+    sys.argv.remove("--with-debugging-symbols")
+
+
+if sys.byteorder == "big":
+    endian_macro = [("__BIG_ENDIAN__", "1")]
+else:
+    endian_macro = [("__LITTLE_ENDIAN__", "1")]
+
+
+extra_compile_args = []
+extra_link_args = []
+if is_platform_windows():
+    if debugging_symbols_requested:
+        extra_compile_args.append("/Z7")
+        extra_link_args.append("/DEBUG")
+e
+
+ARQUITETURA TEXTUAL INFERIDA:
+PROJETO
+|
++-- Documentacao e configuracao
+|   +-- AUTHORS.md
+|   +-- README.md
+|   +-- RELEASE.md
+|   +-- pyproject.toml
+|   +-- requirements-dev.txt
+|   +-- setup.cfg
+|   +-- setup.py
+|   +-- versioneer.py
+|
++-- Modulos/dominios visiveis
+|   +-- .github/
+|   +-- asv_bench/
+|   +-- ci/
+|   +-- doc/
+|   +-- pandas/
+|   +-- scripts/
+|   +-- web/
+|
++-- Entradas e interfaces descritas no README
+|   +-- configuracao/parametros
+|   +-- processamento principal
+|   +-- saidas/resultados
+|
++-- Testes proprios a serem criados pela IA

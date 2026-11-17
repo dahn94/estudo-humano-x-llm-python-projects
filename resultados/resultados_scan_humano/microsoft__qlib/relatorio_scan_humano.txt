@@ -1,0 +1,245 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 34 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: microsoft/qlib
+####################################################################################################
+Repositorio: https://github.com/microsoft/qlib
+Commit analisado: 46c8d791ac0d9a3adccfcbf2a0d94e917467e056
+Link do commit: https://github.com/microsoft/qlib/commit/46c8d791ac0d9a3adccfcbf2a0d94e917467e056
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 22242
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 21
+  ERROR: 6
+  WARNING: 15
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 0
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 0
+  Security hotspots: 0
+  Complexidade: 2664
+  Linhas analisadas pelo SonarQube: 14974
+  Severidades: nenhuma
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: examples/run_all_model.py
+Linha: 103
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/examples/run_all_model.py#L103
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 2]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: qlib/__init__.py
+Linha: 138
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/qlib/__init__.py#L138
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 3]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: qlib/__init__.py
+Linha: 193
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/qlib/__init__.py#L193
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 4]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: qlib/contrib/online/manager.py
+Linha: 113
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/qlib/contrib/online/manager.py#L113
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 5]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: qlib/contrib/online/utils.py
+Linha: 30
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/qlib/contrib/online/utils.py#L30
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 6]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: qlib/contrib/online/utils.py
+Linha: 91
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/qlib/contrib/online/utils.py#L91
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 7]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: qlib/contrib/report/analysis_model/analysis_model_performance.py
+Linha: 279
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/qlib/contrib/report/analysis_model/analysis_model_performance.py#L279
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 8]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: qlib/contrib/tuner/config.py
+Linha: 17
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/qlib/contrib/tuner/config.py#L17
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 9]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: qlib/contrib/tuner/tuner.py
+Linha: 97
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/qlib/contrib/tuner/tuner.py#L97
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 10]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: qlib/contrib/tuner/tuner.py
+Linha: 140
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/qlib/contrib/tuner/tuner.py#L140
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 11]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: qlib/data/cache.py
+Linha: 223
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/qlib/data/cache.py#L223
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 12]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: qlib/data/cache.py
+Linha: 507
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/qlib/data/cache.py#L507
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 13]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: qlib/data/cache.py
+Linha: 568
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/qlib/data/cache.py#L568
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 14]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: qlib/data/cache.py
+Linha: 908
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/qlib/data/cache.py#L908
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 15]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: qlib/data/data.py
+Linha: 278
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/qlib/data/data.py#L278
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 16]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: qlib/utils/__init__.py
+Linha: 131
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/qlib/utils/__init__.py#L131
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 17]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: qlib/utils/__init__.py
+Linha: 134
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/qlib/utils/__init__.py#L134
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 18]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: qlib/utils/objm.py
+Linha: 117
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/qlib/utils/objm.py#L117
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 19]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: qlib/workflow/cli.py
+Linha: 47
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/qlib/workflow/cli.py#L47
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 20]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: qlib/workflow/recorder.py
+Linha: 265
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/qlib/workflow/recorder.py#L265
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 21]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: scripts/data_collector/utils.py
+Linha: 106
+Link do codigo: https://github.com/microsoft/qlib/blob/46c8d791ac0d9a3adccfcbf2a0d94e917467e056/scripts/data_collector/utils.py#L106
+Descricao: pickle pode executar código durante a desserialização.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE microsoft/qlib
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

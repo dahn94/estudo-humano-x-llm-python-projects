@@ -1,0 +1,1 @@
+Coloque aqui o projeto claude gerado com prompts/httpie__cli/prompt.txt.

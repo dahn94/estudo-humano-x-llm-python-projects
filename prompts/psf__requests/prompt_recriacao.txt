@@ -1,0 +1,1128 @@
+O QUE E ESTE ARQUIVO
+================================================================================
+Este e o prompt que deve ser enviado ao ChatGPT, Gemini ou Claude para recriar o projeto.
+Ele contem somente informacoes documentais publicas e a arquitetura textual inferida; o corpo do
+codigo-fonte humano nao foi incluido. A resposta da IA devera ser salva separadamente e depois
+avaliada pelas mesmas ferramentas Semgrep e SonarQube usadas no projeto humano.
+
+INSTRUCAO PARA A IA
+================================================================================
+Crie do zero um projeto Python funcionalmente semelhante ao descrito abaixo.
+REGRAS OBRIGATORIAS:
+- Nao procure, copie, traduza ou reproduza o codigo-fonte do repositorio original.
+- Use apenas README, documentacao e manifestos fornecidos neste prompt.
+- Implemente as funcionalidades publicas documentadas, validacao de entrada, tratamento de erros e testes proprios.
+- Nao inclua segredos, credenciais, caminhos absolutos ou dependencias desnecessarias.
+- Entregue todos os arquivos completos e um README de execucao.
+
+REFERENCIA: psf/requests
+COMMIT DOCUMENTAL: c2b307dbefe21177af03f9feb37181a89a799fcc
+
+README:
+
+--- README.md ---
+# Requests
+
+**Requests** is a simple, yet elegant HTTP library.
+
+```python
+>>> import requests
+>>> r = requests.get('https://api.github.com/user', auth=('user', 'pass'))
+>>> r.status_code
+200
+>>> r.headers['content-type']
+'application/json; charset=utf8'
+>>> r.encoding
+'utf-8'
+>>> r.text
+'{"type":"User"...'
+>>> r.json()
+{'disk_usage': 368627, 'private_gists': 484, ...}
+```
+
+Requests allows you to send HTTP/1.1 requests extremely easily. There’s no need to manually add query strings to your URLs, or to form-encode your `PUT` & `POST` data — but nowadays, just use the `json` method!
+
+Requests is one of the most downloaded Python package today, pulling in around `14M downloads / week`— according to GitHub, Requests is currently [depended upon](https://github.com/psf/requests/network/dependents?package_id=UGFja2FnZS01NzA4OTExNg%3D%3D) by `500,000+` repositories. You may certainly put your trust in this code.
+
+[![Downloads](https://pepy.tech/badge/requests/month)](https://pepy.tech/project/requests/month)
+[![Supported Versions](https://img.shields.io/pypi/pyversions/requests.svg)](https://pypi.org/project/requests)
+[![Contributors](https://img.shields.io/github/contributors/psf/requests.svg)](https://github.com/psf/requests/graphs/contributors)
+
+## Installing Requests and Supported Versions
+
+Requests is available on PyPI:
+
+```console
+$ python -m pip install requests
+```
+
+Requests officially supports Python 2.7 & 3.5+.
+
+## Supported Features & Best–Practices
+
+Requests is ready for the demands of building robust and reliable HTTP–speaking applications, for the needs of today.
+
+- Keep-Alive & Connection Pooling
+- International Domains and URLs
+- Sessions with Cookie Persistence
+- Browser-style TLS/SSL Verification
+- Basic & Digest Authentication
+- Familiar `dict`–like Cookies
+- Automatic Content Decompression and Decoding
+- Multi-part File Uploads
+- SOCKS Proxy Support
+- Connection Timeouts
+- Streaming Downloads
+- Automatic honoring of `.netrc`
+- Chunked HTTP Requests
+
+## API Reference and User Guide available on [Read the Docs](https://requests.readthedocs.io)
+
+[![Read the Docs](https://raw.githubusercontent.com/psf/requests/master/ext/ss.png)](https://requests.readthedocs.io)
+
+---
+
+[![Kenneth Reitz](https://raw.githubusercontent.com/psf/requests/master/ext/kr.png)](https://kennethreitz.org) [![Python Software Foundation](https://raw.githubusercontent.com/psf/requests/master/ext/psf.png)](https://www.python.org/psf)
+
+
+DOCUMENTACAO PUBLICA:
+
+--- api.rst ---
+.. _api:
+
+Developer Interface
+===================
+
+.. module:: requests
+
+This part of the documentation covers all the interfaces of Requests. For
+parts where Requests depends on external libraries, we document the most
+important right here and provide links to the canonical documentation.
+
+
+Main Interface
+--------------
+
+All of Requests' functionality can be accessed by these 7 methods.
+They all return an instance of the :class:`Response <Response>` object.
+
+.. autofunction:: request
+
+.. autofunction:: head
+.. autofunction:: get
+.. autofunction:: post
+.. autofunction:: put
+.. autofunction:: patch
+.. autofunction:: delete
+
+Exceptions
+----------
+
+.. autoexception:: requests.RequestException
+.. autoexception:: requests.ConnectionError
+.. autoexception:: requests.HTTPError
+.. autoexception:: requests.URLRequired
+.. autoexception:: requests.TooManyRedirects
+.. autoexception:: requests.ConnectTimeout
+.. autoexception:: requests.ReadTimeout
+.. autoexception:: requests.Timeout
+
+
+Request Sessions
+----------------
+
+.. _sessionapi:
+
+.. autoclass:: Session
+   :inherited-members:
+
+
+Lower-Level Classes
+-------------------
+
+.. autoclass:: requests.Request
+   :inherited-members:
+
+.. autoclass:: Response
+   :inherited-members:
+
+
+Lower-Lower-Level Classes
+-------------------------
+
+.. autoclass:: requests.PreparedRequest
+   :inherited-members:
+
+.. autoclass:: requests.adapters.BaseAdapter
+   :inherited-members:
+
+.. autoclass:: requests.adapters.HTTPAdapter
+   :inherited-members:
+
+Authentication
+--------------
+
+.. autoclass:: requests.auth.AuthBase
+.. autoclass:: requests.auth.HTTPBasicAuth
+.. autoclass:: requests.auth.HTTPProxyAuth
+.. autoclass:: requests.auth.HTTPDigestAuth
+
+
+
+Encodings
+---------
+
+.. autofunction:: requests.utils.get_encodings_from_content
+.. autofunction:: requests.utils.get_encoding_from_headers
+.. autofunction:: requests.utils.get_unicode_from_response
+
+
+.. _api-cookies:
+
+Cookies
+-------
+
+.. autofunction:: requests.utils.dict_from_cookiejar
+.. autofunction:: requests.utils.add_dict_to_cookiejar
+.. autofunction:: requests.cookies.cookiejar_from_dict
+
+.. autoclass:: requests.cookies.RequestsCookieJar
+   :inherited-members:
+
+.. autoclass:: requests.cookies.CookieConflictError
+   :inherited-members:
+
+
+
+Status Code Lookup
+------------------
+
+.. autoclass:: requests.codes
+
+.. automodule:: requests.status_codes
+
+
+Migrating to 1.x
+----------------
+
+This section details the main differences between 0.x and 1.x and is meant
+to ease the pain of upgrading.
+
+
+API Changes
+~~~~~~~~~~~
+
+* ``Response.json`` is now a callable and not a property of a response.
+
+  ::
+
+      import requests
+      r = requests.get('https://github.com/timeline.json')
+      r.json()   # This *call* raises an exception if JSON decoding fails
+
+* The ``Session`` API has changed. Sessions objects no longer take parameters.
+  ``Session`` is also now capitalized, but it can still be
+  instantiated with a lowercase ``session`` for backwards compatibility.
+
+  ::
+
+      s = requests.Session()    # formerly, session took parameters
+      s.auth = auth
+      s.headers.update(headers)
+      r = s.get('https://httpbin.org/headers')
+
+* All request hooks have been removed except 'response'.
+
+* Authentication helpers have been broken out into separate modules. See
+  requests-oauthlib_ and requests-kerberos_.
+
+.. _requests-oauthlib: https://github.com/requests/requests-oauthlib
+.. _requests-kerberos: https://github.com/requests/requests-kerberos
+
+* The parameter for streaming requests was changed from ``prefetch`` to
+  ``stream`` and the logic was inverted. In addition, ``stream`` is now
+  required for raw response reading.
+
+  ::
+
+      # in 0.x, passing prefetch=False would accomplish the same thing
+      r = requests.get('https://github.com/timeline.json', stream=True)
+      for chunk in r.iter_content(8192):
+          ...
+
+* The ``config`` parameter to the requests method has been removed. Some of
+  these options are now configured on a ``Session`` such as keep-alive and
+  maximum number of redirects. The verbosity option should be handled by
+  configuring logging.
+
+  ::
+
+      import requests
+      import logging
+
+      # Enabling debugging at http.client level (requests->urllib3->http.client)
+      # you will see the REQUEST, including HEADERS and DATA, and RESPONSE with HEADERS but without DATA.
+      # the only thing missing will be the response.body which is not logged.
+      try: # for Python 3
+          from http.client import HTTPConnection
+      except ImportError:
+          from httplib import HTTPConnection
+      HTTPConnection.debuglevel = 1
+
+      logging.basicConfig() # you need to initialize logging, otherwise you will not see anything from requests
+      logging.getLogger().setLevel(logging.DEBUG)
+      requests_log = logging.getLogger("urllib3")
+      requests_log.setLevel(logging.DEBUG)
+      requests_log.propagate = True
+
+      requests.get('https://httpbin.org/headers')
+
+
+
+Licensing
+~~~~~~~~~
+
+One key difference that has nothing to do with the API is a change in the
+license from the ISC_ license to the `Apache 2.0`_ license. The Apache 2.0
+license ensures that contributions to Requests are also covered by the Apache
+2.0 license.
+
+.. _ISC: https://opensource.org/licenses/ISC
+.. _Apache 2.0: https://opensource.org/licenses/Apache-2.0
+
+
+Migrating to 2.x
+----------------
+
+
+Compared with the 1.0 release, there were relatively few backwards
+incompatible changes, but there are still a few issues to be aware of with
+this major release.
+
+For more details on the changes in this release including new APIs, links
+to the relevant GitHub issues and some of the bug fixes, read Cory's blog_
+on the subject.
+
+.. _blog: https://lukasa.co.uk/2013/09/Requests_20/
+
+
+API Changes
+~~~~~~~~~~~
+
+* There were a couple changes to how Requests handles exceptions.
+  ``RequestException`` is now a subclass of ``IOError`` rather than
+  ``RuntimeError`` as that more accurately categorizes the type of error.
+  In addition, an invalid URL escape sequence now raises a subclass of
+  ``RequestException`` rather than a ``ValueError``.
+
+  ::
+
+      requests.get('http://%zz/')   # raises requests.exceptions.InvalidURL
+
+  Lastly, ``httplib.IncompleteRead`` exceptions caused by incorrect chunked
+  encoding will now raise a Requests ``ChunkedEncodingError`` instead.
+
+* The proxy API has changed slightly. The scheme for a proxy URL is now
+  required.
+
+  ::
+
+      proxies = {
+        "http": "10.10.1.10:3128",    # use http://10.10.1.10:3128 instead
+      }
+
+      # In requests 1.x, this was legal, in requests 2.x,
+      #  this raises requests.exceptions.MissingSchema
+      requests.get("http://example.org", proxies=proxies)
+
+
+Behavioural Changes
+~~~~~~~~~~~~~~~~~~~~~~~
+
+* Keys in the ``headers`` dictionary are now native strings on all Python
+  versions, i.e. bytestrings on Python 2 and unicode on Python 3. If the
+  keys are not native strings (unicode on Python 2 or bytestrings on Python 3)
+  they will be converted to the native string type assuming UTF-8 encoding.
+
+* Values in the ``headers`` dictionary should always be strings. This has
+  been the project's position since before 1.0 but a recent change
+  (since version 2.11.0) enforces this more strictly. It's advised to avoid
+  passing header values as unicode when possible.
+
+--- faq.rst ---
+.. _faq:
+
+Frequently Asked Questions
+==========================
+
+This part of the documentation answers common questions about Requests.
+
+Encoded Data?
+-------------
+
+Requests automatically decompresses gzip-encoded responses, and does
+its best to decode response content to unicode when possible.
+
+You can get direct access to the raw response (and even the socket),
+if needed as well.
+
+
+Custom User-Agents?
+-------------------
+
+Requests allows you to easily override User-Agent strings, along with
+any other HTTP Header. See `documentation about headers <https://requests.readthedocs.io/en/master/user/quickstart/#custom-headers>`_.
+
+
+
+Why not Httplib2?
+-----------------
+
+Chris Adams gave an excellent summary on
+`Hacker News <http://news.ycombinator.com/item?id=2884406>`_:
+
+    httplib2 is part of why you should use requests: it's far more respectable
+    as a client but not as well documented and it still takes way too much code
+    for basic operations. I appreciate what httplib2 is trying to do, that
+    there's a ton of hard low-level annoyances in building a modern HTTP
+    client, but really, just use requests instead. Kenneth Reitz is very
+    motivated and he gets the degree to which simple things should be simple
+    whereas httplib2 feels more like an academic exercise than something
+    people should use to build production systems[1].
+
+    Disclosure: I'm listed in the requests AUTHORS file but can claim credit
+    for, oh, about 0.0001% of the awesomeness.
+
+    1. http://code.google.com/p/httplib2/issues/detail?id=96 is a good example:
+    an annoying bug which affect many people, there was a fix available for
+    months, which worked great when I applied it in a fork and pounded a couple
+    TB of data through it, but it took over a year to make it into trunk and
+    even longer to make it onto PyPI where any other project which required "
+    httplib2" would get the working version.
+
+
+Python 3 Support?
+-----------------
+
+Yes! Requests officially supports Python 2.7 & 3.5+ and PyPy.
+
+Python 2 Support?
+-----------------
+
+Yes! We do not have immediate plans to `sunset
+<https://www.python.org/doc/sunset-python-2/>`_ our support for Python
+2.7. We understand that we have a large user base with varying needs,
+and intend to maintain Python 2.7 support within Requests until `pip
+stops supporting Python 2.7 (there's no estimated date on that yet)
+<https://pip.pypa.io/en/latest/development/release-process/#python-2-support>`_.
+
+That said, it is *highly* recommended users migrate to Python 3.6+ since Python
+2.7 is no longer receiving bug fixes or security updates as of January 1, 2020.
+
+What are "hostname doesn't match" errors?
+-----------------------------------------
+
+These errors occur when :ref:`SSL certificate verification <verification>`
+fails to match the certificate the server responds with to the hostname
+Requests thinks it's contacting. If you're certain the server's SSL setup is
+correct (for example, because you can visit the site with your browser) and
+you're using Python 2.7, a possible explanation is that you need
+Server-Name-Indication.
+
+`Server-Name-Indication`_, or SNI, is an official extension to SSL where the
+client tells the server what hostname it is contacting. This is important
+when servers are using `Virtual Hosting`_. When such servers are hosting
+more than one SSL site they need to be able to return the appropriate
+certificate based on the hostname the client is connecting to.
+
+Python3 and Python 2.7.9+ include native support for SNI in their SSL modules.
+For information on using SNI with Requests on Python < 2.7.9 refer to this
+`Stack Overflow answer`_.
+
+.. _`Server-Name-Indication`: https://en.wikipedia.org/wiki/Server_Name_Indication
+.. _`virtual hosting`: https://en.wikipedia.org/wiki/Virtual_hosting
+.. _`Stack Overflow answer`: https://stackoverflow.com/questions/18578439/using-requests-with-tls-doesnt-give-sni-support/18579484#18579484
+
+--- out-there.rst ---
+Integrations
+============
+
+Python for iOS
+--------------
+
+Requests is built into the wonderful `Python for iOS <https://itunes.apple.com/us/app/python-2.7-for-ios/id485729872?mt=Python8>`_ runtime!
+
+To give it a try, simply::
+
+    import requests
+
+
+Articles & Talks
+================
+- `Python for the Web <https://www.gun.io/blog/python-for-the-web>`_ teaches how to use Python to interact with the web, using Requests.
+- `Daniel Greenfeld's Review of Requests <https://pydanny.blogspot.com/2011/05/python-http-requests-for-humans.html>`_
+- `My 'Python for Humans' talk <http://python-for-humans.heroku.com>`_ ( `audio <https://codeconf.s3.amazonaws.com/2011/pycodeconf/talks/PyCodeConf2011%20-%20Kenneth%20Reitz.m4a>`_ )
+- `Issac Kelly's 'Consuming Web APIs' talk <https://issackelly.github.com/Consuming-Web-APIs-with-Python-Talk/slides/slides.html>`_
+- `Blog post about Requests via Yum <https://arunsag.wordpress.com/2011/08/17/new-package-python-requests-http-for-humans/>`_
+- `Russian blog post introducing Requests <https://habr.com/post/126262/>`_
+- `Sending JSON in Requests <http://www.coglib.com/~icordasc/blog/2014/11/sending-json-in-requests.html>`_
+
+--- recommended.rst ---
+.. _recommended:
+
+Recommended Packages and Extensions
+===================================
+
+Requests has a great variety of powerful and useful third-party extensions.
+This page provides an overview of some of the best of them.
+
+Certifi CA Bundle
+-----------------
+
+`Certifi`_ is a carefully curated collection of Root Certificates for
+validating the trustworthiness of SSL certificates while verifying the
+identity of TLS hosts. It has been extracted from the Requests project.
+
+.. _Certifi: https://github.com/certifi/python-certifi
+
+CacheControl
+------------
+
+`CacheControl`_ is an extension that adds a full HTTP cache to Requests. This
+makes your web requests substantially more efficient, and should be used
+whenever you're making a lot of web requests.
+
+.. _CacheControl: https://cachecontrol.readthedocs.io/en/latest/
+
+Requests-Toolbelt
+-----------------
+
+`Requests-Toolbelt`_ is a collection of utilities that some users of Requests may desire,
+but do not belong in Requests proper. This library is actively maintained
+by members of the Requests core team, and reflects the functionality most
+requested by users within the community.
+
+.. _Requests-Toolbelt: https://toolbelt.readthedocs.io/en/latest/index.html
+
+
+Requests-Threads
+----------------
+
+`Requests-Threads`_ is a Requests session that returns the amazing Twisted's awaitable Deferreds instead of Response objects. This allows the use of ``async``/``await`` keyword usage on Python 3, or Twisted's style of programming, if desired.
+
+.. _Requests-Threads: https://github.com/requests/requests-threads
+
+Requests-OAuthlib
+-----------------
+
+`requests-oauthlib`_ makes it possible to do the OAuth dance from Requests
+automatically. This is useful for the large number of websites that use OAuth
+to provide authentication. It also provides a lot of tweaks that handle ways
+that specific OAuth providers differ from the standard specifications.
+
+.. _requests-oauthlib: https://requests-oauthlib.readthedocs.io/en/latest/
+
+
+Betamax
+-------
+
+`Betamax`_ records your HTTP interactions so the NSA does not have to.
+A VCR imitation designed only for Python-Requests.
+
+.. _betamax: https://github.com/sigmavirus24/betamax
+
+--- release-process.rst ---
+Release Process and Rules
+=========================
+
+.. versionadded:: v2.6.2
+
+Starting with the version to be released after ``v2.6.2``, the following rules
+will govern and describe how the Requests core team produces a new release.
+
+Major Releases
+--------------
+
+A major release will include breaking changes. When it is versioned, it will
+be versioned as ``vX.0.0``. For example, if the previous release was
+``v10.2.7`` the next version will be ``v11.0.0``.
+
+Breaking changes are changes that break backwards compatibility with prior
+versions. If the project were to change the ``text`` attribute on a
+``Response`` object to a method, that would only happen in a Major release.
+
+Major releases may also include miscellaneous bug fixes. The core developers of
+Requests are committed to providing a good user experience. This means we're
+also committed to preserving backwards compatibility as much as possible. Major
+releases will be infrequent and will need strong justifications before they are
+considered.
+
+Minor Releases
+--------------
+
+A minor release will not include breaking changes but may include miscellaneous
+bug fixes. If the previous version of Requests released was ``v10.2.7`` a minor
+release would be versioned as ``v10.3.0``.
+
+Minor releases will be backwards compatible with releases that have the same
+major version number. In other words, all versions that would start with
+``v10.`` should be compatible with each other.
+
+Hotfix Releases
+---------------
+
+A hotfix release will only include bug fixes that were missed when the project
+released the previous version. If the previous version of Requests released
+``v10.2.7`` the hotfix release would be versioned as ``v10.2.8``.
+
+Hotfixes will **not** include upgrades to vendored dependencies after
+``v2.6.2``
+
+Reasoning
+---------
+
+In the 2.5 and 2.6 release series, the Requests core team upgraded vendored
+dependencies and caused a great deal of headaches for both users and the core
+team. To reduce this pain, we're forming a concrete set of procedures so
+expectations will be properly set.
+
+--- support.rst ---
+.. _support:
+
+Support
+=======
+
+If you have questions or issues about Requests, there are several options:
+
+Stack Overflow
+--------------
+
+If your question does not contain sensitive (possibly proprietary)
+information or can be properly anonymized, please ask a question on
+`Stack Overflow <https://stackoverflow.com/questions/tagged/python-requests>`_
+and use the tag ``python-requests``.
+
+
+File an Issue
+-------------
+
+If you notice some unexpected behaviour in Requests, or want to see support
+for a new feature,
+`file an issue on GitHub <https://github.com/psf/requests/issues>`_.
+
+
+Send a Tweet
+------------
+
+If your question is less than 280 characters, feel free to send a tweet to
+`@nateprewitt <https://twitter.com/nateprewitt>`_,
+`@sethmlarson <https://twitter.com/sethmlarson>`_, or
+`@sigmavirus24 <https://twitter.com/sigmavirus24>`_.
+
+--- updates.rst ---
+.. _updates:
+
+
+Community Updates
+=================
+
+If you'd like to stay up to date on the community and development of Requests,
+there are several options:
+
+
+GitHub
+------
+
+The best way to track the development of Requests is through
+`the GitHub repo <https://github.com/psf/requests>`_.
+
+
+.. include:: ../../HISTORY.md
+
+--- vulnerabilities.rst ---
+Vulnerability Disclosure
+========================
+
+If you think you have found a potential security vulnerability in requests,
+please email `Nate <mailto:nate.prewitt@gmail.com>`_ and `Seth <mailto:@sethmichaellarson@gmail.com>`_ directly. **Do not file a public issue.**
+
+Our PGP Key fingerprints are:
+
+- 8722 7E29 AD9C FF5C FAC3  EA6A 44D3 FF97 B80D C864 (`@nateprewitt <https://keybase.io/nateprewitt>`_)
+
+- EDD5 6765 A9D8 4653 CBC8  A134 51B0 6736 1740 F5FC (`@sethmlarson <https://keybase.io/sethmlarson>`_)
+
+You can also contact us on `Keybase <https://keybase.io/>`_ with the
+profiles above if desired.
+
+If English is not your first language, please try to describe the problem and
+its impact to the best of your ability. For greater detail, please use your
+native language and we will try our best to translate it using online services.
+
+Please also include the code you used to find the problem and the shortest
+amount of code necessary to reproduce it.
+
+Please do not disclose this to anyone else. We will retrieve a CVE identifier
+if necessary and give you full credit under whatever name or alias you provide.
+We will only request an identifier when we have a fix and can publish it in a
+release.
+
+We will respect your privacy and will only publicize your involvement if you
+grant us permission.
+
+Process
+-------
+
+This following information discusses the process the requests project follows
+in response to vulnerability disclosures. If you are disclosing a
+vulnerability, this section of the documentation lets you know how we will
+respond to your disclosure.
+
+Timeline
+~~~~~~~~
+
+When you report an issue, one of the project members will respond to you within
+two days *at the outside*. In most cases responses will be faster, usually
+within 12 hours. This initial response will at the very least confirm receipt
+of the report.
+
+If we were able to rapidly reproduce the issue, the initial response will also
+contain confirmation of the issue. If we are not, we will often ask for more
+information about the reproduction scenario.
+
+Our goal is to have a fix for any vulnerability released within two weeks of
+the initial disclosure. This may potentially involve shipping an interim
+release that simply disables function while a more mature fix can be prepared,
+but will in the vast majority of cases mean shipping a complete release as soon
+as possible.
+
+Throughout the fix process we will keep you up to speed with how the fix is
+progressing. Once the fix is prepared, we will notify you that we believe we
+have a fix. Often we will ask you to confirm the fix resolves the problem in
+your environment, especially if we are not confident of our reproduction
+scenario.
+
+At this point, we will prepare for the release. We will obtain a CVE number
+if one is required, providing you with full credit for the discovery. We will
+also decide on a planned release date, and let you know when it is. This
+release date will *always* be on a weekday.
+
+At this point we will reach out to our major downstream packagers to notify
+them of an impending security-related patch so they can make arrangements. In
+addition, these packagers will be provided with the intended patch ahead of
+time, to ensure that they are able to promptly release their downstream
+packages. Currently the list of people we actively contact *ahead of a public
+release* is:
+
+- Jeremy Cline, Red Hat (@jeremycline)
+- Daniele Tricoli, Debian (@eriol)
+
+We will notify these individuals at least a week ahead of our planned release
+date to ensure that they have sufficient time to prepare. If you believe you
+should be on this list, please let one of the maintainers know at one of the
+email addresses at the top of this article.
+
+On release day, we will push the patch to our public repository, along with an
+updated changelog that describes the issue and credits you. We will then issue
+a PyPI release containing the patch.
+
+At this point, we will publicise the release. This will involve mails to
+mailing lists, Tweets, and all other communication mechanisms available to the
+core team.
+
+We will also explicitly mention which commits contain the fix to make it easier
+for other distributors and users to easily patch their own versions of requests
+if upgrading is not an option.
+
+Previous CVEs
+-------------
+
+- Fixed in 2.20.0
+  - `CVE 2018-18074 <https://cve.mitre.org/cgi-bin/cvename.cgi?name=2018-18074>`_
+
+- Fixed in 2.6.0
+
+  - `CVE 2015-2296 <https://cve.mitre.org/cgi-bin/cvename.cgi?name=2015-2296>`_,
+    reported by Matthew Daley of `BugFuzz <https://bugfuzz.com/>`_.
+
+- Fixed in 2.3.0
+
+  - `CVE 2014-1829 <https://cve.mitre.org/cgi-bin/cvename.cgi?name=2014-1829>`_
+
+  - `CVE 2014-1830 <https://cve.mitre.org/cgi-bin/cvename.cgi?name=2014-1830>`_
+
+--- authors.rst ---
+Authors
+=======
+
+.. include:: ../../AUTHORS.rst
+
+--- contributing.rst ---
+.. _contributing:
+
+Contributor's Guide
+===================
+
+If you're reading this, you're probably interested in contributing to Requests.
+Thank you very much! Open source projects live-and-die based on the support
+they receive from others, and the fact that you're even considering
+contributing to the Requests project is *very* generous of you.
+
+This document lays out guidelines and advice for contributing to this project.
+If you're thinking of contributing, please start by reading this document and
+getting a feel for how contributing to this project works. If you have any
+questions, feel free to reach out to either `Nate Prewitt`_, `Ian Cordasco`_,
+or `Seth Michael Larson`_, the primary maintainers.
+
+.. _Ian Cordasco: http://www.coglib.com/~icordasc/
+.. _Nate Prewitt: https://www.nateprewitt.com/
+.. _Seth Michael Larson: https://sethmlarson.dev/
+
+The guide is split into sections based on the type of contribution you're
+thinking of making, with a section that covers general guidelines for all
+contributors.
+
+Be Cordial
+----------
+
+    **Be cordial or be on your way**. *—Kenneth Reitz*
+
+Requests has one very important rule governing all forms of contribution,
+including reporting bugs or requesting features. This golden rule is
+"`be cordial or be on your way`_".
+
+**All contributions are welcome**, as long as
+everyone involved is treated with respect.
+
+.. _be cordial or be on your way: https://www.kennethreitz.org/essays/be-cordial-or-be-on-your-way
+
+.. _early-feedback:
+
+Get Early Feedback
+------------------
+
+If you are contributing, do not feel the need to sit on your contribution until
+it is perfectly polished and complete. It helps everyone involved for you to
+seek feedback as early as you possibly can. Submitting an early, unfinished
+version of your contribution for feedback in no way prejudices your chances of
+getting that contribution accepted, and can save you from putting a lot of work
+into a contribution that is not suitable for the project.
+
+Contribution Suitability
+------------------------
+
+Our project maintainers have the last word on whether or not a contribution is
+suitable for Requests. All contributions will be considered carefully, but from
+time to time, contributions will be rejected because they do not suit the
+current goals or needs of the project.
+
+If your contribution is rejected, don't despair! As long as you followed these
+guidelines, you will have a much better chance of getting your next
+contribution accepted.
+
+
+Code Contributions
+------------------
+
+Steps for Submitting Code
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When contributing code, you'll want to follow this checklist:
+
+1. Fork the repository on GitHub.
+2. Run the tests to confirm they all pass on your system. If they don't, you'll
+   need to investigate why they fail. If you're unable to diagnose this
+   yourself, raise it as a bug report by following the guidelines in this
+   document: :ref:`bug-reports`.
+3. Write tests that demonstrate your bug or feature. Ensure that they fail.
+4. Make your change.
+5. Run the entire test suite again, confirming that all tests pass *including
+   the ones you just added*.
+6. Send a GitHub Pull Request to the main repository's ``master`` branch.
+   GitHub Pull Requests are the expected method of code collaboration on this
+   project.
+
+The following sub-sections go into more detail on some of the points above.
+
+Code Review
+~~~~~~~~~~~
+
+Contributions will not be merged until they've been code reviewed. You should
+implement any code review feedback unless you strongly object to it. In the
+event that you object to the code review feedback, you should make your case
+clearly and calmly. If, after doing so, the feedback is judged to still apply,
+you must either apply the feedback or withdraw your contribution.
+
+New Contributors
+~~~~~~~~~~~~~~~~
+
+If you are new or relatively new to Open Source, welcome! Requests aims to
+be a gentle introduction to the world of Open Source. If you're concerned about
+how best to contribute, please consider mailing a maintainer (listed above) and
+asking for help.
+
+Please also check the :ref:`early-feedback` section.
+
+Kenneth Reitz's Code Style™
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The Requests codebase uses the `PEP 8`_ code style.
+
+In addition to the standards outlined in PEP 8, we have a few guidelines:
+
+- Line-length can exceed 79 characters, to 100, when convenient.
+- Line-length can exceed 100 characters, when doing otherwise would be *terribly* inconvenient.
+- Always use single-quoted strings (e.g. ``'#flatearth'``), unless a single-quote occurs within the string.
+
+Additionally, one of the styles that PEP8 recommends for `line continuations`_
+completely lacks all sense of taste, and is not to be permitted within
+the Requests codebase::
+
+    # Aligned with opening delimiter.
+    foo = long_function_name(var_one, var_two,
+                             var_three, var_four)
+
+No. Just don't. Please. This is much better::
+
+    foo = long_function_name(
+        var_one,
+        var_two,
+        var_three,
+        var_four,
+    )
+
+Docstrings are to follow the following syntaxes::
+
+    def the_earth_is_flat():
+        """NASA divided up the seas into thirty-three degrees."""
+        pass
+
+::
+
+    def fibonacci_spiral_tool():
+        """With my feet upon the ground I lose myself / between the sounds
+        and open wide to suck it in. / I feel it move across my skin. / I'm
+        reaching up and reaching out. / I'm reaching for the random or
+        whatever will bewilder me. / Whatever will bewilder me. / And
+        following our will and wind we may just go where no one's been. /
+        We'll ride the spiral to the end and may just go where no one's
+        been.
+
+        Spiral out. Keep going...
+        """
+        pass
+
+All functions, methods, and classes are to contain docstrings. Object data
+model methods (e.g. ``__repr__``) are typically the exception to this rule.
+
+Thanks for helping to make the world a better place!
+
+.. _PEP 8: https://pep8.org/
+.. _line continuations: https://www.python.org/dev/peps/pep-0008/#indentation
+
+Documentation Contributions
+---------------------------
+
+Documentation improvements are always welcome! The documentation files live in
+the ``docs/`` directory of the codebase. They're written in
+`reStructuredText`_, and use `Sphinx`_ to generate the full suite of
+documentation.
+
+When contributing documentation, please do your best to follow the style of the
+documentation files. This means a soft-limit of 79 characters wide in your text
+files and a semi-formal, yet friendly and approachable, prose style.
+
+When presenting Python code, use single-quoted strings (``'hello'`` instead of
+``"hello"``).
+
+.. _reStructuredText: http://docutils.sourceforge.net/rst.html
+.. _Sphinx: http://sphinx-doc.org/index.html
+
+
+.. _bug-reports:
+
+Bug Reports
+-----------
+
+Bug reports are hugely important! Before you raise one, though, please check
+through the `GitHub issues`_, **both open and closed**, to confirm that the bug
+hasn't been reported before. Duplicate bug reports are a huge drain on the time
+of other contributors, and should be avoided as much as possible.
+
+.. _GitHub issues: https://github.com/psf/requests/issues
+
+
+Feature Requests
+----------------
+
+Requests is in a perpetual feature freeze, only the BDFL can add or approve of
+new features. The maintainers believe that Requests is a feature-complete
+piece of software at this time.
+
+One of the most
+
+MANIFESTOS PUBLICOS:
+
+--- setup.py ---
+#!/usr/bin/env python
+# Learn more: https://github.com/kennethreitz/setup.py
+import os
+import re
+import sys
+
+from codecs import open
+
+from setuptools import setup
+from setuptools.command.test import test as TestCommand
+
+here = os.path.abspath(os.path.dirname(__file__))
+
+class PyTest(TestCommand):
+    user_options = [('pytest-args=', 'a', "Arguments to pass into py.test")]
+
+    def initialize_options(self):
+        TestCommand.initialize_options(self)
+        try:
+            from multiprocessing import cpu_count
+            self.pytest_args = ['-n', str(cpu_count()), '--boxed']
+        except (ImportError, NotImplementedError):
+            self.pytest_args = ['-n', '1', '--boxed']
+
+    def finalize_options(self):
+        TestCommand.finalize_options(self)
+        self.test_args = []
+        self.test_suite = True
+
+    def run_tests(self):
+        import pytest
+
+        errno = pytest.main(self.pytest_args)
+        sys.exit(errno)
+
+# 'setup.py publish' shortcut.
+if sys.argv[-1] == 'publish':
+    os.system('python setup.py sdist bdist_wheel')
+    os.system('twine upload dist/*')
+    sys.exit()
+
+packages = ['requests']
+
+requires = [
+    'chardet>=3.0.2,<5',
+    'idna>=2.5,<3',
+    'urllib3>=1.21.1,<1.27',
+    'certifi>=2017.4.17'
+
+]
+test_requirements = [
+    'pytest-httpbin==0.0.7',
+    'pytest-cov',
+    'pytest-mock',
+    'pytest-xdist',
+    'PySocks>=1.5.6, !=1.5.7',
+    'pytest>=3'
+]
+
+about = {}
+with open(os.path.join(here, 'requests', '__version__.py'), 'r', 'utf-8') as f:
+    exec(f.read(), about)
+
+with open('README.md', 'r', 'utf-8') as f:
+    readme = f.read()
+
+setup(
+    name=about['__title__'],
+    version=about['__version__'],
+    description=about['__description__'],
+    long_description=readme,
+    long_description_content_type='text/markdown',
+    author=about['__author__'],
+    author_email=about['__author_email__'],
+    url=about['__url__'],
+    packages=packages,
+    package_data={'': ['LICENSE', 'NOTICE']},
+    package_dir={'requests': 'requests'},
+    include_package_data=True,
+    python_requires=">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*",
+    install_requires=requires,
+    license=about['__license__'],
+    zip_safe=False,
+    classifiers=[
+        'Development Status :: 5 - Production/Stable',
+        'Intended Audience :: Developers',
+        'Natural Language :: English',
+        'License :: OSI Approved :: Apache Software License',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: Implementation :: CPython',
+        'Programming Language :: Python :: Implementation :: PyPy'
+    ],
+    cmdclass={'test': PyTest},
+    tests_require=test_requirements,
+    extras_require={
+        'security': ['pyOpenSSL >= 0.14', 'cryptography>=1.3.4'],
+        'socks': ['PySocks>=1.5.6, !=1.5.7'],
+        'socks:sys_platform == "win32" and python_version == "2.7"': ['win_inet_pton'],
+    },
+    project_urls={
+        'Documentation': 'https://requests.readthedocs.io',
+        'Source': 'https://github.com/psf/requests',
+    },
+)
+
+--- setup.cfg ---
+[bdist_wheel]
+universal = 1
+
+[metadata]
+license_file = LICENSE
+
+--- tox.ini ---
+[tox]
+envlist = py27,py35,py36,py37,py38
+
+[testenv]
+
+commands =
+    python setup.py test
+
+--- requirements-dev.txt ---
+pytest>=2.8.0,<=3.10.1
+pytest-cov
+pytest-httpbin<1.0
+pytest-mock==2.0.0
+httpbin==0.7.0
+wheel
+
+
+ARQUITETURA TEXTUAL INFERIDA:
+PROJETO
+|
++-- Documentacao e configuracao
+|   +-- AUTHORS.rst
+|   +-- HISTORY.md
+|   +-- README.md
+|   +-- requirements-dev.txt
+|   +-- setup.cfg
+|   +-- setup.py
+|   +-- tox.ini
+|
++-- Modulos/dominios visiveis
+|   +-- .github/
+|   +-- docs/
+|   +-- requests/
+|   +-- tests/
+|
++-- Entradas e interfaces descritas no README
+|   +-- configuracao/parametros
+|   +-- processamento principal
+|   +-- saidas/resultados
+|
++-- Testes proprios a serem criados pela IA

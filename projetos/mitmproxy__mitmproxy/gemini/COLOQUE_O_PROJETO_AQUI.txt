@@ -1,0 +1,1 @@
+Coloque aqui o projeto gemini gerado com prompts/mitmproxy__mitmproxy/prompt_recriacao.txt.

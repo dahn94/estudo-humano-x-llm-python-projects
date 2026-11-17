@@ -1,0 +1,1 @@
+Coloque aqui o projeto claude gerado com prompts/3b1b__manim/prompt_recriacao.txt.

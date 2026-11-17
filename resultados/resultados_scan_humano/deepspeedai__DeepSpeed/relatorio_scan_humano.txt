@@ -1,0 +1,3888 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 45 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: deepspeedai/DeepSpeed
+####################################################################################################
+Repositorio: https://github.com/deepspeedai/DeepSpeed
+Commit analisado: 81aeea361da3936b875a678b9cb44596800510b5
+Link do commit: https://github.com/deepspeedai/DeepSpeed/commit/81aeea361da3936b875a678b9cb44596800510b5
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 24908
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 8
+  ERROR: 8
+  WARNING: 0
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 376
+  Vulnerabilidades: 8
+  Bugs: 19
+  Code smells: 349
+  Security hotspots: 0
+  Complexidade: 3700
+  Linhas analisadas pelo SonarQube: 20417
+  Severidades: BLOCKER=1, CRITICAL=78, INFO=23, MAJOR=138, MINOR=136
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: deepspeed/launcher/multinode_runner.py
+Linha: 149
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/launcher/multinode_runner.py#L149
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 2]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: deepspeed/launcher/runner.py
+Linha: 281
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/launcher/runner.py#L281
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 3]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: deepspeed/utils/distributed.py
+Linha: 55
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/utils/distributed.py#L55
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 4]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: op_builder/builder.py
+Linha: 137
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/op_builder/builder.py#L137
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 5]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: op_builder/cpu_adam.py
+Linha: 32
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/op_builder/cpu_adam.py#L32
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 6]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: setup.py
+Linha: 77
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/setup.py#L77
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 7]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: setup.py
+Linha: 111
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/setup.py#L111
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 8]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: setup.py
+Linha: 113
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/setup.py#L113
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SONARQUBE 1]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/elasticity/config.py
+Linha: 6
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/elasticity/config.py#L6
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 2]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/elasticity/elasticity.py
+Linha: 76
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/elasticity/elasticity.py#L76
+Descricao: Refactor this function to reduce its Cognitive Complexity from 20 to the 15 allowed.
+
+[SONARQUBE 3]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7508
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/elasticity/elasticity.py
+Linha: 90
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/elasticity/elasticity.py#L90
+Descricao: Remove this redundant call.
+
+[SONARQUBE 4]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8495
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/elasticity/elasticity.py
+Linha: 240
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/elasticity/elasticity.py#L240
+Descricao: Refactor this function to always return tuples of the same length.
+
+[SONARQUBE 5]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1244
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/elasticity/elasticity.py
+Linha: 305
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/elasticity/elasticity.py#L305
+Descricao: Do not perform equality checks with floating point values.
+
+[SONARQUBE 6]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7508
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/elasticity/elasticity.py
+Linha: 325
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/elasticity/elasticity.py#L325
+Descricao: Remove this redundant call.
+
+[SONARQUBE 7]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/git_version_info.py
+Linha: 3
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/git_version_info.py#L3
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 8]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S5443
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/launcher/constants.py
+Linha: 9
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/launcher/constants.py#L9
+Descricao: Make sure publicly writable directories are used safely here.
+
+[SONARQUBE 9]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/launcher/launch.py
+Linha: 96
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/launcher/launch.py#L96
+Descricao: Replace the unused loop index "gid" with "_".
+
+[SONARQUBE 10]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/launcher/launch.py
+Linha: 104
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/launcher/launch.py#L104
+Descricao: Remove the unused local variable "exclusion_counts_per_node".
+
+[SONARQUBE 11]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S7505
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/launcher/multinode_runner.py
+Linha: 44
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/launcher/multinode_runner.py#L44
+Descricao: Replace this map call with a comprehension.
+
+[SONARQUBE 12]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/launcher/multinode_runner.py
+Linha: 85
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/launcher/multinode_runner.py#L85
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 13]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/launcher/multinode_runner.py
+Linha: 89
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/launcher/multinode_runner.py#L89
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 14]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/launcher/multinode_runner.py
+Linha: 143
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/launcher/multinode_runner.py#L143
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 15]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/launcher/multinode_runner.py
+Linha: 160
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/launcher/multinode_runner.py#L160
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 16]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8519
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/launcher/multinode_runner.py
+Linha: 165
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/launcher/multinode_runner.py#L165
+Descricao: Replace "list(...)[0]" with "next(iter(...))" to avoid materializing the entire iterable.
+
+[SONARQUBE 17]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7492
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/launcher/multinode_runner.py
+Linha: 166
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/launcher/multinode_runner.py#L166
+Descricao: Unpack this comprehension expression
+
+[SONARQUBE 18]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/launcher/runner.py
+Linha: 143
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/launcher/runner.py#L143
+Descricao: Refactor this function to reduce its Cognitive Complexity from 42 to the 15 allowed.
+
+[SONARQUBE 19]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/launcher/runner.py
+Linha: 171
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/launcher/runner.py#L171
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 20]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/launcher/runner.py
+Linha: 251
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/launcher/runner.py#L251
+Descricao: Refactor this function to reduce its Cognitive Complexity from 48 to the 15 allowed.
+
+[SONARQUBE 21]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8519
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/launcher/runner.py
+Linha: 279
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/launcher/runner.py#L279
+Descricao: Replace "list(...)[0]" with "next(iter(...))" to avoid materializing the entire iterable.
+
+[SONARQUBE 22]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/launcher/runner.py
+Linha: 340
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/launcher/runner.py#L340
+Descricao: Remove the unused local variable "exports".
+
+[SONARQUBE 23]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7492
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/launcher/runner.py
+Linha: 342
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/launcher/runner.py#L342
+Descricao: Unpack this comprehension expression
+
+[SONARQUBE 24]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/adam/cpu_adam.py
+Linha: 61
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/adam/cpu_adam.py#L61
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 25]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/adam/fused_adam.py
+Linha: 63
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/adam/fused_adam.py#L63
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 26]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/adam/fused_adam.py
+Linha: 85
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/adam/fused_adam.py#L85
+Descricao: Refactor this function to reduce its Cognitive Complexity from 28 to the 15 allowed.
+
+[SONARQUBE 27]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/lamb/fused_lamb.py
+Linha: 55
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/lamb/fused_lamb.py#L55
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 28]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/lamb/fused_lamb.py
+Linha: 67
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/lamb/fused_lamb.py#L67
+Descricao: Refactor this function to reduce its Cognitive Complexity from 45 to the 15 allowed.
+
+[SONARQUBE 29]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6660
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/lamb/fused_lamb.py
+Linha: 97
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/lamb/fused_lamb.py#L97
+Descricao: Use `not isinstance()` here.
+
+[SONARQUBE 30]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6660
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/lamb/fused_lamb.py
+Linha: 106
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/lamb/fused_lamb.py#L106
+Descricao: Use `not isinstance()` here.
+
+[SONARQUBE 31]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 18
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L18
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 32]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 19
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L19
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 33]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 20
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L20
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 34]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 21
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L21
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 35]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 36
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L36
+Descricao: Remove the unused local variable "min_size".
+
+[SONARQUBE 36]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 37
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L37
+Descricao: Remove this commented out code.
+
+[SONARQUBE 37]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 117
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L117
+Descricao: Refactor this function to reduce its Cognitive Complexity from 35 to the 15 allowed.
+
+[SONARQUBE 38]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 138
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L138
+Descricao: Remove the unused local variable "AS1".
+
+[SONARQUBE 39]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 141
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L141
+Descricao: Remove the unused local variable "BS0".
+
+[SONARQUBE 40]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 142
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L142
+Descricao: Remove the unused local variable "BS1".
+
+[SONARQUBE 41]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 143
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L143
+Descricao: Remove the unused local variable "BS2".
+
+[SONARQUBE 42]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 144
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L144
+Descricao: Remove the unused local variable "BS3".
+
+[SONARQUBE 43]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 193
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L193
+Descricao: Remove this commented out code.
+
+[SONARQUBE 44]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1515
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 226
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L226
+Descricao: Add a parameter to the parent lambda function and use variable "off_width" as its default value; The value of "off_width" might change at the next loop iteration.
+
+[SONARQUBE 45]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1656
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 300
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L300
+Descricao: Remove or correct this useless self-assignment.
+
+[SONARQUBE 46]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 335
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L335
+Descricao: Refactor this function to reduce its Cognitive Complexity from 24 to the 15 allowed.
+
+[SONARQUBE 47]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 356
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L356
+Descricao: Remove the unused local variable "AS3".
+
+[SONARQUBE 48]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 357
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L357
+Descricao: Remove the unused local variable "BS0".
+
+[SONARQUBE 49]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 358
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L358
+Descricao: Remove the unused local variable "BS1".
+
+[SONARQUBE 50]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 384
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L384
+Descricao: Remove this commented out code.
+
+[SONARQUBE 51]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 420
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L420
+Descricao: Refactor this function to reduce its Cognitive Complexity from 24 to the 15 allowed.
+
+[SONARQUBE 52]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 438
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L438
+Descricao: Remove the unused local variable "AS0".
+
+[SONARQUBE 53]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 440
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L440
+Descricao: Remove the unused local variable "AS2".
+
+[SONARQUBE 54]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 443
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L443
+Descricao: Remove the unused local variable "BS2".
+
+[SONARQUBE 55]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 469
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L469
+Descricao: Remove this commented out code.
+
+[SONARQUBE 56]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 511
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L511
+Descricao: Method "forward" has 27 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 57]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 673
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L673
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 58]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/matmul.py
+Linha: 692
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/matmul.py#L692
+Descricao: Replace the unused loop index "i" with "_".
+
+[SONARQUBE 59]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/softmax.py
+Linha: 10
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/softmax.py#L10
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 60]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/softmax.py
+Linha: 11
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/softmax.py#L11
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 61]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/softmax.py
+Linha: 19
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/softmax.py#L19
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 62]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/softmax.py
+Linha: 44
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/softmax.py#L44
+Descricao: Refactor this function to reduce its Cognitive Complexity from 20 to the 15 allowed.
+
+[SONARQUBE 63]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3358
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/softmax.py
+Linha: 62
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/softmax.py#L62
+Descricao: Extract this nested conditional expression into an independent statement.
+
+[SONARQUBE 64]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/softmax.py
+Linha: 104
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/softmax.py#L104
+Descricao: Method "forward" has 15 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 65]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1244
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/softmax.py
+Linha: 123
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/softmax.py#L123
+Descricao: Do not perform equality checks with floating point values.
+
+[SONARQUBE 66]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/softmax.py
+Linha: 254
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/softmax.py#L254
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 67]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparse_attention_utils.py
+Linha: 49
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparse_attention_utils.py#L49
+Descricao: Replace the unused loop index "i" with "_".
+
+[SONARQUBE 68]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparse_self_attention.py
+Linha: 6
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparse_self_attention.py#L6
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 69]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparse_self_attention.py
+Linha: 49
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparse_self_attention.py#L49
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 70]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparse_self_attention.py
+Linha: 51
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparse_self_attention.py#L51
+Descricao: Rename this parameter "L" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 71]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparse_self_attention.py
+Linha: 66
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparse_self_attention.py#L66
+Descricao: Rename this parameter "H" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 72]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparse_self_attention.py
+Linha: 66
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparse_self_attention.py#L66
+Descricao: Rename this parameter "L" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 73]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparse_self_attention.py
+Linha: 89
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparse_self_attention.py#L89
+Descricao: Rename this parameter "L" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 74]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparse_self_attention.py
+Linha: 90
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparse_self_attention.py#L90
+Descricao: Replace the unused local variable "num_heads" with "_".
+
+[SONARQUBE 75]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparse_self_attention.py
+Linha: 90
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparse_self_attention.py#L90
+Descricao: Replace the unused local variable "head_dim" with "_".
+
+[SONARQUBE 76]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparse_self_attention.py
+Linha: 90
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparse_self_attention.py#L90
+Descricao: Replace the unused local variable "bsz" with "_".
+
+[SONARQUBE 77]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparse_self_attention.py
+Linha: 127
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparse_self_attention.py#L127
+Descricao: Replace the unused local variable "bsz" with "_".
+
+[SONARQUBE 78]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparsity_config.py
+Linha: 44
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparsity_config.py#L44
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 79]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparsity_config.py
+Linha: 146
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparsity_config.py#L146
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 80]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5717
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparsity_config.py
+Linha: 258
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparsity_config.py#L258
+Descricao: Change this default value to "None" and initialize this parameter inside the function/method.
+
+[SONARQUBE 81]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5717
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparsity_config.py
+Linha: 259
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparsity_config.py#L259
+Descricao: Change this default value to "None" and initialize this parameter inside the function/method.
+
+[SONARQUBE 82]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparsity_config.py
+Linha: 327
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparsity_config.py#L327
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 83]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparsity_config.py
+Linha: 331
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparsity_config.py#L331
+Descricao: Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.
+
+[SONARQUBE 84]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparsity_config.py
+Linha: 364
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparsity_config.py#L364
+Descricao: Refactor this function to reduce its Cognitive Complexity from 28 to the 15 allowed.
+
+[SONARQUBE 85]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparsity_config.py
+Linha: 380
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparsity_config.py#L380
+Descricao: Remove this commented out code.
+
+[SONARQUBE 86]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparsity_config.py
+Linha: 384
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparsity_config.py#L384
+Descricao: Remove this commented out code.
+
+[SONARQUBE 87]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparsity_config.py
+Linha: 392
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparsity_config.py#L392
+Descricao: Remove this commented out code.
+
+[SONARQUBE 88]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparsity_config.py
+Linha: 396
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparsity_config.py#L396
+Descricao: Remove this commented out code.
+
+[SONARQUBE 89]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparsity_config.py
+Linha: 471
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparsity_config.py#L471
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 90]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparsity_config.py
+Linha: 516
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparsity_config.py#L516
+Descricao: Remove this commented out code.
+
+[SONARQUBE 91]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparsity_config.py
+Linha: 519
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparsity_config.py#L519
+Descricao: Remove this commented out code.
+
+[SONARQUBE 92]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5717
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparsity_config.py
+Linha: 557
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparsity_config.py#L557
+Descricao: Change this default value to "None" and initialize this parameter inside the function/method.
+
+[SONARQUBE 93]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparsity_config.py
+Linha: 630
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparsity_config.py#L630
+Descricao: Remove this commented out code.
+
+[SONARQUBE 94]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparsity_config.py
+Linha: 633
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparsity_config.py#L633
+Descricao: Remove this commented out code.
+
+[SONARQUBE 95]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparsity_config.py
+Linha: 640
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparsity_config.py#L640
+Descricao: Remove this commented out code.
+
+[SONARQUBE 96]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/sparse_attention/sparsity_config.py
+Linha: 643
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/sparse_attention/sparsity_config.py#L643
+Descricao: Remove this commented out code.
+
+[SONARQUBE 97]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/transformer/transformer.py
+Linha: 91
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/transformer/transformer.py#L91
+Descricao: Method "__init__" has 17 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 98]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/transformer/transformer.py
+Linha: 148
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/transformer/transformer.py#L148
+Descricao: Method "forward" has 19 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 99]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/transformer/transformer.py
+Linha: 148
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/transformer/transformer.py#L148
+Descricao: Refactor this function to reduce its Cognitive Complexity from 38 to the 15 allowed.
+
+[SONARQUBE 100]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/transformer/transformer.py
+Linha: 178
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/transformer/transformer.py#L178
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 101]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/transformer/transformer.py
+Linha: 192
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/transformer/transformer.py#L192
+Descricao: Rename this local variable "ctx_bufB" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 102]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3358
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/transformer/transformer.py
+Linha: 233
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/transformer/transformer.py#L233
+Descricao: Extract this nested conditional expression into an independent statement.
+
+[SONARQUBE 103]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3358
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/transformer/transformer.py
+Linha: 241
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/transformer/transformer.py#L241
+Descricao: Extract this nested conditional expression into an independent statement.
+
+[SONARQUBE 104]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/ops/transformer/transformer.py
+Linha: 319
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/ops/transformer/transformer.py#L319
+Descricao: Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.
+
+[SONARQUBE 105]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/activation_checkpointing/checkpointing.py
+Linha: 180
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/activation_checkpointing/checkpointing.py#L180
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 106]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/activation_checkpointing/checkpointing.py
+Linha: 184
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/activation_checkpointing/checkpointing.py#L184
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 107]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/activation_checkpointing/checkpointing.py
+Linha: 199
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/activation_checkpointing/checkpointing.py#L199
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 108]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S8510
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/activation_checkpointing/checkpointing.py
+Linha: 298
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/activation_checkpointing/checkpointing.py#L298
+Descricao: Rename this loop variable; it shadows the outer loop variable "i".
+
+[SONARQUBE 109]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/activation_checkpointing/checkpointing.py
+Linha: 325
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/activation_checkpointing/checkpointing.py#L325
+Descricao: Refactor this function to reduce its Cognitive Complexity from 50 to the 15 allowed.
+
+[SONARQUBE 110]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/activation_checkpointing/checkpointing.py
+Linha: 357
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/activation_checkpointing/checkpointing.py#L357
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 111]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/activation_checkpointing/checkpointing.py
+Linha: 371
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/activation_checkpointing/checkpointing.py#L371
+Descricao: Remove this commented out code.
+
+[SONARQUBE 112]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/activation_checkpointing/checkpointing.py
+Linha: 391
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/activation_checkpointing/checkpointing.py#L391
+Descricao: Replace the unused loop index "i" with "_".
+
+[SONARQUBE 113]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/activation_checkpointing/checkpointing.py
+Linha: 400
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/activation_checkpointing/checkpointing.py#L400
+Descricao: Replace the unused loop index "i" with "_".
+
+[SONARQUBE 114]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/activation_checkpointing/checkpointing.py
+Linha: 472
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/activation_checkpointing/checkpointing.py#L472
+Descricao: Remove this commented out code.
+
+[SONARQUBE 115]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/activation_checkpointing/checkpointing.py
+Linha: 493
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/activation_checkpointing/checkpointing.py#L493
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 116]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/activation_checkpointing/checkpointing.py
+Linha: 508
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/activation_checkpointing/checkpointing.py#L508
+Descricao: Replace the unused loop index "buffers" with "_".
+
+[SONARQUBE 117]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/activation_checkpointing/checkpointing.py
+Linha: 544
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/activation_checkpointing/checkpointing.py#L544
+Descricao: Remove this commented out code.
+
+[SONARQUBE 118]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/activation_checkpointing/checkpointing.py
+Linha: 613
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/activation_checkpointing/checkpointing.py#L613
+Descricao: Replace the unused loop index "buffers" with "_".
+
+[SONARQUBE 119]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/config.py
+Linha: 10
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/config.py#L10
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 120]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/config.py
+Linha: 14
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/config.py#L14
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 121]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/config.py
+Linha: 494
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/config.py#L494
+Descricao: Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.
+
+[SONARQUBE 122]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/config.py
+Linha: 511
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/config.py#L511
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 123]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S7505
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/config.py
+Linha: 539
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/config.py#L539
+Descricao: Replace this map call with a comprehension.
+
+[SONARQUBE 124]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/config.py
+Linha: 547
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/config.py#L547
+Descricao: Remove this commented out code.
+
+[SONARQUBE 125]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/config.py
+Linha: 729
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/config.py#L729
+Descricao: Remove this commented out code.
+
+[SONARQUBE 126]
+Tipo: BUG
+Severidade: MINOR
+Regra: python:S1226
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/custom_collectives.py
+Linha: 57
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/custom_collectives.py#L57
+Descricao: Introduce a new variable or use its initial value before reassigning 'cupy_recvbuf_sign'.
+
+[SONARQUBE 127]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1854
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/custom_collectives.py
+Linha: 65
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/custom_collectives.py#L65
+Descricao: Remove this assignment to local variable 'numpy_recvbuf_scale'; the value is never used.
+
+[SONARQUBE 128]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1854
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/custom_collectives.py
+Linha: 129
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/custom_collectives.py#L129
+Descricao: Remove this assignment to local variable 'numpy_recvbuf_sign_server'; the value is never used.
+
+[SONARQUBE 129]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1854
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/custom_collectives.py
+Linha: 132
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/custom_collectives.py#L132
+Descricao: Remove this assignment to local variable 'numpy_recvbuf_scale_server'; the value is never used.
+
+[SONARQUBE 130]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7500
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/dataloader.py
+Linha: 99
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/dataloader.py#L99
+Descricao: Replace this comprehension with passing the iterable to the collection constructor call
+
+[SONARQUBE 131]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 95
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L95
+Descricao: Refactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.
+
+[SONARQUBE 132]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6660
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 452
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L452
+Descricao: Use the `isinstance()` function here.
+
+[SONARQUBE 133]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 508
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L508
+Descricao: Refactor this function to reduce its Cognitive Complexity from 20 to the 15 allowed.
+
+[SONARQUBE 134]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 803
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L803
+Descricao: Refactor this function to reduce its Cognitive Complexity from 23 to the 15 allowed.
+
+[SONARQUBE 135]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 813
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L813
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 136]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 825
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L825
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 137]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 879
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L879
+Descricao: Remove this commented out code.
+
+[SONARQUBE 138]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 895
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L895
+Descricao: Add missing parameters set_to_none. This method overrides torch.nn.modules.module.Module.zero_grad.
+
+[SONARQUBE 139]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 906
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L906
+Descricao: Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.
+
+[SONARQUBE 140]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 944
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L944
+Descricao: Refactor this function to reduce its Cognitive Complexity from 41 to the 15 allowed.
+
+[SONARQUBE 141]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 969
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L969
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 142]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 975
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L975
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 143]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 999
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L999
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 144]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 1002
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L1002
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 145]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 1005
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L1005
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 146]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 1008
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L1008
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 147]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 1012
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L1012
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 148]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1244
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 1075
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L1075
+Descricao: Do not perform equality checks with floating point values.
+
+[SONARQUBE 149]
+Tipo: BUG
+Severidade: MINOR
+Regra: python:S1226
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 1111
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L1111
+Descricao: Introduce a new variable or use its initial value before reassigning 'grads'.
+
+[SONARQUBE 150]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 1284
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L1284
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 151]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 1323
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L1323
+Descricao: Use the opposite operator ("not in") instead.
+
+[SONARQUBE 152]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 1388
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L1388
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 153]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/engine.py
+Linha: 1435
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/engine.py#L1435
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 154]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S101
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/fused_optimizer.py
+Linha: 17
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/fused_optimizer.py#L17
+Descricao: Rename class "FP16_Optimizer" to match the regular expression ^_?([A-Z_][a-zA-Z0-9]*|[a-z_][a-z0-9_]*)$.
+
+[SONARQUBE 155]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S3626
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/fused_optimizer.py
+Linha: 117
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/fused_optimizer.py#L117
+Descricao: Remove this redundant return.
+
+[SONARQUBE 156]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/fused_optimizer.py
+Linha: 119
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/fused_optimizer.py#L119
+Descricao: Rename this parameter "set_grads_to_None" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 157]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/fused_optimizer.py
+Linha: 133
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/fused_optimizer.py#L133
+Descricao: Remove the unused function parameter "closure".
+
+[SONARQUBE 158]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/fused_optimizer.py
+Linha: 169
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/fused_optimizer.py#L169
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 159]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/fused_optimizer.py
+Linha: 191
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/fused_optimizer.py#L191
+Descricao: Refactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.
+
+[SONARQUBE 160]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/fused_optimizer.py
+Linha: 191
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/fused_optimizer.py#L191
+Descricao: Remove the unused function parameter "closure".
+
+[SONARQUBE 161]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/fused_optimizer.py
+Linha: 306
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/fused_optimizer.py#L306
+Descricao: Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.
+
+[SONARQUBE 162]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S3626
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/fused_optimizer.py
+Linha: 334
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/fused_optimizer.py#L334
+Descricao: Remove this redundant return.
+
+[SONARQUBE 163]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/loss_scaler.py
+Linha: 45
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/loss_scaler.py#L45
+Descricao: Remove the unused function parameter "grad_out".
+
+[SONARQUBE 164]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/loss_scaler.py
+Linha: 45
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/loss_scaler.py#L45
+Descricao: Remove the unused function parameter "module".
+
+[SONARQUBE 165]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1186
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/loss_scaler.py
+Linha: 48
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/loss_scaler.py#L48
+Descricao: Add a nested comment explaining why this method is empty, or complete the implementation.
+
+[SONARQUBE 166]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/loss_scaler.py
+Linha: 71
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/loss_scaler.py#L71
+Descricao: Remove the unused function parameter "params".
+
+[SONARQUBE 167]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/loss_scaler.py
+Linha: 75
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/loss_scaler.py#L75
+Descricao: Remove the unused function parameter "x".
+
+[SONARQUBE 168]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5720
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/loss_scaler.py
+Linha: 75
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/loss_scaler.py#L75
+Descricao: Rename "x" to "self" or add the missing "self" parameter.
+
+[SONARQUBE 169]
+Tipo: BUG
+Severidade: BLOCKER
+Regra: python:S930
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/loss_scaler.py
+Linha: 124
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/loss_scaler.py#L124
+Descricao: Remove 1 unexpected arguments; '_has_inf_or_nan' expects 0 positional arguments.
+
+[SONARQUBE 170]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5720
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/loss_scaler.py
+Linha: 130
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/loss_scaler.py#L130
+Descricao: Rename "x" to "self" or add the missing "self" parameter.
+
+[SONARQUBE 171]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/loss_scaler.py
+Linha: 153
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/loss_scaler.py#L153
+Descricao: Remove this commented out code.
+
+[SONARQUBE 172]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/onebit_adam.py
+Linha: 67
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/onebit_adam.py#L67
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 173]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/onebit_adam.py
+Linha: 113
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/onebit_adam.py#L113
+Descricao: Remove the unused local variable "all_start_time".
+
+[SONARQUBE 174]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6929
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/onebit_adam.py
+Linha: 123
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/onebit_adam.py#L123
+Descricao: Provide a value for the dim argument.
+
+[SONARQUBE 175]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/onebit_adam.py
+Linha: 147
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/onebit_adam.py#L147
+Descricao: Remove the unused local variable "gather_start".
+
+[SONARQUBE 176]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/onebit_adam.py
+Linha: 164
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/onebit_adam.py#L164
+Descricao: Remove the unused local variable "gather_end".
+
+[SONARQUBE 177]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6929
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/onebit_adam.py
+Linha: 178
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/onebit_adam.py#L178
+Descricao: Provide a value for the dim argument.
+
+[SONARQUBE 178]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/onebit_adam.py
+Linha: 230
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/onebit_adam.py#L230
+Descricao: Refactor this function to reduce its Cognitive Complexity from 81 to the 15 allowed.
+
+[SONARQUBE 179]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/onebit_adam.py
+Linha: 248
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/onebit_adam.py#L248
+Descricao: Remove the unused local variable "gather_time".
+
+[SONARQUBE 180]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/onebit_adam.py
+Linha: 249
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/onebit_adam.py#L249
+Descricao: Remove the unused local variable "allgather_time".
+
+[SONARQUBE 181]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/onebit_adam.py
+Linha: 250
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/onebit_adam.py#L250
+Descricao: Remove the unused local variable "all_time".
+
+[SONARQUBE 182]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/onebit_adam.py
+Linha: 253
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/onebit_adam.py#L253
+Descricao: Remove the unused local variable "v_diff_buffer".
+
+[SONARQUBE 183]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S6660
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/onebit_adam.py
+Linha: 261
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/onebit_adam.py#L261
+Descricao: Use `not isinstance()` here.
+
+[SONARQUBE 184]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/onebit_adam.py
+Linha: 270
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/onebit_adam.py#L270
+Descricao: Remove the unused local variable "bias_correction".
+
+[SONARQUBE 185]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1066
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/onebit_adam.py
+Linha: 370
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/onebit_adam.py#L370
+Descricao: Merge this if statement with the enclosing one.
+
+[SONARQUBE 186]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S101
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/unfused_optimizer.py
+Linha: 17
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/unfused_optimizer.py#L17
+Descricao: Rename class "FP16_UnfusedOptimizer" to match the regular expression ^_?([A-Z_][a-zA-Z0-9]*|[a-z_][a-z0-9_]*)$.
+
+[SONARQUBE 187]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/unfused_optimizer.py
+Linha: 103
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/unfused_optimizer.py#L103
+Descricao: Rename this parameter "set_grads_to_None" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 188]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/unfused_optimizer.py
+Linha: 118
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/unfused_optimizer.py#L118
+Descricao: Remove the unused function parameter "closure".
+
+[SONARQUBE 189]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/unfused_optimizer.py
+Linha: 155
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/unfused_optimizer.py#L155
+Descricao: Remove the unused function parameter "closure".
+
+[SONARQUBE 190]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/unfused_optimizer.py
+Linha: 235
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/unfused_optimizer.py#L235
+Descricao: Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.
+
+[SONARQUBE 191]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S3626
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/fp16/unfused_optimizer.py
+Linha: 263
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/fp16/unfused_optimizer.py#L263
+Descricao: Remove this redundant return.
+
+[SONARQUBE 192]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/lr_schedules.py
+Linha: 15
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/lr_schedules.py#L15
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 193]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/lr_schedules.py
+Linha: 180
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/lr_schedules.py#L180
+Descricao: Refactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.
+
+[SONARQUBE 194]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1542
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/lr_schedules.py
+Linha: 219
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/lr_schedules.py#L219
+Descricao: Rename function "override_warmupLR_params" to match the regular expression ^[a-z_][a-z0-9_]*$.
+
+[SONARQUBE 195]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/lr_schedules.py
+Linha: 245
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/lr_schedules.py#L245
+Descricao: Use the opposite operator ("not in") instead.
+
+[SONARQUBE 196]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/lr_schedules.py
+Linha: 263
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/lr_schedules.py#L263
+Descricao: Use the opposite operator ("not in") instead.
+
+[SONARQUBE 197]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/lr_schedules.py
+Linha: 266
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/lr_schedules.py#L266
+Descricao: Use the opposite operator ("not in") instead.
+
+[SONARQUBE 198]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/lr_schedules.py
+Linha: 272
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/lr_schedules.py#L272
+Descricao: Use the opposite operator ("not in") instead.
+
+[SONARQUBE 199]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/lr_schedules.py
+Linha: 387
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/lr_schedules.py#L387
+Descricao: Define a constant instead of duplicating this literal "need to call step() first" 3 times.
+
+[SONARQUBE 200]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/lr_schedules.py
+Linha: 476
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/lr_schedules.py#L476
+Descricao: Method "__init__" has 14 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 201]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 51
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L51
+Descricao: Refactor this function to reduce its Cognitive Complexity from 23 to the 15 allowed.
+
+[SONARQUBE 202]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 234
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L234
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 203]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 260
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L260
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 204]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1066
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 289
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L289
+Descricao: Merge this if statement with the enclosing one.
+
+[SONARQUBE 205]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 290
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L290
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 206]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 307
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L307
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 207]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1066
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 354
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L354
+Descricao: Merge this if statement with the enclosing one.
+
+[SONARQUBE 208]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 355
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L355
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 209]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 484
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L484
+Descricao: Refactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.
+
+[SONARQUBE 210]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7496
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 500
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L500
+Descricao: Replace this tuple constructor call by a tuple literal.
+
+[SONARQUBE 211]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7496
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 521
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L521
+Descricao: Replace this tuple constructor call by a tuple literal.
+
+[SONARQUBE 212]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7496
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 575
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L575
+Descricao: Replace this tuple constructor call by a tuple literal.
+
+[SONARQUBE 213]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7496
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 581
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L581
+Descricao: Replace this tuple constructor call by a tuple literal.
+
+[SONARQUBE 214]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7496
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 592
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L592
+Descricao: Replace this tuple constructor call by a tuple literal.
+
+[SONARQUBE 215]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 617
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L617
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 216]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 668
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L668
+Descricao: Remove the unused local variable "send_bytes".
+
+[SONARQUBE 217]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 715
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L715
+Descricao: Remove this commented out code.
+
+[SONARQUBE 218]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 754
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L754
+Descricao: Replace the unused loop index "idx" with "_".
+
+[SONARQUBE 219]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 807
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L807
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 220]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7496
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 821
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L821
+Descricao: Replace this tuple constructor call by a tuple literal.
+
+[SONARQUBE 221]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 859
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L859
+Descricao: Refactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.
+
+[SONARQUBE 222]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 904
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L904
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 223]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7496
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 917
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L917
+Descricao: Replace this tuple constructor call by a tuple literal.
+
+[SONARQUBE 224]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 945
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L945
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 225]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1066
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 958
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L958
+Descricao: Merge this if statement with the enclosing one.
+
+[SONARQUBE 226]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 959
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L959
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 227]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 963
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L963
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 228]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 1024
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L1024
+Descricao: Replace the unused loop index "count" with "_".
+
+[SONARQUBE 229]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 1032
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L1032
+Descricao: Replace the unused loop index "count" with "_".
+
+[SONARQUBE 230]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 1041
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L1041
+Descricao: Define a constant instead of duplicating this literal "Only train_batch() is accessible in pipeline mode." 3 times.
+
+[SONARQUBE 231]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1763
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 1053
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L1053
+Descricao: Delete this unreachable code or refactor the code to make it reachable.
+
+[SONARQUBE 232]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 1054
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L1054
+Descricao: Use the opposite operator ("!=") instead.
+
+[SONARQUBE 233]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 1054
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L1054
+Descricao: Use the opposite operator ("!=") instead.
+
+[SONARQUBE 234]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2638
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/engine.py
+Linha: 1100
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/engine.py#L1100
+Descricao: Add missing parameters destination prefix keep_vars.
+
+[SONARQUBE 235]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/module.py
+Linha: 197
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/module.py#L197
+Descricao: Refactor this function to reduce its Cognitive Complexity from 21 to the 15 allowed.
+
+[SONARQUBE 236]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/module.py
+Linha: 292
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/module.py#L292
+Descricao: Refactor this function to reduce its Cognitive Complexity from 27 to the 15 allowed.
+
+[SONARQUBE 237]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/module.py
+Linha: 348
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/module.py#L348
+Descricao: Refactor this function to reduce its Cognitive Complexity from 34 to the 15 allowed.
+
+[SONARQUBE 238]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S2836
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/module.py
+Linha: 371
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/module.py#L371
+Descricao: Add a "break" statement or remove this "else" clause.
+
+[SONARQUBE 239]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/module.py
+Linha: 420
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/module.py#L420
+Descricao: Refactor this function to reduce its Cognitive Complexity from 45 to the 15 allowed.
+
+[SONARQUBE 240]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7494
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/module.py
+Linha: 427
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/module.py#L427
+Descricao: Replace set constructor call with a set comprehension.
+
+[SONARQUBE 241]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/module.py
+Linha: 435
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/module.py#L435
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 242]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/module.py
+Linha: 436
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/module.py#L436
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 243]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/module.py
+Linha: 437
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/module.py#L437
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 244]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/module.py
+Linha: 438
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/module.py#L438
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 245]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7494
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/module.py
+Linha: 439
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/module.py#L439
+Descricao: Replace set constructor call with a set comprehension.
+
+[SONARQUBE 246]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/module.py
+Linha: 469
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/module.py#L469
+Descricao: Remove this commented out code.
+
+[SONARQUBE 247]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5795
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/module.py
+Linha: 531
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/module.py#L531
+Descricao: Replace this "is not" operator with "!="; identity operator is not reliable here.
+
+[SONARQUBE 248]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/module.py
+Linha: 541
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/module.py#L541
+Descricao: Remove the unused local variable "layer_offset".
+
+[SONARQUBE 249]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/module.py
+Linha: 549
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/module.py#L549
+Descricao: Remove the unused local variable "rank".
+
+[SONARQUBE 250]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/module.py
+Linha: 558
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/module.py#L558
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 251]
+Tipo: BUG
+Severidade: MINOR
+Regra: python:S1226
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/p2p.py
+Linha: 31
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/p2p.py#L31
+Descricao: Introduce a new variable or use its initial value before reassigning 'async_op'.
+
+[SONARQUBE 252]
+Tipo: BUG
+Severidade: MINOR
+Regra: python:S1226
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/p2p.py
+Linha: 44
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/p2p.py#L44
+Descricao: Introduce a new variable or use its initial value before reassigning 'async_op'.
+
+[SONARQUBE 253]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/schedule.py
+Linha: 132
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/schedule.py#L132
+Descricao: Refactor this function to reduce its Cognitive Complexity from 43 to the 15 allowed.
+
+[SONARQUBE 254]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/schedule.py
+Linha: 134
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/schedule.py#L134
+Descricao: Remove the unused local variable "prev_micro_batch_id".
+
+[SONARQUBE 255]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/schedule.py
+Linha: 189
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/schedule.py#L189
+Descricao: Refactor this function to reduce its Cognitive Complexity from 39 to the 15 allowed.
+
+[SONARQUBE 256]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S116
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/topology.py
+Linha: 37
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/topology.py#L37
+Descricao: Rename this field "ProcessCoord" to match the regular expression ^[_a-z][_a-z0-9]*$.
+
+[SONARQUBE 257]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/topology.py
+Linha: 220
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/topology.py#L220
+Descricao: Rename this parameter "N" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 258]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/topology.py
+Linha: 274
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/topology.py#L274
+Descricao: Refactor this function to reduce its Cognitive Complexity from 35 to the 15 allowed.
+
+[SONARQUBE 259]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/topology.py
+Linha: 275
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/topology.py#L275
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 260]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/topology.py
+Linha: 347
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/topology.py#L347
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 261]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S3626
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/pipe/topology.py
+Linha: 356
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/pipe/topology.py#L356
+Descricao: Remove this redundant return.
+
+[SONARQUBE 262]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/utils.py
+Linha: 53
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/utils.py#L53
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 263]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/utils.py
+Linha: 148
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/utils.py#L148
+Descricao: Refactor this function to reduce its Cognitive Complexity from 20 to the 15 allowed.
+
+[SONARQUBE 264]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1764
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/utils.py
+Linha: 200
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/utils.py#L200
+Descricao: Correct one of the identical sub-expressions on both sides of operator "!=".
+
+[SONARQUBE 265]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/utils.py
+Linha: 206
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/utils.py#L206
+Descricao: Refactor this function to reduce its Cognitive Complexity from 29 to the 15 allowed.
+
+[SONARQUBE 266]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6929
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/utils.py
+Linha: 243
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/utils.py#L243
+Descricao: Provide a value for the dim argument.
+
+[SONARQUBE 267]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/utils.py
+Linha: 244
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/utils.py#L244
+Descricao: Remove the unused local variable "err".
+
+[SONARQUBE 268]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6929
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/utils.py
+Linha: 245
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/utils.py#L245
+Descricao: Provide a value for the dim argument.
+
+[SONARQUBE 269]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/utils.py
+Linha: 247
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/utils.py#L247
+Descricao: Remove this commented out code.
+
+[SONARQUBE 270]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6929
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/utils.py
+Linha: 251
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/utils.py#L251
+Descricao: Provide a value for the dim argument.
+
+[SONARQUBE 271]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6929
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/utils.py
+Linha: 253
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/utils.py#L253
+Descricao: Provide a value for the dim argument.
+
+[SONARQUBE 272]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/utils.py
+Linha: 254
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/utils.py#L254
+Descricao: Remove this commented out code.
+
+[SONARQUBE 273]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1764
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/utils.py
+Linha: 266
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/utils.py#L266
+Descricao: Correct one of the identical sub-expressions on both sides of operator "!=".
+
+[SONARQUBE 274]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7500
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/utils.py
+Linha: 283
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/utils.py#L283
+Descricao: Replace this comprehension with passing the iterable to the collection constructor call
+
+[SONARQUBE 275]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/utils.py
+Linha: 347
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/utils.py#L347
+Descricao: Replace the unused local variable "parts" with "_".
+
+[SONARQUBE 276]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/utils.py
+Linha: 404
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/utils.py#L404
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 277]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1763
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/utils.py
+Linha: 527
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/utils.py#L527
+Descricao: Delete this unreachable code or refactor the code to make it reachable.
+
+[SONARQUBE 278]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/utils.py
+Linha: 527
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/utils.py#L527
+Descricao: Use the opposite operator ("!=") instead.
+
+[SONARQUBE 279]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S2208
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/config.py
+Linha: 8
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/config.py#L8
+Descricao: Import only needed names or import the module and then use its members.
+
+[SONARQUBE 280]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 35
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L35
+Descricao: Remove the unused function parameter "pg".
+
+[SONARQUBE 281]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S101
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 105
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L105
+Descricao: Rename class "FP16_DeepSpeedZeroOptimizer_Stage1" to match the regular expression ^_?([A-Z_][a-zA-Z0-9]*|[a-z_][a-z0-9_]*)$.
+
+[SONARQUBE 282]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 144
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L144
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 283]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 148
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L148
+Descricao: Remove this commented out code.
+
+[SONARQUBE 284]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 219
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L219
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 285]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 243
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L243
+Descricao: Remove this commented out code.
+
+[SONARQUBE 286]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 405
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L405
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 287]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 431
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L431
+Descricao: Remove this commented out code.
+
+[SONARQUBE 288]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 448
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L448
+Descricao: Remove this commented out code.
+
+[SONARQUBE 289]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 459
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L459
+Descricao: Refactor this function to reduce its Cognitive Complexity from 29 to the 15 allowed.
+
+[SONARQUBE 290]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 549
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L549
+Descricao: Rename this parameter "set_grads_to_None" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 291]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 572
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L572
+Descricao: Refactor this function to reduce its Cognitive Complexity from 34 to the 15 allowed.
+
+[SONARQUBE 292]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 596
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L596
+Descricao: Remove the unused local variable "local_comm_partitions".
+
+[SONARQUBE 293]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1244
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 603
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L603
+Descricao: Do not perform equality checks with floating point values.
+
+[SONARQUBE 294]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 624
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L624
+Descricao: Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.
+
+[SONARQUBE 295]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 624
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L624
+Descricao: Remove the unused function parameter "closure".
+
+[SONARQUBE 296]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 644
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L644
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 297]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 682
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L682
+Descricao: Remove this commented out code.
+
+[SONARQUBE 298]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 700
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L700
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 299]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 912
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L912
+Descricao: Replace the unused local variable "sub_partition_size" with "_".
+
+[SONARQUBE 300]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 912
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L912
+Descricao: Replace the unused local variable "element_intervals" with "_".
+
+[SONARQUBE 301]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 912
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L912
+Descricao: Replace the unused local variable "comm_partitions" with "_".
+
+[SONARQUBE 302]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7500
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 921
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L921
+Descricao: Replace this comprehension with passing the iterable to the collection constructor call
+
+[SONARQUBE 303]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 947
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L947
+Descricao: Remove the unused function parameter "state_key".
+
+[SONARQUBE 304]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 953
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L953
+Descricao: Remove the unused local variable "alignment".
+
+[SONARQUBE 305]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 960
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L960
+Descricao: Replace the unused local variable "comm_partitions" with "_".
+
+[SONARQUBE 306]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 960
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L960
+Descricao: Replace the unused local variable "sub_partition_size" with "_".
+
+[SONARQUBE 307]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 960
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L960
+Descricao: Replace the unused local variable "element_intervals" with "_".
+
+[SONARQUBE 308]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 960
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L960
+Descricao: Replace the unused local variable "num_comm_intervals" with "_".
+
+[SONARQUBE 309]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7500
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 969
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L969
+Descricao: Replace this comprehension with passing the iterable to the collection constructor call
+
+[SONARQUBE 310]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 984
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L984
+Descricao: Use the opposite operator ("not in") instead.
+
+[SONARQUBE 311]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S8521
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage1.py
+Linha: 984
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage1.py#L984
+Descricao: Remove this unnecessary "keys()" call.
+
+[SONARQUBE 312]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S101
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 92
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L92
+Descricao: Rename class "FP16_DeepSpeedZeroOptimizer" to match the regular expression ^_?([A-Z_][a-zA-Z0-9]*|[a-z_][a-z0-9_]*)$.
+
+[SONARQUBE 313]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 103
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L103
+Descricao: Refactor this function to reduce its Cognitive Complexity from 37 to the 15 allowed.
+
+[SONARQUBE 314]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 103
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L103
+Descricao: Method "__init__" has 19 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 315]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1244
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 179
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L179
+Descricao: Do not perform equality checks with floating point values.
+
+[SONARQUBE 316]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 399
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L399
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 317]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 402
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L402
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 318]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S3626
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 427
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L427
+Descricao: Remove this redundant return.
+
+[SONARQUBE 319]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 469
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L469
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 320]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 471
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L471
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 321]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 473
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L473
+Descricao: Remove this commented out code.
+
+[SONARQUBE 322]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 484
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L484
+Descricao: Use the opposite operator ("not in") instead.
+
+[SONARQUBE 323]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 509
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L509
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 324]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1244
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 659
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L659
+Descricao: Do not perform equality checks with floating point values.
+
+[SONARQUBE 325]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 675
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L675
+Descricao: Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.
+
+[SONARQUBE 326]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 696
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L696
+Descricao: Remove the unused local variable "partition_size".
+
+[SONARQUBE 327]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 823
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L823
+Descricao: Replace the unused local variable "i" with "_".
+
+[SONARQUBE 328]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 823
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L823
+Descricao: Replace the unused local variable "dest_offset" with "_".
+
+[SONARQUBE 329]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 834
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L834
+Descricao: Replace the unused local variable "dest_offset" with "_".
+
+[SONARQUBE 330]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 834
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L834
+Descricao: Replace the unused local variable "i" with "_".
+
+[SONARQUBE 331]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1764
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 897
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L897
+Descricao: Correct one of the identical sub-expressions on both sides of operator "!=".
+
+[SONARQUBE 332]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 942
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L942
+Descricao: Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.
+
+[SONARQUBE 333]
+Tipo: BUG
+Severidade: MINOR
+Regra: python:S1226
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 1054
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L1054
+Descricao: Introduce a new variable or use its initial value before reassigning 'rank'.
+
+[SONARQUBE 334]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 1054
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L1054
+Descricao: Remove the unused function parameter "log".
+
+[SONARQUBE 335]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 1141
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L1141
+Descricao: Remove the unused local variable "dp_id".
+
+[SONARQUBE 336]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 1188
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L1188
+Descricao: Rename this parameter "set_grads_to_None" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 337]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S108
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 1207
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L1207
+Descricao: Either remove or fill this block of code.
+
+[SONARQUBE 338]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 1244
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L1244
+Descricao: Remove this commented out code.
+
+[SONARQUBE 339]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1764
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 1263
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L1263
+Descricao: Correct one of the identical sub-expressions on both sides of operator "!=".
+
+[SONARQUBE 340]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 1329
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L1329
+Descricao: Remove the unused function parameter "closure".
+
+[SONARQUBE 341]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 1329
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L1329
+Descricao: Refactor this function to reduce its Cognitive Complexity from 41 to the 15 allowed.
+
+[SONARQUBE 342]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3457
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 1338
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L1338
+Descricao: Add replacement fields or use a normal string instead of an f-string.
+
+[SONARQUBE 343]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 1373
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L1373
+Descricao: Remove the unused local variable "skip".
+
+[SONARQUBE 344]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 1479
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L1479
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 345]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S3626
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 1491
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L1491
+Descricao: Remove this redundant return.
+
+[SONARQUBE 346]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 1519
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L1519
+Descricao: Remove the unused function parameter "is_grad_list".
+
+[SONARQUBE 347]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 1593
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L1593
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 348]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/runtime/zero/stage2.py
+Linha: 1745
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/runtime/zero/stage2.py#L1745
+Descricao: Remove the unused function parameter "state_key".
+
+[SONARQUBE 349]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S7505
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/utils/distributed.py
+Linha: 25
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/utils/distributed.py#L25
+Descricao: Replace this map call with a comprehension.
+
+[SONARQUBE 350]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S2772
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/utils/timer.py
+Linha: 15
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/utils/timer.py#L15
+Descricao: Remove this unneeded "pass".
+
+[SONARQUBE 351]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1172
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/utils/timer.py
+Linha: 91
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/utils/timer.py#L91
+Descricao: Remove the unused function parameter "memory_breakdown".
+
+[SONARQUBE 352]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: deepspeed/utils/timer.py
+Linha: 101
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/deepspeed/utils/timer.py#L101
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 353]
+Tipo: CODE_SMELL
+Severidade: INFO
+Regra: python:S1135
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: op_builder/__init__.py
+Linha: 10
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/op_builder/__init__.py#L10
+Descricao: Complete the task associated to this "TODO" comment.
+
+[SONARQUBE 354]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S5443
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: op_builder/builder.py
+Linha: 13
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/op_builder/builder.py#L13
+Descricao: Make sure publicly writable directories are used safely here.
+
+[SONARQUBE 355]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: op_builder/builder.py
+Linha: 30
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/op_builder/builder.py#L30
+Descricao: Remove the unused local variable "installed_cuda_version".
+
+[SONARQUBE 356]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: op_builder/builder.py
+Linha: 52
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/op_builder/builder.py#L52
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 357]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: op_builder/builder.py
+Linha: 220
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/op_builder/builder.py#L220
+Descricao: Refactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.
+
+[SONARQUBE 358]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S8502
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: setup.py
+Linha: 49
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/setup.py#L49
+Descricao: Use "set.update()" instead of a for-loop with "add()".
+
+[SONARQUBE 359]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: setup.py
+Linha: 133
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/setup.py#L133
+Descricao: Define a constant instead of duplicating this literal 'build.txt' 3 times.
+
+[SONARQUBE 360]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: setup.py
+Linha: 176
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/setup.py#L176
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 361]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5899
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/model/BingBertSquad/BingBertSquad_test_common.py
+Linha: 44
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/tests/model/BingBertSquad/BingBertSquad_test_common.py#L44
+Descricao: Rename this method so that it starts with "test" or remove this unused helper.
+
+[SONARQUBE 362]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5914
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/model/Megatron_GPT2/run_func_test.py
+Linha: 436
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/tests/model/Megatron_GPT2/run_func_test.py#L436
+Descricao: Replace this expression; its boolean value is constant.
+
+[SONARQUBE 363]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5899
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/model/Megatron_GPT2/test_common.py
+Linha: 63
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/tests/model/Megatron_GPT2/test_common.py#L63
+Descricao: Rename this method so that it starts with "test" or remove this unused helper.
+
+[SONARQUBE 364]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S9077
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/unit/test_checkpointing.py
+Linha: 69
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/tests/unit/test_checkpointing.py#L69
+Descricao: Replace this assertion with pytest.fail(...) and provide a message.
+
+[SONARQUBE 365]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S9078
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/unit/test_cuda_forward.py
+Linha: 217
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/tests/unit/test_cuda_forward.py#L217
+Descricao: Remove this duplicate test case.
+
+[SONARQUBE 366]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/unit/test_elastic.py
+Linha: 153
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/tests/unit/test_elastic.py#L153
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 367]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S8997
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/unit/test_elastic.py
+Linha: 228
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/tests/unit/test_elastic.py#L228
+Descricao: Use the "monkeypatch" fixture for temporary modifications instead of manually modifying global state.
+
+[SONARQUBE 368]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/unit/test_elastic.py
+Linha: 236
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/tests/unit/test_elastic.py#L236
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 369]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/unit/test_fp16.py
+Linha: 427
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/tests/unit/test_fp16.py#L427
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 370]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S9084
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/unit/test_multi_output_model.py
+Linha: 5
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/tests/unit/test_multi_output_model.py#L5
+Descricao: Import "pytest" as a module.
+
+[SONARQUBE 371]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/unit/test_run.py
+Linha: 95
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/tests/unit/test_run.py#L95
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 372]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/unit/test_run.py
+Linha: 97
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/tests/unit/test_run.py#L97
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 373]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/unit/test_run.py
+Linha: 99
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/tests/unit/test_run.py#L99
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 374]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/unit/test_run.py
+Linha: 103
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/tests/unit/test_run.py#L103
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 375]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/unit/test_run.py
+Linha: 105
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/tests/unit/test_run.py#L105
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+[SONARQUBE 376]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5778
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/unit/test_run.py
+Linha: 107
+Link do codigo: https://github.com/deepspeedai/DeepSpeed/blob/81aeea361da3936b875a678b9cb44596800510b5/tests/unit/test_run.py#L107
+Descricao: Refactor this exception test to have only one invocation possibly throwing an exception.
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE deepspeedai/DeepSpeed
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

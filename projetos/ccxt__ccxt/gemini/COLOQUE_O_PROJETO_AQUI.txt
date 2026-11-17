@@ -1,0 +1,1 @@
+Coloque aqui o projeto gemini gerado com prompts/ccxt__ccxt/prompt_recriacao.txt.

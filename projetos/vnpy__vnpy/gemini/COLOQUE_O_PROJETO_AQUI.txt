@@ -1,0 +1,1 @@
+Coloque aqui o projeto gemini gerado com prompts/vnpy__vnpy/prompt_recriacao.txt.

@@ -1,0 +1,58 @@
+{
+  "component": {
+    "key": "human-yt-dlp__yt-dlp",
+    "name": "Humano - yt-dlp__yt-dlp",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "bugs",
+        "value": "18",
+        "bestValue": false
+      },
+      {
+        "metric": "complexity",
+        "value": "14568"
+      },
+      {
+        "metric": "code_smells",
+        "value": "1704",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_reliability_issues",
+        "value": "250",
+        "bestValue": false
+      },
+      {
+        "metric": "ncloc",
+        "value": "128921"
+      },
+      {
+        "metric": "software_quality_maintainability_issues",
+        "value": "1229",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_security_issues",
+        "value": "3189",
+        "bestValue": false
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "2939",
+        "bestValue": false
+      },
+      {
+        "metric": "security_hotspots",
+        "value": "0",
+        "bestValue": true
+      }
+    ]
+  },
+  "issues_summary": {
+    "issues": [],
+    "paging": {
+      "total": 0
+    }
+  }
+}

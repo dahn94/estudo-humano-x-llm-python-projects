@@ -1,0 +1,1196 @@
+O QUE E ESTE ARQUIVO
+================================================================================
+Este e o prompt que deve ser enviado ao ChatGPT, Gemini ou Claude para recriar o projeto.
+Ele contem somente informacoes documentais publicas e a arquitetura textual inferida; o corpo do
+codigo-fonte humano nao foi incluido. A resposta da IA devera ser salva separadamente e depois
+avaliada pelas mesmas ferramentas Semgrep e SonarQube usadas no projeto humano.
+
+INSTRUCAO PARA A IA
+================================================================================
+Crie do zero um projeto Python funcionalmente semelhante ao descrito abaixo.
+REGRAS OBRIGATORIAS:
+- Nao procure, copie, traduza ou reproduza o codigo-fonte do repositorio original.
+- Use apenas README, documentacao e manifestos fornecidos neste prompt.
+- Implemente as funcionalidades publicas documentadas, validacao de entrada, tratamento de erros e testes proprios.
+- Nao inclua segredos, credenciais, caminhos absolutos ou dependencias desnecessarias.
+- Entregue todos os arquivos completos e um README de execucao.
+
+REFERENCIA: mitmproxy/mitmproxy
+COMMIT DOCUMENTAL: 36d5a198b832694d428875096d7c23b097a12b6f
+
+README:
+
+--- README.md ---
+# mitmproxy
+
+[![Continuous Integration Status](https://github.com/mitmproxy/mitmproxy/workflows/CI/badge.svg?branch=master)](https://github.com/mitmproxy/mitmproxy/actions?query=branch%3Amaster)
+[![Coverage Status](https://shields.mitmproxy.org/codecov/c/github/mitmproxy/mitmproxy/master.svg?label=codecov)](https://codecov.io/gh/mitmproxy/mitmproxy)
+[![Latest Version](https://shields.mitmproxy.org/pypi/v/mitmproxy.svg)](https://pypi.python.org/pypi/mitmproxy)
+[![Supported Python versions](https://shields.mitmproxy.org/pypi/pyversions/mitmproxy.svg)](https://pypi.python.org/pypi/mitmproxy)
+
+
+``mitmproxy`` is an interactive, SSL/TLS-capable intercepting proxy with a console
+interface for HTTP/1, HTTP/2, and WebSockets.
+
+``mitmdump`` is the command-line version of mitmproxy. Think tcpdump for HTTP.
+
+``mitmweb`` is a web-based interface for mitmproxy.
+
+## Installation
+
+The installation instructions are [here](https://docs.mitmproxy.org/stable/overview-installation).
+
+## Documentation & Help
+
+General information, tutorials, and precompiled binaries can be found on the mitmproxy website.
+
+[![mitmproxy.org](https://shields.mitmproxy.org/badge/https%3A%2F%2F-mitmproxy.org-blue.svg)](https://mitmproxy.org/)
+
+The documentation for mitmproxy is available on our website:
+
+[![mitmproxy documentation stable](https://shields.mitmproxy.org/badge/docs-stable-brightgreen.svg)](https://docs.mitmproxy.org/stable/)
+[![mitmproxy documentation master](https://shields.mitmproxy.org/badge/docs-master-brightgreen.svg)](https://docs.mitmproxy.org/master/)
+
+If you have questions on how to use mitmproxy, please
+ask them on StackOverflow!
+
+[![StackOverflow: mitmproxy](https://shields.mitmproxy.org/stackexchange/stackoverflow/t/mitmproxy?color=orange&label=stackoverflow%20questions)](https://stackoverflow.com/questions/tagged/mitmproxy)
+
+
+
+
+## Contributing
+
+As an open source project, mitmproxy welcomes contributions of all forms. 
+
+[![Dev Guide](https://shields.mitmproxy.org/badge/dev_docs-CONTRIBUTING.md-blue)](./CONTRIBUTING.md)
+
+Also, please feel free to join our developer Slack!
+
+[![Slack Developer Chat](https://shields.mitmproxy.org/badge/slack-mitmproxy-E01563.svg)](http://slack.mitmproxy.org/)
+
+
+DOCUMENTACAO PUBLICA:
+
+--- README.md ---
+# Mitmproxy Documentation
+
+This directory houses the mitmproxy documentation available at <https://docs.mitmproxy.org/>.
+
+## Quick Start
+
+ 1. Install [hugo](https://gohugo.io/).
+ 2. Windows users: Depending on your git settings, you may need to manually create a symlink from
+ /docs/src/examples to /examples.
+ 3. Make sure the mitmproxy Python package is installed.
+ 4. Run `./build.sh` to generate additional documentation source files.
+
+Now you can run `hugo server -D` in ./src.
+
+
+## Extended Install
+
+This is required to modify CSS files.
+
+ 1. Install hugo extended version.
+
+You can now run `modd` in this directory instead of running hugo directly.
+
+--- _index.md ---
+---
+title: "Introduction"
+layout: single
+menu:
+    overview:
+        weight: 1
+---
+
+# Introduction
+
+mitmproxy is a set of tools that provide an interactive, SSL/TLS-capable intercepting proxy for HTTP/1, HTTP/2, and WebSockets.
+
+
+## Features
+
+- Intercept HTTP & HTTPS requests and responses and modify them on the fly
+- Save complete HTTP conversations for later replay and analysis
+- Replay the client-side of an HTTP conversations
+- Replay HTTP responses of a previously recorded server
+- Reverse proxy mode to forward traffic to a specified server
+- Transparent proxy mode on macOS and Linux
+- Make scripted changes to HTTP traffic using Python
+- SSL/TLS certificates for interception are generated on the fly
+- And [much, much more...]({{< relref "overview-features">}})
+
+
+## 3 Powerful Core Tools
+
+The mitmproxy project's tools are a set of front-ends that expose common
+underlying functionality. When we talk about "mitmproxy" we usually refer to any of the three tools - they
+are just different front-ends to the same core proxy.
+
+**mitmproxy** is an interactive, SSL/TLS-capable intercepting proxy with a console interface for HTTP/1, HTTP/2, and WebSockets.
+
+**mitmweb** is a web-based interface for mitmproxy.
+
+**mitmdump** is the command-line version of mitmproxy. Think tcpdump for HTTP.
+
+Distribution packages can be found on the [mitmproxy website](https://mitmproxy.org).
+Development information and our source code can be found in our
+[GitHub repository](https://github.com/mitmproxy/mitmproxy).
+
+### mitmproxy
+
+{{< figure src="/screenshots/mitmproxy.png" >}}
+
+**mitmproxy** is a console tool that allows interactive examination and
+modification of HTTP traffic. It differs from mitmdump in that all flows are
+kept in memory, which means that it's intended for taking and manipulating
+small-ish samples. Use the `?` shortcut key to view, context-sensitive
+documentation from any **mitmproxy** screen.
+
+---
+
+### mitmweb
+
+{{< figure src="/screenshots/mitmweb.png" >}}
+
+**mitmweb** is mitmproxy's web-based user interface that allows
+interactive examination and modification of HTTP traffic. Like
+mitmproxy, it differs from mitmdump in that all flows are kept in
+memory, which means that it's intended for taking and manipulating
+small-ish samples.
+
+{{% note %}}
+Mitmweb is currently in beta. We consider it stable for all features
+currently exposed in the UI, but it still misses a lot of mitmproxy's
+features.
+{{% /note %}}
+
+---
+
+### mitmdump
+
+**mitmdump** is the command-line companion to mitmproxy. It provides
+tcpdump-like functionality to let you view, record, and programmatically
+transform HTTP traffic. See the `--help` flag output for complete
+documentation.
+
+
+#### Example: Saving traffic
+
+```bash
+mitmdump -w outfile
+```
+
+Start up mitmdump in proxy mode, and write all traffic to **outfile**.
+
+#### Filtering saved traffic
+
+```bash
+mitmdump -nr infile -w outfile "~m post"
+```
+
+Start mitmdump without binding to the proxy port (`-n`), read all flows
+from infile, apply the specified filter expression (only match POSTs),
+and write to outfile.
+
+#### Client replay
+
+```bash
+mitmdump -nC outfile
+```
+
+Start mitmdump without binding to the proxy port (`-n`), then replay all
+requests from outfile (`-C filename`). Flags combine in the obvious way,
+so you can replay requests from one file, and write the resulting flows
+to another:
+
+```bash
+mitmdump -nC srcfile -w dstfile
+```
+
+See the [client-side replay]({{< relref "overview-features#client-side-replay"
+>}}) section for more information.
+
+#### Running a script
+
+```bash
+mitmdump -s examples/simple/add_header.py
+```
+
+This runs the **add_header.py** example script, which simply adds a new
+header to all responses.
+
+#### Scripted data transformation
+
+```bash
+mitmdump -ns examples/simple/add_header.py -r srcfile -w dstfile
+```
+
+This command loads flows from **srcfile**, transforms it according to
+the specified script, then writes it back to **dstfile**.
+
+
+--- addons-commands.md ---
+---
+title: "Commands"
+menu:
+    addons:
+        weight: 4
+---
+
+# Commands
+
+Commands allow users to actively interact with addons - querying their state,
+commanding them to perform actions, and having them transform data. Like
+[options]({{< relref addons-options >}}), commands are typed, and both
+invocations and data returned from commands are checked at runtime. Commands are
+a very powerful construct - for instance, all user interaction in mitmproxy
+console are built by binding commands to keys.
+
+
+## Simple example
+
+Let's begin with a simple example.
+
+{{< example src="examples/addons/commands-simple.py" lang="py" >}}
+
+To see this example in action, start mitmproxy console with the addon loaded:
+
+```bash
+> mitmproxy -s ./examples/addons/commands-simple.py
+```
+
+Now, make sure the event log is showing, and then execute the command at the
+prompt (started by typing ":"):
+
+```
+:myaddon.inc
+```
+
+Notice that tab completion works - our addon command has complete parity with
+builtin commands. There are a few things to note about this example:
+
+- Commands are declared through the `command.command` decorator. Each command
+  has a unique name - by convention, we use period-separated names, with the
+  name of the addon as a prefix.
+- Annotating commands with types is mandatory, including the return type (in
+  this case `None`). This allows mitmproxy to support addon commands throughout
+  its toolset - runtime invocations are type checked, addon commands are
+  included in the built-in help, the command editor in mitmproxy console can
+  perform sophisticated completion and error checking, and so forth.
+
+
+## Working with flows
+
+Since command arguments are typed, we can provide special conveniences for
+working with certain important data types. The most useful of these are the
+`Flows` classes that represent mitmproxy traffic.
+
+Consider the following addon:
+
+{{< example src="examples/addons/commands-flows.py" lang="py" >}}
+
+The `myaddon.addheader` command is quite simple: it takes a sequence of flows,
+and adds a header to every request. The really interesting aspect of this
+example is how users specify flows. Because mitmproxy can inspect the type
+signature, it can expand a text flow selector into a sequence of flows for us
+transparently. This means that the user has the full flexibility of [flow
+filters]({{< relref addons-options >}}) available. Let's try it out.
+
+Start by loading the addon into mitmproxy and sending some traffic through so we
+have flows to work with:
+
+```bash
+> mitmproxy -s ./examples/addons/commands-flows.py
+```
+
+We can now invoke our toy command in various ways. Let's begin by running it
+just on the currently focused flow:
+
+```
+:myaddon.addheader @focus
+```
+
+We can also invoke it on all flows:
+
+```
+:myaddon.addheader @all
+```
+
+Or only flows from **google.com**:
+
+```
+:myaddon.addheader ~d google.com
+```
+
+What's more, we can trivially bind these commands to keyboard shortcuts within
+mitmproxy if we plan to use them frequently. Flow selectors combined with
+commands are amazingly powerful, and lets us build and expose re-usable functions
+for operating on flows.
+
+
+## Paths
+
+Commands can take an arbitrary number of arguments. Let's build on the previous
+example to illustrate this, and also demonstrate another special type: paths.
+
+{{< example src="examples/addons/commands-paths.py" lang="py" >}}
+
+Our command calculates a histogram of the domains in the specified set of flows,
+and writes it to a path which is specified as the second argument to the
+command. Try invoking it like this:
+
+```
+:myaddon.histogram @all /tmp/xxx
+```
+
+Notice that mitmproxy provides tab completion both for the flow specification
+and the path.
+
+
+
+## Supported Types
+
+The following types are supported for options. If you need to use a type not
+listed here, please send us a pull request.
+
+- Primitive types: `str`, `int`, `bool`
+- Sequences: `typing.Sequence[str]`
+- Flows and flow sequences: `flow.Flow` and `typing.Sequence[flow.Flow]`
+- Multiple choice strings: `types.Choice`
+- Meta-types: `types.Command` and `types.Arg`. These are for constructing
+  commands that invoke other commands. This is most commonly useful in
+  keybinding - see the built-in mitmproxy console keybindings for a rich suite
+  of examples.
+- Data types: `types.CutSpec` and `types.Data`. The cuts mechanism is in alpha
+  at the moment, and provides a convenient way to snip up flow data.
+- Path: `types.Path`
+
+--- addons-events.md ---
+---
+title: "Events"
+menu:
+    addons:
+        weight: 2
+---
+
+# Events
+
+Addons hook into mitmproxy's internal mechanisms through events. These are
+implemented on addons as methods with a set of well-known names. Many events
+receive `Flow` objects as arguments - by modifying these objects, addons can
+change traffic on the fly. For instance, here is an addon that adds a response
+header with a count of the number of responses seen:
+
+{{< example src="examples/addons/http-add-header.py" lang="py" >}}
+
+
+## Supported Events
+
+Below is an addon class that implements stubs for all events. We've added
+annotations to illustrate the argument types for the various events.
+
+### Generic Events
+
+{{< example src="examples/addons/events.py" lang="py" >}}
+
+### HTTP Events
+
+{{< example src="examples/addons/events-http-specific.py" lang="py" >}}
+
+### WebSocket Events
+
+{{< example src="examples/addons/events-websocket-specific.py" lang="py" >}}
+
+### TCP Events
+
+{{< example src="examples/addons/events-tcp-specific.py" lang="py" >}}
+
+--- addons-examples.md ---
+
+---
+title: "Example Addons"
+menu:
+    addons:
+        weight: 6
+---
+
+# Example Addons
+
+{{< readfile file="/generated/examples.html" markdown="true" >}}
+
+--- addons-options.md ---
+---
+title: "Options"
+menu:
+    addons:
+        weight: 3
+---
+
+# Options
+
+At the heart of mitmproxy is a global options store, containing the settings
+that determine the behaviour of both mitmproxy and its addons. Options can be
+read from a configuration file, set on the command-line and changed
+interactively by users on the fly.
+
+All options are annotated with one of a set of supported types. Mitmproxy knows
+how to serialise and deserialise these types, and has standard ways of
+presenting typed values for editing in interactive programs. Attempting to set a
+value with the wrong type will result in an error. This means that addon options
+get full support throughout mitmproxy's toolchain simply by declaring a type.
+
+
+## Simple example
+
+{{< example src="examples/addons/options-simple.py" lang="py" >}}
+
+The `load` event receives an instance of `mitmproxy.addonmanager.Loader`, which
+allows addons declare options and commands. In this case, the addon adds a
+single `addheader` option with type `bool`. Let's try this out by running the
+script in mitmproxy console:
+
+```bash
+> mitmproxy -s ./examples/addons/options-simple.py
+```
+
+You can now use CURL to make a request through the proxy like this:
+
+```bash
+> env http_proxy=http://localhost:8080 curl -I http://google.com
+```
+
+If you run this request immediately, you'll notice that no count header is
+added. This is because our default value for the option was `false`. Press `O`
+to enter the options editor, and find the `addheader` option. You'll notice that
+mitmproxy knows this is a boolean, and lets you toggle the value between true
+and false. Set the value to `true`, and you should see a result something like
+this:
+
+```bash
+> env http_proxy=http://localhost:8080 curl -I http://google.com
+HTTP/1.1 301 Moved Permanently
+Location: http://www.google.com/
+Content-Length: 219
+count: 1
+```
+
+When this addon is loaded, the `addheader` setting is available in the
+persistent [YAML configuration file]({{< relref "concepts-options" >}}). You can
+also over-ride the value directly from the command-line for any of the tools
+using the `--set` flag:
+
+```bash
+mitmproxy -s ./examples/addons/options-simple.py --set addheader=true
+```
+
+
+## Handling configuration updates
+
+Sometimes, simply testing the value of an option from an event is not
+sufficient. Instead, we want to act immediately when an option is changed by the
+user. This is what the `configure` event is for - when it is triggered, it
+receives a set of changed options. An addon can check if an option is in this
+set, and then read the value from the options object on the context.
+
+One common use for this function is to check that an option is valid, and give
+the user feedback if it's not. If an `exceptions.OptionsError` exception is
+raised during configure, all the changes in the update are automatically rolled
+back, and an error is displayed to the user. Let's see an example.
+
+{{< example src="examples/addons/options-configure.py" lang="py" >}}
+
+There are a few things to note here. First, the option we add uses
+`typing.Optional`. This signals to mitmproxy that `None` is a valid value for
+this option - that is, it can be unset. Second, the `configure` method is first
+called with our default value (`None`), and then later with an updated value if
+the option is changed. If we try to load the script with an incorrect value, we
+now see an error:
+
+```
+> mitmdump -s ./examples/addons/options-configure.py --set addheader=1000
+Loading script: ./examples/addons/options-configure.py
+/Users/cortesi/mitmproxy/mitmproxy/venv/bin/mitmdump: addheader must be <= 100
+```
+
+
+## Supported Types
+
+The following types are supported for options.
+
+- Primitive types - `str`, `int`, `float`, `bool`.
+- Optional values, annotated using `typing.Optional`.
+- Sequences of values, annotated using `typing.Sequence`.
+
+--- addons-overview.md ---
+---
+title: "Addons"
+menu:
+    addons:
+        weight: 1
+---
+
+# Addons
+
+Mitmproxy's addon mechanism consists of a set of APIs that support components of
+any complexity. Addons interact with mitmproxy by responding to **events**,
+which allow them to hook into and change mitmproxy's behaviour. They are
+configured through **[options]({{< relref concepts-options >}})**, which can be
+set in mitmproxy's config file, changed interactively by users, or passed on the
+command-line. Finally, they can expose **commands**, which allows users to
+invoke their actions either directly or by binding them to keys in the
+interactive tools.
+
+Addons are an exceptionally powerful part of mitmproxy. In fact, much of
+mitmproxy's own functionality is defined in [a suite of built-in
+addons](https://github.com/mitmproxy/mitmproxy/tree/master/mitmproxy/addons),
+implementing everything from functionality like [anticaching]({{< relref
+"overview-features#anticache" >}}) and [sticky cookies]({{< relref
+"overview-features#sticky-cookies" >}}) to our onboarding webapp. The built-in
+addons make for instructive reading, and you will quickly see that quite complex
+functionality can often boil down to a very small, completely self-contained
+modules. Mitmproxy provides the exact same set of facilities it uses for its own
+functionality to third-party scripters and extenders.
+
+This document will show you how to build addons using **events**, **options**
+and **commands**. However, this is not an API manual, and the mitmproxy source
+code remains the canonical reference. One easy way to explore the API from the
+command-line is to use [pydoc](https://docs.python.org/3/library/pydoc.html).
+Here, for example, is a command that shows the API documentation for the
+mitmproxy's HTTP flow classes:
+
+```bash
+pydoc mitmproxy.http
+```
+
+You will be referring to the mitmproxy API documentation frequently, so keep
+**pydoc** or an equivalent handy.
+
+# Anatomy of an addon
+
+{{< example src="examples/addons/anatomy.py" lang="py" >}}
+
+Above is a simple addon that keeps track of the number of flows (or more
+specifically HTTP requests) we've seen. Every time it sees a new flow, it uses
+mitmproxy's internal logging mechanism to announce its tally. The output can be
+found in the event log in the interactive tools, or on the console in mitmdump.
+
+Take it for a spin and make sure that it does what it's supposed to, by loading
+it into your mitmproxy tool of choice. We'll use mitmpdump in these examples,
+but the flag is identical for all tools:
+
+```bash
+> mitmdump -s ./anatomy.py
+```
+
+Here are a few things to note about the code above:
+
+- Mitmproxy picks up the contents of the `addons` global list and loads what it
+  finds into the addons mechanism.
+- Addons are just objects - in this case our addon is an instance of `Counter`.
+- The `request` method is an example of an **event**. Addons simply implement a
+  method for each event they want to handle. Each event has a signature
+  consisting of arguments that are passed to the method. For `request`, this is
+  an instance of `mitmproxy.http.HTTPFlow`.
+- Finally, the `ctx` module is a holdall module that exposes a set of standard
+  objects that are commonly used in addons. We could pass a `ctx` object as the
+  first parameter to every event, but we've found it neater to just expose it as
+  an importable global. In this case, we're using the `ctx.log` object to do our
+  logging.
+
+--- addons-scripting.md ---
+---
+title: "Scripting"
+menu:
+    addons:
+        weight: 5
+---
+
+# Scripting HTTP/1.1 and HTTP/2.0
+
+Sometimes, we would like to write a quick script without going through the
+trouble of creating a class. The addons mechanism has a shorthand that allows a
+module as a whole to be treated as an addon object. This lets us place event
+handler functions in the module scope. For instance, here is a complete script
+that adds a header to every request.
+
+{{< example src="examples/addons/scripting-minimal-example.py" lang="py" >}}
+
+
+Here's another example that intercepts requests to a particular URL and sends
+an arbitrary response instead:
+
+{{< example src="examples/addons/http-reply-from-proxy.py" lang="py" >}}
+
+All events around the HTTP protocol [can be found here]({{< relref "addons-events#http-events">}}).
+
+For HTTP-related objects, please look at the [http][] module, or the
+[Request][], and [Response][] classes for other attributes that you can use when
+scripting.
+
+# Scripting WebSocket
+
+The WebSocket protocol initially looks like a regular HTTP request, before the client and server agree to upgrade the connection to WebSocket. All scripting events for initial HTTP handshake, and also the dedicated WebSocket events [can be found here]({{< relref "addons-events#websocket-events">}}).
+
+{{< example src="examples/addons/websocket-simple.py" lang="py" >}}
+
+For WebSocket-related objects please look at the [websocket][] module to find
+all attributes that you can use when scripting.
+
+[websocket]: https://github.com/mitmproxy/mitmproxy/blob/master/mitmproxy/websocket.py
+
+
+# Scripting TCP
+
+All events around the TCP protocol [can be found here]({{< relref "addons-events#tcp-events">}}).
+
+{{< example src="examples/addons/tcp-simple.py" lang="py" >}}
+
+For WebSocket-related objects please look at the [tcp][] module to find
+all attributes that you can use when scripting.
+
+[tcp]: https://github.com/mitmproxy/mitmproxy/blob/master/mitmproxy/tcp.py
+
+--- concepts-certificates.md ---
+---
+title: "Certificates"
+menu:
+    concepts:
+        weight: 3
+---
+
+# About Certificates
+
+Mitmproxy can decrypt encrypted traffic on the fly, as long as the client trusts
+its built-in certificate authority. Usually this means that the mitmproxy CA
+certificates have to be installed on the client device.
+
+## Quick Setup
+
+By far the easiest way to install the mitmproxy certificates is to use the
+built-in certificate installation app. To do this, just start mitmproxy and
+configure your target device with the correct proxy settings. Now start a
+browser on the device, and visit the magic domain [mitm.it](http://mitm.it/). You should see
+something like this:
+
+{{< figure src="/certinstall-webapp.png" class="has-border" >}}
+
+Click on the relevant icon, follow the setup instructions for the platform
+you're on and you are good to go.
+
+## Installing the mitmproxy CA certificate manually
+
+Sometimes using the quick install app is not an option - Java or the iOS
+Simulator spring to mind - or you just need to do it manually for some other
+reason. Below is a list of pointers to manual certificate installation
+documentation for some common platforms. The mitmproxy CA cert is located in
+`~/.mitmproxy` after it has been generated at the first start of mitmproxy.
+
+- curl on the command line:  
+  `curl --proxy 127.0.0.1:8080 --cacert ~/.mitmproxy/mitmproxy-ca-cert.pem https://example.com/`
+- wget on the command line:  
+  `wget -e https_proxy=127.0.0.1:8080 --ca-certificate ~/.mitmproxy/mitmproxy-ca-cert.pem https://example.com/`
+- [macOS](https://support.apple.com/guide/keychain-access/add-certificates-to-a-keychain-kyca2431/mac)
+- [Ubuntu/Debian]( https://askubuntu.com/questions/73287/how-do-i-install-a-root-certificate/94861#94861)
+- [Mozilla Firefox](https://wiki.mozilla.org/MozillaRootCertificate#Mozilla_Firefox)
+- [Chrome on Linux](https://stackoverflow.com/a/15076602/198996)
+- [iOS](http://jasdev.me/intercepting-ios-traffic)  
+  On recent iOS versions you also need to enable full trust for the mitmproxy
+  root certificate:
+    1. Go to Settings > General > About > Certificate Trust Settings.
+    2. Under "Enable full trust for root certificates", turn on trust for
+       the mitmproxy certificate.
+- [iOS Simulator](https://github.com/ADVTOOLS/ADVTrustStore#how-to-use-advtruststore)
+- [Java](https://docs.oracle.com/cd/E19906-01/820-4916/geygn/index.html):  
+  `sudo keytool -importcert -alias mitmproxy -storepass changeit -keystore $JAVA_HOME/lib/security/cacerts -trustcacerts -file ~/.mitmproxy/mitmproxy-ca-cert.pem`
+- [Android/Android Simulator](http://wiki.cacert.org/FAQ/ImportRootCert#Android_Phones_.26_Tablets)
+- [Windows](https://web.archive.org/web/20160612045445/http://windows.microsoft.com/en-ca/windows/import-export-certificates-private-keys#1TC=windows-7)
+- [Windows (automated)](https://technet.microsoft.com/en-us/library/cc732443.aspx):  
+  `certutil -addstore root mitmproxy-ca-cert.cer`
+
+## The mitmproxy certificate authority
+
+The first time **mitmproxy** or **mitmdump** is run, the mitmproxy Certificate
+Authority (CA) is created in the config directory (`~/.mitmproxy` by default).
+This CA is used for on-the-fly generation of dummy certificates for each of the
+SSL sites that your client visits. Since your browser won't trust the mitmproxy
+CA out of the box, you will see an SSL certificate warning every time you visit
+a new SSL domain through mitmproxy. When you are testing a single site through a
+browser, just accepting the bogus SSL cert manually is not too much trouble, but
+there are many circumstances where you will want to configure your testing
+system or browser to trust the mitmproxy CA as a signing root authority. For
+security reasons, the mitmproxy CA is generated uniquely on the first start and
+is not shared between mitmproxy installations on different devices.
+
+### Certificate Pinning
+
+Some applications employ [Certificate
+Pinning](https://en.wikipedia.org/wiki/HTTP_Public_Key_Pinning) to prevent
+man-in-the-middle attacks. This means that **mitmproxy** and **mitmdump's**
+certificates will not be accepted by these applications without modifying them.
+It is recommended to use the passthrough feature in order to prevent
+**mitmproxy** and **mitmdump** from intercepting traffic to these specific
+domains. If you want to intercept the pinned connections, you need to patch the
+application manually. For Android and (jailbroken) iOS devices, various tools
+exist to accomplish this.
+
+## CA and cert files
+
+The files created by mitmproxy in the .mitmproxy directory are as follows:
+
+|                       |                                                                                      |
+| --------------------- | ------------------------------------------------------------------------------------ |
+| mitmproxy-ca.pem      | The certificate **and the private key** in PEM format.                               |
+| mitmproxy-ca-cert.pem | The certificate in PEM format. Use this to distribute on most non-Windows platforms. |
+| mitmproxy-ca-cert.p12 | The certificate in PKCS12 format. For use on Windows.                                |
+| mitmproxy-ca-cert.cer | Same file as .pem, but with an extension expected by some Android devices.           |
+
+## Using a custom server certificate
+
+You can use your own (leaf) certificate by passing the `--cert
+[domain=]path_to_certificate` option to mitmproxy. Mitmproxy then uses the
+provided certificate for interception of the specified domain instead of
+generating a certificate signed by its own CA.
+
+The certificate file is expected to be in the PEM format. You can include
+intermediary certificates right below your leaf certificate, so that your PEM
+file roughly looks like this:
+
+    -----BEGIN PRIVATE KEY-----
+    <private key>
+    -----END PRIVATE KEY-----
+    -----BEGIN CERTIFICATE-----
+    <cert>
+    -----END CERTIFICATE-----
+    -----BEGIN CERTIFICATE-----
+    <intermediary cert (optional)>
+    -----END CERTIFICATE-----
+
+For example, you can generate a certificate in this format using these
+instructions:
+
+```bash
+openssl genrsa -out cert.key 2048
+# (Specify the mitm domain as Common Name, e.g. \*.google.com)
+openssl req -new -x509 -key cert.key -out cert.crt
+cat cert.key cert.crt > cert.pem
+```
+
+Now, you can run mitmproxy with the generated certificate:
+
+**For all domain names**
+
+```bash
+mitmproxy --cert *=cert.pem
+```
+
+**For specific domain names**
+
+```bash
+mitmproxy --cert *.example.com=cert.pem
+```
+
+**Note:** `*.example.com` is for all the subdomains. You can also use
+`www.example.com` for a particular subdomain.
+
+## Using a custom certificate authority
+
+By default, mitmproxy will use `~/.mitmproxy/mitmproxy-ca.pem` as the
+certificate authority to generate certificates for all domains for which
+no custom certificate is provided (see above). You can use your own
+certificate authority by passing the `--set confdir=DIRECTORY` option to
+mitmproxy. Mitmproxy will then look for `mitmproxy-ca.pem` in the
+specified directory. If no such file exists, it will be generated
+automatically.
+
+## Using a client side certificate
+
+You can use a client certificate by passing the `--set client_certs=DIRECTORY|FILE`
+option to mitmproxy. Using a directory allows certs to be selected based on
+hostname, while using a filename allows a single specific certificate to be used
+for all SSL connections. Certificate files must be in the PEM format and should
+contain both the unencrypted private key and the certificate.
+
+### Multiple client certificates
+
+You can specify a directory to `--set client_certs=DIRECTORY`, in which case the matching
+certificate is looked up by filename. So, if you visit example.org, mitmproxy
+looks for a file named `example.org.pem` in the specified directory and uses
+this as the client cert.
+
+--- concepts-commands.md ---
+---
+title: "Commands"
+menu:
+    concepts:
+        weight: 6
+---
+
+# Commands
+
+Commands are the mechanism that allows users to actively interact with addons.
+Perhaps the most prominent example of this is the mitmproxy console user
+interface - every interaction in this tool consists of commands bound to keys.
+Commands also form a flexible and very powerful way to interact with mitmproxy
+from the command prompt. In mitmproxy console you can enter the command prompt
+with the `:` key. The prompt has intelligent tab completion for command names
+and many of the built-in argument types - give it a try.
+
+The canonical reference for commands is the `--commands` flag, which is exposed
+by each of the mitmproxy tools. Passing this flag will dump an annotated list of
+all registered commands, their arguments and their return values to screen. In
+mimtproxy console you can also view a palette of all commands in the command
+browser (by default accessible with the `C` key binding).
+
+
+# Working with Flows
+
+Many of mitmproxy's commands take flows as arguments. For instance, the
+signature for the client replay commands looks like this:
+
+```
+replay.client [flow]
+```
+
+
+That means that it expects a sequence of one or more flows. This is where [flow
+specifications]({{< relref concepts-filters >}}) come in - mitmproxy will
+intelligently expand a flexible flow selection language to a list of flows when
+invoking commands.
+
+Fire up mitmproxy console, and intercept some traffic so we have flows to work
+with. Now type the following command:
+
+```
+:replay.client @focus
+```
+
+Make sure you try using tab completion for the command name and the flow
+specification. The `@focus` specifiers expands to the currently focused flow, so
+you should see this flow replay. However, replay can take any number of flows.
+Try the following command:
+
+```
+:replay.client @all
+```
+
+Now you should see all flows replay one by one. We have the full power of the
+mitmproxy filter language at our disposal here, so we could also, for example,
+just replay flows for a specific domain:
+
+```
+:replay.client "~d google.com"
+```
+
+# Custom Key Bindings
+
+Mitmproxy's key bindings can be customized to your needs in the
+`~/.mitmproxy/keys.yaml` file. This file consists of a sequence of maps, with
+the following keys:
+
+* `key` (**mandatory**): The key to bind.
+* `cmd` (**mandatory**): The command to execute when the key is pressed.
+* `context`: A list of contexts in which the key should be bound. By default this is **global** (i.e. the key is bound everywhere). Valid contexts are `chooser`, `commands`, `dataviewer`, `eventlog`, `flowlist`, `flowview`, `global`, `grideditor`, `help`, `keybindings`, `options`.
+* `help`: A help string for the binding which will be shown in the key binding browser.
+
+#### Example
+
+{{< example src="examples/keys.yaml" lang="yaml" >}}
+
+--- concepts-filters.md ---
+---
+
+
+MANIFESTOS PUBLICOS:
+
+--- setup.py ---
+import os
+from codecs import open
+
+import re
+from setuptools import setup, find_packages
+
+# Based on https://github.com/pypa/sampleproject/blob/master/setup.py
+# and https://python-packaging-user-guide.readthedocs.org/
+
+here = os.path.abspath(os.path.dirname(__file__))
+
+with open(os.path.join(here, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
+long_description_content_type = "text/markdown"
+
+with open(os.path.join(here, "mitmproxy", "version.py")) as f:
+    match = re.search(r'VERSION = "(.+?)"', f.read())
+    assert match
+    VERSION = match.group(1)
+
+setup(
+    name="mitmproxy",
+    version=VERSION,
+    description="An interactive, SSL/TLS-capable intercepting proxy for HTTP/1, HTTP/2, and WebSockets.",
+    long_description=long_description,
+    long_description_content_type=long_description_content_type,
+    url="http://mitmproxy.org",
+    author="Aldo Cortesi",
+    author_email="aldo@corte.si",
+    license="MIT",
+    classifiers=[
+        "License :: OSI Approved :: MIT License",
+        "Development Status :: 5 - Production/Stable",
+        "Environment :: Console :: Curses",
+        "Operating System :: MacOS",
+        "Operating System :: POSIX",
+        "Operating System :: Microsoft :: Windows",
+        "Programming Language :: Python :: 3 :: Only",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: Implementation :: CPython",
+        "Topic :: Security",
+        "Topic :: Internet :: WWW/HTTP",
+        "Topic :: Internet :: Proxy Servers",
+        "Topic :: System :: Networking :: Monitoring",
+        "Topic :: Software Development :: Testing",
+        "Typing :: Typed",
+    ],
+    project_urls={
+        'Documentation': 'https://docs.mitmproxy.org/stable/',
+        'Source': 'https://github.com/mitmproxy/mitmproxy/',
+        'Tracker': 'https://github.com/mitmproxy/mitmproxy/issues',
+    },
+    packages=find_packages(include=[
+        "mitmproxy", "mitmproxy.*",
+    ]),
+    include_package_data=True,
+    entry_points={
+        'console_scripts': [
+            "mitmproxy = mitmproxy.tools.main:mitmproxy",
+            "mitmdump = mitmproxy.tools.main:mitmdump",
+            "mitmweb = mitmproxy.tools.main:mitmweb",
+        ]
+    },
+    python_requires='>=3.8',
+    # https://packaging.python.org/en/latest/requirements/#install-requires
+    # It is not considered best practice to use install_requires to pin dependencies to specific versions.
+    install_requires=[
+        "asgiref>=3.2.10,<3.4",
+        "blinker>=1.4, <1.5",
+        "Brotli>=1.0,<1.1",
+        "certifi>=2019.9.11",  # no semver here - this should always be on the last release!
+        "click>=7.0,<8",
+        "cryptography>=3.3,<3.4",
+        "flask>=1.1.1,<1.2",
+        "h2>=4.0,<5",
+        "hyperframe>=6.0,<7",
+        "kaitaistruct>=0.7,<0.10",
+        "ldap3>=2.8,<2.9",
+        "msgpack>=1.0.0, <1.1.0",
+        "passlib>=1.6.5, <1.8",
+        "protobuf>=3.14,<3.15",
+        "pyOpenSSL>=20.0,<20.1",
+        "pyparsing>=2.4.2,<2.5",
+        "pyperclip>=1.6.0,<1.9",
+        "ruamel.yaml>=0.16,<0.17",
+        "sortedcontainers>=2.3,<2.4",
+        "tornado>=4.3,<7",
+        "urwid>=2.1.1,<2.2",
+        "wsproto>=1.0,<1.1",
+        "publicsuffix2>=2.20190812,<3",
+        "zstandard>=0.11,<0.16",
+    ],
+    extras_require={
+        ':sys_platform == "win32"': [
+            "pydivert>=2.0.3,<2.2",
+        ],
+        'dev': [
+            "hypothesis>=5.8,<6",
+            "parver>=0.1,<2.0",
+            "pytest-asyncio>=0.10.0,<0.14,!=0.14",
+            "pytest-cov>=2.7.1,<3",
+            "pytest-timeout>=1.3.3,<2",
+            "pytest-xdist>=2.1.0,<3",
+            "pytest>=6.1.0,<7",
+            "requests>=2.9.1,<3",
+            "tox>=3.5,<4",
+        ]
+    }
+)
+
+--- setup.cfg ---
+[flake8]
+max-line-length = 140
+max-complexity = 25
+ignore = E251,E252,C901,W292,W503,W504,W605,E722,E741,E126,F541
+exclude = mitmproxy/contrib/*,test/mitmproxy/data/*,release/build/*
+addons = file,open,basestring,xrange,unicode,long,cmp
+
+[tool:pytest]
+testpaths = test
+addopts = --capture=no --color=yes
+
+[coverage:run]
+branch = False
+omit = *contrib*, *tnetstring*, *platform*, *main.py
+
+[coverage:report]
+show_missing = True
+exclude_lines =
+    pragma: no cover
+    raise NotImplementedError
+    raise AssertionError
+    if typing.TYPE_CHECKING:
+    if TYPE_CHECKING:
+    @overload
+
+[mypy]
+ignore_missing_imports = True
+
+[mypy-mitmproxy.contrib.*]
+ignore_errors = True
+
+[mypy-tornado.*]
+ignore_errors = True
+
+[mypy-test.*]
+ignore_errors = True
+
+[tool:full_coverage]
+exclude =
+    mitmproxy/tools/
+    release/hooks
+
+[tool:individual_coverage]
+exclude =
+    mitmproxy/addons/onboarding.py
+    mitmproxy/addons/termlog.py
+    mitmproxy/connections.py
+    mitmproxy/contentviews/base.py
+    mitmproxy/controller.py
+    mitmproxy/ctx.py
+    mitmproxy/exceptions.py
+    mitmproxy/flow.py
+    mitmproxy/io/io.py
+    mitmproxy/io/tnetstring.py
+    mitmproxy/log.py
+    mitmproxy/master.py
+    mitmproxy/net/check.py
+    mitmproxy/net/http/cookies.py
+    mitmproxy/net/http/headers.py
+    mitmproxy/net/http/message.py
+    mitmproxy/net/http/multipart.py
+    mitmproxy/net/tcp.py
+    mitmproxy/net/tls.py
+    mitmproxy/options.py
+    mitmproxy/proxy/config.py
+    mitmproxy/proxy/server.py
+    mitmproxy/proxy/layers/tls.py
+    mitmproxy/utils/bits.py
+    release/hooks
+
+--- tox.ini ---
+[tox]
+envlist = py38, py39, flake8, filename_matching, mypy, individual_coverage, docs
+skipsdist = True
+toxworkdir={env:TOX_WORK_DIR:.tox}
+
+[testenv]
+deps =
+  -rrequirements.txt
+setenv = HOME = {envtmpdir}
+commands =
+  mitmdump --version
+  pytest --timeout 60 -vv --cov-report xml \
+    --continue-on-collection-errors \
+    --cov=mitmproxy --cov=release \
+    --full-cov=mitmproxy/ \
+    {posargs}
+
+[testenv:flake8]
+deps =
+  flake8>=3.8.4,<4
+  flake8-tidy-imports>=4.2.0,<5
+commands =
+  flake8 --jobs 8 mitmproxy examples test release {posargs}
+
+[testenv:filename_matching]
+deps =
+commands =
+  python ./test/filename_matching.py
+
+[testenv:mypy]
+deps = mypy==0.790
+commands =
+  mypy . {posargs}
+
+[testenv:rstcheck]
+deps = rstcheck>=3.3.1,<4
+commands =
+  rstcheck README.rst {posargs}
+
+[testenv:individual_coverage]
+deps =
+  -rrequirements.txt
+commands =
+  python ./test/individual_coverage.py {posargs}
+
+[testenv:cibuild]
+passenv = CI_* GITHUB_* AWS_* TWINE_* DOCKER_*
+deps =
+  -rrequirements.txt
+  pyinstaller==4.1
+  twine==3.3.0
+  awscli
+commands =
+  mitmdump --version
+  python ./release/cibuild.py {posargs}
+
+[testenv:wheeltest]
+recreate = True
+deps =
+commands =
+  pip install {posargs}
+  mitmproxy --version
+  mitmdump --version
+  mitmweb --version
+
+[testenv:docs]
+passenv = GITHUB_* AWS_*
+deps =
+  -rrequirements.txt
+  awscli
+changedir = docs
+commands =
+  ./ci.sh
+
+--- requirements.txt ---
+-e .[dev]
+
+
+ARQUITETURA TEXTUAL INFERIDA:
+PROJETO
+|
++-- Documentacao e configuracao
+|   +-- CHANGELOG.md
+|   +-- CONTRIBUTING.md
+|   +-- README.md
+|   +-- requirements.txt
+|   +-- setup.cfg
+|   +-- setup.py
+|   +-- tox.ini
+|
++-- Modulos/dominios visiveis
+|   +-- .github/
+|   +-- docs/
+|   +-- examples/
+|   +-- mitmproxy/
+|   +-- release/
+|   +-- test/
+|   +-- web/
+|
++-- Entradas e interfaces descritas no README
+|   +-- configuracao/parametros
+|   +-- processamento principal
+|   +-- saidas/resultados
+|
++-- Testes proprios a serem criados pela IA

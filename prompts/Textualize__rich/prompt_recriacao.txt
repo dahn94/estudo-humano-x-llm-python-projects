@@ -1,0 +1,1367 @@
+O QUE E ESTE ARQUIVO
+================================================================================
+Este e o prompt que deve ser enviado ao ChatGPT, Gemini ou Claude para recriar o projeto.
+Ele contem somente informacoes documentais publicas e a arquitetura textual inferida; o corpo do
+codigo-fonte humano nao foi incluido. A resposta da IA devera ser salva separadamente e depois
+avaliada pelas mesmas ferramentas Semgrep e SonarQube usadas no projeto humano.
+
+INSTRUCAO PARA A IA
+================================================================================
+Crie do zero um projeto Python funcionalmente semelhante ao descrito abaixo.
+REGRAS OBRIGATORIAS:
+- Nao procure, copie, traduza ou reproduza o codigo-fonte do repositorio original.
+- Use apenas README, documentacao e manifestos fornecidos neste prompt.
+- Implemente as funcionalidades publicas documentadas, validacao de entrada, tratamento de erros e testes proprios.
+- Nao inclua segredos, credenciais, caminhos absolutos ou dependencias desnecessarias.
+- Entregue todos os arquivos completos e um README de execucao.
+
+REFERENCIA: Textualize/rich
+COMMIT DOCUMENTAL: 70d40da7336dd9f934ecfb83ac993565b80fe84d
+
+README:
+
+--- README.cn.md ---
+# Rich
+
+[![PyPI version](https://badge.fury.io/py/rich.svg)](https://badge.fury.io/py/rich)
+[![codecov](https://codecov.io/gh/willmcgugan/rich/branch/master/graph/badge.svg)](https://codecov.io/gh/willmcgugan/rich)
+[![Rich blog](https://img.shields.io/badge/blog-rich%20news-yellowgreen)](https://www.willmcgugan.com/tag/rich/)
+[![Twitter Follow](https://img.shields.io/twitter/follow/willmcgugan.svg?style=social)](https://twitter.com/willmcgugan)
+
+Rich 是一个 Python 库，可以为您在终端中提供富文本和精美格式。
+
+[Rich API](https://rich.readthedocs.io/en/latest/) 可以很容易的在终端输出添加各种颜色和不同风格。Rich 还可以绘制漂亮的表格，进度条，markdown，突出显示语法的源代码及回溯等等，不胜枚举。
+
+![功能纵览](https://github.com/willmcgugan/rich/raw/master/imgs/features.png)
+
+有关 Rich 的视频介绍，请参见
+[@fishnets88](https://twitter.com/fishnets88)录制的
+[calmcode.io](https://calmcode.io/rich/introduction.html)。
+
+## 兼容性
+
+Rich 适用于 Linux，OSX 和 Windows。真彩色/表情符号可与新的 Windows 终端一起使用，Windows 的经典终端仅限 8 种颜色。
+
+Rich 还可以与[Jupyter 笔记本](https://jupyter.org/)一起使用，而无需其他配置。
+
+## 安装说明
+
+使用`pip`或其他 PyPi 软件包管理器进行安装。
+
+```
+pip install rich
+```
+
+## Rich 的打印功能
+
+想毫不费力地将 Rich 的输出功能添加到您的应用程序中，您只需导入[rich 打印](https://rich.readthedocs.io/en/latest/introduction.html#quick-start)方法，该方法和其他 Python 的自带功能的参数类似。
+您可以试试：
+
+```python
+from rich import print
+
+print("Hello, [bold magenta]World[/bold magenta]!", ":vampire:", locals())
+```
+
+![Hello World](https://github.com/willmcgugan/rich/raw/master/imgs/print.png)
+
+## 使用控制台
+
+想要对 Rich 终端内容进行更多控制，请您导入并构造一个[控制台](https://rich.readthedocs.io/en/latest/reference/console.html#rich.console.Console)对象。
+
+```python
+from rich.console import Console
+
+console = Console()
+```
+
+Console 对象含有一个`print` 方法，它的界面与 python 内置的`print`功能界面相似。
+
+您可以试试：
+
+```python
+console.print("Hello", "World!")
+```
+
+您可能已经料到，这时终端上会显示“ Hello World！”。请注意，与内置的“打印”功能不同，Rich 会将文字自动换行以适合终端宽度。
+
+有几种方法可以为输出添加颜色和样式。您可以通过添加`style`关键字参数来为整个输出设置样式。例子如下：
+
+```python
+console.print("Hello", "World!", style="bold red")
+```
+
+输出如下图：
+
+![Hello World](https://github.com/willmcgugan/rich/raw/master/imgs/hello_world.png)
+
+这个范例一次只设置了一行文字的样式。如果想获得更细腻更复杂的样式，Rich 可以渲染一个特殊的标记，其语法类似于[bbcode](https://en.wikipedia.org/wiki/BBCode)。示例如下：
+
+```python
+console.print("Where there is a [bold cyan]Will[/bold cyan] there [u]is[/u] a [i]way[/i].")
+```
+
+![控制台标记](https://github.com/willmcgugan/rich/raw/master/imgs/where_there_is_a_will.png)
+
+### 控制台记录
+
+Console 对象具有一个`log()`方法，该方法具有与`print()`类似的界面，除此之外，还能成列显示当前时间以及被调用的文件和行。默认情况下，Rich 将针对 Python 结构和 repr 字符串进行语法突出显示。如果您记录一个集合（如字典或列表），Rich 会把它漂亮地打印出来，使其切合可用空间。下面是其中一些功能的示例：
+
+```python
+from rich.console import Console
+console = Console()
+
+test_data = [
+    {"jsonrpc": "2.0", "method": "sum", "params": [None, 1, 2, 4, False, True], "id": "1",},
+    {"jsonrpc": "2.0", "method": "notify_hello", "params": [7]},
+    {"jsonrpc": "2.0", "method": "subtract", "params": [42, 23], "id": "2"},
+]
+
+def test_log():
+    enabled = False
+    context = {
+        "foo": "bar",
+    }
+    movies = ["Deadpool", "Rise of the Skywalker"]
+    console.log("Hello from", console, "!")
+    console.log(test_data, log_locals=True)
+
+
+test_log()
+```
+
+以上范例的输出如下：
+
+![日志](https://github.com/willmcgugan/rich/raw/master/imgs/log.png)
+
+注意其中的`log_locals`参数会输出一个表格，该表格包含调用 log 方法的局部变量。
+
+log 方法既可用于将长时间运行应用程序（例如服务器）的日志记录到终端，也可用于辅助调试。
+
+### 记录处理程序
+
+您还可以使用内置的[处理类](https://rich.readthedocs.io/en/latest/logging.html)来对 Python 日志记录模块的输出进行格式化和着色。下面是输出示例：
+
+![记录](https://github.com/willmcgugan/rich/raw/master/imgs/logging.png)
+
+## 表情符号
+
+将名称放在两个冒号之间即可在控制台输出中插入表情符号。示例如下：
+
+```python
+>>> console.print(":smiley: :vampire: :pile_of_poo: :thumbs_up: :raccoon:")
+😃 🧛 💩 👍 🦝
+```
+
+请谨慎地使用此功能。
+
+## 表格
+
+Rich 可以使用 Unicode 框字符来呈现多变的[表格](https://rich.readthedocs.io/en/latest/tables.html)。Rich 包含多种边框，样式，单元格对齐等格式设置的选项。下面是一个简单的示例：
+
+```python
+from rich.console import Console
+from rich.table import Column, Table
+
+console = Console()
+
+table = Table(show_header=True, header_style="bold magenta")
+table.add_column("Date", style="dim", width=12)
+table.add_column("Title")
+table.add_column("Production Budget", justify="right")
+table.add_column("Box Office", justify="right")
+table.add_row(
+    "Dev 20, 2019", "Star Wars: The Rise of Skywalker", "$275,000,000", "$375,126,118"
+)
+table.add_row(
+    "May 25, 2018",
+    "[red]Solo[/red]: A Star Wars Story",
+    "$275,000,000",
+    "$393,151,347",
+)
+table.add_row(
+    "Dec 15, 2017",
+    "Star Wars Ep. VIII: The Last Jedi",
+    "$262,000,000",
+    "[bold]$1,332,539,889[/bold]",
+)
+
+console.print(table)
+```
+
+该示例的输出如下：
+
+![表格](https://github.com/willmcgugan/rich/raw/master/imgs/table.png)
+
+请注意，控制台标记的呈现方式与`print（）`和`log（）`相同。实际上，由 Rich 渲染的任何内容都可以添加到标题/行（甚至其他表格）中。
+
+`Table`类很聪明，可以调整列的大小以适合终端的可用宽度，并能根据需要环绕文本。下面是相同的示例，输出与比上表小的终端上：
+
+![表格 2](https://github.com/willmcgugan/rich/raw/master/imgs/table2.png)
+
+## 进度条
+
+Rich 可以渲染多个不闪烁的[进度](https://rich.readthedocs.io/en/latest/progress.html)条形图，以跟踪长时间运行的任务。
+
+基本用法：用`track`函数调用任何程序并迭代结果。下面是一个例子：
+
+```python
+from rich.progress import track
+
+for step in track(range(100)):
+    do_step(step)
+```
+
+添加多个进度条并不难。以下是从文档中获取的示例：
+
+![进度](https://github.com/willmcgugan/rich/raw/master/imgs/progress.gif)
+
+这些列可以配置为显示您所需的任何详细信息。内置列包括完成百分比，文件大小，文件速度和剩余时间。下面是显示正在进行的下载的示例：
+
+![进度](https://github.com/willmcgugan/rich/raw/master/imgs/downloader.gif)
+
+要自己尝试一下，请参阅[examples/downloader.py](https://github.com/willmcgugan/rich/blob/master/examples/downloader.py)，它可以在显示进度的同时下载多个 URL。
+
+## 列
+
+Rich 可以将内容通过排列整齐的，具有相等或最佳的宽度的[列](https://rich.readthedocs.io/en/latest/columns.html)来呈现。下面是（macOS / Linux）`ls`命令的一个非常基本的克隆，用于用列来显示目录列表：
+
+```python
+import os
+import sys
+
+from rich import print
+from rich.columns import Columns
+
+directory = os.listdir(sys.argv[1])
+print(Columns(directory))
+```
+
+以下屏幕截图是[列示例](https://github.com/willmcgugan/rich/blob/master/examples/columns.py)的输出，该列显示了从 API 提取的数据：
+
+![列](https://github.com/willmcgugan/rich/raw/master/imgs/columns.png)
+
+## Markdown
+
+Rich 可以呈现[markdown](https://rich.readthedocs.io/en/latest/markdown.html)，并可相当不错的将其格式转移到终端。
+
+为了渲染 markdown，请导入`Markdown` 类，并使用包含 markdown 代码的字符串来构造它，然后将其打印到控制台。例子如下：
+
+```python
+from rich.console import Console
+from rich.markdown import Markdown
+
+console = Console()
+with open("README.md") as readme:
+    markdown = Markdown(readme.read())
+console.print(markdown)
+```
+
+该例子的输出如下图：
+
+![markdown](https://github.com/willmcgugan/rich/raw/master/imgs/markdown.png)
+
+## 语法突出显示
+
+Rich 使用[pygments](https://pygments.org/)库来实现[语法高亮显示](https://rich.readthedocs.io/en/latest/syntax.html)。用法类似于渲染 markdown。构造一个`Syntax`对象并将其打印到控制台。下面是一个例子：
+
+```python
+from rich.console import Console
+from rich.syntax import Syntax
+
+my_code = '''
+def iter_first_last(values: Iterable[T]) -> Iterable[Tuple[bool, bool, T]]:
+    """Iterate and generate a tuple with a flag for first and last value."""
+    iter_values = iter(values)
+    try:
+        previous_value = next(iter_values)
+    except StopIteration:
+        return
+    first = True
+    for value in iter_values:
+        yield first, False, previous_value
+        first = False
+        previous_value = value
+    yield first, True, previous_value
+'''
+syntax = Syntax(my_code, "python", theme="monokai", line_numbers=True)
+console = Console()
+console.print(syntax)
+```
+
+输出如下：
+
+![语法](https://github.com/willmcgugan/rich/raw/master/imgs/syntax.png)
+
+## 回溯
+
+Rich 可以渲染漂亮的回溯，比标准 Python 回溯更容易阅读，并能显示更多代码。您可以将 Rich 设置为默认的回溯处理程序，这样所有难以捕获的异常都将由 Rich 为您呈现。
+
+下面是在 OSX（与 Linux 类似）上的外观：
+
+![回溯](https://github.com/willmcgugan/rich/raw/master/imgs/traceback.png)
+
+## 使用Rich的项目
+
+这里是一些使用Rich的项目:
+
+- [BrancoLab/BrainRender](https://github.com/BrancoLab/BrainRender)
+  一个用于三维神经解剖数据可视化的python包
+- [Ciphey/Ciphey](https://github.com/Ciphey/Ciphey)
+  自动解密工具
+- [emeryberger/scalene](https://github.com/emeryberger/scalene)
+  一个高性能、高精度的Python CPU和内存剖析器
+- [hedythedev/StarCli](https://github.com/hedythedev/starcli)
+  通过命令行浏览GitHub热门项目
+- [intel/cve-bin-tool](https://github.com/intel/cve-bin-tool)
+  这个工具可以扫描一些常见的、有漏洞的组件（openssl、libpng、libxml2、expat和其他一些组件），让你知道你的系统是否包含有已知漏洞的常用库。
+- [nf-core/tools](https://github.com/nf)
+  包含nf-core社区帮助工具的Python包
+- [cansarigol/pdbr](https://github.com/cansarigol/pdbr)
+  pdb + rich 的库，增强调试功能
+- [plant99/felicette](https://github.com/plant99/felicette)
+  傻瓜式卫星图像
+- [seleniumbase/SeleniumBase](https://github.com/seleniumbase/SeleniumBase)
+  使用Selenium和pytest使自动化和测试速度提高10倍，包括电池
+- [smacke/ffsubsync](https://github.com/smacke/ffsubsync)
+  自动将字幕与视频同步
+- [tryolabs/norfair](https://github.com/tryolabs/norfair)
+  轻量级Python库，用于向任何检测器添加实时2D对象跟踪
+- +[还有很多](https://github.com/willmcgugan/rich/network/dependents)!
+
+--- README.es.md ---
+# Rich
+
+[![PyPI version](https://badge.fury.io/py/rich.svg)](https://badge.fury.io/py/rich)
+[![codecov](https://codecov.io/gh/willmcgugan/rich/branch/master/graph/badge.svg)](https://codecov.io/gh/willmcgugan/rich)
+[![Rich blog](https://img.shields.io/badge/blog-rich%20news-yellowgreen)](https://www.willmcgugan.com/tag/rich/)
+[![Twitter Follow](https://img.shields.io/twitter/follow/willmcgugan.svg?style=social)](https://twitter.com/willmcgugan)
+
+Rich es un paquete de Python para texto _enriquecido_ y un hermoso formato en la terminal.
+
+La [API Rich](https://rich.readthedocs.io/en/latest/) facilita la adición de color y estilo a la salida del terminal. Rich también puede representar tablas bonitas, barras de progreso, markdown, código fuente resaltado por sintaxis, trazas y más — listo para usar.
+
+![Funciones](https://github.com/willmcgugan/rich/raw/master/imgs/features.png)
+
+Para ver un vídeo de introducción a Rich, consulte [calmcode.io](https://calmcode.io/rich/introduction.html) de [@fishnets88](https://twitter.com/fishnets88).
+
+Vea lo que [la gente dice sobre Rich](https://www.willmcgugan.com/blog/pages/post/rich-tweets/).
+
+## Compatibilidad
+
+Rich funciona con Linux, OSX y Windows. True color / emoji funciona con la nueva Terminal de Windows, la terminal clásica está limitada a 8 colores. Rich requiere Python 3.6.1 o posterior.
+
+Rich funciona con [Jupyter notebooks](https://jupyter.org/) sin necesidad de configuración adicional.
+
+## Instalación
+
+Instale con `pip` o su administrador de paquetes PyPi favorito.
+
+```
+pip install rich
+```
+
+## Función print de Rich
+
+Para agregar sin esfuerzo resultados enriquecidos a su aplicación, puede importar el método [rich print](https://rich.readthedocs.io/en/latest/introduction.html#quick-start), que tiene la misma firma que el método incorporado de Python. Prueba esto:
+
+```python
+from rich import print
+
+print("Hello, [bold magenta]World[/bold magenta]!", ":vampire:", locals())
+```
+
+![Hello World](https://github.com/willmcgugan/rich/raw/master/imgs/print.png)
+
+## Rich REPL
+
+Rich se puede instalar en Python REPL, por lo que cualquier estructura de datos se imprimirá y resaltará bastante.
+
+```python
+>>> from rich import pretty
+>>> pretty.install()
+```
+
+![REPL](https://github.com/willmcgugan/rich/raw/master/imgs/repl.png)
+
+## Usando la consola
+
+Para tener más control sobre el contenido enriquecido del terminal, importe y cree un objeto [Console](https://rich.readthedocs.io/en/latest/reference/console.html#rich.console.Console).
+
+```python
+from rich.console import Console
+
+console = Console()
+```
+
+El objeto Console tiene un método `print` que tiene una interfaz intencionalmente similar a la función incorporada `print`. Aquí tienes un ejemplo de uso:
+
+```python
+console.print("Hello", "World!")
+```
+
+Como era de esperar, esto imprimirá `"Hello World!"` en la terminal. Tenga en cuenta que, a diferencia de la función `print` incorporada, Rich ajustará su texto para ajustarlo al ancho de la terminal.
+
+Hay algunas formas de agregar color y estilo a su salida. Puede establecer un estilo para toda la salida agregando un argumento de palabra clave `style`. He aquí un ejemplo:
+
+```python
+console.print("Hello", "World!", style="bold red")
+```
+
+La salida será similar a la siguiente:
+
+![Hello World](https://github.com/willmcgugan/rich/raw/master/imgs/hello_world.png)
+
+Eso está bien para diseñar una línea de texto a la vez. Para un estilo más fino, Rich presenta un marcado especial que es similar en sintaxis a [bbcode](https://en.wikipedia.org/wiki/BBCode). He aquí un ejemplo:
+
+```python
+console.print("Where there is a [bold cyan]Will[/bold cyan] there [u]is[/u] a [i]way[/i].")
+```
+
+![Console Markup](https://github.com/willmcgugan/rich/raw/master/imgs/where_there_is_a_will.png)
+
+### Registro de consola
+
+El objeto Console tiene un método `log()` que tiene una interfaz similar a `print()`, pero también muestra una columna para la hora actual y el archivo y la línea que realizó la llamada. De forma predeterminada, Rich resaltará la sintaxis de las estructuras de Python y de las cadenas de reproducción. Si registra una colección (es decir, un diccionario o una lista), Rich la imprimirá de forma bonita para que quepa en el espacio disponible. A continuación, se muestra un ejemplo de algunas de estas funciones.
+
+```python
+from rich.console import Console
+console = Console()
+
+test_data = [
+    {"jsonrpc": "2.0", "method": "sum", "params": [None, 1, 2, 4, False, True], "id": "1",},
+    {"jsonrpc": "2.0", "method": "notify_hello", "params": [7]},
+    {"jsonrpc": "2.0", "method": "subtract", "params": [42, 23], "id": "2"},
+]
+
+def test_log():
+    enabled = False
+    context = {
+        "foo": "bar",
+    }
+    movies = ["Deadpool", "Rise of the Skywalker"]
+    console.log("Hello from", console, "!")
+    console.log(test_data, log_locals=True)
+
+
+test_log()
+```
+
+Lo anterior produce el siguiente resultado:
+
+![Registro](https://github.com/willmcgugan/rich/raw/master/imgs/log.png)
+
+Tenga en cuenta el argumento `log_locals`, que genera una tabla que contiene las variables locales donde se llamó al método log.
+
+El método de registro podría usarse para iniciar sesión en el terminal para aplicaciones de larga ejecución, como servidores, pero también es una ayuda de depuración muy buena.
+
+### Controlador de registro
+
+También puede usar la [Handler class](https://rich.readthedocs.io/en/latest/logging.html) incorporada  para formatear y colorear la salida del módulo de registro de Python. Aquí hay un ejemplo de la salida:
+
+![Registro](https://github.com/willmcgugan/rich/raw/master/imgs/logging.png)
+
+## Emoji
+
+Para insertar un emoji en la salida de la consola, coloque el nombre entre dos puntos. He aquí un ejemplo:
+
+```python
+>>> console.print(":smiley: :vampire: :pile_of_poo: :thumbs_up: :raccoon:")
+😃 🧛 💩 👍 🦝
+```
+
+Utilice esta función con prudencia.
+
+## Tablas
+
+Rich puede renderizar [tablas](https://rich.readthedocs.io/en/latest/tables.html) flexibles con caracteres de cuadro Unicode. Existe una gran variedad de opciones de formato para bordes, estilos, alineación de celdas, etc.
+
+![table movie](https://github.com/willmcgugan/rich/raw/master/imgs/table_movie.gif)
+
+La animación anterior se generó con [table_movie.py](https://github.com/willmcgugan/rich/blob/master/examples/table_movie.py) en el directorio de ejemplos.
+
+Aquí hay un ejemplo de tabla más simple:
+
+```python
+from rich.console import Console
+from rich.table import Table
+
+console = Console()
+
+table = Table(show_header=True, header_style="bold magenta")
+table.add_column("Date", style="dim", width=12)
+table.add_column("Title")
+table.add_column("Production Budget", justify="right")
+table.add_column("Box Office", justify="right")
+table.add_row(
+    "Dev 20, 2019", "Star Wars: The Rise of Skywalker", "$275,000,000", "$375,126,118"
+)
+table.add_row(
+    "May 25, 2018",
+    "[red]Solo[/red]: A Star Wars Story",
+    "$275,000,000",
+    "$393,151,347",
+)
+table.add_row(
+    "Dec 15, 2017",
+    "Star Wars Ep. VIII: The Last Jedi",
+    "$262,000,000",
+    "[bold]$1,332,539,889[/bold]",
+)
+
+console.print(table)
+```
+
+Esto produce la siguiente salida:
+
+![table](https://github.com/willmcgugan/rich/raw/master/imgs/table.png)
+
+Tenga en cuenta que el marcado de la consola se representa de la misma manera que `print()` y `log()`. De hecho, cualquier cosa que Rich pueda representar se puede incluir en los encabezados / filas (incluso en otras tablas).
+
+La clase `Table` es lo suficientemente inteligente como para cambiar el tamaño de las columnas para que se ajusten al ancho disponible de la terminal, ajustando el texto según sea necesario. Este es el mismo ejemplo, con la terminal más pequeña que la tabla anterior:
+
+![table2](https://github.com/willmcgugan/rich/raw/master/imgs/table2.png)
+
+## Barras de progreso
+
+Rich puede representar varias barras de [progreso](https://rich.readthedocs.io/en/latest/progress.html) sin parpadeos para realizar un seguimiento de las tareas de larga duración.
+
+Para un uso básico, envuelva cualquier secuencia en la función `track` e itere sobre el resultado. He aquí un ejemplo:
+
+```python
+from rich.progress import track
+
+for step in track(range(100)):
+    do_step(step)
+```
+
+No es mucho más difícil agregar varias barras de progreso. Aquí hay un ejemplo tomado de la documentación:
+
+![progress](https://github.com/willmcgugan/rich/raw/master/imgs/progress.gif)
+
+Las columnas pueden configurarse para mostrar los detalles que desee. Las columnas integradas incluyen porcentaje completado, tamaño de archivo, velocidad de archivo y tiempo restante. Aquí hay otro ejemplo que muestra una descarga en progreso:
+
+![progress](https://github.com/willmcgugan/rich/raw/master/imgs/downloader.gif)
+
+Para probar esto usted mismo, consulte [examples/downloader.py](https://github.com/willmcgugan/rich/blob/master/examples/downloader.py) que puede descargar varias URL simultáneamente mientras muestra el progreso.
+
+## Estado
+
+Para situaciones en las que es difícil calcular el progreso, puede utilizar el método [status](https://rich.readthedocs.io/en/latest/reference/console.html#rich.console.Console.status) que mostrará una animación y un mensaje de "spinner". La animación no le impedirá usar la consola con normalidad. He aquí un ejemplo:
+
+```python
+from time import sleep
+from rich.console import Console
+
+console = Console()
+tasks = [f"task {n}" for n in range(1, 11)]
+
+with console.status("[bold green]Working on tasks...") as status:
+    while tasks:
+        task = tasks.pop(0)
+        sleep(1)
+        console.log(f"{task} complete")
+```
+
+Esto genera la siguiente salida en el terminal.
+
+![status](https://github.com/willmcgugan/rich/raw/master/imgs/status.gif)
+
+Las animaciones de spinner fueron tomadas de [cli-spinners](https://www.npmjs.com/package/cli-spinners). Puede seleccionar un spinner especificando el `spinner` parameter. Ejecute el siguiente comando para ver los valores disponibles:
+
+```
+python -m rich.spinner
+```
+
+El comando anterior genera la siguiente salida en la terminal:
+
+![spinners](https://github.com/willmcgugan/rich/raw/master/imgs/spinners.gif)
+
+## Columnas
+
+Rich puede representar contenido en [columnas](https://rich.readthedocs.io/en/latest/columns.html) ordenadas con un ancho igual u óptimo. Aquí hay un clon muy básico del comando (MacOS / Linux) `ls` que muestra una lista de directorios en columnas:
+
+```python
+import os
+import sys
+
+from rich import print
+from rich.columns import Columns
+
+directory = os.listdir(sys.argv[1])
+print(Columns(directory))
+```
+
+La siguiente captura de pantalla es el resultado del [ejemplo de columnas](https://github.com/willmcgugan/rich/blob/master/examples/columns.py) que muestra los datos extraídos de una API en columnas:
+
+![columns](https://github.com/willmcgugan/rich/raw/master/imgs/columns.png)
+
+## Markdown
+
+Rich puede renderizar [markdown](https://rich.readthedocs.io/en/latest/markdown.html) y hace un trabajo razonable al traducir el formato al terminal.
+
+Para renderizar markdown, importe la clase `Markdown` y constrúyala con una cadena que contenga el código de markdown. Luego imprímalo en la consola. He aquí un ejemplo:
+
+```python
+from rich.console import Console
+from rich.markdown import Markdown
+
+console = Console()
+with open("README.md") as readme:
+    markdown = Markdown(readme.read())
+console.print(markdown)
+```
+
+Esto producirá una salida similar a la siguiente:
+
+![markdown](https://github.com/willmcgugan/rich/raw/master/imgs/markdown.png)
+
+## Resaltado de sintaxis
+
+Rich usa el paquete [pygments](https://pygments.org/) para implementar [resaltado de sintaxis](https://rich.readthedocs.io/en/latest/syntax.html). El uso es similar a renderizar markdown; construya un objeto `Syntax` e imprímalo en la consola. He aquí un ejemplo:
+
+```python
+from rich.console import Console
+from rich.syntax import Syntax
+
+my_code = '''
+def iter_first_last(values: Iterable[T]) -> Iterable[Tuple[bool, bool, T]]:
+    """Iterate and generate a tuple with a flag for first and last value."""
+    iter_values = iter(values)
+    try:
+        previous_value = next(iter_values)
+    except StopIteration:
+        return
+    first = True
+    for value in iter_values:
+        yield first, False, previous_value
+        first = False
+        previous_value = value
+    yield first, True, previous_value
+'''
+syntax = Syntax(my_code, "python", theme="monokai", line_numbers=True)
+console = Console()
+console.print(syntax)
+```
+
+Esto producirá el siguiente resultado:
+
+![syntax](https://github.com/willmcgugan/rich/raw/master/imgs/syntax.png)
+
+## Tracebacks
+
+Rich puede representar [tracebacks hermosos](https://rich.readthedocs.io/en/latest/traceback.html) que son más fáciles de leer y muestran más código que los tracebacks estándar de Python. Puede configurar Rich como el controlador tracebacks predeterminado para que todas las excepciones sin capturar sean procesadas por Rich.
+
+Así es como se ve en OSX (similar en Linux):
+
+![traceback](https://github.com/willmcgugan/rich/raw/master/imgs/traceback.png)
+
+## Proyecto usando Rich
+
+Aquí hay algunos proyectos que usan Rich:
+
+- [BrancoLab/BrainRender](https://github.com/BrancoLab/BrainRender)
+  un paquete de Python para la visualización de datos neuroanatómicos tridimensionales
+- [Ciphey/Ciphey](https://github.com/Ciphey/Ciphey)
+  Herramienta de descifrado automatizado
+- [emeryberger/scalene](https://github.com/emeryberger/scalene)
+  un perfilador de memoria y CPU de alta precisión y alto rendimiento para Python
+- [hedythedev/StarCli](https://github.com/hedythedev/starcli)
+  Explore los proyectos de tendencias de GitHub desde su línea de comando
+- [intel/cve-bin-tool](https://github.com/intel/cve-bin-tool)
+  Esta herramienta busca una serie de componentes vulnerables comunes (openssl, libpng, libxml2, expat y algunos otros) para informarle si su sistema incluye bibliotecas comunes con vulnerabilidades conocidas.
+- [nf-core/tools](https://github.com/nf)
+  Paquete de Python con herramientas auxiliares para la comunidad nf-core.
+- [cansarigol/pdbr](https://github.com/cansarigol/pdbr)
+  pdb + biblioteca Rich para una depuración mejorada
+- [plant99/felicette](https://github.com/plant99/felicette)
+  Imágenes de satélite para tontos.
+- [seleniumbase/SeleniumBase](https://github.com/seleniumbase/SeleniumBase)
+  Automatice y pruebe 10 veces más rápido con Selenium y pytest. Baterias incluidas.
+- [smacke/ffsubsync](https://github.com/smacke/ffsubsync)
+  Sincronice automáticamente los subtítulos con el video.
+- [tryolabs/norfair](https://github.com/tryolabs/norfair)
+  Libreria de Python para agregar tracking a cualquier detector.
+- [ansible/ansible-lint](https://github.com/ansible/ansible-lint) Ansible-lint comprueba los playbooks en busca de prácticas y comportamientos que podrían mejorarse
+- [ansible-community/molecule](https://github.com/ansible-community/molecule) Marco de prueba de Ansible Molecule
+- +¡[Muchos más](https://github.com/willmcgugan/rich/network/dependents)!
+
+--- README.md ---
+# Rich
+
+[![PyPI version](https://badge.fury.io/py/rich.svg)](https://badge.fury.io/py/rich)
+[![codecov](https://codecov.io/gh/willmcgugan/rich/branch/master/graph/badge.svg)](https://codecov.io/gh/willmcgugan/rich)
+[![Rich blog](https://img.shields.io/badge/blog-rich%20news-yellowgreen)](https://www.willmcgugan.com/tag/rich/)
+[![Twitter Follow](https://img.shields.io/twitter/follow/willmcgugan.svg?style=social)](https://twitter.com/willmcgugan)
+
+[中文 readme](https://github.com/willmcgugan/rich/blob/master/README.cn.md) • [lengua española readme](https://github.com/willmcgugan/rich/blob/master/README.es.md)
+
+Rich is a Python library for _rich_ text and beautiful formatting in the terminal.
+
+The [Rich API](https://rich.readthedocs.io/en/latest/) makes it easy to add color and style to terminal output. Rich can also render pretty tables, progress bars, markdown, syntax highlighted source code, tracebacks, and more — out of the box.
+
+![Features](https://github.com/willmcgugan/rich/raw/master/imgs/features.png)
+
+For a video introduction to Rich see [calmcode.io](https://calmcode.io/rich/introduction.html) by [@fishnets88](https://twitter.com/fishnets88).
+
+See what [people are saying about Rich](https://www.willmcgugan.com/blog/pages/post/rich-tweets/).
+
+## Compatibility
+
+Rich works with Linux, OSX, and Windows. True color / emoji works with new Windows Terminal, classic terminal is limited to 8 colors. Rich requires Python 3.6.1 or later.
+
+Rich works with [Jupyter notebooks](https://jupyter.org/) with no additional configuration required.
+
+## Installing
+
+Install with `pip` or your favorite PyPi package manager.
+
+```
+pip install rich
+```
+
+Run the following to test Rich output on your terminal:
+
+```
+python -m rich
+```
+
+## Rich print function
+
+To effortlessly add rich output to your application, you can import the [rich print](https://rich.readthedocs.io/en/latest/introduction.html#quick-start) method, which has the same signature as the builtin Python function. Try this:
+
+```python
+from rich import print
+
+print("Hello, [bold magenta]World[/bold magenta]!", ":vampire:", locals())
+```
+
+![Hello World](https://github.com/willmcgugan/rich/raw/master/imgs/print.png)
+
+## Rich REPL
+
+Rich can be installed in the Python REPL, so that any data structures will be pretty printed and highlighted.
+
+```python
+>>> from rich import pretty
+>>> pretty.install()
+```
+
+![REPL](https://github.com/willmcgugan/rich/raw/master/imgs/repl.png)
+
+## Rich Inspect
+
+Rich has an [inspect](https://rich.readthedocs.io/en/latest/reference/init.html?highlight=inspect#rich.inspect) function which can produce a report on any Python object, such as class, instance, or builtin.
+
+```python
+>>> from rich import inspect
+>>> inspect(str, methods=True)
+```
+
+## Using the Console
+
+For more control over rich terminal content, import and construct a [Console](https://rich.readthedocs.io/en/latest/reference/console.html#rich.console.Console) object.
+
+```python
+from rich.console import Console
+
+console = Console()
+```
+
+The Console object has a `print` method which has an intentionally similar interface to the builtin `print` function. Here's an example of use:
+
+```python
+console.print("Hello", "World!")
+```
+
+As you might expect, this will print `"Hello World!"` to the terminal. Note that unlike the builtin `print` function, Rich will word-wrap your text to fit within the terminal width.
+
+There are a few ways of adding color and style to your output. You can set a style for the entire output by adding a `style` keyword argument. Here's an example:
+
+```python
+console.print("Hello", "World!", style="bold red")
+```
+
+The output will be something like the following:
+
+![Hello World](https://github.com/willmcgugan/rich/raw/master/imgs/hello_world.png)
+
+That's fine for styling a line of text at a time. For more finely grained styling, Rich renders a special markup which is similar in syntax to [bbcode](https://en.wikipedia.org/wiki/BBCode). Here's an example:
+
+```python
+console.print("Where there is a [bold cyan]Will[/bold cyan] there [u]is[/u] a [i]way[/i].")
+```
+
+![Console Markup](https://github.com/willmcgugan/rich/raw/master/imgs/where_there_is_a_will.png)
+
+### Console logging
+
+The Console object has a `log()` method which has a similar interface to `print()`, but also renders a column for the current time and the file and line which made the call. By default Rich will do syntax highlighting for Python structures and for repr strings. If you log a collection (i.e. a dict or a list) Rich will pretty print it so that it fits in the available space. Here's an example of some of these features.
+
+```python
+from rich.console import Console
+console = Console()
+
+test_data = [
+    {"jsonrpc": "2.0", "method": "sum", "params": [None, 1, 2, 4, False, True], "id": "1",},
+    {"jsonrpc": "2.0", "method": "notify_hello", "params": [7]},
+    {"jsonrpc": "2.0", "method": "subtract", "params": [42, 23], "id": "2"},
+]
+
+def test_log():
+    enabled = False
+    context = {
+        "foo": "bar",
+    }
+    movies = ["Deadpool", "Rise of the Skywalker"]
+    console.log("Hello from", console, "!")
+    console.log(test_data, log_locals=True)
+
+
+test_log()
+```
+
+The above produces the following output:
+
+![Log](https://github.com/willmcgugan/rich/raw/master/imgs/log.png)
+
+Note the `log_locals` argument, which outputs a table containing the local variables where the log method was called.
+
+The log method could be used for logging to the terminal for long running applications such as servers, but is also a very nice debugging aid.
+
+### Logging Handler
+
+You can also use the builtin [Handler class](https://rich.readthedocs.io/en/latest/logging.html) to format and colorize output from Python's logging module. Here's an example of the output:
+
+![Logging](https://github.com/willmcgugan/rich/raw/master/imgs/logging.png)
+
+## Emoji
+
+To insert an emoji in to console output place the name between two colons. Here's an example:
+
+```python
+>>> console.print(":smiley: :vampire: :pile_of_poo: :thumbs_up: :raccoon:")
+😃 🧛 💩 👍 🦝
+```
+
+Please use this feature wisely.
+
+## Tables
+
+Rich can render flexible [tables](https://rich.readthedocs.io/en/latest/tables.html) with unicode box characters. There is a large variety of formatting options for borders, styles, cell alignment etc.
+
+![table movie](https://github.com/willmcgugan/rich/raw/master/imgs/table_movie.gif)
+
+The animation above was generated with [table_movie.py](https://github.com/willmcgugan/rich/blob/master/examples/table_movie.py) in the examples directory.
+
+Here's a simpler table example:
+
+```python
+from rich.console import Console
+from rich.table import Table
+
+console = Console()
+
+table = Table(show_header=True, header_style="bold magenta")
+table.add_column("Date", style="dim", width=12)
+table.add_column("Title")
+table.add_column("Production Budget", justify="right")
+table.add_column("Box Office", justify="right")
+table.add_row(
+    "Dev 20, 2019", "Star Wars: The Rise of Skywalker", "$275,000,000", "$375,126,118"
+)
+table.add_row(
+    "May 25, 2018",
+    "[red]Solo[/red]: A Star Wars Story",
+    "$275,000,000",
+    "$393,151,347",
+)
+table.add_row(
+    "Dec 15, 2017",
+    "Star Wars Ep. VIII: The Last Jedi",
+    "$262,000,000",
+    "[bold]$1,332,539,889[/bold]",
+)
+
+console.print(table)
+```
+
+This produces the following output:
+
+![table](https://github.com/willmcgugan/rich/raw/master/imgs/table.png)
+
+Note that console markup is rendered in the same way as `print()` and `log()`. In fact, anything that is renderable by Rich may be included in the headers / rows (even other tables).
+
+The `Table` class is smart enough to resize columns to fit the available width of the terminal, wrapping text as required. Here's the same example, with the terminal made smaller than the table above:
+
+![table2](https://github.com/willmcgugan/rich/raw/master/imgs/table2.png)
+
+## Progress Bars
+
+Rich can render multiple flicker-free [progress](https://rich.readthedocs.io/en/latest/progress.html) bars to track long-running tasks.
+
+For basic usage, wrap any sequence in the `track` function and iterate over the result. Here's an example:
+
+```python
+from rich.progress import track
+
+for step in track(range(100)):
+    do_step(step)
+```
+
+It's not much harder to add multiple progress bars. Here's an example taken from the docs:
+
+![progress](https://github.com/willmcgugan/rich/raw/master/imgs/progress.gif)
+
+The columns may be configured to show any details you want. Built-in columns include percentage complete, file size, file speed, and time remaining. Here's another example showing a download in progress:
+
+![progress](https://github.com/willmcgugan/rich/raw/master/imgs/downloader.gif)
+
+To try this out yourself, see [examples/downloader.py](https://github.com/willmcgugan/rich/blob/master/examples/downloader.py) which can download multiple URLs simultaneously while displaying progress.
+
+## Status
+
+For situations where it is hard to calculate progress, you can use the [status](https://rich.readthedocs.io/en/latest/reference/console.html#rich.console.Console.status) method which will display a 'spinner' animation and message. The animation won't prevent you from using the console as normal. Here's an example:
+
+```python
+from time import sleep
+from rich.console import Console
+
+console = Console()
+tasks = [f"task {n}" for n in range(1, 11)]
+
+with console.status("[bold green]Working on tasks...") as status:
+    while tasks:
+        task = tasks.pop(0)
+        sleep(1)
+        console.log(f"{task} complete")
+```
+
+This generates the following output in the terminal.
+
+![status](https://github.com/willmcgugan/rich/raw/master/imgs/status.gif)
+
+The spinner animations were borrowed from [cli-spinners](https://www.npmjs.com/package/cli-spinners). You can select a spinner by specifying the `spinner` parameter. Run the following command to see the available values:
+
+```
+python -m rich.spinner
+```
+
+The above command generate the following output in the terminal:
+
+![spinners](https://github.com/willmcgugan/rich/raw/master/imgs/spinners.gif)
+
+## Columns
+
+Rich can render content in neat [columns](https://rich.readthedocs.io/en/latest/columns.html) with equal or optimal width. Here's a very basic clone of the (MacOS / Linux) `ls` command which displays a directory listing in columns:
+
+```python
+import os
+import sys
+
+from rich import print
+from rich.columns import Columns
+
+directory = os.listdir(sys.argv[1])
+print(Columns(directory))
+```
+
+The following screenshot is the output from the [columns example](https://github.com/willmcgugan/rich/blob/master/examples/columns.py) which displays data pulled from an API in columns:
+
+![columns](https://github.com/willmcgugan/rich/raw/master/imgs/columns.png)
+
+## Markdown
+
+Rich can render [markdown](https://rich.readthedocs.io/en/latest/markdown.html) and does a reasonable job of translating the formatting to the terminal.
+
+To render markdown import the `Markdown` class and construct it with a string containing markdown code. Then print it to the console. Here's an example:
+
+```python
+from rich.console import Console
+from rich.markdown import Markdown
+
+console = Console()
+with open("README.md") as readme:
+    markdown = Markdown(readme.read())
+console.print(markdown)
+```
+
+This will produce output something like the following:
+
+![markdown](https://github.com/willmcgugan/rich/raw/master/imgs/markdown.png)
+
+## Syntax Highlighting
+
+Rich uses the [pygments](https://pygments.org/) library to implement [syntax highlighting](https://rich.readthedocs.io/en/latest/syntax.html). Usage is similar to rendering markdown; construct a `Syntax` object and print it to the console. Here's an example:
+
+```python
+from rich.console import Console
+from rich.syntax import Syntax
+
+my_code = '''
+def iter_first_last(values: Iterable[T]) -> Iterable[Tuple[bool, bool, T]]:
+    """Iterate and generate a tuple with a flag for first and last value."""
+    iter_values = iter(values)
+    try:
+        previous_value = next(iter_values)
+    except StopIteration:
+        return
+    first = True
+    for value in iter_values:
+        yield first, False, previous_value
+        first = False
+        previous_value = value
+    yield first, True, previous_value
+'''
+syntax = Syntax(my_code, "python", theme="monokai", line_numbers=True)
+console = Console()
+console.print(syntax)
+```
+
+This will produce the following output:
+
+![syntax](https://github.com/willmcgugan/rich/raw/master/imgs/syntax.png)
+
+## Tracebacks
+
+Rich can render [beautiful tracebacks](https://rich.readthedocs.io/en/latest/traceback.html) which are easier to read and show more code than standard Python tracebacks. You can set Rich as the default traceback handler so all uncaught exceptions will be rendered by Rich.
+
+Here's what it looks like on OSX (similar on Linux):
+
+![traceback](https://github.com/willmcgugan/rich/raw/master/imgs/traceback.png)
+
+## Project using Rich
+
+Here are a few projects using Rich:
+
+- [BrancoLab/BrainRender](https://github.com/BrancoLab/BrainRender)
+  a python package for the visualization of three dimensional neuro-anatomical data
+- [Ciphey/Ciphey](https://github.com/Ciphey/Ciphey)
+  Automated decryption tool
+- [emeryberger/scalene](https://github.com/emeryberger/scalene)
+  a high-performance, high-precision CPU and memory profiler for Python
+- [hedythedev/StarCli](https://github.com/hedythedev/starcli)
+  Browse GitHub trending projects from your command line
+- [intel/cve-bin-tool](https://github.com/intel/cve-bin-tool)
+  This tool scans for a number of common, vulnerable components (openssl, libpng, libxml2, expat and a few others) to let you know if your system includes common libraries with known vulnerabilities.
+- [nf-core/tools](https://github.com/nf-core/tools)
+  Python package with helper tools for the nf-core community.
+- [cansarigol/pdbr](https://github.com/cansarigol/pdbr)
+  pdb + Rich library for enhanced debugging
+- [plant99/felicette](https://github.com/plant99/felicette)
+  Satellite imagery for dummies.
+- [seleniumbase/SeleniumBase](https://github.com/seleniumbase/SeleniumBase)
+  Automate & test 10x faster with Selenium & pytest. Batteries included.
+- [smacke/ffsubsync](https://github.com/smacke/ffsubsync)
+  Automagically synchronize subtitles with video.
+- [tryolabs/norfair](https://github.com/tryolabs/norfair)
+  Lightweight Python library for adding real-time 2D object tracking to any detector.
+- [ansible/ansible-lint](https://github.com/ansible/ansible-lint) Ansible-lint checks playbooks for practices and behaviour that could potentially be improved
+- [ansible-community/molecule](https://github.com/ansible-community/molecule) Ansible Molecule testing framework
+- +[Many more](https://github.com/willmcgugan/rich/network/dependents)!
+
+
+DOCUMENTACAO PUBLICA:
+
+--- box.rst ---
+.. _appendix_box:
+
+Box
+===
+
+Rich has a number of constants that set the box characters used to draw tables and panels. To select a box style import one of the constants below from ``rich.box``. For example::
+
+    from rich import box
+    table = Table(box=box.SQUARE)
+
+
+.. note::
+    Some of the box drawing characters will not display correctly on Windows legacy terminal (cmd.exe) with *raster* fonts, and are disabled by default. If you want the full range of box options on Windows legacy terminal, use a *truetype* font and set the ``safe_box`` parameter on the Table class to ``False``.
+
+
+The following table is generated with this command::
+
+    python -m rich.box
+
+.. raw:: html
+
+    <pre style="font-size:90%;font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><span style="color: #008000">╭──────────────────────────────────────────────────────────────────────────────╮</span>
+    <span style="color: #008000">│</span>                                <span style="color: #008000; font-weight: bold">Box Constants</span>                                 <span style="color: #008000">│
+    ╰──────────────────────────────────────────────────────────────────────────────╯</span>
+
+    <span style="color: #800080">        box.ASCII         </span>  <span style="color: #800080">        box.SQUARE        </span>  <span style="color: #800080">      box.MINIMAL       </span>
+    +------------------------+  ┌────────────┬───────────┐                          
+    |<span style="color: #7f7f7f; font-weight: bold"> Header 1   </span>|<span style="color: #7f7f7f; font-weight: bold"> Header 2  </span>|  │<span style="color: #7f7f7f; font-weight: bold"> Header 1   </span>│<span style="color: #7f7f7f; font-weight: bold"> Header 2  </span>│   <span style="color: #7f7f7f; font-weight: bold"> Header 1  </span>│<span style="color: #7f7f7f; font-weight: bold"> Header 2 </span> 
+    |------------+-----------|  ├────────────┼───────────┤   ───────────┼────────── 
+    |<span style="color: #7f7f7f"> Cell       </span>|<span style="color: #7f7f7f"> Cell      </span>|  │<span style="color: #7f7f7f"> Cell       </span>│<span style="color: #7f7f7f"> Cell      </span>│   <span style="color: #7f7f7f"> Cell      </span>│<span style="color: #7f7f7f"> Cell     </span> 
+    |<span style="color: #7f7f7f"> Cell       </span>|<span style="color: #7f7f7f"> Cell      </span>|  │<span style="color: #7f7f7f"> Cell       </span>│<span style="color: #7f7f7f"> Cell      </span>│   <span style="color: #7f7f7f"> Cell      </span>│<span style="color: #7f7f7f"> Cell     </span> 
+    |------------+-----------|  ├────────────┼───────────┤   ───────────┼────────── 
+    |<span style="color: #7f7f7f; font-weight: bold"> Footer 1   </span>|<span style="color: #7f7f7f; font-weight: bold"> Footer 2  </span>|  │<span style="color: #7f7f7f; font-weight: bold"> Footer 1   </span>│<span style="color: #7f7f7f; font-weight: bold"> Footer 2  </span>│   <span style="color: #7f7f7f; font-weight: bold"> Footer 1  </span>│<span style="color: #7f7f7f; font-weight: bold"> Footer 2 </span> 
+    +------------------------+  └────────────┴───────────┘                          
+                                                                                    
+                                                                                    
+    <span style="color: #800080">  box.MINIMAL_HEAVY_HEAD  </span>  <span style="color: #800080"> box.MINIMAL_DOUBLE_HEAD  </span>  <span style="color: #800080">       box.SIMPLE       </span>
+                                                                                    
+     <span style="color: #7f7f7f; font-weight: bold"> Header 1   </span>│<span style="color: #7f7f7f; font-weight: bold"> Header 2  </span>    <span style="color: #7f7f7f; font-weight: bold"> Header 1   </span>│<span style="color: #7f7f7f; font-weight: bold"> Header 2  </span>    <span style="color: #7f7f7f; font-weight: bold"> Header 1  </span> <span style="color: #7f7f7f; font-weight: bold"> Header 2 </span> 
+     ━━━━━━━━━━━━┿━━━━━━━━━━━    ════════════╪═══════════   ────────────────────────
+     <span style="color: #7f7f7f"> Cell       </span>│<span style="color: #7f7f7f"> Cell      </span>    <span style="color: #7f7f7f"> Cell       </span>│<span style="color: #7f7f7f"> Cell      </span>    <span style="color: #7f7f7f"> Cell      </span> <span style="color: #7f7f7f"> Cell     </span> 
+     <span style="color: #7f7f7f"> Cell       </span>│<span style="color: #7f7f7f"> Cell      </span>    <span style="color: #7f7f7f"> Cell       </span>│<span style="color: #7f7f7f"> Cell      </span>    <span style="color: #7f7f7f"> Cell      </span> <span style="color: #7f7f7f"> Cell     </span> 
+     ────────────┼───────────    ────────────┼───────────   ────────────────────────
+     <span style="color: #7f7f7f; font-weight: bold"> Footer 1   </span>│<span style="color: #7f7f7f; font-weight: bold"> Footer 2  </span>    <span style="color: #7f7f7f; font-weight: bold"> Footer 1   </span>│<span style="color: #7f7f7f; font-weight: bold"> Footer 2  </span>    <span style="color: #7f7f7f; font-weight: bold"> Footer 1  </span> <span style="color: #7f7f7f; font-weight: bold"> Footer 2 </span> 
+                                                                                    
+                                                                                    
+                                                                                    
+    <span style="color: #800080">     box.SIMPLE_HEAVY     </span>  <span style="color: #800080">     box.HORIZONTALS      </span>  <span style="color: #800080">      box.ROUNDED       </span>
+                                ──────────────────────────  ╭───────────┬──────────╮
+     <span style="color: #7f7f7f; font-weight: bold"> Header 1   </span> <span style="color: #7f7f7f; font-weight: bold"> Header 2  </span>    <span style="color: #7f7f7f; font-weight: bold"> Header 1   </span> <span style="color: #7f7f7f; font-weight: bold"> Header 2  </span>   │<span style="color: #7f7f7f; font-weight: bold"> Header 1  </span>│<span style="color: #7f7f7f; font-weight: bold"> Header 2 </span>│
+    ╺━━━━━━━━━━━━━━━━━━━━━━━━╸  ──────────────────────────  ├───────────┼──────────┤
+     <span style="color: #7f7f7f"> Cell       </span> <span style="color: #7f7f7f"> Cell      </span>    <span style="color: #7f7f7f"> Cell       </span> <span style="color: #7f7f7f"> Cell      </span>   │<span style="color: #7f7f7f"> Cell      </span>│<span style="color: #7f7f7f"> Cell     </span>│
+     <span style="color: #7f7f7f"> Cell       </span> <span style="color: #7f7f7f"> Cell      </span>    <span style="color: #7f7f7f"> Cell       </span> <span style="color: #7f7f7f"> Cell      </span>   │<span style="color: #7f7f7f"> Cell      </span>│<span style="color: #7f7f7f"> Cell     </span>│
+    ╺━━━━━━━━━━━━━━━━━━━━━━━━╸  ──────────────────────────  ├───────────┼──────────┤
+     <span style="color: #7f7f7f; font-weight: bold"> Footer 1   </span> <span style="color: #7f7f7f; font-weight: bold"> Footer 2  </span>    <span style="color: #7f7f7f; font-weight: bold"> Footer 1   </span> <span style="color: #7f7f7f; font-weight: bold"> Footer 2  </span>   │<span style="color: #7f7f7f; font-weight: bold"> Footer 1  </span>│<span style="color: #7f7f7f; font-weight: bold"> Footer 2 </span>│
+                                ──────────────────────────  ╰───────────┴──────────╯
+                                                                                    
+                                                                                    
+    <span style="color: #800080">        box.HEAVY         </span>  <span style="color: #800080">      box.HEAVY_EDGE      </span>  <span style="color: #800080">     box.HEAVY_HEAD     </span>
+    ┏━━━━━━━━━━━━┳━━━━━━━━━━━┓  ┏━━━━━━━━━━━━┯━━━━━━━━━━━┓  ┏━━━━━━━━━━━┳━━━━━━━━━━┓
+    ┃<span style="color: #7f7f7f; font-weight: bold"> Header 1   </span>┃<span style="color: #7f7f7f; font-weight: bold"> Header 2  </span>┃  ┃<span style="color: #7f7f7f; font-weight: bold"> Header 1   </span>│<span style="color: #7f7f7f; font-weight: bold"> Header 2  </span>┃  ┃<span style="color: #7f7f7f; font-weight: bold"> Header 1  </span>┃<span style="color: #7f7f7f; font-weight: bold"> Header 2 </span>┃
+    ┣━━━━━━━━━━━━╋━━━━━━━━━━━┫  ┠────────────┼───────────┨  ┡━━━━━━━━━━━╇━━━━━━━━━━┩
+    ┃<span style="color: #7f7f7f"> Cell       </span>┃<span style="color: #7f7f7f"> Cell      </span>┃  ┃<span style="color: #7f7f7f"> Cell       </span>│<span style="color: #7f7f7f"> Cell      </span>┃  │<span style="color: #7f7f7f"> Cell      </span>│<span style="color: #7f7f7f"> Cell     </span>│
+    ┃<span style="color: #7f7f7f"> Cell       </span>┃<span style="color: #7f7f7f"> Cell      </span>┃  ┃<span style="color: #7f7f7f"> Cell       </span>│<span style="color: #7f7f7f"> Cell      </span>┃  │<span style="color: #7f7f7f"> Cell      </span>│<span style="color: #7f7f7f"> Cell     </span>│
+    ┣━━━━━━━━━━━━╋━━━━━━━━━━━┫  ┠────────────┼───────────┨  ├───────────┼──────────┤
+    ┃<span style="color: #7f7f7f; font-weight: bold"> Footer 1   </span>┃<span style="color: #7f7f7f; font-weight: bold"> Footer 2  </span>┃  ┃<span style="color: #7f7f7f; font-weight: bold"> Footer 1   </span>│<span style="color: #7f7f7f; font-weight: bold"> Footer 2  </span>┃  │<span style="color: #7f7f7f; font-weight: bold"> Footer 1  </span>│<span style="color: #7f7f7f; font-weight: bold"> Footer 2 </span>│
+    ┗━━━━━━━━━━━━┻━━━━━━━━━━━┛  ┗━━━━━━━━━━━━┷━━━━━━━━━━━┛  └───────────┴──────────┘
+                                                                                    
+                                                                                    
+    <span style="color: #800080">        box.DOUBLE        </span>  <span style="color: #800080">     box.DOUBLE_EDGE      </span>                          
+    ╔════════════╦═══════════╗  ╔════════════╤═══════════╗                          
+    ║<span style="color: #7f7f7f; font-weight: bold"> Header 1   </span>║<span style="color: #7f7f7f; font-weight: bold"> Header 2  </span>║  ║<span style="color: #7f7f7f; font-weight: bold"> Header 1   </span>│<span style="color: #7f7f7f; font-weight: bold"> Header 2  </span>║                          
+    ╠════════════╬═══════════╣  ╟────────────┼───────────╢                          
+    ║<span style="color: #7f7f7f"> Cell       </span>║<span style="color: #7f7f7f"> Cell      </span>║  ║<span style="color: #7f7f7f"> Cell       </span>│<span style="color: #7f7f7f"> Cell      </span>║                          
+    ║<span style="color: #7f7f7f"> Cell       </span>║<span style="color: #7f7f7f"> Cell      </span>║  ║<span style="color: #7f7f7f"> Cell       </span>│<span style="color: #7f7f7f"> Cell      </span>║                          
+    ╠════════════╬═══════════╣  ╟────────────┼───────────╢                          
+    ║<span style="color: #7f7f7f; font-weight: bold"> Footer 1   </span>║<span style="color: #7f7f7f; font-weight: bold"> Footer 2  </span>║  ║<span style="color: #7f7f7f; font-weight: bold"> Footer 1   </span>│<span style="color: #7f7f7f; font-weight: bold"> Footer 2  </span>║                          
+    ╚════════════╩═══════════╝  ╚════════════╧═══════════╝                          
+    </pre>   
+
+--- colors.rst ---
+.. _appendix-colors:
+
+Standard Colors
+===============
+
+The following is a list of the standard 8-bit colors supported in terminals.
+
+Note that the first 16 colors are generally defined by the system or your terminal software, and may not display exactly as rendered here.
+
+.. raw:: html
+
+        
+            <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace">╔════════════╤════════╤═══════════════════════╤═════════╤══════════════════╗
+    ║<span style="font-weight: bold"> Color      </span>│<span style="font-weight: bold"> Number </span>│<span style="font-weight: bold"> Name                  </span>│<span style="font-weight: bold"> Hex     </span>│<span style="font-weight: bold"> RGB              </span>║
+    ╟────────────┼────────┼───────────────────────┼─────────┼──────────────────╢
+    ║ <span style="background-color: #000000">          </span> │<span style="color: #808000">      0 </span>│<span style="color: #008000"> "black"               </span>│<span style="color: #000080">         </span>│<span style="color: #800080">                  </span>║
+    ║ <span style="background-color: #800000">          </span> │<span style="color: #808000">      1 </span>│<span style="color: #008000"> "red"                 </span>│<span style="color: #000080">         </span>│<span style="color: #800080">                  </span>║
+    ║ <span style="background-color: #008000">          </span> │<span style="color: #808000">      2 </span>│<span style="color: #008000"> "green"               </span>│<span style="color: #000080">         </span>│<span style="color: #800080">                  </span>║
+    ║ <span style="background-color: #808000">          </span> │<span style="color: #808000">      3 </span>│<span style="color: #008000"> "yellow"              </span>│<span style="color: #000080">         </span>│<span style="color: #800080">                  </span>║
+    ║ <span style="background-color: #000080">          </span> │<span style="color: #808000">      4 </span>│<span style="color: #008000"> "blue"                </span>│<span style="color: #000080">         </span>│<span style="color: #800080">                  </span>║
+    ║ <span style="background-color: #800080">          </span> │<span style="color: #808000">      5 </span>│<span style="color: #008000"> "magenta"             </span>│<span style="color: #000080">         </span>│<span style="color: #800080">                  </span>║
+    ║ <span style="background-color: #008080">          </span> │<span style="color: #808000">      6 </span>│<span style="color: #008000"> "cyan"                </span>│<span style="color: #000080">         </span>│<span style="color: #800080">                  </span>║
+    ║ <span style="background-color: #c0c0c0">          </span> │<span style="color: #808000">      7 </span>│<span style="color: #008000"> "white"               </span>│<span style="color: #000080">         </span>│<span style="color: #800080">                  </span>║
+    ║ <span style="background-color: #808080">          </span> │<span style="color: #808000">      8 </span>│<span style="color: #008000"> "bright_black"        </span>│<span style="color: #000080">         </span>│<span style="color: #800080">                  </span>║
+    ║ <span style="background-color: #ff0000">          </span> │<span style="color: #808000">      9 </span>│<span style="color: #008000"> "bright_red"          </span>│<span style="color: #000080">         </span>│<span style="color: #800080">                  </span>║
+    ║ <span style="background-color: #00ff00">          </span> │<span style="color: #808000">     10 </span>│<span style="color: #008000"> "bright_green"        </span>│<span style="color: #000080">         </span>│<span style="color: #800080">                  </span>║
+    ║ <span style="background-color: #ffff00">          </span> │<span style="color: #808000">     11 </span>│<span style="color: #008000"> "bright_yellow"       </span>│<span style="color: #000080">         </span>│<span style="color: #800080">                  </span>║
+    ║ <span style="background-color: #0000ff">          </span> │<span style="color: #808000">     12 </span>│<span style="color: #008000"> "bright_blue"         </span>│<span style="color: #000080">         </span>│<span style="color: #800080">                  </span>║
+    ║ <span style="background-color: #ff00ff">          </span> │<span style="color: #808000">     13 </span>│<span style="color: #008000"> "bright_magenta"      </span>│<span style="color: #000080">         </span>│<span style="color: #800080">                  </span>║
+    ║ <span style="background-color: #00ffff">          </span> │<span style="color: #808000">     14 </span>│<span style="color: #008000"> "bright_cyan"         </span>│<span style="color: #000080">         </span>│<span style="color: #800080">                  </span>║
+    ║ <span style="background-color: #ffffff">          </span> │<span style="color: #808000">     15 </span>│<span style="color: #008000"> "bright_white"        </span>│<span style="color: #000080">         </span>│<span style="color: #800080">                  </span>║
+    ║ <span style="background-color: #000000">          </span> │<span style="color: #808000">     16 </span>│<span style="color: #008000"> "grey0"               </span>│<span style="color: #000080"> #000000 </span>│<span style="color: #800080"> rgb(0,0,0)       </span>║
+    ║ <span style="background-color: #00005f">          </span> │<span style="color: #808000">     17 </span>│<span style="color: #008000"> "navy_blue"           </span>│<span style="color: #000080"> #00005f </span>│<span style="color: #800080"> rgb(0,0,95)      </span>║
+    ║ <span style="background-color: #000087">          </span> │<span style="color: #808000">     18 </span>│<span style="color: #008000"> "dark_blue"           </span>│<span style="color: #000080"> #000087 </span>│<span style="color: #800080"> rgb(0,0,135)     </span>║
+    ║ <span style="background-color: #0000d7">          </span> │<span style="color: #808000">     20 </span>│<span style="color: #008000"> "blue3"               </span>│<span style="color: #000080"> #0000d7 </span>│<span style="color: #800080"> rgb(0,0,215)     </span>║
+    ║ <span style="background-color: #0000ff">          </span> │<span style="color: #808000">     21 </span>│<span style="color: #008000"> "blue1"               </span>│<span style="color: #000080"> #0000ff </span>│<span style="color: #800080"> rgb(0,0,255)     </span>║
+    ║ <span style="background-color: #005f00">          </span> │<span style="color: #808000">     22 </span>│<span style="color: #008000"> "dark_green"          </span>│<span style="color: #000080"> #005f00 </span>│<span style="color: #800080"> rgb(0,95,0)      </span>║
+    ║ <span style="background-color: #005faf">          </span> │<span style="color: #808000">     25 </span>│<span style="color: #008000"> "deep_sky_blue4"      </span>│<span style="color: #000080"> #005faf </span>│<span style="color: #800080"> rgb(0,95,175)    </span>║
+    ║ <span style="background-color: #005fd7">          </span> │<span style="color: #808000">     26 </span>│<span style="color: #008000"> "dodger_blue3"        </span>│<span style="color: #000080"> #005fd7 </span>│<span style="color: #800080"> rgb(0,95,215)    </span>║
+    ║ <span style="background-color: #005fff">          </span> │<span style="color: #808000">     27 </span>│<span style="color: #008000"> "dodger_blue2"        </span>│<span style="color: #000080"> #005fff </span>│<span style="color: #800080"> rgb(0,95,255)    </span>║
+    ║ <span style="background-color: #008700">          </span> │<span style="color: #808000">     28 </span>│<span style="color: #008000"> "green4"              </span>│<span style="color: #000080"> #008700 </span>│<span style="color: #800080"> rgb(0,135,0)     </span>║
+    ║ <span style="background-color: #00875f">          </span> │<span style="color: #808000">     29 </span>│<span style="color: #008000"> "spring_green4"       </span>│<span style="color: #000080"> #00875f </span>│<span style="color: #800080"> rgb(0,135,95)    </span>║
+    ║ <span style="background-color: #008787">          </span> │<span style="color: #808000">     30 </span>│<span style="color: #008000"> "turquoise4"          </span>│<span style="color: #000080"> #008787 </span>│<span style="color: #800080"> rgb(0,135,135)   </span>║
+    ║ <span style="background-color: #0087d7">          </span> │<span style="color: #808000">     32 </span>│<span style="color: #008000"> "deep_sky_blue3"      </span>│<span style="color: #000080"> #0087d7 </span>│<span style="color: #800080"> rgb(0,135,215)   </span>║
+    ║ <span style="background-color: #0087ff">          </span> │<span style="color: #808000">     33 </span>│<span style="color: #008000"> "dodger_blue1"        </span>│<span style="color: #000080"> #0087ff </span>│<span style="color: #800080"> rgb(0,135,255)   </span>║
+    ║ <span style="background-color: #00af87">          </span> │<span style="color: #808000">     36 </span>│<span style="color: #008000"> "dark_cyan"           </span>│<span style="color: #000080"> #00af87 </span>│<span style="color: #800080"> rgb(0,175,135)   </span>║
+    ║ <span style="background-color: #00afaf">          </span> │<span style="color: #808000">     37 </span>│<span style="color: #008000"> "light_sea_green"     </span>│<span style="color: #000080"> #00afaf </span>│<span style="color: #800080"> rgb(0,175,175)   </span>║
+    ║ <span style="background-color: #00afd7">          </span> │<span style="color: #808000">     38 </span>│<span style="color: #008000"> "deep_sky_blue2"      </span>│<span style="color: #000080"> #00afd7 </span>│<span style="color: #800080"> rgb(0,175,215)   </span>║
+    ║ <span style="background-color: #00afff">          </span> │<span style="color: #808000">     39 </span>│<span style="color: #008000"> "deep_sky_blue1"      </span>│<span style="color: #000080"> #00afff </span>│<span style="color: #800080"> rgb(0,175,255)   </span>║
+    ║ <span style="background-color: #00d700">          </span> │<span style="color: #808000">     40 </span>│<span style="color: #008000"> "green3"              </span>│<span style="color: #000080"> #00d700 </span>│<span style="color: #800080"> rgb(0,215,0)     </span>║
+    ║ <span style="background-color: #00d75f">          </span> │<span style="color: #808000">     41 </span>│<span style="color: #008000"> "spring_green3"       </span>│<span style="color: #000080"> #00d75f </span>│<span style="color: #800080"> rgb(0,215,95)    </span>║
+    ║ <span style="background-color: #00d7af">          </span> │<span style="color: #808000">     43 </span>│<span style="color: #008000"> "cyan3"               </span>│<span style="color: #000080"> #00d7af </span>│<span style="color: #800080"> rgb(0,215,175)   </span>║
+    ║ <span style="background-color: #00d7d7">          </span> │<span style="color: #808000">     44 </span>│<span style="color: #008000"> "dark_turquoise"      </span>│<span style="color: #000080"> #00d7d7 </span>│<span style="color: #800080"> rgb(0,215,215)   </span>║
+    ║ <span style="background-color: #00d7ff">          </span> │<span style="color: #808000">     45 </span>│<span style="color: #008000"> "turquoise2"          </span>│<span style="color: #000080"> #00d7ff </span>│<span style="color: #800080"> rgb(0,215,255)   </span>║
+    ║ <span style="background-color: #00ff00">          </span> │<span style="color: #808000">     46 </span>│<span style="color: #008000"> "green1"              </span>│<span style="color: #000080"> #00ff00 </span>│<span style="color: #800080"> rgb(0,255,0)     </span>║
+    ║ <span style="background-color: #00ff5f">          </span> │<span style="color: #808000">     47 </span>│<span style="color: #008000"> "spring_green2"       </span>│<span style="color: #000080"> #00ff5f </span>│<span style="color: #800080"> rgb(0,255,95)    </span>║
+    ║ <span style="background-color: #00ff87">          </span> │<span style="color: #808000">     48 </span>│<span style="color: #008000"> "spring_green1"       </span>│<span style="color: #000080"> #00ff87 </span>│<span style="color: #800080"> rgb(0,255,135)   </span>║
+    ║ <span style="background-color: #00ffaf">          </span> │<span style="color: #808000">     49 </span>│<span style="color: #008000"> "medium_spring_green" </span>│<span style="color: #000080"> #00ffaf </span>│<span style="color: #800080"> rgb(0,255,175)   </span>║
+    ║ <span style="background-color: #00ffd7">          </span> │<span style="color: #808000">     50 </span>│<span style="color: #008000"> "cyan2"               </span>│<span style="color: #000080"> #00ffd7 </span>│<span style="color: #800080"> rgb(0,255,215)   </span>║
+    ║ <span style="background-color: #00ffff">          </span> │<span style="color: #808000">     51 </span>│<span style="color: #008000"> "cyan1"               </span>│<span style="color: #000080"> #00ffff </span>│<span style="color: #800080"> rgb(0,255,255)   </span>║
+    ║ <span style="background-color: #5f00af">          </span> │<span style="color: #808000">     55 </span>│<span style="color: #008000"> "purple4"             </span>│<span style="color: #000080"> #5f00af </span>│<span style="color: #800080"> rgb(95,0,175)    </span>║
+    ║ <span style="background-color: #5f00d7">          </span> │<span style="color: #808000">     56 </span>│<span style="color: #008000"> "purple3"             </span>│<span style="color: #000080"> #5f00d7 </span>│<span style="color: #800080"> rgb(95,0,215)    </span>║
+    ║ <span style="background-color: #5f00ff">          </span> │<span style="color: #808000">     57 </span>│<span style="color: #008000"> "blue_violet"         </span>│<span style="color: #000080"> #5f00ff </span>│<span style="color: #800080"> rgb(95,0,255)    </span>║
+    ║ <span style="background-color: #5f5f5f">          </span> │<span style="color: #808000">     59 </span>│<span style="color: #008000"> "grey37"              </span>│<span style="color: #000080"> #5f5f5f </span>│<span style="color: #800080"> rgb(95,95,95)    </span>║
+    ║ <span style="background-color: #5f5f87">          </span> │<span style="color: #808000">     60 </span>│<span style="color: #008000"> "medium_purple4"      </span>│<span style="color: #000080"> #5f5f87 </span>│<span style="color: #800080"> rgb(95,95,135)   </span>║
+    ║ <span style="background-color: #5f5fd7">          </span> │<span style="color: #808000">     62 </span>│<span style="color: #008000"> "slate_blue3"         </span>│<span style="color: #000080"> #5f5fd7 </span>│<span style="color: #800080"> rgb(95,95,215)   </span>║
+    ║ <span style="background-color: #5f5fff">          </span> │<span style="color: #808000">     63 </span>│<span style="color: #008000"> "royal_blue1"         </span>│<span style="color: #000080"> #5f5fff </span>│<span style="color: #800080"> rgb(95,95,255)   </span>║
+    ║ <span style="background-color: #5f8700">          </span> │<span style="color: #808000">     64 </span>│<span style="color: #008000"> "chartreuse4"         </span>│<span style="color: #000080"> #5f8700 </span>│<span style="color: #800080"> rgb(95,135,0)    </span>║
+    ║ <span style="background-color: #5f8787">          </span> │<span style="color: #808000">     66 </span>│<span style="color: #008000"> "pale_turquoise4"     </span>│<span style="color: #000080"> #5f8787 </span>│<span style="color: #800080"> rgb(95,135,135)  </span>║
+    ║ <span style="background-color: #5f87af">          </span> │<span style="color: #808000">     67 </span>│<span style="color: #008000"> "steel_blue"          </span>│<span style="color: #000080"> #5f87af </span>│<span style="color: #800080"> rgb(95,135,175)  </span>║
+    ║ <span style="background-color: #5f87d7">          </span> │<span style="color: #808000">     68 </span>│<span style="color: #008000"> "steel_blue3"         </span>│<span style="color: #000080"> #5f87d7 </span>│<span style="color: #800080"> rgb(95,135,215)  </span>║
+    ║ <span style="background-color: #5f87ff">          </span> │<span style="color: #808000">     69 </span>│<span style="color: #008000"> "cornflower_blue"     </span>│<span style="color: #000080"> #5f87ff </span>│<span style="color: #800080"> rgb(95,135,255)  </span>║
+    ║ <span style="background-color: #5faf5f">          </span> │<span style="color: #808000">     71 </span>│<span style="color: #008000"> "dark_sea_green4"     </span>│<span style="color: #000080"> #5faf5f </span>│<span style="color: #800080"> rgb(95,175,95)   </span>║
+    ║ <span style="background-color: #5fafaf">          </span> │<span style="color: #808000">     73 </span>│<span style="color: #008000"> "cadet_blue"          </span>│<span style="color: #000080"> #5fafaf </span>│<span style="color: #800080"> rgb(95,175,175)  </span>║
+    ║ <span style="background-color: #5fafd7">          </span> │<span style="color: #808000">     74 </span>│<span style="color: #008000"> "sky_blue3"           </span>│<span style="color: #000080"> #5fafd7 </span>│<span style="color: #800080"> rgb(95,175,215)  </span>║
+    ║ <span style="background-color: #5fd700">          </span> │<span style="color: #808000">     76 </span>│<span style="color: #008000"> "chartreuse3"         </span>│<span style="color: #000080"> #5fd700 </span>│<span style="color: #800080"> rgb(95,215,0)    </span>║
+    ║ <span style="background-color: #5fd787">          </span> │<span style="color: #808000">     78 </span>│<span style="color: #008000"> "sea_green3"          </span>│<span style="color: #000080"> #5fd787 </span>│<span style="color: #800080"> rgb(95,215,135)  </span>║
+    ║ <span style="background-color: #5fd7af">          </span> │<span style="color: #808000">     79 </span>│<span style="color: #008000"> "aquamarine3"         </span>│<span style="color: #000080"> #5fd7af </span>│<span style="color: #800080"> rgb(95,215,175)  </span>║
+    ║ <span style="background-color: #5fd7d7">          </span> │<span style="color: #808000">     80 </span>│<span style="color: #008000"> "medium_turquoise"    </span>│<span style="color: #000080"> #5fd7d7 </span>│<span style="color: #800080"> rgb(95,215,215)  </span>║
+    ║ <span style="background-color: #5fd7ff">          </span> │<span style="color: #808000">     81 </span>│<span style="color: #008000"> "steel_blue1"         </span>│<span style="color: #000080"> #5fd7ff </span>│<span style="color: #800080"> rgb(95,215,255)  </span>║
+    ║ <span style="background-color: #5fff5f">          </span> │<span style="color: #808000">     83 </span>│<span style="color: #008000"> "sea_green2"          </span>│<
+
+MANIFESTOS PUBLICOS:
+
+--- pyproject.toml ---
+[tool.poetry]
+name = "rich"
+homepage = "https://github.com/willmcgugan/rich"
+documentation = "https://rich.readthedocs.io/en/latest/"
+version = "9.6.1"
+description = "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal"
+authors = ["Will McGugan <willmcgugan@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",    
+    "Environment :: Console", 
+    "Intended Audience :: Developers",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
+include = ["rich/py.typed"]
+
+
+[tool.poetry.dependencies]
+python = "^3.6"
+typing-extensions = "^3.7.4"
+dataclasses = {version=">=0.7,<0.9", python = "~3.6"} 
+pygments = "^2.6.0"
+commonmark = "^0.9.0"
+colorama = "^0.4.0"
+ipywidgets = {version = "^7.5.1", optional = true}
+
+
+[tool.poetry.extras]
+jupyter = ["ipywidgets"]
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.1"
+black = "^20.8b1"
+mypy = "^0.790"
+pytest-cov = "^2.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+--- setup.py ---
+#!/usr/bin/env python
+
+# This is a shim to hopefully allow Github to detect the package, build is done with poetry
+
+import setuptools
+
+if __name__ == "__main__":
+    setuptools.setup(name="rich")
+
+--- tox.ini ---
+[tox]
+minversion = 3.9.0
+envlist =
+    lint
+    docs
+    py{36,37,38,39}
+isolated_build = True
+
+[testenv]
+description = Run unit-testing
+# develop temporary disabled as project packaging does not work with it yet:
+# https://github.com/willmcgugan/rich/issues/345
+usedevelop = False
+deps =
+    -r requirements-dev.txt
+# do not put * in passenv as it may break builds due to reduced isolation
+passenv =
+    CI
+    GITHUB_*
+    HOME
+    PYTEST_*
+    SSH_AUTH_SOCK
+    TERM
+setenv =
+    PYTHONDONTWRITEBYTECODE=1
+    PYTHONUNBUFFERED=1
+commands =
+    # failsafe as older pip may install incompatible dependencies
+    pip check
+    pytest --cov-report term-missing --cov=rich tests/ {posargs}
+
+[testenv:lint]
+description = Runs all linting tasks
+commands =
+    black .
+    mypy -p rich --ignore-missing-imports --warn-unreachable
+skip_install = true
+
+[testenv:docs]
+description = Builds documentation
+changedir = docs
+deps =
+    -r docs/requirements.txt
+commands =
+    sphinx-build -M html source build
+
+
+ARQUITETURA TEXTUAL INFERIDA:
+PROJETO
+|
++-- Documentacao e configuracao
+|   +-- CHANGELOG.md
+|   +-- CODE_OF_CONDUCT.md
+|   +-- CONTRIBUTING.md
+|   +-- CONTRIBUTORS.md
+|   +-- README.cn.md
+|   +-- README.es.md
+|   +-- README.md
+|   +-- pull_request_template.md
+|   +-- pyproject.toml
+|   +-- setup.py
+|   +-- tox.ini
+|
++-- Modulos/dominios visiveis
+|   +-- .github/
+|   +-- docs/
+|   +-- examples/
+|   +-- rich/
+|   +-- tests/
+|   +-- tools/
+|
++-- Entradas e interfaces descritas no README
+|   +-- configuracao/parametros
+|   +-- processamento principal
+|   +-- saidas/resultados
+|
++-- Testes proprios a serem criados pela IA

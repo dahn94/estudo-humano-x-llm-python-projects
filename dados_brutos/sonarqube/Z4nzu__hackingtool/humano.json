@@ -1,0 +1,875 @@
+{
+  "component": {
+    "key": "human-z4nzu__hackingtool",
+    "name": "Humano - Z4nzu__hackingtool",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "bugs",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "complexity",
+        "value": "127"
+      },
+      {
+        "metric": "code_smells",
+        "value": "15",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_reliability_issues",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "ncloc",
+        "value": "1943"
+      },
+      {
+        "metric": "software_quality_maintainability_issues",
+        "value": "15",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_security_issues",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "security_hotspots",
+        "value": "0",
+        "bestValue": true
+      }
+    ]
+  },
+  "issues_summary": {
+    "issues": [
+      {
+        "key": "38da92bd-b6af-40d2-91dd-e35c45ac1e4d",
+        "rule": "python:S5754",
+        "severity": "CRITICAL",
+        "component": "human-z4nzu__hackingtool:core.py",
+        "project": "human-z4nzu__hackingtool",
+        "line": 27,
+        "hash": "3e264f5fbab10735799511f21ca70842",
+        "textRange": {
+          "startLine": 27,
+          "endLine": 27,
+          "startOffset": 4,
+          "endOffset": 10
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Specify an exception class to catch or reraise the exception",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "error-handling",
+          "bad-practice",
+          "suspicious"
+        ],
+        "creationDate": "2026-09-22T18:36:18+0000",
+        "updateDate": "2026-09-22T18:36:18+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "e074487b-a4a0-4a53-ae31-fad2323df9f4",
+        "rule": "python:S112",
+        "severity": "MAJOR",
+        "component": "human-z4nzu__hackingtool:core.py",
+        "project": "human-z4nzu__hackingtool",
+        "line": 59,
+        "hash": "581477db8ca000655dc35f4766473b4d",
+        "textRange": {
+          "startLine": 59,
+          "endLine": 60,
+          "startOffset": 18,
+          "endOffset": 76
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace this generic exception class with a more specific one.",
+        "effort": "20min",
+        "debt": "20min",
+        "author": "",
+        "tags": [
+          "cwe",
+          "error-handling"
+        ],
+        "creationDate": "2026-09-22T18:36:18+0000",
+        "updateDate": "2026-09-22T18:36:18+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "47253a53-8f87-4ef8-a789-40d401e09156",
+        "rule": "python:S1192",
+        "severity": "CRITICAL",
+        "component": "human-z4nzu__hackingtool:core.py",
+        "project": "human-z4nzu__hackingtool",
+        "line": 74,
+        "hash": "11b8a4f916424fe6becef5319d6a9cbb",
+        "textRange": {
+          "startLine": 74,
+          "endLine": 74,
+          "startOffset": 18,
+          "endOffset": 29
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-z4nzu__hackingtool:core.py",
+                "textRange": {
+                  "startLine": 76,
+                  "endLine": 76,
+                  "startOffset": 18,
+                  "endOffset": 29
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-z4nzu__hackingtool:core.py",
+                "textRange": {
+                  "startLine": 77,
+                  "endLine": 77,
+                  "startOffset": 14,
+                  "endOffset": 25
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-z4nzu__hackingtool:core.py",
+                "textRange": {
+                  "startLine": 165,
+                  "endLine": 165,
+                  "startOffset": 18,
+                  "endOffset": 29
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-z4nzu__hackingtool:core.py",
+                "textRange": {
+                  "startLine": 166,
+                  "endLine": 166,
+                  "startOffset": 14,
+                  "endOffset": 25
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Define a constant instead of duplicating this literal \"[{:2}] {}\" 5 times.",
+        "effort": "10min",
+        "debt": "10min",
+        "author": "",
+        "tags": [
+          "design"
+        ],
+        "creationDate": "2026-09-22T18:36:18+0000",
+        "updateDate": "2026-09-22T18:36:18+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "DISTINCT",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "e31f79b0-7c34-4e2c-8858-f4ad99a2bca7",
+        "rule": "python:S1192",
+        "severity": "CRITICAL",
+        "component": "human-z4nzu__hackingtool:core.py",
+        "project": "human-z4nzu__hackingtool",
+        "line": 85,
+        "hash": "3b1b0563a4c51af43e333d8e7a01d053",
+        "textRange": {
+          "startLine": 85,
+          "endLine": 85,
+          "startOffset": 26,
+          "endOffset": 56
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-z4nzu__hackingtool:core.py",
+                "textRange": {
+                  "startLine": 94,
+                  "endLine": 94,
+                  "startOffset": 18,
+                  "endOffset": 48
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-z4nzu__hackingtool:core.py",
+                "textRange": {
+                  "startLine": 97,
+                  "endLine": 97,
+                  "startOffset": 18,
+                  "endOffset": 48
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-z4nzu__hackingtool:core.py",
+                "textRange": {
+                  "startLine": 174,
+                  "endLine": 174,
+                  "startOffset": 26,
+                  "endOffset": 56
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-z4nzu__hackingtool:core.py",
+                "textRange": {
+                  "startLine": 181,
+                  "endLine": 181,
+                  "startOffset": 18,
+                  "endOffset": 48
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-z4nzu__hackingtool:core.py",
+                "textRange": {
+                  "startLine": 184,
+                  "endLine": 184,
+                  "startOffset": 18,
+                  "endOffset": 48
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Define a constant instead of duplicating this literal \"\\n\\nPress ENTER to continue:\" 6 times.",
+        "effort": "12min",
+        "debt": "12min",
+        "author": "",
+        "tags": [
+          "design"
+        ],
+        "creationDate": "2026-09-22T18:36:18+0000",
+        "updateDate": "2026-09-22T18:36:18+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "DISTINCT",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "0f06d5bf-041e-41f9-abdd-e661da6a8389",
+        "rule": "python:S1186",
+        "severity": "CRITICAL",
+        "component": "human-z4nzu__hackingtool:core.py",
+        "project": "human-z4nzu__hackingtool",
+        "line": 100,
+        "hash": "588e91b5347eeb808863bf669dbd639d",
+        "textRange": {
+          "startLine": 100,
+          "endLine": 100,
+          "startOffset": 8,
+          "endOffset": 22
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Add a nested comment explaining why this method is empty, or complete the implementation.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "suspicious"
+        ],
+        "creationDate": "2026-09-22T18:36:18+0000",
+        "updateDate": "2026-09-22T18:36:18+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "d95d7082-36e9-45cb-bbdd-ff936174d00f",
+        "rule": "python:S117",
+        "severity": "MINOR",
+        "component": "human-z4nzu__hackingtool:core.py",
+        "project": "human-z4nzu__hackingtool",
+        "line": 106,
+        "hash": "35fb1774a84633973fdb489fba60e30b",
+        "textRange": {
+          "startLine": 106,
+          "endLine": 106,
+          "startOffset": 16,
+          "endOffset": 31
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename this local variable \"INSTALL_COMMAND\" to match the regular expression ^[_a-z][a-z0-9_]*$.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "convention"
+        ],
+        "creationDate": "2026-09-22T18:36:18+0000",
+        "updateDate": "2026-09-22T18:36:18+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "IDENTIFIABLE",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "f44dc6ce-2d71-4ab6-8ad4-a3af8e2a30a9",
+        "rule": "python:S117",
+        "severity": "MINOR",
+        "component": "human-z4nzu__hackingtool:core.py",
+        "project": "human-z4nzu__hackingtool",
+        "line": 120,
+        "hash": "af1a5116f08f4d9a345547fc2b0b4de4",
+        "textRange": {
+          "startLine": 120,
+          "endLine": 120,
+          "startOffset": 20,
+          "endOffset": 37
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename this local variable \"UNINSTALL_COMMAND\" to match the regular expression ^[_a-z][a-z0-9_]*$.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "convention"
+        ],
+        "creationDate": "2026-09-22T18:36:18+0000",
+        "updateDate": "2026-09-22T18:36:18+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "IDENTIFIABLE",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "d098b678-e178-43ac-b1c3-6d06959e2134",
+        "rule": "python:S1186",
+        "severity": "CRITICAL",
+        "component": "human-z4nzu__hackingtool:core.py",
+        "project": "human-z4nzu__hackingtool",
+        "line": 124,
+        "hash": "1d4782cd0db9c726033fc6d884d16b9f",
+        "textRange": {
+          "startLine": 124,
+          "endLine": 124,
+          "startOffset": 8,
+          "endOffset": 23
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Add a nested comment explaining why this method is empty, or complete the implementation.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "suspicious"
+        ],
+        "creationDate": "2026-09-22T18:36:18+0000",
+        "updateDate": "2026-09-22T18:36:18+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "947001ef-39b0-49de-9db9-c2d01581ebcc",
+        "rule": "python:S1186",
+        "severity": "CRITICAL",
+        "component": "human-z4nzu__hackingtool:core.py",
+        "project": "human-z4nzu__hackingtool",
+        "line": 127,
+        "hash": "46c65f526af9863ae425095e5d59825c",
+        "textRange": {
+          "startLine": 127,
+          "endLine": 127,
+          "startOffset": 8,
+          "endOffset": 18
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Add a nested comment explaining why this method is empty, or complete the implementation.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "suspicious"
+        ],
+        "creationDate": "2026-09-22T18:36:18+0000",
+        "updateDate": "2026-09-22T18:36:18+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "a3f2b983-0fee-4b87-a7f7-f15677b6b305",
+        "rule": "python:S117",
+        "severity": "MINOR",
+        "component": "human-z4nzu__hackingtool:core.py",
+        "project": "human-z4nzu__hackingtool",
+        "line": 133,
+        "hash": "2f228737753099b81f211d8de52d2957",
+        "textRange": {
+          "startLine": 133,
+          "endLine": 133,
+          "startOffset": 16,
+          "endOffset": 27
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename this local variable \"RUN_COMMAND\" to match the regular expression ^[_a-z][a-z0-9_]*$.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "convention"
+        ],
+        "creationDate": "2026-09-22T18:36:18+0000",
+        "updateDate": "2026-09-22T18:36:18+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "IDENTIFIABLE",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "38f0c205-d544-4682-b2c7-b0c1bccd33bd",
+        "rule": "python:S1186",
+        "severity": "CRITICAL",
+        "component": "human-z4nzu__hackingtool:core.py",
+        "project": "human-z4nzu__hackingtool",
+        "line": 137,
+        "hash": "9a6bec1ac611434f94846c0f85e4e51d",
+        "textRange": {
+          "startLine": 137,
+          "endLine": 137,
+          "startOffset": 8,
+          "endOffset": 17
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Add a nested comment explaining why this method is empty, or complete the implementation.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "suspicious"
+        ],
+        "creationDate": "2026-09-22T18:36:18+0000",
+        "updateDate": "2026-09-22T18:36:18+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "09c4c142-f717-4450-9d83-fd9da0b844ac",
+        "rule": "python:S1172",
+        "severity": "MAJOR",
+        "component": "human-z4nzu__hackingtool:core.py",
+        "project": "human-z4nzu__hackingtool",
+        "line": 140,
+        "hash": "709e10792bc8c723801e271780781e3d",
+        "textRange": {
+          "startLine": 140,
+          "endLine": 140,
+          "startOffset": 27,
+          "endOffset": 46
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused function parameter \"dir_to_check\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:36:18+0000",
+        "updateDate": "2026-09-22T18:36:18+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "3d0d4170-f63f-42b3-bcb6-5fd58637dbe4",
+        "rule": "python:S125",
+        "severity": "MAJOR",
+        "component": "human-z4nzu__hackingtool:core.py",
+        "project": "human-z4nzu__hackingtool",
+        "line": 158,
+        "hash": "81925de093dee92c6b6d585d9d443d11",
+        "textRange": {
+          "startLine": 158,
+          "endLine": 158,
+          "startOffset": 8,
+          "endOffset": 71
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this commented out code.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:36:18+0000",
+        "updateDate": "2026-09-22T18:36:18+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "3744a53d-50b6-4bd7-8c62-aad5f3d26aae",
+        "rule": "python:S1481",
+        "severity": "MINOR",
+        "component": "human-z4nzu__hackingtool:core.py",
+        "project": "human-z4nzu__hackingtool",
+        "line": 182,
+        "hash": "5e11fcffc5ca1f600d0bf53d38f19ae7",
+        "textRange": {
+          "startLine": 182,
+          "endLine": 182,
+          "startOffset": 28,
+          "endOffset": 29
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused local variable \"e\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:36:18+0000",
+        "updateDate": "2026-09-22T18:36:18+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "c58ea8ef-04be-4a00-8d69-6559cf5b0cc9",
+        "rule": "python:S5799",
+        "severity": "MAJOR",
+        "component": "human-z4nzu__hackingtool:hackingtool.py",
+        "project": "human-z4nzu__hackingtool",
+        "line": 114,
+        "hash": "093ad7d8e8f2dd1a1f4b6dfd4fa6755d",
+        "textRange": {
+          "startLine": 114,
+          "endLine": 114,
+          "startOffset": 16,
+          "endOffset": 81
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-z4nzu__hackingtool:hackingtool.py",
+                "textRange": {
+                  "startLine": 114,
+                  "endLine": 114,
+                  "startOffset": 82,
+                  "endOffset": 90
+                },
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Merge these implicitly concatenated strings; or did you forget a comma?",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "confusing",
+          "suspicious"
+        ],
+        "creationDate": "2026-09-22T18:36:18+0000",
+        "updateDate": "2026-09-22T18:36:18+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      }
+    ],
+    "paging": {
+      "total": 15
+    }
+  }
+}

@@ -1,0 +1,115 @@
+21:38:21.634 INFO  Scanner configuration file: /mnt/c/Users/felipe.fidelis/OneDrive - Vision Cybersecurity/Área de Trabalho/trabalho mestrado/python_prellm_pipeline/pipeline_interno/tools/sonar-scanner/conf/sonar-scanner.properties
+21:38:21.642 INFO  Project root configuration file: NONE
+21:38:21.657 INFO  SonarScanner CLI 8.0.1.6346
+21:38:21.663 INFO  Linux 6.18.33.2-microsoft-standard-WSL2 amd64
+21:38:22.904 INFO  Communicating with SonarQube Community Build 26.9.0.129388
+21:38:22.906 INFO  JRE provisioning is disabled
+21:38:22.907 INFO  The java executable in the PATH will be used
+21:38:23.064 INFO  SONAR_SCANNER_JAVA_OPTS=-Xms256m -Xmx2048m
+21:38:23.409 INFO  Starting SonarScanner Engine...
+21:38:23.411 INFO  Java 21.0.12 Ubuntu (64-bit)
+21:38:24.747 INFO  Load global settings
+21:38:24.843 INFO  Load global settings (done) | time=95ms
+21:38:24.847 INFO  Server id: 147B411E-AaCHMJYtDFq3q1fqGHiY
+21:38:24.859 INFO  Loading required plugins
+21:38:24.861 INFO  Load plugins index
+21:38:24.905 INFO  Load plugins index (done) | time=46ms
+21:38:24.907 INFO  Load/download plugins
+21:38:24.934 INFO  Load/download plugins (done) | time=28ms
+21:38:25.200 INFO  Process project properties
+21:38:25.216 INFO  Process project properties (done) | time=15ms
+21:38:25.226 INFO  Project key: human-keras-team__keras
+21:38:25.227 INFO  Base dir: /home/felipefidelis/prellm_keras_team__keras_QvAe
+21:38:25.231 INFO  Working dir: /home/felipefidelis/prellm_keras_team__keras_QvAe/.scannerwork
+21:38:25.236 INFO  Load project settings for component key: 'human-keras-team__keras'
+21:38:25.266 INFO  Load quality profiles
+21:38:25.339 INFO  Load quality profiles (done) | time=73ms
+21:38:25.373 WARN  SCM provider autodetection failed. Please use "sonar.scm.provider" to define SCM of your project, or disable the SCM Sensor in the project settings.
+21:38:25.387 INFO  Load active rules
+21:38:25.706 INFO  Load active rules (done) | time=320ms
+21:38:25.712 INFO  Load analysis cache
+21:38:25.720 INFO  Load analysis cache (404) | time=7ms
+21:38:25.810 INFO  Preprocessing files...
+21:38:25.978 INFO  1 language detected in 476 preprocessed files (done) | time=167ms
+21:38:25.980 INFO  0 files ignored because of inclusion/exclusion patterns
+21:38:25.981 INFO  Loading plugins for detected languages
+21:38:25.983 INFO  Load/download plugins
+21:38:25.990 INFO  Load/download plugins (done) | time=7ms
+21:38:26.158 INFO  Load project repositories
+21:38:26.173 INFO  Load project repositories (done) | time=12ms
+21:38:26.196 INFO  Indexing files...
+21:38:26.198 INFO  Project configuration:
+21:38:26.199 INFO    Included sources: **/*.py
+21:38:26.201 INFO    Excluded sources: **/.git/**, **/.venv/**, **/venv/**, **/vendor/**, **/vendors/**, **/third_party/**, **/node_modules/**, **/build/**, **/dist/**
+21:38:26.234 INFO  476 files indexed (done) | time=37ms
+21:38:26.235 INFO  Quality profile for py: Sonar way
+21:38:26.237 INFO  ------------- Run sensors on module Humano - keras-team__keras
+21:38:26.279 INFO  Load metrics repository
+21:38:26.309 INFO  Load metrics repository (done) | time=29ms
+21:38:26.944 INFO  Sensor IaC YAML File Type Classification Sensor [iac]
+21:38:26.952 INFO  Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=8ms
+21:38:26.954 INFO  Sensor IaC hadolint report Sensor [iac]
+21:38:26.955 INFO  Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+21:38:26.957 INFO  Sensor Java Config Sensor [iac]
+21:38:26.958 INFO  There are no files to be analyzed for the Java language
+21:38:26.961 INFO  Sensor Java Config Sensor [iac] (done) | time=0ms
+21:38:26.961 INFO  Sensor IaC Docker Sensor [iac]
+21:38:26.968 INFO  There are no files to be analyzed for the Docker language
+21:38:26.970 INFO  Sensor IaC Docker Sensor [iac] (done) | time=14ms
+21:38:26.971 INFO  Sensor Python Sensor [python]
+21:38:27.329 INFO  Starting global symbols computation
+21:38:27.332 INFO  476 source files to be analyzed
+21:38:34.416 INFO  476/476 source files have been analyzed
+21:38:34.418 INFO  Finished step global symbols computation in 7086ms
+21:38:34.602 INFO  Starting rules execution
+21:38:34.604 INFO  476 source files to be analyzed
+21:38:34.626 WARN  Test files were detected using a path heuristic because "sonar.tests" is not set. To improve the analysis accuracy, it is recommended to configure it, e.g.: "sonar.tests=src/test".
+21:38:44.611 INFO  239/476 files analyzed, current files: backend.py, training_test.py, base_layer_v1.py, ...
+21:38:51.233 INFO  476/476 source files have been analyzed
+21:38:51.235 INFO  Finished step rules execution in 16631ms
+21:38:51.236 INFO  The Python analyzer was able to leverage cached data from previous analyses for 0 out of 476 files. These files were not parsed.
+21:38:51.237 INFO  Sensor Python Sensor [python] (done) | time=24268ms
+21:38:51.237 INFO  Sensor Cobertura Sensor for Python coverage [python]
+21:38:51.254 INFO  Sensor Cobertura Sensor for Python coverage [python] (done) | time=16ms
+21:38:51.255 INFO  Sensor PythonXUnitSensor [python]
+21:38:51.265 INFO  Sensor PythonXUnitSensor [python] (done) | time=11ms
+21:38:51.266 INFO  Sensor Python Dependency Sensor [python]
+21:38:51.269 INFO  Sensor Python Dependency Sensor [python] (done) | time=3ms
+21:38:51.270 INFO  Sensor TextAndSecretsSensor [text]
+21:38:51.295 INFO  Available processors: 8
+21:38:51.296 INFO  Using 8 threads for analysis.
+21:38:51.548 INFO  The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test", "tests", "mock" or "mocks"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+21:38:51.574 INFO  Start fetching files for the text and secrets analysis
+21:38:51.591 INFO  Using Git CLI to retrieve dirty files
+21:38:51.594 WARN  Retrieving only language associated files, make sure to run the analysis inside a git repository to make use of inclusions specified via "sonar.text.inclusions"
+21:38:51.596 INFO  Starting the text and secrets analysis
+21:38:51.597 INFO  476 source files to be analyzed for the text and secrets analysis
+21:38:51.892 INFO  476/476 source files have been analyzed for the text and secrets analysis
+21:38:51.896 INFO  Skipped 246 file(s) in the secrets analysis due to automatic test file detection
+21:38:51.898 INFO  Sensor TextAndSecretsSensor [text] (done) | time=625ms
+21:38:51.899 INFO  ------------- Run sensors on project
+21:38:52.040 INFO  Sensor IaC Project Sensor [iac]
+21:38:52.043 INFO  Sensor IaC Project Sensor [iac] (done) | time=1ms
+21:38:52.044 INFO  Sensor Zero Coverage Sensor
+21:38:52.116 INFO  Sensor Zero Coverage Sensor (done) | time=74ms
+21:38:52.117 INFO  ------------- Gather SCA dependencies on project
+21:38:52.120 INFO  Dependency analysis skipped
+21:38:52.123 INFO  SCM Publisher No SCM system was detected. You can use the 'sonar.scm.provider' property to explicitly specify it.
+21:38:52.242 INFO  CPD Executor 16 files had no CPD blocks
+21:38:52.243 INFO  CPD Executor Calculating CPD for 460 files
+21:38:52.521 INFO  CPD Executor CPD calculation finished (done) | time=278ms
+21:38:52.862 INFO  Analysis report generated in 319ms, dir size=22.7 MB
+21:38:53.653 INFO  Analysis report compressed in 790ms, zip size=11.8 MB
+21:38:54.092 INFO  Analysis report uploaded in 440ms
+21:38:54.096 INFO  ANALYSIS SUCCESSFUL, you can find the results at: http://localhost:9000/dashboard?id=human-keras-team__keras
+21:38:54.097 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+21:38:54.098 INFO  More about the report processing at http://localhost:9000/api/ce/task?id=3a7a5ff8-d8a8-4610-aabf-6c07033b2c3e
+21:38:54.146 INFO  Analysis total time: 29.175 s
+21:38:54.176 INFO  SonarScanner Engine completed successfully
+21:38:54.226 INFO  EXECUTION SUCCESS
+21:38:54.227 INFO  Total time: 32.604s

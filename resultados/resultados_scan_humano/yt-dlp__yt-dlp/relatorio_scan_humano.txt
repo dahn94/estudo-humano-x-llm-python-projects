@@ -1,0 +1,110 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 2 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: yt-dlp/yt-dlp
+####################################################################################################
+Repositorio: https://github.com/yt-dlp/yt-dlp
+Commit analisado: 2d30509fc893f58cac77c25134a246ed9d76e7ed
+Link do commit: https://github.com/yt-dlp/yt-dlp/commit/2d30509fc893f58cac77c25134a246ed9d76e7ed
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 135361
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 6
+  ERROR: 6
+  WARNING: 0
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 0
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 0
+  Security hotspots: 0
+  Complexidade: 14568
+  Linhas analisadas pelo SonarQube: 128921
+  Severidades: nenhuma
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: devscripts/make_issue_template.py
+Linha: 20
+Link do codigo: https://github.com/yt-dlp/yt-dlp/blob/2d30509fc893f58cac77c25134a246ed9d76e7ed/devscripts/make_issue_template.py#L20
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 2]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: pyinst.py
+Linha: 12
+Link do codigo: https://github.com/yt-dlp/yt-dlp/blob/2d30509fc893f58cac77c25134a246ed9d76e7ed/pyinst.py#L12
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 3]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: pyinst32.py
+Linha: 12
+Link do codigo: https://github.com/yt-dlp/yt-dlp/blob/2d30509fc893f58cac77c25134a246ed9d76e7ed/pyinst32.py#L12
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 4]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: scripts/update-version-workflow.py
+Linha: 8
+Link do codigo: https://github.com/yt-dlp/yt-dlp/blob/2d30509fc893f58cac77c25134a246ed9d76e7ed/scripts/update-version-workflow.py#L8
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 5]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-exec
+CWE: nao informada
+Arquivo: setup.py
+Linha: 11
+Link do codigo: https://github.com/yt-dlp/yt-dlp/blob/2d30509fc893f58cac77c25134a246ed9d76e7ed/setup.py#L11
+Descricao: Uso de exec pode permitir execução de código não confiável.
+
+[SEMGREP 6]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: youtube_dlc/postprocessor/execafterdownload.py
+Linha: 26
+Link do codigo: https://github.com/yt-dlp/yt-dlp/blob/2d30509fc893f58cac77c25134a246ed9d76e7ed/youtube_dlc/postprocessor/execafterdownload.py#L26
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE yt-dlp/yt-dlp
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

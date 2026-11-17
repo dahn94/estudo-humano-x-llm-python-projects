@@ -1,0 +1,58 @@
+{
+  "component": {
+    "key": "human-ray-project__ray",
+    "name": "Humano - ray-project__ray",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "bugs",
+        "value": "117",
+        "bestValue": false
+      },
+      {
+        "metric": "complexity",
+        "value": "24919"
+      },
+      {
+        "metric": "code_smells",
+        "value": "2069",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_reliability_issues",
+        "value": "233",
+        "bestValue": false
+      },
+      {
+        "metric": "ncloc",
+        "value": "149978"
+      },
+      {
+        "metric": "software_quality_maintainability_issues",
+        "value": "2024",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_security_issues",
+        "value": "149",
+        "bestValue": false
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "139",
+        "bestValue": false
+      },
+      {
+        "metric": "security_hotspots",
+        "value": "0",
+        "bestValue": true
+      }
+    ]
+  },
+  "issues_summary": {
+    "issues": [],
+    "paging": {
+      "total": 0
+    }
+  }
+}

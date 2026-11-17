@@ -1,0 +1,1 @@
+Coloque aqui o projeto gemini gerado com prompts/odoo__odoo/prompt_recriacao.txt.

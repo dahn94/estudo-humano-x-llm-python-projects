@@ -1,0 +1,1 @@
+Coloque aqui o projeto openai gerado com prompts/OpenBB-finance__OpenBB/prompt_recriacao.txt.

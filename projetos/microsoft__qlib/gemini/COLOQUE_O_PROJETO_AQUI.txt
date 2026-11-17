@@ -1,0 +1,1 @@
+Coloque aqui o projeto gemini gerado com prompts/microsoft__qlib/prompt_recriacao.txt.

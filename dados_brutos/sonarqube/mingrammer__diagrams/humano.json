@@ -1,0 +1,681 @@
+{
+  "component": {
+    "key": "human-mingrammer__diagrams",
+    "name": "Humano - mingrammer__diagrams",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "bugs",
+        "value": "2",
+        "bestValue": false
+      },
+      {
+        "metric": "complexity",
+        "value": "207"
+      },
+      {
+        "metric": "code_smells",
+        "value": "10",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_reliability_issues",
+        "value": "2",
+        "bestValue": false
+      },
+      {
+        "metric": "ncloc",
+        "value": "4509"
+      },
+      {
+        "metric": "software_quality_maintainability_issues",
+        "value": "10",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_security_issues",
+        "value": "1",
+        "bestValue": false
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "1",
+        "bestValue": false
+      },
+      {
+        "metric": "security_hotspots",
+        "value": "0",
+        "bestValue": true
+      }
+    ]
+  },
+  "issues_summary": {
+    "issues": [
+      {
+        "key": "64006efb-4a79-4ebf-b6ef-7a4765e128cc",
+        "rule": "python:S1135",
+        "severity": "INFO",
+        "component": "human-mingrammer__diagrams:config.py",
+        "project": "human-mingrammer__diagrams",
+        "line": 90,
+        "hash": "46d292be484653745fe74aad8cde9378",
+        "textRange": {
+          "startLine": 90,
+          "endLine": 90,
+          "startOffset": 0,
+          "endOffset": 37
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Complete the task associated to this \"TODO\" comment.",
+        "effort": "0min",
+        "debt": "0min",
+        "author": "",
+        "tags": [
+          "cwe"
+        ],
+        "creationDate": "2026-09-22T19:08:16+0000",
+        "updateDate": "2026-09-22T19:08:16+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "INFO"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "6b209286-4f11-4b32-96ad-57c9aaee15fb",
+        "rule": "python:S1135",
+        "severity": "INFO",
+        "component": "human-mingrammer__diagrams:diagrams/__init__.py",
+        "project": "human-mingrammer__diagrams",
+        "line": 63,
+        "hash": "2414927c3a2f260c2e39c21c25ec9ff0",
+        "textRange": {
+          "startLine": 63,
+          "endLine": 63,
+          "startOffset": 8,
+          "endOffset": 80
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Complete the task associated to this \"TODO\" comment.",
+        "effort": "0min",
+        "debt": "0min",
+        "author": "",
+        "tags": [
+          "cwe"
+        ],
+        "creationDate": "2026-09-22T19:08:16+0000",
+        "updateDate": "2026-09-22T19:08:16+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "INFO"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "2aa40eff-be78-4478-a55e-891c2f1eb19e",
+        "rule": "python:S1135",
+        "severity": "INFO",
+        "component": "human-mingrammer__diagrams:diagrams/__init__.py",
+        "project": "human-mingrammer__diagrams",
+        "line": 77,
+        "hash": "7f022207b62ae15595954398dbcc3b33",
+        "textRange": {
+          "startLine": 77,
+          "endLine": 77,
+          "startOffset": 4,
+          "endOffset": 33
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Complete the task associated to this \"TODO\" comment.",
+        "effort": "0min",
+        "debt": "0min",
+        "author": "",
+        "tags": [
+          "cwe"
+        ],
+        "creationDate": "2026-09-22T19:08:16+0000",
+        "updateDate": "2026-09-22T19:08:16+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "INFO"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "99a517f7-4b1d-4649-974a-475a6b43bba8",
+        "rule": "python:S1135",
+        "severity": "INFO",
+        "component": "human-mingrammer__diagrams:diagrams/__init__.py",
+        "project": "human-mingrammer__diagrams",
+        "line": 78,
+        "hash": "388473362270dfb3c26a71f8519e0cae",
+        "textRange": {
+          "startLine": 78,
+          "endLine": 78,
+          "startOffset": 4,
+          "endOffset": 57
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Complete the task associated to this \"TODO\" comment.",
+        "effort": "0min",
+        "debt": "0min",
+        "author": "",
+        "tags": [
+          "cwe"
+        ],
+        "creationDate": "2026-09-22T19:08:16+0000",
+        "updateDate": "2026-09-22T19:08:16+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "INFO"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "c3283485-6254-4548-a04d-bde687148bae",
+        "rule": "python:S1134",
+        "severity": "MAJOR",
+        "component": "human-mingrammer__diagrams:diagrams/__init__.py",
+        "project": "human-mingrammer__diagrams",
+        "line": 210,
+        "hash": "40c1bf7864990144ad2a14deed8821c6",
+        "textRange": {
+          "startLine": 210,
+          "endLine": 210,
+          "startOffset": 4,
+          "endOffset": 12
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Take the required action to fix the issue indicated by this \"FIXME\" comment.",
+        "effort": "0min",
+        "debt": "0min",
+        "author": "",
+        "tags": [
+          "cwe"
+        ],
+        "creationDate": "2026-09-22T19:08:16+0000",
+        "updateDate": "2026-09-22T19:08:16+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "956e36d0-4dd7-4c8a-8024-0ca9497cd919",
+        "rule": "python:S1135",
+        "severity": "INFO",
+        "component": "human-mingrammer__diagrams:diagrams/__init__.py",
+        "project": "human-mingrammer__diagrams",
+        "line": 396,
+        "hash": "8c45b2b1e0b2dede92ef6fecf21ac7e1",
+        "textRange": {
+          "startLine": 396,
+          "endLine": 396,
+          "startOffset": 4,
+          "endOffset": 69
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Complete the task associated to this \"TODO\" comment.",
+        "effort": "0min",
+        "debt": "0min",
+        "author": "",
+        "tags": [
+          "cwe"
+        ],
+        "creationDate": "2026-09-22T19:08:16+0000",
+        "updateDate": "2026-09-22T19:08:16+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "INFO"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "c0f39886-1f66-4804-a4b2-4982d8882563",
+        "rule": "python:S3984",
+        "severity": "MAJOR",
+        "component": "human-mingrammer__diagrams:diagrams/__init__.py",
+        "project": "human-mingrammer__diagrams",
+        "line": 405,
+        "hash": "8ee44d10d92577dad1491386536f75fb",
+        "textRange": {
+          "startLine": 405,
+          "endLine": 405,
+          "startOffset": 12,
+          "endOffset": 53
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Raise this exception or remove this useless statement.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "error-handling"
+        ],
+        "creationDate": "2026-09-22T19:08:16+0000",
+        "updateDate": "2026-09-22T19:08:16+0000",
+        "type": "BUG",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "RELIABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "cfdbef76-8322-4f64-a05f-6cd5a44e500e",
+        "rule": "python:S3984",
+        "severity": "MAJOR",
+        "component": "human-mingrammer__diagrams:diagrams/__init__.py",
+        "project": "human-mingrammer__diagrams",
+        "line": 407,
+        "hash": "2c1d8fb7aaa8415d269f20c3cd933df5",
+        "textRange": {
+          "startLine": 407,
+          "endLine": 407,
+          "startOffset": 12,
+          "endOffset": 53
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Raise this exception or remove this useless statement.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "error-handling"
+        ],
+        "creationDate": "2026-09-22T19:08:16+0000",
+        "updateDate": "2026-09-22T19:08:16+0000",
+        "type": "BUG",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "RELIABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "95909ff8-73ba-42e4-991e-ae71acd04f26",
+        "rule": "python:S5247",
+        "severity": "MAJOR",
+        "component": "human-mingrammer__diagrams:scripts/generate.py",
+        "project": "human-mingrammer__diagrams",
+        "line": 14,
+        "hash": "e460ee096a7fd8bd1b15b6e6d2c44bd8",
+        "textRange": {
+          "startLine": 14,
+          "endLine": 14,
+          "startOffset": 10,
+          "endOffset": 62
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Make sure disabling auto-escaping feature is safe here.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "cwe",
+          "django",
+          "former-hotspot"
+        ],
+        "creationDate": "2026-09-22T19:08:16+0000",
+        "updateDate": "2026-09-22T19:08:16+0000",
+        "type": "VULNERABILITY",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "58ce3da7-5134-4da2-8df2-7a5bc459d423",
+        "rule": "python:S1135",
+        "severity": "INFO",
+        "component": "human-mingrammer__diagrams:scripts/generate.py",
+        "project": "human-mingrammer__diagrams",
+        "line": 31,
+        "hash": "ddaa730b809a9416f5b61454ca43e358",
+        "textRange": {
+          "startLine": 31,
+          "endLine": 31,
+          "startOffset": 4,
+          "endOffset": 51
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Complete the task associated to this \"TODO\" comment.",
+        "effort": "0min",
+        "debt": "0min",
+        "author": "",
+        "tags": [
+          "cwe"
+        ],
+        "creationDate": "2026-09-22T19:08:16+0000",
+        "updateDate": "2026-09-22T19:08:16+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "INFO"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "05ac80ad-e740-4188-9d4e-e4bf10132244",
+        "rule": "python:S1135",
+        "severity": "INFO",
+        "component": "human-mingrammer__diagrams:scripts/generate.py",
+        "project": "human-mingrammer__diagrams",
+        "line": 32,
+        "hash": "07cda1c341b69be746e6796ef10c5c43",
+        "textRange": {
+          "startLine": 32,
+          "endLine": 32,
+          "startOffset": 4,
+          "endOffset": 71
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Complete the task associated to this \"TODO\" comment.",
+        "effort": "0min",
+        "debt": "0min",
+        "author": "",
+        "tags": [
+          "cwe"
+        ],
+        "creationDate": "2026-09-22T19:08:16+0000",
+        "updateDate": "2026-09-22T19:08:16+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "INFO"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "20f02b7b-d210-4f75-9f45-0c899691ad7b",
+        "rule": "python:S1135",
+        "severity": "INFO",
+        "component": "human-mingrammer__diagrams:scripts/generate.py",
+        "project": "human-mingrammer__diagrams",
+        "line": 46,
+        "hash": "1fc9b720f527a29836659d83fca8f0cf",
+        "textRange": {
+          "startLine": 46,
+          "endLine": 46,
+          "startOffset": 4,
+          "endOffset": 18
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Complete the task associated to this \"TODO\" comment.",
+        "effort": "0min",
+        "debt": "0min",
+        "author": "",
+        "tags": [
+          "cwe"
+        ],
+        "creationDate": "2026-09-22T19:08:16+0000",
+        "updateDate": "2026-09-22T19:08:16+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "INFO"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "a40e0951-707b-4acf-b27c-1f44034340f2",
+        "rule": "python:S5778",
+        "severity": "MAJOR",
+        "component": "human-mingrammer__diagrams:tests/test_diagram.py",
+        "project": "human-mingrammer__diagrams",
+        "line": 132,
+        "hash": "19cecabc2f9912df711dbb62788cd88c",
+        "textRange": {
+          "startLine": 132,
+          "endLine": 132,
+          "startOffset": 12,
+          "endOffset": 47
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-mingrammer__diagrams:tests/test_diagram.py",
+                "textRange": {
+                  "startLine": 133,
+                  "endLine": 133,
+                  "startOffset": 21,
+                  "endOffset": 92
+                },
+                "msg": "Invocation possibly throwing an exception.",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-mingrammer__diagrams:tests/test_diagram.py",
+                "textRange": {
+                  "startLine": 133,
+                  "endLine": 133,
+                  "startOffset": 42,
+                  "endOffset": 79
+                },
+                "msg": "Invocation possibly throwing an exception.",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-mingrammer__diagrams:tests/test_diagram.py",
+                "textRange": {
+                  "startLine": 134,
+                  "endLine": 134,
+                  "startOffset": 20,
+                  "endOffset": 42
+                },
+                "msg": "Invocation possibly throwing an exception.",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Refactor this exception test to have only one invocation possibly throwing an exception.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "tests",
+          "pytest",
+          "unittest"
+        ],
+        "creationDate": "2026-09-22T19:08:16+0000",
+        "updateDate": "2026-09-22T19:08:16+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      }
+    ],
+    "paging": {
+      "total": 13
+    }
+  }
+}

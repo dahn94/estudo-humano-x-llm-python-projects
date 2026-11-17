@@ -1,0 +1,1 @@
+Coloque aqui o projeto claude gerado com prompts/huggingface__transformers/prompt_recriacao.txt.

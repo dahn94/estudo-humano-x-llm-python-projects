@@ -1,0 +1,58 @@
+{
+  "component": {
+    "key": "human-textualize__rich",
+    "name": "Humano - Textualize__rich",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "bugs",
+        "value": "6",
+        "bestValue": false
+      },
+      {
+        "metric": "complexity",
+        "value": "2442"
+      },
+      {
+        "metric": "code_smells",
+        "value": "97",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_reliability_issues",
+        "value": "14",
+        "bestValue": false
+      },
+      {
+        "metric": "ncloc",
+        "value": "19890"
+      },
+      {
+        "metric": "software_quality_maintainability_issues",
+        "value": "92",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_security_issues",
+        "value": "13",
+        "bestValue": false
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "13",
+        "bestValue": false
+      },
+      {
+        "metric": "security_hotspots",
+        "value": "0",
+        "bestValue": true
+      }
+    ]
+  },
+  "issues_summary": {
+    "issues": [],
+    "paging": {
+      "total": 0
+    }
+  }
+}

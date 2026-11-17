@@ -1,0 +1,488 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 43 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: ray-project/ray
+####################################################################################################
+Repositorio: https://github.com/ray-project/ray
+Commit analisado: 4ca64549e2dc70a33cc638bfc372ad4f128ff6eb
+Link do commit: https://github.com/ray-project/ray/commit/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 187495
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 48
+  ERROR: 12
+  WARNING: 36
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 0
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 0
+  Security hotspots: 0
+  Complexidade: 24919
+  Linhas analisadas pelo SonarQube: 149978
+  Severidades: nenhuma
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: dashboard/modules/reporter/reporter_agent.py
+Linha: 82
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/dashboard/modules/reporter/reporter_agent.py#L82
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 2]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: python/ray/autoscaler/_private/command_runner.py
+Linha: 174
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/autoscaler/_private/command_runner.py#L174
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 3]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: python/ray/autoscaler/_private/command_runner.py
+Linha: 177
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/autoscaler/_private/command_runner.py#L177
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 4]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: python/ray/autoscaler/_private/command_runner.py
+Linha: 275
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/autoscaler/_private/command_runner.py#L275
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 5]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/exceptions.py
+Linha: 29
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/exceptions.py#L29
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 6]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/function_manager.py
+Linha: 180
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/function_manager.py#L180
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 7]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/function_manager.py
+Linha: 496
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/function_manager.py#L496
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 8]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/import_thread.py
+Linha: 171
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/import_thread.py#L171
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 9]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: python/ray/scripts/scripts.py
+Linha: 1308
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/scripts/scripts.py#L1308
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 10]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/serialization.py
+Linha: 74
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/serialization.py#L74
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 11]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/serialization.py
+Linha: 215
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/serialization.py#L215
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 12]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/serialization.py
+Linha: 217
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/serialization.py#L217
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 13]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/serve/controller.py
+Linha: 178
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/serve/controller.py#L178
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 14]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/serve/controller.py
+Linha: 232
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/serve/controller.py#L232
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 15]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/serve/controller.py
+Linha: 626
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/serve/controller.py#L626
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 16]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/serve/examples/doc/tutorial_deploy.py
+Linha: 47
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/serve/examples/doc/tutorial_deploy.py#L47
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 17]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/serve/examples/doc/tutorial_deploy.py
+Linha: 142
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/serve/examples/doc/tutorial_deploy.py#L142
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 18]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/serve/examples/doc/tutorial_sklearn.py
+Linha: 53
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/serve/examples/doc/tutorial_sklearn.py#L53
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 19]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: python/ray/setup-dev.py
+Linha: 40
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/setup-dev.py#L40
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 20]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: python/ray/tune/automlboard/frontend/view.py
+Linha: 142
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/tune/automlboard/frontend/view.py#L142
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 21]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: python/ray/tune/automlboard/frontend/view.py
+Linha: 152
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/tune/automlboard/frontend/view.py#L152
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 22]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/tune/registry.py
+Linha: 140
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/tune/registry.py#L140
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 23]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/tune/registry.py
+Linha: 142
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/tune/registry.py#L142
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 24]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/tune/suggest/bayesopt.py
+Linha: 365
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/tune/suggest/bayesopt.py#L365
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 25]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/tune/suggest/dragonfly.py
+Linha: 341
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/tune/suggest/dragonfly.py#L341
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 26]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/tune/suggest/hyperopt.py
+Linha: 371
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/tune/suggest/hyperopt.py#L371
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 27]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/tune/suggest/nevergrad.py
+Linha: 284
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/tune/suggest/nevergrad.py#L284
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 28]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/tune/suggest/optuna.py
+Linha: 236
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/tune/suggest/optuna.py#L236
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 29]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/tune/suggest/sigopt.py
+Linha: 273
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/tune/suggest/sigopt.py#L273
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 30]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/tune/suggest/skopt.py
+Linha: 316
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/tune/suggest/skopt.py#L316
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 31]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: python/ray/tune/suggest/variant_generator.py
+Linha: 320
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/tune/suggest/variant_generator.py#L320
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 32]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/tune/suggest/zoopt.py
+Linha: 287
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/tune/suggest/zoopt.py#L287
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 33]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: python/ray/tune/sync_client.py
+Linha: 220
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/tune/sync_client.py#L220
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 34]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: python/ray/tune/sync_client.py
+Linha: 267
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/tune/sync_client.py#L267
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 35]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/tune/trainable.py
+Linha: 310
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/tune/trainable.py#L310
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 36]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/tune/trainable.py
+Linha: 319
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/tune/trainable.py#L319
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 37]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/tune/utils/trainable.py
+Linha: 123
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/tune/utils/trainable.py#L123
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 38]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: python/ray/util/sgd/tf/tf_trainer.py
+Linha: 143
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/python/ray/util/sgd/tf/tf_trainer.py#L143
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 39]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: release/util/get_contributors.py
+Linha: 29
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/release/util/get_contributors.py#L29
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 40]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: rllib/agents/mock.py
+Linha: 54
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/rllib/agents/mock.py#L54
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 41]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: rllib/agents/trainer.py
+Linha: 704
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/rllib/agents/trainer.py#L704
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 42]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: rllib/env/policy_client.py
+Linha: 221
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/rllib/env/policy_client.py#L221
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 43]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: rllib/env/policy_server_input.py
+Linha: 141
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/rllib/env/policy_server_input.py#L141
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 44]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: rllib/evaluation/rollout_worker.py
+Linha: 999
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/rllib/evaluation/rollout_worker.py#L999
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 45]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: rllib/tuned_examples/debug_learning_failure_git_bisect.py
+Linha: 48
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/rllib/tuned_examples/debug_learning_failure_git_bisect.py#L48
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 46]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: rllib/utils/compression.py
+Linha: 50
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/rllib/utils/compression.py#L50
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 47]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: streaming/python/runtime/serialization.py
+Linha: 28
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/streaming/python/runtime/serialization.py#L28
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 48]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: streaming/python/runtime/task.py
+Linha: 142
+Link do codigo: https://github.com/ray-project/ray/blob/4ca64549e2dc70a33cc638bfc372ad4f128ff6eb/streaming/python/runtime/task.py#L142
+Descricao: pickle pode executar código durante a desserialização.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE ray-project/ray
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

@@ -1,0 +1,158 @@
+15:42:45.481 INFO  Scanner configuration file: /mnt/c/Users/felipe.fidelis/OneDrive - Vision Cybersecurity/Área de Trabalho/trabalho mestrado/python_prellm_pipeline/pipeline_interno/tools/sonar-scanner/conf/sonar-scanner.properties
+15:42:45.492 INFO  Project root configuration file: NONE
+15:42:45.531 INFO  SonarScanner CLI 8.0.1.6346
+15:42:45.541 INFO  Linux 6.18.33.2-microsoft-standard-WSL2 amd64
+15:42:47.227 INFO  Communicating with SonarQube Community Build 26.9.0.129388
+15:42:47.231 INFO  JRE provisioning is disabled
+15:42:47.233 INFO  The java executable in the PATH will be used
+15:42:47.416 INFO  SONAR_SCANNER_JAVA_OPTS=-Xms256m -Xmx4096m
+15:42:47.718 INFO  Starting SonarScanner Engine...
+15:42:47.719 INFO  Java 21.0.12 Ubuntu (64-bit)
+15:42:49.053 INFO  Load global settings
+15:42:49.156 INFO  Load global settings (done) | time=100ms
+15:42:49.160 INFO  Server id: 147B411E-AaCHMJYtDFq3q1fqGHiY
+15:42:49.175 INFO  Loading required plugins
+15:42:49.176 INFO  Load plugins index
+15:42:49.195 INFO  Load plugins index (done) | time=20ms
+15:42:49.196 INFO  Load/download plugins
+15:42:49.230 INFO  Load/download plugins (done) | time=35ms
+15:42:49.589 INFO  Process project properties
+15:42:49.607 INFO  Process project properties (done) | time=18ms
+15:42:49.619 INFO  Project key: human-ansible__ansible
+15:42:49.621 INFO  Base dir: /home/felipefidelis/prellm_ansible__ansible_17jh
+15:42:49.625 INFO  Working dir: /home/felipefidelis/prellm_ansible__ansible_17jh/.scannerwork
+15:42:49.635 INFO  Load project settings for component key: 'human-ansible__ansible'
+15:42:49.674 INFO  Load quality profiles
+15:42:49.751 INFO  Load quality profiles (done) | time=77ms
+15:42:49.801 WARN  SCM provider autodetection failed. Please use "sonar.scm.provider" to define SCM of your project, or disable the SCM Sensor in the project settings.
+15:42:49.815 INFO  Load active rules
+15:42:50.273 INFO  Load active rules (done) | time=456ms
+15:42:50.295 INFO  Load analysis cache
+15:42:50.329 INFO  Load analysis cache (404) | time=22ms
+15:42:50.555 INFO  Preprocessing files...
+15:42:51.213 INFO  1 language detected in 1395 preprocessed files (done) | time=656ms
+15:42:51.215 INFO  0 files ignored because of inclusion/exclusion patterns
+15:42:51.216 INFO  Loading plugins for detected languages
+15:42:51.218 INFO  Load/download plugins
+15:42:51.224 INFO  Load/download plugins (done) | time=7ms
+15:42:51.399 INFO  Load project repositories
+15:42:51.414 INFO  Load project repositories (done) | time=14ms
+15:42:51.438 INFO  Indexing files...
+15:42:51.440 INFO  Project configuration:
+15:42:51.442 INFO    Included sources: **/*.py
+15:42:51.443 INFO    Excluded sources: **/.git/**, **/.venv/**, **/venv/**, **/vendor/**, **/vendors/**, **/third_party/**, **/node_modules/**, **/build/**, **/dist/**
+15:42:51.520 INFO  1395 files indexed (done) | time=80ms
+15:42:51.524 INFO  Quality profile for py: Sonar way
+15:42:51.526 INFO  ------------- Run sensors on module Humano - ansible__ansible
+15:42:51.588 INFO  Load metrics repository
+15:42:51.622 INFO  Load metrics repository (done) | time=34ms
+15:42:52.391 INFO  Sensor IaC YAML File Type Classification Sensor [iac]
+15:42:52.414 INFO  Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=23ms
+15:42:52.418 INFO  Sensor IaC hadolint report Sensor [iac]
+15:42:52.419 INFO  Sensor IaC hadolint report Sensor [iac] (done) | time=1ms
+15:42:52.422 INFO  Sensor Java Config Sensor [iac]
+15:42:52.423 INFO  There are no files to be analyzed for the Java language
+15:42:52.425 INFO  Sensor Java Config Sensor [iac] (done) | time=0ms
+15:42:52.428 INFO  Sensor IaC Docker Sensor [iac]
+15:42:52.437 INFO  There are no files to be analyzed for the Docker language
+15:42:52.439 INFO  Sensor IaC Docker Sensor [iac] (done) | time=21ms
+15:42:52.441 INFO  Sensor Python Sensor [python]
+15:42:53.140 INFO  Starting global symbols computation
+15:42:53.145 INFO  1393 source files to be analyzed
+15:43:03.148 INFO  1197/1393 files analyzed, current files: psrp.py, linux_data.py, fc_wwn.py, ...
+15:43:03.405 WARN  Invalid character encountered in file /home/felipefidelis/prellm_ansible__ansible_17jh/lib/ansible/plugins/action/__init__.py at line 1275 for encoding UTF-8. Please fix file content or configure the encoding to be used using property 'sonar.sourceEncoding'.
+15:43:04.789 INFO  1393/1393 source files have been analyzed
+15:43:04.790 INFO  Finished step global symbols computation in 11647ms
+15:43:05.027 INFO  Starting rules execution
+15:43:05.028 INFO  1393 source files to be analyzed
+15:43:05.034 WARN  Test files were detected using a path heuristic because "sonar.tests" is not set. To improve the analysis accuracy, it is recommended to configure it, e.g.: "sonar.tests=src/test".
+15:43:07.995 ERROR Unable to parse file: test/support/windows-integration/collections/ansible_collections/ansible/windows/plugins/modules/win_file.py
+15:43:07.998 ERROR Parse error at line 1 column 2:
+
+  -->  ../../../../../../plugins/modules/win_file.pyEOF
+
+15:43:10.633 ERROR Unable to parse file: test/support/windows-integration/collections/ansible_collections/ansible/windows/plugins/action/win_copy.py
+15:43:10.635 ERROR Parse error at line 1 column 2:
+
+  -->  ../../../../../../plugins/action/win_copy.pyEOF
+
+15:43:12.683 ERROR Unable to parse file: test/support/windows-integration/collections/ansible_collections/ansible/windows/plugins/modules/win_ping.py
+15:43:12.685 ERROR Parse error at line 1 column 2:
+
+  -->  ../../../../../../plugins/modules/win_ping.pyEOF
+
+15:43:15.028 INFO  328/1393 files analyzed, current files: basic.py, base.py, user.py, ...
+15:43:18.368 ERROR Unable to parse file: test/support/windows-integration/collections/ansible_collections/ansible/windows/plugins/modules/win_shell.py
+15:43:18.374 ERROR Parse error at line 1 column 2:
+
+  -->  ../../../../../../plugins/modules/win_shell.pyEOF
+
+15:43:18.379 ERROR Unable to parse file: test/support/windows-integration/collections/ansible_collections/ansible/windows/plugins/modules/win_stat.py
+15:43:18.382 ERROR Parse error at line 1 column 2:
+
+  -->  ../../../../../../plugins/modules/win_stat.pyEOF
+
+15:43:18.888 ERROR Unable to parse file: test/support/windows-integration/collections/ansible_collections/ansible/windows/plugins/modules/win_copy.py
+15:43:18.894 ERROR Parse error at line 1 column 2:
+
+  -->  ../../../../../../plugins/modules/win_copy.pyEOF
+
+15:43:25.032 INFO  991/1393 files analyzed, current files: yum.py, target.py, reboot.py, ...
+15:43:25.154 ERROR Unable to parse file: test/support/windows-integration/collections/ansible_collections/ansible/windows/plugins/modules/win_acl.py
+15:43:25.155 ERROR Parse error at line 1 column 2:
+
+  -->  ../../../../../../plugins/modules/win_acl.pyEOF
+
+15:43:27.510 ERROR Unable to parse file: lib/ansible/module_utils/ansible_release.py
+15:43:27.512 ERROR Parse error at line 1 column 2:
+
+  -->  ../release.pyEOF
+
+15:43:30.354 INFO  1393/1393 source files have been analyzed
+15:43:30.357 INFO  Finished step rules execution in 25326ms
+15:43:30.358 INFO  The Python analyzer was able to leverage cached data from previous analyses for 0 out of 1393 files. These files were not parsed.
+15:43:30.359 INFO  Sensor Python Sensor [python] (done) | time=37919ms
+15:43:30.360 INFO  Sensor Cobertura Sensor for Python coverage [python]
+15:43:30.413 INFO  Sensor Cobertura Sensor for Python coverage [python] (done) | time=56ms
+15:43:30.415 INFO  Sensor PythonXUnitSensor [python]
+15:43:30.476 INFO  Sensor PythonXUnitSensor [python] (done) | time=62ms
+15:43:30.477 INFO  Sensor Python Dependency Sensor [python]
+15:43:30.483 INFO  Sensor Python Dependency Sensor [python] (done) | time=7ms
+15:43:30.485 INFO  Sensor TextAndSecretsSensor [text]
+15:43:30.534 INFO  Available processors: 8
+15:43:30.536 INFO  Using 8 threads for analysis.
+15:43:30.860 INFO  The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test", "tests", "mock" or "mocks"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+15:43:30.887 INFO  Start fetching files for the text and secrets analysis
+15:43:30.906 INFO  Using Git CLI to retrieve dirty files
+15:43:30.910 WARN  Retrieving only language associated files, make sure to run the analysis inside a git repository to make use of inclusions specified via "sonar.text.inclusions"
+15:43:30.912 INFO  Starting the text and secrets analysis
+15:43:30.914 INFO  1393 source files to be analyzed for the text and secrets analysis
+15:43:31.582 INFO  1393/1393 source files have been analyzed for the text and secrets analysis
+15:43:31.583 INFO  Skipped 915 file(s) in the secrets analysis due to automatic test file detection
+15:43:31.585 INFO  Sensor TextAndSecretsSensor [text] (done) | time=1100ms
+15:43:31.586 INFO  ------------- Run sensors on project
+15:43:31.741 INFO  Sensor IaC Project Sensor [iac]
+15:43:31.743 INFO  Sensor IaC Project Sensor [iac] (done) | time=1ms
+15:43:31.744 INFO  Sensor Zero Coverage Sensor
+15:43:31.865 INFO  Sensor Zero Coverage Sensor (done) | time=122ms
+15:43:31.867 INFO  ------------- Gather SCA dependencies on project
+15:43:31.870 INFO  Dependency analysis skipped
+15:43:31.873 INFO  SCM Publisher No SCM system was detected. You can use the 'sonar.scm.provider' property to explicitly specify it.
+15:43:32.054 INFO  CPD Executor 375 files had no CPD blocks
+15:43:32.055 INFO  CPD Executor Calculating CPD for 1010 files
+15:43:32.398 INFO  CPD Executor CPD calculation finished (done) | time=344ms
+15:43:32.857 INFO  Analysis report generated in 420ms, dir size=25.4 MB
+15:43:34.100 INFO  Analysis report compressed in 1241ms, zip size=14.5 MB
+15:43:34.533 INFO  Analysis report uploaded in 434ms
+15:43:34.537 INFO  ANALYSIS SUCCESSFUL, you can find the results at: http://localhost:9000/dashboard?id=human-ansible__ansible
+15:43:34.539 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+15:43:34.540 INFO  More about the report processing at http://localhost:9000/api/ce/task?id=1fdde2fe-59dc-410f-ab2c-3c222820f241
+15:43:34.652 INFO  Analysis total time: 45.376 s
+15:43:34.681 INFO  SonarScanner Engine completed successfully
+15:43:34.741 INFO  EXECUTION SUCCESS
+15:43:34.743 INFO  Total time: 49.277s

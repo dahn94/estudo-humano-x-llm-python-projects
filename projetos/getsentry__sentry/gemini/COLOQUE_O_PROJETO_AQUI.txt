@@ -1,0 +1,1 @@
+Coloque aqui o projeto gemini gerado com prompts/getsentry__sentry/prompt_recriacao.txt.

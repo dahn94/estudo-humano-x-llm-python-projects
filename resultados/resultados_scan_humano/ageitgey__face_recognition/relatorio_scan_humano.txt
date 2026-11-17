@@ -1,0 +1,504 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 29 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: ageitgey/face_recognition
+####################################################################################################
+Repositorio: https://github.com/ageitgey/face_recognition
+Commit analisado: d50353fdcb2f0b7180281ede9121810323ca9e37
+Link do commit: https://github.com/ageitgey/face_recognition/commit/d50353fdcb2f0b7180281ede9121810323ca9e37
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 2272
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 2
+  ERROR: 0
+  WARNING: 2
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 43
+  Vulnerabilidades: 7
+  Bugs: 0
+  Code smells: 36
+  Security hotspots: 0
+  Complexidade: 242
+  Linhas analisadas pelo SonarQube: 1473
+  Severidades: BLOCKER=2, CRITICAL=6, MAJOR=6, MINOR=29
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: examples/face_recognition_knn.py
+Linha: 132
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/face_recognition_knn.py#L132
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 2]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: examples/facerec_ipcamera_knn.py
+Linha: 134
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/facerec_ipcamera_knn.py#L134
+Descricao: pickle pode executar código durante a desserialização.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SONARQUBE 1]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/blink_detection.py
+Linha: 21
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/blink_detection.py#L21
+Descricao: Refactor this function to reduce its Cognitive Complexity from 29 to the 15 allowed.
+
+[SONARQUBE 2]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/blink_detection.py
+Linha: 25
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/blink_detection.py#L25
+Descricao: Replace the unused local variable "ret" with "_".
+
+[SONARQUBE 3]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1854
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/blink_detection.py
+Linha: 30
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/blink_detection.py#L30
+Descricao: Remove this assignment to local variable 'face_landmarks_list'; the value is never used.
+
+[SONARQUBE 4]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/face_recognition_knn.py
+Linha: 46
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/face_recognition_knn.py#L46
+Descricao: Refactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.
+
+[SONARQUBE 5]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/face_recognition_knn.py
+Linha: 111
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/face_recognition_knn.py#L111
+Descricao: Rename this parameter "X_img_path" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 6]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/face_recognition_knn.py
+Linha: 124
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/face_recognition_knn.py#L124
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 7]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/face_recognition_knn.py
+Linha: 127
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/face_recognition_knn.py#L127
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 8]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/face_recognition_knn.py
+Linha: 135
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/face_recognition_knn.py#L135
+Descricao: Rename this local variable "X_img" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 9]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/face_recognition_knn.py
+Linha: 136
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/face_recognition_knn.py#L136
+Descricao: Rename this local variable "X_face_locations" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 10]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/face_recognition_knn.py
+Linha: 173
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/face_recognition_knn.py#L173
+Descricao: Replace the unused local variable "text_width" with "_".
+
+[SONARQUBE 11]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/face_recognition_knn.py
+Linha: 192
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/face_recognition_knn.py#L192
+Descricao: Define a constant instead of duplicating this literal "knn_examples/test" 3 times.
+
+[SONARQUBE 12]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/facerec_from_webcam_multiprocessing.py
+Linha: 35
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/facerec_from_webcam_multiprocessing.py#L35
+Descricao: Rename this parameter "Global" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 13]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/facerec_from_webcam_multiprocessing.py
+Linha: 38
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/facerec_from_webcam_multiprocessing.py#L38
+Descricao: Remove this commented out code.
+
+[SONARQUBE 14]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/facerec_from_webcam_multiprocessing.py
+Linha: 47
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/facerec_from_webcam_multiprocessing.py#L47
+Descricao: Replace the unused local variable "ret" with "_".
+
+[SONARQUBE 15]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/facerec_from_webcam_multiprocessing.py
+Linha: 58
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/facerec_from_webcam_multiprocessing.py#L58
+Descricao: Rename this parameter "Global" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 16]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/facerec_ipcamera_knn.py
+Linha: 51
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/facerec_ipcamera_knn.py#L51
+Descricao: Refactor this function to reduce its Cognitive Complexity from 22 to the 15 allowed.
+
+[SONARQUBE 17]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/facerec_ipcamera_knn.py
+Linha: 116
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/facerec_ipcamera_knn.py#L116
+Descricao: Rename this parameter "X_frame" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 18]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/facerec_ipcamera_knn.py
+Linha: 129
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/facerec_ipcamera_knn.py#L129
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 19]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/facerec_ipcamera_knn.py
+Linha: 136
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/facerec_ipcamera_knn.py#L136
+Descricao: Rename this local variable "X_face_locations" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 20]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/facerec_ipcamera_knn.py
+Linha: 178
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/facerec_ipcamera_knn.py#L178
+Descricao: Replace the unused local variable "text_width" with "_".
+
+[SONARQUBE 21]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S5332
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/facerec_ipcamera_knn.py
+Linha: 198
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/facerec_ipcamera_knn.py#L198
+Descricao: Using HTTP protocol is insecure. Use HTTPS instead.
+
+[SONARQUBE 22]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/facerec_on_raspberry_pi_Simplified_Chinese.py
+Linha: 1
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/facerec_on_raspberry_pi_Simplified_Chinese.py#L1
+Descricao: Remove this commented out code.
+
+[SONARQUBE 23]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1940
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/recognize_faces_in_pictures.py
+Linha: 29
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/recognize_faces_in_pictures.py#L29
+Descricao: Use the opposite operator ("not in") instead.
+
+[SONARQUBE 24]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4502
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/web_service_example.py
+Linha: 25
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/web_service_example.py#L25
+Descricao: Make sure disabling CSRF protection is safe here.
+
+[SONARQUBE 25]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S4507
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/web_service_example.py
+Linha: 113
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/web_service_example.py#L113
+Descricao: Make sure this debug feature is deactivated before delivering the code in production.
+
+[SONARQUBE 26]
+Tipo: VULNERABILITY
+Severidade: BLOCKER
+Regra: python:S8392
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/web_service_example.py
+Linha: 113
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/web_service_example.py#L113
+Descricao: Avoid binding the application to all network interfaces.
+
+[SONARQUBE 27]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S4502
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/web_service_example_Simplified_Chinese.py
+Linha: 21
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/web_service_example_Simplified_Chinese.py#L21
+Descricao: Make sure disabling CSRF protection is safe here.
+
+[SONARQUBE 28]
+Tipo: VULNERABILITY
+Severidade: MINOR
+Regra: python:S4507
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/web_service_example_Simplified_Chinese.py
+Linha: 110
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/web_service_example_Simplified_Chinese.py#L110
+Descricao: Make sure this debug feature is deactivated before delivering the code in production.
+
+[SONARQUBE 29]
+Tipo: VULNERABILITY
+Severidade: BLOCKER
+Regra: python:S8392
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: examples/web_service_example_Simplified_Chinese.py
+Linha: 110
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/examples/web_service_example_Simplified_Chinese.py#L110
+Descricao: Avoid binding the application to all network interfaces.
+
+[SONARQUBE 30]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/test_face_recognition.py
+Linha: 253
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/tests/test_face_recognition.py#L253
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 31]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/test_face_recognition.py
+Linha: 264
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/tests/test_face_recognition.py#L264
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 32]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/test_face_recognition.py
+Linha: 275
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/tests/test_face_recognition.py#L275
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 33]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/test_face_recognition.py
+Linha: 286
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/tests/test_face_recognition.py#L286
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 34]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/test_face_recognition.py
+Linha: 297
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/tests/test_face_recognition.py#L297
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 35]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/test_face_recognition.py
+Linha: 304
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/tests/test_face_recognition.py#L304
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 36]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/test_face_recognition.py
+Linha: 313
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/tests/test_face_recognition.py#L313
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 37]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/test_face_recognition.py
+Linha: 322
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/tests/test_face_recognition.py#L322
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 38]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/test_face_recognition.py
+Linha: 323
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/tests/test_face_recognition.py#L323
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 39]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/test_face_recognition.py
+Linha: 324
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/tests/test_face_recognition.py#L324
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 40]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/test_face_recognition.py
+Linha: 325
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/tests/test_face_recognition.py#L325
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 41]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/test_face_recognition.py
+Linha: 326
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/tests/test_face_recognition.py#L326
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 42]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/test_face_recognition.py
+Linha: 335
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/tests/test_face_recognition.py#L335
+Descricao: Consider using "assertIn" instead.
+
+[SONARQUBE 43]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5906
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: tests/test_face_recognition.py
+Linha: 344
+Link do codigo: https://github.com/ageitgey/face_recognition/blob/d50353fdcb2f0b7180281ede9121810323ca9e37/tests/test_face_recognition.py#L344
+Descricao: Consider using "assertIn" instead.
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE ageitgey/face_recognition
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

@@ -1,0 +1,1 @@
+Coloque aqui o projeto openai gerado com prompts/fastapi__fastapi/prompt_recriacao.txt.

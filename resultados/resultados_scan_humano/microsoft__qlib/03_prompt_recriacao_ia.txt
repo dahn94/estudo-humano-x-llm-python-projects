@@ -1,0 +1,1222 @@
+O QUE E ESTE ARQUIVO
+================================================================================
+Este e o prompt que deve ser enviado ao ChatGPT, Gemini ou Claude para recriar o projeto.
+Ele contem somente informacoes documentais publicas e a arquitetura textual inferida; o corpo do
+codigo-fonte humano nao foi incluido. A resposta da IA devera ser salva separadamente e depois
+avaliada pelas mesmas ferramentas Semgrep e SonarQube usadas no projeto humano.
+
+INSTRUCAO PARA A IA
+================================================================================
+Crie do zero um projeto Python funcionalmente semelhante ao descrito abaixo.
+REGRAS OBRIGATORIAS:
+- Nao procure, copie, traduza ou reproduza o codigo-fonte do repositorio original.
+- Use apenas README, documentacao e manifestos fornecidos neste prompt.
+- Implemente as funcionalidades publicas documentadas, validacao de entrada, tratamento de erros e testes proprios.
+- Nao inclua segredos, credenciais, caminhos absolutos ou dependencias desnecessarias.
+- Entregue todos os arquivos completos e um README de execucao.
+
+REFERENCIA: microsoft/qlib
+COMMIT DOCUMENTAL: 46c8d791ac0d9a3adccfcbf2a0d94e917467e056
+
+README:
+
+--- README.md ---
+[![Python Versions](https://img.shields.io/pypi/pyversions/pyqlib.svg?logo=python&logoColor=white)](https://pypi.org/project/pyqlib/#files)
+[![Platform](https://img.shields.io/badge/platform-linux%20%7C%20windows%20%7C%20macos-lightgrey)](https://pypi.org/project/pyqlib/#files)
+[![PypI Versions](https://img.shields.io/pypi/v/pyqlib)](https://pypi.org/project/pyqlib/#history)
+[![Upload Python Package](https://github.com/microsoft/qlib/workflows/Upload%20Python%20Package/badge.svg)](https://pypi.org/project/pyqlib/)
+[![Github Actions Test Status](https://github.com/microsoft/qlib/workflows/Test/badge.svg?branch=main)](https://github.com/microsoft/qlib/actions)
+[![Documentation Status](https://readthedocs.org/projects/qlib/badge/?version=latest)](https://qlib.readthedocs.io/en/latest/?badge=latest)
+[![License](https://img.shields.io/pypi/l/pyqlib)](LICENSE)
+[![Join the chat at https://gitter.im/Microsoft/qlib](https://badges.gitter.im/Microsoft/qlib.svg)](https://gitter.im/Microsoft/qlib?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+
+<p align="center">
+  <img src="http://fintech.msra.cn/images_v060/logo/1.png" />
+</p>
+
+
+Qlib is an AI-oriented quantitative investment platform, which aims to realize the potential, empower the research, and create the value of AI technologies in quantitative investment.
+
+It contains the full ML pipeline of data processing, model training, back-testing; and covers the entire chain of quantitative investment: alpha seeking, risk modeling, portfolio optimization, and order execution. 
+
+With Qlib, user can easily try ideas to create better Quant investment strategies.
+
+For more details, please refer to our paper ["Qlib: An AI-oriented Quantitative Investment Platform"](https://arxiv.org/abs/2009.11189).
+
+- [Framework of Qlib](#framework-of-qlib)
+- [Quick Start](#quick-start)
+  - [Installation](#installation)
+  - [Data Preparation](#data-preparation)
+  - [Auto Quant Research Workflow](#auto-quant-research-workflow)
+  - [Building Customized Quant Research Workflow by Code](#building-customized-quant-research-workflow-by-code)
+- [**Quant Model Zoo**](#quant-model-zoo)
+  - [Run a single model](#run-a-single-model)
+  - [Run multiple models](#run-multiple-models)
+- [**Quant Dataset Zoo**](#quant-dataset-zoo)
+- [More About Qlib](#more-about-qlib)
+- [Offline Mode and Online Mode](#offline-mode-and-online-mode)
+  - [Performance of Qlib Data Server](#performance-of-qlib-data-server)
+- [Related Reports](#related-reports)
+- [Contributing](#contributing)
+
+
+
+# Framework of Qlib
+
+<div style="align: center">
+<img src="http://fintech.msra.cn/images_v060/framework.png?v=0.1" />
+</div>
+
+
+At the module level, Qlib is a platform that consists of the above components. The components are designed as loose-coupled modules and each component could be used stand-alone.
+
+| Name                   | Description                                                                                                                                                                                                                                                                                                                                                             |
+| ------                 | -----                                                                                                                                                                                                                                                                                                                                                                   |
+| `Infrastructure` layer | `Infrastructure` layer provides underlying support for Quant research. `DataServer` provides high-performance infrastructure for users to manage and retrieve raw data. `Trainer` provides flexible interface to control the training process of models which enable algorithms controlling the training process.                                                       |
+| `Workflow` layer       | `Workflow` layer covers the whole workflow of quantitative investment. `Information Extractor` extracts data for models. `Forecast Model` focuses on producing all kinds of forecast signals (e.g. _alpha_, risk) for other modules. With these signals `Portfolio Generator` will generate the target portfolio and produce orders to be executed by `Order Executor`. |
+| `Interface` layer      | `Interface` layer tries to present a user-friendly interface for the underlying system. `Analyser` module will provide users detailed analysis reports of forecasting signals, portfolios and execution results                                                                                                                                                                 |
+
+* The modules with hand-drawn style are under development and will be released in the future.
+* The modules with dashed borders are highly user-customizable and extendible.
+
+
+# Quick Start
+
+This quick start guide tries to demonstrate
+1. It's very easy to build a complete Quant research workflow and try your ideas with _Qlib_.
+2. Though with *public data* and *simple models*, machine learning technologies **work very well** in practical Quant investment.
+
+Here is a quick **[demo](https://terminalizer.com/view/3f24561a4470)** shows how to install ``Qlib``, and run LightGBM with ``qrun``. **But**, please make sure you have already prepared the data following the [instruction](#data-preparation).
+
+
+## Installation
+
+Users can easily install ``Qlib`` by pip according to the following command(Currently, Qlib only support Python 3.6, 3.7 and 3.8). 
+
+```bash
+  pip install pyqlib
+```
+
+**Note**: pip will install the latest stable qlib. However, the main branch of qlib is in active development. If you want to test the latest scripts or functions in the main branch. Please install qlib with the methods below.
+
+Also, users can install the latest dev version ``Qlib`` by the source code according to the following steps:
+
+* Before installing ``Qlib`` from source, users need to install some dependencies:
+
+  ```bash
+  pip install numpy
+  pip install --upgrade  cython
+  ```
+  **Note**: Please pay attention that installing cython in Python 3.6 will raise some error when installing ``Qlib`` from source. If users use Python 3.6 on their machines, it is recommended to *upgrade* Python to version 3.7 or use `conda`'s Python to install ``Qlib`` from source.
+
+* Clone the repository and install ``Qlib`` as follows.
+  * If you haven't installed qlib by the command ``pip install pyqlib`` before:
+    ```bash
+    git clone https://github.com/microsoft/qlib.git && cd qlib
+    python setup.py install
+    ```
+  * If you have already installed the stable version by the command ``pip install pyqlib``:
+    ```bash
+    git clone https://github.com/microsoft/qlib.git && cd qlib
+    pip install .
+    ```
+  **Note**: **Only** the command ``pip install .`` **can** overwrite the stable version installed by ``pip install pyqlib``, while the command ``python setup.py install`` **can't**.
+
+**Tips**: If you fail to install `Qlib` or run the examples in your environment,  comparing your steps and the [CI workflow](.github/workflows/test.yml) may help you find the problem.
+
+## Data Preparation
+Load and prepare data by running the following code:
+  ```bash
+  python scripts/get_data.py qlib_data --target_dir ~/.qlib/qlib_data/cn_data --region cn
+  ```
+
+This dataset is created by public data collected by [crawler scripts](scripts/data_collector/), which have been released in
+the same repository.
+Users could create the same dataset with it. 
+
+*Please pay **ATTENTION** that the data is collected from [Yahoo Finance](https://finance.yahoo.com/lookup) and the data might not be perfect. We recommend users to prepare their own data if they have high-quality dataset. For more information, users can refer to the [related document](https://qlib.readthedocs.io/en/latest/component/data.html#converting-csv-format-into-qlib-format)*.
+
+<!-- 
+- Run the initialization code and get stock data:
+
+  ```python
+  import qlib
+  from qlib.data import D
+  from qlib.config import REG_CN
+
+  # Initialization
+  mount_path = "~/.qlib/qlib_data/cn_data"  # target_dir
+  qlib.init(mount_path=mount_path, region=REG_CN)
+
+  # Get stock data by Qlib
+  # Load trading calendar with the given time range and frequency
+  print(D.calendar(start_time='2010-01-01', end_time='2017-12-31', freq='day')[:2])
+
+  # Parse a given market name into a stockpool config
+  instruments = D.instruments('csi500')
+  print(D.list_instruments(instruments=instruments, start_time='2010-01-01', end_time='2017-12-31', as_list=True)[:6])
+
+  # Load features of certain instruments in given time range
+  instruments = ['SH600000']
+  fields = ['$close', '$volume', 'Ref($close, 1)', 'Mean($close, 3)', '$high-$low']
+  print(D.features(instruments, fields, start_time='2010-01-01', end_time='2017-12-31', freq='day').head())
+  ```
+ -->
+
+## Auto Quant Research Workflow
+Qlib provides a tool named `qrun` to run the whole workflow automatically (including building dataset, training models, backtest and evaluation). You can start an auto quant research workflow and have a graphical reports analysis according to the following steps: 
+
+1. Quant Research Workflow: Run  `qrun` with lightgbm workflow config ([workflow_config_lightgbm_Alpha158.yaml](examples/benchmarks/LightGBM/workflow_config_lightgbm_Alpha158.yaml) as following.
+    ```bash
+      cd examples  # Avoid running program under the directory contains `qlib`
+      qrun benchmarks/LightGBM/workflow_config_lightgbm_Alpha158.yaml
+    ```
+    The result of `qrun` is as follows, please refer to [Intraday Trading](https://qlib.readthedocs.io/en/latest/component/backtest.html) for more details about the result. 
+
+    ```bash
+
+    'The following are analysis results of the excess return without cost.'
+                           risk
+    mean               0.000708
+    std                0.005626
+    annualized_return  0.178316
+    information_ratio  1.996555
+    max_drawdown      -0.081806
+    'The following are analysis results of the excess return with cost.'
+                           risk
+    mean               0.000512
+    std                0.005626
+    annualized_return  0.128982
+    information_ratio  1.444287
+    max_drawdown      -0.091078
+    ```
+    Here are detailed documents for `qrun` and [workflow](https://qlib.readthedocs.io/en/latest/component/workflow.html).
+
+2. Graphical Reports Analysis: Run `examples/workflow_by_code.ipynb` with `jupyter notebook` to get graphical reports
+    - Forecasting signal (model prediction) analysis
+      - Cumulative Return of groups
+      ![Cumulative Return](http://fintech.msra.cn/images_v060/analysis/analysis_model_cumulative_return.png?v=0.1)
+      - Return distribution
+      ![long_short](http://fintech.msra.cn/images_v060/analysis/analysis_model_long_short.png?v=0.1)
+      - Information Coefficient (IC)
+      ![Information Coefficient](http://fintech.msra.cn/images_v060/analysis/analysis_model_IC.png?v=0.1)        
+      ![Monthly IC](http://fintech.msra.cn/images_v060/analysis/analysis_model_monthly_IC.png?v=0.1)
+      ![IC](http://fintech.msra.cn/images_v060/analysis/analysis_model_NDQ.png?v=0.1)
+      - Auto Correlation of forecasting signal (model prediction)
+      ![Auto Correlation](http://fintech.msra.cn/images_v060/analysis/analysis_model_auto_correlation.png?v=0.1)
+
+    - Portfolio analysis
+      - Backtest return
+      ![Report](http://fintech.msra.cn/images_v060/analysis/report.png?v=0.1)
+      <!-- 
+      - Score IC
+      ![Score IC](docs/_static/img/score_ic.png)
+      - Cumulative Return
+      ![Cumulative Return](docs/_static/img/cumulative_return.png)
+      - Risk Analysis
+      ![Risk Analysis](docs/_static/img/risk_analysis.png)
+      - Rank Label
+      ![Rank Label](docs/_static/img/rank_label.png)
+      -->
+
+## Building Customized Quant Research Workflow by Code
+The automatic workflow may not suite the research workflow of all Quant researchers. To support a flexible Quant research workflow, Qlib also provides a modularized interface to allow researchers to build their own workflow by code. [Here](examples/workflow_by_code.ipynb) is a demo for customized Quant research workflow by code.
+
+
+# [Quant Model Zoo](examples/benchmarks)
+
+Here is a list of models built on `Qlib`.
+- [GBDT based on LightGBM (Guolin Ke, et al.)](qlib/contrib/model/gbdt.py)
+- [GBDT based on Catboost (Liudmila Prokhorenkova, et al.)](qlib/contrib/model/catboost_model.py)
+- [GBDT based on XGBoost (Tianqi Chen, et al.)](qlib/contrib/model/xgboost.py)
+- [MLP based on pytorch](qlib/contrib/model/pytorch_nn.py)
+- [GRU based on pytorch (Kyunghyun Cho, et al.)](qlib/contrib/model/pytorch_gru.py)
+- [LSTM based on pytorcn (Sepp Hochreiter, et al.)](qlib/contrib/model/pytorch_lstm.py)
+- [ALSTM based on pytorcn (Yao Qin, et al.)](qlib/contrib/model/pytorch_alstm.py)
+- [GATs based on pytorch (Petar Velickovic, et al.)](qlib/contrib/model/pytorch_gats.py)
+- [SFM based on pytorch (Liheng Zhang, et al.)](qlib/contrib/model/pytorch_sfm.py)
+- [TFT based on tensorflow (Bryan Lim, et al.)](examples/benchmarks/TFT/tft.py)
+
+Your PR of new Quant models is highly welcomed.
+
+The performance of each model on the `Alpha158` and `Alpha360` dataset can be found [here](examples/benchmarks/README.md).
+
+## Run a single model
+All the models listed above are runnable with ``Qlib``. Users can find the config files we provide and some details about the model through the [benchmarks](examples/benchmarks) folder. More information can be retrieved at the model files listed above.
+
+`Qlib` provides three different ways to run a single model, users can pick the one that fits their cases best:
+- User can use the tool `qrun` mentioned above to run a model's workflow based from a config file.
+- User can create a `workflow_by_code` python script based on the [one](examples/workflow_by_code.py) listed in the `examples` folder.
+
+- User can use the script [`run_all_model.py`](examples/run_all_model.py) listed in the `examples` folder to run a model. Here is an example of the specific shell command to be used: `python run_all_model.py --models=lightgbm`, where the `--models` arguments can take any number of models listed above(the available models can be found  in [benchmarks](examples/benchmarks/)). For more use cases, please refer to the file's [docstrings](examples/run_all_model.py).
+
+## Run multiple models
+`Qlib` also provides a script [`run_all_model.py`](examples/run_all_model.py) which can run multiple models for several iterations. (**Note**: the script only support *Linux* for now. Other OS will be supported in the future. Besides, it doesn't support parrallel running the same model for multiple times as well, and this will be fixed in the future development too.)
+
+The script will create a unique virtual environment for each model, and delete the environments after training. Thus, only experiment results such as `IC` and `backtest` results will be generated and stored.
+
+Here is an example of running all the models for 10 iterations:
+```python
+python run_all_model.py 10
+```
+
+It also provides the API to run specific models at once. For more use cases, please refer to the file's [docstrings](examples/run_all_model.py). 
+
+
+# Quant Dataset Zoo
+Dataset plays a very important role in Quant. Here is a list of the datasets built on `Qlib`:
+
+| Dataset                                    | US Market | China Market |
+| --                                         | --        | --           |
+| [Alpha360](./qlib/contrib/data/handler.py) |  √        |  √           |
+| [Alpha158](./qlib/contrib/data/handler.py) |  √        |  √           |
+
+[Here](https://qlib.readthedocs.io/en/latest/advanced/alpha.html) is a tutorial to build dataset with `Qlib`.
+Your PR to build new Quant dataset is highly welcomed.
+
+# More About Qlib
+The detailed documents are organized in [docs](docs/).
+[Sphinx](http://www.sphinx-doc.org) and the readthedocs theme is required to build the documentation in html formats. 
+```bash
+cd docs/
+conda install sphinx sphinx_rtd_theme -y
+# Otherwise, you can install them with pip
+# pip install sphinx sphinx_rtd_theme
+make html
+```
+You can also view the [latest document](http://qlib.readthedocs.io/) online directly.
+
+Qlib is in active and continuing development. Our plan is in the roadmap, which is managed as a [github project](https://github.com/microsoft/qlib/projects/1).
+
+
+
+# Offline Mode and Online Mode
+The data server of Qlib can either deployed as `Offline` mode or `Online` mode. The default mode is offline mode.
+
+Under `Offline` mode, the data will be deployed locally. 
+
+Under `Online` mode, the data will be deployed as a shared data service. The data and their cache will be shared by all the clients. The data retrieval performance is expected to be improved due to a higher rate of cache hits. It will consume less disk space, too. The documents of the online mode can be found in [Qlib-Server](https://qlib-server.readthedocs.io/). The online mode can be deployed automatically with [Azure CLI based scripts](https://qlib-server.readthedocs.io/en/latest/build.html#one-click-deployment-in-azure). The source code of online data server can be found in [Qlib-Server repository](https://github.com/microsoft/qlib-server).
+
+## Performance of Qlib Data Server
+The performance of data processing is important to data-driven methods like AI technologies. As an AI-oriented platform, Qlib provides a solution for data storage and data processing. To demonstrate the performance of Qlib data server, we
+compare it with several other data storage solutions. 
+
+We evaluate the performance of several storage solutions by finishing the same task,
+which creates a dataset (14 features/factors) from the basic OHLCV daily data of a stock market (800 stocks each day from 2007 to 2020). The task involves data queries and processing.
+
+|                         | HDF5      | MySQL     | MongoDB   | InfluxDB  | Qlib -E -D  | Qlib +E -D   | Qlib +E +D  |
+| --                      | ------    | ------    | --------  | --------- | ----------- | ------------ | ----------- |
+| Total (1CPU) (seconds)  | 184.4±3.7 | 365.3±7.5 | 253.6±6.7 | 368.2±3.6 | 147.0±8.8   | 47.6±1.0     | **7.4±0.3** |
+| Total (64CPU) (seconds) |           |           |           |           | 8.8±0.6     | **4.2±0.2**  |             |
+* `+(-)E` indicates with (out) `ExpressionCache`
+* `+(-)D` indicates with (out) `DatasetCache`
+
+Most general-purpose databases take too much time on loading data. After looking into the underlying implementation, we find that data go through too many layers of interfaces and unnecessary format transformations in general-purpose database solutions.
+Such overheads greatly slow down the data loading process.
+Qlib data are stored in a compact format, which is efficient to be combined into arrays for scientific computation.
+
+
+# Related Reports
+- [【华泰金工林晓明团队】微软AI量化投资平台Qlib体验——华泰人工智能系列之四十](https://mp.weixin.qq.com/s/Brcd7im4NibJOJzZfMn6tQ)
+- [微软也搞AI量化平台？还是开源的！](https://mp.weixin.qq.com/s/47bP5YwxfTp2uTHjUBzJQQ)
+- [微矿Qlib：业内首个AI量化投资开源平台](https://mp.weixin.qq.com/s/vsJv7lsgjEi-ALYUz4CvtQ)
+
+
+# Contributing
+
+This project welcomes contributions and suggestions.  Most contributions require you to agree to a
+Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
+the right to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+
+When you submit a pull request, a CLA bot will automatically determine whether you need to provide
+a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
+provided by the bot. You will only need to do this once across all repos using our CLA.
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
+contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+
+
+DOCUMENTACAO PUBLICA:
+
+--- alpha.rst ---
+.. _alpha:
+
+===========================
+Building Formulaic Alphas 
+===========================
+.. currentmodule:: qlib
+
+Introduction
+===================
+
+In quantitative trading practice, designing novel factors that can explain and predict future asset returns are of vital importance to the profitability of a strategy. Such factors are usually called alpha factors, or alphas in short.
+
+
+A formulaic alpha, as the name suggests, is a kind of alpha that can be presented as a formula or a mathematical expression.
+
+
+Building Formulaic Alphas in ``Qlib``
+======================================
+
+In ``Qlib``, users can easily build formulaic alphas.
+
+Example
+-----------------
+
+`MACD`, short for moving average convergence/divergence, is a formulaic alpha used in technical analysis of stock prices. It is designed to reveal changes in the strength, direction, momentum, and duration of a trend in a stock's price.
+
+`MACD` can be presented as the following formula:
+
+.. math:: 
+
+    MACD = 2\times (DIF-DEA)
+
+.. note::
+
+    `DIF` means Differential value, which is 12-period EMA minus 26-period EMA.
+    
+    .. math::
+
+        DIF = \frac{EMA(CLOSE, 12) - EMA(CLOSE, 26)}{CLOSE} 
+
+    `DEA`means a 9-period EMA of the DIF.
+
+    .. math::
+
+        DEA = \frac{EMA(DIF, 9)}{CLOSE}
+
+Users can use ``Data Handler`` to build formulaic alphas `MACD` in qlib:
+
+.. note:: Users need to initialize ``Qlib`` with `qlib.init` first.  Please refer to `initialization <../start/initialization.html>`_.
+
+.. code-block:: python
+
+    >> from qlib.data.dataset.loader import QlibDataLoader
+    >> MACD_EXP = '(EMA($close, 12) - EMA($close, 26))/$close - EMA((EMA($close, 12) - EMA($close, 26))/$close, 9)/$close'
+    >> fields = [MACD_EXP] # MACD
+    >> names = ['MACD']
+    >> labels = ['Ref($close, -2)/Ref($close, -1) - 1'] # label
+    >> label_names = ['LABEL']
+    >> data_loader_config = {
+    ..     "feature": (fields, names),
+    ..     "label": (labels, label_names)
+    .. }
+    >> data_loader = QlibDataLoader(config=data_loader_config)
+    >> df = data_loader.load(instruments='csi300', start_time='2010-01-01', end_time='2017-12-31')
+    >> print(df)
+                            feature     label
+                               MACD     LABEL
+    datetime   instrument                    
+    2010-01-04 SH600000   -0.011547 -0.019672
+               SH600004    0.002745 -0.014721
+               SH600006    0.010133  0.002911
+               SH600008   -0.001113  0.009818
+               SH600009    0.025878 -0.017758
+    ...                         ...       ...
+    2017-12-29 SZ300124    0.007306 -0.005074
+               SZ300136   -0.013492  0.056352
+               SZ300144   -0.000966  0.011853
+               SZ300251    0.004383  0.021739
+               SZ300315   -0.030557  0.012455
+
+Reference
+===========
+
+To learn more about ``Data Loader``, please refer to `Data Loader <../component/data.html#data-loader>`_
+
+To learn more about ``Data API``, please refer to `Data API <../component/data.html>`_
+
+--- server.rst ---
+.. _server:
+
+=================================
+``Online`` & ``Offline`` mode
+=================================
+.. currentmodule:: qlib
+
+
+Introduction
+=============
+
+``Qlib`` supports ``Online`` mode and ``Offline`` mode. Only the ``Offline`` mode is introduced in this document. 
+
+The ``Online`` mode is designed to solve the following problems:
+
+- Manage the data in a centralized way. Users don't have to manage data of different versions.
+- Reduce the amount of cache to be generated.
+- Make the data can be accessed in a remote way.
+
+Qlib-Server
+===============
+
+``Qlib-Server`` is the assorted server system for ``Qlib``, which utilizes ``Qlib`` for basic calculations and provides extensive server system and cache mechanism. With QLibServer, the data provided for ``Qlib`` can be managed in a centralized manner. With ``Qlib-Server``, users can use ``Qlib`` in ``Online`` mode. 
+
+
+
+Reference
+=================
+If users are interested in ``Qlib-Server`` and ``Online`` mode, please refer to `Qlib-Server Project <https://github.com/microsoft/qlib-server>`_ and `Qlib-Server Document <https://qlib-server.readthedocs.io/en/latest/>`_.
+--- changelog.rst ---
+.. include:: ../../CHANGES.rst
+	     
+
+--- backtest.rst ---
+.. _backtest:
+
+============================================
+Intraday Trading: Model&Strategy Testing
+============================================
+.. currentmodule:: qlib
+
+Introduction
+===================
+
+``Intraday Trading`` is designed to test models and strategies, which help users to check the performance of a custom model/strategy.
+
+
+.. note::
+
+    ``Intraday Trading`` uses ``Order Executor`` to trade and execute orders output by ``Portfolio Strategy``. ``Order Executor`` is a component in `Qlib Framework <../introduction/introduction.html#framework>`_, which can execute orders. ``VWAP Executor`` and ``Close Executor`` is supported by ``Qlib`` now. In the future, ``Qlib`` will support ``HighFreq Executor`` also. 
+
+
+
+Example
+===========================
+
+Users need to generate a `prediction score`(a pandas DataFrame) with MultiIndex<instrument, datetime> and a `score` column. And users need to assign a strategy used in backtest, if strategy is not assigned,
+a `TopkDropoutStrategy` strategy with `(topk=50, n_drop=5, risk_degree=0.95, limit_threshold=0.0095)` will be used.
+If ``Strategy`` module is not users' interested part, `TopkDropoutStrategy` is enough. 
+
+The simple example of the default strategy is as follows.
+
+.. code-block:: python
+
+    from qlib.contrib.evaluate import backtest
+    # pred_score is the prediction score
+    report, positions = backtest(pred_score, topk=50, n_drop=0.5, verbose=False, limit_threshold=0.0095)
+
+To know more about backtesting with a specific ``Strategy``, please refer to `Portfolio Strategy <strategy.html>`_.
+
+To know more about the prediction score `pred_score` output by ``Forecast Model``, please refer to `Forecast Model: Model Training & Prediction <model.html>`_.
+
+Prediction Score
+-----------------
+
+The `prediction score` is a pandas DataFrame. Its index is <datetime(pd.Timestamp), instrument(str)> and it must
+contains a `score` column.
+
+A prediction sample is shown as follows.
+
+.. code-block:: python
+
+      datetime instrument     score
+    2019-01-04   SH600000 -0.505488
+    2019-01-04   SZ002531 -0.320391
+    2019-01-04   SZ000999  0.583808
+    2019-01-04   SZ300569  0.819628
+    2019-01-04   SZ001696 -0.137140
+                 ...            ...
+    2019-04-30   SZ000996 -1.027618
+    2019-04-30   SH603127  0.225677
+    2019-04-30   SH603126  0.462443
+    2019-04-30   SH603133 -0.302460
+    2019-04-30   SZ300760 -0.126383
+
+``Forecast Model`` module can make predictions, please refer to `Forecast Model: Model Training & Prediction <model.html>`_.
+
+Backtest Result
+------------------
+
+The backtest results are in the following form:
+
+.. code-block:: python
+
+                                                      risk
+    excess_return_without_cost mean               0.000605
+                               std                0.005481
+                               annualized_return  0.152373
+                               information_ratio  1.751319
+                               max_drawdown      -0.059055
+    excess_return_with_cost    mean               0.000410
+                               std                0.005478
+                               annualized_return  0.103265
+                               information_ratio  1.187411
+                               max_drawdown      -0.075024
+
+
+
+- `excess_return_without_cost`
+    - `mean`
+        Mean value of the `CAR` (cumulative abnormal return) without cost
+    - `std`
+        The `Standard Deviation` of `CAR` (cumulative abnormal return) without cost.
+    - `annualized_return`
+        The `Annualized Rate` of `CAR` (cumulative abnormal return) without cost.
+    - `information_ratio`
+        The `Information Ratio` without cost. please refer to `Information Ratio – IR <https://www.investopedia.com/terms/i/informationratio.asp>`_.
+    - `max_drawdown`
+        The `Maximum Drawdown` of `CAR` (cumulative abnormal return) without cost, please refer to `Maximum Drawdown (MDD) <https://www.investopedia.com/terms/m/maximum-drawdown-mdd.asp>`_.
+
+- `excess_return_with_cost`
+    - `mean`
+        Mean value of the `CAR` (cumulative abnormal return) series with cost
+    - `std`
+        The `Standard Deviation` of `CAR` (cumulative abnormal return) series with cost.
+    - `annualized_return`
+        The `Annualized Rate` of `CAR` (cumulative abnormal return) with cost.
+    - `information_ratio`
+        The `Information Ratio` with cost. please refer to `Information Ratio – IR <https://www.investopedia.com/terms/i/informationratio.asp>`_.
+    - `max_drawdown`
+        The `Maximum Drawdown` of `CAR` (cumulative abnormal return) with cost, please refer to `Maximum Drawdown (MDD) <https://www.investopedia.com/terms/m/maximum-drawdown-mdd.asp>`_.
+
+
+
+Reference
+==============
+
+To know more about ``Intraday Trading``, please refer to `Intraday Trading <../reference/api.html#module-qlib.contrib.evaluate>`_.
+
+--- data.rst ---
+.. _data:
+
+================================
+Data Layer: Data Framework & Usage
+================================
+
+Introduction
+============================
+
+``Data Layer`` provides user-friendly APIs to manage and retrieve data. It provides high-performance data infrastructure. 
+
+It is designed for quantitative investment. For example, users could build formulaic alphas with ``Data Layer`` easily. Please refer to `Building Formulaic Alphas <../advanced/alpha.html>`_ for more details.
+
+The introduction of ``Data Layer`` includes the following parts.
+
+- Data Preparation
+- Data API
+- Data Loader
+- Data Handler
+- Dataset
+- Cache
+- Data and Cache File Structure
+
+
+Data Preparation
+============================
+
+Qlib Format Data
+------------------
+
+We've specially designed a data structure to manage financial data, please refer to the `File storage design section in Qlib paper <https://arxiv.org/abs/2009.11189>`_ for detailed information.
+Such data will be stored with filename suffix `.bin` (We'll call them `.bin` file, `.bin` format, or qlib format). `.bin` file is designed for scientific computing on finance data.
+
+``Qlib`` provides two different off-the-shelf dataset, which can be accessed through this `link <https://github.com/microsoft/qlib/blob/main/qlib/contrib/data/handler.py>`_:
+
+========================  =================  ================
+Dataset                   US Market          China Market
+========================  =================  ================
+Alpha360                  √                  √
+
+Alpha158                  √                  √
+========================  =================  ================
+
+
+Qlib Format Dataset
+--------------------
+``Qlib`` has provided an off-the-shelf dataset in `.bin` format, users could use the script ``scripts/get_data.py`` to download the China-Stock dataset as follows.
+
+.. code-block:: bash
+
+    python scripts/get_data.py qlib_data --target_dir ~/.qlib/qlib_data/cn_data --region cn
+
+In addition to China-Stock data, ``Qlib`` also includes a US-Stock dataset, which can be downloaded with the following command:
+
+.. code-block:: bash
+
+    python scripts/get_data.py qlib_data --target_dir ~/.qlib/qlib_data/us_data --region us
+
+After running the above command, users can find china-stock and us-stock data in ``Qlib`` format in the ``~/.qlib/csv_data/cn_data`` directory and ``~/.qlib/csv_data/us_data`` directory respectively.
+
+``Qlib`` also provides the scripts in ``scripts/data_collector`` to help users crawl the latest data on the Internet and convert it to qlib format.
+
+When ``Qlib`` is initialized with this dataset, users could build and evaluate their own models with it.  Please refer to `Initialization <../start/initialization.html>`_ for more details.
+
+Converting CSV Format into Qlib Format
+-------------------------------------------
+
+``Qlib`` has provided the script ``scripts/dump_bin.py`` to convert **any** data in CSV format into `.bin` files (``Qlib`` format) as long as they are in the correct format.
+
+Users can download the demo china-stock data in CSV format as follows for reference to the CSV format.
+
+.. code-block:: bash
+
+    python scripts/get_data.py csv_data_cn --target_dir ~/.qlib/csv_data/cn_data
+
+Users can also provide their own data in CSV format. However, the CSV data **must satisfies** following criterions:
+
+- CSV file is named after a specific stock *or* the CSV file includes a column of the stock name
+
+    - Name the CSV file after a stock: `SH600000.csv`, `AAPL.csv` (not case sensitive).
+    
+    - CSV file includes a column of the stock name. User **must** specify the column name when dumping the data. Here is an example:
+
+        .. code-block:: bash
+
+            python scripts/dump_bin.py dump_all ... --symbol_field_name symbol
+        
+        where the data are in the following format:
+
+        .. code-block:: 
+
+            symbol,close
+            SH600000,120
+
+- CSV file **must** includes a column for the date, and when dumping the data, user must specify the date column name. Here is an example:
+
+    .. code-block:: bash
+
+        python scripts/dump_bin.py dump_all ... --date_field_name date
+    
+    where the data are in the following format:
+
+    .. code-block:: 
+
+        symbol,date,close,open,volume
+        SH600000,2020-11-01,120,121,12300000
+        SH600000,2020-11-02,123,120,12300000
+
+
+Supposed that users prepare their CSV format data in the directory ``~/.qlib/csv_data/my_data``, they can run the following command to start the conversion.
+
+.. code-block:: bash
+
+    python scripts/dump_bin.py dump_all --csv_path  ~/.qlib/csv_data/my_data --qlib_dir ~/.qlib/qlib_data/my_data --include_fields open,close,high,low,volume,factor
+
+For other supported parameters when dumping the data into `.bin` file, users can refer to the information by running the following commands:
+
+.. code-block:: bash
+
+    python dump_bin.py dump_all --help
+
+After conversion, users can find their Qlib format data in the directory `~/.qlib/qlib_data/my_data`.
+
+.. note::
+
+    The arguments of `--include_fields` should correspond with the column names of CSV files. The columns names of dataset provided by ``Qlib`` should include open, close, high, low, volume and factor at least.
+    
+    - `open`
+        The opening price
+    - `close`
+        The closing price
+    - `high`
+        The highest price
+    - `low`
+        The lowest price
+    - `volume`
+        The trading volume
+    - `factor`
+        The Restoration factor
+
+    In the convention of `Qlib` data processing, `open, close, high, low, volume, money and factor` will be set to NaN if the stock is suspended. 
+
+Multiple Stock Modes
+--------------------------------
+
+``Qlib`` now provides two different stock modes for users: China-Stock Mode & US-Stock Mode. Here are some different settings of these two modes:
+
+==============  =================  ================
+Region          Trade Unit         Limit Threshold
+==============  =================  ================
+China           100                0.099
+
+US              1                  None
+==============  =================  ================
+
+The `trade unit` defines the unit number of stocks can be used in a trade, and the `limit threshold` defines the bound set to the percentage of ups and downs of a stock.
+
+- If users use ``Qlib`` in china-stock mode, china-stock data is required. Users can use ``Qlib`` in china-stock mode according to the following steps:
+    - Download china-stock in qlib format, please refer to section `Qlib Format Dataset <#qlib-format-dataset>`_.
+    - Initialize ``Qlib`` in china-stock mode
+        Supposed that users download their Qlib format data in the directory ``~/.qlib/csv_data/cn_data``. Users only need to initialize ``Qlib`` as follows.
+        
+        .. code-block:: python
+
+            from qlib.config import REG_CN
+            qlib.init(provider_uri='~/.qlib/qlib_data/cn_data', region=REG_CN)
+        
+
+- If users use ``Qlib`` in US-stock mode, US-stock data is required. ``Qlib`` also provides a script to download US-stock data. Users can use ``Qlib`` in US-stock mode according to the following steps:
+    - Download china-stock in qlib format, please refer to section `Qlib Format Dataset <#qlib-format-dataset>`_.
+    - Initialize ``Qlib`` in US-stock mode
+        Supposed that users prepare their Qlib format data in the directory ``~/.qlib/csv_data/us_data``. Users only need to initialize ``Qlib`` as follows.
+        
+        .. code-block:: python
+
+            from qlib.config import REG_US
+            qlib.init(provider_uri='~/.qlib/qlib_data/us_data', region=REG_US)
+        
+
+Data API
+========================
+
+Data Retrieval
+---------------
+Users can use APIs in ``qlib.data`` to retrieve data, please refer to `Data Retrieval <../start/getdata.html>`_.
+
+Feature
+------------------
+
+``Qlib`` provides `Feature` and `ExpressionOps` to fetch the features according to users' needs.
+
+- `Feature`
+    Load data from the data provider. User can get the features like `$high`, `$low`, `$open`, `$close`, .etc, which should correspond with the arguments of `--include_fields`, please refer to section `Converting CSV Format into Qlib Format <#converting-csv-format-into-qlib-format>`_.
+
+- `ExpressionOps`
+    `ExpressionOps` will use operator for feature construction.
+    To know more about  ``Operator``, please refer to `Operator API <../reference/api.html#module-qlib.data.ops>`_.
+
+To know more about  ``Feature``, please refer to `Feature API <../reference/api.html#module-qlib.data.base>`_.
+
+Filter
+-------------------
+``Qlib`` provides `NameDFilter` and `ExpressionDFilter` to filter the instruments according to users' needs.
+
+- `NameDFilter`
+    Name dynamic instrument filter. Filter the instruments based on a regulated name format. A name rule regular expression is required.
+
+- `ExpressionDFilter`
+    Expression dynamic instrument filter. Filter the instruments based on a certain expression. An expression rule indicating a certain feature field is required.
+    
+    - `basic features filter`: rule_expression = '$close/$open>5'
+    - `cross-sectional features filter` \: rule_expression = '$rank($close)<10'
+    - `time-sequence features filter`: rule_expression = '$Ref($close, 3)>100'
+
+To know more about ``Filter``, please refer to `Filter API <../reference/api.html#module-qlib.data.filter>`_.
+
+Reference
+-------------
+
+To know more about ``Data API``, please refer to `Data API <../reference/api.html#data>`_.
+
+
+Data Loader
+=================
+
+``Data Loader`` in ``Qlib`` is designed to load raw data from the original data source. It will be loaded and used in the ``Data Handler`` module.
+
+QlibDataLoader
+---------------
+
+The ``QlibDataLoader`` class in ``Qlib`` is such an interface that allows users to load raw data from the ``Qlib`` data source.
+
+StaticDataLoader
+---------------
+
+The ``StaticDataLoader`` class in ``Qlib`` is such an interface that allows users to load raw data from file or as provided.
+
+
+Interface
+------------
+
+Here are some interfaces of the ``QlibDataLoader`` class:
+
+.. autoclass:: qlib.data.dataset.loader.DataLoader
+    :members:
+
+API
+-----------
+
+To know more about ``Data Loader``, please refer to `Data Loader API <../reference/api.html#module-qlib.data.dataset.loader>`_.
+
+
+Data Handler
+=================
+
+The ``Data Handler`` module in ``Qlib`` is designed to handler those common data processing methods which will be used by most of the models.
+
+Users can use ``Data Handler`` in an automatic workflow by ``qrun``, refer to `Workflow: Workflow Management <workflow.html>`_ for more details. 
+
+DataHandlerLP
+--------------
+
+In addition to use ``Data Handler`` in an automatic workflow with ``qrun``, ``Data Handler`` can be used as an independent module, by which users can easily preprocess data (standardization, remove NaN, etc.) and build datasets. 
+
+In order to achieve so, ``Qlib`` provides a base class `qlib.data.dataset.DataHandlerLP <../reference/api.html#qlib.data.dataset.handler.DataHandlerLP>`_. The core idea of this class is that: we will have some leanable ``Processors`` which can learn the parameters of data processing(e.g., parameters for zscore normalization). When new data comes in, these `trained` ``Processors`` can then process the new data and thus processing real-time data in an efficient way becomes possible. More information about ``Processors`` will be listed in the next subsection.
+
+
+Interface
+----------------------
+
+Here are some important interfaces that ``DataHandlerLP`` provides:
+
+.. autoclass:: qlib.data.dataset.handler.DataHandlerLP
+    :members: __init__, fetch, get_cols
+
+If users want to load features and labels by config, users can inherit ``qlib.data.dataset.handler.ConfigDataHandler``, ``Qlib`` also provides some preprocess method in this subclass.
+
+If users want to use qlib data, `QLibDataHandler` is recommended. Users can inherit their custom class from `QLibDataHandler`, which is also a subclass of `ConfigDataHandler`.
+
+
+Processor
+----------
+
+The ``Processor`` module in ``Qlib`` is designed to be learnable and it is responsible for handling data processing such as `normalization` and `drop none/nan features/labels`.
+
+``Qlib`` provides the following ``Processors``:
+
+- ``DropnaProcessor``: `processor` that drops N/A features.
+- ``DropnaLabel``: `processor` that drops N/A labels.
+- ``TanhProcess``: `processor` that uses `tanh` to process noise data.
+- ``ProcessInf``: `processor` that handles infinity values, it will be replaces by the mean of the column.
+- ``Fillna``: `processor` that handles N/A values, which will fill the N/A value by 0 or other given number.
+- ``MinMaxNorm``: `processor` that applies min-max normalization.
+- ``ZscoreNorm``: `processor` that applies z-score normalization.
+- ``RobustZScoreNorm``: `processor` that applies robust z-score normalization.
+- ``CSZScoreNorm``: `processor` that applies cross sectional z-score normalization.
+- ``CSRankNorm``: `processor` that applies cross sectional rank normalization.
+- ``CSZFillna``: `processor` that fills N/A values in a cross sectional way by the mean of the column.
+
+Users can also create their own `processor` by inheriting the base class of ``Processor``. Please refer to the implementation of all the processors for more information (`Processor Link <https://github.com/microsoft/qlib/blob/main/qlib/data/dataset/processor.py>`_). 
+
+To know more about ``Processor``, please refer to `Processor API <../reference/api.html#module-qlib.data.dataset.processor>`_.
+
+Example
+--------------
+
+``Data Handler`` can be run with ``qrun`` by modifying the configuration file, and can also be used as a single module. 
+
+Know more about how to run ``Data Handler`` with ``qrun``, please refer to `Workflow: Workflow Management <workflow.html>`_
+
+Qlib provides implemented data handler `Alpha158`. The following example shows how to run `Alpha158` as a single module.
+
+.. note:: Users need to initialize ``Qlib`` with `qlib.init` first, please refer to `initialization <../start/initialization.html>`_.
+
+
+.. code-block:: Python
+
+    import qlib
+    from qlib.contrib.data.handler import Alpha158
+
+    data_handler_config = {
+        "start_time": "2008-01-01",
+        "end_time": "2020-08-01",
+        "fit_start_time": "2008-01-01",
+        "fit_end_time": "2014-12-31",
+        "instruments": "csi300",
+    }
+
+    if __name__ == "__main__":
+        qlib.init()
+        h = Alpha158(**data_handler_config)
+
+        # get all the columns of the data
+        print(h.get_cols())
+
+        # fetch all the labels
+        print(h.fetch(col_set="label"))
+
+        # fetch all the features
+        print(h.fetch(col_set="feature"))
+
+API
+---------
+
+To know more about ``Data Handler``, please refer to `Data Handler API <../reference/api.html#module-qlib.data.dataset.handler>`_.
+
+
+Dataset
+=================
+
+The ``Dataset`` module in ``Qlib`` aims to prepare data for model training and inferencing.
+
+The motivation of this module is that we want to maximize the flexibility of of different models to handle data that are suitable for themselves. This module gives the model the flexibility to process their data in an unique way. For instance, models such as ``GBDT`` may work well on data that contains `nan` or `None` value, while neural networks such as ``MLP`` will break down on such data. 
+
+If user's model need process its data in a different way, user could implement his own ``Dataset`` class. If the model's
+data processing is not special, ``DatasetH`` can be used directly.
+
+The ``DatasetH`` class is the `dataset` with `Data Handler`. Here is the most important interface of the class:
+
+.. autoclass:: qlib.data.dataset.__init__.DatasetH
+    :members:
+
+API
+---------
+
+To know more about ``Dataset``, please refer to `Dataset API <../reference/api.html#module-qlib.data.dataset.__init__>`_.
+
+
+
+Cache
+==========
+
+``Cache`` is an optional module that helps accelerate providing data by saving some frequently-used data as cache file. ``Qlib`` provides a `Memcache` class to cache the most-frequently-used data in memory, an inheritable `ExpressionCache` class, and an inheritable `DatasetCache` class.
+
+Global Memory Cache
+---------------------
+
+`Memcache` is a global memory cache mechanism that composes of three `MemCacheUnit` instances to cache **Calendar**, **Instruments**, and **Features**. The `MemCache` is defined globally in `cache.py` as `H`. Users can use `H['c'], H['i'], H['f']` to get/set `memcache`.
+
+.. autoclass:: qlib.data.cache.MemCacheUnit
+    :members:
+
+.. autoclass:: qlib.data.cache.MemCache
+    :members:
+
+
+ExpressionCache
+-----------------
+
+`ExpressionCache` is a cache mechanism that saves expressions such as **Mean($close, 5)**. Users can inherit this base class to define their own cache mechanism that saves expressions according to the following steps.
+
+- Override `self._uri` method to define how the cache file path is generated
+- Override `self._expression` method to define what data will be cached and how to cache it.
+
+The following shows the details about the interfaces:
+
+.. autoclass:: qlib.data.cache.ExpressionCache
+    :members:
+
+``Qlib`` has currently provided implemented disk cache `DiskExpressionCache` which inherits from `ExpressionCache` . The expressions data will be stored in the disk.
+
+DatasetCache
+-----------------
+
+`DatasetCache` is a cache mechanism that saves datasets. A certain dataset is regulated by a stock pool configuration (or a series of instruments, though not recommended), a list of expressions or static feature fields, the start time, and end time for the collected features and the frequency. Users can inherit this base class to define their own cache mechanism that saves datasets according to the following steps.
+
+- Override `self._uri` method to define how their cache file path is generated
+- Override `self._expression` method to define what data will be cached and how to cache it.
+
+The following shows the details about the interfaces:
+
+.. autoclass:: qlib.data.cache.DatasetCache
+    :members:
+
+``Qlib`` has currently provided implemented disk cache `DiskDatasetCache` which inherits from `DatasetCache` . The datasets' data will be stored in the disk.
+
+
+
+Data and Cache File Structure
+==================================
+
+We've specially designed a file structure to manage data and cache, please refer to the `File storage design section in Qlib paper <https://arxiv.org/abs/2009.11189>`_ for detailed information. The file structure of data and cache is listed as follows.
+
+.. code-block:: json
+
+    - data/
+        [raw data] updated by data providers
+        - calendars/
+            - day.txt
+        - instruments/
+            - all.txt
+            - csi500.txt
+            - ...
+        - features/
+            - sh600000/
+                - open.day.bin
+                - close.day.bin
+                - ...
+            - ...
+        [cached data] updated when raw data is updated
+        - calculated features/
+            - sh600000/
+                - [hash(instrtument, field_expression, freq)]
+                    - all-time expression -cache data file
+                    - .meta : an assorted meta file recording the instrument name, field name, freq, and visit times
+            - ...
+        - cache/
+            - [hash(stockpool_config, field_expression_list, freq)]
+                - all-time Dataset-cache data file
+                - .meta : an assorted meta file recording the stockpool config, field names and visit times
+                - .index : an assorted index file recording the line index of all calendars
+            - ...
+
+
+--- model.rst ---
+.. _model:
+
+============================================
+Forecast Model: Model Training & Prediction
+============================================
+
+Introduction
+===================
+
+``Forecast Model`` is designed to make the `prediction score` about stocks. Users can use the ``Forecast Model`` in an automatic workflow by ``qrun``, please refer to `Workflow: Workflow Management <workflow.html>`_.  
+
+Because the components in ``Qlib`` are designed in a loosely-coupled way, ``Forecast Model`` can be used as an independent module also.
+
+Base Class & Interface
+======================
+
+``Qlib`` provides a base class `qlib.model.base.Model <../reference/api.html#module-qlib.model.base>`_ from which all models should inherit.
+
+The base class provides the following interfaces:
+
+.. autoclass:: qlib.model.base.Model
+    :members:
+
+``Qlib`` also provides a base class `qlib.model.base.ModelFT <../reference/api.html#qlib.model.base.ModelFT>`_, which includes the method for finetuning the model.
+    
+For other interfaces such as `finetune`, please refer to `Model API <../reference/api.html#module-qlib.model.base>`_.
+
+Example
+==================
+
+``Qlib``'s `Model Zoo` includes models such as ``LightGBM``, ``MLP``, ``LSTM``, etc.. These models are treated as the baselines of ``Forecast Model``. The following steps show how to run`` LightGBM`` as an independent module.
+
+
+
+MANIFESTOS PUBLICOS:
+
+--- setup.py ---
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+import io
+import os
+import numpy
+
+from setuptools import find_packages, setup, Extension
+
+# Package meta-data.
+NAME = "pyqlib"
+DESCRIPTION = "A Quantitative-research Platform"
+REQUIRES_PYTHON = ">=3.5.0"
+
+VERSION = "0.6.1.dev"
+
+# Detect Cython
+try:
+    import Cython
+
+    ver = Cython.__version__
+    _CYTHON_INSTALLED = ver >= "0.28"
+except ImportError:
+    _CYTHON_INSTALLED = False
+
+if not _CYTHON_INSTALLED:
+    print("Required Cython version >= 0.28 is not detected!")
+    print('Please run "pip install --upgrade cython" first.')
+    exit(-1)
+
+# What packages are required for this module to be executed?
+# `estimator` may depend on other packages. In order to reduce dependencies, it is not written here.
+REQUIRED = [
+    "numpy>=1.12.0",
+    "pandas>=0.25.1",
+    "scipy>=1.0.0",
+    "requests>=2.18.0",
+    "sacred>=0.7.4",
+    "pymongo==3.7.2",
+    "python-socketio==3.1.2",
+    "redis>=3.0.1",
+    "python-redis-lock>=3.3.1",
+    "schedule>=0.6.0",
+    "cvxpy==1.0.21",
+    "hyperopt==0.1.1",
+    "fire>=0.3.1",
+    "statsmodels",
+    "xlrd>=1.0.0",
+    "plotly==4.12.0",
+    "matplotlib==3.1.3",
+    "tables>=3.6.1",
+    "pyyaml>=5.3.1",
+    "mlflow>=1.12.1",
+    "tqdm",
+    "loguru",
+    "lightgbm",
+    "tornado",
+    "joblib>=0.17.0",
+    "ruamel.yaml>=0.16.12",
+]
+
+# Numpy include
+NUMPY_INCLUDE = numpy.get_include()
+
+here = os.path.abspath(os.path.dirname(__file__))
+
+with open(os.path.join(here, "README.md"), encoding="utf-8") as f:
+    long_description = f.read()
+
+
+# Cython Extensions
+extensions = [
+    Extension(
+        "qlib.data._libs.rolling",
+        ["qlib/data/_libs/rolling.pyx"],
+        language="c++",
+        include_dirs=[NUMPY_INCLUDE],
+    ),
+    Extension(
+        "qlib.data._libs.expanding",
+        ["qlib/data/_libs/expanding.pyx"],
+        language="c++",
+        include_dirs=[NUMPY_INCLUDE],
+    ),
+]
+
+# Where the magic happens:
+setup(
+    name=NAME,
+    version=VERSION,
+    license="MIT Licence",
+    url="https://github.com/microsoft/qlib",
+    description=DESCRIPTION,
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    python_requires=REQUIRES_PYTHON,
+    packages=find_packages(exclude=("tests",)),
+    # if your package is a single module, use this instead of 'packages':
+    # py_modules=['qlib'],
+    entry_points={
+        # 'console_scripts': ['mycli=mymodule:cli'],
+        "console_scripts": [
+            "qrun=qlib.workflow.cli:run",
+        ],
+    },
+    ext_modules=extensions,
+    install_requires=REQUIRED,
+    include_package_data=True,
+    classifiers=[
+        # Trove classifiers
+        # Full list: https://pypi.python.org/pypi?%3Aaction=list_classifiers
+        # 'License :: OSI Approved :: MIT License',
+        "Operating System :: POSIX :: Linux",
+        "Operating System :: Microsoft :: Windows",
+        "Operating System :: MacOS",
+        "License :: OSI Approved :: MIT License",
+        "Development Status :: 3 - Alpha",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+    ],
+)
+
+
+ARQUITETURA TEXTUAL INFERIDA:
+PROJETO
+|
++-- Documentacao e configuracao
+|   +-- CHANGES.rst
+|   +-- CODE_OF_CONDUCT.md
+|   +-- README.md
+|   +-- SECURITY.md
+|   +-- setup.py
+|
++-- Modulos/dominios visiveis
+|   +-- .github/
+|   +-- docs/
+|   +-- examples/
+|   +-- qlib/
+|   +-- scripts/
+|   +-- tests/
+|
++-- Entradas e interfaces descritas no README
+|   +-- configuracao/parametros
+|   +-- processamento principal
+|   +-- saidas/resultados
+|
++-- Testes proprios a serem criados pela IA

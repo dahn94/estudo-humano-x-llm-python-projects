@@ -1,0 +1,1604 @@
+O QUE E ESTE ARQUIVO
+================================================================================
+Este e o prompt que deve ser enviado ao ChatGPT, Gemini ou Claude para recriar o projeto.
+Ele contem somente informacoes documentais publicas e a arquitetura textual inferida; o corpo do
+codigo-fonte humano nao foi incluido. A resposta da IA devera ser salva separadamente e depois
+avaliada pelas mesmas ferramentas Semgrep e SonarQube usadas no projeto humano.
+
+INSTRUCAO PARA A IA
+================================================================================
+Crie do zero um projeto Python funcionalmente semelhante ao descrito abaixo.
+REGRAS OBRIGATORIAS:
+- Nao procure, copie, traduza ou reproduza o codigo-fonte do repositorio original.
+- Use apenas README, documentacao e manifestos fornecidos neste prompt.
+- Implemente as funcionalidades publicas documentadas, validacao de entrada, tratamento de erros e testes proprios.
+- Nao inclua segredos, credenciais, caminhos absolutos ou dependencias desnecessarias.
+- Entregue todos os arquivos completos e um README de execucao.
+
+REFERENCIA: apache/airflow
+COMMIT DOCUMENTAL: d202fd47fa5025bd6ea3296f9a731b40acac52e5
+
+README:
+
+--- README.md ---
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+-->
+
+# Apache Airflow
+
+[![PyPI version](https://badge.fury.io/py/apache-airflow.svg)](https://badge.fury.io/py/apache-airflow)
+[![GitHub Build](https://github.com/apache/airflow/workflows/CI%20Build/badge.svg)](https://github.com/apache/airflow/actions)
+[![Coverage Status](https://img.shields.io/codecov/c/github/apache/airflow/master.svg)](https://codecov.io/github/apache/airflow?branch=master)
+[![License](http://img.shields.io/:license-Apache%202-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.txt)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/apache-airflow.svg)](https://pypi.org/project/apache-airflow/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/apache/airflow.svg)](https://hub.docker.com/r/apache/airflow)
+[![Docker Stars](https://img.shields.io/docker/stars/apache/airflow.svg)](https://hub.docker.com/r/apache/airflow)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/apache-airflow)](https://pypi.org/project/apache-airflow/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Twitter Follow](https://img.shields.io/twitter/follow/ApacheAirflow.svg?style=social&label=Follow)](https://twitter.com/ApacheAirflow)
+[![Slack Status](https://img.shields.io/badge/slack-join_chat-white.svg?logo=slack&style=social)](https://s.apache.org/airflow-slack)
+
+[Apache Airflow](https://airflow.apache.org/docs/stable/) (or simply Airflow) is a platform to programmatically author, schedule, and monitor workflows.
+
+When workflows are defined as code, they become more maintainable, versionable, testable, and collaborative.
+
+Use Airflow to author workflows as directed acyclic graphs (DAGs) of tasks. The Airflow scheduler executes your tasks on an array of workers while following the specified dependencies. Rich command line utilities make performing complex surgeries on DAGs a snap. The rich user interface makes it easy to visualize pipelines running in production, monitor progress, and troubleshoot issues when needed.
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of contents**
+
+- [Project Focus](#project-focus)
+- [Principles](#principles)
+- [Requirements](#requirements)
+- [Support for Python versions](#support-for-python-versions)
+- [Getting started](#getting-started)
+- [Installing from PyPI](#installing-from-pypi)
+- [Official source code](#official-source-code)
+- [Convenience packages](#convenience-packages)
+- [User Interface](#user-interface)
+- [Contributing](#contributing)
+- [Who uses Apache Airflow?](#who-uses-apache-airflow)
+- [Who Maintains Apache Airflow?](#who-maintains-apache-airflow)
+- [Can I use the Apache Airflow logo in my presentation?](#can-i-use-the-apache-airflow-logo-in-my-presentation)
+- [Airflow merchandise](#airflow-merchandise)
+- [Links](#links)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Project Focus
+
+Airflow works best with workflows that are mostly static and slowly changing. When DAG structure is similar from one run to the next, it allows for clarity around unit of work and continuity. Other similar projects include [Luigi](https://github.com/spotify/luigi), [Oozie](https://oozie.apache.org/) and [Azkaban](https://azkaban.github.io/).
+
+Airflow is commonly used to process data, but has the opinion that tasks should ideally be idempotent (i.e. results of the task will be the same, and will not create duplicated data in a destination system), and should not pass large quantities of data from one task to the next (though tasks can pass metadata using Airflow's [Xcom feature](https://airflow.apache.org/docs/stable/concepts.html#xcoms)). For high-volume, data-intensive tasks, a best practice is to delegate to external services that specialize on that type of work.
+
+Airflow is not a streaming solution, but it is often used to process real-time data, pulling data off streams in batches.
+
+## Principles
+
+- **Dynamic**:  Airflow pipelines are configuration as code (Python), allowing for dynamic pipeline generation. This allows for writing code that instantiates pipelines dynamically.
+- **Extensible**:  Easily define your own operators, executors and extend the library so that it fits the level of abstraction that suits your environment.
+- **Elegant**:  Airflow pipelines are lean and explicit. Parameterizing your scripts is built into the core of Airflow using the powerful **Jinja** templating engine.
+- **Scalable**:  Airflow has a modular architecture and uses a message queue to orchestrate an arbitrary number of workers.
+
+## Requirements
+
+Apache Airflow is tested with:
+
+|              | Master version (dev)      | Stable version (2.0.0)   | Previous version (1.10.14) |
+| ------------ | ------------------------- | ------------------------ | -------------------------  |
+| Python       | 3.6, 3.7, 3.8             | 3.6, 3.7, 3.8            | 2.7, 3.5, 3.6, 3.7, 3.8    |
+| PostgreSQL   | 9.6, 10, 11, 12, 13       | 9.6, 10, 11, 12, 13      | 9.6, 10, 11, 12, 13        |
+| MySQL        | 5.7, 8                    | 5.7, 8                   | 5.6, 5.7                   |
+| SQLite       | latest stable             | latest stable            | latest stable              |
+| Kubernetes   | 1.16.9, 1.17.5, 1.18.6    | 1.16.9, 1.17.5, 1.18.6   | 1.16.9, 1.17.5, 1.18.6     |
+
+**Note:** MariaDB and MySQL 5.x are unable to or have limitations with
+running multiple schedulers -- please see the "Scheduler" docs.
+
+**Note:** SQLite is used in Airflow tests. Do not use it in production. We recommend
+using the latest stable version of SQLite for local development. Some older versions
+of SQLite might not work well, however anything at or above 3.27.2 should work fine.
+
+## Support for Python versions
+
+As of Airflow 2.0 we agreed to certain rules we follow for Python support. They are based on the official
+release schedule of Python, nicely summarized in the
+[Python Developer's Guide](https://devguide.python.org/#status-of-python-branches)
+
+1. We finish support for python versions when they reach EOL (For python 3.6 it means that we will remove it
+   from being supported on 23.12.2021).
+
+2. The "oldest" supported version of Python is the default one. "Default" is only meaningful in terms of
+   "smoke tests" in CI PRs which are run using this default version.
+
+3. We support a new version of Python after it is officially released, as soon as we manage to make
+   it works in our CI pipeline (which might not be immediate) and release a new version of Airflow
+   (non-Patch version) based on this CI set-up.
+
+### Additional notes on Python version requirements
+
+* Previous version [requires](https://github.com/apache/airflow/issues/8162) at least Python 3.5.3
+  when using Python 3
+
+## Getting started
+
+Visit the official Airflow website documentation (latest **stable** release) for help with [installing Airflow](https://airflow.apache.org/installation.html), [getting started](https://airflow.apache.org/start.html), or walking through a more complete [tutorial](https://airflow.apache.org/tutorial.html).
+
+> Note: If you're looking for documentation for master branch (latest development branch): you can find it on [s.apache.org/airflow-docs](https://s.apache.org/airflow-docs/).
+
+For more information on Airflow's Roadmap or Airflow Improvement Proposals (AIPs), visit the [Airflow Wiki](https://cwiki.apache.org/confluence/display/AIRFLOW/Airflow+Home).
+
+Official Docker (container) images for Apache Airflow are described in [IMAGES.rst](IMAGES.rst).
+
+## Installing from PyPI
+
+We publish Apache Airflow as `apache-airflow` package in PyPI. Installing it however might be sometimes tricky
+because Airflow is a bit of both a library and application. Libraries usually keep their dependencies open and
+applications usually pin them, but we should do neither and both at the same time. We decided to keep
+our dependencies as open as possible (in `setup.py`) so users can install different versions of libraries
+if needed. This means that from time to time plain `pip install apache-airflow` will not work or will
+produce unusable Airflow installation.
+
+In order to have repeatable installation, however, introduced in **Airflow 1.10.10** and updated in
+**Airflow 1.10.12** we also keep a set of "known-to-be-working" constraint files in the
+orphan `constraints-master`, `constraints-2-0` and `constraints-1-10` branches. We keep those "known-to-be-working"
+constraints files separately per major/minor python version.
+You can use them as constraint files when installing Airflow from PyPI. Note that you have to specify
+correct Airflow tag/version/branch and python versions in the URL.
+
+1. Installing just Airflow:
+
+NOTE!!!
+
+On November 2020, new version of PIP (20.3) has been released with a new, 2020 resolver. This resolver
+does not yet work with Apache Airflow and might lead to errors in installation - depends on your choice
+of extras. In order to install Airflow you need to either downgrade pip to version 20.2.4
+`pip install --upgrade pip==20.2.4` or, in case you use Pip 20.3, you need to add option
+`--use-deprecated legacy-resolver` to your pip install command.
+
+
+```bash
+pip install apache-airflow==2.0.0 \
+ --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.0.0/constraints-3.7.txt"
+```
+
+2. Installing with extras (for example postgres,google)
+
+```bash
+pip install apache-airflow[postgres,google]==2.0.0 \
+ --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.0.0/constraints-3.7.txt"
+```
+
+For information on installing backport providers check [/docs/backport-providers.rst][/docs/backport-providers.rst].
+
+## Official source code
+
+Apache Airflow is an [Apache Software Foundation](http://www.apache.org) (ASF) project,
+and our official source code releases:
+
+- Follow the [ASF Release Policy](http://www.apache.org/legal/release-policy.html)
+- Can be downloaded from [the ASF Distribution Directory](https://downloads.apache.org/airflow)
+- Are cryptographically signed by the release manager
+- Are officially voted on by the PMC members during the
+  [Release Approval Process](http://www.apache.org/legal/release-policy.html#release-approval)
+
+Following the ASF rules, the source packages released must be sufficient for a user to build and test the
+release provided they have access to the appropriate platform and tools.
+
+## Convenience packages
+
+There are other ways of installing and using Airflow. Those are "convenience" methods - they are
+not "official releases" as stated by the `ASF Release Policy`, but they can be used by the users
+who do not want to build the software themselves.
+
+Those are - in the order of most common ways people install Airflow:
+
+- [PyPI releases](https://pypi.org/project/apache-airflow/) to install Airflow using standard `pip` tool
+- [Docker Images](https://hub.docker.com/repository/docker/apache/airflow) to install airflow via
+  `docker` tool, use them in Kubernetes, Helm Charts, `docker-compose`, `docker swarm` etc. You can
+  read more about using, customising, and extending the images in the
+  [Latest docs](https://airflow.apache.org/docs/apache-airflow/stable/production-deployment.html), and
+  learn details on the internals in the [IMAGES.rst](IMAGES.rst) document.
+- [Tags in GitHub](https://github.com/apache/airflow/tags) to retrieve the git project sources that
+  were used to generate official source packages via git
+
+All those artifacts are not official releases, but they are prepared using officially released sources.
+Some of those artifacts are "development" or "pre-release" ones, and they are clearly marked as such
+following the ASF Policy.
+
+## User Interface
+
+- **DAGs**: Overview of all DAGs in your environment.
+
+  ![DAGs](/docs/apache-airflow/img/dags.png)
+
+- **Tree View**: Tree representation of a DAG that spans across time.
+
+  ![Tree View](/docs/apache-airflow/img/tree.png)
+
+- **Graph View**: Visualization of a DAG's dependencies and their current status for a specific run.
+
+  ![Graph View](/docs/apache-airflow/img/graph.png)
+
+- **Task Duration**: Total time spent on different tasks over time.
+
+  ![Task Duration](/docs/apache-airflow/img/duration.png)
+
+- **Gantt View**: Duration and overlap of a DAG.
+
+  ![Gantt View](/docs/apache-airflow/img/gantt.png)
+
+- **Code View**:  Quick way to view source code of a DAG.
+
+  ![Code View](/docs/apache-airflow/img/code.png)
+
+
+## Contributing
+
+Want to help build Apache Airflow? Check out our [contributing documentation](https://github.com/apache/airflow/blob/master/CONTRIBUTING.rst).
+
+## Who uses Apache Airflow?
+
+More than 350 organizations are using Apache Airflow [in the wild](https://github.com/apache/airflow/blob/master/INTHEWILD.md).
+
+## Who Maintains Apache Airflow?
+
+Airflow is the work of the [community](https://github.com/apache/airflow/graphs/contributors),
+but the [core committers/maintainers](https://people.apache.org/committers-by-project.html#airflow)
+are responsible for reviewing and merging PRs as well as steering conversation around new feature requests.
+If you would like to become a maintainer, please review the Apache Airflow
+[committer requirements](https://airflow.apache.org/docs/stable/project.html#committers).
+
+## Can I use the Apache Airflow logo in my presentation?
+
+Yes! Be sure to abide by the Apache Foundation [trademark policies](https://www.apache.org/foundation/marks/#books) and the Apache Airflow [Brandbook](https://cwiki.apache.org/confluence/display/AIRFLOW/Brandbook). The most up to date logos are found in [this repo](/docs/apache-airflow/img/logos) and on the Apache Software Foundation [website](https://www.apache.org/logos/about.html).
+
+## Airflow merchandise
+
+If you would love to have Apache Airflow stickers, t-shirt etc. then check out
+[Redbubble Shop](https://www.redbubble.com/i/sticker/Apache-Airflow-by-comdev/40497530.EJUG5).
+
+## Links
+
+- [Documentation](https://airflow.apache.org/docs/stable/)
+- [Chat](https://s.apache.org/airflow-slack)
+
+
+DOCUMENTACAO PUBLICA:
+
+--- backport-providers.rst ---
+ .. Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+ ..   http://www.apache.org/licenses/LICENSE-2.0
+
+ .. Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+
+Backport Providers
+------------------
+
+Context: Airflow 2.0 operators, hooks, and secrets
+''''''''''''''''''''''''''''''''''''''''''''''''''
+
+We already have a lot of changes in the operators, transfers, hooks, sensors, secrets for many external systems, but
+they are not used nor tested widely because they are part of the master/2.0 release.
+
+As a part of Airflow 2.0, following AIP-21 "change in import paths" all the non-core interfaces to external systems of
+Apache Airflow have been moved to the ``airflow.providers`` package.
+
+Thanks to that, the operators from Airflow 2.0 can be used in Airflow 1.10 as separately installable packages
+with the constraint that those packages can only be used in Python 3.6+ environment.
+
+Installing Airflow 2.0 operators in Airflow 1.10
+''''''''''''''''''''''''''''''''''''''''''''''''
+
+We released backport packages that can be installed for older Airflow versions. These backport packages will be
+released more frequently compared to the main Airflow 1.10.* releases.
+
+You will not have to upgrade your Airflow version to use those packages. You can find those packages on
+`PyPI <https://pypi.org/search/?q=apache-airflow-backport-providers&o=>`_
+and install them separately for each provider.
+
+These packages are available now and can be used in the latest Airflow 1.10.* version. Most of those packages are
+also installable and usable in most Airflow 1.10.* releases but there is no extensive testing done beyond the
+latest released version, so you might expect more problems in earlier Airflow versions.
+
+An easier migration path to 2.0
+'''''''''''''''''''''''''''''''
+
+With backported providers package users can migrate their DAGs to the new providers package incrementally and once
+they convert to the new operators/sensors/hooks they can seamlessly migrate their environments to Airflow 2.0.
+The nice thing about providers backport packages is that you can use both old and new classes at the same time,
+even in the same DAG. So your migration can be gradual and smooth.
+
+Note that in Airflow 2.0 old classes raise deprecation warning and redirect to the new classes wherever it is possible.
+In some rare cases the new operators will not be fully backwards compatible, you will find information
+about those cases in `UPDATING.md <https://github.com/apache/airflow/blob/master/UPDATING.md>`_ where we
+explained all such cases.
+
+Switching early to the Airflow 2.0 operators while still running Airflow 1.10.x will make your migration much easier.
+
+Installing backport packages
+'''''''''''''''''''''''''''''
+
+Note that the backport packages might require extra dependencies. ``pip`` installs the required dependencies
+automatically when it installs the backport package but there are sometimes cross-dependencies between
+the backport packages. For example ``google`` package has cross-dependency with ``amazon`` package to allow
+transfers between those two cloud providers. You might need to install those packages in case you
+use cross-dependent packages. The easiest way to install them is to use "extras" when installing the
+package, for example the below will install both ``google`` and ``amazon`` backport packages:
+
+.. code-block:: bash
+
+  pip install apache-airflow-backport-providers-google[amazon]
+
+This is all documented in the PyPI description of the packages as well as in the README.md file available
+for each provider package. For example for ``google`` package you can find the readme in
+`README.md <https://github.com/apache/airflow/blob/master/airflow/providers/google/README.md>`_.
+
+You will also find there the summary of both - new classes and moved classes as well as requirement information.
+
+Troubleshooting installing backport packages
+''''''''''''''''''''''''''''''''''''''''''''
+
+Backport providers only work when they are installed in the same namespace as the 'apache-airflow' 1.10 package.
+This is majority of cases when you simply run pip install - it installs all packages in the same folder
+(usually in ``/usr/local/lib/pythonX.Y/site-packages``). But when you install the ``apache-airflow`` and
+``apache-airflow-backport-package-*`` using different methods (for example using ``pip install -e .`` or
+``pip install --user`` they might be installed in different namespaces.
+
+If that's the case, the provider packages will not be importable (the error in such case is
+``ModuleNotFoundError: No module named 'airflow.providers'``).
+
+If you experience the problem, you can easily fix it by creating symbolic link in your
+installed "airflow" folder to the "providers" folder where you installed your backport packages.
+
+If you installed it with -e, this link should be created in your airflow sources,
+if you installed it with the ``--user`` flag it should be from the ``~/.local/lib/pythonX.Y/site-packages/airflow/``
+folder.
+
+.. spelling::
+
+  backported
+
+--- best-practices.rst ---
+ .. Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+ ..   http://www.apache.org/licenses/LICENSE-2.0
+
+ .. Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+Best Practices
+==============
+
+Creating a new DAG is a two-step process:
+
+- writing Python code to create a DAG object,
+- testing if the code meets our expectations
+
+This tutorial will introduce you to the best practices for these two steps.
+
+Writing a DAG
+^^^^^^^^^^^^^^
+Creating a new DAG in Airflow is quite simple. However, there are many things that you need to take care of
+to ensure the DAG run or failure does not produce unexpected results.
+
+Creating a task
+---------------
+
+You should treat tasks in Airflow equivalent to transactions in a database. This implies that you should never produce
+incomplete results from your tasks. An example is not to produce incomplete data in ``HDFS`` or ``S3`` at the end of a task.
+
+Airflow can retry a task if it fails. Thus, the tasks should produce the same outcome on every re-run.
+Some of the ways you can avoid producing a different result -
+
+* Do not use INSERT during a task re-run, an INSERT statement might lead to duplicate rows in your database.
+  Replace it with UPSERT.
+* Read and write in a specific partition. Never read the latest available data in a task.
+  Someone may update the input data between re-runs, which results in different outputs.
+  A better way is to read the input data from a specific partition. You can use ``execution_date`` as a partition.
+  You should follow this partitioning method while writing data in S3/HDFS, as well.
+* The python datetime ``now()`` function gives the current datetime object.
+  This function should never be used inside a task, especially to do the critical computation, as it leads to different outcomes on each run.
+  It's fine to use it, for example, to generate a temporary log.
+
+.. tip::
+
+    You should define repetitive parameters such as ``connection_id`` or S3 paths in ``default_args`` rather than declaring them for each task.
+    The ``default_args`` help to avoid mistakes such as typographical errors.
+
+
+Deleting a task
+----------------
+
+Never delete a task from a DAG. In case of deletion, the historical information of the task disappears from the Airflow UI.
+It is advised to create a new DAG in case the tasks need to be deleted.
+
+
+Communication
+--------------
+
+Airflow executes tasks of a DAG on different servers in case you are using :doc:`Kubernetes executor <../executor/kubernetes>` or :doc:`Celery executor <../executor/celery>`.
+Therefore, you should not store any file or config in the local filesystem as the next task is likely to run on a different server without access to it — for example, a task that downloads the data file that the next task processes.
+In the case of :class:`Local executor <airflow.executors.local_executor.LocalExecutor>`,
+storing a file on disk can make retries harder e.g., your task requires a config file that is deleted by another task in DAG.
+
+If possible, use ``XCom`` to communicate small messages between tasks and a good way of passing larger data between tasks is to use a remote storage such as S3/HDFS.
+For example, if we have a task that stores processed data in S3 that task can push the S3 path for the output data in ``Xcom``,
+and the downstream tasks can pull the path from XCom and use it to read the data.
+
+The tasks should also not store any authentication parameters such as passwords or token inside them.
+Where at all possible, use :ref:`Connections <concepts-connections>` to store data securely in Airflow backend and retrieve them using a unique connection id.
+
+
+Variables
+---------
+
+You should avoid usage of Variables outside an operator's ``execute()`` method or Jinja templates if possible,
+as Variables create a connection to metadata DB of Airflow to fetch the value, which can slow down parsing and place extra load on the DB.
+
+Airflow parses all the DAGs in the background at a specific period.
+The default period is set using ``processor_poll_interval`` config, which is by default 1 second. During parsing, Airflow creates a new connection to the metadata DB for each DAG.
+This can result in a lot of open connections.
+
+The best way of using variables is via a Jinja template, which will delay reading the value until the task execution. The template syntax to do this is:
+
+.. code-block::
+
+    {{ var.value.<variable_name> }}
+
+or if you need to deserialize a json object from the variable :
+
+.. code-block::
+
+    {{ var.json.<variable_name> }}
+
+
+.. note::
+
+    In general, you should not write any code outside the tasks. The code outside the tasks runs every time Airflow parses the DAG, which happens every second by default.
+
+
+Testing a DAG
+^^^^^^^^^^^^^
+
+Airflow users should treat DAGs as production level code, and DAGs should have various associated tests to ensure that they produce expected results.
+You can write a wide variety of tests for a DAG. Let's take a look at some of them.
+
+DAG Loader Test
+---------------
+
+This test should ensure that your DAG does not contain a piece of code that raises error while loading.
+No additional code needs to be written by the user to run this test.
+
+.. code-block::
+
+ python your-dag-file.py
+
+Running the above command without any error ensures your DAG does not contain any uninstalled dependency, syntax errors, etc.
+
+You can look into :ref:`Testing a DAG <testing>` for details on how to test individual operators.
+
+Unit tests
+-----------
+
+Unit tests ensure that there is no incorrect code in your DAG. You can write unit tests for both your tasks and your DAG.
+
+**Unit test for loading a DAG:**
+
+.. code-block::
+
+ from airflow.models import DagBag
+ import unittest
+
+ class TestHelloWorldDAG(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.dagbag = DagBag()
+
+    def test_dag_loaded(self):
+        dag = self.dagbag.get_dag(dag_id='hello_world')
+        self.assertDictEqual(self.dagbag.import_errors, {})
+        self.assertIsNotNone(dag)
+        self.assertEqual(len(dag.tasks), 1)
+
+**Unit test a DAG structure:**
+This is an example test want to verify the structure of a code-generated DAG against a dict object
+
+.. code-block::
+
+ import unittest
+ class testClass(unittest.TestCase):
+     def assertDagDictEqual(self,source,dag):
+         self.assertEqual(dag.task_dict.keys(),source.keys())
+         for task_id,downstream_list in source.items():
+             self.assertTrue(dag.has_task(task_id), msg="Missing task_id: {} in dag".format(task_id))
+             task = dag.get_task(task_id)
+             self.assertEqual(task.downstream_task_ids, set(downstream_list),
+                              msg="unexpected downstream link in {}".format(task_id))
+     def test_dag(self):
+         self.assertDagDictEqual({
+           "DummyInstruction_0": ["DummyInstruction_1"],
+           "DummyInstruction_1": ["DummyInstruction_2"],
+           "DummyInstruction_2": ["DummyInstruction_3"],
+           "DummyInstruction_3": []
+         },dag)
+
+**Unit test for custom operator:**
+
+.. code-block::
+
+ import unittest
+ from airflow.utils.state import State
+
+ DEFAULT_DATE = '2019-10-03'
+ TEST_DAG_ID = 'test_my_custom_operator'
+
+ class MyCustomOperatorTest(unittest.TestCase):
+    def setUp(self):
+        self.dag = DAG(TEST_DAG_ID, schedule_interval='@daily', default_args={'start_date' : DEFAULT_DATE})
+        self.op = MyCustomOperator(
+            dag=self.dag,
+            task_id='test',
+            prefix='s3://bucket/some/prefix',
+        )
+        self.ti = TaskInstance(task=self.op, execution_date=DEFAULT_DATE)
+
+    def test_execute_no_trigger(self):
+        self.ti.run(ignore_ti_state=True)
+        self.assertEqual(self.ti.state, State.SUCCESS)
+        #Assert something related to tasks results
+
+Self-Checks
+------------
+
+You can also implement checks in a DAG to make sure the tasks are producing the results as expected.
+As an example, if you have a task that pushes data to S3, you can implement a check in the next task. For example, the check could
+make sure that the partition is created in S3 and perform some simple checks to determine if the data is correct.
+
+
+Similarly, if you have a task that starts a microservice in Kubernetes or Mesos, you should check if the service has started or not using :class:`airflow.providers.http.sensors.http.HttpSensor`.
+
+.. code-block::
+
+ task = PushToS3(...)
+ check = S3KeySensor(
+    task_id='check_parquet_exists',
+    bucket_key="s3://bucket/key/foo.parquet",
+    poke_interval=0,
+    timeout=0
+ )
+ task >> check
+
+
+
+Staging environment
+--------------------
+
+If possible, keep a staging environment to test the complete DAG run before deploying in the production.
+Make sure your DAG is parameterized to change the variables, e.g., the output path of S3 operation or the database used to read the configuration.
+Do not hard code values inside the DAG and then change them manually according to the environment.
+
+You can use environment variables to parameterize the DAG.
+
+.. code-block::
+
+ import os
+
+ dest = os.environ.get(
+    "MY_DAG_DEST_PATH",
+    "s3://default-target/path/"
+ )
+
+--- changelog.rst ---
+ .. Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+ ..   http://www.apache.org/licenses/LICENSE-2.0
+
+ .. Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+
+
+Changelog
+=========
+
+.. include:: ../../CHANGELOG.txt
+
+--- cli-and-env-variables-ref.rst ---
+ .. Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+ ..   http://www.apache.org/licenses/LICENSE-2.0
+
+ .. Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+.. _cli:
+
+Command Line Interface and Environment Variables Reference
+==========================================================
+
+Command Line Interface
+''''''''''''''''''''''
+
+Airflow has a very rich command line interface that allows for
+many types of operation on a DAG, starting services, and supporting
+development and testing.
+
+.. note::
+    For more information on usage CLI, see :doc:`usage-cli`
+
+.. contents:: Content
+    :local:
+    :depth: 2
+
+.. argparse::
+   :module: airflow.cli.cli_parser
+   :func: get_parser
+   :prog: airflow
+
+Environment Variables
+'''''''''''''''''''''
+
+.. envvar:: AIRFLOW__{SECTION}__{KEY}
+
+  Sets options in the Airflow configuration. This takes priority over the value in the ``airflow.cfg`` file.
+
+  Replace the ``{SECTION}`` placeholder with any section
+  and the ``{KEY}`` placeholder with any key in that specified section.
+
+  For example, if you want to set the ``dags_folder`` options in ``[core]`` section,
+  then you should set the ``AIRFLOW__CORE__DAGS_FOLDER`` environment variable.
+
+  For more information, see: :doc:`/howto/set-config`.
+
+.. envvar:: AIRFLOW__{SECTION}__{KEY}_CMD
+
+  For any specific key in a section in Airflow, execute the command the key is pointing to.
+  The result of the command is used as a value of the ``AIRFLOW__{SECTION}__{KEY}`` environment variable.
+
+  This is only supported by the following config options:
+
+* ``sql_alchemy_conn`` in ``[core]`` section
+* ``fernet_key`` in ``[core]`` section
+* ``broker_url`` in ``[celery]`` section
+* ``flower_basic_auth`` in ``[celery]`` section
+* ``result_backend`` in ``[celery]`` section
+* ``password`` in ``[atlas]`` section
+* ``smtp_password`` in ``[smtp]`` section
+* ``secret_key`` in ``[webserver]`` section
+
+.. envvar:: AIRFLOW__{SECTION}__{KEY}_SECRET
+
+  For any specific key in a section in Airflow, retrieve the secret from the configured secrets backend.
+  The returned value will be used as the value of the ``AIRFLOW__{SECTION}__{KEY}`` environment variable.
+
+  See :ref:`Secrets Backends<secrets_backend_configuration>` for more information on available secrets backends.
+
+  This form of environment variable configuration is only supported for the same subset of config options as ``AIRFLOW__{SECTION}__{KEY}_CMD``
+
+.. envvar:: AIRFLOW_CONFIG
+
+  The path to the Airflow configuration file.
+
+.. envvar:: AIRFLOW_CONN_{CONN_ID}
+
+  Defines a new connection with the name ``{CONN_ID}`` using the URI value.
+
+  For example, if you want to create a connection named ``PROXY_POSTGRES_TCP``, you can create
+  a key ``AIRFLOW_CONN_PROXY_POSTGRES_TCP`` with the connection URI as the value.
+
+  For more information, see: :ref:`environment_variables_secrets_backend`.
+
+.. envvar:: AIRFLOW_HOME
+
+  The root directory for the Airflow content.
+  This is the default parent directory for Airflow assets such as DAGs and logs.
+
+.. envvar:: AIRFLOW_VAR_{KEY}
+
+  Defines an Airflow variable.
+  Replace the ``{KEY}`` placeholder with the variable name.
+
+  For more information, see: :ref:`managing_variables`.
+
+--- concepts.rst ---
+ .. Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+ ..   http://www.apache.org/licenses/LICENSE-2.0
+
+ .. Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+.. _concepts:
+
+Concepts
+########
+
+The Airflow platform is a tool for describing, executing, and monitoring
+workflows.
+
+Core Ideas
+''''''''''
+
+DAGs
+====
+
+In Airflow, a ``DAG`` -- or a Directed Acyclic Graph -- is a collection of all
+the tasks you want to run, organized in a way that reflects their relationships
+and dependencies.
+
+A DAG is defined in a Python script, which represents the DAGs structure (tasks
+and their dependencies) as code.
+
+For example, a simple DAG could consist of three tasks: A, B, and C. It could
+say that A has to run successfully before B can run, but C can run anytime. It
+could say that task A times out after 5 minutes, and B can be restarted up to 5
+times in case it fails. It might also say that the workflow will run every night
+at 10pm, but should not start until a certain date.
+
+In this way, a DAG describes *how* you want to carry out your workflow; but
+notice that we haven't said anything about *what* we actually want to do! A, B,
+and C could be anything. Maybe A prepares data for B to analyze while C sends an
+email. Or perhaps A monitors your location so B can open your garage door while
+C turns on your house lights. The important thing is that the DAG isn't
+concerned with what its constituent tasks do; its job is to make sure that
+whatever they do happens at the right time, or in the right order, or with the
+right handling of any unexpected issues.
+
+DAGs are defined in standard Python files that are placed in Airflow's
+``DAG_FOLDER``. Airflow will execute the code in each file to dynamically build
+the ``DAG`` objects. You can have as many DAGs as you want, each describing an
+arbitrary number of tasks. In general, each one should correspond to a single
+logical workflow.
+
+.. note:: When searching for DAGs, Airflow only considers Python files
+   that contain the strings "airflow" and "dag" by default (case-insensitive).
+   To consider all Python files instead, disable the ``DAG_DISCOVERY_SAFE_MODE``
+   configuration flag.
+
+.. _concepts:scope:
+
+Scope
+-----
+
+Airflow will load any ``DAG`` object it can import from a DAGfile. Critically,
+that means the DAG must appear in ``globals()``. Consider the following two
+DAGs. Only ``dag_1`` will be loaded; the other one only appears in a local
+scope.
+
+.. code-block:: python
+
+    dag_1 = DAG('this_dag_will_be_discovered')
+
+    def my_function():
+        dag_2 = DAG('but_this_dag_will_not')
+
+    my_function()
+
+Sometimes this can be put to good use. For example, a common pattern with
+:class:`~airflow.operators.subdag.SubDagOperator` is to define the subdag inside a function so that Airflow
+doesn't try to load it as a standalone DAG.
+
+.. _default-args:
+
+Default Arguments
+-----------------
+
+If a dictionary of ``default_args`` is passed to a DAG, it will apply them to
+any of its operators. This makes it easy to apply a common parameter to many operators without having to type it many times.
+
+.. code-block:: python
+
+    default_args = {
+        'start_date': datetime(2016, 1, 1),
+        'owner': 'airflow'
+    }
+
+    dag = DAG('my_dag', default_args=default_args)
+    op = DummyOperator(task_id='dummy', dag=dag)
+    print(op.owner) # Airflow
+
+.. _concepts:context_manager:
+
+Context Manager
+---------------
+
+*Added in Airflow 1.8*
+
+DAGs can be used as context managers to automatically assign new operators to that DAG.
+
+.. code-block:: python
+
+    with DAG('my_dag', start_date=datetime(2016, 1, 1)) as dag:
+        op = DummyOperator('op')
+
+    op.dag is dag # True
+
+.. _concepts:task_flow_api:
+
+TaskFlow API
+------------
+
+.. versionadded:: 2.0.0
+
+Airflow 2.0 adds a new style of authoring dags called the TaskFlow API which removes a lot of the boilerplate
+around creating PythonOperators, managing dependencies between task and accessing XCom values. (During
+development this feature was called "Functional DAGs", so if you see or hear any references to that, it's the
+same thing)
+
+Outputs and inputs are sent between tasks using :ref:`XCom values <concepts:xcom>`. In addition, you can wrap
+functions as tasks using the :ref:`task decorator <concepts:task_decorator>`. Airflow will also automatically
+add dependencies between tasks to ensure that XCom messages are available when operators are executed.
+
+Example DAG built with the TaskFlow API
+
+.. code-block:: python
+
+  with DAG(
+      'send_server_ip', default_args=default_args, schedule_interval=None
+  ) as dag:
+
+    # Using default connection as it's set to httpbin.org by default
+    get_ip = SimpleHttpOperator(
+        task_id='get_ip', endpoint='get', method='GET', xcom_push=True
+    )
+
+    @dag.task(multiple_outputs=True)
+    def prepare_email(raw_json: str) -> Dict[str, str]:
+      external_ip = json.loads(raw_json)['origin']
+      return {
+        'subject':f'Server connected from {external_ip}',
+        'body': f'Seems like today your server executing Airflow is connected from the external IP {external_ip}<br>'
+      }
+
+    email_info = prepare_email(get_ip.output)
+
+    send_email = EmailOperator(
+        task_id='send_email',
+        to='example@example.com',
+        subject=email_info['subject'],
+        html_content=email_info['body']
+    )
+
+DAG decorator
+-------------
+
+.. versionadded:: 2.0.0
+
+In addition to creating DAGs using :ref:`context manager <concepts:context_manager>`, in Airflow 2.0 you can also
+create DAGs from a function. DAG decorator creates a DAG generator function. Any function decorated with ``@dag``
+returns a DAG object.
+
+DAG decorator also sets up the parameters you have in the function as DAG params. This allows you to parameterize
+your DAGs and set the parameters when triggering the DAG manually. See
+:ref:`Passing Parameters when triggering dags <dagrun:parameters>` to learn how to pass parameters when triggering DAGs.
+
+You can also use the parameters on jinja templates by using the ``{{context.params}}`` dictionary.
+
+Example DAG with decorator:
+
+.. exampleinclude:: /../../airflow/example_dags/example_dag_decorator.py
+    :language: python
+    :start-after: [START dag_decorator_usage]
+    :end-before: [END dag_decorator_usage]
+
+.. note:: Note that Airflow will only load DAGs that appear in ``globals()`` as noted in :ref:`scope section <concepts:scope>`.
+  This means you need to make sure to have a variable for your returned DAG is in the module scope.
+  Otherwise Airflow won't detect your decorated DAG.
+
+.. _concepts:executor_config:
+
+executor_config
+===============
+
+The executor_config is an argument placed into operators that allow airflow users to override tasks
+before launch. Currently this is primarily used by the :class:`KubernetesExecutor`, but will soon be available
+for other overrides.
+
+.. _concepts:dagruns:
+
+DAG Runs
+========
+
+A DAG run is an instantiation of a DAG, containing task instances that run for a specific ``execution_date``.
+
+A DAG run is usually created by the Airflow scheduler, but can also be created by an external trigger.
+Multiple DAG runs may be running at once for a particular DAG, each of them having a different ``execution_date``.
+For example, we might currently have two DAG runs that are in progress for 2016-01-01 and 2016-01-02 respectively.
+
+.. _concepts:execution_date:
+
+execution_date
+--------------
+
+The ``execution_date`` is the *logical* date and time which the DAG Run, and its task instances, are running for.
+
+This allows task instances to process data for the desired *logical* date & time.
+While a task_instance or DAG run might have an *actual* start date of now,
+their *logical* date might be 3 months ago because we are busy reloading something.
+
+In the prior example the ``execution_date`` was 2016-01-01 for the first DAG Run and 2016-01-02 for the second.
+
+A DAG run and all task instances created within it are instanced with the same ``execution_date``, so
+that logically you can think of a DAG run as simulating the DAG running all of its tasks at some
+previous date & time specified by the ``execution_date``.
+
+.. _concepts:tasks:
+
+Tasks
+=====
+
+A Task defines a unit of work within a DAG; it is represented as a node in the DAG graph, and it is written in Python.
+
+Each task is an implementation of an Operator, for example a ``PythonOperator`` to execute some Python code,
+or a ``BashOperator`` to run a Bash command.
+
+The task implements an operator by defining specific values for that operator,
+such as a Python callable in the case of ``PythonOperator`` or a Bash command in the case of ``BashOperator``.
+
+Relations between Tasks
+-----------------------
+
+Consider the following DAG with two tasks.
+Each task is a node in our DAG, and there is a dependency from task_1 to task_2:
+
+.. code-block:: python
+
+    with DAG('my_dag', start_date=datetime(2016, 1, 1)) as dag:
+        task_1 = DummyOperator('task_1')
+        task_2 = DummyOperator('task_2')
+        task_1 >> task_2 # Define dependencies
+
+We can say that task_1 is *upstream* of task_2, and conversely task_2 is *downstream* of task_1.
+When a DAG Run is created, task_1 will start running and task_2 waits for task_1 to complete successfully before it may start.
+
+.. _concepts:task_decorator:
+
+Python task decorator
+--------------
+
+MANIFESTOS PUBLICOS:
+
+--- pyproject.toml ---
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+[tool.black]
+line-length = 110
+target-version = ['py36', 'py37', 'py38']
+skip-string-normalization = true
+
+--- setup.py ---
+#
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+"""Setup.py for the Airflow project."""
+
+import logging
+import os
+import subprocess
+import unittest
+from os.path import dirname
+from textwrap import wrap
+from typing import Dict, List, Set, Tuple
+
+from setuptools import Command, Distribution, find_namespace_packages, setup
+
+logger = logging.getLogger(__name__)
+
+version = '2.1.0.dev0'
+
+my_dir = dirname(__file__)
+
+
+def airflow_test_suite():
+    """Test suite for Airflow tests"""
+    test_loader = unittest.TestLoader()
+    test_suite = test_loader.discover(os.path.join(my_dir, 'tests'), pattern='test_*.py')
+    return test_suite
+
+
+class CleanCommand(Command):
+    """
+    Command to tidy up the project root.
+    Registered as cmdclass in setup() so it can be called with ``python setup.py extra_clean``.
+    """
+
+    description = "Tidy up the project root"
+    user_options = []  # type: List[str]
+
+    def initialize_options(self):
+        """Set default values for options."""
+
+    def finalize_options(self):
+        """Set final values for options."""
+
+    def run(self):  # noqa
+        """Run command to remove temporary files and directories."""
+        os.chdir(my_dir)
+        os.system('rm -vrf ./build ./dist ./*.pyc ./*.tgz ./*.egg-info')
+
+
+class CompileAssets(Command):
+    """
+    Compile and build the frontend assets using yarn and webpack.
+    Registered as cmdclass in setup() so it can be called with ``python setup.py compile_assets``.
+    """
+
+    description = "Compile and build the frontend assets"
+    user_options = []  # type: List[str]
+
+    def initialize_options(self):
+        """Set default values for options."""
+
+    def finalize_options(self):
+        """Set final values for options."""
+
+    def run(self):  # noqa
+        """Run a command to compile and build assets."""
+        subprocess.check_call('./airflow/www/compile_assets.sh')
+
+
+class ListExtras(Command):
+    """
+    List all available extras
+    Registered as cmdclass in setup() so it can be called with ``python setup.py list_extras``.
+    """
+
+    description = "List available extras"
+    user_options = []  # type: List[str]
+
+    def initialize_options(self):
+        """Set default values for options."""
+
+    def finalize_options(self):
+        """Set final values for options."""
+
+    def run(self):  # noqa
+        """List extras."""
+        print("\n".join(wrap(", ".join(EXTRAS_REQUIREMENTS.keys()), 100)))
+
+
+def git_version(version_: str) -> str:
+    """
+    Return a version to identify the state of the underlying git repo. The version will
+    indicate whether the head of the current git-backed working directory is tied to a
+    release tag or not : it will indicate the former with a 'release:{version}' prefix
+    and the latter with a 'dev0' prefix. Following the prefix will be a sha of the current
+    branch head. Finally, a "dirty" suffix is appended to indicate that uncommitted
+    changes are present.
+
+    :param str version_: Semver version
+    :return: Found Airflow version in Git repo
+    :rtype: str
+    """
+    try:
+        import git
+
+        try:
+            repo = git.Repo(os.path.join(*[my_dir, '.git']))
+        except git.NoSuchPathError:
+            logger.warning('.git directory not found: Cannot compute the git version')
+            return ''
+        except git.InvalidGitRepositoryError:
+            logger.warning('Invalid .git directory not found: Cannot compute the git version')
+            return ''
+    except ImportError:
+        logger.warning('gitpython not found: Cannot compute the git version.')
+        return ''
+    if repo:
+        sha = repo.head.commit.hexsha
+        if repo.is_dirty():
+            return f'.dev0+{sha}.dirty'
+        # commit is clean
+        return f'.release:{version_}+{sha}'
+    else:
+        return 'no_git_version'
+
+
+def write_version(filename: str = os.path.join(*[my_dir, "airflow", "git_version"])):
+    """
+    Write the Semver version + git hash to file, e.g. ".dev0+2f635dc265e78db6708f59f68e8009abb92c1e65".
+
+    :param str filename: Destination file to write
+    """
+    text = "{}".format(git_version(version))
+    with open(filename, 'w') as file:
+        file.write(text)
+
+
+if os.environ.get('USE_THEME_FROM_GIT'):
+    _SPHINX_AIRFLOW_THEME_URL = (
+        "@ https://github.com/apache/airflow-site/releases/download/0.0.4/"
+        "sphinx_airflow_theme-0.0.4-py3-none-any.whl"
+    )
+else:
+    _SPHINX_AIRFLOW_THEME_URL = ''
+
+# 'Start dependencies group' and 'Start dependencies group' are mark for ./scripts/ci/check_order_setup.py
+# If you change this mark you should also change ./scripts/ci/check_order_setup.py
+# Start dependencies group
+amazon = [
+    'boto3>=1.15.0,<1.16.0',
+    'botocore>=1.18.0,<1.19.0',
+    'watchtower~=0.7.3',
+]
+apache_beam = [
+    'apache-beam[gcp]',
+]
+async_packages = [
+    'eventlet>= 0.9.7',
+    'gevent>=0.13',
+    'greenlet>=0.4.9',
+]
+atlas = [
+    'atlasclient>=0.1.2',
+]
+azure = [
+    'azure-batch>=8.0.0',
+    'azure-cosmos>=3.0.1,<4',
+    'azure-datalake-store>=0.0.45',
+    'azure-identity>=1.3.1',
+    'azure-keyvault>=4.1.0',
+    'azure-kusto-data>=0.0.43,<0.1',
+    'azure-mgmt-containerinstance>=1.5.0,<2.0',
+    'azure-mgmt-datalake-store>=0.5.0',
+    'azure-mgmt-resource>=2.2.0',
+    'azure-storage>=0.34.0, <0.37.0',
+]
+cassandra = [
+    'cassandra-driver>=3.13.0,<3.21.0',
+]
+celery = [
+    'celery~=4.4.2',
+    'flower>=0.7.3, <1.0',
+    'vine~=1.3',  # https://stackoverflow.com/questions/32757259/celery-no-module-named-five
+]
+cgroups = [
+    'cgroupspy>=0.1.4',
+]
+cloudant = [
+    'cloudant>=2.0',
+]
+dask = ['cloudpickle>=1.4.1, <1.5.0', 'distributed>=2.11.1, <2.20']
+databricks = [
+    'requests>=2.20.0, <3',
+]
+datadog = [
+    'datadog>=0.14.0',
+]
+doc = [
+    'sphinx>=2.1.2',
+    f'sphinx-airflow-theme{_SPHINX_AIRFLOW_THEME_URL}',
+    'sphinx-argparse>=0.1.13',
+    'sphinx-autoapi==1.0.0',
+    'sphinx-copybutton',
+    'sphinx-jinja~=1.1',
+    'sphinx-rtd-theme>=0.1.6',
+    'sphinxcontrib-httpdomain>=1.7.0',
+    'sphinxcontrib-redoc>=1.6.0',
+    'sphinxcontrib-spelling==5.2.1',
+]
+docker = [
+    'docker~=3.0',
+]
+druid = [
+    'pydruid>=0.4.1',
+]
+elasticsearch = [
+    'elasticsearch>7, <7.6.0',
+    'elasticsearch-dbapi==0.1.0',
+    'elasticsearch-dsl>=5.0.0',
+]
+exasol = [
+    'pyexasol>=0.5.1,<1.0.0',
+]
+facebook = [
+    'facebook-business>=6.0.2',
+]
+flask_oauth = [
+    'Flask-OAuthlib>=0.9.1,<0.9.6',  # Flask OAuthLib 0.9.6 requires Flask-Login 0.5.0 - breaks FAB
+    'oauthlib!=2.0.3,!=2.0.4,!=2.0.5,<3.0.0,>=1.1.2',
+    'requests-oauthlib<1.2.0',
+]
+google = [
+    'PyOpenSSL',
+    'google-ads>=4.0.0,<8.0.0',
+    'google-api-python-client>=1.6.0,<2.0.0',
+    'google-auth>=1.0.0,<2.0.0',
+    'google-auth-httplib2>=0.0.1',
+    'google-cloud-automl>=0.4.0,<2.0.0',
+    'google-cloud-bigquery-datatransfer>=3.0.0,<4.0.0',
+    'google-cloud-bigtable>=1.0.0,<2.0.0',
+    'google-cloud-container>=0.1.1,<2.0.0',
+    'google-cloud-datacatalog>=1.0.0,<2.0.0',
+    'google-cloud-dataproc>=1.0.1,<2.0.0',
+    'google-cloud-dlp>=0.11.0,<2.0.0',
+    'google-cloud-kms>=2.0.0,<3.0.0',
+    'google-cloud-language>=1.1.1,<2.0.0',
+    'google-cloud-logging>=1.14.0,<2.0.0',
+    'google-cloud-memcache>=0.2.0',
+    'google-cloud-monitoring>=0.34.0,<2.0.0',
+    'google-cloud-os-login>=2.0.0,<3.0.0',
+    'google-cloud-pubsub>=2.0.0,<3.0.0',
+    'google-cloud-redis>=2.0.0,<3.0.0',
+    'google-cloud-secret-manager>=0.2.0,<2.0.0',
+    'google-cloud-spanner>=1.10.0,<2.0.0',
+    'google-cloud-speech>=0.36.3,<2.0.0',
+    'google-cloud-storage>=1.30,<2.0.0',
+    'google-cloud-tasks>=1.2.1,<2.0.0',
+    'google-cloud-texttospeech>=0.4.0,<2.0.0',
+    'google-cloud-translate>=1.5.0,<2.0.0',
+    'google-cloud-videointelligence>=1.7.0,<2.0.0',
+    'google-cloud-vision>=0.35.2,<2.0.0',
+    'grpcio-gcp>=0.2.2',
+    'json-merge-patch~=0.2',
+    'pandas-gbq',
+]
+grpc = [
+    'google-auth>=1.0.0, <2.0.0dev',
+    'google-auth-httplib2>=0.0.1',
+    'grpcio>=1.15.0',
+]
+hashicorp = [
+    'hvac~=0.10',
+]
+hdfs = [
+    'snakebite-py3',
+]
+hive = [
+    'hmsclient>=0.1.0',
+    'pyhive[hive]>=0.6.0',
+]
+jdbc = [
+    'jaydebeapi>=1.1.1',
+]
+jenkins = [
+    'python-jenkins>=1.0.0',
+]
+jira = [
+    'JIRA>1.0.7',
+]
+kerberos = [
+    'pykerberos>=1.1.13',
+    'requests_kerberos>=0.10.0',
+    'thrift_sasl>=0.2.0',
+]
+kubernetes = [
+    'cryptography>=2.0.0',
+    'kubernetes>=3.0.0, <12.0.0',
+]
+kylin = ['kylinpy>=2.6']
+ldap = [
+    'ldap3>=2.5.1',
+    'python-ldap',
+]
+mongo = [
+    'dnspython>=1.13.0,<2.0.0',
+    'pymongo>=3.6.0',
+]
+mssql = [
+    'pymssql~=2.1,>=2.1.5',
+]
+mysql = [
+    'mysql-connector-python>=8.0.11, <=8.0.18',
+    'mysqlclient>=1.3.6,<1.4',
+]
+odbc = [
+    'pyodbc',
+]
+oracle = [
+    'cx_Oracle>=5.1.2',
+]
+pagerduty = [
+    'pdpyras>=4.1.2,<5',
+]
+papermill = [
+    'nteract-scrapbook[all]>=0.3.1',
+    'papermill[all]>=1.2.1',
+]
+password = [
+    'bcrypt>=2.0.0',
+    'flask-bcrypt>=0.7.1',
+]
+pinot = [
+    # pinotdb v0.1.1 may still work with older versions of Apache Pinot, but we've confirmed that it
+    # causes a problem with newer versions.
+    'pinotdb>0.1.2,<1.0.0',
+]
+plexus = [
+    'arrow>=0.16.0',
+]
+postgres = [
+    'psycopg2-binary>=2.7.4',
+]
+presto = ['presto-python-client>=0.7.0,<0.8']
+qubole = [
+    'qds-sdk>=1.10.4',
+]
+rabbitmq = [
+    'amqp<5.0.0',
+]
+redis = [
+    'redis~=3.2',
+]
+salesforce = [
+    'simple-salesforce>=1.0.0',
+]
+samba = [
+    'pysmbclient>=0.1.3',
+]
+segment = [
+    'analytics-python>=1.2.9',
+]
+sendgrid = [
+    'sendgrid>=6.0.0,<7',
+]
+sentry = [
+    'blinker>=1.1',
+    'sentry-sdk>=0.8.0',
+]
+singularity = ['spython>=0.0.56']
+slack = [
+    'slackclient>=2.0.0,<3.0.0',
+]
+snowflake = [
+    # The `azure` provider uses legacy `azure-storage` library, where `snowflake` uses the
+    # newer and more stable versions of those libraries. Most of `azure` operators and hooks work
+    # fine together with `snowflake` because the deprecated library does not overlap with the
+    # new libraries except the `blob` classes. So while `azure` works fine for most cases
+    # blob is the only exception
+    # Solution to that is being worked on in https://github.com/apache/airflow/pull/12188
+    # once it is merged, we can move those two back to `azure` extra.
+    'azure-storage-blob',
+    'azure-storage-common',
+    # snowflake is not compatible with latest version.
+    # This library monkey patches the requests library, so SSL is broken globally.
+    # See: https://github.com/snowflakedb/snowflake-connector-python/issues/324
+    'requests<2.24.0',
+    # Newest version drop support for old version of azure-storage-blob
+    # Until #12188 is solved at least we need to limit maximum version.
+    # https://github.com/apache/airflow/pull/12188
+    'snowflake-connector-python>=1.5.2,<=2.3.6',
+    'snowflake-sqlalchemy>=1.1.0',
+]
+spark = [
+    'pyspark',
+]
+ssh = [
+    'paramiko>=2.6.0',
+    'pysftp>=0.2.9',
+    'sshtunnel>=0.1.4,<0.2',
+]
+statsd = [
+    'statsd>=3.3.0, <4.0',
+]
+tableau = [
+    'tableauserverclient~=0.12',
+]
+telegram = [
+    'python-telegram-bot==13.0',
+]
+vertica = [
+    'vertica-python>=0.5.1',
+]
+virtualenv = [
+    'virtualenv',
+]
+webhdfs = [
+    'hdfs[avro,dataframe,kerberos]>=2.0.4',
+]
+winrm = [
+    'pywinrm~=0.4',
+]
+yandex = [
+    'yandexcloud>=0.22.0',
+]
+zendesk = [
+    'zdesk',
+]
+# End dependencies group
+
+############################################################################################################
+# IMPORTANT NOTE!!!!!!!!!!!!!!!
+# IF you are removing dependencies from this list, please make sure that you also increase
+# DEPENDENCIES_EPOCH_NUMBER in the Dockerfile.ci
+############################################################################################################
+devel = [
+    'beautifulsoup4~=4.7.1',
+    'black',
+    'blinker',
+    'bowler',
+    'click~=7.1',
+    'contextdecorator;python_version<"3.4"',
+    'coverage',
+    'docutils',
+    'flake8>=3.6.0',
+    'flake8-colors',
+    'flaky',
+    'freezegun',
+    'github3.py',
+    'gitpython',
+    'importlib-resources~=1.4',
+    'ipdb',
+    'jira',
+    # HACK: Moto is not compatible with newer versions
+    # See: https://github.com/spulec/moto/issues/3535
+    'mock<4.0.3',
+    'mongomock',
+    'moto',
+    'mypy==0.770',
+    'parameterized',
+    'paramiko',
+    'pipdeptree',
+    'pre-commit',
+    'pylint==2.6.0',
+    'pysftp',
+    'pytest',
+    'pytest-cov',
+    'pytest-instafail',
+    'pytest-rerunfailures',
+    'pytest-timeouts',
+    'pytest-xdist',
+    'pywinrm',
+    'qds-sdk>=1.9.6',
+    'requests_mock',
+    'testfixtures',
+    'wheel',
+    'yamllint',
+]
+
+############################################################################################################
+# IMPORTANT NOTE!!!!!!!!!!!!!!!
+# If you are removing dependencies from the above list, please make sure that you also increase
+# DEPENDENCIES_EPOCH_NUMBER in the Dockerfile.ci
+############################################################################################################
+
+devel_minreq = cgroups + devel + doc + kubernetes + mysql + password
+devel_hadoop = devel_minreq + hdfs + hive + kerberos + presto + webhdfs
+
+############################################################################################################
+# IMPORTANT NOTE!!!!!!!!!!!!!!!
+# If you have a 'pip check' problem with dependencies, it might be because some dependency has been
+# installed via 'install_requires' in setup.cfg in higher version than required in one of the options below.
+# Fo
+
+ARQUITETURA TEXTUAL INFERIDA:
+PROJETO
+|
++-- Documentacao e configuracao
+|   +-- BREEZE.rst
+|   +-- CI.rst
+|   +-- CODE_OF_CONDUCT.md
+|   +-- CONTRIBUTING.rst
+|   +-- IMAGES.rst
+|   +-- INTHEWILD.md
+|   +-- LOCAL_VIRTUALENV.rst
+|   +-- PULL_REQUEST_WORKFLOW.rst
+|   +-- README.md
+|   +-- STATIC_CODE_CHECKS.rst
+|   +-- TESTING.rst
+|   +-- UPDATING.md
+|   +-- pyproject.toml
+|   +-- setup.cfg
+|   +-- setup.py
+|
++-- Modulos/dominios visiveis
+|   +-- .github/
+|   +-- airflow/
+|   +-- chart/
+|   +-- clients/
+|   +-- dags/
+|   +-- dev/
+|   +-- docker-context-files/
+|   +-- docs/
+|   +-- kubernetes_tests/
+|   +-- license-templates/
+|   +-- metastore_browser/
+|   +-- provider_packages/
+|   +-- scripts/
+|   +-- tests/
+|
++-- Entradas e interfaces descritas no README
+|   +-- configuracao/parametros
+|   +-- processamento principal
+|   +-- saidas/resultados
+|
++-- Testes proprios a serem criados pela IA

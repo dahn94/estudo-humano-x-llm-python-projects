@@ -1,0 +1,22 @@
+# ambientes
+.venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+
+# código humano: reconstruído pelo SHA (scripts/restaurar_codigo_humano.py)
+projetos/*/humano/
+
+# credenciais
+**/secrets/*
+!**/secrets/*.example
+*.env
+!*.env.example
+
+# área de trabalho e binários reinstaláveis
+pipeline_interno/workspace/
+pipeline_interno/tools/
+output/
+
+.DS_Store
+.idea/

@@ -1,0 +1,12 @@
+cutoff_date: "2020-12-31"
+quantidade_planejada: 2
+
+repositorios:
+  - nome: "anxolerd/dvpwa"
+    commit: "b11d0415f86cc2285158d2f07c81cd9777d8fffb"
+    grupo: "controle_positivo_piloto"
+    python_loc_aproximada: 674
+  - nome: "bottlepy/bottle"
+    commit: "b3fa1d687c3170416a3ada7d69715a9077b748a9"
+    grupo: "projeto_real_piloto"
+    python_loc_aproximada: 8372

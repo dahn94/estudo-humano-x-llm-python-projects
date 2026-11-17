@@ -1,0 +1,5640 @@
+{
+  "component": {
+    "key": "human-gradio-app__gradio",
+    "name": "Humano - gradio-app__gradio",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "bugs",
+        "value": "2",
+        "bestValue": false
+      },
+      {
+        "metric": "complexity",
+        "value": "670"
+      },
+      {
+        "metric": "code_smells",
+        "value": "63",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_reliability_issues",
+        "value": "5",
+        "bestValue": false
+      },
+      {
+        "metric": "ncloc",
+        "value": "3690"
+      },
+      {
+        "metric": "software_quality_maintainability_issues",
+        "value": "62",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_security_issues",
+        "value": "5",
+        "bestValue": false
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "4",
+        "bestValue": false
+      },
+      {
+        "metric": "security_hotspots",
+        "value": "0",
+        "bestValue": true
+      }
+    ]
+  },
+  "issues_summary": {
+    "issues": [
+      {
+        "key": "bf6a7236-2dae-4852-9d38-a928940581c8",
+        "rule": "python:S125",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:demo/digit_classifier.py",
+        "project": "human-gradio-app__gradio",
+        "line": 25,
+        "hash": "130e8aacd17cec661ead91867d23f13b",
+        "textRange": {
+          "startLine": 25,
+          "endLine": 25,
+          "startOffset": 4,
+          "endOffset": 16
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this commented out code.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "93739503-7329-4c16-8252-a1550e5e007e",
+        "rule": "python:S6711",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:demo/form_graph.py",
+        "project": "human-gradio-app__gradio",
+        "line": 17,
+        "hash": "09b78122d8a645ccac453cde275e9529",
+        "textRange": {
+          "startLine": 17,
+          "endLine": 17,
+          "startOffset": 18,
+          "endOffset": 32
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Use a \"numpy.random.Generator\" here instead of this legacy function.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "data-science",
+          "numpy"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "7d143859-f789-4f50-a145-ab66b41b86dc",
+        "rule": "python:S1481",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:demo/main_note.py",
+        "project": "human-gradio-app__gradio",
+        "line": 24,
+        "hash": "c20fb58aa467f6f546b9291fd65c8030",
+        "textRange": {
+          "startLine": 24,
+          "endLine": 24,
+          "startOffset": 4,
+          "endOffset": 5
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused local variable \"x\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "5c08b811-a6e0-4878-8a4a-5a79dfcb8c89",
+        "rule": "python:S6711",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:demo/matrix_transpose.py",
+        "project": "human-gradio-app__gradio",
+        "line": 17,
+        "hash": "8cb90a76a09992d6545cda8c3f08e74b",
+        "textRange": {
+          "startLine": 17,
+          "endLine": 17,
+          "startOffset": 9,
+          "endOffset": 26
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Use a \"numpy.random.Generator\" here instead of this legacy function.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "data-science",
+          "numpy"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "29b5db47-8513-43eb-9d29-50e713d737a1",
+        "rule": "python:S6711",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:demo/matrix_transpose.py",
+        "project": "human-gradio-app__gradio",
+        "line": 18,
+        "hash": "a2189d0ef9a609c3c7847cc759797777",
+        "textRange": {
+          "startLine": 18,
+          "endLine": 18,
+          "startOffset": 9,
+          "endOffset": 26
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Use a \"numpy.random.Generator\" here instead of this legacy function.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "data-science",
+          "numpy"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "bf414afe-a223-4a7b-a4c6-18be75fd047c",
+        "rule": "python:S6711",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:demo/matrix_transpose.py",
+        "project": "human-gradio-app__gradio",
+        "line": 19,
+        "hash": "52919a6b8cc518c9d257ee18ee2365dc",
+        "textRange": {
+          "startLine": 19,
+          "endLine": 19,
+          "startOffset": 9,
+          "endOffset": 26
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Use a \"numpy.random.Generator\" here instead of this legacy function.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "data-science",
+          "numpy"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "c3e13c0f-eb7f-484f-9ea3-0617748e623e",
+        "rule": "python:S1481",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:demo/outbreak_forecast.py",
+        "project": "human-gradio-app__gradio",
+        "line": 12,
+        "hash": "3e2f24104b70493e6a5d5167cebbfd12",
+        "textRange": {
+          "startLine": 12,
+          "endLine": 12,
+          "startOffset": 4,
+          "endOffset": 13
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused local variable \"day_count\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "13e59c4d-4cc5-496a-a57b-682ffc3f2844",
+        "rule": "python:S1481",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:demo/outbreak_forecast.py",
+        "project": "human-gradio-app__gradio",
+        "line": 13,
+        "hash": "a902fcaa3aced3c1733a20e33f2a022f",
+        "textRange": {
+          "startLine": 13,
+          "endLine": 13,
+          "startOffset": 4,
+          "endOffset": 13
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused local variable \"pop_count\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "5e4fbc2a-75a4-44fe-abf5-a2585d441399",
+        "rule": "python:S6711",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:demo/stock_forecast.py",
+        "project": "human-gradio-app__gradio",
+        "line": 18,
+        "hash": "09b78122d8a645ccac453cde275e9529",
+        "textRange": {
+          "startLine": 18,
+          "endLine": 18,
+          "startOffset": 18,
+          "endOffset": 32
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Use a \"numpy.random.Generator\" here instead of this legacy function.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "data-science",
+          "numpy"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "4c86300d-53d4-4679-8fbd-f1652cfb2e3e",
+        "rule": "python:S125",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:demo/stop_sign_detection.py",
+        "project": "human-gradio-app__gradio",
+        "line": 6,
+        "hash": "0e8bd306f73dedc04ccf21e6b0d464ed",
+        "textRange": {
+          "startLine": 6,
+          "endLine": 6,
+          "startOffset": 4,
+          "endOffset": 18
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this commented out code.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "48cd1b04-615e-4006-b8b7-fefd15dc71c0",
+        "rule": "python:S6709",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:demo/titanic_survival.py",
+        "project": "human-gradio-app__gradio",
+        "line": 53,
+        "hash": "0ed30f4d1b35cab8a51a89f2f1c0db25",
+        "textRange": {
+          "startLine": 53,
+          "endLine": 53,
+          "startOffset": 6,
+          "endOffset": 28
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Provide a seed for the random_state parameter.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "scientific-computing",
+          "data-science",
+          "numpy"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "RELIABILITY",
+            "severity": "MEDIUM"
+          },
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          },
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "c2b24c98-15a5-42de-8397-0ee5b96cdb91",
+        "rule": "python:S6973",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:demo/titanic_survival.py",
+        "project": "human-gradio-app__gradio",
+        "line": 53,
+        "hash": "0ed30f4d1b35cab8a51a89f2f1c0db25",
+        "textRange": {
+          "startLine": 53,
+          "endLine": 53,
+          "startOffset": 6,
+          "endOffset": 30
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Add the missing hyperparameters min_samples_leaf and max_features for this Scikit-learn estimator.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "machine-learning",
+          "scikit-learn",
+          "pytorch"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          },
+          {
+            "softwareQuality": "RELIABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "94f2aa33-6e64-4fc4-b329-92852d1fa017",
+        "rule": "python:S2208",
+        "severity": "CRITICAL",
+        "component": "human-gradio-app__gradio:demo/utils/FCN8s_keras.py",
+        "project": "human-gradio-app__gradio",
+        "line": 2,
+        "hash": "351f6497a927d36102cfdf0854613780",
+        "textRange": {
+          "startLine": 2,
+          "endLine": 2,
+          "startOffset": 0,
+          "endOffset": 26
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Import only needed names or import the module and then use its members.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "bad-practice",
+          "pitfall"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "1bc68d3e-3cc2-4607-a2ed-c8961e803221",
+        "rule": "python:S2208",
+        "severity": "CRITICAL",
+        "component": "human-gradio-app__gradio:demo/utils/FCN8s_keras.py",
+        "project": "human-gradio-app__gradio",
+        "line": 5,
+        "hash": "5fbb0c68eb213e1a9d0b4d958a35c20c",
+        "textRange": {
+          "startLine": 5,
+          "endLine": 5,
+          "startOffset": 0,
+          "endOffset": 32
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Import only needed names or import the module and then use its members.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "bad-practice",
+          "pitfall"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "42915632-cf9b-4109-9ec2-2b4cc016192c",
+        "rule": "python:S1542",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:demo/utils/FCN8s_keras.py",
+        "project": "human-gradio-app__gradio",
+        "line": 8,
+        "hash": "3f2f106e41dbd14425eb5a40e616cb8a",
+        "textRange": {
+          "startLine": 8,
+          "endLine": 8,
+          "startOffset": 4,
+          "endOffset": 7
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename function \"FCN\" to match the regular expression ^[a-z_][a-z0-9_]*$.",
+        "effort": "10min",
+        "debt": "10min",
+        "author": "",
+        "tags": [
+          "convention",
+          "pep"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "IDENTIFIABLE",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "30b3dd80-f0e4-4d8a-aac3-6297fc024c0f",
+        "rule": "python:S1481",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:demo/utils/FCN8s_keras.py",
+        "project": "human-gradio-app__gradio",
+        "line": 21,
+        "hash": "ae47bb3059f9b72ef54a4f4096dd292a",
+        "textRange": {
+          "startLine": 21,
+          "endLine": 21,
+          "startOffset": 4,
+          "endOffset": 16
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused local variable \"CHANNEL_AXIS\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "f83dd970-8bc4-4ca9-b27b-0a3aa0525c10",
+        "rule": "python:S125",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:demo/utils/FCN8s_keras.py",
+        "project": "human-gradio-app__gradio",
+        "line": 94,
+        "hash": "37af5c0bab2f4d91b2d923b480759faf",
+        "textRange": {
+          "startLine": 94,
+          "endLine": 94,
+          "startOffset": 4,
+          "endOffset": 27
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this commented out code.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "93aade65-1738-4726-b49d-0acb4ae60aa1",
+        "rule": "python:S6983",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:demo/utils/bert.py",
+        "project": "human-gradio-app__gradio",
+        "line": 55,
+        "hash": "f5dce121d91e88bde7e11acee5a31ade",
+        "textRange": {
+          "startLine": 55,
+          "endLine": 55,
+          "startOffset": 26,
+          "endOffset": 36
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Specify the `num_workers` parameter.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "machine-learning",
+          "pytorch"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "RELIABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "b770be01-93a5-4643-bf4d-6f1435ca094a",
+        "rule": "python:S107",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:demo/utils/utils.py",
+        "project": "human-gradio-app__gradio",
+        "line": 152,
+        "hash": "2acae7b9c785ed8d08897d701a8bf731",
+        "textRange": {
+          "startLine": 152,
+          "endLine": 157,
+          "startOffset": 31,
+          "endOffset": 60
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Function \"squad_examples_to_features\" has 14 parameters, which is greater than the 13 authorized.",
+        "effort": "20min",
+        "debt": "20min",
+        "author": "",
+        "tags": [
+          "brain-overload"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "FOCUSED",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "c88672ce-2739-4fd0-a306-64f3289d4227",
+        "rule": "python:S3776",
+        "severity": "CRITICAL",
+        "component": "human-gradio-app__gradio:demo/utils/utils.py",
+        "project": "human-gradio-app__gradio",
+        "line": 152,
+        "hash": "2acae7b9c785ed8d08897d701a8bf731",
+        "textRange": {
+          "startLine": 152,
+          "endLine": 152,
+          "startOffset": 4,
+          "endOffset": 30
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 171,
+                  "endLine": 171,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 177,
+                  "endLine": 177,
+                  "startOffset": 4,
+                  "endOffset": 7
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 180,
+                  "endLine": 180,
+                  "startOffset": 8,
+                  "endOffset": 11
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 194,
+                  "endLine": 194,
+                  "startOffset": 4,
+                  "endOffset": 9
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 196,
+                  "endLine": 196,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 199,
+                  "endLine": 199,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 203,
+                  "endLine": 203,
+                  "startOffset": 4,
+                  "endOffset": 7
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 210,
+                  "endLine": 210,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 215,
+                  "endLine": 215,
+                  "startOffset": 8,
+                  "endOffset": 11
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 224,
+                  "endLine": 224,
+                  "startOffset": 8,
+                  "endOffset": 11
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 240,
+                  "endLine": 240,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 248,
+                  "endLine": 248,
+                  "startOffset": 24,
+                  "endOffset": 26
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 251,
+                  "endLine": 251,
+                  "startOffset": 8,
+                  "endOffset": 13
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 253,
+                  "endLine": 253,
+                  "startOffset": 32,
+                  "endOffset": 34
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Refactor this function to reduce its Cognitive Complexity from 25 to the 15 allowed.",
+        "effort": "15min",
+        "debt": "15min",
+        "author": "",
+        "tags": [
+          "brain-overload"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "FOCUSED",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "691855a1-5a34-4a63-978c-6aded7e17e44",
+        "rule": "python:S125",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:demo/utils/utils.py",
+        "project": "human-gradio-app__gradio",
+        "line": 161,
+        "hash": "46e37103d31905fc960acf2876262172",
+        "textRange": {
+          "startLine": 161,
+          "endLine": 161,
+          "startOffset": 4,
+          "endOffset": 29
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this commented out code.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "b14e22d9-177e-4abd-9622-fe46ddb5dad9",
+        "rule": "python:S125",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:demo/utils/utils.py",
+        "project": "human-gradio-app__gradio",
+        "line": 166,
+        "hash": "1c5a51d632df86fa49a857a18adda6b2",
+        "textRange": {
+          "startLine": 166,
+          "endLine": 166,
+          "startOffset": 4,
+          "endOffset": 34
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this commented out code.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "024f8607-8118-4554-9ef8-81ca488aea82",
+        "rule": "python:S3776",
+        "severity": "CRITICAL",
+        "component": "human-gradio-app__gradio:demo/utils/utils.py",
+        "project": "human-gradio-app__gradio",
+        "line": 297,
+        "hash": "2ab241235e5eda95a6a07c099ce72f7f",
+        "textRange": {
+          "startLine": 297,
+          "endLine": 297,
+          "startOffset": 4,
+          "endOffset": 18
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 328,
+                  "endLine": 328,
+                  "startOffset": 8,
+                  "endOffset": 11
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 329,
+                  "endLine": 329,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 345,
+                  "endLine": 345,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 352,
+                  "endLine": 352,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 358,
+                  "endLine": 358,
+                  "startOffset": 4,
+                  "endOffset": 7
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 362,
+                  "endLine": 362,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 364,
+                  "endLine": 364,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 367,
+                  "endLine": 367,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 371,
+                  "endLine": 371,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 373,
+                  "endLine": 373,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 376,
+                  "endLine": 376,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.",
+        "effort": "6min",
+        "debt": "6min",
+        "author": "",
+        "tags": [
+          "brain-overload"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "FOCUSED",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "d9521429-d956-4ebb-a6ae-1de383b967bf",
+        "rule": "python:S1172",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:demo/utils/utils.py",
+        "project": "human-gradio-app__gradio",
+        "line": 297,
+        "hash": "2ab241235e5eda95a6a07c099ce72f7f",
+        "textRange": {
+          "startLine": 297,
+          "endLine": 297,
+          "startOffset": 56,
+          "endOffset": 77
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused function parameter \"verbose_logging\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "75e0b884-993d-4d56-a3b2-6e85d59e155f",
+        "rule": "python:S3776",
+        "severity": "CRITICAL",
+        "component": "human-gradio-app__gradio:demo/utils/utils.py",
+        "project": "human-gradio-app__gradio",
+        "line": 404,
+        "hash": "f9ae70fdd40e3afdb0a9282076888719",
+        "textRange": {
+          "startLine": 404,
+          "endLine": 404,
+          "startOffset": 4,
+          "endOffset": 14
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 407,
+                  "endLine": 407,
+                  "startOffset": 4,
+                  "endOffset": 7
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 411,
+                  "endLine": 411,
+                  "startOffset": 4,
+                  "endOffset": 7
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 421,
+                  "endLine": 421,
+                  "startOffset": 4,
+                  "endOffset": 7
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 425,
+                  "endLine": 425,
+                  "startOffset": 8,
+                  "endOffset": 11
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 426,
+                  "endLine": 426,
+                  "startOffset": 12,
+                  "endOffset": 15
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 430,
+                  "endLine": 430,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+4 (incl 3 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 432,
+                  "endLine": 432,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+4 (incl 3 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 434,
+                  "endLine": 434,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+4 (incl 3 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 436,
+                  "endLine": 436,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+4 (incl 3 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 438,
+                  "endLine": 438,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+4 (incl 3 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 440,
+                  "endLine": 440,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+4 (incl 3 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 443,
+                  "endLine": 443,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+4 (incl 3 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 457,
+                  "endLine": 457,
+                  "startOffset": 4,
+                  "endOffset": 7
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 458,
+                  "endLine": 458,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 463,
+                  "endLine": 463,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 480,
+                  "endLine": 480,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 484,
+                  "endLine": 484,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 496,
+                  "endLine": 496,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:demo/utils/utils.py",
+                "textRange": {
+                  "startLine": 503,
+                  "endLine": 503,
+                  "startOffset": 4,
+                  "endOffset": 7
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Refactor this function to reduce its Cognitive Complexity from 47 to the 15 allowed.",
+        "effort": "37min",
+        "debt": "37min",
+        "author": "",
+        "tags": [
+          "brain-overload"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "FOCUSED",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "880a15ad-d9c6-434f-9f80-b2c689c54963",
+        "rule": "python:S1172",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:gradio/component.py",
+        "project": "human-gradio-app__gradio",
+        "line": 22,
+        "hash": "7ecd4daeacc7836b049079eaa5c9a516",
+        "textRange": {
+          "startLine": 22,
+          "endLine": 22,
+          "startOffset": 22,
+          "endOffset": 25
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused function parameter \"dir\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "fbb5a79d-7d8d-4ec5-9d1b-9e044eae3535",
+        "rule": "python:S117",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:gradio/embeddings.py",
+        "project": "human-gradio-app__gradio",
+        "line": 20,
+        "hash": "087cf17b95babbda786f8b494914faaa",
+        "textRange": {
+          "startLine": 20,
+          "endLine": 20,
+          "startOffset": 4,
+          "endOffset": 17
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename this local variable \"embeddings_2D\" to match the regular expression ^[_a-z][a-z0-9_]*$.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "convention"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "IDENTIFIABLE",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "22767602-f99f-48aa-b2d4-437bd8818c08",
+        "rule": "python:S117",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:gradio/embeddings.py",
+        "project": "human-gradio-app__gradio",
+        "line": 27,
+        "hash": "912bc35cce96bd61ba6195ec022484ae",
+        "textRange": {
+          "startLine": 27,
+          "endLine": 27,
+          "startOffset": 4,
+          "endOffset": 17
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename this local variable \"embeddings_2D\" to match the regular expression ^[_a-z][a-z0-9_]*$.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "convention"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "IDENTIFIABLE",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "637bf992-c936-49fe-b0ab-2faf3b35f178",
+        "rule": "python:S1192",
+        "severity": "CRITICAL",
+        "component": "human-gradio-app__gradio:gradio/inputs.py",
+        "project": "human-gradio-app__gradio",
+        "line": 139,
+        "hash": "7049bb43d80375c0597a864caa84d274",
+        "textRange": {
+          "startLine": 139,
+          "endLine": 139,
+          "startOffset": 29,
+          "endOffset": 45
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/inputs.py",
+                "textRange": {
+                  "startLine": 200,
+                  "endLine": 200,
+                  "startOffset": 29,
+                  "endOffset": 45
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/inputs.py",
+                "textRange": {
+                  "startLine": 427,
+                  "endLine": 427,
+                  "startOffset": 29,
+                  "endOffset": 45
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/inputs.py",
+                "textRange": {
+                  "startLine": 466,
+                  "endLine": 466,
+                  "startOffset": 29,
+                  "endOffset": 45
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/inputs.py",
+                "textRange": {
+                  "startLine": 500,
+                  "endLine": 500,
+                  "startOffset": 29,
+                  "endOffset": 45
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/inputs.py",
+                "textRange": {
+                  "startLine": 527,
+                  "endLine": 527,
+                  "startOffset": 29,
+                  "endOffset": 45
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/inputs.py",
+                "textRange": {
+                  "startLine": 560,
+                  "endLine": 560,
+                  "startOffset": 29,
+                  "endOffset": 45
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/inputs.py",
+                "textRange": {
+                  "startLine": 587,
+                  "endLine": 587,
+                  "startOffset": 29,
+                  "endOffset": 45
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/inputs.py",
+                "textRange": {
+                  "startLine": 652,
+                  "endLine": 652,
+                  "startOffset": 29,
+                  "endOffset": 45
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/inputs.py",
+                "textRange": {
+                  "startLine": 721,
+                  "endLine": 721,
+                  "startOffset": 29,
+                  "endOffset": 45
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/inputs.py",
+                "textRange": {
+                  "startLine": 822,
+                  "endLine": 822,
+                  "startOffset": 29,
+                  "endOffset": 45
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/inputs.py",
+                "textRange": {
+                  "startLine": 860,
+                  "endLine": 860,
+                  "startOffset": 29,
+                  "endOffset": 45
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/inputs.py",
+                "textRange": {
+                  "startLine": 924,
+                  "endLine": 924,
+                  "startOffset": 29,
+                  "endOffset": 45
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Define a constant instead of duplicating this literal \"Unknown type: \" 13 times.",
+        "effort": "26min",
+        "debt": "26min",
+        "author": "",
+        "tags": [
+          "design"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "DISTINCT",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "957d36e1-cc0b-40aa-bd54-822da0d02c93",
+        "rule": "python:S5720",
+        "severity": "CRITICAL",
+        "component": "human-gradio-app__gradio:gradio/inputs.py",
+        "project": "human-gradio-app__gradio",
+        "line": 182,
+        "hash": "e409e71ca53d712fb6ebfe1f87525747",
+        "textRange": {
+          "startLine": 182,
+          "endLine": 182,
+          "startOffset": 20,
+          "endOffset": 24
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename \"text\" to \"self\" or add the missing \"self\" parameter.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "convention",
+          "confusing",
+          "suspicious"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "f0473cf7-135f-4222-8d7c-80d6b8068433",
+        "rule": "python:S1481",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:gradio/inputs.py",
+        "project": "human-gradio-app__gradio",
+        "line": 252,
+        "hash": "0bec4748cf6d1e7f8df993a1bd9c3382",
+        "textRange": {
+          "startLine": 252,
+          "endLine": 252,
+          "startOffset": 8,
+          "endOffset": 17
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused local variable \"neighbors\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "2be884ff-1149-48a5-91a7-33d2efc9753f",
+        "rule": "python:S1192",
+        "severity": "CRITICAL",
+        "component": "human-gradio-app__gradio:gradio/inputs.py",
+        "project": "human-gradio-app__gradio",
+        "line": 427,
+        "hash": "1444734387c1250e1108907080c7f138",
+        "textRange": {
+          "startLine": 427,
+          "endLine": 427,
+          "startOffset": 65,
+          "endOffset": 106
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/inputs.py",
+                "textRange": {
+                  "startLine": 466,
+                  "endLine": 466,
+                  "startOffset": 65,
+                  "endOffset": 106
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/inputs.py",
+                "textRange": {
+                  "startLine": 500,
+                  "endLine": 500,
+                  "startOffset": 65,
+                  "endOffset": 106
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/inputs.py",
+                "textRange": {
+                  "startLine": 527,
+                  "endLine": 527,
+                  "startOffset": 65,
+                  "endOffset": 106
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/inputs.py",
+                "textRange": {
+                  "startLine": 560,
+                  "endLine": 560,
+                  "startOffset": 65,
+                  "endOffset": 106
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/inputs.py",
+                "textRange": {
+                  "startLine": 587,
+                  "endLine": 587,
+                  "startOffset": 65,
+                  "endOffset": 106
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Define a constant instead of duplicating this literal \". Please choose from: 'value', 'index'.\" 6 times.",
+        "effort": "12min",
+        "debt": "12min",
+        "author": "",
+        "tags": [
+          "design"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "DISTINCT",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "77f00e32-2f6e-417b-bb9b-69dd230a9c00",
+        "rule": "python:S117",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:gradio/inputs.py",
+        "project": "human-gradio-app__gradio",
+        "line": 684,
+        "hash": "54ef292e7b5284a746341666e6eac623",
+        "textRange": {
+          "startLine": 684,
+          "endLine": 684,
+          "startOffset": 16,
+          "endOffset": 22
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename this local variable \"segVal\" to match the regular expression ^[_a-z][a-z0-9_]*$.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "convention"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "IDENTIFIABLE",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "1ee43832-84bb-433f-8dc0-0aa176838675",
+        "rule": "python:S107",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:gradio/interface.py",
+        "project": "human-gradio-app__gradio",
+        "line": 46,
+        "hash": "8f695d712b4e58ca4caa74c1c4c55106",
+        "textRange": {
+          "startLine": 46,
+          "endLine": 53,
+          "startOffset": 17,
+          "endOffset": 79
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Method \"__init__\" has 23 parameters, which is greater than the 13 authorized.",
+        "effort": "20min",
+        "debt": "20min",
+        "author": "",
+        "tags": [
+          "brain-overload"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "FOCUSED",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "f7a4361b-432d-4b7a-ab81-c1273fa93e74",
+        "rule": "python:S3776",
+        "severity": "CRITICAL",
+        "component": "human-gradio-app__gradio:gradio/interface.py",
+        "project": "human-gradio-app__gradio",
+        "line": 46,
+        "hash": "8f695d712b4e58ca4caa74c1c4c55106",
+        "textRange": {
+          "startLine": 46,
+          "endLine": 46,
+          "startOffset": 8,
+          "endOffset": 16
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 78,
+                  "endLine": 78,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 81,
+                  "endLine": 81,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 83,
+                  "endLine": 83,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 88,
+                  "endLine": 88,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 91,
+                  "endLine": 91,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 93,
+                  "endLine": 93,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 99,
+                  "endLine": 99,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 101,
+                  "endLine": 101,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 103,
+                  "endLine": 103,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 105,
+                  "endLine": 105,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 107,
+                  "endLine": 107,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 126,
+                  "endLine": 126,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 155,
+                  "endLine": 155,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 160,
+                  "endLine": 160,
+                  "startOffset": 12,
+                  "endOffset": 18
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 165,
+                  "endLine": 165,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 166,
+                  "endLine": 166,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 168,
+                  "endLine": 168,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 171,
+                  "endLine": 171,
+                  "startOffset": 12,
+                  "endOffset": 17
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 177,
+                  "endLine": 177,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 181,
+                  "endLine": 181,
+                  "startOffset": 12,
+                  "endOffset": 18
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Refactor this function to reduce its Cognitive Complexity from 26 to the 15 allowed.",
+        "effort": "16min",
+        "debt": "16min",
+        "author": "",
+        "tags": [
+          "brain-overload"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "FOCUSED",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "0bc8f9eb-22e1-4803-b63f-d11694090901",
+        "rule": "python:S2245",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:gradio/interface.py",
+        "project": "human-gradio-app__gradio",
+        "line": 119,
+        "hash": "37844bbc028b898f2412dbe00c0703a1",
+        "textRange": {
+          "startLine": 119,
+          "endLine": 119,
+          "startOffset": 25,
+          "endOffset": 47
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Make sure that using this pseudorandom number generator is safe here.",
+        "effort": "10min",
+        "debt": "10min",
+        "author": "",
+        "tags": [
+          "cwe",
+          "former-hotspot"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "VULNERABILITY",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "TRUSTWORTHY",
+        "cleanCodeAttributeCategory": "RESPONSIBLE",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "b15970ab-7f2e-406d-95c6-aecc1343af61",
+        "rule": "python:S3776",
+        "severity": "CRITICAL",
+        "component": "human-gradio-app__gradio:gradio/interface.py",
+        "project": "human-gradio-app__gradio",
+        "line": 184,
+        "hash": "adbd8038e4298142493c49dc736c337b",
+        "textRange": {
+          "startLine": 184,
+          "endLine": 184,
+          "startOffset": 8,
+          "endOffset": 23
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 209,
+                  "endLine": 209,
+                  "startOffset": 12,
+                  "endOffset": 15
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 210,
+                  "endLine": 210,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 212,
+                  "endLine": 212,
+                  "startOffset": 12,
+                  "endOffset": 15
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 216,
+                  "endLine": 216,
+                  "startOffset": 64,
+                  "endOffset": 66
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 217,
+                  "endLine": 217,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 219,
+                  "endLine": 219,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 222,
+                  "endLine": 222,
+                  "startOffset": 8,
+                  "endOffset": 14
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 224,
+                  "endLine": 224,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 226,
+                  "endLine": 226,
+                  "startOffset": 12,
+                  "endOffset": 15
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 228,
+                  "endLine": 228,
+                  "startOffset": 16,
+                  "endOffset": 19
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.",
+        "effort": "7min",
+        "debt": "7min",
+        "author": "",
+        "tags": [
+          "brain-overload"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "FOCUSED",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "b0de12dd-0165-4801-85bc-e9bd87c2320e",
+        "rule": "python:S3776",
+        "severity": "CRITICAL",
+        "component": "human-gradio-app__gradio:gradio/interface.py",
+        "project": "human-gradio-app__gradio",
+        "line": 234,
+        "hash": "4def3d9f26cad003d689bded1033309f",
+        "textRange": {
+          "startLine": 234,
+          "endLine": 234,
+          "startOffset": 8,
+          "endOffset": 22
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 237,
+                  "endLine": 237,
+                  "startOffset": 8,
+                  "endOffset": 11
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 239,
+                  "endLine": 239,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 239,
+                  "endLine": 239,
+                  "startOffset": 36,
+                  "endOffset": 39
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 243,
+                  "endLine": 243,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 246,
+                  "endLine": 246,
+                  "startOffset": 16,
+                  "endOffset": 22
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 247,
+                  "endLine": 247,
+                  "startOffset": 20,
+                  "endOffset": 22
+                },
+                "msg": "+4 (incl 3 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 249,
+                  "endLine": 249,
+                  "startOffset": 20,
+                  "endOffset": 24
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 253,
+                  "endLine": 253,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 258,
+                  "endLine": 258,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 260,
+                  "endLine": 260,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Refactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.",
+        "effort": "7min",
+        "debt": "7min",
+        "author": "",
+        "tags": [
+          "brain-overload"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "FOCUSED",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "fc7ec934-7c4c-4fb5-bdf6-11f164a00730",
+        "rule": "python:S3776",
+        "severity": "CRITICAL",
+        "component": "human-gradio-app__gradio:gradio/interface.py",
+        "project": "human-gradio-app__gradio",
+        "line": 284,
+        "hash": "457c51c8476a49087840ebae966d0e6a",
+        "textRange": {
+          "startLine": 284,
+          "endLine": 284,
+          "startOffset": 8,
+          "endOffset": 17
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 290,
+                  "endLine": 290,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 295,
+                  "endLine": 295,
+                  "startOffset": 12,
+                  "endOffset": 15
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 301,
+                  "endLine": 301,
+                  "startOffset": 16,
+                  "endOffset": 19
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 312,
+                  "endLine": 312,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 318,
+                  "endLine": 318,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 323,
+                  "endLine": 323,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 323,
+                  "endLine": 323,
+                  "startOffset": 36,
+                  "endOffset": 39
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 327,
+                  "endLine": 327,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 330,
+                  "endLine": 330,
+                  "startOffset": 16,
+                  "endOffset": 22
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 331,
+                  "endLine": 331,
+                  "startOffset": 20,
+                  "endOffset": 22
+                },
+                "msg": "+4 (incl 3 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 333,
+                  "endLine": 333,
+                  "startOffset": 20,
+                  "endOffset": 24
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 335,
+                  "endLine": 335,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Refactor this function to reduce its Cognitive Complexity from 24 to the 15 allowed.",
+        "effort": "14min",
+        "debt": "14min",
+        "author": "",
+        "tags": [
+          "brain-overload"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "FOCUSED",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "349fe46b-ed06-4741-afee-7afd4a43811f",
+        "rule": "python:S8518",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:gradio/interface.py",
+        "project": "human-gradio-app__gradio",
+        "line": 295,
+        "hash": "189136d15479dd3d9b4e57f173e550cf",
+        "textRange": {
+          "startLine": 295,
+          "endLine": 295,
+          "startOffset": 24,
+          "endOffset": 44
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 316,
+                  "endLine": 316,
+                  "startOffset": 24,
+                  "endOffset": 36
+                },
+                "msg": "Replace this index lookup with the unpacked value.",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Unpack the value from 'enumerate()' directly instead of using an index lookup.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "readability",
+          "performance",
+          "pythonic"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "eab348d5-3884-4f50-9a73-3c5f76dc4ef5",
+        "rule": "python:S1940",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:gradio/interface.py",
+        "project": "human-gradio-app__gradio",
+        "line": 340,
+        "hash": "5535e172531a787dc7a3d271d9319497",
+        "textRange": {
+          "startLine": 340,
+          "endLine": 340,
+          "startOffset": 34,
+          "endOffset": 73
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Use the opposite operator (\"!=\") instead.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "pitfall"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "9c66dee9-bea3-41bc-a43f-1d197e42e1b0",
+        "rule": "python:S108",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:gradio/interface.py",
+        "project": "human-gradio-app__gradio",
+        "line": 347,
+        "hash": "1a1dc91c907325c69271ddf0c944bc72",
+        "textRange": {
+          "startLine": 347,
+          "endLine": 347,
+          "startOffset": 16,
+          "endOffset": 20
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Either remove or fill this block of code.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "suspicious"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "d9173046-3141-4513-a1c1-c8aa1c2c19e1",
+        "rule": "python:S3626",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:gradio/interface.py",
+        "project": "human-gradio-app__gradio",
+        "line": 367,
+        "hash": "7aa28ed115707345d0274032757e8991",
+        "textRange": {
+          "startLine": 367,
+          "endLine": 367,
+          "startOffset": 16,
+          "endOffset": 24
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 354,
+                  "endLine": 354,
+                  "startOffset": 8,
+                  "endOffset": 11
+                },
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Remove this redundant continue.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "redundant",
+          "clumsy"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "c0807451-c349-4391-967c-936a3dc08622",
+        "rule": "python:S3776",
+        "severity": "CRITICAL",
+        "component": "human-gradio-app__gradio:gradio/interface.py",
+        "project": "human-gradio-app__gradio",
+        "line": 369,
+        "hash": "9e74b3973f2ef6d36a1977542fe71207",
+        "textRange": {
+          "startLine": 369,
+          "endLine": 369,
+          "startOffset": 8,
+          "endOffset": 14
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 395,
+                  "endLine": 395,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 397,
+                  "endLine": 397,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 398,
+                  "endLine": 398,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 400,
+                  "endLine": 400,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 402,
+                  "endLine": 402,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 403,
+                  "endLine": 403,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 406,
+                  "endLine": 406,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 411,
+                  "endLine": 411,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 417,
+                  "endLine": 417,
+                  "startOffset": 12,
+                  "endOffset": 18
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 419,
+                  "endLine": 419,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 423,
+                  "endLine": 423,
+                  "startOffset": 20,
+                  "endOffset": 26
+                },
+                "msg": "+4 (incl 3 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 426,
+                  "endLine": 426,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 428,
+                  "endLine": 428,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 431,
+                  "endLine": 431,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 435,
+                  "endLine": 435,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 437,
+                  "endLine": 437,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 441,
+                  "endLine": 441,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 442,
+                  "endLine": 442,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 447,
+                  "endLine": 447,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 447,
+                  "endLine": 447,
+                  "startOffset": 21,
+                  "endOffset": 24
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 450,
+                  "endLine": 450,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 455,
+                  "endLine": 455,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 456,
+                  "endLine": 456,
+                  "startOffset": 16,
+                  "endOffset": 21
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 459,
+                  "endLine": 459,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 462,
+                  "endLine": 462,
+                  "startOffset": 79,
+                  "endOffset": 81
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 464,
+                  "endLine": 464,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 464,
+                  "endLine": 464,
+                  "startOffset": 17,
+                  "endOffset": 19
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 465,
+                  "endLine": 465,
+                  "startOffset": 12,
+                  "endOffset": 17
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 469,
+                  "endLine": 469,
+                  "startOffset": 34,
+                  "endOffset": 36
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 471,
+                  "endLine": 471,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 482,
+                  "endLine": 482,
+                  "startOffset": 12,
+                  "endOffset": 18
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/interface.py",
+                "textRange": {
+                  "startLine": 486,
+                  "endLine": 486,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Refactor this function to reduce its Cognitive Complexity from 50 to the 15 allowed.",
+        "effort": "40min",
+        "debt": "40min",
+        "author": "",
+        "tags": [
+          "brain-overload"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "FOCUSED",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "356ac4b5-dd87-47f3-8b5d-2ff4ff79e5f1",
+        "rule": "python:S5332",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:gradio/interface.py",
+        "project": "human-gradio-app__gradio",
+        "line": 388,
+        "hash": "8c948953f3466e62f0fb4876245ecd50",
+        "textRange": {
+          "startLine": 388,
+          "endLine": 388,
+          "startOffset": 31,
+          "endOffset": 46
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Using HTTP protocol is insecure. Use HTTPS instead.",
+        "effort": "30min",
+        "debt": "30min",
+        "author": "",
+        "tags": [
+          "cwe",
+          "former-hotspot"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "VULNERABILITY",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "4956a044-97f0-47df-9206-7f1300f446f0",
+        "rule": "python:S1481",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:gradio/interface.py",
+        "project": "human-gradio-app__gradio",
+        "line": 462,
+        "hash": "31a3e8aaba3ec956b2a3d3a315e0101c",
+        "textRange": {
+          "startLine": 462,
+          "endLine": 462,
+          "startOffset": 8,
+          "endOffset": 9
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused local variable \"r\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "fcc07b89-ec23-4595-8704-cf3dbb8fd576",
+        "rule": "python:S5754",
+        "severity": "CRITICAL",
+        "component": "human-gradio-app__gradio:gradio/interface.py",
+        "project": "human-gradio-app__gradio",
+        "line": 505,
+        "hash": "3e264f5fbab10735799511f21ca70842",
+        "textRange": {
+          "startLine": 505,
+          "endLine": 505,
+          "startOffset": 4,
+          "endOffset": 10
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Specify an exception class to catch or reraise the exception",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "error-handling",
+          "bad-practice",
+          "suspicious"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "bd372a80-d6c8-4591-ac79-dfe85c2caa35",
+        "rule": "python:S1940",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:gradio/interpretation.py",
+        "project": "human-gradio-app__gradio",
+        "line": 7,
+        "hash": "64ced03b2d95bf16ebc28438183a2d0e",
+        "textRange": {
+          "startLine": 7,
+          "endLine": 7,
+          "startOffset": 20,
+          "endOffset": 46
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Use the opposite operator (\"!=\") instead.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "pitfall"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "0e69cc03-3f80-438f-afaf-ac8d99667dac",
+        "rule": "python:S6660",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:gradio/interpretation.py",
+        "project": "human-gradio-app__gradio",
+        "line": 15,
+        "hash": "bfc4d28c68d0fe607e5c8a600efaa57b",
+        "textRange": {
+          "startLine": 15,
+          "endLine": 15,
+          "startOffset": 30,
+          "endOffset": 32
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Use the `isinstance()` function here.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "typing"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "95f0b5ca-b879-43d3-9be0-80a0a7636fba",
+        "rule": "python:S6660",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:gradio/interpretation.py",
+        "project": "human-gradio-app__gradio",
+        "line": 27,
+        "hash": "d8326e0e1d6ec8ab2b5f3ec0ab975117",
+        "textRange": {
+          "startLine": 27,
+          "endLine": 27,
+          "startOffset": 32,
+          "endOffset": 34
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Use the `isinstance()` function here.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "typing"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "5949209a-b104-4ee2-a9dc-b27c59b64c87",
+        "rule": "python:S4502",
+        "severity": "CRITICAL",
+        "component": "human-gradio-app__gradio:gradio/networking.py",
+        "project": "human-gradio-app__gradio",
+        "line": 39,
+        "hash": "807b477f260c348dc2d0192de198b4d0",
+        "textRange": {
+          "startLine": 39,
+          "endLine": 42,
+          "startOffset": 6,
+          "endOffset": 31
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Make sure disabling CSRF protection is safe here.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "cwe",
+          "django",
+          "flask",
+          "former-hotspot"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "VULNERABILITY",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "04c65fd8-4836-4440-ae4c-1a17815eb6bd",
+        "rule": "python:S5122",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:gradio/networking.py",
+        "project": "human-gradio-app__gradio",
+        "line": 43,
+        "hash": "806573cd79c1328252558ea321ccf38c",
+        "textRange": {
+          "startLine": 43,
+          "endLine": 43,
+          "startOffset": 0,
+          "endOffset": 9
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Make sure this permissive CORS policy is safe here.",
+        "effort": "4h",
+        "debt": "4h",
+        "author": "",
+        "tags": [
+          "cwe",
+          "django",
+          "flask",
+          "former-hotspot"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "VULNERABILITY",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "SECURITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "9c0d6ab8-ad63-4c44-a4a6-1b1279aca9dc",
+        "rule": "python:S7498",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:gradio/networking.py",
+        "project": "human-gradio-app__gradio",
+        "line": 142,
+        "hash": "bae14199845bda042712df332e63b812",
+        "textRange": {
+          "startLine": 142,
+          "endLine": 142,
+          "startOffset": 13,
+          "endOffset": 17
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace this constructor call with a literal.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "e98524b0-d807-44da-b14f-ff1289f19f9d",
+        "rule": "python:S5754",
+        "severity": "CRITICAL",
+        "component": "human-gradio-app__gradio:gradio/networking.py",
+        "project": "human-gradio-app__gradio",
+        "line": 200,
+        "hash": "3e264f5fbab10735799511f21ca70842",
+        "textRange": {
+          "startLine": 200,
+          "endLine": 200,
+          "startOffset": 8,
+          "endOffset": 14
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Specify an exception class to catch or reraise the exception",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "error-handling",
+          "bad-practice",
+          "suspicious"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "e8062aeb-c91f-474b-9e9d-d5b66c21362d",
+        "rule": "python:S1192",
+        "severity": "CRITICAL",
+        "component": "human-gradio-app__gradio:gradio/outputs.py",
+        "project": "human-gradio-app__gradio",
+        "line": 69,
+        "hash": "8a1b0dd1079074075e0c0a4a38964a47",
+        "textRange": {
+          "startLine": 69,
+          "endLine": 69,
+          "startOffset": 29,
+          "endOffset": 45
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/outputs.py",
+                "textRange": {
+                  "startLine": 186,
+                  "endLine": 186,
+                  "startOffset": 29,
+                  "endOffset": 45
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/outputs.py",
+                "textRange": {
+                  "startLine": 294,
+                  "endLine": 294,
+                  "startOffset": 29,
+                  "endOffset": 45
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/outputs.py",
+                "textRange": {
+                  "startLine": 425,
+                  "endLine": 425,
+                  "startOffset": 29,
+                  "endOffset": 45
+                },
+                "msg": "Duplication",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Define a constant instead of duplicating this literal \"Unknown type: \" 4 times.",
+        "effort": "8min",
+        "debt": "8min",
+        "author": "",
+        "tags": [
+          "design"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "DISTINCT",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "2249474c-2f07-401d-8fab-44f90a3394c7",
+        "rule": "python:S125",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:gradio/outputs.py",
+        "project": "human-gradio-app__gradio",
+        "line": 125,
+        "hash": "8caaa68dfb5102fa106a4c72898b052f",
+        "textRange": {
+          "startLine": 125,
+          "endLine": 125,
+          "startOffset": 8,
+          "endOffset": 33
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this commented out code.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "934999c3-af71-4a25-a4c7-61023d7949ae",
+        "rule": "python:S3776",
+        "severity": "CRITICAL",
+        "component": "human-gradio-app__gradio:gradio/outputs.py",
+        "project": "human-gradio-app__gradio",
+        "line": 159,
+        "hash": "5e48bce0808896d15897c1bd7174aafb",
+        "textRange": {
+          "startLine": 159,
+          "endLine": 159,
+          "startOffset": 8,
+          "endOffset": 19
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/outputs.py",
+                "textRange": {
+                  "startLine": 160,
+                  "endLine": 160,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/outputs.py",
+                "textRange": {
+                  "startLine": 162,
+                  "endLine": 162,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/outputs.py",
+                "textRange": {
+                  "startLine": 164,
+                  "endLine": 164,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/outputs.py",
+                "textRange": {
+                  "startLine": 165,
+                  "endLine": 165,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/outputs.py",
+                "textRange": {
+                  "startLine": 167,
+                  "endLine": 167,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/outputs.py",
+                "textRange": {
+                  "startLine": 169,
+                  "endLine": 169,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/outputs.py",
+                "textRange": {
+                  "startLine": 171,
+                  "endLine": 171,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/outputs.py",
+                "textRange": {
+                  "startLine": 173,
+                  "endLine": 173,
+                  "startOffset": 12,
+                  "endOffset": 16
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/outputs.py",
+                "textRange": {
+                  "startLine": 175,
+                  "endLine": 175,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/outputs.py",
+                "textRange": {
+                  "startLine": 177,
+                  "endLine": 177,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/outputs.py",
+                "textRange": {
+                  "startLine": 178,
+                  "endLine": 178,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/outputs.py",
+                "textRange": {
+                  "startLine": 181,
+                  "endLine": 181,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/outputs.py",
+                "textRange": {
+                  "startLine": 183,
+                  "endLine": 183,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/outputs.py",
+                "textRange": {
+                  "startLine": 185,
+                  "endLine": 185,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.",
+        "effort": "6min",
+        "debt": "6min",
+        "author": "",
+        "tags": [
+          "brain-overload"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "FOCUSED",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "a3a77631-68b0-469d-96f6-3b8e022ab665",
+        "rule": "python:S117",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:gradio/processing_utils.py",
+        "project": "human-gradio-app__gradio",
+        "line": 40,
+        "hash": "ba29b3d71978e842ac9c23c152900057",
+        "textRange": {
+          "startLine": 40,
+          "endLine": 40,
+          "startOffset": 8,
+          "endOffset": 17
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename this local variable \"PIL_image\" to match the regular expression ^[_a-z][a-z0-9_]*$.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "convention"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "IDENTIFIABLE",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "606f81bc-f333-4624-bda9-d0e63b87a4eb",
+        "rule": "python:S117",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:gradio/processing_utils.py",
+        "project": "human-gradio-app__gradio",
+        "line": 90,
+        "hash": "b4b11c2d8974fa8e2d24b4397479d4e3",
+        "textRange": {
+          "startLine": 90,
+          "endLine": 90,
+          "startOffset": 43,
+          "endOffset": 47
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename this parameter \"NFFT\" to match the regular expression ^[_a-z][a-z0-9_]*$.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "convention"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "IDENTIFIABLE",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "8651cfd5-589b-4f45-ac77-90e3e6ba8902",
+        "rule": "python:S108",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:gradio/processing_utils.py",
+        "project": "human-gradio-app__gradio",
+        "line": 116,
+        "hash": "1a1dc91c907325c69271ddf0c944bc72",
+        "textRange": {
+          "startLine": 116,
+          "endLine": 116,
+          "startOffset": 8,
+          "endOffset": 12
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Either remove or fill this block of code.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "suspicious"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "c417bf77-c76c-4ab7-8fb0-bd9b0dbe2e6e",
+        "rule": "python:S1940",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:gradio/processing_utils.py",
+        "project": "human-gradio-app__gradio",
+        "line": 120,
+        "hash": "62a6c95b416006b749b37d98fd9b051d",
+        "textRange": {
+          "startLine": 120,
+          "endLine": 120,
+          "startOffset": 7,
+          "endOffset": 33
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Use the opposite operator (\"is not\") instead.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "pitfall"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "07c39104-2ed6-43f6-8c0f-ffbef8a7aba9",
+        "rule": "python:S5806",
+        "severity": "MAJOR",
+        "component": "human-gradio-app__gradio:gradio/processing_utils.py",
+        "project": "human-gradio-app__gradio",
+        "line": 146,
+        "hash": "b192c1a125bade37ff8cc1d63caabfeb",
+        "textRange": {
+          "startLine": 146,
+          "endLine": 146,
+          "startOffset": 4,
+          "endOffset": 7
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename this variable; it shadows a builtin.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "bad-practice",
+          "confusing",
+          "pitfall"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "923a4991-fdb1-4560-9c3e-efa14192f69f",
+        "rule": "python:S1481",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:gradio/tunneling.py",
+        "project": "human-gradio-app__gradio",
+        "line": 31,
+        "hash": "4f260205a10d62090a42537e879e90b6",
+        "textRange": {
+          "startLine": 31,
+          "endLine": 31,
+          "startOffset": 14,
+          "endOffset": 15
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace the unused local variable \"x\" with \"_\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "be2abbb2-80b3-4c49-99bb-92d224cb0b3c",
+        "rule": "python:S1481",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:gradio/tunneling.py",
+        "project": "human-gradio-app__gradio",
+        "line": 31,
+        "hash": "4f260205a10d62090a42537e879e90b6",
+        "textRange": {
+          "startLine": 31,
+          "endLine": 31,
+          "startOffset": 11,
+          "endOffset": 12
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace the unused local variable \"w\" with \"_\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "53b55863-740b-4b39-b90e-7c14f5411a50",
+        "rule": "python:S2275",
+        "severity": "BLOCKER",
+        "component": "human-gradio-app__gradio:gradio/tunneling.py",
+        "project": "human-gradio-app__gradio",
+        "line": 83,
+        "hash": "90814f31c4e92cf68879ae2a01a00446",
+        "textRange": {
+          "startLine": 83,
+          "endLine": 83,
+          "startOffset": 12,
+          "endOffset": 49
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Fix this formatted string's syntax.",
+        "effort": "10min",
+        "debt": "10min",
+        "author": "",
+        "tags": [
+          "pitfall"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "BUG",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "LOGICAL",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "RELIABILITY",
+            "severity": "BLOCKER"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "3ccddbc3-a797-44a9-b52d-ce9432113b4f",
+        "rule": "python:S1135",
+        "severity": "INFO",
+        "component": "human-gradio-app__gradio:gradio/utils.py",
+        "project": "human-gradio-app__gradio",
+        "line": 18,
+        "hash": "51b4f477888eb6dd1aa89f1932e8f789",
+        "textRange": {
+          "startLine": 18,
+          "endLine": 18,
+          "startOffset": 13,
+          "endOffset": 57
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Complete the task associated to this \"TODO\" comment.",
+        "effort": "0min",
+        "debt": "0min",
+        "author": "",
+        "tags": [
+          "cwe"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "INFO"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "e2e49b58-a7aa-4662-a5e1-63cdae47aa83",
+        "rule": "python:S5754",
+        "severity": "CRITICAL",
+        "component": "human-gradio-app__gradio:gradio/utils.py",
+        "project": "human-gradio-app__gradio",
+        "line": 18,
+        "hash": "51b4f477888eb6dd1aa89f1932e8f789",
+        "textRange": {
+          "startLine": 18,
+          "endLine": 18,
+          "startOffset": 4,
+          "endOffset": 10
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Specify an exception class to catch or reraise the exception",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "error-handling",
+          "bad-practice",
+          "suspicious"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "34ce364c-52b3-4786-b075-bfdd716d18f3",
+        "rule": "python:S930",
+        "severity": "BLOCKER",
+        "component": "human-gradio-app__gradio:gradio/utils.py",
+        "project": "human-gradio-app__gradio",
+        "line": 45,
+        "hash": "5f0fd32b1b40d2e7b7bbe36eb7237568",
+        "textRange": {
+          "startLine": 45,
+          "endLine": 45,
+          "startOffset": 8,
+          "endOffset": 23
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-gradio-app__gradio:gradio/utils.py",
+                "textRange": {
+                  "startLine": 45,
+                  "endLine": 45,
+                  "startOffset": 8,
+                  "endOffset": 23
+                },
+                "msg": "Remove 1 unexpected arguments; 'error_analytics' expects 1 positional arguments.",
+                "msgFormattings": []
+              },
+              {
+                "component": "human-gradio-app__gradio:gradio/utils.py",
+                "textRange": {
+                  "startLine": 21,
+                  "endLine": 21,
+                  "startOffset": 4,
+                  "endOffset": 19
+                },
+                "msg": "Function definition.",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Remove 1 unexpected arguments; 'error_analytics' expects 1 positional arguments.",
+        "effort": "10min",
+        "debt": "10min",
+        "author": "",
+        "tags": [
+          "cwe"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "BUG",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "LOGICAL",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "RELIABILITY",
+            "severity": "BLOCKER"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "037249e2-6862-4516-8b98-8b6b46e7e862",
+        "rule": "python:S5906",
+        "severity": "MINOR",
+        "component": "human-gradio-app__gradio:test/test_inputs.py",
+        "project": "human-gradio-app__gradio",
+        "line": 130,
+        "hash": "a65be9ae7209f9e4e01cf47049c17e4d",
+        "textRange": {
+          "startLine": 130,
+          "endLine": 130,
+          "startOffset": 8,
+          "endOffset": 52
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Consider using \"assertFalse\" instead.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "tests",
+          "unittest"
+        ],
+        "creationDate": "2026-09-22T19:07:30+0000",
+        "updateDate": "2026-09-22T19:07:30+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      }
+    ],
+    "paging": {
+      "total": 69
+    }
+  }
+}

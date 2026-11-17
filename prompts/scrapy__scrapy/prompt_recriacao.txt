@@ -1,0 +1,1417 @@
+O QUE E ESTE ARQUIVO
+================================================================================
+Este e o prompt que deve ser enviado ao ChatGPT, Gemini ou Claude para recriar o projeto.
+Ele contem somente informacoes documentais publicas e a arquitetura textual inferida; o corpo do
+codigo-fonte humano nao foi incluido. A resposta da IA devera ser salva separadamente e depois
+avaliada pelas mesmas ferramentas Semgrep e SonarQube usadas no projeto humano.
+
+INSTRUCAO PARA A IA
+================================================================================
+Crie do zero um projeto Python funcionalmente semelhante ao descrito abaixo.
+REGRAS OBRIGATORIAS:
+- Nao procure, copie, traduza ou reproduza o codigo-fonte do repositorio original.
+- Use apenas README, documentacao e manifestos fornecidos neste prompt.
+- Implemente as funcionalidades publicas documentadas, validacao de entrada, tratamento de erros e testes proprios.
+- Nao inclua segredos, credenciais, caminhos absolutos ou dependencias desnecessarias.
+- Entregue todos os arquivos completos e um README de execucao.
+
+REFERENCIA: scrapy/scrapy
+COMMIT DOCUMENTAL: e494a3f73318db76d7c56e65bc632cd5875b8825
+
+README:
+
+--- README.rst ---
+======
+Scrapy
+======
+
+.. image:: https://img.shields.io/pypi/v/Scrapy.svg
+   :target: https://pypi.python.org/pypi/Scrapy
+   :alt: PyPI Version
+
+.. image:: https://img.shields.io/pypi/pyversions/Scrapy.svg
+   :target: https://pypi.python.org/pypi/Scrapy
+   :alt: Supported Python Versions
+
+.. image:: https://img.shields.io/travis/scrapy/scrapy/master.svg
+   :target: https://travis-ci.org/scrapy/scrapy
+   :alt: Build Status
+
+.. image:: https://img.shields.io/badge/wheel-yes-brightgreen.svg
+   :target: https://pypi.python.org/pypi/Scrapy
+   :alt: Wheel Status
+
+.. image:: https://img.shields.io/codecov/c/github/scrapy/scrapy/master.svg
+   :target: https://codecov.io/github/scrapy/scrapy?branch=master
+   :alt: Coverage report
+
+.. image:: https://anaconda.org/conda-forge/scrapy/badges/version.svg
+   :target: https://anaconda.org/conda-forge/scrapy
+   :alt: Conda Version
+
+
+Overview
+========
+
+Scrapy is a fast high-level web crawling and web scraping framework, used to
+crawl websites and extract structured data from their pages. It can be used for
+a wide range of purposes, from data mining to monitoring and automated testing.
+
+Check the Scrapy homepage at https://scrapy.org for more information,
+including a list of features.
+
+Requirements
+============
+
+* Python 3.6+
+* Works on Linux, Windows, macOS, BSD
+
+Install
+=======
+
+The quick way::
+
+    pip install scrapy
+
+See the install section in the documentation at
+https://docs.scrapy.org/en/latest/intro/install.html for more details.
+
+Documentation
+=============
+
+Documentation is available online at https://docs.scrapy.org/ and in the ``docs``
+directory.
+
+Releases
+========
+
+You can check https://docs.scrapy.org/en/latest/news.html for the release notes.
+
+Community (blog, twitter, mail list, IRC)
+=========================================
+
+See https://scrapy.org/community/ for details.
+
+Contributing
+============
+
+See https://docs.scrapy.org/en/master/contributing.html for details.
+
+Code of Conduct
+---------------
+
+Please note that this project is released with a Contributor Code of Conduct
+(see https://github.com/scrapy/scrapy/blob/master/CODE_OF_CONDUCT.md).
+
+By participating in this project you agree to abide by its terms.
+Please report unacceptable behavior to opensource@scrapinghub.com.
+
+Companies using Scrapy
+======================
+
+See https://scrapy.org/companies/ for a list.
+
+Commercial Support
+==================
+
+See https://scrapy.org/support/ for details.
+
+
+DOCUMENTACAO PUBLICA:
+
+--- contributing.rst ---
+.. _topics-contributing:
+
+======================
+Contributing to Scrapy
+======================
+
+.. important::
+
+    Double check that you are reading the most recent version of this document at
+    https://docs.scrapy.org/en/master/contributing.html
+
+There are many ways to contribute to Scrapy. Here are some of them:
+
+* Blog about Scrapy. Tell the world how you're using Scrapy. This will help
+  newcomers with more examples and will help the Scrapy project to increase its
+  visibility.
+
+* Report bugs and request features in the `issue tracker`_, trying to follow
+  the guidelines detailed in `Reporting bugs`_ below.
+
+* Submit patches for new functionalities and/or bug fixes. Please read
+  :ref:`writing-patches` and `Submitting patches`_ below for details on how to
+  write and submit a patch.
+
+* Join the `Scrapy subreddit`_ and share your ideas on how to
+  improve Scrapy. We're always open to suggestions.
+
+* Answer Scrapy questions at
+  `Stack Overflow <https://stackoverflow.com/questions/tagged/scrapy>`__.
+
+
+Reporting bugs
+==============
+
+.. note::
+
+    Please report security issues **only** to
+    scrapy-security@googlegroups.com. This is a private list only open to
+    trusted Scrapy developers, and its archives are not public.
+
+Well-written bug reports are very helpful, so keep in mind the following
+guidelines when you're going to report a new bug.
+
+* check the :ref:`FAQ <faq>` first to see if your issue is addressed in a
+  well-known question
+
+* if you have a general question about Scrapy usage, please ask it at
+  `Stack Overflow <https://stackoverflow.com/questions/tagged/scrapy>`__
+  (use "scrapy" tag).
+
+* check the `open issues`_ to see if the issue has already been reported. If it
+  has, don't dismiss the report, but check the ticket history and comments. If 
+  you have additional useful information, please leave a comment, or consider
+  :ref:`sending a pull request <writing-patches>` with a fix.
+
+* search the `scrapy-users`_ list and `Scrapy subreddit`_ to see if it has
+  been discussed there, or if you're not sure if what you're seeing is a bug.
+  You can also ask in the ``#scrapy`` IRC channel.
+
+* write **complete, reproducible, specific bug reports**. The smaller the test
+  case, the better. Remember that other developers won't have your project to
+  reproduce the bug, so please include all relevant files required to reproduce
+  it. See for example StackOverflow's guide on creating a
+  `Minimal, Complete, and Verifiable example`_ exhibiting the issue.
+
+* the most awesome way to provide a complete reproducible example is to
+  send a pull request which adds a failing test case to the
+  Scrapy testing suite (see :ref:`submitting-patches`).
+  This is helpful even if you don't have an intention to
+  fix the issue yourselves.
+
+* include the output of ``scrapy version -v`` so developers working on your bug
+  know exactly which version and platform it occurred on, which is often very
+  helpful for reproducing it, or knowing if it was already fixed.
+
+.. _Minimal, Complete, and Verifiable example: https://stackoverflow.com/help/mcve
+
+.. _writing-patches:
+
+Writing patches
+===============
+
+The better a patch is written, the higher the chances that it'll get accepted and the sooner it will be merged.
+
+Well-written patches should:
+
+* contain the minimum amount of code required for the specific change. Small
+  patches are easier to review and merge. So, if you're doing more than one
+  change (or bug fix), please consider submitting one patch per change. Do not
+  collapse multiple changes into a single patch. For big changes consider using
+  a patch queue.
+
+* pass all unit-tests. See `Running tests`_ below.
+
+* include one (or more) test cases that check the bug fixed or the new
+  functionality added. See `Writing tests`_ below.
+
+* if you're adding or changing a public (documented) API, please include
+  the documentation changes in the same patch.  See `Documentation policies`_
+  below.
+
+* if you're adding a private API, please add a regular expression to the
+  ``coverage_ignore_pyobjects`` variable of ``docs/conf.py`` to exclude the new
+  private API from documentation coverage checks.
+
+  To see if your private API is skipped properly, generate a documentation
+  coverage report as follows::
+
+      tox -e docs-coverage
+
+* if you are removing deprecated code, first make sure that at least 1 year
+  (12 months) has passed since the release that introduced the deprecation.
+  See :ref:`deprecation-policy`.
+
+
+.. _submitting-patches:
+
+Submitting patches
+==================
+
+The best way to submit a patch is to issue a `pull request`_ on GitHub,
+optionally creating a new issue first.
+
+Remember to explain what was fixed or the new functionality (what it is, why
+it's needed, etc). The more info you include, the easier will be for core
+developers to understand and accept your patch.
+
+You can also discuss the new functionality (or bug fix) before creating the
+patch, but it's always good to have a patch ready to illustrate your arguments
+and show that you have put some additional thought into the subject. A good
+starting point is to send a pull request on GitHub. It can be simple enough to
+illustrate your idea, and leave documentation/tests for later, after the idea
+has been validated and proven useful. Alternatively, you can start a
+conversation in the `Scrapy subreddit`_ to discuss your idea first.
+
+Sometimes there is an existing pull request for the problem you'd like to
+solve, which is stalled for some reason. Often the pull request is in a
+right direction, but changes are requested by Scrapy maintainers, and the
+original pull request author hasn't had time to address them.
+In this case consider picking up this pull request: open
+a new pull request with all commits from the original pull request, as well as
+additional changes to address the raised issues. Doing so helps a lot; it is
+not considered rude as long as the original author is acknowledged by keeping
+his/her commits.
+
+You can pull an existing pull request to a local branch
+by running ``git fetch upstream pull/$PR_NUMBER/head:$BRANCH_NAME_TO_CREATE``
+(replace 'upstream' with a remote name for scrapy repository,
+``$PR_NUMBER`` with an ID of the pull request, and ``$BRANCH_NAME_TO_CREATE``
+with a name of the branch you want to create locally).
+See also: https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/checking-out-pull-requests-locally#modifying-an-inactive-pull-request-locally.
+
+When writing GitHub pull requests, try to keep titles short but descriptive.
+E.g. For bug #411: "Scrapy hangs if an exception raises in start_requests"
+prefer "Fix hanging when exception occurs in start_requests (#411)"
+instead of "Fix for #411". Complete titles make it easy to skim through
+the issue tracker.
+
+Finally, try to keep aesthetic changes (:pep:`8` compliance, unused imports
+removal, etc) in separate commits from functional changes. This will make pull
+requests easier to review and more likely to get merged.
+
+
+.. _coding-style:
+
+Coding style
+============
+
+Please follow these coding conventions when writing code for inclusion in
+Scrapy:
+
+* Unless otherwise specified, follow :pep:`8`.
+
+* It's OK to use lines longer than 79 chars if it improves the code
+  readability.
+
+* Don't put your name in the code you contribute; git provides enough
+  metadata to identify author of the code.
+  See https://help.github.com/en/github/using-git/setting-your-username-in-git for
+  setup instructions.
+
+.. _documentation-policies:
+
+Documentation policies
+======================
+
+For reference documentation of API members (classes, methods, etc.) use
+docstrings and make sure that the Sphinx documentation uses the
+:mod:`~sphinx.ext.autodoc` extension to pull the docstrings. API reference
+documentation should follow docstring conventions (`PEP 257`_) and be
+IDE-friendly: short, to the point, and it may provide short examples.
+
+Other types of documentation, such as tutorials or topics, should be covered in
+files within the ``docs/`` directory. This includes documentation that is
+specific to an API member, but goes beyond API reference documentation.
+
+In any case, if something is covered in a docstring, use the
+:mod:`~sphinx.ext.autodoc` extension to pull the docstring into the
+documentation instead of duplicating the docstring in files within the
+``docs/`` directory.
+
+Documentation updates that cover new or modified features must use Sphinx’s
+:rst:dir:`versionadded` and :rst:dir:`versionchanged` directives. Use
+``VERSION`` as version, we will replace it with the actual version right before
+the corresponding release. When we release a new major or minor version of
+Scrapy, we remove these directives if they are older than 3 years.
+
+Documentation about deprecated features must be removed as those features are
+deprecated, so that new readers do not run into it. New deprecations and
+deprecation removals are documented in the :ref:`release notes <news>`.
+
+
+Tests
+=====
+
+Tests are implemented using the :doc:`Twisted unit-testing framework
+<twisted:core/development/policy/test-standard>`. Running tests requires
+:doc:`tox <tox:index>`.
+
+.. _running-tests:
+
+Running tests
+-------------
+
+To run all tests::
+
+    tox
+
+To run a specific test (say ``tests/test_loader.py``) use:
+
+    ``tox -- tests/test_loader.py``
+
+To run the tests on a specific :doc:`tox <tox:index>` environment, use
+``-e <name>`` with an environment name from ``tox.ini``. For example, to run
+the tests with Python 3.6 use::
+
+    tox -e py36
+
+You can also specify a comma-separated list of environments, and use :ref:`tox’s
+parallel mode <tox:parallel_mode>` to run the tests on multiple environments in
+parallel::
+
+    tox -e py36,py38 -p auto
+
+To pass command-line options to :doc:`pytest <pytest:index>`, add them after
+``--`` in your call to :doc:`tox <tox:index>`. Using ``--`` overrides the
+default positional arguments defined in ``tox.ini``, so you must include those
+default positional arguments (``scrapy tests``) after ``--`` as well::
+
+    tox -- scrapy tests -x  # stop after first failure
+
+You can also use the `pytest-xdist`_ plugin. For example, to run all tests on
+the Python 3.6 :doc:`tox <tox:index>` environment using all your CPU cores::
+
+    tox -e py36 -- scrapy tests -n auto
+
+To see coverage report install :doc:`coverage <coverage:index>`
+(``pip install coverage``) and run:
+
+    ``coverage report``
+
+see output of ``coverage --help`` for more options like html or xml report.
+
+Writing tests
+-------------
+
+All functionality (including new features and bug fixes) must include a test
+case to check that it works as expected, so please include tests for your
+patches if you want them to get accepted sooner.
+
+Scrapy uses unit-tests, which are located in the `tests/`_ directory.
+Their module name typically resembles the full path of the module they're
+testing. For example, the item loaders code is in::
+
+    scrapy.loader
+
+And their unit-tests are in::
+
+    tests/test_loader.py
+
+.. _issue tracker: https://github.com/scrapy/scrapy/issues
+.. _scrapy-users: https://groups.google.com/forum/#!forum/scrapy-users
+.. _Scrapy subreddit: https://reddit.com/r/scrapy
+.. _AUTHORS: https://github.com/scrapy/scrapy/blob/master/AUTHORS
+.. _tests/: https://github.com/scrapy/scrapy/tree/master/tests
+.. _open issues: https://github.com/scrapy/scrapy/issues
+.. _PEP 257: https://www.python.org/dev/peps/pep-0257/
+.. _pull request: https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request
+.. _pytest-xdist: https://github.com/pytest-dev/pytest-xdist
+
+--- faq.rst ---
+.. _faq:
+
+Frequently Asked Questions
+==========================
+
+.. _faq-scrapy-bs-cmp:
+
+How does Scrapy compare to BeautifulSoup or lxml?
+-------------------------------------------------
+
+`BeautifulSoup`_ and `lxml`_ are libraries for parsing HTML and XML. Scrapy is
+an application framework for writing web spiders that crawl web sites and
+extract data from them.
+
+Scrapy provides a built-in mechanism for extracting data (called
+:ref:`selectors <topics-selectors>`) but you can easily use `BeautifulSoup`_
+(or `lxml`_) instead, if you feel more comfortable working with them. After
+all, they're just parsing libraries which can be imported and used from any
+Python code.
+
+In other words, comparing `BeautifulSoup`_ (or `lxml`_) to Scrapy is like
+comparing `jinja2`_ to `Django`_.
+
+.. _BeautifulSoup: https://www.crummy.com/software/BeautifulSoup/
+.. _lxml: https://lxml.de/
+.. _jinja2: https://palletsprojects.com/p/jinja/
+.. _Django: https://www.djangoproject.com/
+
+Can I use Scrapy with BeautifulSoup?
+------------------------------------
+
+Yes, you can.
+As mentioned :ref:`above <faq-scrapy-bs-cmp>`, `BeautifulSoup`_ can be used
+for parsing HTML responses in Scrapy callbacks.
+You just have to feed the response's body into a ``BeautifulSoup`` object
+and extract whatever data you need from it.
+
+Here's an example spider using BeautifulSoup API, with ``lxml`` as the HTML parser::
+
+
+    from bs4 import BeautifulSoup
+    import scrapy
+
+
+    class ExampleSpider(scrapy.Spider):
+        name = "example"
+        allowed_domains = ["example.com"]
+        start_urls = (
+            'http://www.example.com/',
+        )
+
+        def parse(self, response):
+            # use lxml to get decent HTML parsing speed
+            soup = BeautifulSoup(response.text, 'lxml')
+            yield {
+                "url": response.url,
+                "title": soup.h1.string
+            }
+
+.. note::
+
+    ``BeautifulSoup`` supports several HTML/XML parsers.
+    See `BeautifulSoup's official documentation`_ on which ones are available.
+
+.. _BeautifulSoup's official documentation: https://www.crummy.com/software/BeautifulSoup/bs4/doc/#specifying-the-parser-to-use
+
+
+Did Scrapy "steal" X from Django?
+---------------------------------
+
+Probably, but we don't like that word. We think Django_ is a great open source
+project and an example to follow, so we've used it as an inspiration for
+Scrapy.
+
+We believe that, if something is already done well, there's no need to reinvent
+it. This concept, besides being one of the foundations for open source and free
+software, not only applies to software but also to documentation, procedures,
+policies, etc. So, instead of going through each problem ourselves, we choose
+to copy ideas from those projects that have already solved them properly, and
+focus on the real problems we need to solve.
+
+We'd be proud if Scrapy serves as an inspiration for other projects. Feel free
+to steal from us!
+
+Does Scrapy work with HTTP proxies?
+-----------------------------------
+
+Yes. Support for HTTP proxies is provided (since Scrapy 0.8) through the HTTP
+Proxy downloader middleware. See
+:class:`~scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware`.
+
+How can I scrape an item with attributes in different pages?
+------------------------------------------------------------
+
+See :ref:`topics-request-response-ref-request-callback-arguments`.
+
+
+Scrapy crashes with: ImportError: No module named win32api
+----------------------------------------------------------
+
+You need to install `pywin32`_ because of `this Twisted bug`_.
+
+.. _pywin32: https://sourceforge.net/projects/pywin32/
+.. _this Twisted bug: https://twistedmatrix.com/trac/ticket/3707
+
+How can I simulate a user login in my spider?
+---------------------------------------------
+
+See :ref:`topics-request-response-ref-request-userlogin`.
+
+.. _faq-bfo-dfo:
+
+Does Scrapy crawl in breadth-first or depth-first order?
+--------------------------------------------------------
+
+By default, Scrapy uses a `LIFO`_ queue for storing pending requests, which
+basically means that it crawls in `DFO order`_. This order is more convenient
+in most cases.
+
+If you do want to crawl in true `BFO order`_, you can do it by
+setting the following settings::
+
+    DEPTH_PRIORITY = 1
+    SCHEDULER_DISK_QUEUE = 'scrapy.squeues.PickleFifoDiskQueue'
+    SCHEDULER_MEMORY_QUEUE = 'scrapy.squeues.FifoMemoryQueue'
+
+While pending requests are below the configured values of
+:setting:`CONCURRENT_REQUESTS`, :setting:`CONCURRENT_REQUESTS_PER_DOMAIN` or
+:setting:`CONCURRENT_REQUESTS_PER_IP`, those requests are sent
+concurrently. As a result, the first few requests of a crawl rarely follow the
+desired order. Lowering those settings to ``1`` enforces the desired order, but
+it significantly slows down the crawl as a whole.
+
+
+My Scrapy crawler has memory leaks. What can I do?
+--------------------------------------------------
+
+See :ref:`topics-leaks`.
+
+Also, Python has a builtin memory leak issue which is described in
+:ref:`topics-leaks-without-leaks`.
+
+How can I make Scrapy consume less memory?
+------------------------------------------
+
+See previous question.
+
+Can I use Basic HTTP Authentication in my spiders?
+--------------------------------------------------
+
+Yes, see :class:`~scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware`.
+
+Why does Scrapy download pages in English instead of my native language?
+------------------------------------------------------------------------
+
+Try changing the default `Accept-Language`_ request header by overriding the
+:setting:`DEFAULT_REQUEST_HEADERS` setting.
+
+.. _Accept-Language: https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4
+
+Where can I find some example Scrapy projects?
+----------------------------------------------
+
+See :ref:`intro-examples`.
+
+Can I run a spider without creating a project?
+----------------------------------------------
+
+Yes. You can use the :command:`runspider` command. For example, if you have a
+spider written in a ``my_spider.py`` file you can run it with::
+
+    scrapy runspider my_spider.py
+
+See :command:`runspider` command for more info.
+
+I get "Filtered offsite request" messages. How can I fix them?
+--------------------------------------------------------------
+
+Those messages (logged with ``DEBUG`` level) don't necessarily mean there is a
+problem, so you may not need to fix them.
+
+Those messages are thrown by the Offsite Spider Middleware, which is a spider
+middleware (enabled by default) whose purpose is to filter out requests to
+domains outside the ones covered by the spider.
+
+For more info see:
+:class:`~scrapy.spidermiddlewares.offsite.OffsiteMiddleware`.
+
+What is the recommended way to deploy a Scrapy crawler in production?
+---------------------------------------------------------------------
+
+See :ref:`topics-deploy`.
+
+Can I use JSON for large exports?
+---------------------------------
+
+It'll depend on how large your output is. See :ref:`this warning
+<json-with-large-data>` in :class:`~scrapy.exporters.JsonItemExporter`
+documentation.
+
+Can I return (Twisted) deferreds from signal handlers?
+------------------------------------------------------
+
+Some signals support returning deferreds from their handlers, others don't. See
+the :ref:`topics-signals-ref` to know which ones.
+
+What does the response status code 999 means?
+---------------------------------------------
+
+999 is a custom response status code used by Yahoo sites to throttle requests.
+Try slowing down the crawling speed by using a download delay of ``2`` (or
+higher) in your spider::
+
+    class MySpider(CrawlSpider):
+
+        name = 'myspider'
+
+        download_delay = 2
+
+        # [ ... rest of the spider code ... ]
+
+Or by setting a global download delay in your project with the
+:setting:`DOWNLOAD_DELAY` setting.
+
+Can I call ``pdb.set_trace()`` from my spiders to debug them?
+-------------------------------------------------------------
+
+Yes, but you can also use the Scrapy shell which allows you to quickly analyze
+(and even modify) the response being processed by your spider, which is, quite
+often, more useful than plain old ``pdb.set_trace()``.
+
+For more info see :ref:`topics-shell-inspect-response`.
+
+Simplest way to dump all my scraped items into a JSON/CSV/XML file?
+-------------------------------------------------------------------
+
+To dump into a JSON file::
+
+    scrapy crawl myspider -O items.json
+
+To dump into a CSV file::
+
+    scrapy crawl myspider -O items.csv
+
+To dump into a XML file::
+
+    scrapy crawl myspider -O items.xml
+
+For more information see :ref:`topics-feed-exports`
+
+What's this huge cryptic ``__VIEWSTATE`` parameter used in some forms?
+----------------------------------------------------------------------
+
+The ``__VIEWSTATE`` parameter is used in sites built with ASP.NET/VB.NET. For
+more info on how it works see `this page`_. Also, here's an `example spider`_
+which scrapes one of these sites.
+
+.. _this page: https://metacpan.org/pod/release/ECARROLL/HTML-TreeBuilderX-ASP_NET-0.09/lib/HTML/TreeBuilderX/ASP_NET.pm
+.. _example spider: https://github.com/AmbientLighter/rpn-fas/blob/master/fas/spiders/rnp.py
+
+What's the best way to parse big XML/CSV data feeds?
+----------------------------------------------------
+
+Parsing big feeds with XPath selectors can be problematic since they need to
+build the DOM of the entire feed in memory, and this can be quite slow and
+consume a lot of memory.
+
+In order to avoid parsing all the entire feed at once in memory, you can use
+the functions ``xmliter`` and ``csviter`` from ``scrapy.utils.iterators``
+module. In fact, this is what the feed spiders (see :ref:`topics-spiders`) use
+under the cover.
+
+Does Scrapy manage cookies automatically?
+-----------------------------------------
+
+Yes, Scrapy receives and keeps track of cookies sent by servers, and sends them
+back on subsequent requests, like any regular web browser does.
+
+For more info see :ref:`topics-request-response` and :ref:`cookies-mw`.
+
+How can I see the cookies being sent and received from Scrapy?
+--------------------------------------------------------------
+
+Enable the :setting:`COOKIES_DEBUG` setting.
+
+How can I instruct a spider to stop itself?
+-------------------------------------------
+
+Raise the :exc:`~scrapy.exceptions.CloseSpider` exception from a callback. For
+more info see: :exc:`~scrapy.exceptions.CloseSpider`.
+
+How can I prevent my Scrapy bot from getting banned?
+----------------------------------------------------
+
+See :ref:`bans`.
+
+Should I use spider arguments or settings to configure my spider?
+-----------------------------------------------------------------
+
+Both :ref:`spider arguments <spiderargs>` and :ref:`settings <topics-settings>`
+can be used to configure your spider. There is no strict rule that mandates to
+use one or the other, but settings are more suited for parameters that, once
+set, don't change much, while spider arguments are meant to change more often,
+even on each spider run and sometimes are required for the spider to run at all
+(for example, to set the start url of a spider).
+
+To illustrate with an example, assuming you have a spider that needs to log
+into a site to scrape data, and you only want to scrape data from a certain
+section of the site (which varies each time). In that case, the credentials to
+log in would be settings, while the url of the section to scrape would be a
+spider argument.
+
+I'm scraping a XML document and my XPath selector doesn't return any items
+--------------------------------------------------------------------------
+
+You may need to remove namespaces. See :ref:`removing-namespaces`.
+
+.. _faq-split-item:
+
+How to split an item into multiple items in an item pipeline?
+-------------------------------------------------------------
+
+:ref:`Item pipelines <topics-item-pipeline>` cannot yield multiple items per
+input item. :ref:`Create a spider middleware <custom-spider-middleware>`
+instead, and use its
+:meth:`~scrapy.spidermiddlewares.SpiderMiddleware.process_spider_output`
+method for this purpose. For example::
+
+    from copy import deepcopy
+
+    from itemadapter import is_item, ItemAdapter
+
+    class MultiplyItemsMiddleware:
+
+        def process_spider_output(self, response, result, spider):
+            for item in result:
+                if is_item(item):
+                    adapter = ItemAdapter(item)
+                    for _ in range(adapter['multiply_by']):
+                        yield deepcopy(item)
+
+Does Scrapy support IPv6 addresses?
+-----------------------------------
+
+Yes, by setting :setting:`DNS_RESOLVER` to ``scrapy.resolver.CachingHostnameResolver``.
+Note that by doing so, you lose the ability to set a specific timeout for DNS requests
+(the value of the :setting:`DNS_TIMEOUT` setting is ignored).
+
+
+.. _faq-specific-reactor:
+
+How to deal with ``<class 'ValueError'>: filedescriptor out of range in select()`` exceptions?
+----------------------------------------------------------------------------------------------
+
+This issue `has been reported`_ to appear when running broad crawls in macOS, where the default
+Twisted reactor is :class:`twisted.internet.selectreactor.SelectReactor`. Switching to a
+different reactor is possible by using the :setting:`TWISTED_REACTOR` setting.
+
+
+.. _faq-stop-response-download:
+
+How can I cancel the download of a given response?
+--------------------------------------------------
+
+In some situations, it might be useful to stop the download of a certain response.
+For instance, if you only need the first part of a large response and you would like
+to save resources by avoiding the download of the whole body.
+In that case, you could attach a handler to the :class:`~scrapy.signals.bytes_received`
+signal and raise a :exc:`~scrapy.exceptions.StopDownload` exception. Please refer to
+the :ref:`topics-stop-response-download` topic for additional information and examples.
+
+
+.. _has been reported: https://github.com/scrapy/scrapy/issues/2905
+.. _user agents: https://en.wikipedia.org/wiki/User_agent
+.. _LIFO: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
+.. _DFO order: https://en.wikipedia.org/wiki/Depth-first_search
+.. _BFO order: https://en.wikipedia.org/wiki/Breadth-first_search
+
+--- index.rst ---
+.. _topics-index:
+
+==============================
+Scrapy |version| documentation
+==============================
+
+Scrapy is a fast high-level `web crawling`_ and `web scraping`_ framework, used
+to crawl websites and extract structured data from their pages. It can be used
+for a wide range of purposes, from data mining to monitoring and automated
+testing.
+
+.. _web crawling: https://en.wikipedia.org/wiki/Web_crawler
+.. _web scraping: https://en.wikipedia.org/wiki/Web_scraping
+
+Getting help
+============
+
+Having trouble? We'd like to help!
+
+* Try the :doc:`FAQ <faq>` -- it's got answers to some common questions.
+* Looking for specific information? Try the :ref:`genindex` or :ref:`modindex`.
+* Ask or search questions in `StackOverflow using the scrapy tag`_.
+* Ask or search questions in the `Scrapy subreddit`_.
+* Search for questions on the archives of the `scrapy-users mailing list`_.
+* Ask a question in the `#scrapy IRC channel`_,
+* Report bugs with Scrapy in our `issue tracker`_.
+
+.. _scrapy-users mailing list: https://groups.google.com/forum/#!forum/scrapy-users
+.. _Scrapy subreddit: https://www.reddit.com/r/scrapy/
+.. _StackOverflow using the scrapy tag: https://stackoverflow.com/tags/scrapy
+.. _#scrapy IRC channel: irc://irc.freenode.net/scrapy
+.. _issue tracker: https://github.com/scrapy/scrapy/issues
+
+
+First steps
+===========
+
+.. toctree::
+   :caption: First steps
+   :hidden:
+
+   intro/overview
+   intro/install
+   intro/tutorial
+   intro/examples
+
+:doc:`intro/overview`
+    Understand what Scrapy is and how it can help you.
+
+:doc:`intro/install`
+    Get Scrapy installed on your computer.
+
+:doc:`intro/tutorial`
+    Write your first Scrapy project.
+
+:doc:`intro/examples`
+    Learn more by playing with a pre-made Scrapy project.
+
+.. _section-basics:
+
+Basic concepts
+==============
+
+.. toctree::
+   :caption: Basic concepts
+   :hidden:
+
+   topics/commands
+   topics/spiders
+   topics/selectors
+   topics/items
+   topics/loaders
+   topics/shell
+   topics/item-pipeline
+   topics/feed-exports
+   topics/request-response
+   topics/link-extractors
+   topics/settings
+   topics/exceptions
+
+:doc:`topics/commands`
+    Learn about the command-line tool used to manage your Scrapy project.
+
+:doc:`topics/spiders`
+    Write the rules to crawl your websites.
+
+:doc:`topics/selectors`
+    Extract the data from web pages using XPath.
+
+:doc:`topics/shell`
+    Test your extraction code in an interactive environment.
+
+:doc:`topics/items`
+    Define the data you want to scrape.
+
+:doc:`topics/loaders`
+    Populate your items with the extracted data.
+
+:doc:`topics/item-pipeline`
+    Post-process and store your scraped data.
+
+:doc:`topics/feed-exports`
+    Output your scraped data using different formats and storages.
+
+:doc:`topics/request-response`
+    Understand the classes used to represent HTTP requests and responses.
+
+:doc:`topics/link-extractors`
+    Convenient classes to extract links to follow from pages.
+
+:doc:`topics/settings`
+    Learn how to configure Scrapy and see all :ref:`available settings <topics-settings-ref>`.
+
+:doc:`topics/exceptions`
+    See all available exceptions and their meaning.
+
+
+Built-in services
+=================
+
+.. toctree::
+   :caption: Built-in services
+   :hidden:
+
+   topics/logging
+   topics/stats
+   topics/email
+   topics/telnetconsole
+   topics/webservice
+
+:doc:`topics/logging`
+    Learn how to use Python's builtin logging on Scrapy.
+
+:doc:`topics/stats`
+    Collect statistics about your scraping crawler.
+
+:doc:`topics/email`
+    Send email notifications when certain events occur.
+
+:doc:`topics/telnetconsole`
+    Inspect a running crawler using a built-in Python console.
+
+:doc:`topics/webservice`
+    Monitor and control a crawler using a web service.
+
+
+Solving specific problems
+=========================
+
+.. toctree::
+   :caption: Solving specific problems
+   :hidden:
+
+   faq
+   topics/debug
+   topics/contracts
+   topics/practices
+   topics/broad-crawls
+   topics/developer-tools
+   topics/dynamic-content
+   topics/leaks
+   topics/media-pipeline
+   topics/deploy
+   topics/autothrottle
+   topics/benchmarking
+   topics/jobs
+   topics/coroutines
+   topics/asyncio
+
+:doc:`faq`
+    Get answers to most frequently asked questions.
+
+:doc:`topics/debug`
+    Learn how to debug
+
+MANIFESTOS PUBLICOS:
+
+--- setup.py ---
+from os.path import dirname, join
+from pkg_resources import parse_version
+from setuptools import setup, find_packages, __version__ as setuptools_version
+
+
+with open(join(dirname(__file__), 'scrapy/VERSION'), 'rb') as f:
+    version = f.read().decode('ascii').strip()
+
+
+def has_environment_marker_platform_impl_support():
+    """Code extracted from 'pytest/setup.py'
+    https://github.com/pytest-dev/pytest/blob/7538680c/setup.py#L31
+
+    The first known release to support environment marker with range operators
+    it is 18.5, see:
+    https://setuptools.readthedocs.io/en/latest/history.html#id235
+    """
+    return parse_version(setuptools_version) >= parse_version('18.5')
+
+
+install_requires = [
+    'Twisted>=17.9.0',
+    'cryptography>=2.0',
+    'cssselect>=0.9.1',
+    'itemloaders>=1.0.1',
+    'parsel>=1.5.0',
+    'pyOpenSSL>=16.2.0',
+    'queuelib>=1.4.2',
+    'service_identity>=16.0.0',
+    'w3lib>=1.17.0',
+    'zope.interface>=4.1.3',
+    'protego>=0.1.15',
+    'itemadapter>=0.1.0',
+    'h2>=3.2.0',
+]
+extras_require = {}
+cpython_dependencies = [
+    'lxml>=3.5.0',
+    'PyDispatcher>=2.0.5',
+]
+if has_environment_marker_platform_impl_support():
+    extras_require[':platform_python_implementation == "CPython"'] = cpython_dependencies
+    extras_require[':platform_python_implementation == "PyPy"'] = [
+        # Earlier lxml versions are affected by
+        # https://foss.heptapod.net/pypy/pypy/-/issues/2498,
+        # which was fixed in Cython 0.26, released on 2017-06-19, and used to
+        # generate the C headers of lxml release tarballs published since then, the
+        # first of which was:
+        'lxml>=4.0.0',
+        'PyPyDispatcher>=2.1.0',
+    ]
+else:
+    install_requires.extend(cpython_dependencies)
+
+
+setup(
+    name='Scrapy',
+    version=version,
+    url='https://scrapy.org',
+    project_urls={
+        'Documentation': 'https://docs.scrapy.org/',
+        'Source': 'https://github.com/scrapy/scrapy',
+        'Tracker': 'https://github.com/scrapy/scrapy/issues',
+    },
+    description='A high-level Web Crawling and Web Scraping framework',
+    long_description=open('README.rst').read(),
+    author='Scrapy developers',
+    maintainer='Pablo Hoffman',
+    maintainer_email='pablo@pablohoffman.com',
+    license='BSD',
+    packages=find_packages(exclude=('tests', 'tests.*')),
+    include_package_data=True,
+    zip_safe=False,
+    entry_points={
+        'console_scripts': ['scrapy = scrapy.cmdline:execute']
+    },
+    classifiers=[
+        'Framework :: Scrapy',
+        'Development Status :: 5 - Production/Stable',
+        'Environment :: Console',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: BSD License',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: Implementation :: CPython',
+        'Programming Language :: Python :: Implementation :: PyPy',
+        'Topic :: Internet :: WWW/HTTP',
+        'Topic :: Software Development :: Libraries :: Application Frameworks',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+    ],
+    python_requires='>=3.6',
+    install_requires=install_requires,
+    extras_require=extras_require,
+)
+
+--- setup.cfg ---
+[bdist_rpm]
+doc_files = docs AUTHORS INSTALL LICENSE README.rst
+
+[bdist_wheel]
+universal=1
+
+[mypy]
+ignore_missing_imports = true
+follow_imports = skip
+
+# FIXME: remove the following sections once the issues are solved
+
+[mypy-scrapy]
+ignore_errors = True
+
+[mypy-scrapy.commands]
+ignore_errors = True
+
+[mypy-scrapy.commands.parse]
+ignore_errors = True
+
+[mypy-scrapy.downloadermiddlewares.httpproxy]
+ignore_errors = True
+
+[mypy-scrapy.contracts]
+ignore_errors = True
+
+[mypy-scrapy.interfaces]
+ignore_errors = True
+
+[mypy-scrapy.item]
+ignore_errors = True
+
+[mypy-scrapy.http.cookies]
+ignore_errors = True
+
+[mypy-scrapy.mail]
+ignore_errors = True
+
+[mypy-scrapy.pipelines.images]
+ignore_errors = True
+
+[mypy-scrapy.settings.default_settings]
+ignore_errors = True
+
+[mypy-scrapy.spidermiddlewares.referer]
+ignore_errors = True
+
+[mypy-scrapy.utils.httpobj]
+ignore_errors = True
+
+[mypy-scrapy.utils.request]
+ignore_errors = True
+
+[mypy-scrapy.utils.response]
+ignore_errors = True
+
+[mypy-scrapy.utils.trackref]
+ignore_errors = True
+
+[mypy-tests.mocks.dummydbm]
+ignore_errors = True
+
+[mypy-tests.test_command_fetch]
+ignore_errors = True
+
+[mypy-tests.test_command_parse]
+ignore_errors = True
+
+[mypy-tests.test_command_shell]
+ignore_errors = True
+
+[mypy-tests.test_command_version]
+ignore_errors = True
+
+[mypy-tests.test_contracts]
+ignore_errors = True
+
+[mypy-tests.test_downloader_handlers]
+ignore_errors = True
+
+[mypy-tests.test_engine]
+ignore_errors = True
+
+[mypy-tests.test_exporters]
+ignore_errors = True
+
+[mypy-tests.test_http_request]
+ignore_errors = True
+
+[mypy-tests.test_linkextractors]
+ignore_errors = True
+
+[mypy-tests.test_loader]
+ignore_errors = True
+
+[mypy-tests.test_loader_deprecated]
+ignore_errors = True
+
+[mypy-tests.test_pipeline_crawl]
+ignore_errors = True
+
+[mypy-tests.test_pipeline_files]
+ignore_errors = True
+
+[mypy-tests.test_pipeline_images]
+ignore_errors = True
+
+[mypy-tests.test_request_cb_kwargs]
+ignore_errors = True
+
+[mypy-tests.test_scheduler]
+ignore_errors = True
+
+[mypy-tests.test_spidermiddleware_httperror]
+ignore_errors = True
+
+[mypy-tests.test_spidermiddleware_referer]
+ignore_errors = True
+
+[mypy-tests.test_utils_serialize]
+ignore_errors = True
+
+[mypy-tests.test_utils_url]
+ignore_errors = True
+
+--- tox.ini ---
+# Tox (https://tox.readthedocs.io/) is a tool for running tests
+# in multiple virtualenvs. This configuration file will run the
+# test suite on all supported python versions. To use it, "pip install tox"
+# and then run "tox" from this directory.
+
+[tox]
+envlist = security,flake8,py
+minversion = 1.7.0
+
+[testenv]
+deps =
+    -ctests/constraints.txt
+    -rtests/requirements-py3.txt
+    # mitmproxy does not support PyPy
+    # mitmproxy does not support Windows when running Python < 3.7
+    mitmproxy; python_version >= '3.7' and implementation_name != 'pypy'
+    mitmproxy >= 4.0.4, < 5; python_version >= '3.6' and python_version < '3.7' and platform_system != 'Windows' and implementation_name != 'pypy'
+    # Extras
+    botocore>=1.4.87
+    Pillow>=4.0.0
+    Twisted[http2]>=17.9.0
+passenv =
+    S3_TEST_FILE_URI
+    AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY
+    GCS_TEST_FILE_URI
+    GCS_PROJECT_ID
+#allow tox virtualenv to upgrade pip/wheel/setuptools
+download = true 
+commands =
+    py.test --cov=scrapy --cov-report= {posargs:--durations=10 docs scrapy tests}
+
+[testenv:typing]
+basepython = python3
+deps =
+    mypy==0.780
+commands =
+    mypy {posargs: scrapy tests}
+
+[testenv:security]
+basepython = python3
+deps =
+    bandit
+commands =
+    bandit -r -c .bandit.yml {posargs:scrapy}
+
+[testenv:flake8]
+basepython = python3
+deps =
+    {[testenv]deps}
+    pytest-flake8
+commands =
+    py.test --flake8 {posargs:docs scrapy tests}
+
+[testenv:pylint]
+basepython = python3
+deps =
+    {[testenv]deps}
+    # Optional dependencies
+    boto
+    reppy
+    robotexclusionrulesparser
+    # Test dependencies
+    pylint
+commands =
+    pylint conftest.py docs extras scrapy setup.py tests
+
+[pinned]
+deps =
+    -ctests/constraints.txt
+    cryptography==2.0
+    cssselect==0.9.1
+    h2==3.2.0
+    itemadapter==0.1.0
+    parsel==1.5.0
+    Protego==0.1.15
+    pyOpenSSL==16.2.0
+    queuelib==1.4.2
+    service_identity==16.0.0
+    Twisted[http2]==17.9.0
+    w3lib==1.17.0
+    zope.interface==4.1.3
+    -rtests/requirements-py3.txt
+
+    # mitmproxy 4.0.4+ requires upgrading some of the pinned dependencies
+    # above, hence we do not install it in pinned environments at the moment
+
+    # Extras
+    botocore==1.4.87
+    google-cloud-storage==1.29.0
+    Pillow==4.0.0
+install_command =
+    # --use-feature=2020-resolver is required, otherwise the latest verion of
+    # Twisted gets installed.
+    pip install --use-feature=2020-resolver {opts} {packages}
+setenv =
+    _SCRAPY_PINNED=true
+
+[testenv:pinned]
+deps =
+    {[pinned]deps}
+    lxml==3.5.0
+    PyDispatcher==2.0.5
+install_command =
+    {[pinned]install_command}
+setenv =
+    {[pinned]setenv}
+    
+[testenv:windows-pinned]
+basepython = python3
+deps =
+    {[pinned]deps}
+    # First lxml version that includes a Windows wheel for Python 3.6, so we do
+    # not need to build lxml from sources in a CI Windows job:
+    lxml==3.8.0
+    PyDispatcher==2.0.5
+install_command =
+    {[pinned]install_command}
+setenv =
+    {[pinned]setenv}
+
+[testenv:extra-deps]
+deps =
+    {[testenv]deps}
+    reppy
+    robotexclusionrulesparser
+install_command =
+    # Test --use-feature=2020-resolver for the latest version of all
+    # dependencies.
+    pip install --use-feature=2020-resolver {opts} {packages}
+
+[testenv:asyncio]
+commands =
+    {[testenv]commands} --reactor=asyncio
+
+[testenv:asyncio-pinned]
+deps = {[testenv:pinned]deps}
+install_command =
+    {[pinned]install_command}
+commands = {[testenv:asyncio]commands}
+setenv =
+    {[pinned]setenv}
+
+[testenv:pypy3]
+basepython = pypy3
+commands =
+    py.test {posargs:--durations=10 docs scrapy tests}
+
+[testenv:pypy3-pinned]
+basepython = {[testenv:pypy3]basepython}
+deps =
+    {[pinned]deps}
+    lxml==4.0.0
+    PyPyDispatcher==2.1.0
+install_command =
+    {[pinned]install_command}
+commands = {[testenv:pypy3]commands}
+setenv =
+    {[pinned]setenv}
+
+[docs]
+changedir = docs
+deps =
+    -rdocs/requirements.txt
+setenv =
+    READTHEDOCS_PROJECT=scrapy
+    READTHEDOCS_VERSION=master
+
+[testenv:docs]
+basepython = python3
+changedir = {[docs]changedir}
+deps = {[docs]deps}
+setenv = {[docs]setenv}
+commands =
+    sphinx-build -W -b html . {envtmpdir}/html
+
+[testenv:docs-coverage]
+basepython = python3
+changedir = {[docs]changedir}
+deps = {[docs]deps}
+setenv = {[docs]setenv}
+commands =
+    sphinx-build -b coverage . {envtmpdir}/coverage
+
+[testenv:docs-links]
+basepython = python3
+changedir = {[docs]changedir}
+deps = {[docs]deps}
+setenv = {[docs]setenv}
+commands =
+    sphinx-build -W -b linkcheck . {envtmpdir}/linkcheck
+
+
+ARQUITETURA TEXTUAL INFERIDA:
+PROJETO
+|
++-- Documentacao e configuracao
+|   +-- CODE_OF_CONDUCT.md
+|   +-- CONTRIBUTING.md
+|   +-- README.rst
+|   +-- conftest.py
+|   +-- setup.cfg
+|   +-- setup.py
+|   +-- tox.ini
+|
++-- Modulos/dominios visiveis
+|   +-- .github/
+|   +-- artwork/
+|   +-- docs/
+|   +-- extras/
+|   +-- scrapy/
+|   +-- sep/
+|   +-- tests/
+|
++-- Entradas e interfaces descritas no README
+|   +-- configuracao/parametros
+|   +-- processamento principal
+|   +-- saidas/resultados
+|
++-- Testes proprios a serem criados pela IA

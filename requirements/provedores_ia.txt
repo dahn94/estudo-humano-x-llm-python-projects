@@ -1,0 +1,5 @@
+# SDKs opcionais para a etapa de geracao por modelos de IA.
+openai>=1.0,<4
+anthropic>=0.40,<1
+google-genai>=1.0,<2
+

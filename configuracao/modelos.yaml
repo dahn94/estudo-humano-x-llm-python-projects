@@ -1,0 +1,18 @@
+execucoes_por_modelo: 1
+
+modelos:
+  openai:
+    versao: ""
+    temperatura: ""
+    api_key_env: "OPENAI_API_KEY"
+  gemini:
+    versao: ""
+    temperatura: ""
+    api_key_env: "GEMINI_API_KEY"
+  claude:
+    versao: ""
+    temperatura: ""
+    api_key_env: "ANTHROPIC_API_KEY"
+
+# Preencher versão, temperatura e data da geração antes do experimento.
+# Nunca colocar chaves de API neste arquivo.

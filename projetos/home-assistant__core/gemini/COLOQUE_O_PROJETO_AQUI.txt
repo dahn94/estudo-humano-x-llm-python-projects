@@ -1,0 +1,1 @@
+Coloque aqui o projeto gemini gerado com prompts/home-assistant__core/prompt_recriacao.txt.

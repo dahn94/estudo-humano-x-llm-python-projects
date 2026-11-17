@@ -1,0 +1,6 @@
+# Dependencias para coleta, configuracao, relatorios e automacao do pipeline.
+PyYAML>=6.0,<7
+python-dotenv>=1.0,<2
+requests>=2.31,<3
+reportlab>=4.0,<5
+

@@ -1,0 +1,114 @@
+16:07:27.114 INFO  Scanner configuration file: /mnt/c/Users/felipe.fidelis/OneDrive - Vision Cybersecurity/Área de Trabalho/trabalho mestrado/python_prellm_pipeline/pipeline_interno/tools/sonar-scanner/conf/sonar-scanner.properties
+16:07:27.123 INFO  Project root configuration file: NONE
+16:07:27.140 INFO  SonarScanner CLI 8.0.1.6346
+16:07:27.147 INFO  Linux 6.18.33.2-microsoft-standard-WSL2 amd64
+16:07:28.288 INFO  Communicating with SonarQube Community Build 26.9.0.129388
+16:07:28.291 INFO  JRE provisioning is disabled
+16:07:28.292 INFO  The java executable in the PATH will be used
+16:07:28.431 INFO  SONAR_SCANNER_JAVA_OPTS=-Xms256m -Xmx4096m
+16:07:28.750 INFO  Starting SonarScanner Engine...
+16:07:28.752 INFO  Java 21.0.12 Ubuntu (64-bit)
+16:07:29.869 INFO  Load global settings
+16:07:29.948 INFO  Load global settings (done) | time=76ms
+16:07:29.951 INFO  Server id: 147B411E-AaCHMJYtDFq3q1fqGHiY
+16:07:29.960 INFO  Loading required plugins
+16:07:29.962 INFO  Load plugins index
+16:07:29.976 INFO  Load plugins index (done) | time=15ms
+16:07:29.977 INFO  Load/download plugins
+16:07:30.001 INFO  Load/download plugins (done) | time=25ms
+16:07:30.277 INFO  Process project properties
+16:07:30.291 INFO  Process project properties (done) | time=14ms
+16:07:30.301 INFO  Project key: human-gradio-app__gradio
+16:07:30.302 INFO  Base dir: /home/felipefidelis/prellm_gradio_app__gradio_MpsS
+16:07:30.304 INFO  Working dir: /home/felipefidelis/prellm_gradio_app__gradio_MpsS/.scannerwork
+16:07:30.315 INFO  Load project settings for component key: 'human-gradio-app__gradio'
+16:07:30.345 INFO  Load quality profiles
+16:07:30.412 INFO  Load quality profiles (done) | time=67ms
+16:07:30.451 WARN  SCM provider autodetection failed. Please use "sonar.scm.provider" to define SCM of your project, or disable the SCM Sensor in the project settings.
+16:07:30.464 INFO  Load active rules
+16:07:30.716 INFO  Load active rules (done) | time=253ms
+16:07:30.724 INFO  Load analysis cache
+16:07:30.732 INFO  Load analysis cache (404) | time=8ms
+16:07:30.806 INFO  Preprocessing files...
+16:07:30.854 INFO  1 language detected in 59 preprocessed files (done) | time=48ms
+16:07:30.856 INFO  0 files ignored because of inclusion/exclusion patterns
+16:07:30.858 INFO  Loading plugins for detected languages
+16:07:30.859 INFO  Load/download plugins
+16:07:30.863 INFO  Load/download plugins (done) | time=5ms
+16:07:31.007 INFO  Load project repositories
+16:07:31.016 INFO  Load project repositories (done) | time=10ms
+16:07:31.044 INFO  Indexing files...
+16:07:31.045 INFO  Project configuration:
+16:07:31.046 INFO    Included sources: **/*.py
+16:07:31.048 INFO    Excluded sources: **/.git/**, **/.venv/**, **/venv/**, **/vendor/**, **/vendors/**, **/third_party/**, **/node_modules/**, **/build/**, **/dist/**
+16:07:31.063 INFO  59 files indexed (done) | time=19ms
+16:07:31.066 INFO  Quality profile for py: Sonar way
+16:07:31.068 INFO  ------------- Run sensors on module Humano - gradio-app__gradio
+16:07:31.119 INFO  Load metrics repository
+16:07:31.146 INFO  Load metrics repository (done) | time=28ms
+16:07:31.759 INFO  Sensor IaC YAML File Type Classification Sensor [iac]
+16:07:31.762 INFO  Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=4ms
+16:07:31.765 INFO  Sensor IaC hadolint report Sensor [iac]
+16:07:31.766 INFO  Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+16:07:31.769 INFO  Sensor Java Config Sensor [iac]
+16:07:31.770 INFO  There are no files to be analyzed for the Java language
+16:07:31.773 INFO  Sensor Java Config Sensor [iac] (done) | time=0ms
+16:07:31.774 INFO  Sensor IaC Docker Sensor [iac]
+16:07:31.775 INFO  There are no files to be analyzed for the Docker language
+16:07:31.776 INFO  Sensor IaC Docker Sensor [iac] (done) | time=3ms
+16:07:31.778 INFO  Sensor Python Sensor [python]
+16:07:32.128 INFO  Starting global symbols computation
+16:07:32.132 INFO  59 source files to be analyzed
+16:07:33.334 INFO  59/59 source files have been analyzed
+16:07:33.336 INFO  Finished step global symbols computation in 1205ms
+16:07:33.398 INFO  Starting rules execution
+16:07:33.400 INFO  59 source files to be analyzed
+16:07:33.925 WARN  Test files were detected using a path heuristic because "sonar.tests" is not set. To improve the analysis accuracy, it is recommended to configure it, e.g.: "sonar.tests=src/test".
+16:07:35.595 INFO  59/59 source files have been analyzed
+16:07:35.597 INFO  Finished step rules execution in 2197ms
+16:07:35.598 INFO  The Python analyzer was able to leverage cached data from previous analyses for 0 out of 59 files. These files were not parsed.
+16:07:35.599 INFO  Sensor Python Sensor [python] (done) | time=3832ms
+16:07:35.601 INFO  Sensor Cobertura Sensor for Python coverage [python]
+16:07:35.606 INFO  Sensor Cobertura Sensor for Python coverage [python] (done) | time=6ms
+16:07:35.608 INFO  Sensor PythonXUnitSensor [python]
+16:07:35.610 INFO  Sensor PythonXUnitSensor [python] (done) | time=3ms
+16:07:35.611 INFO  Sensor Python Dependency Sensor [python]
+16:07:35.614 INFO  Sensor Python Dependency Sensor [python] (done) | time=3ms
+16:07:35.615 INFO  Sensor TextAndSecretsSensor [text]
+16:07:35.629 INFO  Available processors: 8
+16:07:35.630 INFO  Using 8 threads for analysis.
+16:07:35.931 INFO  The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test", "tests", "mock" or "mocks"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+16:07:35.955 INFO  Start fetching files for the text and secrets analysis
+16:07:35.972 INFO  Using Git CLI to retrieve dirty files
+16:07:35.975 WARN  Retrieving only language associated files, make sure to run the analysis inside a git repository to make use of inclusions specified via "sonar.text.inclusions"
+16:07:35.976 INFO  Starting the text and secrets analysis
+16:07:35.978 INFO  59 source files to be analyzed for the text and secrets analysis
+16:07:36.045 INFO  59/59 source files have been analyzed for the text and secrets analysis
+16:07:36.046 INFO  Skipped 7 file(s) in the secrets analysis due to automatic test file detection
+16:07:36.048 INFO  Sensor TextAndSecretsSensor [text] (done) | time=434ms
+16:07:36.050 INFO  ------------- Run sensors on project
+16:07:36.179 INFO  Sensor IaC Project Sensor [iac]
+16:07:36.183 INFO  Sensor IaC Project Sensor [iac] (done) | time=1ms
+16:07:36.185 INFO  Sensor Zero Coverage Sensor
+16:07:36.205 INFO  Sensor Zero Coverage Sensor (done) | time=24ms
+16:07:36.208 INFO  ------------- Gather SCA dependencies on project
+16:07:36.210 INFO  Dependency analysis skipped
+16:07:36.212 INFO  SCM Publisher No SCM system was detected. You can use the 'sonar.scm.provider' property to explicitly specify it.
+16:07:36.221 INFO  CPD Executor 9 files had no CPD blocks
+16:07:36.222 INFO  CPD Executor Calculating CPD for 50 files
+16:07:36.250 INFO  CPD Executor CPD calculation finished (done) | time=28ms
+16:07:36.393 INFO  Analysis report generated in 133ms, dir size=967.6 kB
+16:07:36.486 INFO  Analysis report compressed in 92ms, zip size=481.1 kB
+16:07:36.914 INFO  Analysis report uploaded in 429ms
+16:07:36.917 INFO  ANALYSIS SUCCESSFUL, you can find the results at: http://localhost:9000/dashboard?id=human-gradio-app__gradio
+16:07:36.919 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+16:07:36.920 INFO  More about the report processing at http://localhost:9000/api/ce/task?id=9974dcd8-62ec-49b8-9293-98a72294ced9
+16:07:36.928 INFO  Analysis total time: 6.895 s
+16:07:36.950 INFO  SonarScanner Engine completed successfully
+16:07:36.988 INFO  EXECUTION SUCCESS
+16:07:36.990 INFO  Total time: 9.890s

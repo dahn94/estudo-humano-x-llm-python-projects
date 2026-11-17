@@ -1,0 +1,218 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 14 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: tensorflow/models
+####################################################################################################
+Repositorio: https://github.com/tensorflow/models
+Commit analisado: 718fb2c0d478ab6c9906a3dbf44099942a2c6426
+Link do commit: https://github.com/tensorflow/models/commit/718fb2c0d478ab6c9906a3dbf44099942a2c6426
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 322696
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 18
+  ERROR: 5
+  WARNING: 13
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 0
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 0
+  Security hotspots: 0
+  Complexidade: 26967
+  Linhas analisadas pelo SonarQube: 231421
+  Severidades: nenhuma
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: official/modeling/hyperparams/base_config.py
+Linha: 250
+Link do codigo: https://github.com/tensorflow/models/blob/718fb2c0d478ab6c9906a3dbf44099942a2c6426/official/modeling/hyperparams/base_config.py#L250
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 2]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: official/modeling/hyperparams/params_dict.py
+Linha: 315
+Link do codigo: https://github.com/tensorflow/models/blob/718fb2c0d478ab6c9906a3dbf44099942a2c6426/official/modeling/hyperparams/params_dict.py#L315
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 3]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: official/modeling/hyperparams/params_dict.py
+Linha: 436
+Link do codigo: https://github.com/tensorflow/models/blob/718fb2c0d478ab6c9906a3dbf44099942a2c6426/official/modeling/hyperparams/params_dict.py#L436
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 4]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: official/modeling/hyperparams/params_dict.py
+Linha: 441
+Link do codigo: https://github.com/tensorflow/models/blob/718fb2c0d478ab6c9906a3dbf44099942a2c6426/official/modeling/hyperparams/params_dict.py#L441
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 5]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: official/modeling/hyperparams/params_dict_test.py
+Linha: 223
+Link do codigo: https://github.com/tensorflow/models/blob/718fb2c0d478ab6c9906a3dbf44099942a2c6426/official/modeling/hyperparams/params_dict_test.py#L223
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 6]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: official/modeling/hyperparams/params_dict_test.py
+Linha: 359
+Link do codigo: https://github.com/tensorflow/models/blob/718fb2c0d478ab6c9906a3dbf44099942a2c6426/official/modeling/hyperparams/params_dict_test.py#L359
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 7]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: official/modeling/hyperparams/params_dict_test.py
+Linha: 372
+Link do codigo: https://github.com/tensorflow/models/blob/718fb2c0d478ab6c9906a3dbf44099942a2c6426/official/modeling/hyperparams/params_dict_test.py#L372
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 8]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: official/modeling/hyperparams/params_dict_test.py
+Linha: 385
+Link do codigo: https://github.com/tensorflow/models/blob/718fb2c0d478ab6c9906a3dbf44099942a2c6426/official/modeling/hyperparams/params_dict_test.py#L385
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 9]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: official/modeling/hyperparams/params_dict_test.py
+Linha: 391
+Link do codigo: https://github.com/tensorflow/models/blob/718fb2c0d478ab6c9906a3dbf44099942a2c6426/official/modeling/hyperparams/params_dict_test.py#L391
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 10]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: official/nlp/xlnet/run_squad.py
+Linha: 260
+Link do codigo: https://github.com/tensorflow/models/blob/718fb2c0d478ab6c9906a3dbf44099942a2c6426/official/nlp/xlnet/run_squad.py#L260
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 11]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: official/recommendation/data_preprocessing.py
+Linha: 157
+Link do codigo: https://github.com/tensorflow/models/blob/718fb2c0d478ab6c9906a3dbf44099942a2c6426/official/recommendation/data_preprocessing.py#L157
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 12]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: research/efficient-hrl/scripts/local_eval.py
+Linha: 72
+Link do codigo: https://github.com/tensorflow/models/blob/718fb2c0d478ab6c9906a3dbf44099942a2c6426/research/efficient-hrl/scripts/local_eval.py#L72
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 13]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: research/efficient-hrl/scripts/local_train.py
+Linha: 72
+Link do codigo: https://github.com/tensorflow/models/blob/718fb2c0d478ab6c9906a3dbf44099942a2c6426/research/efficient-hrl/scripts/local_train.py#L72
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 14]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: research/object_detection/exporter_lib_v2.py
+Linha: 64
+Link do codigo: https://github.com/tensorflow/models/blob/718fb2c0d478ab6c9906a3dbf44099942a2c6426/research/object_detection/exporter_lib_v2.py#L64
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 15]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: research/pcl_rl/expert_paths.py
+Linha: 39
+Link do codigo: https://github.com/tensorflow/models/blob/718fb2c0d478ab6c9906a3dbf44099942a2c6426/research/pcl_rl/expert_paths.py#L39
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 16]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: research/rebar/datasets.py
+Linha: 55
+Link do codigo: https://github.com/tensorflow/models/blob/718fb2c0d478ab6c9906a3dbf44099942a2c6426/research/rebar/datasets.py#L55
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 17]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: research/rebar/rebar_train.py
+Linha: 156
+Link do codigo: https://github.com/tensorflow/models/blob/718fb2c0d478ab6c9906a3dbf44099942a2c6426/research/rebar/rebar_train.py#L156
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 18]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: research/rebar/rebar_train.py
+Linha: 157
+Link do codigo: https://github.com/tensorflow/models/blob/718fb2c0d478ab6c9906a3dbf44099942a2c6426/research/rebar/rebar_train.py#L157
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE tensorflow/models
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

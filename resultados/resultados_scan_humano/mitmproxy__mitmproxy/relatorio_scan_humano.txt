@@ -1,0 +1,65 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 40 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: mitmproxy/mitmproxy
+####################################################################################################
+Repositorio: https://github.com/mitmproxy/mitmproxy
+Commit analisado: 36d5a198b832694d428875096d7c23b097a12b6f
+Link do commit: https://github.com/mitmproxy/mitmproxy/commit/36d5a198b832694d428875096d7c23b097a12b6f
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 47492
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 1
+  ERROR: 1
+  WARNING: 0
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 0
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 0
+  Security hotspots: 0
+  Complexidade: 7237
+  Linhas analisadas pelo SonarQube: 42633
+  Severidades: nenhuma
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: docs/scripts/clirecording/clidirector.py
+Linha: 107
+Link do codigo: https://github.com/mitmproxy/mitmproxy/blob/36d5a198b832694d428875096d7c23b097a12b6f/docs/scripts/clirecording/clidirector.py#L107
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE mitmproxy/mitmproxy
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

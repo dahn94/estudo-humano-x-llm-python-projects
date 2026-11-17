@@ -1,0 +1,1 @@
+Coloque aqui o projeto gemini gerado com prompts/psf__requests/prompt_recriacao.txt.

@@ -1,0 +1,202 @@
+{
+  "TheAlgorithms/Python@dd4b2656806e64d1c28301ded3b5c4d863de76db": {
+    "arquivos_python": 887,
+    "python_loc": 52218
+  },
+  "yt-dlp/yt-dlp@2d30509fc893f58cac77c25134a246ed9d76e7ed": {
+    "arquivos_python": 876,
+    "python_loc": 135361
+  },
+  "huggingface/transformers@ae333d04b29a25be1a70eaccd6260c294c243c5b": {
+    "arquivos_python": 688,
+    "python_loc": 217927
+  },
+  "ytdl-org/youtube-dl@40d66e07dfef72fbef761ac720b82eb77deb7398": {
+    "arquivos_python": 855,
+    "python_loc": 133002
+  },
+  "pytorch/pytorch@749f8b78508c43f9e6331f2395a4202785068442": {
+    "arquivos_python": 1713,
+    "python_loc": 429938
+  },
+  "fastapi/fastapi@5614b94ccc9f72f1de2f63aae63f5fe90b86c8b5": {
+    "arquivos_python": 544,
+    "python_loc": 33671
+  },
+  "nvbn/thefuck@55922e4dbeedaca384e83406f2fa87c5a8e152fb": {
+    "arquivos_python": 407,
+    "python_loc": 12498
+  },
+  "3b1b/manim@e59d83980622638e2b622302bce7dbb859b31e1b": {
+    "arquivos_python": 87,
+    "python_loc": 16057
+  },
+  "sherlock-project/sherlock@d404fe73fc79448fa868d126d28f0d3ea0502a43": {
+    "arquivos_python": 10,
+    "python_loc": 1452
+  },
+  "django/django@e13b71403bd1568abed237858127677144d43d23": {
+    "arquivos_python": 2693,
+    "python_loc": 312865
+  },
+  "home-assistant/core@edee0682baa1788f63e81612e9bf0edaace11564": {
+    "arquivos_python": 5690,
+    "python_loc": 732427
+  },
+  "PaddlePaddle/PaddleOCR@c03b0b0604f238f918b30dff3c043fb467ea27f2": {
+    "arquivos_python": 140,
+    "python_loc": 27465
+  },
+  "Z4nzu/hackingtool@768b722efe3f3bfe9ac1a491b737c2e5a69de790": {
+    "arquivos_python": 31,
+    "python_loc": 1989
+  },
+  "tensorflow/models@718fb2c0d478ab6c9906a3dbf44099942a2c6426": {
+    "arquivos_python": 1505,
+    "python_loc": 322696
+  },
+  "python/cpython@b5711c940f70af89f2b4cf081a3fcd83924f3ae7": {
+    "arquivos_python": 2006,
+    "python_loc": 722160
+  },
+  "apache/superset@f3ab1f41eebcd8dfe0379e81dd7083f1a9efa52f": {
+    "arquivos_python": 655,
+    "python_loc": 100520
+  },
+  "pallets/flask@de0af038627fd4f45bfe61ca9aed36b8e10770d5": {
+    "arquivos_python": 72,
+    "python_loc": 12211
+  },
+  "OpenBB-finance/OpenBB@c87d328cb758c57f98d5518828880cf52432c28f": {
+    "arquivos_python": 5,
+    "python_loc": 1557
+  },
+  "ansible/ansible@42bc03f0f5740f2340fcdbe75557920552622ac3": {
+    "arquivos_python": 1395,
+    "python_loc": 205788
+  },
+  "scikit-learn/scikit-learn@6b4f82433dc2f219dbff7fe8fa42c10b72379be6": {
+    "arquivos_python": 838,
+    "python_loc": 226829
+  },
+  "scrapy/scrapy@e494a3f73318db76d7c56e65bc632cd5875b8825": {
+    "arquivos_python": 323,
+    "python_loc": 38653
+  },
+  "keras-team/keras@6a46d5259d079a58a9d32ad31a9e9da9c0ea563f": {
+    "arquivos_python": 476,
+    "python_loc": 180982
+  },
+  "commaai/openpilot@1362886a608272d9b87404507f2457bd014443f7": {
+    "arquivos_python": 384,
+    "python_loc": 34597
+  },
+  "CorentinJ/Real-Time-Voice-Cloning@5425557efe30863267f805851f918124191e0be0": {
+    "arquivos_python": 67,
+    "python_loc": 7113
+  },
+  "ultralytics/yolov5@7180b22e2d2d06be1622cbc71e758ed04727ff65": {
+    "arquivos_python": 19,
+    "python_loc": 4030
+  },
+  "deepfakes/faceswap@b67f91ea0b9d75bd9a2b1c312eedc7ff2e47a2b1": {
+    "arquivos_python": 201,
+    "python_loc": 47835
+  },
+  "Textualize/rich@70d40da7336dd9f934ecfb83ac993565b80fe84d": {
+    "arquivos_python": 152,
+    "python_loc": 22209
+  },
+  "soimort/you-get@027130a45ab4c69ab3b1ba1bff9dd9b34ada5a4f": {
+    "arquivos_python": 139,
+    "python_loc": 12535
+  },
+  "ageitgey/face_recognition@d50353fdcb2f0b7180281ede9121810323ca9e37": {
+    "arquivos_python": 30,
+    "python_loc": 2272
+  },
+  "freqtrade/freqtrade@e5840abaf9f77ecb47df29ca352f07ec0e4ae032": {
+    "arquivos_python": 179,
+    "python_loc": 41619
+  },
+  "odoo/odoo@a6c29c44f44079308a04a3637d0479fdb067a9ec": {
+    "arquivos_python": 4460,
+    "python_loc": 457112
+  },
+  "psf/requests@c2b307dbefe21177af03f9feb37181a89a799fcc": {
+    "arquivos_python": 35,
+    "python_loc": 7860
+  },
+  "pandas-dev/pandas@c15f3df7b112350e2af19ccc5401601e54c9b722": {
+    "arquivos_python": 1227,
+    "python_loc": 394128
+  },
+  "microsoft/qlib@46c8d791ac0d9a3adccfcbf2a0d94e917467e056": {
+    "arquivos_python": 123,
+    "python_loc": 22242
+  },
+  "apache/airflow@d202fd47fa5025bd6ea3296f9a731b40acac52e5": {
+    "arquivos_python": 2595,
+    "python_loc": 326347
+  },
+  "9001/copyparty@e1f4b960e8e581f2f997fe706886091fa3195d2a": {
+    "arquivos_python": 26,
+    "python_loc": 5258
+  },
+  "coqui-ai/TTS@4cfde34ad8d2dcc4bc7cbc9fbf85d151a560985c": {
+    "arquivos_python": 157,
+    "python_loc": 17551
+  },
+  "streamlit/streamlit@3c96ea7e9b849b5ddc27a5c086eae4368361feba": {
+    "arquivos_python": 356,
+    "python_loc": 33643
+  },
+  "vnpy/vnpy@19a9a864dffd5acd40f889cbc831dd229c2f4b51": {
+    "arquivos_python": 450,
+    "python_loc": 206596
+  },
+  "mitmproxy/mitmproxy@36d5a198b832694d428875096d7c23b097a12b6f": {
+    "arquivos_python": 477,
+    "python_loc": 47492
+  },
+  "getsentry/sentry@f96907d7c3d87e47baf540be6970b9f38c0ee602": {
+    "arquivos_python": 3024,
+    "python_loc": 296603
+  },
+  "ccxt/ccxt@4faa3d6831c963763174f1bf076209937645cea9": {
+    "arquivos_python": 53,
+    "python_loc": 11763
+  },
+  "ray-project/ray@4ca64549e2dc70a33cc638bfc372ad4f128ff6eb": {
+    "arquivos_python": 1202,
+    "python_loc": 187495
+  },
+  "gradio-app/gradio@f888d2b637141e275321769f0e836ecb7a1cf603": {
+    "arquivos_python": 59,
+    "python_loc": 4404
+  },
+  "deepspeedai/DeepSpeed@81aeea361da3936b875a678b9cb44596800510b5": {
+    "arquivos_python": 125,
+    "python_loc": 24908
+  },
+  "mingrammer/diagrams@d875b73e3e586e58305264a1396224c83c7b8951": {
+    "arquivos_python": 193,
+    "python_loc": 5036
+  },
+  "psf/black@33d861371533d64a54af419798f1ddfa692f388c": {
+    "arquivos_python": 97,
+    "python_loc": 103013
+  },
+  "ManimCommunity/manim@e16f9a6cc4da677c6f0fc4e7ba8d7025f9d6bb10": {
+    "arquivos_python": 160,
+    "python_loc": 27744
+  },
+  "PostHog/posthog@51b291602e718e1bf213438f33a4cb7248761851": {
+    "arquivos_python": 418,
+    "python_loc": 30536
+  },
+  "frappe/erpnext@2adf8d07b6c8ceda071ddeb15ed1d8b64e10e232": {
+    "arquivos_python": 3612,
+    "python_loc": 158653
+  }
+}

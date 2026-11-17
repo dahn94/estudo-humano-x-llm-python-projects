@@ -1,0 +1,1 @@
+Coloque aqui o projeto openai gerado com prompts/tensorflow__models/prompt_recriacao.txt.

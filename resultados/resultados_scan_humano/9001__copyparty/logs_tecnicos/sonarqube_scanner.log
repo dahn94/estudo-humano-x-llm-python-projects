@@ -1,0 +1,121 @@
+16:01:26.384 INFO  Scanner configuration file: /mnt/c/Users/felipe.fidelis/OneDrive - Vision Cybersecurity/Área de Trabalho/trabalho mestrado/python_prellm_pipeline/pipeline_interno/tools/sonar-scanner/conf/sonar-scanner.properties
+16:01:26.393 INFO  Project root configuration file: NONE
+16:01:26.410 INFO  SonarScanner CLI 8.0.1.6346
+16:01:26.418 INFO  Linux 6.18.33.2-microsoft-standard-WSL2 amd64
+16:01:27.626 INFO  Communicating with SonarQube Community Build 26.9.0.129388
+16:01:27.628 INFO  JRE provisioning is disabled
+16:01:27.629 INFO  The java executable in the PATH will be used
+16:01:27.768 INFO  SONAR_SCANNER_JAVA_OPTS=-Xms256m -Xmx4096m
+16:01:28.108 INFO  Starting SonarScanner Engine...
+16:01:28.109 INFO  Java 21.0.12 Ubuntu (64-bit)
+16:01:29.139 INFO  Load global settings
+16:01:29.225 INFO  Load global settings (done) | time=85ms
+16:01:29.228 INFO  Server id: 147B411E-AaCHMJYtDFq3q1fqGHiY
+16:01:29.241 INFO  Loading required plugins
+16:01:29.242 INFO  Load plugins index
+16:01:29.255 INFO  Load plugins index (done) | time=14ms
+16:01:29.256 INFO  Load/download plugins
+16:01:29.282 INFO  Load/download plugins (done) | time=28ms
+16:01:29.551 INFO  Process project properties
+16:01:29.564 INFO  Process project properties (done) | time=13ms
+16:01:29.574 INFO  Project key: human-9001__copyparty
+16:01:29.575 INFO  Base dir: /home/felipefidelis/prellm_9001__copyparty_jW9N
+16:01:29.576 INFO  Working dir: /home/felipefidelis/prellm_9001__copyparty_jW9N/.scannerwork
+16:01:29.584 INFO  Load project settings for component key: 'human-9001__copyparty'
+16:01:29.612 INFO  Load quality profiles
+16:01:29.679 INFO  Load quality profiles (done) | time=68ms
+16:01:29.720 WARN  SCM provider autodetection failed. Please use "sonar.scm.provider" to define SCM of your project, or disable the SCM Sensor in the project settings.
+16:01:29.731 INFO  Load active rules
+16:01:30.021 INFO  Load active rules (done) | time=290ms
+16:01:30.027 INFO  Load analysis cache
+16:01:30.035 INFO  Load analysis cache (404) | time=8ms
+16:01:30.114 INFO  Preprocessing files...
+16:01:30.157 INFO  1 language detected in 26 preprocessed files (done) | time=42ms
+16:01:30.160 INFO  0 files ignored because of inclusion/exclusion patterns
+16:01:30.161 INFO  Loading plugins for detected languages
+16:01:30.162 INFO  Load/download plugins
+16:01:30.165 INFO  Load/download plugins (done) | time=6ms
+16:01:30.310 INFO  Load project repositories
+16:01:30.319 INFO  Load project repositories (done) | time=9ms
+16:01:30.352 INFO  Indexing files...
+16:01:30.353 INFO  Project configuration:
+16:01:30.354 INFO    Included sources: **/*.py
+16:01:30.355 INFO    Excluded sources: **/.git/**, **/.venv/**, **/venv/**, **/vendor/**, **/vendors/**, **/third_party/**, **/node_modules/**, **/build/**, **/dist/**
+16:01:30.365 INFO  26 files indexed (done) | time=14ms
+16:01:30.367 INFO  Quality profile for py: Sonar way
+16:01:30.368 INFO  ------------- Run sensors on module Humano - 9001__copyparty
+16:01:30.411 INFO  Load metrics repository
+16:01:30.440 INFO  Load metrics repository (done) | time=29ms
+16:01:31.088 INFO  Sensor IaC YAML File Type Classification Sensor [iac]
+16:01:31.091 INFO  Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=3ms
+16:01:31.094 INFO  Sensor IaC hadolint report Sensor [iac]
+16:01:31.095 INFO  Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+16:01:31.097 INFO  Sensor Java Config Sensor [iac]
+16:01:31.099 INFO  There are no files to be analyzed for the Java language
+16:01:31.100 INFO  Sensor Java Config Sensor [iac] (done) | time=0ms
+16:01:31.101 INFO  Sensor IaC Docker Sensor [iac]
+16:01:31.103 INFO  There are no files to be analyzed for the Docker language
+16:01:31.104 INFO  Sensor IaC Docker Sensor [iac] (done) | time=1ms
+16:01:31.106 INFO  Sensor Python Sensor [python]
+16:01:31.443 INFO  Starting global symbols computation
+16:01:31.446 INFO  26 source files to be analyzed
+16:01:32.627 INFO  26/26 source files have been analyzed
+16:01:32.629 INFO  Finished step global symbols computation in 1184ms
+16:01:32.675 INFO  Starting rules execution
+16:01:32.677 INFO  26 source files to be analyzed
+16:01:33.519 ERROR Unable to parse file: docs/mistakes.py
+16:01:33.522 ERROR Parse error at line 2 column 0:
+
+  -->                  method = self.s.recv(4)
+    3:                 self.s.unrecv(method)
+    4:                 print("xxx unrecv'd [{}]".format(method))
+
+16:01:34.391 WARN  Test files were detected using a path heuristic because "sonar.tests" is not set. To improve the analysis accuracy, it is recommended to configure it, e.g.: "sonar.tests=src/test".
+16:01:35.358 INFO  26/26 source files have been analyzed
+16:01:35.360 INFO  Finished step rules execution in 2683ms
+16:01:35.360 INFO  The Python analyzer was able to leverage cached data from previous analyses for 0 out of 26 files. These files were not parsed.
+16:01:35.364 INFO  Sensor Python Sensor [python] (done) | time=4269ms
+16:01:35.364 INFO  Sensor Cobertura Sensor for Python coverage [python]
+16:01:35.368 INFO  Sensor Cobertura Sensor for Python coverage [python] (done) | time=3ms
+16:01:35.369 INFO  Sensor PythonXUnitSensor [python]
+16:01:35.370 INFO  Sensor PythonXUnitSensor [python] (done) | time=2ms
+16:01:35.371 INFO  Sensor Python Dependency Sensor [python]
+16:01:35.375 INFO  Sensor Python Dependency Sensor [python] (done) | time=4ms
+16:01:35.376 INFO  Sensor TextAndSecretsSensor [text]
+16:01:35.392 INFO  Available processors: 8
+16:01:35.393 INFO  Using 8 threads for analysis.
+16:01:35.661 INFO  The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test", "tests", "mock" or "mocks"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+16:01:35.687 INFO  Start fetching files for the text and secrets analysis
+16:01:35.701 INFO  Using Git CLI to retrieve dirty files
+16:01:35.705 WARN  Retrieving only language associated files, make sure to run the analysis inside a git repository to make use of inclusions specified via "sonar.text.inclusions"
+16:01:35.706 INFO  Starting the text and secrets analysis
+16:01:35.708 INFO  26 source files to be analyzed for the text and secrets analysis
+16:01:35.811 INFO  26/26 source files have been analyzed for the text and secrets analysis
+16:01:35.812 INFO  Skipped 3 file(s) in the secrets analysis due to automatic test file detection
+16:01:35.815 INFO  Sensor TextAndSecretsSensor [text] (done) | time=439ms
+16:01:35.817 INFO  ------------- Run sensors on project
+16:01:35.964 INFO  Sensor IaC Project Sensor [iac]
+16:01:35.966 INFO  Sensor IaC Project Sensor [iac] (done) | time=2ms
+16:01:35.968 INFO  Sensor Zero Coverage Sensor
+16:01:35.995 INFO  Sensor Zero Coverage Sensor (done) | time=27ms
+16:01:35.997 INFO  ------------- Gather SCA dependencies on project
+16:01:36.001 INFO  Dependency analysis skipped
+16:01:36.004 INFO  SCM Publisher No SCM system was detected. You can use the 'sonar.scm.provider' property to explicitly specify it.
+16:01:36.017 INFO  CPD Executor 2 files had no CPD blocks
+16:01:36.018 INFO  CPD Executor Calculating CPD for 23 files
+16:01:36.042 INFO  CPD Executor CPD calculation finished (done) | time=24ms
+16:01:36.264 INFO  Analysis report generated in 212ms, dir size=1.0 MB
+16:01:36.329 INFO  Analysis report compressed in 64ms, zip size=443.6 kB
+16:01:36.601 INFO  Analysis report uploaded in 271ms
+16:01:36.604 INFO  ANALYSIS SUCCESSFUL, you can find the results at: http://localhost:9000/dashboard?id=human-9001__copyparty
+16:01:36.608 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+16:01:36.609 INFO  More about the report processing at http://localhost:9000/api/ce/task?id=71411716-f481-4fd2-9944-b4e91c386f13
+16:01:36.613 INFO  Analysis total time: 7.288 s
+16:01:36.653 INFO  SonarScanner Engine completed successfully
+16:01:36.700 INFO  EXECUTION SUCCESS
+16:01:36.701 INFO  Total time: 10.331s

@@ -1,0 +1,753 @@
+O QUE E ESTE ARQUIVO
+================================================================================
+Este e o prompt que deve ser enviado ao ChatGPT, Gemini ou Claude para recriar o projeto.
+Ele contem somente informacoes documentais publicas e a arquitetura textual inferida; o corpo do
+codigo-fonte humano nao foi incluido. A resposta da IA devera ser salva separadamente e depois
+avaliada pelas mesmas ferramentas Semgrep e SonarQube usadas no projeto humano.
+
+INSTRUCAO PARA A IA
+================================================================================
+Crie do zero um projeto Python funcionalmente semelhante ao descrito abaixo.
+REGRAS OBRIGATORIAS:
+- Nao procure, copie, traduza ou reproduza o codigo-fonte do repositorio original.
+- Use apenas README, documentacao e manifestos fornecidos neste prompt.
+- Implemente as funcionalidades publicas documentadas, validacao de entrada, tratamento de erros e testes proprios.
+- Nao inclua segredos, credenciais, caminhos absolutos ou dependencias desnecessarias.
+- Entregue todos os arquivos completos e um README de execucao.
+
+REFERENCIA: python/cpython
+COMMIT DOCUMENTAL: b5711c940f70af89f2b4cf081a3fcd83924f3ae7
+
+README:
+
+--- README.rst ---
+This is Python version 3.10.0 alpha 3
+=====================================
+
+.. image:: https://travis-ci.com/python/cpython.svg?branch=master
+   :alt: CPython build status on Travis CI
+   :target: https://travis-ci.com/python/cpython
+
+.. image:: https://github.com/python/cpython/workflows/Tests/badge.svg
+   :alt: CPython build status on GitHub Actions
+   :target: https://github.com/python/cpython/actions
+
+.. image:: https://dev.azure.com/python/cpython/_apis/build/status/Azure%20Pipelines%20CI?branchName=master
+   :alt: CPython build status on Azure DevOps
+   :target: https://dev.azure.com/python/cpython/_build/latest?definitionId=4&branchName=master
+
+.. image:: https://codecov.io/gh/python/cpython/branch/master/graph/badge.svg
+   :alt: CPython code coverage on Codecov
+   :target: https://codecov.io/gh/python/cpython
+
+.. image:: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
+   :alt: Python Zulip chat
+   :target: https://python.zulipchat.com
+
+
+Copyright (c) 2001-2020 Python Software Foundation.  All rights reserved.
+
+See the end of this file for further copyright and license information.
+
+.. contents::
+
+General Information
+-------------------
+
+- Website: https://www.python.org
+- Source code: https://github.com/python/cpython
+- Issue tracker: https://bugs.python.org
+- Documentation: https://docs.python.org
+- Developer's Guide: https://devguide.python.org/
+
+Contributing to CPython
+-----------------------
+
+For more complete instructions on contributing to CPython development,
+see the `Developer Guide`_.
+
+.. _Developer Guide: https://devguide.python.org/
+
+Using Python
+------------
+
+Installable Python kits, and information about using Python, are available at
+`python.org`_.
+
+.. _python.org: https://www.python.org/
+
+Build Instructions
+------------------
+
+On Unix, Linux, BSD, macOS, and Cygwin::
+
+    ./configure
+    make
+    make test
+    sudo make install
+
+This will install Python as ``python3``.
+
+You can pass many options to the configure script; run ``./configure --help``
+to find out more.  On macOS case-insensitive file systems and on Cygwin,
+the executable is called ``python.exe``; elsewhere it's just ``python``.
+
+Building a complete Python installation requires the use of various
+additional third-party libraries, depending on your build platform and
+configure options.  Not all standard library modules are buildable or
+useable on all platforms.  Refer to the
+`Install dependencies <https://devguide.python.org/setup/#install-dependencies>`_
+section of the `Developer Guide`_ for current detailed information on
+dependencies for various Linux distributions and macOS.
+
+On macOS, there are additional configure and build options related
+to macOS framework and universal builds.  Refer to `Mac/README.rst
+<https://github.com/python/cpython/blob/master/Mac/README.rst>`_.
+
+On Windows, see `PCbuild/readme.txt
+<https://github.com/python/cpython/blob/master/PCbuild/readme.txt>`_.
+
+If you wish, you can create a subdirectory and invoke configure from there.
+For example::
+
+    mkdir debug
+    cd debug
+    ../configure --with-pydebug
+    make
+    make test
+
+(This will fail if you *also* built at the top-level directory.  You should do
+a ``make clean`` at the top-level first.)
+
+To get an optimized build of Python, ``configure --enable-optimizations``
+before you run ``make``.  This sets the default make targets up to enable
+Profile Guided Optimization (PGO) and may be used to auto-enable Link Time
+Optimization (LTO) on some platforms.  For more details, see the sections
+below.
+
+Profile Guided Optimization
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+PGO takes advantage of recent versions of the GCC or Clang compilers.  If used,
+either via ``configure --enable-optimizations`` or by manually running
+``make profile-opt`` regardless of configure flags, the optimized build
+process will perform the following steps:
+
+The entire Python directory is cleaned of temporary files that may have
+resulted from a previous compilation.
+
+An instrumented version of the interpreter is built, using suitable compiler
+flags for each flavour. Note that this is just an intermediary step.  The
+binary resulting from this step is not good for real life workloads as it has
+profiling instructions embedded inside.
+
+After the instrumented interpreter is built, the Makefile will run a training
+workload.  This is necessary in order to profile the interpreter execution.
+Note also that any output, both stdout and stderr, that may appear at this step
+is suppressed.
+
+The final step is to build the actual interpreter, using the information
+collected from the instrumented one.  The end result will be a Python binary
+that is optimized; suitable for distribution or production installation.
+
+
+Link Time Optimization
+^^^^^^^^^^^^^^^^^^^^^^
+
+Enabled via configure's ``--with-lto`` flag.  LTO takes advantage of the
+ability of recent compiler toolchains to optimize across the otherwise
+arbitrary ``.o`` file boundary when building final executables or shared
+libraries for additional performance gains.
+
+
+What's New
+----------
+
+We have a comprehensive overview of the changes in the `What's New in Python
+3.10 <https://docs.python.org/3.10/whatsnew/3.10.html>`_ document.  For a more
+detailed change log, read `Misc/NEWS
+<https://github.com/python/cpython/blob/master/Misc/NEWS.d>`_, but a full
+accounting of changes can only be gleaned from the `commit history
+<https://github.com/python/cpython/commits/master>`_.
+
+If you want to install multiple versions of Python, see the section below
+entitled "Installing multiple versions".
+
+
+Documentation
+-------------
+
+`Documentation for Python 3.10 <https://docs.python.org/3.10/>`_ is online,
+updated daily.
+
+It can also be downloaded in many formats for faster access.  The documentation
+is downloadable in HTML, PDF, and reStructuredText formats; the latter version
+is primarily for documentation authors, translators, and people with special
+formatting requirements.
+
+For information about building Python's documentation, refer to `Doc/README.rst
+<https://github.com/python/cpython/blob/master/Doc/README.rst>`_.
+
+
+Converting From Python 2.x to 3.x
+---------------------------------
+
+Significant backward incompatible changes were made for the release of Python
+3.0, which may cause programs written for Python 2 to fail when run with Python
+3.  For more information about porting your code from Python 2 to Python 3, see
+the `Porting HOWTO <https://docs.python.org/3/howto/pyporting.html>`_.
+
+
+Testing
+-------
+
+To test the interpreter, type ``make test`` in the top-level directory.  The
+test set produces some output.  You can generally ignore the messages about
+skipped tests due to optional features which can't be imported.  If a message
+is printed about a failed test or a traceback or core dump is produced,
+something is wrong.
+
+By default, tests are prevented from overusing resources like disk space and
+memory.  To enable these tests, run ``make testall``.
+
+If any tests fail, you can re-run the failing test(s) in verbose mode.  For
+example, if ``test_os`` and ``test_gdb`` failed, you can run::
+
+    make test TESTOPTS="-v test_os test_gdb"
+
+If the failure persists and appears to be a problem with Python rather than
+your environment, you can `file a bug report <https://bugs.python.org>`_ and
+include relevant output from that command to show the issue.
+
+See `Running & Writing Tests <https://devguide.python.org/runtests/>`_
+for more on running tests.
+
+Installing multiple versions
+----------------------------
+
+On Unix and Mac systems if you intend to install multiple versions of Python
+using the same installation prefix (``--prefix`` argument to the configure
+script) you must take care that your primary python executable is not
+overwritten by the installation of a different version.  All files and
+directories installed using ``make altinstall`` contain the major and minor
+version and can thus live side-by-side.  ``make install`` also creates
+``${prefix}/bin/python3`` which refers to ``${prefix}/bin/pythonX.Y``.  If you
+intend to install multiple versions using the same prefix you must decide which
+version (if any) is your "primary" version.  Install that version using ``make
+install``.  Install all other versions using ``make altinstall``.
+
+For example, if you want to install Python 2.7, 3.6, and 3.10 with 3.10 being the
+primary version, you would execute ``make install`` in your 3.10 build directory
+and ``make altinstall`` in the others.
+
+
+Issue Tracker and Mailing List
+------------------------------
+
+Bug reports are welcome!  You can use the `issue tracker
+<https://bugs.python.org>`_ to report bugs, and/or submit pull requests `on
+GitHub <https://github.com/python/cpython>`_.
+
+You can also follow development discussion on the `python-dev mailing list
+<https://mail.python.org/mailman/listinfo/python-dev/>`_.
+
+
+Proposals for enhancement
+-------------------------
+
+If you have a proposal to change Python, you may want to send an email to the
+comp.lang.python or `python-ideas`_ mailing lists for initial feedback.  A
+Python Enhancement Proposal (PEP) may be submitted if your idea gains ground.
+All current PEPs, as well as guidelines for submitting a new PEP, are listed at
+`python.org/dev/peps/ <https://www.python.org/dev/peps/>`_.
+
+.. _python-ideas: https://mail.python.org/mailman/listinfo/python-ideas/
+
+
+Release Schedule
+----------------
+
+See :pep:`619` for Python 3.10 release details.
+
+
+Copyright and License Information
+---------------------------------
+
+Copyright (c) 2001-2020 Python Software Foundation.  All rights reserved.
+
+Copyright (c) 2000 BeOpen.com.  All rights reserved.
+
+Copyright (c) 1995-2001 Corporation for National Research Initiatives.  All
+rights reserved.
+
+Copyright (c) 1991-1995 Stichting Mathematisch Centrum.  All rights reserved.
+
+See the `LICENSE <https://github.com/python/cpython/blob/master/LICENSE>`_ for
+information on the history of this software, terms & conditions for usage, and a
+DISCLAIMER OF ALL WARRANTIES.
+
+This Python distribution contains *no* GNU General Public License (GPL) code,
+so it may be used in proprietary projects.  There are interfaces to some GNU
+code but these are entirely optional.
+
+All trademarks referenced herein are property of their respective holders.
+
+
+DOCUMENTACAO PUBLICA:
+
+
+MANIFESTOS PUBLICOS:
+
+--- setup.py ---
+# Autodetecting setup.py script for building the Python extensions
+
+import argparse
+import importlib._bootstrap
+import importlib.machinery
+import importlib.util
+import os
+import re
+import sys
+import sysconfig
+from glob import glob, escape
+import _osx_support
+
+
+try:
+    import subprocess
+    del subprocess
+    SUBPROCESS_BOOTSTRAP = False
+except ImportError:
+    # Bootstrap Python: distutils.spawn uses subprocess to build C extensions,
+    # subprocess requires C extensions built by setup.py like _posixsubprocess.
+    #
+    # Use _bootsubprocess which only uses the os module.
+    #
+    # It is dropped from sys.modules as soon as all C extension modules
+    # are built.
+    import _bootsubprocess
+    sys.modules['subprocess'] = _bootsubprocess
+    del _bootsubprocess
+    SUBPROCESS_BOOTSTRAP = True
+
+
+from distutils import log
+from distutils.command.build_ext import build_ext
+from distutils.command.build_scripts import build_scripts
+from distutils.command.install import install
+from distutils.command.install_lib import install_lib
+from distutils.core import Extension, setup
+from distutils.errors import CCompilerError, DistutilsError
+from distutils.spawn import find_executable
+
+
+# Compile extensions used to test Python?
+TEST_EXTENSIONS = (sysconfig.get_config_var('TEST_MODULES') == 'yes')
+
+# This global variable is used to hold the list of modules to be disabled.
+DISABLED_MODULE_LIST = []
+
+
+def get_platform():
+    # Cross compiling
+    if "_PYTHON_HOST_PLATFORM" in os.environ:
+        return os.environ["_PYTHON_HOST_PLATFORM"]
+
+    # Get value of sys.platform
+    if sys.platform.startswith('osf1'):
+        return 'osf1'
+    return sys.platform
+
+
+CROSS_COMPILING = ("_PYTHON_HOST_PLATFORM" in os.environ)
+HOST_PLATFORM = get_platform()
+MS_WINDOWS = (HOST_PLATFORM == 'win32')
+CYGWIN = (HOST_PLATFORM == 'cygwin')
+MACOS = (HOST_PLATFORM == 'darwin')
+AIX = (HOST_PLATFORM.startswith('aix'))
+VXWORKS = ('vxworks' in HOST_PLATFORM)
+
+
+SUMMARY = """
+Python is an interpreted, interactive, object-oriented programming
+language. It is often compared to Tcl, Perl, Scheme or Java.
+
+Python combines remarkable power with very clear syntax. It has
+modules, classes, exceptions, very high level dynamic data types, and
+dynamic typing. There are interfaces to many system calls and
+libraries, as well as to various windowing systems (X11, Motif, Tk,
+Mac, MFC). New built-in modules are easily written in C or C++. Python
+is also usable as an extension language for applications that need a
+programmable interface.
+
+The Python implementation is portable: it runs on many brands of UNIX,
+on Windows, DOS, Mac, Amiga... If your favorite system isn't
+listed here, it may still be supported, if there's a C compiler for
+it. Ask around on comp.lang.python -- or just try compiling Python
+yourself.
+"""
+
+CLASSIFIERS = """
+Development Status :: 6 - Mature
+License :: OSI Approved :: Python Software Foundation License
+Natural Language :: English
+Programming Language :: C
+Programming Language :: Python
+Topic :: Software Development
+"""
+
+
+def run_command(cmd):
+    status = os.system(cmd)
+    return os.waitstatus_to_exitcode(status)
+
+
+# Set common compiler and linker flags derived from the Makefile,
+# reserved for building the interpreter and the stdlib modules.
+# See bpo-21121 and bpo-35257
+def set_compiler_flags(compiler_flags, compiler_py_flags_nodist):
+    flags = sysconfig.get_config_var(compiler_flags)
+    py_flags_nodist = sysconfig.get_config_var(compiler_py_flags_nodist)
+    sysconfig.get_config_vars()[compiler_flags] = flags + ' ' + py_flags_nodist
+
+
+def add_dir_to_list(dirlist, dir):
+    """Add the directory 'dir' to the list 'dirlist' (after any relative
+    directories) if:
+
+    1) 'dir' is not already in 'dirlist'
+    2) 'dir' actually exists, and is a directory.
+    """
+    if dir is None or not os.path.isdir(dir) or dir in dirlist:
+        return
+    for i, path in enumerate(dirlist):
+        if not os.path.isabs(path):
+            dirlist.insert(i + 1, dir)
+            return
+    dirlist.insert(0, dir)
+
+
+def sysroot_paths(make_vars, subdirs):
+    """Get the paths of sysroot sub-directories.
+
+    * make_vars: a sequence of names of variables of the Makefile where
+      sysroot may be set.
+    * subdirs: a sequence of names of subdirectories used as the location for
+      headers or libraries.
+    """
+
+    dirs = []
+    for var_name in make_vars:
+        var = sysconfig.get_config_var(var_name)
+        if var is not None:
+            m = re.search(r'--sysroot=([^"]\S*|"[^"]+")', var)
+            if m is not None:
+                sysroot = m.group(1).strip('"')
+                for subdir in subdirs:
+                    if os.path.isabs(subdir):
+                        subdir = subdir[1:]
+                    path = os.path.join(sysroot, subdir)
+                    if os.path.isdir(path):
+                        dirs.append(path)
+                break
+    return dirs
+
+
+MACOS_SDK_ROOT = None
+MACOS_SDK_SPECIFIED = None
+
+def macosx_sdk_root():
+    """Return the directory of the current macOS SDK.
+
+    If no SDK was explicitly configured, call the compiler to find which
+    include files paths are being searched by default.  Use '/' if the
+    compiler is searching /usr/include (meaning system header files are
+    installed) or use the root of an SDK if that is being searched.
+    (The SDK may be supplied via Xcode or via the Command Line Tools).
+    The SDK paths used by Apple-supplied tool chains depend on the
+    setting of various variables; see the xcrun man page for more info.
+    Also sets MACOS_SDK_SPECIFIED for use by macosx_sdk_specified().
+    """
+    global MACOS_SDK_ROOT, MACOS_SDK_SPECIFIED
+
+    # If already called, return cached result.
+    if MACOS_SDK_ROOT:
+        return MACOS_SDK_ROOT
+
+    cflags = sysconfig.get_config_var('CFLAGS')
+    m = re.search(r'-isysroot\s*(\S+)', cflags)
+    if m is not None:
+        MACOS_SDK_ROOT = m.group(1)
+        MACOS_SDK_SPECIFIED = MACOS_SDK_ROOT != '/'
+    else:
+        MACOS_SDK_ROOT = _osx_support._default_sysroot(
+            sysconfig.get_config_var('CC'))
+        MACOS_SDK_SPECIFIED = False
+
+    return MACOS_SDK_ROOT
+
+
+def macosx_sdk_specified():
+    """Returns true if an SDK was explicitly configured.
+
+    True if an SDK was selected at configure time, either by specifying
+    --enable-universalsdk=(something other than no or /) or by adding a
+    -isysroot option to CFLAGS.  In some cases, like when making
+    decisions about macOS Tk framework paths, we need to be able to
+    know whether the user explicitly asked to build with an SDK versus
+    the implicit use of an SDK when header files are no longer
+    installed on a running system by the Command Line Tools.
+    """
+    global MACOS_SDK_SPECIFIED
+
+    # If already called, return cached result.
+    if MACOS_SDK_SPECIFIED:
+        return MACOS_SDK_SPECIFIED
+
+    # Find the sdk root and set MACOS_SDK_SPECIFIED
+    macosx_sdk_root()
+    return MACOS_SDK_SPECIFIED
+
+
+def is_macosx_sdk_path(path):
+    """
+    Returns True if 'path' can be located in an OSX SDK
+    """
+    return ( (path.startswith('/usr/') and not path.startswith('/usr/local'))
+                or path.startswith('/System/')
+                or path.startswith('/Library/') )
+
+
+def grep_headers_for(function, headers):
+    for header in headers:
+        with open(header, 'r', errors='surrogateescape') as f:
+            if function in f.read():
+                return True
+    return False
+
+def find_file(filename, std_dirs, paths):
+    """Searches for the directory where a given file is located,
+    and returns a possibly-empty list of additional directories, or None
+    if the file couldn't be found at all.
+
+    'filename' is the name of a file, such as readline.h or libcrypto.a.
+    'std_dirs' is the list of standard system directories; if the
+        file is found in one of them, no additional directives are needed.
+    'paths' is a list of additional locations to check; if the file is
+        found in one of them, the resulting list will contain the directory.
+    """
+    if MACOS:
+        # Honor the MacOSX SDK setting when one was specified.
+        # An SDK is a directory with the same structure as a real
+        # system, but with only header files and libraries.
+        sysroot = macosx_sdk_root()
+
+    # Check the standard locations
+    for dir in std_dirs:
+        f = os.path.join(dir, filename)
+
+        if MACOS and is_macosx_sdk_path(dir):
+            f = os.path.join(sysroot, dir[1:], filename)
+
+        if os.path.exists(f): return []
+
+    # Check the additional directories
+    for dir in paths:
+        f = os.path.join(dir, filename)
+
+        if MACOS and is_macosx_sdk_path(dir):
+            f = os.path.join(sysroot, dir[1:], filename)
+
+        if os.path.exists(f):
+            return [dir]
+
+    # Not found anywhere
+    return None
+
+
+def find_library_file(compiler, libname, std_dirs, paths):
+    result = compiler.find_library_file(std_dirs + paths, libname)
+    if result is None:
+        return None
+
+    if MACOS:
+        sysroot = macosx_sdk_root()
+
+    # Check whether the found file is in one of the standard directories
+    dirname = os.path.dirname(result)
+    for p in std_dirs:
+        # Ensure path doesn't end with path separator
+        p = p.rstrip(os.sep)
+
+        if MACOS and is_macosx_sdk_path(p):
+            # Note that, as of Xcode 7, Apple SDKs may contain textual stub
+            # libraries with .tbd extensions rather than the normal .dylib
+            # shared libraries installed in /.  The Apple compiler tool
+            # chain handles this transparently but it can cause problems
+            # for programs that are being built with an SDK and searching
+            # for specific libraries.  Distutils find_library_file() now
+            # knows to also search for and return .tbd files.  But callers
+            # of find_library_file need to keep in mind that the base filename
+            # of the returned SDK library file might have a different extension
+            # from that of the library file installed on the running system,
+            # for example:
+            #   /Applications/Xcode.app/Contents/Developer/Platforms/
+            #       MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/
+            #       usr/lib/libedit.tbd
+            # vs
+            #   /usr/lib/libedit.dylib
+            if os.path.join(sysroot, p[1:]) == dirname:
+                return [ ]
+
+        if p == dirname:
+            return [ ]
+
+    # Otherwise, it must have been in one of the additional directories,
+    # so we have to figure out which one.
+    for p in paths:
+        # Ensure path doesn't end with path separator
+        p = p.rstrip(os.sep)
+
+        if MACOS and is_macosx_sdk_path(p):
+            if os.path.join(sysroot, p[1:]) == dirname:
+                return [ p ]
+
+        if p == dirname:
+            return [p]
+    else:
+        assert False, "Internal error: Path not found in std_dirs or paths"
+
+def validate_tzpath():
+    base_tzpath = sysconfig.get_config_var('TZPATH')
+    if not base_tzpath:
+        return
+
+    tzpaths = base_tzpath.split(os.pathsep)
+    bad_paths = [tzpath for tzpath in tzpaths if not os.path.isabs(tzpath)]
+    if bad_paths:
+        raise ValueError('TZPATH must contain only absolute paths, '
+                         + f'found:\n{tzpaths!r}\nwith invalid paths:\n'
+                         + f'{bad_paths!r}')
+
+def find_module_file(module, dirlist):
+    """Find a module in a set of possible folders. If it is not found
+    return the unadorned filename"""
+    list = find_file(module, [], dirlist)
+    if not list:
+        return module
+    if len(list) > 1:
+        log.info("WARNING: multiple copies of %s found", module)
+    return os.path.join(list[0], module)
+
+
+class PyBuildExt(build_ext):
+
+    def __init__(self, dist):
+        build_ext.__init__(self, dist)
+        self.srcdir = None
+        self.lib_dirs = None
+        self.inc_dirs = None
+        self.config_h_vars = None
+        self.failed = []
+        self.failed_on_import = []
+        self.missing = []
+        self.disabled_configure = []
+        if '-j' in os.environ.get('MAKEFLAGS', ''):
+            self.parallel = True
+
+    def add(self, ext):
+        self.extensions.append(ext)
+
+    def set_srcdir(self):
+        self.srcdir = sysconfig.get_config_var('srcdir')
+        if not self.srcdir:
+            # Maybe running on Windows but not using CYGWIN?
+            raise ValueError("No source directory; cannot proceed.")
+        self.srcdir = os.path.abspath(self.srcdir)
+
+    def remove_disabled(self):
+        # Remove modules that are present on the disabled list
+        extensions = [ext for ext in self.extensions
+                      if ext.name not in DISABLED_MODULE_LIST]
+        # move ctypes to the end, it depends on other modules
+        ext_map = dict((ext.name, i) for i, ext in enumerate(extensions))
+        if "_ctypes" in ext_map:
+            ctypes = extensions.pop(ext_map["_ctypes"])
+            extensions.append(ctypes)
+        self.extensions = extensions
+
+    def update_sources_depends(self):
+        # Fix up the autodetected modules, prefixing all the source files
+        # with Modules/.
+        moddirlist = [os.path.join(self.srcdir, 'Modules')]
+
+        # Fix up the paths for scripts, too
+        self.distribution.scripts = [os.path.join(self.srcdir, filename)
+                                     for filename in self.distribution.scripts]
+
+        # Python header files
+        headers = [sysconfig.get_config_h_filename()]
+        headers += glob(os.path.join(escape(sysconfig.get_path('include')), "*.h"))
+
+        for ext in self.extensions:
+            ext.sources = [ find_module_file(filename, moddirlist)
+                            for filename in ext.sources ]
+            if ext.depends is not None:
+                ext.depends = [find_module_file(filename, moddirlist)
+                               for filename in ext.depends]
+            else:
+                ext.depends = []
+            # re-compile extensions if a header file has been changed
+            ext.depends.extend(headers)
+
+    def remove_configured_extensions(self):
+        # The sysconfig variables built by makesetup that list the already
+        # built modules and the disabled modules as configured by the Setup
+        # files.
+        sysconf_built = sysconfig.get_config_var('MODBUILT_NAMES').split()
+        sysconf_dis = sysconfig.get_config_var('MODDISABLED_NAMES').split()
+
+        mods_built = []
+        mods_disabled = []
+        for ext in self.extensions:
+            # If a module has already been built or has been disabled in the
+            # Setup files, don't build it here.
+            if ext.name in sysconf_built:
+                mods_built.append(ext)
+            if ext.name in sysconf_dis:
+                mods_disabled.append(ext)
+
+        mods_configured = mods_built + mods_disabled
+        if mods_configured:
+            self.extensions = [x for x in self.extensions if x not in
+    
+
+ARQUITETURA TEXTUAL INFERIDA:
+PROJETO
+|
++-- Documentacao e configuracao
+|   +-- CODE_OF_CONDUCT.md
+|   +-- README.rst
+|   +-- setup.py
+|
++-- Modulos/dominios visiveis
+|   +-- .github/
+|   +-- Doc/
+|   +-- Lib/
+|   +-- Mac/
+|   +-- Misc/
+|   +-- Modules/
+|   +-- Objects/
+|   +-- PC/
+|   +-- PCbuild/
+|   +-- Parser/
+|   +-- Programs/
+|   +-- Python/
+|   +-- Tools/
+|
++-- Entradas e interfaces descritas no README
+|   +-- configuracao/parametros
+|   +-- processamento principal
+|   +-- saidas/resultados
+|
++-- Testes proprios a serem criados pela IA

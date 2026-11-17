@@ -1,0 +1,101 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 21 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: scrapy/scrapy
+####################################################################################################
+Repositorio: https://github.com/scrapy/scrapy
+Commit analisado: e494a3f73318db76d7c56e65bc632cd5875b8825
+Link do commit: https://github.com/scrapy/scrapy/commit/e494a3f73318db76d7c56e65bc632cd5875b8825
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 38653
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 5
+  ERROR: 2
+  WARNING: 3
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 0
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 0
+  Security hotspots: 0
+  Complexidade: 5980
+  Linhas analisadas pelo SonarQube: 34479
+  Severidades: nenhuma
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: scrapy/extensions/httpcache.py
+Linha: 268
+Link do codigo: https://github.com/scrapy/scrapy/blob/e494a3f73318db76d7c56e65bc632cd5875b8825/scrapy/extensions/httpcache.py#L268
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 2]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: scrapy/extensions/httpcache.py
+Linha: 344
+Link do codigo: https://github.com/scrapy/scrapy/blob/e494a3f73318db76d7c56e65bc632cd5875b8825/scrapy/extensions/httpcache.py#L344
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 3]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: scrapy/extensions/spiderstate.py
+Linha: 34
+Link do codigo: https://github.com/scrapy/scrapy/blob/e494a3f73318db76d7c56e65bc632cd5875b8825/scrapy/extensions/spiderstate.py#L34
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 4]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: scrapy/shell.py
+Linha: 52
+Link do codigo: https://github.com/scrapy/scrapy/blob/e494a3f73318db76d7c56e65bc632cd5875b8825/scrapy/shell.py#L52
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 5]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: scrapy/utils/engine.py
+Linha: 30
+Link do codigo: https://github.com/scrapy/scrapy/blob/e494a3f73318db76d7c56e65bc632cd5875b8825/scrapy/utils/engine.py#L30
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE scrapy/scrapy
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

@@ -1,0 +1,1 @@
+Coloque aqui o projeto gemini gerado com prompts/sherlock-project__sherlock/prompt_recriacao.txt.

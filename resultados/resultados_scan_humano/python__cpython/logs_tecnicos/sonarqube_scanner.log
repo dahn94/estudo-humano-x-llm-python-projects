@@ -1,0 +1,164 @@
+16:17:34.760 INFO  Scanner configuration file: /mnt/c/Users/felipe.fidelis/OneDrive - Vision Cybersecurity/Área de Trabalho/trabalho mestrado/python_prellm_pipeline/pipeline_interno/tools/sonar-scanner/conf/sonar-scanner.properties
+16:17:34.769 INFO  Project root configuration file: NONE
+16:17:34.783 INFO  SonarScanner CLI 8.0.1.6346
+16:17:34.789 INFO  Linux 6.18.33.2-microsoft-standard-WSL2 amd64
+16:17:35.833 INFO  Communicating with SonarQube Community Build 26.9.0.129388
+16:17:35.835 INFO  JRE provisioning is disabled
+16:17:35.836 INFO  The java executable in the PATH will be used
+16:17:35.984 INFO  SONAR_SCANNER_JAVA_OPTS=-Xms256m -Xmx2048m
+16:17:36.244 INFO  Starting SonarScanner Engine...
+16:17:36.245 INFO  Java 21.0.12 Ubuntu (64-bit)
+16:17:37.250 INFO  Load global settings
+16:17:37.332 INFO  Load global settings (done) | time=80ms
+16:17:37.336 INFO  Server id: 147B411E-AaCHMJYtDFq3q1fqGHiY
+16:17:37.348 INFO  Loading required plugins
+16:17:37.349 INFO  Load plugins index
+16:17:37.368 INFO  Load plugins index (done) | time=19ms
+16:17:37.369 INFO  Load/download plugins
+16:17:37.396 INFO  Load/download plugins (done) | time=29ms
+16:17:37.664 INFO  Process project properties
+16:17:37.676 INFO  Process project properties (done) | time=11ms
+16:17:37.685 INFO  Project key: human-python__cpython
+16:17:37.687 INFO  Base dir: /home/felipefidelis/prellm_python__cpython_ke68
+16:17:37.688 INFO  Working dir: /home/felipefidelis/prellm_python__cpython_ke68/.scannerwork
+16:17:37.695 INFO  Load project settings for component key: 'human-python__cpython'
+16:17:37.725 INFO  Load quality profiles
+16:17:37.795 INFO  Load quality profiles (done) | time=70ms
+16:17:37.839 WARN  SCM provider autodetection failed. Please use "sonar.scm.provider" to define SCM of your project, or disable the SCM Sensor in the project settings.
+16:17:37.851 INFO  Load active rules
+16:17:38.132 INFO  Load active rules (done) | time=282ms
+16:17:38.138 INFO  Load analysis cache
+16:17:38.145 INFO  Load analysis cache (404) | time=6ms
+16:17:38.219 INFO  Preprocessing files...
+16:17:38.590 INFO  1 language detected in 2006 preprocessed files (done) | time=371ms
+16:17:38.591 INFO  0 files ignored because of inclusion/exclusion patterns
+16:17:38.593 INFO  Loading plugins for detected languages
+16:17:38.594 INFO  Load/download plugins
+16:17:38.598 INFO  Load/download plugins (done) | time=6ms
+16:17:38.721 INFO  Load project repositories
+16:17:38.730 INFO  Load project repositories (done) | time=9ms
+16:17:38.751 INFO  Indexing files...
+16:17:38.753 INFO  Project configuration:
+16:17:38.754 INFO    Included sources: **/*.py
+16:17:38.757 INFO    Excluded sources: **/.git/**, **/.venv/**, **/venv/**, **/vendor/**, **/vendors/**, **/third_party/**, **/node_modules/**, **/build/**, **/dist/**
+16:17:38.810 INFO  2006 files indexed (done) | time=58ms
+16:17:38.812 INFO  Quality profile for py: Sonar way
+16:17:38.813 INFO  ------------- Run sensors on module Humano - python__cpython
+16:17:38.864 INFO  Load metrics repository
+16:17:38.891 INFO  Load metrics repository (done) | time=28ms
+16:17:39.485 INFO  Sensor IaC YAML File Type Classification Sensor [iac]
+16:17:39.499 INFO  Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=13ms
+16:17:39.500 INFO  Sensor IaC hadolint report Sensor [iac]
+16:17:39.502 INFO  Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+16:17:39.503 INFO  Sensor Java Config Sensor [iac]
+16:17:39.504 INFO  There are no files to be analyzed for the Java language
+16:17:39.505 INFO  Sensor Java Config Sensor [iac] (done) | time=0ms
+16:17:39.506 INFO  Sensor IaC Docker Sensor [iac]
+16:17:39.541 INFO  There are no files to be analyzed for the Docker language
+16:17:39.542 INFO  Sensor IaC Docker Sensor [iac] (done) | time=40ms
+16:17:39.543 INFO  Sensor Python Sensor [python]
+16:17:40.190 INFO  Starting global symbols computation
+16:17:40.194 INFO  2006 source files to be analyzed
+16:17:50.199 INFO  629/2006 files analyzed, current files: test_socket.py, pickletester.py, pickle.py, ...
+16:17:55.111 WARN  Invalid character encountered in file /home/felipefidelis/prellm_python__cpython_ke68/Lib/test/test_email/test_contentmanager.py at line 198 for encoding UTF-8. Please fix file content or configure the encoding to be used using property 'sonar.sourceEncoding'.
+16:18:00.197 INFO  1692/2006 files analyzed, current files: test_descr.py, modulefinder.py, test_editor.py, ...
+16:18:02.527 WARN  Invalid character encountered in file /home/felipefidelis/prellm_python__cpython_ke68/Lib/test/test_email/test_headerregistry.py at line 509 for encoding UTF-8. Please fix file content or configure the encoding to be used using property 'sonar.sourceEncoding'.
+16:18:05.259 INFO  2006/2006 source files have been analyzed
+16:18:05.261 INFO  Finished step global symbols computation in 25068ms
+16:18:05.825 INFO  Starting rules execution
+16:18:05.827 INFO  2006 source files to be analyzed
+16:18:05.833 WARN  Test files were detected using a path heuristic because "sonar.tests" is not set. To improve the analysis accuracy, it is recommended to configure it, e.g.: "sonar.tests=src/test".
+16:18:15.832 INFO  184/2006 files analyzed, current files: _test_multiprocessing.py, test_zipfile.py, doctest.py, ...
+16:18:17.270 ERROR Unable to parse file: Tools/c-analyzer/c_parser/parser/_delim.py
+16:18:17.276 ERROR Parse error at line 23 column 23:
+
+   15: = handle_segment(before, delim, data)
+   16:         if result:
+   17:             yield result
+   18: 
+   19: 
+   20: DELIMITER = textwrap.dedent(rf'''
+   21:     (
+   22:         (?:
+  -->              [^'"()\[\]{};]*
+   24:             {_ind(STRING_LITERAL, 3)}
+   25:         }*
+   26:         [^'"()\[\]{};]+
+   27:      )?  # <before>
+   28:     (?:
+   29:         (
+   30:             [(\[{]
+   31:          )          
+   32:         |
+   33:         (
+   34:             [)\]};]
+   35: 
+
+16:18:25.833 INFO  486/2006 files analyzed, current files: test_socket.py, gzip.py, ndiff.py, ...
+16:18:35.832 INFO  883/2006 files analyzed, current files: ssl.py, plistlib.py, managers.py, ...
+16:18:45.835 INFO  1298/2006 files analyzed, current files: test_decimal.py, _header_value_parser.py, test_http_cookiejar.py, ...
+16:18:46.193 ERROR Unable to parse file: Lib/test/test_print.py
+16:18:46.195 ERROR Parse error at line 206 column 18:
+
+  201: stderr
+  202:         self.assertNotIn('Did you mean ', str(context.exception))
+  203: 
+  204: 
+  205:         with self.assertRaises(TypeError) as context:
+  -->              print << sys.stderr
+  207:         self.assertNotIn('Did you mean', str(context.exception))
+  208: 
+  209: 
+  210:         class OverrideRRShift:
+  211:             def __rrshift__(self,
+
+16:18:55.833 INFO  1701/2006 files analyzed, current files: test_descr.py, test_inspect.py, mailcap.py, ...
+16:19:05.833 INFO  1963/2006 files analyzed, current files: test_logging.py, test_typing.py, turtle.py, ...
+16:19:08.120 INFO  2006/2006 source files have been analyzed
+16:19:08.121 INFO  Finished step rules execution in 62293ms
+16:19:08.124 INFO  The Python analyzer was able to leverage cached data from previous analyses for 0 out of 2006 files. These files were not parsed.
+16:19:08.125 INFO  Sensor Python Sensor [python] (done) | time=88581ms
+16:19:08.130 INFO  Sensor Cobertura Sensor for Python coverage [python]
+16:19:08.179 INFO  Sensor Cobertura Sensor for Python coverage [python] (done) | time=55ms
+16:19:08.180 INFO  Sensor PythonXUnitSensor [python]
+16:19:08.216 INFO  Sensor PythonXUnitSensor [python] (done) | time=37ms
+16:19:08.218 INFO  Sensor Python Dependency Sensor [python]
+16:19:08.221 INFO  Sensor Python Dependency Sensor [python] (done) | time=4ms
+16:19:08.222 INFO  Sensor TextAndSecretsSensor [text]
+16:19:08.268 INFO  Available processors: 8
+16:19:08.269 INFO  Using 8 threads for analysis.
+16:19:08.499 INFO  The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test", "tests", "mock" or "mocks"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+16:19:08.524 INFO  Start fetching files for the text and secrets analysis
+16:19:08.536 INFO  Using Git CLI to retrieve dirty files
+16:19:08.539 WARN  Retrieving only language associated files, make sure to run the analysis inside a git repository to make use of inclusions specified via "sonar.text.inclusions"
+16:19:08.541 INFO  Starting the text and secrets analysis
+16:19:08.542 INFO  2006 source files to be analyzed for the text and secrets analysis
+16:19:10.225 INFO  2006/2006 source files have been analyzed for the text and secrets analysis
+16:19:10.226 INFO  Skipped 1073 file(s) in the secrets analysis due to automatic test file detection
+16:19:10.227 INFO  Sensor TextAndSecretsSensor [text] (done) | time=2006ms
+16:19:10.230 INFO  ------------- Run sensors on project
+16:19:10.346 INFO  Sensor IaC Project Sensor [iac]
+16:19:10.347 INFO  Sensor IaC Project Sensor [iac] (done) | time=0ms
+16:19:10.348 INFO  Sensor Zero Coverage Sensor
+16:19:10.582 INFO  Sensor Zero Coverage Sensor (done) | time=235ms
+16:19:10.587 INFO  ------------- Gather SCA dependencies on project
+16:19:10.588 INFO  Dependency analysis skipped
+16:19:10.592 INFO  SCM Publisher No SCM system was detected. You can use the 'sonar.scm.provider' property to explicitly specify it.
+16:19:11.033 INFO  CPD Executor 227 files had no CPD blocks
+16:19:11.034 INFO  CPD Executor Calculating CPD for 1777 files
+16:19:12.131 INFO  CPD Executor CPD calculation finished (done) | time=1097ms
+16:19:12.759 INFO  Analysis report generated in 581ms, dir size=94.5 MB
+16:19:15.798 INFO  Analysis report compressed in 3039ms, zip size=48.9 MB
+16:19:16.456 INFO  Analysis report uploaded in 658ms
+16:19:16.459 INFO  ANALYSIS SUCCESSFUL, you can find the results at: http://localhost:9000/dashboard?id=human-python__cpython
+16:19:16.461 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+16:19:16.462 INFO  More about the report processing at http://localhost:9000/api/ce/task?id=0e387a98-211f-4025-b07c-073f39becbef
+16:19:16.669 INFO  Analysis total time: 1:39.238 s
+16:19:16.697 INFO  SonarScanner Engine completed successfully
+16:19:16.756 INFO  EXECUTION SUCCESS
+16:19:16.757 INFO  Total time: 1:42.011s

@@ -1,0 +1,65 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 30 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: freqtrade/freqtrade
+####################################################################################################
+Repositorio: https://github.com/freqtrade/freqtrade
+Commit analisado: e5840abaf9f77ecb47df29ca352f07ec0e4ae032
+Link do commit: https://github.com/freqtrade/freqtrade/commit/e5840abaf9f77ecb47df29ca352f07ec0e4ae032
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 41619
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 1
+  ERROR: 1
+  WARNING: 0
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 0
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 0
+  Security hotspots: 0
+  Complexidade: 3664
+  Linhas analisadas pelo SonarQube: 34856
+  Severidades: nenhuma
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: freqtrade/configuration/configuration.py
+Linha: 256
+Link do codigo: https://github.com/freqtrade/freqtrade/blob/e5840abaf9f77ecb47df29ca352f07ec0e4ae032/freqtrade/configuration/configuration.py#L256
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE freqtrade/freqtrade
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

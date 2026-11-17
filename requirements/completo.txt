@@ -1,0 +1,3 @@
+-r pipeline.txt
+-r provedores_ia.txt
+

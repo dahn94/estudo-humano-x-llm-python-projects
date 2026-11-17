@@ -1,0 +1,1 @@
+Coloque aqui o projeto openai gerado com prompts/pallets__flask/prompt_recriacao.txt.

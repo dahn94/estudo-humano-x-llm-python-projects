@@ -1,0 +1,1 @@
+Coloque aqui o projeto gemini gerado com prompts/freqtrade__freqtrade/prompt_recriacao.txt.

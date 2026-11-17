@@ -1,0 +1,101 @@
+﻿rank_gitstar,repositorio,estrelas,tamanho_kb,arquivos_python,python_loc,incluido,motivo_exclusao
+1,public-apis/public-apis,482229,8338,,,nao,nao e projeto de software comparavel
+2,EbookFoundation/free-programming-books,397432,21870,,,nao,nao e projeto de software comparavel
+3,donnemartin/system-design-primer,371235,11273,,,nao,nao e projeto de software comparavel
+4,vinta/awesome-python,322256,6119,,,nao,nao e projeto de software comparavel
+5,practical-tutorials/project-based-learning,284230,469,,,nao,nao e projeto de software comparavel
+6,TheAlgorithms/Python,224863,18017,887,52218,sim,
+7,yt-dlp/yt-dlp,192850,64838,876,135361,sim,
+8,521xueweihan/HelloGitHub,178084,10570,,,nao,nao e projeto de software comparavel
+9,huggingface/transformers,166520,520096,688,217927,sim,
+10,ytdl-org/youtube-dl,141316,65510,855,133002,sim,
+11,pytorch/pytorch,103168,1590985,1713,429938,sim,
+12,fastapi/fastapi,102528,54090,544,33671,sim,
+13,nvbn/thefuck,97866,4043,407,12498,sim,
+14,3b1b/manim,94137,77331,87,16057,sim,
+15,sherlock-project/sherlock,92470,19079,10,1452,sim,
+16,django/django,91157,282876,2693,312865,sim,
+17,home-assistant/core,91018,899175,5690,732427,sim,
+18,PaddlePaddle/PaddleOCR,90015,1970859,140,27465,sim,
+19,bregman-arie/devops-exercises,84552,8007,,,nao,nao e projeto de software comparavel
+20,fighting41love/funNLP,83327,174188,,,nao,nao e projeto de software comparavel
+21,swisskyrepo/PayloadsAllTheThings,81082,23345,,,nao,nao e projeto de software comparavel
+22,d2l-ai/d2l-zh,81010,316965,,,nao,nao e projeto de software comparavel
+23,Z4nzu/hackingtool,79636,6457,31,1989,sim,
+24,tensorflow/models,77651,660290,1505,322696,sim,
+25,python/cpython,77241,878193,2006,722160,sim,
+26,apache/superset,74883,1154511,655,100520,sim,
+27,pallets/flask,74765,12311,72,12211,sim,
+28,josephmisiti/awesome-machine-learning,74400,2707,,,nao,nao e projeto de software comparavel
+29,Asabeneh/30-Days-Of-Python,74373,31473,,,nao,nao e projeto de software comparavel
+30,OpenBB-finance/OpenBB,73366,2426193,5,1557,sim,
+31,ansible/ansible,70765,266024,1395,205788,sim,
+32,labmlai/annotated_deep_learning_paper_implementations,67494,156370,,,nao,nao e projeto de software comparavel
+33,scikit-learn/scikit-learn,67343,187613,838,226829,sim,
+34,scrapy/scrapy,64440,32253,323,38653,sim,
+35,keras-team/keras,64328,56654,476,180982,sim,
+36,commaai/openpilot,63697,4963698,384,34597,sim,
+37,CorentinJ/Real-Time-Voice-Cloning,60142,369730,67,7113,sim,
+38,ultralytics/yolov5,58067,18127,19,4030,sim,
+39,deepfakes/faceswap,57553,205378,201,47835,sim,
+40,Textualize/rich,57414,50632,152,22209,sim,
+41,soimort/you-get,56877,3566,139,12535,sim,
+42,ageitgey/face_recognition,56774,103973,30,2272,sim,
+43,freqtrade/freqtrade,54660,780550,179,41619,sim,
+44,odoo/odoo,54515,17829188,4460,457112,sim,
+45,psf/requests,54335,13632,35,7860,sim,
+46,charlax/professional-programming,51561,4690,,,nao,nao e projeto de software comparavel
+47,pandas-dev/pandas,49781,413661,1227,394128,sim,
+48,microsoft/qlib,48747,18687,123,22242,sim,
+49,minimaxir/big-list-of-naughty-strings,47716,330,,,nao,nao e projeto de software comparavel
+50,SimplifyJobs/Summer2027-Internships,47587,4337051,,,nao,nao e projeto de software comparavel
+51,apache/airflow,46940,717650,2595,326347,sim,
+52,9001/copyparty,46762,9988,26,5258,sim,
+53,coqui-ai/TTS,46041,170196,157,17551,sim,
+54,streamlit/streamlit,45818,1094118,356,33643,sim,
+55,vnpy/vnpy,45505,328495,450,206596,sim,
+56,mitmproxy/mitmproxy,45120,69290,477,47492,sim,
+57,getsentry/sentry,44823,949398,3024,296603,sim,
+58,ccxt/ccxt,44106,8498584,53,11763,sim,
+59,ray-project/ray,43893,804427,1202,187495,sim,
+60,gradio-app/gradio,43597,360391,59,4404,sim,
+61,deepspeedai/DeepSpeed,43152,250039,125,24908,sim,
+62,faif/python-patterns,43003,4127,,,nao,nao e projeto de software comparavel
+63,mingrammer/diagrams,42635,73855,193,5036,sim,
+64,apachecn/ailearning,42544,171378,,,nao,nao e projeto de software comparavel
+65,psf/black,41849,8435,97,103013,sim,
+66,chubin/cheat.sh,41764,4715,,,nao,nao e projeto de software comparavel
+67,ManimCommunity/manim,40969,48508,160,27744,sim,
+68,PostHog/posthog,39895,7225045,418,30536,sim,
+69,floodsung/Deep-Learning-Papers-Reading-Roadmap,39569,3638,,,nao,nao e projeto de software comparavel
+70,frappe/erpnext,39454,1918969,3612,158653,sim,
+71,gto76/python-cheatsheet,38680,13872,,,nao,nao e projeto de software comparavel
+72,httpie/cli,38561,6925,,,nao,fora das 50 primeiras posicoes elegiveis
+73,sqlmapproject/sqlmap,38487,98554,,,nao,fora das 50 primeiras posicoes elegiveis
+74,soxoj/maigret,37895,29816,,,nao,fora das 50 primeiras posicoes elegiveis
+75,0voice/interview_internal_reference,37256,1161,,,nao,nao e projeto de software comparavel
+76,huggingface/pytorch-image-models,37166,31861,,,nao,fora das 50 primeiras posicoes elegiveis
+77,satwikkansal/wtfpython,37087,1464,,,nao,nao e projeto de software comparavel
+78,hankcs/HanLP,36499,72852,,,nao,fora das 50 primeiras posicoes elegiveis
+79,jax-ml/jax,36323,189554,,,nao,fora das 50 primeiras posicoes elegiveis
+80,blakeblackshear/frigate,36055,129835,,,nao,fora das 50 primeiras posicoes elegiveis
+81,geekcomputers/Python,35362,50076,,,nao,nao e projeto de software comparavel
+82,fxsjy/jieba,35165,56033,,,nao,fora das 50 primeiras posicoes elegiveis
+83,kovidgoyal/kitty,35025,72348,,,nao,fora das 50 primeiras posicoes elegiveis
+84,ocrmypdf/OCRmyPDF,34842,71800,,,nao,fora das 50 primeiras posicoes elegiveis
+85,facebookresearch/detectron2,34721,6962,,,nao,fora das 50 primeiras posicoes elegiveis
+86,python-poetry/poetry,34308,25580,,,nao,fora das 50 primeiras posicoes elegiveis
+87,explosion/spaCy,33914,204529,,,nao,fora das 50 primeiras posicoes elegiveis
+88,nicolargo/glances,33649,59879,,,nao,fora das 50 primeiras posicoes elegiveis
+89,tinygrad/tinygrad,33638,126370,,,nao,fora das 50 primeiras posicoes elegiveis
+90,0xAX/linux-insides,33543,21643,,,nao,nao e projeto de software comparavel
+91,shadowsocks/shadowsocks,33533,891,,,nao,fora das 50 primeiras posicoes elegiveis
+92,XX-net/XX-Net,33449,60680,,,nao,fora das 50 primeiras posicoes elegiveis
+93,OWASP/CheatSheetSeries,33274,2525764,,,nao,nao e projeto de software comparavel
+94,certbot/certbot,33246,75652,,,nao,fora das 50 primeiras posicoes elegiveis
+95,open-mmlab/mmdetection,32951,64771,,,nao,fora das 50 primeiras posicoes elegiveis
+96,eriklindernoren/ML-From-Scratch,32900,553,,,nao,nao e projeto de software comparavel
+97,numpy/numpy,32809,183908,,,nao,fora das 50 primeiras posicoes elegiveis
+98,yunjey/pytorch-tutorial,32496,13110,,,nao,nao e projeto de software comparavel
+99,donnemartin/interactive-coding-challenges,31843,7768,,,nao,nao e projeto de software comparavel
+100,openai/openai-python,31676,16189,,,nao,fora das 50 primeiras posicoes elegiveis

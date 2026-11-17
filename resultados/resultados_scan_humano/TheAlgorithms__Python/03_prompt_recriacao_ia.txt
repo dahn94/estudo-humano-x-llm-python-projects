@@ -1,0 +1,115 @@
+O QUE E ESTE ARQUIVO
+================================================================================
+Este e o prompt que deve ser enviado ao ChatGPT, Gemini ou Claude para recriar o projeto.
+Ele contem somente informacoes documentais publicas e a arquitetura textual inferida; o corpo do
+codigo-fonte humano nao foi incluido. A resposta da IA devera ser salva separadamente e depois
+avaliada pelas mesmas ferramentas Semgrep e SonarQube usadas no projeto humano.
+
+INSTRUCAO PARA A IA
+================================================================================
+Crie do zero um projeto Python funcionalmente semelhante ao descrito abaixo.
+REGRAS OBRIGATORIAS:
+- Nao procure, copie, traduza ou reproduza o codigo-fonte do repositorio original.
+- Use apenas README, documentacao e manifestos fornecidos neste prompt.
+- Implemente as funcionalidades publicas documentadas, validacao de entrada, tratamento de erros e testes proprios.
+- Nao inclua segredos, credenciais, caminhos absolutos ou dependencias desnecessarias.
+- Entregue todos os arquivos completos e um README de execucao.
+
+REFERENCIA: TheAlgorithms/Python
+COMMIT DOCUMENTAL: dd4b2656806e64d1c28301ded3b5c4d863de76db
+
+README:
+
+--- README.md ---
+# The Algorithms - Python
+[![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod&style=flat-square)](https://gitpod.io/#https://github.com/TheAlgorithms/Python)&nbsp;
+[![Gitter chat](https://img.shields.io/badge/Chat-Gitter-ff69b4.svg?label=Chat&logo=gitter&style=flat-square)](https://gitter.im/TheAlgorithms)&nbsp;
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/TheAlgorithms/Python/build?label=CI&logo=github&style=flat-square)](https://github.com/TheAlgorithms/Python/actions)&nbsp;
+[![LGTM](https://img.shields.io/lgtm/alerts/github/TheAlgorithms/Python.svg?label=LGTM&logo=LGTM&style=flat-square)](https://lgtm.com/projects/g/TheAlgorithms/Python/alerts)&nbsp;
+[![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square)](https://github.com/TheAlgorithms/Python/blob/master/CONTRIBUTING.md)&nbsp;
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?logo=paypal&style=flat-square)](https://www.paypal.me/TheAlgorithms/100)&nbsp;
+![](https://img.shields.io/github/repo-size/TheAlgorithms/Python.svg?label=Repo%20size&style=flat-square)&nbsp;
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=flat-square)](https://github.com/pre-commit/pre-commit)&nbsp;
+[![code style: black](https://img.shields.io/static/v1?label=code%20style&message=black&color=black&style=flat-square)](https://github.com/psf/black)&nbsp;
+<!--[![Tested on Python 3.8](https://img.shields.io/badge/Tested%20-Python%203.8-blue.svg?logo=python&style=flat-square)](https://www.python.org/downloads) &nbsp;-->
+
+### All algorithms implemented in Python (for education)
+
+These implementations are for learning purposes only. Therefore they may be less efficient than the implementations in the Python standard library.
+
+## Contribution Guidelines
+
+Read our [Contribution Guidelines](CONTRIBUTING.md) before you contribute.
+
+## Community Channel
+
+We're on [Gitter](https://gitter.im/TheAlgorithms)!  Please join us.
+
+## List of Algorithms
+
+See our [directory](DIRECTORY.md).
+
+
+DOCUMENTACAO PUBLICA:
+
+
+MANIFESTOS PUBLICOS:
+
+--- requirements.txt ---
+beautifulsoup4
+fake_useragent
+keras; python_version < '3.9'
+lxml
+matplotlib
+numpy
+opencv-python
+pandas
+pillow
+qiskit
+requests
+scikit-fuzzy
+sklearn
+statsmodels
+sympy
+tensorflow; python_version < '3.9'
+xgboost
+
+
+ARQUITETURA TEXTUAL INFERIDA:
+PROJETO
+|
++-- Documentacao e configuracao
+|   +-- CONTRIBUTING.md
+|   +-- DIRECTORY.md
+|   +-- LICENSE.md
+|   +-- README.md
+|   +-- requirements.txt
+|
++-- Modulos/dominios visiveis
+|   +-- .github/
+|   +-- arithmetic_analysis/
+|   +-- backtracking/
+|   +-- bit_manipulation/
+|   +-- blockchain/
+|   +-- boolean_algebra/
+|   +-- cellular_automata/
+|   +-- ciphers/
+|   +-- compression/
+|   +-- computer_vision/
+|   +-- conversions/
+|   +-- data_structures/
+|   +-- digital_image_processing/
+|   +-- divide_and_conquer/
+|   +-- dynamic_programming/
+|   +-- electronics/
+|   +-- file_transfer/
+|   +-- fuzzy_logic/
+|   +-- genetic_algorithm/
+|   +-- geodesy/
+|
++-- Entradas e interfaces descritas no README
+|   +-- configuracao/parametros
+|   +-- processamento principal
+|   +-- saidas/resultados
+|
++-- Testes proprios a serem criados pela IA

@@ -1,0 +1,1012 @@
+O QUE E ESTE ARQUIVO
+================================================================================
+Este e o prompt que deve ser enviado ao ChatGPT, Gemini ou Claude para recriar o projeto.
+Ele contem somente informacoes documentais publicas e a arquitetura textual inferida; o corpo do
+codigo-fonte humano nao foi incluido. A resposta da IA devera ser salva separadamente e depois
+avaliada pelas mesmas ferramentas Semgrep e SonarQube usadas no projeto humano.
+
+INSTRUCAO PARA A IA
+================================================================================
+Crie do zero um projeto Python funcionalmente semelhante ao descrito abaixo.
+REGRAS OBRIGATORIAS:
+- Nao procure, copie, traduza ou reproduza o codigo-fonte do repositorio original.
+- Use apenas README, documentacao e manifestos fornecidos neste prompt.
+- Implemente as funcionalidades publicas documentadas, validacao de entrada, tratamento de erros e testes proprios.
+- Nao inclua segredos, credenciais, caminhos absolutos ou dependencias desnecessarias.
+- Entregue todos os arquivos completos e um README de execucao.
+
+REFERENCIA: freqtrade/freqtrade
+COMMIT DOCUMENTAL: e5840abaf9f77ecb47df29ca352f07ec0e4ae032
+
+README:
+
+--- README.md ---
+# Freqtrade
+
+[![Freqtrade CI](https://github.com/freqtrade/freqtrade/workflows/Freqtrade%20CI/badge.svg)](https://github.com/freqtrade/freqtrade/actions/)
+[![Coverage Status](https://coveralls.io/repos/github/freqtrade/freqtrade/badge.svg?branch=develop&service=github)](https://coveralls.io/github/freqtrade/freqtrade?branch=develop)
+[![Documentation](https://readthedocs.org/projects/freqtrade/badge/)](https://www.freqtrade.io)
+[![Maintainability](https://api.codeclimate.com/v1/badges/5737e6d668200b7518ff/maintainability)](https://codeclimate.com/github/freqtrade/freqtrade/maintainability)
+
+Freqtrade is a free and open source crypto trading bot written in Python. It is designed to support all major exchanges and be controlled via Telegram. It contains backtesting, plotting and money management tools as well as strategy optimization by machine learning.
+
+![freqtrade](https://raw.githubusercontent.com/freqtrade/freqtrade/develop/docs/assets/freqtrade-screenshot.png)
+
+## Disclaimer
+
+This software is for educational purposes only. Do not risk money which
+you are afraid to lose. USE THE SOFTWARE AT YOUR OWN RISK. THE AUTHORS
+AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR YOUR TRADING RESULTS.
+
+Always start by running a trading bot in Dry-run and do not engage money
+before you understand how it works and what profit/loss you should
+expect.
+
+We strongly recommend you to have coding and Python knowledge. Do not
+hesitate to read the source code and understand the mechanism of this bot.
+
+## Exchange marketplaces supported
+
+- [X] [Bittrex](https://bittrex.com/)
+- [X] [Binance](https://www.binance.com/) ([*Note for binance users](docs/exchanges.md#blacklists))
+- [X] [Kraken](https://kraken.com/)
+- [ ] [113 others to tests](https://github.com/ccxt/ccxt/). _(We cannot guarantee they will work)_
+
+## Documentation
+
+We invite you to read the bot documentation to ensure you understand how the bot is working.
+
+Please find the complete documentation on our [website](https://www.freqtrade.io).
+
+## Features
+
+- [x] **Based on Python 3.7+**: For botting on any operating system - Windows, macOS and Linux.
+- [x] **Persistence**: Persistence is achieved through sqlite.
+- [x] **Dry-run**: Run the bot without playing money.
+- [x] **Backtesting**: Run a simulation of your buy/sell strategy.
+- [x] **Strategy Optimization by machine learning**: Use machine learning to optimize your buy/sell strategy parameters with real exchange data.
+- [x] **Edge position sizing** Calculate your win rate, risk reward ratio, the best stoploss and adjust your position size before taking a position for each specific market. [Learn more](https://www.freqtrade.io/en/latest/edge/).
+- [x] **Whitelist crypto-currencies**: Select which crypto-currency you want to trade or use dynamic whitelists.
+- [x] **Blacklist crypto-currencies**: Select which crypto-currency you want to avoid.
+- [x] **Manageable via Telegram**: Manage the bot with Telegram.
+- [x] **Display profit/loss in fiat**: Display your profit/loss in 33 fiat.
+- [x] **Daily summary of profit/loss**: Provide a daily summary of your profit/loss.
+- [x] **Performance status report**: Provide a performance status of your current trades.
+
+## Quick start
+
+Freqtrade provides a Linux/macOS script to install all dependencies and help you to configure the bot.
+
+```bash
+git clone -b develop https://github.com/freqtrade/freqtrade.git 
+cd freqtrade
+./setup.sh --install
+```
+
+For any other type of installation please refer to [Installation doc](https://www.freqtrade.io/en/latest/installation/).
+
+## Basic Usage
+
+### Bot commands
+
+```
+usage: freqtrade [-h] [-V]
+                 {trade,create-userdir,new-config,new-hyperopt,new-strategy,download-data,convert-data,convert-trade-data,backtesting,edge,hyperopt,hyperopt-list,hyperopt-show,list-exchanges,list-hyperopts,list-markets,list-pairs,list-strategies,list-timeframes,show-trades,test-pairlist,plot-dataframe,plot-profit}
+                 ...
+
+Free, open source crypto trading bot
+
+positional arguments:
+  {trade,create-userdir,new-config,new-hyperopt,new-strategy,download-data,convert-data,convert-trade-data,backtesting,edge,hyperopt,hyperopt-list,hyperopt-show,list-exchanges,list-hyperopts,list-markets,list-pairs,list-strategies,list-timeframes,show-trades,test-pairlist,plot-dataframe,plot-profit}
+    trade               Trade module.
+    create-userdir      Create user-data directory.
+    new-config          Create new config
+    new-hyperopt        Create new hyperopt
+    new-strategy        Create new strategy
+    download-data       Download backtesting data.
+    convert-data        Convert candle (OHLCV) data from one format to
+                        another.
+    convert-trade-data  Convert trade data from one format to another.
+    backtesting         Backtesting module.
+    edge                Edge module.
+    hyperopt            Hyperopt module.
+    hyperopt-list       List Hyperopt results
+    hyperopt-show       Show details of Hyperopt results
+    list-exchanges      Print available exchanges.
+    list-hyperopts      Print available hyperopt classes.
+    list-markets        Print markets on exchange.
+    list-pairs          Print pairs on exchange.
+    list-strategies     Print available strategies.
+    list-timeframes     Print available timeframes for the exchange.
+    show-trades         Show trades.
+    test-pairlist       Test your pairlist configuration.
+    plot-dataframe      Plot candles with indicators.
+    plot-profit         Generate plot showing profits.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -V, --version         show program's version number and exit
+
+```
+
+### Telegram RPC commands
+
+Telegram is not mandatory. However, this is a great way to control your bot. More details and the full command list on our [documentation](https://www.freqtrade.io/en/latest/telegram-usage/)
+
+- `/start`: Starts the trader.
+- `/stop`: Stops the trader.
+- `/stopbuy`: Stop entering new trades.
+- `/status [table]`: Lists all open trades.
+- `/profit`: Lists cumulative profit from all finished trades
+- `/forcesell <trade_id>|all`: Instantly sells the given trade (Ignoring `minimum_roi`).
+- `/performance`: Show performance of each finished trade grouped by pair
+- `/balance`: Show account balance per currency.
+- `/daily <n>`: Shows profit or loss per day, over the last n days.
+- `/help`: Show help message.
+- `/version`: Show version.
+
+## Development branches
+
+The project is currently setup in two main branches:
+
+- `develop` - This branch has often new features, but might also contain breaking changes. We try hard to keep this branch as stable as possible.
+- `stable` - This branch contains the latest stable release. This branch is generally well tested.
+- `feat/*` - These are feature branches, which are being worked on heavily. Please don't use these unless you want to test a specific feature.
+
+## Support
+
+### Help / Discord / Slack
+
+For any questions not covered by the documentation or for further information about the bot, or to simply engage with like-minded individuals, we encourage you to join our slack channel.
+
+Please check out our [discord server](https://discord.gg/MA9v74M).
+
+You can also join our [Slack channel](https://join.slack.com/t/highfrequencybot/shared_invite/zt-k9o2v5ut-jX8Mc4CwNM8CDc2Dyg96YA).
+
+### [Bugs / Issues](https://github.com/freqtrade/freqtrade/issues?q=is%3Aissue)
+
+If you discover a bug in the bot, please
+[search our issue tracker](https://github.com/freqtrade/freqtrade/issues?q=is%3Aissue)
+first. If it hasn't been reported, please
+[create a new issue](https://github.com/freqtrade/freqtrade/issues/new) and
+ensure you follow the template guide so that our team can assist you as
+quickly as possible.
+
+### [Feature Requests](https://github.com/freqtrade/freqtrade/labels/enhancement)
+
+Have you a great idea to improve the bot you want to share? Please,
+first search if this feature was not [already discussed](https://github.com/freqtrade/freqtrade/labels/enhancement).
+If it hasn't been requested, please
+[create a new request](https://github.com/freqtrade/freqtrade/issues/new)
+and ensure you follow the template guide so that it does not get lost
+in the bug reports.
+
+### [Pull Requests](https://github.com/freqtrade/freqtrade/pulls)
+
+Feel like our bot is missing a feature? We welcome your pull requests!
+
+Please read our
+[Contributing document](https://github.com/freqtrade/freqtrade/blob/develop/CONTRIBUTING.md)
+to understand the requirements before sending your pull-requests.
+
+Coding is not a necessity to contribute - maybe start with improving our documentation?
+Issues labeled [good first issue](https://github.com/freqtrade/freqtrade/labels/good%20first%20issue) can be good first contributions, and will help get you familiar with the codebase.
+
+**Note** before starting any major new feature work, *please open an issue describing what you are planning to do* or talk to us on [discord](https://discord.gg/MA9v74M) or [Slack](https://join.slack.com/t/highfrequencybot/shared_invite/zt-k9o2v5ut-jX8Mc4CwNM8CDc2Dyg96YA). This will ensure that interested parties can give valuable feedback on the feature, and let others know that you are working on it.
+
+**Important:** Always create your PR against the `develop` branch, not `stable`.
+
+## Requirements
+
+### Up-to-date clock
+
+The clock must be accurate, synchronized to a NTP server very frequently to avoid problems with communication to the exchanges.
+
+### Min hardware required
+
+To run this bot we recommend you a cloud instance with a minimum of:
+
+- Minimal (advised) system requirements: 2GB RAM, 1GB disk space, 2vCPU
+
+### Software requirements
+
+- [Python 3.7.x](http://docs.python-guide.org/en/latest/starting/installation/)
+- [pip](https://pip.pypa.io/en/stable/installing/)
+- [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [TA-Lib](https://mrjbq7.github.io/ta-lib/install.html)
+- [virtualenv](https://virtualenv.pypa.io/en/stable/installation/) (Recommended)
+- [Docker](https://www.docker.com/products/docker) (Recommended)
+
+
+DOCUMENTACAO PUBLICA:
+
+--- advanced-hyperopt.md ---
+# Advanced Hyperopt
+
+This page explains some advanced Hyperopt topics that may require higher
+coding skills and Python knowledge than creation of an ordinal hyperoptimization
+class.
+
+## Derived hyperopt classes
+
+Custom hyperop classes can be derived in the same way [it can be done for strategies](strategy-customization.md#derived-strategies).
+
+Applying to hyperoptimization, as an example, you may override how dimensions are defined in your optimization hyperspace:
+
+```python
+class MyAwesomeHyperOpt(IHyperOpt):
+    ...
+    # Uses default stoploss dimension
+
+class MyAwesomeHyperOpt2(MyAwesomeHyperOpt):
+    @staticmethod
+    def stoploss_space() -> List[Dimension]:
+        # Override boundaries for stoploss
+        return [
+            Real(-0.33, -0.01, name='stoploss'),
+        ]
+```
+
+and then quickly switch between hyperopt classes, running optimization process with hyperopt class you need in each particular case:
+
+```
+$ freqtrade hyperopt --hyperopt MyAwesomeHyperOpt --hyperopt-loss SharpeHyperOptLossDaily --strategy MyAwesomeStrategy ...
+or
+$ freqtrade hyperopt --hyperopt MyAwesomeHyperOpt2 --hyperopt-loss SharpeHyperOptLossDaily --strategy MyAwesomeStrategy ...
+```
+
+## Creating and using a custom loss function
+
+To use a custom loss function class, make sure that the function `hyperopt_loss_function` is defined in your custom hyperopt loss class.
+For the sample below, you then need to add the command line parameter `--hyperopt-loss SuperDuperHyperOptLoss` to your hyperopt call so this function is being used.
+
+A sample of this can be found below, which is identical to the Default Hyperopt loss implementation. A full sample can be found in [userdata/hyperopts](https://github.com/freqtrade/freqtrade/blob/develop/freqtrade/templates/sample_hyperopt_loss.py).
+
+``` python
+from freqtrade.optimize.hyperopt import IHyperOptLoss
+
+TARGET_TRADES = 600
+EXPECTED_MAX_PROFIT = 3.0
+MAX_ACCEPTED_TRADE_DURATION = 300
+
+class SuperDuperHyperOptLoss(IHyperOptLoss):
+    """
+    Defines the default loss function for hyperopt
+    """
+
+    @staticmethod
+    def hyperopt_loss_function(results: DataFrame, trade_count: int,
+                               min_date: datetime, max_date: datetime,
+                               *args, **kwargs) -> float:
+        """
+        Objective function, returns smaller number for better results
+        This is the legacy algorithm (used until now in freqtrade).
+        Weights are distributed as follows:
+        * 0.4 to trade duration
+        * 0.25: Avoiding trade loss
+        * 1.0 to total profit, compared to the expected value (`EXPECTED_MAX_PROFIT`) defined above
+        """
+        total_profit = results['profit_percent'].sum()
+        trade_duration = results['trade_duration'].mean()
+
+        trade_loss = 1 - 0.25 * exp(-(trade_count - TARGET_TRADES) ** 2 / 10 ** 5.8)
+        profit_loss = max(0, 1 - total_profit / EXPECTED_MAX_PROFIT)
+        duration_loss = 0.4 * min(trade_duration / MAX_ACCEPTED_TRADE_DURATION, 1)
+        result = trade_loss + profit_loss + duration_loss
+        return result
+```
+
+Currently, the arguments are:
+
+* `results`: DataFrame containing the result  
+    The following columns are available in results (corresponds to the output-file of backtesting when used with `--export trades`):  
+    `pair, profit_percent, profit_abs, open_date, open_rate, open_fee, close_date, close_rate, close_fee, amount, trade_duration, open_at_end, sell_reason`
+* `trade_count`: Amount of trades (identical to `len(results)`)
+* `min_date`: Start date of the hyperopting TimeFrame
+* `min_date`: End date of the hyperopting TimeFrame
+
+This function needs to return a floating point number (`float`). Smaller numbers will be interpreted as better results. The parameters and balancing for this is up to you.
+
+!!! Note
+    This function is called once per iteration - so please make sure to have this as optimized as possible to not slow hyperopt down unnecessarily.
+
+!!! Note
+    Please keep the arguments `*args` and `**kwargs` in the interface to allow us to extend this interface later.
+
+--- advanced-setup.md ---
+# Advanced Post-installation Tasks
+
+This page explains some advanced tasks and configuration options that can be performed after the bot installation and may be uselful in some environments.
+
+If you do not know what things mentioned here mean, you probably do not need it.
+
+## Running multiple instances of Freqtrade
+
+This section will show you how to run multiple bots at the same time, on the same machine.
+
+### Things to consider
+
+* Use different database files.
+* Use different Telegram bots (requires multiple different configuration files; applies only when Telegram is enabled).
+* Use different ports (applies only when Freqtrade REST API webserver is enabled).
+
+### Different database files
+
+In order to keep track of your trades, profits, etc., freqtrade is using a SQLite database where it stores various types of information such as the trades you performed in the past and the current position(s) you are holding at any time. This allows you to keep track of your profits, but most importantly, keep track of ongoing activity if the bot process would be restarted or would be terminated unexpectedly.
+
+Freqtrade will, by default, use separate database files for dry-run and live bots (this assumes no database-url is given in either configuration nor via command line argument).
+For live trading mode, the default database will be `tradesv3.sqlite` and for dry-run it will be `tradesv3.dryrun.sqlite`.
+
+The optional argument to the trade command used to specify the path of these files is `--db-url`, which requires a valid SQLAlchemy url.
+So when you are starting a bot with only the config and strategy arguments in dry-run mode, the following 2 commands would have the same outcome.
+
+``` bash
+freqtrade trade -c MyConfig.json -s MyStrategy
+# is equivalent to
+freqtrade trade -c MyConfig.json -s MyStrategy --db-url sqlite:///tradesv3.dryrun.sqlite
+```
+
+It means that if you are running the trade command in two different terminals, for example to test your strategy both for trades in USDT and in another instance for trades in BTC, you will have to run them with different databases.
+
+If you specify the URL of a database which does not exist, freqtrade will create one with the name you specified. So to test your custom strategy with BTC and USDT stake currencies, you could use the following commands (in 2 separate terminals):
+
+``` bash
+# Terminal 1:
+freqtrade trade -c MyConfigBTC.json -s MyCustomStrategy --db-url sqlite:///user_data/tradesBTC.dryrun.sqlite
+# Terminal 2:
+freqtrade trade -c MyConfigUSDT.json -s MyCustomStrategy --db-url sqlite:///user_data/tradesUSDT.dryrun.sqlite
+```
+
+Conversely, if you wish to do the same thing in production mode, you will also have to create at least one new database (in addition to the default one) and specify the path to the "live" databases, for example:
+
+``` bash
+# Terminal 1:
+freqtrade trade -c MyConfigBTC.json -s MyCustomStrategy --db-url sqlite:///user_data/tradesBTC.live.sqlite
+# Terminal 2:
+freqtrade trade -c MyConfigUSDT.json -s MyCustomStrategy --db-url sqlite:///user_data/tradesUSDT.live.sqlite
+```
+
+For more information regarding usage of the sqlite databases, for example to manually enter or remove trades, please refer to the [SQL Cheatsheet](sql_cheatsheet.md).
+
+## Configure the bot running as a systemd service
+
+Copy the `freqtrade.service` file to your systemd user directory (usually `~/.config/systemd/user`) and update `WorkingDirectory` and `ExecStart` to match your setup.
+
+!!! Note
+    Certain systems (like Raspbian) don't load service unit files from the user directory. In this case, copy `freqtrade.service` into `/etc/systemd/user/` (requires superuser permissions).
+
+After that you can start the daemon with:
+
+```bash
+systemctl --user start freqtrade
+```
+
+For this to be persistent (run when user is logged out) you'll need to enable `linger` for your freqtrade user.
+
+```bash
+sudo loginctl enable-linger "$USER"
+```
+
+If you run the bot as a service, you can use systemd service manager as a software watchdog monitoring freqtrade bot 
+state and restarting it in the case of failures. If the `internals.sd_notify` parameter is set to true in the 
+configuration or the `--sd-notify` command line option is used, the bot will send keep-alive ping messages to systemd 
+using the sd_notify (systemd notifications) protocol and will also tell systemd its current state (Running or Stopped) 
+when it changes. 
+
+The `freqtrade.service.watchdog` file contains an example of the service unit configuration file which uses systemd 
+as the watchdog.
+
+!!! Note
+    The sd_notify communication between the bot and the systemd service manager will not work if the bot runs in a Docker container.
+
+## Advanced Logging
+
+On many Linux systems the bot can be configured to send its log messages to `syslog` or `journald` system services. Logging to a remote `syslog` server is also available on Windows. The special values for the `--logfile` command line option can be used for this.
+
+### Logging to syslog
+
+To send Freqtrade log messages to a local or remote `syslog` service use the `--logfile` command line option with the value in the following format:
+
+* `--logfile syslog:<syslog_address>` -- send log messages to `syslog` service using the `<syslog_address>` as the syslog address.
+
+The syslog address can be either a Unix domain socket (socket filename) or a UDP socket specification, consisting of IP address and UDP port, separated by the `:` character.
+
+So, the following are the examples of possible usages:
+
+* `--logfile syslog:/dev/log` -- log to syslog (rsyslog) using the `/dev/log` socket, suitable for most systems.
+* `--logfile syslog` -- same as above, the shortcut for `/dev/log`.
+* `--logfile syslog:/var/run/syslog` -- log to syslog (rsyslog) using the `/var/run/syslog` socket. Use this on MacOS.
+* `--logfile syslog:localhost:514` -- log to local syslog using UDP socket, if it listens on port 514.
+* `--logfile syslog:<ip>:514` -- log to remote syslog at IP address and port 514. This may be used on Windows for remote logging to an external syslog server.
+
+Log messages are send to `syslog` with the `user` facility. So you can see them with the following commands:
+
+* `tail -f /var/log/user`, or 
+* install a comprehensive graphical viewer (for instance, 'Log File Viewer' for Ubuntu).
+
+On many systems `syslog` (`rsyslog`) fetches data from `journald` (and vice versa), so both `--logfile syslog` or `--logfile journald` can be used and the messages be viewed with both `journalctl` and a syslog viewer utility. You can combine this in any way which suites you better.
+
+For `rsyslog` the messages from the bot can be redirected into a separate dedicated log file. To achieve this, add
+```
+if $programname startswith "freqtrade" then -/var/log/freqtrade.log
+```
+to one of the rsyslog configuration files, for example at the end of the `/etc/rsyslog.d/50-default.conf`.
+
+For `syslog` (`rsyslog`), the reduction mode can be switched on. This will reduce the number of repeating messages. For instance, multiple bot Heartbeat messages will be reduced to a single message when nothing else happens with the bot. To achieve this, set in `/etc/rsyslog.conf`:
+```
+# Filter duplicated messages
+$RepeatedMsgReduction on
+```
+
+### Logging to journald
+
+This needs the `systemd` python package installed as the dependency, which is not available on Windows. Hence, the whole journald logging functionality is not available for a bot running on Windows.
+
+To send Freqtrade log messages to `journald` system service use the `--logfile` command line option with the value in the following format:
+
+* `--logfile journald` -- send log messages to `journald`.
+
+Log messages are send to `journald` with the `user` facility. So you can see them with the following commands:
+
+* `journalctl -f` -- shows Freqtrade log messages sent to `journald` along with other log messages fetched by `journald`.
+* `journalctl -f -u freqtrade.service` -- this command can be used when the bot is run as a `systemd` service.
+
+There are many other options in the `journalctl` utility to filter the messages, see manual pages for this utility.
+
+On many systems `syslog` (`rsyslog`) fetches data from `journald` (and vice versa), so both `--logfile syslog` or `--logfile journald` can be used and the messages be viewed with both `journalctl` and a syslog viewer utility. You can combine this in any way which suites you better.
+
+--- backtesting.md ---
+# Backtesting
+
+This page explains how to validate your strategy performance by using Backtesting.
+
+Backtesting requires historic data to be available.
+To learn how to get data for the pairs and exchange you're interested in, head over to the [Data Downloading](data-download.md) section of the documentation.
+
+## Test your strategy with Backtesting
+
+Now you have good Buy and Sell strategies and some historic data, you want to test it against
+real data. This is what we call
+[backtesting](https://en.wikipedia.org/wiki/Backtesting).
+
+Backtesting will use the crypto-currencies (pairs) from your config file and load historical candle (OHCLV) data from `user_data/data/<exchange>` by default.
+If no data is available for the exchange / pair / timeframe combination, backtesting will ask you to download them first using `freqtrade download-data`.
+For details on downloading, please refer to the [Data Downloading](data-download.md) section in the documentation.
+
+The result of backtesting will confirm if your bot has better odds of making a profit than a loss.
+
+!!! Warning "Using dynamic pairlists for backtesting"
+    Using dynamic pairlists is possible, however it relies on the current market conditions - which will not reflect the historic status of the pairlist.
+    Also, when using pairlists other than StaticPairlist, reproducability of backtesting-results cannot be guaranteed.
+    Please read the [pairlists documentation](configuration.md#pairlists) for more information.
+
+    To achieve reproducible results, best generate a pairlist via the [`test-pairlist`](utils.md#test-pairlist) command and use that as static pairlist.
+
+### Run a backtesting against the currencies listed in your config file
+
+#### With 5 min candle (OHLCV) data (per default)
+
+```bash
+freqtrade backtesting
+```
+
+#### With 1 min candle (OHLCV) data
+
+```bash
+freqtrade backtesting --timeframe 1m
+```
+
+#### Using a different on-disk historical candle (OHLCV) data source
+
+Assume you downloaded the history data from the Bittrex exchange and kept it in the `user_data/data/bittrex-20180101` directory. 
+You can then use this data for backtesting as follows:
+
+```bash
+freqtrade --datadir user_data/data/bittrex-20180101 backtesting
+```
+
+#### With a (custom) strategy file
+
+```bash
+freqtrade backtesting -s SampleStrategy
+```
+
+Where `-s SampleStrategy` refers to the class name within the strategy file `sample_strategy.py` found in the `freqtrade/user_data/strategies` directory.
+
+#### Comparing multiple Strategies
+
+```bash
+freqtrade backtesting --strategy-list SampleStrategy1 AwesomeStrategy --timeframe 5m
+```
+
+Where `SampleStrategy1` and `AwesomeStrategy` refer to class names of strategies.
+
+#### Exporting trades to file
+
+```bash
+freqtrade backtesting --export trades --config config.json --strategy SampleStrategy
+```
+
+The exported trades can be used for [further analysis](#further-backtest-result-analysis), or can be used by the plotting script `plot_dataframe.py` in the scripts directory.
+
+#### Exporting trades to file specifying a custom filename
+
+```bash
+freqtrade backtesting --export trades --export-filename=backtest_samplestrategy.json
+```
+
+Please also read about the [strategy startup period](strategy-customization.md#strategy-startup-period).
+
+#### Supplying custom fee value
+
+Sometimes your account has certain fee rebates (fee reductions starting with a certain account size or monthly volume), which are not visible to ccxt.
+To account for this in backtesting, you can use the `--fee` command line option to supply this value to backtesting.
+This fee must be a ratio, and will be applied twice (once for trade entry, and once for trade exit).
+
+For example, if the buying and selling commission fee is 0.1% (i.e., 0.001 written as ratio), then you would run backtesting as the following:
+
+```bash
+freqtrade backtesting --fee 0.001
+```
+
+!!! Note
+    Only supply this option (or the corresponding configuration parameter) if you want to experiment with different fee values. By default, Backtesting fetches the default fee from the exchange pair/market info.
+
+#### Running backtest with smaller testset by using timerange
+
+Use the `--timerange` argument to change how much of the testset you want to use.
+
+
+For example, running backtesting with the `--timerange=20190501-` option will use all available data starting with May 1st, 2019 from your inputdata.
+
+```bash
+freqtrade backtesting --timerange=20190501-
+```
+
+You can also specify particular dates or a range span indexed by start and stop.
+
+The full timerange specification:
+
+- Use tickframes till 2018/01/31: `--timerange=-20180131`
+- Use tickframes since 2018/01/31: `--timerange=20180131-`
+- Use tickframes since 2018/01/31 till 2018/03/01 : `--timerange=20180131-20180301`
+- Use tickframes between POSIX timestamps 1527595200 1527618600:
+                                                `--timerange=1527595200-1527618600`
+
+## Understand the backtesting result
+
+The most important in the backtesting is to understand the result.
+
+A backtesting result will look like that:
+
+```
+========================================================= BACKTESTING REPORT ========================================================
+| Pair     |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit BTC |   Tot Profit % | Avg Duration   |  Wins |  Draws |  Losses |
+|:---------|-------:|---------------:|---------------:|-----------------:|---------------:|:---------------|------:|-------:|--------:|
+| ADA/BTC  |     35 |          -0.11 |          -3.88 |      -0.00019428 |          -1.94 | 4:35:00        |    14 |      0 |      21 |
+| ARK/BTC  |     11 |          -0.41 |          -4.52 |      -0.00022647 |          -2.26 | 2:03:00        |     3 |      0 |       8 |
+| BTS/BTC  |     32 |           0.31 |           9.78 |       0.00048938 |           4.89 | 5:05:00        |    18 |      0 |      14 |
+| DASH/BTC |     13 |          -0.08 |          -1.07 |      -0.00005343 |          -0.53 | 4:39:00        |     6 |      0 |       7 |
+| ENG/BTC  |     18 |           1.36 |          24.54 |       0.00122807 |          12.27 | 2:50:00        |     8 |      0 |      10 |
+| EOS/BTC  |     36 |           0.08 |           3.06 |       0.00015304 |           1.53 | 3:34:00        |    16 |      0 |      20 |
+| ETC/BTC  |     26 |           0.37 |           9.51 |       0.00047576 |           4.75 | 6:14:00        |    11 |      0 |      15 |
+| ETH/BTC  |     33 |           0.30 |           9.96 |       0.00049856 |           4.98 | 7:31:00        |    16 |      0 |      17 |
+| IOTA/BTC |     32 |           0.03 |           1.09 |       0.00005444 |           0.54 | 3:12:00        |    14 |      0 |      18 |
+| LSK/BTC  |     15 |           1.75 |          26.26 |       0.00131413 |          13.13 | 2:58:00        |     6 |      0 |       9 |
+| LTC/BTC  |     32 |          -0.04 |          -1.38 |      -0.00006886 |          -0.69 | 4:49:00        |    11 |      0 |      21 |
+| NANO/BTC |     17 |           1.26 |          21.39 |       0.00107058 |          10.70 | 1:55:00        |    10 |      0 |       7 |
+| NEO/BTC  |     23 |           0.82 |          18.97 |       0.00094936 |           9.48 | 2:59:00        |    10 |      0 |      13 |
+| REQ/BTC  |      9 |           1.17 |          10.54 |       0.00052734 |           5.27 | 3:47:00        |     4 |      0 |       5 |
+| XLM/BTC  |     16 |           1.22 |          19.54 |       0.00097800 |           9.77 | 3:15:00        |     7 |      0 |       9 |
+| XMR/BTC  |     23 |          -0.18 |          -4.13 |      -0.00020696 |          -2.07 | 5:30:00        |    12 |      0 |      11 |
+| XRP/BTC  |     35 |           0.66 |          22.96 |       0.00114897 |          11.48 | 3:49:00        |    12 |      0 |      23 |
+| ZEC/BTC  |     22 |          -0.46 |         -10.18 |      -0.00050971 |          -5.09 | 2:22:00        |     7 |      0 |      15 |
+| TOTAL    |    429 |           0.36 |         152.41 |       0.00762792 |          76.20 | 4:12:00        |   186 |      0 |     243 |
+========================================================= SELL REASON STATS =========================================================
+| Sell Reason        |   Sells |  Wins |  Draws |  Losses |
+|:-------------------|--------:|------:|-------:|--------:|
+| trailing_stop_loss |     205 |   150 |      0 |      55 |
+| stop_loss          |     166 |     0 |      0 |     166 |
+| sell_signal        |      56 |    36 |      0 |      20 |
+| force_sell         |       2 |     0 |      0 |       2 |
+====================================================== LEFT OPEN TRADES REPORT ======================================================
+| Pair     |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit BTC |   Tot Profit % | Avg Duration   |  Wins |  Draws |  Losses |
+|:---------|-------:|---------------:|---------------:|-----------------:|---------------:|:---------------|------:|-------:|--------:|
+| ADA/BTC  |      1 |           0.89 |           0.89 |       0.00004434 |           0.44 | 6:00:00        |     1 |      0 |       0 |
+| LTC/BTC  |      1 |           0.68 |           0.68 |       0.00003421 |           0.34 | 2:00:00        |     1 |      0 |       0 |
+| TOTAL    |      2 |           0.78 |           1.57 |       0.00007855 |           0.78 | 4:00:00        |     2 |      0 |       0 |
+=============== SUMMARY METRICS ===============
+| Metric                | Value               |
+|-----------------------+---------------------|
+| Backtesting from      | 2019-01-01 00:00:00 |
+| Backtesting to        | 2019-05-01 00:00:00 |
+| Max open trades       | 3                   |
+|                       |                     |
+| Total trades          | 429                 |
+| Total Profit %        | 152.41%             |
+| Trades per day        | 3.575               |
+|                       |                     |
+| Best Pair             | LSK/BTC 26.26%      |
+| Worst Pair            | ZEC/BTC -10.18%     |
+| Best Trade            | LSK/BTC 4.25%       |
+| Worst Trade           | ZEC/BTC -10.25%     |
+| Best day              | 25.27%              |
+| Worst day             | -30.67%             |
+| Avg. Duration Winners | 4:23:00             |
+| Avg. Duration Loser   | 6:55:00             |
+|                       |                     |
+| Max Drawdown          | 50.63%              |
+| Drawdown Start        | 2019-02-15 14:10:00 |
+| Drawdown End          | 2019-04-11 18:15:00 |
+| Market change         | -5.88%              |
+===============================================
+```
+
+### Backtesting report table
+
+The 1st table contains all trades the bot made, including "left open trades".
+
+The last line will give you the overall performance of your strategy,
+here:
+
+```
+| TOTAL    |         429 |           0.36 |         152.41 |       0.00762792 |          76.20 | 4:12:00        |      186 |    243 |
+```
+
+The bot has made `429` trades for an average duration of `4:12:00`, with a performance of `76.20%` (profit), that means it has
+earned a total of `0.00762792 BTC` starting with a capital of 0.01 BTC.
+
+The column `avg profit %` shows the average profit for all trades made while the column `cum profit %` sums up all the profits/losses.
+The column `tot profit %` shows instead the total profit % in relation to allocated capital (`max_open_trades * stake_amount`).
+In the above results we have `max_open_trades=2` and `stake_amount=0.005` in config  so `tot_profit %` will be `(76.20/100) * (0.005 * 2) =~ 0.00762792 BTC`.
+
+Your strategy performance is influenced by your buy strategy, your sell strategy, and also by the `minimal_roi` and `stop_loss` you have set.
+
+For example, if your `minimal_roi` is only `"0":  0.01` you cannot expect the bot to make more profit than 1% (because it will sell every time a trade reaches 1%).
+
+```json
+"minimal_roi": {
+    "0":  0.01
+},
+```
+
+On the other hand, if you set a too high `minimal_roi` like `"0":  0.55`
+(55%), there is almost no chance that the bot will ever reach this profit.
+Hence, keep in mind that your performance is an integral mix of all different elements of the strategy, your configuration, and the crypto-currency pairs you have set up.
+
+### Sell reasons table
+
+The 2nd table contains a recap of sell reasons.
+This table can tell you which area needs some additional work (e.g. all or many of the `sell_signal` trades are losses, so you should work on improving the sell signal, or consider disabling it).
+
+### Left open trades table
+
+The 3rd table contains all trades the bot had to `forcesell` at the end of the backtesting period to present you the full picture.
+This is necessary to simulate realistic behavior, since the backtest period has to end at some point, while realistically, you could leave the bot running forever.
+These trades are also included in the first table, but are also shown separately in this table for clarity.
+
+### Summary metrics
+
+The last element of the backtest report is the summary metrics table.
+It contains some useful key metrics about performance of your strategy on backtesting data.
+
+```
+=============== SUMMARY METRICS ===============
+| Metric                | Value               |
+|-----------------------+---------------------|
+| Backtesting from      | 2019-01-01 00:00:00 |
+| Backtesting to        | 2019-05-01 00:00:00 |
+| Max open trades       | 3                   |
+|                       |                     |
+| Total trades          | 429                 |
+| Total Profit %        | 152.41%             |
+| Trades per day        | 3.575               |
+|                       |                     |
+| Best Pair             | LSK/BTC 26.26%      |
+| Worst Pair            | ZEC/BTC -10.18%     |
+| Best Trade            | LSK/BTC 4.25%       |
+| Worst Trade           | ZEC/BTC -10.25%     |
+| Best day              | 25.27%              |
+| Worst day             | -30.67%             |
+| Avg. Duration Winners | 4:23:00             |
+| Avg. Duration Loser   | 6:55:00             |
+|                       |                     |
+| Max Drawdown          | 50.63%              |
+| Drawdown Start        | 2019-02-15 14:10:00 |
+| Drawdown End          | 2019-04-11 18:15:00 |
+| Market change         | -5.88%              |
+===============================================
+
+```
+
+- `Backtesting from` / `Backtesting to`: Backtesting range (usually defined with the `--timerange` option).
+- `Max open trades`: Setting of `max_open_trades` (or `--max-open-trades`) - to clearly see settings for this.
+- `Total trades`: Identical to the total trades of the backtest output table.
+- `Total Profit %`: Total profit per stake amount. Aligned to the TOTAL column of the first table.
+- `Trades per day`: Total trades divided by the backtesting duration in days (this will give you information about how many trades to expect from the strategy).
+- `Best Pair` / `Worst Pair`: Best and worst performing pair, and it's corresponding `Cum Profit %`.
+- `Best Trade` / `Worst Trade`: Biggest winning trade and biggest losing trade
+- `Best day` / `Worst day`: Best and worst day based on daily profit.
+- `Avg. Duration Winners` / `Avg. Duration Loser`: Average durations for winning and losing trades.
+- `Max Drawdown`: Maximum drawdown experienced. For example, the value of 50% means that from highest to subsequent lowest point, a 50% drop was experienced).
+- `Drawdown Start` / `Drawdown End`: Start and end datetime for this largest drawdown (can also be visualized via the `plot-dataframe` sub-command).
+- `Market change`: Change of the market during the backtest period. Calculated as average of all pairs changes from the first to the last candle using the "close" column.
+
+### Assumptions made by backtesting
+
+Since backtesting lacks some detailed information about what happens within a candle, it needs to take a few assumptions:
+
+- Buys happen at open-price
+- Sell-signal sells happen at open-price of the consecutive candle
+- Sell-signal is favored over Stoploss, because sell-signals are assumed to trigger on candle's open
+- ROI
+  - sells are compared to high - but the ROI value is used (e.g. ROI = 2%, high=5% - so the sell will be at 2%)
+  - sells are never "below the candle", so a ROI of 2% may result in a sell at 2.4% if low was at 2.4% profit
+  - Forcesells caused by `<N>=-1` ROI entries use low as sell value, unless N falls on the candle open (e.g. `120: -1` for 1h candles)
+- Stoploss sells happen exactly at stoploss price, even if low was lower, but the loss will be `2 * fees` higher than the stoploss price
+- Stoploss is evaluated before ROI within one candle. So you can often see more trades with the `stoploss` sell reason comparing to the results obtained with the same strategy in the Dry Run/Live Trade modes
+- Low happens before high for stoploss, protecting capital first
+- Trailing stoploss
+  - High happens first - adjusting stoploss
+  - Low uses the adjusted stoploss (so sells with large high-low difference are backtested correctly)
+  - ROI applies before trailing-stop, ensuring profits are "top-capped" at ROI if both ROI and trailing stop applies
+- Sell-reason does not explain if a trade was positive or negative, just what triggered the sell (this can look odd if negative ROI values are used)
+- Evaluation sequence (if multiple signals happen on the same candle)
+  - ROI (if not stoploss)
+  - Sell-signal
+  - Stoploss
+
+Taking these assumptions, backtesting tries to mirror real trading as closely as possible. However, backtesting will **never** replace running a strategy in dry-run mode.
+Also, keep in mind t
+
+MANIFESTOS PUBLICOS:
+
+--- setup.py ---
+from sys import version_info
+
+from setuptools import setup
+
+
+if version_info.major == 3 and version_info.minor < 7 or \
+        version_info.major < 3:
+    print('Your Python interpreter must be 3.7 or greater!')
+    exit(1)
+
+from pathlib import Path  # noqa: E402
+
+from freqtrade import __version__  # noqa: E402
+
+
+readme_file = Path(__file__).parent / "README.md"
+readme_long = "Crypto Trading Bot"
+if readme_file.is_file():
+    readme_long = (Path(__file__).parent / "README.md").read_text()
+
+# Requirements used for submodules
+api = ['flask', 'flask-jwt-extended', 'flask-cors']
+plot = ['plotly>=4.0']
+hyperopt = [
+    'scipy',
+    'scikit-learn',
+    'scikit-optimize>=0.7.0',
+    'filelock',
+    'joblib',
+    'progressbar2',
+    ]
+
+develop = [
+    'coveralls',
+    'flake8',
+    'flake8-type-annotations',
+    'flake8-tidy-imports',
+    'mypy',
+    'pytest',
+    'pytest-asyncio',
+    'pytest-cov',
+    'pytest-mock',
+    'pytest-random-order',
+]
+
+jupyter = [
+    'jupyter',
+    'nbstripout',
+    'ipykernel',
+    'nbconvert',
+    ]
+
+all_extra = api + plot + develop + jupyter + hyperopt
+
+setup(name='freqtrade',
+      version=__version__,
+      description='Crypto Trading Bot',
+      long_description=readme_long,
+      long_description_content_type="text/markdown",
+      url='https://github.com/freqtrade/freqtrade',
+      author='Freqtrade Team',
+      author_email='michael.egger@tsn.at',
+      license='GPLv3',
+      packages=['freqtrade'],
+      setup_requires=['pytest-runner', 'numpy'],
+      tests_require=['pytest', 'pytest-asyncio', 'pytest-cov', 'pytest-mock', ],
+      install_requires=[
+          # from requirements.txt
+          'ccxt>=1.24.96',
+          'SQLAlchemy',
+          'python-telegram-bot',
+          'arrow>=0.17.0',
+          'cachetools',
+          'requests',
+          'urllib3',
+          'wrapt',
+          'jsonschema',
+          'TA-Lib',
+          'tabulate',
+          'pycoingecko',
+          'py_find_1st',
+          'python-rapidjson',
+          'sdnotify',
+          'colorama',
+          'jinja2',
+          'questionary',
+          'prompt-toolkit',
+          'numpy',
+          'pandas',
+          'tables',
+          'blosc',
+      ],
+      extras_require={
+          'api': api,
+          'dev': all_extra,
+          'plot': plot,
+          'jupyter': jupyter,
+          'hyperopt': hyperopt,
+          'all': all_extra,
+      },
+      include_package_data=True,
+      zip_safe=False,
+      entry_points={
+          'console_scripts': [
+              'freqtrade = freqtrade.main:main',
+          ],
+      },
+      classifiers=[
+          'Environment :: Console',
+          'Intended Audience :: Science/Research',
+          'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
+          'Programming Language :: Python :: 3.7',
+          'Programming Language :: Python :: 3.8',
+          'Operating System :: MacOS',
+          'Operating System :: Unix',
+          'Topic :: Office/Business :: Financial :: Investment',
+      ])
+
+--- setup.cfg ---
+[flake8]
+#ignore =
+max-line-length = 100
+max-complexity = 12
+exclude =
+    .git,
+    __pycache__,
+    .eggs,
+    user_data,
+
+[isort]
+line_length=100
+multi_line_output=0
+lines_after_imports=2
+
+[mypy]
+ignore_missing_imports = True
+
+[mypy-tests.*]
+ignore_errors = True
+
+--- requirements-dev.txt ---
+# Include all requirements to run the bot.
+-r requirements.txt
+-r requirements-plot.txt
+-r requirements-hyperopt.txt
+
+coveralls==2.2.0
+flake8==3.8.4
+flake8-type-annotations==0.1.0
+flake8-tidy-imports==4.2.1
+mypy==0.790
+pytest==6.2.1
+pytest-asyncio==0.14.0
+pytest-cov==2.10.1
+pytest-mock==3.4.0
+pytest-random-order==1.0.4
+isort==5.6.4
+
+# Convert jupyter notebooks to markdown documents
+nbconvert==6.0.7
+
+--- requirements-hyperopt.txt ---
+# Include all requirements to run the bot.
+-r requirements.txt
+
+# Required for hyperopt
+scipy==1.5.4
+scikit-learn==0.24.0
+scikit-optimize==0.8.1
+filelock==3.0.12
+joblib==1.0.0
+progressbar2==3.53.1
+
+--- requirements-plot.txt ---
+# Include all requirements to run the bot.
+-r requirements.txt
+
+plotly==4.14.1
+
+
+--- requirements.txt ---
+numpy==1.19.4
+pandas==1.2.0
+
+ccxt==1.39.79
+aiohttp==3.7.3
+SQLAlchemy==1.3.22
+python-telegram-bot==13.1
+arrow==0.17.0
+cachetools==4.2.0
+requests==2.25.1
+urllib3==1.26.2
+wrapt==1.12.1
+jsonschema==3.2.0
+TA-Lib==0.4.19
+tabulate==0.8.7
+pycoingecko==1.4.0
+jinja2==2.11.2
+tables==3.6.1
+blosc==1.10.1
+
+# find first, C search in arrays
+py_find_1st==1.1.4
+
+# Load ticker files 30% faster
+python-rapidjson==1.0
+
+# Notify systemd
+sdnotify==0.3.2
+
+# Api server
+flask==1.1.2
+flask-jwt-extended==3.25.0
+flask-cors==3.0.9
+
+# Support for colorized terminal output
+colorama==0.4.4
+# Building config files interactively
+questionary==1.9.0
+prompt-toolkit==3.0.8
+
+
+ARQUITETURA TEXTUAL INFERIDA:
+PROJETO
+|
++-- Documentacao e configuracao
+|   +-- CONTRIBUTING.md
+|   +-- README.md
+|   +-- requirements-dev.txt
+|   +-- requirements-hyperopt.txt
+|   +-- requirements-plot.txt
+|   +-- requirements.txt
+|   +-- setup.cfg
+|   +-- setup.py
+|
++-- Modulos/dominios visiveis
+|   +-- .github/
+|   +-- docs/
+|   +-- freqtrade/
+|   +-- scripts/
+|   +-- tests/
+|
++-- Entradas e interfaces descritas no README
+|   +-- configuracao/parametros
+|   +-- processamento principal
+|   +-- saidas/resultados
+|
++-- Testes proprios a serem criados pela IA

@@ -1,0 +1,123 @@
+15:32:53.611 INFO  Scanner configuration file: /mnt/c/Users/felipe.fidelis/OneDrive - Vision Cybersecurity/Área de Trabalho/trabalho mestrado/python_prellm_pipeline/pipeline_interno/tools/sonar-scanner/conf/sonar-scanner.properties
+15:32:53.622 INFO  Project root configuration file: NONE
+15:32:53.654 INFO  SonarScanner CLI 8.0.1.6346
+15:32:53.664 INFO  Linux 6.18.33.2-microsoft-standard-WSL2 amd64
+15:32:55.600 INFO  Communicating with SonarQube Community Build 26.9.0.129388
+15:32:55.603 INFO  JRE provisioning is disabled
+15:32:55.604 INFO  The java executable in the PATH will be used
+15:32:56.000 INFO  SONAR_SCANNER_JAVA_OPTS=-Xms256m -Xmx4096m
+15:32:56.468 INFO  Starting SonarScanner Engine...
+15:32:56.470 INFO  Java 21.0.12 Ubuntu (64-bit)
+15:32:58.316 INFO  Load global settings
+15:32:58.484 INFO  Load global settings (done) | time=164ms
+15:32:58.488 INFO  Server id: 147B411E-AaCHMJYtDFq3q1fqGHiY
+15:32:58.507 INFO  Loading required plugins
+15:32:58.510 INFO  Load plugins index
+15:32:58.567 INFO  Load plugins index (done) | time=59ms
+15:32:58.570 INFO  Load/download plugins
+15:32:58.618 INFO  Load/download plugins (done) | time=51ms
+15:32:59.090 INFO  Process project properties
+15:32:59.116 INFO  Process project properties (done) | time=26ms
+15:32:59.133 INFO  Project key: human-home-assistant__core
+15:32:59.140 INFO  Base dir: /home/felipefidelis/prellm_home_assistant__core_keFQ
+15:32:59.142 INFO  Working dir: /home/felipefidelis/prellm_home_assistant__core_keFQ/.scannerwork
+15:32:59.158 INFO  Load project settings for component key: 'human-home-assistant__core'
+15:32:59.227 INFO  Load quality profiles
+15:32:59.516 INFO  Load quality profiles (done) | time=289ms
+15:32:59.572 WARN  SCM provider autodetection failed. Please use "sonar.scm.provider" to define SCM of your project, or disable the SCM Sensor in the project settings.
+15:32:59.588 INFO  Load active rules
+15:33:00.375 INFO  Load active rules (done) | time=786ms
+15:33:00.389 INFO  Load analysis cache
+15:33:00.415 INFO  Load analysis cache (404) | time=29ms
+15:33:00.561 INFO  Preprocessing files...
+15:33:01.764 INFO  1 language detected in 5690 preprocessed files (done) | time=1201ms
+15:33:01.770 INFO  0 files ignored because of inclusion/exclusion patterns
+15:33:01.772 INFO  Loading plugins for detected languages
+15:33:01.774 INFO  Load/download plugins
+15:33:01.784 INFO  Load/download plugins (done) | time=13ms
+15:33:02.013 INFO  Load project repositories
+15:33:02.035 INFO  Load project repositories (done) | time=22ms
+15:33:02.079 INFO  Indexing files...
+15:33:02.082 INFO  Project configuration:
+15:33:02.095 INFO    Included sources: **/*.py
+15:33:02.097 INFO    Excluded sources: **/.git/**, **/.venv/**, **/venv/**, **/vendor/**, **/vendors/**, **/third_party/**, **/node_modules/**, **/build/**, **/dist/**
+15:33:02.319 INFO  5690 files indexed (done) | time=237ms
+15:33:02.323 INFO  Quality profile for py: Sonar way
+15:33:02.326 INFO  ------------- Run sensors on module Humano - home-assistant__core
+15:33:02.402 INFO  Load metrics repository
+15:33:02.485 INFO  Load metrics repository (done) | time=83ms
+15:33:03.743 INFO  Sensor IaC YAML File Type Classification Sensor [iac]
+15:33:03.812 INFO  Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=69ms
+15:33:03.814 INFO  Sensor IaC hadolint report Sensor [iac]
+15:33:03.815 INFO  Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+15:33:03.816 INFO  Sensor Java Config Sensor [iac]
+15:33:03.818 INFO  There are no files to be analyzed for the Java language
+15:33:03.820 INFO  Sensor Java Config Sensor [iac] (done) | time=0ms
+15:33:03.822 INFO  Sensor IaC Docker Sensor [iac]
+15:33:03.976 INFO  There are no files to be analyzed for the Docker language
+15:33:03.978 INFO  Sensor IaC Docker Sensor [iac] (done) | time=161ms
+15:33:03.980 INFO  Sensor Python Sensor [python]
+15:33:05.221 INFO  Starting global symbols computation
+15:33:05.233 INFO  5690 source files to be analyzed
+15:33:15.230 INFO  651/5690 files analyzed, current files: test_climate.py, test_bridge.py, test_binary_sensor.py, ...
+15:33:25.231 INFO  2417/5690 files analyzed, current files: test_init.py, __init__.py, entity_registry.py, ...
+15:33:35.234 INFO  4281/5690 files analyzed, current files: __init__.py, test_config_flow.py, const.py, ...
+15:33:42.459 INFO  5690/5690 source files have been analyzed
+15:33:42.462 INFO  Finished step global symbols computation in 37234ms
+15:33:43.331 INFO  Starting rules execution
+15:33:43.333 INFO  5690 source files to be analyzed
+15:33:43.340 WARN  Test files were detected using a path heuristic because "sonar.tests" is not set. To improve the analysis accuracy, it is recommended to configure it, e.g.: "sonar.tests=src/test".
+15:33:53.338 INFO  410/5690 files analyzed, current files: media_player.py, auth_store.py, test_device.py, ...
+15:34:03.343 INFO  1135/5690 files analyzed, current files: controller.py, test_init.py, test_light.py, ...
+15:34:13.343 INFO  2150/5690 files analyzed, current files: test_light.py, climate.py, alarm_control_panel.py, ...
+15:34:23.346 INFO  3275/5690 files analyzed, current files: media_player.py, __init__.py, light.py, ...
+15:34:33.346 INFO  4474/5690 files analyzed, current files: config_flow.py, server.py, check_config.py, ...
+15:34:43.347 INFO  5489/5690 files analyzed, current files: sensor.py, climate.py, decorators.py, ...
+15:34:45.164 INFO  5690/5690 source files have been analyzed
+15:34:45.165 INFO  Finished step rules execution in 61830ms
+15:34:45.166 INFO  The Python analyzer was able to leverage cached data from previous analyses for 0 out of 5690 files. These files were not parsed.
+15:34:45.167 INFO  Sensor Python Sensor [python] (done) | time=101191ms
+15:34:45.168 INFO  Sensor Cobertura Sensor for Python coverage [python]
+15:34:45.285 INFO  Sensor Cobertura Sensor for Python coverage [python] (done) | time=118ms
+15:34:45.287 INFO  Sensor PythonXUnitSensor [python]
+15:34:45.389 INFO  Sensor PythonXUnitSensor [python] (done) | time=103ms
+15:34:45.391 INFO  Sensor Python Dependency Sensor [python]
+15:34:45.395 INFO  Sensor Python Dependency Sensor [python] (done) | time=5ms
+15:34:45.397 INFO  Sensor TextAndSecretsSensor [text]
+15:34:45.484 INFO  Available processors: 8
+15:34:45.486 INFO  Using 8 threads for analysis.
+15:34:45.714 INFO  The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test", "tests", "mock" or "mocks"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+15:34:45.741 INFO  Start fetching files for the text and secrets analysis
+15:34:45.763 INFO  Using Git CLI to retrieve dirty files
+15:34:45.766 WARN  Retrieving only language associated files, make sure to run the analysis inside a git repository to make use of inclusions specified via "sonar.text.inclusions"
+15:34:45.769 INFO  Starting the text and secrets analysis
+15:34:45.775 INFO  5690 source files to be analyzed for the text and secrets analysis
+15:34:47.255 INFO  5690/5690 source files have been analyzed for the text and secrets analysis
+15:34:47.257 INFO  Skipped 1994 file(s) in the secrets analysis due to automatic test file detection
+15:34:47.258 INFO  Sensor TextAndSecretsSensor [text] (done) | time=1862ms
+15:34:47.262 INFO  ------------- Run sensors on project
+15:34:47.442 INFO  Sensor IaC Project Sensor [iac]
+15:34:47.443 INFO  Sensor IaC Project Sensor [iac] (done) | time=1ms
+15:34:47.444 INFO  Sensor Zero Coverage Sensor
+15:34:47.769 INFO  Sensor Zero Coverage Sensor (done) | time=325ms
+15:34:47.770 INFO  ------------- Gather SCA dependencies on project
+15:34:47.774 INFO  Dependency analysis skipped
+15:34:47.777 INFO  SCM Publisher No SCM system was detected. You can use the 'sonar.scm.provider' property to explicitly specify it.
+15:34:48.350 INFO  CPD Executor 1143 files had no CPD blocks
+15:34:48.352 INFO  CPD Executor Calculating CPD for 4547 files
+15:34:49.653 INFO  CPD Executor CPD calculation finished (done) | time=1302ms
+15:34:50.622 INFO  Analysis report generated in 849ms, dir size=86.2 MB
+15:34:55.075 INFO  Analysis report compressed in 4453ms, zip size=51.3 MB
+15:34:56.015 INFO  Analysis report uploaded in 938ms
+15:34:56.024 INFO  ANALYSIS SUCCESSFUL, you can find the results at: http://localhost:9000/dashboard?id=human-home-assistant__core
+15:34:56.031 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+15:34:56.034 INFO  More about the report processing at http://localhost:9000/api/ce/task?id=eec57fe6-6c02-4811-b46f-0967318495e5
+15:34:56.568 INFO  Analysis total time: 1:57.883 s
+15:34:56.596 INFO  SonarScanner Engine completed successfully
+15:34:56.668 INFO  EXECUTION SUCCESS
+15:34:56.669 INFO  Total time: 2:03.083s

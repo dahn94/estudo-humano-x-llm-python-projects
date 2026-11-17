@@ -1,0 +1,65 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 50 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: frappe/erpnext
+####################################################################################################
+Repositorio: https://github.com/frappe/erpnext
+Commit analisado: 2adf8d07b6c8ceda071ddeb15ed1d8b64e10e232
+Link do commit: https://github.com/frappe/erpnext/commit/2adf8d07b6c8ceda071ddeb15ed1d8b64e10e232
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 158653
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 1
+  ERROR: 1
+  WARNING: 0
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 0
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 0
+  Security hotspots: 0
+  Complexidade: 29938
+  Linhas analisadas pelo SonarQube: 148287
+  Severidades: nenhuma
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: erpnext/setup/doctype/email_digest/email_digest.py
+Linha: 243
+Link do codigo: https://github.com/frappe/erpnext/blob/2adf8d07b6c8ceda071ddeb15ed1d8b64e10e232/erpnext/setup/doctype/email_digest/email_digest.py#L243
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE frappe/erpnext
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

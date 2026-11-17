@@ -1,0 +1,1972 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 25 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: ultralytics/yolov5
+####################################################################################################
+Repositorio: https://github.com/ultralytics/yolov5
+Commit analisado: 7180b22e2d2d06be1622cbc71e758ed04727ff65
+Link do commit: https://github.com/ultralytics/yolov5/commit/7180b22e2d2d06be1622cbc71e758ed04727ff65
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 4030
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 14
+  ERROR: 7
+  WARNING: 7
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 179
+  Vulnerabilidades: 23
+  Bugs: 9
+  Code smells: 147
+  Security hotspots: 0
+  Complexidade: 854
+  Linhas analisadas pelo SonarQube: 3322
+  Severidades: BLOCKER=1, CRITICAL=39, MAJOR=115, MINOR=24
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: models/yolo.py
+Linha: 78
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/yolo.py#L78
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 2]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: models/yolo.py
+Linha: 209
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/yolo.py#L209
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 3]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: models/yolo.py
+Linha: 212
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/yolo.py#L212
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 4]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: test.py
+Linha: 71
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/test.py#L71
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 5]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: train.py
+Linha: 69
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/train.py#L69
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 6]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: train.py
+Linha: 477
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/train.py#L477
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 7]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: train.py
+Linha: 500
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/train.py#L500
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 8]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: utils/autoanchor.py
+Linha: 97
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/autoanchor.py#L97
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+[SEMGREP 9]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: utils/datasets.py
+Linha: 205
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L205
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 10]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: utils/datasets.py
+Linha: 274
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L274
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 11]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: utils/general.py
+Linha: 51
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L51
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 12]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-shell-true
+CWE: nao informada
+Arquivo: utils/google_utils.py
+Linha: 14
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/google_utils.py#L14
+Descricao: subprocess com shell=True aumenta o risco de injeção de comandos.
+
+[SEMGREP 13]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: utils/google_utils.py
+Linha: 15
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/google_utils.py#L15
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 14]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-unsafe-yaml-load
+CWE: nao informada
+Arquivo: utils/plots.py
+Linha: 303
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L303
+Descricao: Use yaml.safe_load para dados não confiáveis.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SONARQUBE 1]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: detect.py
+Linha: 18
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/detect.py#L18
+Descricao: Refactor this function to reduce its Cognitive Complexity from 84 to the 15 allowed.
+
+[SONARQUBE 2]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5797
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: detect.py
+Linha: 40
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/detect.py#L40
+Descricao: Replace this expression; used as a condition it will always be constant.
+
+[SONARQUBE 3]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: detect.py
+Linha: 42
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/detect.py#L42
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 4]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: detect.py
+Linha: 56
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/detect.py#L56
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 5]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3358
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: detect.py
+Linha: 61
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/detect.py#L61
+Descricao: Extract this nested conditional expression into an independent statement.
+
+[SONARQUBE 6]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5797
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: detect.py
+Linha: 78
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/detect.py#L78
+Descricao: Replace this expression; used as a condition it will always be constant.
+
+[SONARQUBE 7]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: detect.py
+Linha: 91
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/detect.py#L91
+Descricao: Remove this commented out code.
+
+[SONARQUBE 8]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: hubconf.py
+Linha: 38
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/hubconf.py#L38
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 9]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: hubconf.py
+Linha: 51
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/hubconf.py#L51
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 10]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: hubconf.py
+Linha: 121
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/hubconf.py#L121
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 11]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: hubconf.py
+Linha: 133
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/hubconf.py#L133
+Descricao: Remove this commented out code.
+
+[SONARQUBE 12]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1542
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/common.py
+Linha: 22
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/common.py#L22
+Descricao: Rename function "DWConv" to match the regular expression ^[a-z_][a-z0-9_]*$.
+
+[SONARQUBE 13]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3358
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/common.py
+Linha: 33
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/common.py#L33
+Descricao: Extract this nested conditional expression into an independent statement.
+
+[SONARQUBE 14]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/common.py
+Linha: 81
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/common.py#L81
+Descricao: Remove this commented out code.
+
+[SONARQUBE 15]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/common.py
+Linha: 83
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/common.py#L83
+Descricao: Remove this commented out code.
+
+[SONARQUBE 16]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S101
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/common.py
+Linha: 136
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/common.py#L136
+Descricao: Rename class "autoShape" to match the regular expression ^_?([A-Z_][a-zA-Z0-9]*|[a-z_][a-z0-9_]*)$.
+
+[SONARQUBE 17]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/common.py
+Linha: 213
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/common.py#L213
+Descricao: Refactor this function to reduce its Cognitive Complexity from 24 to the 15 allowed.
+
+[SONARQUBE 18]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/common.py
+Linha: 216
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/common.py#L216
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 19]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/common.py
+Linha: 224
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/common.py#L224
+Descricao: Remove this commented out code.
+
+[SONARQUBE 20]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/common.py
+Linha: 236
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/common.py#L236
+Descricao: Remove this commented out code.
+
+[SONARQUBE 21]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/experimental.py
+Linha: 107
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/experimental.py#L107
+Descricao: Remove this commented out code.
+
+[SONARQUBE 22]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/experimental.py
+Linha: 118
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/experimental.py#L118
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 23]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/experimental.py
+Linha: 128
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/experimental.py#L128
+Descricao: Remove this commented out code.
+
+[SONARQUBE 24]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/experimental.py
+Linha: 133
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/experimental.py#L133
+Descricao: Remove this commented out code.
+
+[SONARQUBE 25]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/yolo.py
+Linha: 44
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/yolo.py#L44
+Descricao: Remove this commented out code.
+
+[SONARQUBE 26]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/yolo.py
+Linha: 125
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/yolo.py#L125
+Descricao: Refactor this function to reduce its Cognitive Complexity from 21 to the 15 allowed.
+
+[SONARQUBE 27]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/yolo.py
+Linha: 162
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/yolo.py#L162
+Descricao: Remove this commented out code.
+
+[SONARQUBE 28]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/yolo.py
+Linha: 201
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/yolo.py#L201
+Descricao: Refactor this function to reduce its Cognitive Complexity from 36 to the 15 allowed.
+
+[SONARQUBE 29]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/yolo.py
+Linha: 213
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/yolo.py#L213
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 30]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/yolo.py
+Linha: 229
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/yolo.py#L229
+Descricao: Remove this commented out code.
+
+[SONARQUBE 31]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/yolo.py
+Linha: 277
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/yolo.py#L277
+Descricao: Remove this commented out code.
+
+[SONARQUBE 32]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: models/yolo.py
+Linha: 281
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/models/yolo.py#L281
+Descricao: Remove this commented out code.
+
+[SONARQUBE 33]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: test.py
+Linha: 22
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/test.py#L22
+Descricao: Refactor this function to reduce its Cognitive Complexity from 134 to the 15 allowed.
+
+[SONARQUBE 34]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: test.py
+Linha: 22
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/test.py#L22
+Descricao: Function "test" has 18 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 35]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3358
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: test.py
+Linha: 87
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/test.py#L87
+Descricao: Extract this nested conditional expression into an independent statement.
+
+[SONARQUBE 36]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7500
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: test.py
+Linha: 93
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/test.py#L93
+Descricao: Replace this comprehension with passing the iterable to the dict constructor call
+
+[SONARQUBE 37]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: test.py
+Linha: 96
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/test.py#L96
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 38]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: test.py
+Linha: 96
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/test.py#L96
+Descricao: Replace the unused local variable "f1" with "_".
+
+[SONARQUBE 39]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6929
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: test.py
+Linha: 184
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/test.py#L184
+Descricao: Provide a value for the dim argument.
+
+[SONARQUBE 40]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: test.py
+Linha: 225
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/test.py#L225
+Descricao: Remove this commented out code.
+
+[SONARQUBE 41]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S3358
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: test.py
+Linha: 247
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/test.py#L247
+Descricao: Extract this nested conditional expression into an independent statement.
+
+[SONARQUBE 42]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S5806
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: test.py
+Linha: 260
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/test.py#L260
+Descricao: Rename this variable; it shadows a builtin.
+
+[SONARQUBE 43]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: train.py
+Linha: 46
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/train.py#L46
+Descricao: Refactor this function to reduce its Cognitive Complexity from 208 to the 15 allowed.
+
+[SONARQUBE 44]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: train.py
+Linha: 83
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/train.py#L83
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 45]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6973
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: train.py
+Linha: 118
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/train.py#L118
+Descricao: Add the missing hyperparameter weight_decay for this PyTorch optimizer.
+
+[SONARQUBE 46]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6973
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: train.py
+Linha: 120
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/train.py#L120
+Descricao: Add the missing hyperparameter weight_decay for this PyTorch optimizer.
+
+[SONARQUBE 47]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: train.py
+Linha: 205
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/train.py#L205
+Descricao: Remove this commented out code.
+
+[SONARQUBE 48]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: train.py
+Linha: 227
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/train.py#L227
+Descricao: Remove this commented out code.
+
+[SONARQUBE 49]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: train.py
+Linha: 244
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/train.py#L244
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 50]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: train.py
+Linha: 271
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/train.py#L271
+Descricao: Remove this commented out code.
+
+[SONARQUBE 51]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: train.py
+Linha: 281
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/train.py#L281
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 52]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: train.py
+Linha: 317
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/train.py#L317
+Descricao: Remove this commented out code.
+
+[SONARQUBE 53]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: train.py
+Linha: 481
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/train.py#L481
+Descricao: Remove this commented out code.
+
+[SONARQUBE 54]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: train.py
+Linha: 549
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/train.py#L549
+Descricao: Remove this commented out code.
+
+[SONARQUBE 55]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: train.py
+Linha: 563
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/train.py#L563
+Descricao: Remove this commented out code.
+
+[SONARQUBE 56]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: train.py
+Linha: 564
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/train.py#L564
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 57]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/activations.py
+Linha: 18
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/activations.py#L18
+Descricao: Remove this commented out code.
+
+[SONARQUBE 58]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/autoanchor.py
+Linha: 26
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/autoanchor.py#L26
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 59]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/autoanchor.py
+Linha: 55
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/autoanchor.py#L55
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 60]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/autoanchor.py
+Linha: 77
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/autoanchor.py#L77
+Descricao: Remove this commented out code.
+
+[SONARQUBE 61]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/autoanchor.py
+Linha: 117
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/autoanchor.py#L117
+Descricao: Replace the unused local variable "dist" with "_".
+
+[SONARQUBE 62]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/autoanchor.py
+Linha: 123
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/autoanchor.py#L123
+Descricao: Remove this commented out code.
+
+[SONARQUBE 63]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1871
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 50
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L50
+Descricao: Either merge this branch with the identical one on line "48" or change one of the implementations.
+
+[SONARQUBE 64]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 51
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L51
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 65]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S107
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 57
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L57
+Descricao: Function "create_dataloader" has 14 parameters, which is greater than the 13 authorized.
+
+[SONARQUBE 66]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 101
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L101
+Descricao: Replace the unused loop index "i" with "_".
+
+[SONARQUBE 67]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 131
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L131
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 68]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 206
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L206
+Descricao: Remove this commented out code.
+
+[SONARQUBE 69]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 296
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L296
+Descricao: Remove this commented out code.
+
+[SONARQUBE 70]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 337
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L337
+Descricao: Refactor this function to reduce its Cognitive Complexity from 31 to the 15 allowed.
+
+[SONARQUBE 71]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 360
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L360
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 72]
+Tipo: BUG
+Severidade: CRITICAL
+Regra: python:S5779
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 362
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L362
+Descricao: Don't use assert inside a try-except that catches AssertionError.
+
+[SONARQUBE 73]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 364
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L364
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 74]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 370
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L370
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 75]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6730
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 394
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L394
+Descricao: Replace this deprecated "numpy" type alias with the builtin type "int".
+
+[SONARQUBE 76]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6730
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 422
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L422
+Descricao: Replace this deprecated "numpy" type alias with the builtin type "int".
+
+[SONARQUBE 77]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 432
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L432
+Descricao: Remove this commented out code.
+
+[SONARQUBE 78]
+Tipo: BUG
+Severidade: CRITICAL
+Regra: python:S5779
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 447
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L447
+Descricao: Don't use assert inside a try-except that catches AssertionError.
+
+[SONARQUBE 79]
+Tipo: BUG
+Severidade: CRITICAL
+Regra: python:S5779
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 455
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L455
+Descricao: Don't use assert inside a try-except that catches AssertionError.
+
+[SONARQUBE 80]
+Tipo: BUG
+Severidade: CRITICAL
+Regra: python:S5779
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 456
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L456
+Descricao: Don't use assert inside a try-except that catches AssertionError.
+
+[SONARQUBE 81]
+Tipo: BUG
+Severidade: CRITICAL
+Regra: python:S5779
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 457
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L457
+Descricao: Don't use assert inside a try-except that catches AssertionError.
+
+[SONARQUBE 82]
+Tipo: BUG
+Severidade: CRITICAL
+Regra: python:S5779
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 458
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L458
+Descricao: Don't use assert inside a try-except that catches AssertionError.
+
+[SONARQUBE 83]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 485
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L485
+Descricao: Remove this commented out code.
+
+[SONARQUBE 84]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 491
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L491
+Descricao: Refactor this function to reduce its Cognitive Complexity from 25 to the 15 allowed.
+
+[SONARQUBE 85]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 495
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L495
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 86]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 502
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L502
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 87]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 503
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L503
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 88]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 504
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L504
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 89]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 545
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L545
+Descricao: Rename this local variable "nL" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 90]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 553
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L553
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 91]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 559
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L559
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 92]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6711
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 601
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L601
+Descricao: Use a "numpy.random.Generator" here instead of this legacy function.
+
+[SONARQUBE 93]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 625
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L625
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 94]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 663
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L663
+Descricao: Remove this commented out code.
+
+[SONARQUBE 95]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 694
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L694
+Descricao: Rename this parameter "scaleFill" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 96]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 728
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L728
+Descricao: Remove this commented out code.
+
+[SONARQUBE 97]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 747
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L747
+Descricao: Remove this commented out code.
+
+[SONARQUBE 98]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 749
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L749
+Descricao: Remove this commented out code.
+
+[SONARQUBE 99]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 770
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L770
+Descricao: Remove this commented out code.
+
+[SONARQUBE 100]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 847
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L847
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 101]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 848
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L848
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 102]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 851
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L851
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 103]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 852
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L852
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 104]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 857
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L857
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 105]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 883
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L883
+Descricao: Refactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.
+
+[SONARQUBE 106]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 883
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L883
+Descricao: Remove this commented out code.
+
+[SONARQUBE 107]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 909
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L909
+Descricao: Remove this commented out code.
+
+[SONARQUBE 108]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6730
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 911
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L911
+Descricao: Replace this deprecated "numpy" type alias with the builtin type "int".
+
+[SONARQUBE 109]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 918
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L918
+Descricao: Remove this commented out code.
+
+[SONARQUBE 110]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/datasets.py
+Linha: 927
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/datasets.py#L927
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 111]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 71
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L71
+Descricao: Remove this commented out code.
+
+[SONARQUBE 112]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 72
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L72
+Descricao: Remove this commented out code.
+
+[SONARQUBE 113]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 75
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L75
+Descricao: Refactor this function to reduce its Cognitive Complexity from 21 to the 15 allowed.
+
+[SONARQUBE 114]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S112
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 92
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L92
+Descricao: Replace this generic exception class with a more specific one.
+
+[SONARQUBE 115]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6730
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 111
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L111
+Descricao: Replace this deprecated "numpy" type alias with the builtin type "int".
+
+[SONARQUBE 116]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S6730
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 126
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L126
+Descricao: Replace this deprecated "numpy" type alias with the builtin type "int".
+
+[SONARQUBE 117]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 128
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L128
+Descricao: Remove this commented out code.
+
+[SONARQUBE 118]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 167
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L167
+Descricao: Remove this commented out code.
+
+[SONARQUBE 119]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 188
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L188
+Descricao: Rename this parameter "GIoU" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 120]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 188
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L188
+Descricao: Rename this parameter "DIoU" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 121]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 188
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L188
+Descricao: Rename this parameter "CIoU" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 122]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 193
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L193
+Descricao: Remove this commented out code.
+
+[SONARQUBE 123]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 253
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L253
+Descricao: Remove this commented out code.
+
+[SONARQUBE 124]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 255
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L255
+Descricao: Remove this commented out code.
+
+[SONARQUBE 125]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 263
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L263
+Descricao: Remove this commented out code.
+
+[SONARQUBE 126]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 266
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L266
+Descricao: Refactor this function to reduce its Cognitive Complexity from 25 to the 15 allowed.
+
+[SONARQUBE 127]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 277
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L277
+Descricao: Replace the unused local variable "min_wh" with "_".
+
+[SONARQUBE 128]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 305
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L305
+Descricao: Remove this commented out code.
+
+[SONARQUBE 129]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5797
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 345
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L345
+Descricao: Replace this expression; used as a condition it will always be constant.
+
+[SONARQUBE 130]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 355
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L355
+Descricao: Remove this commented out code.
+
+[SONARQUBE 131]
+Tipo: VULNERABILITY
+Severidade: CRITICAL
+Regra: python:S6985
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 357
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L357
+Descricao: Replace this call with a safe alternative.
+
+[SONARQUBE 132]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S1192
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/general.py
+Linha: 378
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/general.py#L378
+Descricao: Define a constant instead of duplicating this literal 'evolve.txt' 5 times.
+
+[SONARQUBE 133]
+Tipo: BUG
+Severidade: CRITICAL
+Regra: python:S5779
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/google_utils.py
+Linha: 41
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/google_utils.py#L41
+Descricao: Don't use assert inside a try-except that catches AssertionError.
+
+[SONARQUBE 134]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/google_utils.py
+Linha: 47
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/google_utils.py#L47
+Descricao: Remove the unused local variable "r".
+
+[SONARQUBE 135]
+Tipo: BUG
+Severidade: CRITICAL
+Regra: python:S1143
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/google_utils.py
+Linha: 53
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/google_utils.py#L53
+Descricao: Remove this "return" statement from this "finally" block.
+
+[SONARQUBE 136]
+Tipo: CODE_SMELL
+Severidade: BLOCKER
+Regra: python:S3516
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/google_utils.py
+Linha: 56
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/google_utils.py#L56
+Descricao: Refactor this method to not always return the same value.
+
+[SONARQUBE 137]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/google_utils.py
+Linha: 77
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/google_utils.py#L77
+Descricao: Remove this commented out code.
+
+[SONARQUBE 138]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/google_utils.py
+Linha: 97
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/google_utils.py#L97
+Descricao: Remove this commented out code.
+
+[SONARQUBE 139]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S1542
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/loss.py
+Linha: 10
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/loss.py#L10
+Descricao: Rename function "smooth_BCE" to match the regular expression ^[a-z_][a-z0-9_]*$.
+
+[SONARQUBE 140]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/loss.py
+Linha: 26
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/loss.py#L26
+Descricao: Remove this commented out code.
+
+[SONARQUBE 141]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/loss.py
+Linha: 44
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/loss.py#L44
+Descricao: Remove this commented out code.
+
+[SONARQUBE 142]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/loss.py
+Linha: 95
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/loss.py#L95
+Descricao: Rename this local variable "BCEcls" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 143]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S117
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/loss.py
+Linha: 96
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/loss.py#L96
+Descricao: Rename this local variable "BCEobj" to match the regular expression ^[_a-z][a-z0-9_]*$.
+
+[SONARQUBE 144]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/loss.py
+Linha: 107
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/loss.py#L107
+Descricao: Remove the unused local variable "nt".
+
+[SONARQUBE 145]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/loss.py
+Linha: 162
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/loss.py#L162
+Descricao: Remove this commented out code.
+
+[SONARQUBE 146]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/loss.py
+Linha: 176
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/loss.py#L176
+Descricao: Remove this commented out code.
+
+[SONARQUBE 147]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S6729
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/metrics.py
+Linha: 101
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/metrics.py#L101
+Descricao: Use "np.nonzero" when only the condition parameter is provided to "np.where".
+
+[SONARQUBE 148]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/metrics.py
+Linha: 174
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/metrics.py#L174
+Descricao: Remove the unused local variable "e".
+
+[SONARQUBE 149]
+Tipo: VULNERABILITY
+Severidade: MAJOR
+Regra: python:S2245
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 60
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L60
+Descricao: Make sure that using this pseudorandom number generator is safe here.
+
+[SONARQUBE 150]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 71
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L71
+Descricao: Remove this commented out code.
+
+[SONARQUBE 151]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 100
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L100
+Descricao: Refactor this function to reduce its Cognitive Complexity from 42 to the 15 allowed.
+
+[SONARQUBE 152]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 195
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L195
+Descricao: Remove this commented out code.
+
+[SONARQUBE 153]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 201
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L201
+Descricao: Replace the unused local variable "fig" with "_".
+
+[SONARQUBE 154]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 212
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L212
+Descricao: Remove this commented out code.
+
+[SONARQUBE 155]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 216
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L216
+Descricao: Replace the unused local variable "fig" with "_".
+
+[SONARQUBE 156]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 225
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L225
+Descricao: Remove this commented out code.
+
+[SONARQUBE 157]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 227
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L227
+Descricao: Replace the unused local variable "fig" with "_".
+
+[SONARQUBE 158]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S1481
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 230
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L230
+Descricao: Replace the unused local variable "fig2" with "_".
+
+[SONARQUBE 159]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 265
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L265
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 160]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7498
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 265
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L265
+Descricao: Replace this constructor call with a literal.
+
+[SONARQUBE 161]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 300
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L300
+Descricao: Remove this commented out code.
+
+[SONARQUBE 162]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 306
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L306
+Descricao: Remove this commented out code.
+
+[SONARQUBE 163]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 311
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L311
+Descricao: Remove this commented out code.
+
+[SONARQUBE 164]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 324
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L324
+Descricao: Refactor this function to reduce its Cognitive Complexity from 19 to the 15 allowed.
+
+[SONARQUBE 165]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 343
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L343
+Descricao: Remove this commented out code.
+
+[SONARQUBE 166]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 356
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L356
+Descricao: Remove this commented out code.
+
+[SONARQUBE 167]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 370
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L370
+Descricao: Remove this commented out code.
+
+[SONARQUBE 168]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 386
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L386
+Descricao: Remove this commented out code.
+
+[SONARQUBE 169]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 402
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L402
+Descricao: Remove this commented out code.
+
+[SONARQUBE 170]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/plots.py
+Linha: 406
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/plots.py#L406
+Descricao: Remove this commented out code.
+
+[SONARQUBE 171]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/torch_utils.py
+Linha: 47
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/torch_utils.py#L47
+Descricao: Remove this commented out code.
+
+[SONARQUBE 172]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S3776
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/torch_utils.py
+Linha: 78
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/torch_utils.py#L78
+Descricao: Refactor this function to reduce its Cognitive Complexity from 23 to the 15 allowed.
+
+[SONARQUBE 173]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/torch_utils.py
+Linha: 96
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/torch_utils.py#L96
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 174]
+Tipo: CODE_SMELL
+Severidade: CRITICAL
+Regra: python:S5754
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/torch_utils.py
+Linha: 106
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/torch_utils.py#L106
+Descricao: Specify an exception class to catch or reraise the exception
+
+[SONARQUBE 175]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S7494
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/torch_utils.py
+Linha: 113
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/torch_utils.py#L113
+Descricao: Replace list constructor call with a list comprehension.
+
+[SONARQUBE 176]
+Tipo: CODE_SMELL
+Severidade: MINOR
+Regra: python:S5713
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/torch_utils.py
+Linha: 204
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/torch_utils.py#L204
+Descricao: Remove this redundant Exception class; it derives from another which is already caught.
+
+[SONARQUBE 177]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/torch_utils.py
+Linha: 229
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/torch_utils.py#L229
+Descricao: Remove this commented out code.
+
+[SONARQUBE 178]
+Tipo: BUG
+Severidade: MAJOR
+Regra: python:S1244
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/torch_utils.py
+Linha: 231
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/torch_utils.py#L231
+Descricao: Do not perform equality checks with floating point values.
+
+[SONARQUBE 179]
+Tipo: CODE_SMELL
+Severidade: MAJOR
+Regra: python:S125
+CWE: nao fornecida diretamente no JSON consultado
+Arquivo: utils/torch_utils.py
+Linha: 265
+Link do codigo: https://github.com/ultralytics/yolov5/blob/7180b22e2d2d06be1622cbc71e758ed04727ff65/utils/torch_utils.py#L265
+Descricao: Remove this commented out code.
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE ultralytics/yolov5
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

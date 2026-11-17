@@ -1,0 +1,56 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 24 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: CorentinJ/Real-Time-Voice-Cloning
+####################################################################################################
+Repositorio: https://github.com/CorentinJ/Real-Time-Voice-Cloning
+Commit analisado: 5425557efe30863267f805851f918124191e0be0
+Link do commit: https://github.com/CorentinJ/Real-Time-Voice-Cloning/commit/5425557efe30863267f805851f918124191e0be0
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 7113
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 0
+  ERROR: 0
+  WARNING: 0
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 0
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 0
+  Security hotspots: 0
+  Complexidade: 929
+  Linhas analisadas pelo SonarQube: 5465
+  Severidades: nenhuma
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE CorentinJ/Real-Time-Voice-Cloning
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

@@ -1,0 +1,1 @@
+Coloque aqui o projeto claude gerado com prompts/streamlit__streamlit/prompt_recriacao.txt.

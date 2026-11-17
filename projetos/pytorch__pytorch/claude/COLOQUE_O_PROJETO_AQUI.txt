@@ -1,0 +1,1 @@
+Coloque aqui o projeto claude gerado com prompts/pytorch__pytorch/prompt_recriacao.txt.

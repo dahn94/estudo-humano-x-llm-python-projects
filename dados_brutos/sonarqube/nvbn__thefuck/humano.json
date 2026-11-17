@@ -1,0 +1,2970 @@
+{
+  "component": {
+    "key": "human-nvbn__thefuck",
+    "name": "Humano - nvbn__thefuck",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "bugs",
+        "value": "2",
+        "bestValue": false
+      },
+      {
+        "metric": "complexity",
+        "value": "2085"
+      },
+      {
+        "metric": "code_smells",
+        "value": "53",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_reliability_issues",
+        "value": "12",
+        "bestValue": false
+      },
+      {
+        "metric": "ncloc",
+        "value": "12143"
+      },
+      {
+        "metric": "software_quality_maintainability_issues",
+        "value": "44",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_security_issues",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "security_hotspots",
+        "value": "0",
+        "bestValue": true
+      }
+    ]
+  },
+  "issues_summary": {
+    "issues": [
+      {
+        "key": "59b5e13f-d4cc-4613-8863-083a6d4decad",
+        "rule": "python:S1940",
+        "severity": "MINOR",
+        "component": "human-nvbn__thefuck:fastentrypoints.py",
+        "project": "human-nvbn__thefuck",
+        "line": 97,
+        "hash": "dd5854146416753bd51cc6987f8bdfe5",
+        "textRange": {
+          "startLine": 97,
+          "endLine": 97,
+          "startOffset": 15,
+          "endOffset": 67
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Use the opposite operator (\"not in\") instead.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "pitfall"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "ca54c91c-72df-43e5-b936-310526c58d3c",
+        "rule": "python:S1940",
+        "severity": "MINOR",
+        "component": "human-nvbn__thefuck:fastentrypoints.py",
+        "project": "human-nvbn__thefuck",
+        "line": 105,
+        "hash": "d89849e3a4911930e5273a264d77d50d",
+        "textRange": {
+          "startLine": 105,
+          "endLine": 105,
+          "startOffset": 15,
+          "endOffset": 60
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Use the opposite operator (\"not in\") instead.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "pitfall"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "e48a7f5d-0258-4b45-8e80-cf9943bf8fb4",
+        "rule": "python:S9080",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:tests/conftest.py",
+        "project": "human-nvbn__thefuck",
+        "line": 32,
+        "hash": "68a12227b40b1bc7580326c28b77edc6",
+        "textRange": {
+          "startLine": 32,
+          "endLine": 32,
+          "startOffset": 4,
+          "endOffset": 24
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace this \"request.addfinalizer()\" call with a yield-based teardown.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "tests",
+          "pytest"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "dfba92ac-7c37-42f5-8592-51f6e59eb30f",
+        "rule": "python:S8997",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:tests/rules/test_cat_dir.py",
+        "project": "human-nvbn__thefuck",
+        "line": 38,
+        "hash": "93358ca28ac0ecd76e188d8b92ce242b",
+        "textRange": {
+          "startLine": 38,
+          "endLine": 38,
+          "startOffset": 4,
+          "endOffset": 22
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Use the \"monkeypatch\" fixture for temporary modifications instead of manually modifying global state.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "pytest",
+          "testing"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "COMPLETE",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "ebd1008a-c67e-47e7-8560-da2af98337ed",
+        "rule": "python:S9078",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:tests/rules/test_git_push_force.py",
+        "project": "human-nvbn__thefuck",
+        "line": 41,
+        "hash": "68c769dc9152a082ef39d4ffac3ccd9d",
+        "textRange": {
+          "startLine": 41,
+          "endLine": 41,
+          "startOffset": 4,
+          "endOffset": 36
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:tests/rules/test_git_push_force.py",
+                "textRange": {
+                  "startLine": 39,
+                  "endLine": 39,
+                  "startOffset": 4,
+                  "endOffset": 36
+                },
+                "msg": "Original.",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Remove this duplicate test case.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "tests",
+          "pytest"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "e2df2426-915d-4cbd-9f5e-b9dddb82c5e0",
+        "rule": "python:S9078",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:tests/rules/test_git_push_force.py",
+        "project": "human-nvbn__thefuck",
+        "line": 42,
+        "hash": "e1b5c922a2c65743d254cb423f47798f",
+        "textRange": {
+          "startLine": 42,
+          "endLine": 42,
+          "startOffset": 4,
+          "endOffset": 49
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:tests/rules/test_git_push_force.py",
+                "textRange": {
+                  "startLine": 40,
+                  "endLine": 40,
+                  "startOffset": 4,
+                  "endOffset": 49
+                },
+                "msg": "Original.",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Remove this duplicate test case.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "tests",
+          "pytest"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "af93a8fc-2ddb-4521-99f8-540639d6aae7",
+        "rule": "python:S9078",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:tests/rules/test_git_push_pull.py",
+        "project": "human-nvbn__thefuck",
+        "line": 55,
+        "hash": "68c769dc9152a082ef39d4ffac3ccd9d",
+        "textRange": {
+          "startLine": 55,
+          "endLine": 55,
+          "startOffset": 4,
+          "endOffset": 36
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:tests/rules/test_git_push_pull.py",
+                "textRange": {
+                  "startLine": 53,
+                  "endLine": 53,
+                  "startOffset": 4,
+                  "endOffset": 36
+                },
+                "msg": "Original.",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Remove this duplicate test case.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "tests",
+          "pytest"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "feb7231d-93f1-4abf-9676-b9b3b748a1f8",
+        "rule": "python:S9078",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:tests/rules/test_git_push_pull.py",
+        "project": "human-nvbn__thefuck",
+        "line": 56,
+        "hash": "e1b5c922a2c65743d254cb423f47798f",
+        "textRange": {
+          "startLine": 56,
+          "endLine": 56,
+          "startOffset": 4,
+          "endOffset": 49
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:tests/rules/test_git_push_pull.py",
+                "textRange": {
+                  "startLine": 54,
+                  "endLine": 54,
+                  "startOffset": 4,
+                  "endOffset": 49
+                },
+                "msg": "Original.",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Remove this duplicate test case.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "tests",
+          "pytest"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "8ebb8ced-9962-4bba-a0d3-d18e4ec113a4",
+        "rule": "python:S9078",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:tests/rules/test_git_two_dashes.py",
+        "project": "human-nvbn__thefuck",
+        "line": 34,
+        "hash": "49d97f1fff6506c0352fa73ebda087fa",
+        "textRange": {
+          "startLine": 34,
+          "endLine": 35,
+          "startOffset": 4,
+          "endOffset": 31
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:tests/rules/test_git_two_dashes.py",
+                "textRange": {
+                  "startLine": 32,
+                  "endLine": 33,
+                  "startOffset": 4,
+                  "endOffset": 31
+                },
+                "msg": "Original.",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Remove this duplicate test case.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "tests",
+          "pytest"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "5b7afa49-d437-4506-9795-9eddc4531296",
+        "rule": "python:S9078",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:tests/rules/test_pacman.py",
+        "project": "human-nvbn__thefuck",
+        "line": 41,
+        "hash": "c42078b1d1ddb694ed61e79e1619b8a0",
+        "textRange": {
+          "startLine": 41,
+          "endLine": 41,
+          "startOffset": 29,
+          "endOffset": 44
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:tests/rules/test_pacman.py",
+                "textRange": {
+                  "startLine": 40,
+                  "endLine": 40,
+                  "startOffset": 24,
+                  "endOffset": 39
+                },
+                "msg": "Original.",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Remove this duplicate test case.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "tests",
+          "pytest"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "4499b06c-bf65-41af-a282-9e2988e51daa",
+        "rule": "python:S9074",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:tests/shells/conftest.py",
+        "project": "human-nvbn__thefuck",
+        "line": 15,
+        "hash": "ef35dbd35c3daab905c8432b113867a0",
+        "textRange": {
+          "startLine": 15,
+          "endLine": 15,
+          "startOffset": 0,
+          "endOffset": 34
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove this mark; it has no effect on fixtures.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "tests",
+          "pytest"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "033d6b24-8e95-43d8-ab72-026cdafd1224",
+        "rule": "python:S3415",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:tests/test_utils.py",
+        "project": "human-nvbn__thefuck",
+        "line": 38,
+        "hash": "c37b10f20af86169acf3a711d974c746",
+        "textRange": {
+          "startLine": 38,
+          "endLine": 38,
+          "startOffset": 11,
+          "endOffset": 29
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:tests/test_utils.py",
+                "textRange": {
+                  "startLine": 38,
+                  "endLine": 38,
+                  "startOffset": 11,
+                  "endOffset": 29
+                },
+                "msg": "Actual value first.",
+                "msgFormattings": []
+              },
+              {
+                "component": "human-nvbn__thefuck:tests/test_utils.py",
+                "textRange": {
+                  "startLine": 57,
+                  "endLine": 57,
+                  "startOffset": 15,
+                  "endOffset": 48
+                },
+                "msg": "Actual value first.",
+                "msgFormattings": []
+              },
+              {
+                "component": "human-nvbn__thefuck:tests/test_utils.py",
+                "textRange": {
+                  "startLine": 221,
+                  "endLine": 221,
+                  "startOffset": 15,
+                  "endOffset": 27
+                },
+                "msg": "Actual value first.",
+                "msgFormattings": []
+              },
+              {
+                "component": "human-nvbn__thefuck:tests/test_utils.py",
+                "textRange": {
+                  "startLine": 222,
+                  "endLine": 222,
+                  "startOffset": 15,
+                  "endOffset": 29
+                },
+                "msg": "Actual value first.",
+                "msgFormattings": []
+              },
+              {
+                "component": "human-nvbn__thefuck:tests/test_utils.py",
+                "textRange": {
+                  "startLine": 223,
+                  "endLine": 223,
+                  "startOffset": 15,
+                  "endOffset": 62
+                },
+                "msg": "Actual value first.",
+                "msgFormattings": []
+              },
+              {
+                "component": "human-nvbn__thefuck:tests/test_utils.py",
+                "textRange": {
+                  "startLine": 228,
+                  "endLine": 228,
+                  "startOffset": 15,
+                  "endOffset": 34
+                },
+                "msg": "Actual value first.",
+                "msgFormattings": []
+              },
+              {
+                "component": "human-nvbn__thefuck:tests/test_utils.py",
+                "textRange": {
+                  "startLine": 233,
+                  "endLine": 233,
+                  "startOffset": 15,
+                  "endOffset": 29
+                },
+                "msg": "Actual value first.",
+                "msgFormattings": []
+              },
+              {
+                "component": "human-nvbn__thefuck:tests/test_utils.py",
+                "textRange": {
+                  "startLine": 234,
+                  "endLine": 234,
+                  "startOffset": 15,
+                  "endOffset": 62
+                },
+                "msg": "Actual value first.",
+                "msgFormattings": []
+              }
+            ],
+            "description": "Actual value first",
+            "type": "DATA"
+          },
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:tests/test_utils.py",
+                "textRange": {
+                  "startLine": 43,
+                  "endLine": 43,
+                  "startOffset": 15,
+                  "endOffset": 69
+                },
+                "msg": "Expected value first.",
+                "msgFormattings": []
+              },
+              {
+                "component": "human-nvbn__thefuck:tests/test_utils.py",
+                "textRange": {
+                  "startLine": 46,
+                  "endLine": 46,
+                  "startOffset": 15,
+                  "endOffset": 65
+                },
+                "msg": "Expected value first.",
+                "msgFormattings": []
+              }
+            ],
+            "description": "Expected value first",
+            "type": "DATA"
+          }
+        ],
+        "status": "OPEN",
+        "message": "Unify assertion argument order in this file; both \"actual first\" and \"expected first\" conventions are used.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "tests",
+          "suspicious"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "LOGICAL",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "fbb558d8-9d95-436a-9602-474030d7a201",
+        "rule": "python:S3776",
+        "severity": "CRITICAL",
+        "component": "human-nvbn__thefuck:thefuck/output_readers/read_log.py",
+        "project": "human-nvbn__thefuck",
+        "line": 15,
+        "hash": "d028594292b369794a43ddb43f0cadf6",
+        "textRange": {
+          "startLine": 15,
+          "endLine": 15,
+          "startOffset": 4,
+          "endOffset": 19
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:thefuck/output_readers/read_log.py",
+                "textRange": {
+                  "startLine": 22,
+                  "endLine": 22,
+                  "startOffset": 4,
+                  "endOffset": 7
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:thefuck/output_readers/read_log.py",
+                "textRange": {
+                  "startLine": 23,
+                  "endLine": 23,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "+2 (incl 1 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:thefuck/output_readers/read_log.py",
+                "textRange": {
+                  "startLine": 23,
+                  "endLine": 23,
+                  "startOffset": 43,
+                  "endOffset": 45
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:thefuck/output_readers/read_log.py",
+                "textRange": {
+                  "startLine": 24,
+                  "endLine": 24,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:thefuck/output_readers/read_log.py",
+                "textRange": {
+                  "startLine": 24,
+                  "endLine": 24,
+                  "startOffset": 27,
+                  "endOffset": 30
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:thefuck/output_readers/read_log.py",
+                "textRange": {
+                  "startLine": 27,
+                  "endLine": 27,
+                  "startOffset": 12,
+                  "endOffset": 14
+                },
+                "msg": "+3 (incl 2 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:thefuck/output_readers/read_log.py",
+                "textRange": {
+                  "startLine": 28,
+                  "endLine": 28,
+                  "startOffset": 16,
+                  "endOffset": 18
+                },
+                "msg": "+4 (incl 3 for nesting)",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:thefuck/output_readers/read_log.py",
+                "textRange": {
+                  "startLine": 30,
+                  "endLine": 30,
+                  "startOffset": 16,
+                  "endOffset": 20
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:thefuck/output_readers/read_log.py",
+                "textRange": {
+                  "startLine": 35,
+                  "endLine": 35,
+                  "startOffset": 8,
+                  "endOffset": 12
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          },
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:thefuck/output_readers/read_log.py",
+                "textRange": {
+                  "startLine": 38,
+                  "endLine": 38,
+                  "startOffset": 4,
+                  "endOffset": 6
+                },
+                "msg": "+1",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Refactor this function to reduce its Cognitive Complexity from 18 to the 15 allowed.",
+        "effort": "8min",
+        "debt": "8min",
+        "author": "",
+        "tags": [
+          "brain-overload"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "FOCUSED",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "6739ebf2-9afd-49fa-886f-21ead5667692",
+        "rule": "python:S8786",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/output_readers/read_log.py",
+        "project": "human-nvbn__thefuck",
+        "line": 54,
+        "hash": "210d20889e3dedf7eee29a47445990eb",
+        "textRange": {
+          "startLine": 54,
+          "endLine": 54,
+          "startOffset": 20,
+          "endOffset": 26
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.",
+        "effort": "20min",
+        "debt": "20min",
+        "author": "",
+        "tags": [
+          "regex",
+          "performance"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "RELIABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "29e75921-3e90-401a-a753-30f674900a6a",
+        "rule": "python:S1940",
+        "severity": "MINOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/adb_unknown_command.py",
+        "project": "human-nvbn__thefuck",
+        "line": 52,
+        "hash": "ebe44ed7a4fa6f0511dc54352ce99634",
+        "textRange": {
+          "startLine": 52,
+          "endLine": 52,
+          "startOffset": 11,
+          "endOffset": 28
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Use the opposite operator (\"!=\") instead.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "pitfall"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "d1b41fbb-0bff-4fa5-9bf9-9764b9f7b2bb",
+        "rule": "python:S1940",
+        "severity": "MINOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/adb_unknown_command.py",
+        "project": "human-nvbn__thefuck",
+        "line": 52,
+        "hash": "ebe44ed7a4fa6f0511dc54352ce99634",
+        "textRange": {
+          "startLine": 52,
+          "endLine": 52,
+          "startOffset": 33,
+          "endOffset": 90
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Use the opposite operator (\"not in\") instead.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "pitfall"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "16413f67-0734-4e4b-a6a5-b7afce4c54f6",
+        "rule": "python:S8513",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/apt_invalid_operation.py",
+        "project": "human-nvbn__thefuck",
+        "line": 22,
+        "hash": "bc1102c1c855558936fed743fd389e7d",
+        "textRange": {
+          "startLine": 22,
+          "endLine": 23,
+          "startOffset": 13,
+          "endOffset": 57
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace chained \"startswith\" calls with a single call using a tuple argument.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "performance",
+          "pythonic"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "6b5859cd-4594-4aa5-a70b-8f7a9c97538b",
+        "rule": "python:S8513",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/apt_invalid_operation.py",
+        "project": "human-nvbn__thefuck",
+        "line": 37,
+        "hash": "0b8254f25fec982f6bf1b5f53a6fc035",
+        "textRange": {
+          "startLine": 37,
+          "endLine": 38,
+          "startOffset": 13,
+          "endOffset": 57
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace chained \"startswith\" calls with a single call using a tuple argument.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "performance",
+          "pythonic"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "b511e9ed-a5e5-4db7-9703-0cfd417c17a1",
+        "rule": "python:S6395",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/az_cli.py",
+        "project": "human-nvbn__thefuck",
+        "line": 5,
+        "hash": "e3253f4d6045f21fa1306a2d07742d5b",
+        "textRange": {
+          "startLine": 5,
+          "endLine": 5,
+          "startOffset": 24,
+          "endOffset": 30
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Unwrap this unnecessarily grouped subpattern.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "regex"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "da4db6b9-7fe7-440f-a21f-6c12c1a9c3de",
+        "rule": "python:S8786",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/az_cli.py",
+        "project": "human-nvbn__thefuck",
+        "line": 5,
+        "hash": "e3253f4d6045f21fa1306a2d07742d5b",
+        "textRange": {
+          "startLine": 5,
+          "endLine": 5,
+          "startOffset": 18,
+          "endOffset": 72
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.",
+        "effort": "20min",
+        "debt": "20min",
+        "author": "",
+        "tags": [
+          "regex",
+          "performance"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "RELIABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "7d55291b-6c55-4208-aa70-467b80bcb323",
+        "rule": "python:S8786",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/az_cli.py",
+        "project": "human-nvbn__thefuck",
+        "line": 6,
+        "hash": "d7bf39ca61ba4efaf4278857d93c1dea",
+        "textRange": {
+          "startLine": 6,
+          "endLine": 6,
+          "startOffset": 11,
+          "endOffset": 58
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.",
+        "effort": "20min",
+        "debt": "20min",
+        "author": "",
+        "tags": [
+          "regex",
+          "performance"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "RELIABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "c9b144d3-1b33-4986-af42-fc5fd66f10ce",
+        "rule": "python:S1172",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/cargo.py",
+        "project": "human-nvbn__thefuck",
+        "line": 5,
+        "hash": "c7f3744312a23ab697171396cb323b47",
+        "textRange": {
+          "startLine": 5,
+          "endLine": 5,
+          "startOffset": 20,
+          "endOffset": 27
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused function parameter \"command\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "954c63c6-e40d-4ad8-90e7-170fc0a9f40f",
+        "rule": "python:S1172",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/cd_parent.py",
+        "project": "human-nvbn__thefuck",
+        "line": 15,
+        "hash": "c7f3744312a23ab697171396cb323b47",
+        "textRange": {
+          "startLine": 15,
+          "endLine": 15,
+          "startOffset": 20,
+          "endOffset": 27
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused function parameter \"command\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "bbba3b95-cb7b-46b2-988e-62aa32c82851",
+        "rule": "python:S1110",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/composer_not_command.py",
+        "project": "human-nvbn__thefuck",
+        "line": 7,
+        "hash": "a6606d4648686dee7428d7e80fa13063",
+        "textRange": {
+          "startLine": 7,
+          "endLine": 7,
+          "startOffset": 11,
+          "endOffset": 12
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:thefuck/rules/composer_not_command.py",
+                "textRange": {
+                  "startLine": 8,
+                  "endLine": 8,
+                  "startOffset": 71,
+                  "endOffset": 72
+                },
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Remove those redundant parentheses.",
+        "effort": "1min",
+        "debt": "1min",
+        "author": "",
+        "tags": [
+          "confusing"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "1dd99702-2338-4a6a-8b61-e74db523f3e7",
+        "rule": "python:S5806",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/dirty_untar.py",
+        "project": "human-nvbn__thefuck",
+        "line": 36,
+        "hash": "3efb55497588d033b2654eeb57d1475f",
+        "textRange": {
+          "startLine": 36,
+          "endLine": 36,
+          "startOffset": 4,
+          "endOffset": 7
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename this variable; it shadows a builtin.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "bad-practice",
+          "confusing",
+          "pitfall"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "0dc58a43-14fc-4ef2-9bf2-07c13ad8d560",
+        "rule": "python:S1172",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/dirty_untar.py",
+        "project": "human-nvbn__thefuck",
+        "line": 41,
+        "hash": "6c27bb7787caa1caffe34ff60e40976a",
+        "textRange": {
+          "startLine": 41,
+          "endLine": 41,
+          "startOffset": 25,
+          "endOffset": 32
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused function parameter \"command\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "53307ad7-bd38-46f1-be3d-48681b4e5f06",
+        "rule": "python:S1172",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/dirty_unzip.py",
+        "project": "human-nvbn__thefuck",
+        "line": 45,
+        "hash": "6c27bb7787caa1caffe34ff60e40976a",
+        "textRange": {
+          "startLine": 45,
+          "endLine": 45,
+          "startOffset": 25,
+          "endOffset": 32
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused function parameter \"command\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "28154f1f-94b2-4aee-a301-61e0687bf205",
+        "rule": "python:S5361",
+        "severity": "CRITICAL",
+        "component": "human-nvbn__thefuck:thefuck/rules/fix_alt_space.py",
+        "project": "human-nvbn__thefuck",
+        "line": 15,
+        "hash": "7120da5ef9e577c81f0fcd7cf5bedae4",
+        "textRange": {
+          "startLine": 15,
+          "endLine": 15,
+          "startOffset": 11,
+          "endOffset": 17
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:thefuck/rules/fix_alt_space.py",
+                "textRange": {
+                  "startLine": 15,
+                  "endLine": 15,
+                  "startOffset": 20,
+                  "endOffset": 21
+                },
+                "msg": "Expression without regular expression features.",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Replace this \"re.sub()\" call by a \"str.replace()\" function call.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "regex",
+          "performance"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "ae874afa-8de7-4364-95d2-bef77d21fcee",
+        "rule": "python:S1172",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/git_rebase_no_changes.py",
+        "project": "human-nvbn__thefuck",
+        "line": 12,
+        "hash": "c7f3744312a23ab697171396cb323b47",
+        "textRange": {
+          "startLine": 12,
+          "endLine": 12,
+          "startOffset": 20,
+          "endOffset": 27
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused function parameter \"command\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "95bf64ad-c82d-4faa-b3b8-8e99f5c63f92",
+        "rule": "python:S5361",
+        "severity": "CRITICAL",
+        "component": "human-nvbn__thefuck:thefuck/rules/git_remote_delete.py",
+        "project": "human-nvbn__thefuck",
+        "line": 13,
+        "hash": "6af36395afc006fa433a20e5b0d205d6",
+        "textRange": {
+          "startLine": 13,
+          "endLine": 13,
+          "startOffset": 11,
+          "endOffset": 17
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:thefuck/rules/git_remote_delete.py",
+                "textRange": {
+                  "startLine": 13,
+                  "endLine": 13,
+                  "startOffset": 20,
+                  "endOffset": 26
+                },
+                "msg": "Expression without regular expression features.",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Replace this \"re.sub()\" call by a \"str.replace()\" function call.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "regex",
+          "performance"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "d86cae74-b369-4c97-bfb2-9d0024e67a49",
+        "rule": "python:S8786",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/heroku_multiple_apps.py",
+        "project": "human-nvbn__thefuck",
+        "line": 11,
+        "hash": "190154f8c96cbd80295578a4a445611b",
+        "textRange": {
+          "startLine": 11,
+          "endLine": 11,
+          "startOffset": 23,
+          "endOffset": 42
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.",
+        "effort": "20min",
+        "debt": "20min",
+        "author": "",
+        "tags": [
+          "regex",
+          "performance"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "RELIABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "74964acb-5b34-4f0a-a03e-5befa31e8a22",
+        "rule": "python:S6326",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/mercurial.py",
+        "project": "human-nvbn__thefuck",
+        "line": 9,
+        "hash": "8b02ac704339763283ee0cc41eac6afb",
+        "textRange": {
+          "startLine": 9,
+          "endLine": 9,
+          "startOffset": 29,
+          "endOffset": 32
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace spaces with quantifier `{4}`.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "regex"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "68c90f2c-1ba4-4149-b53c-d9c253b42965",
+        "rule": "python:S1940",
+        "severity": "MINOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/missing_space_before_subcommand.py",
+        "project": "human-nvbn__thefuck",
+        "line": 12,
+        "hash": "aac25a61a0e0cbb967576294fb87cb43",
+        "textRange": {
+          "startLine": 12,
+          "endLine": 12,
+          "startOffset": 12,
+          "endOffset": 64
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Use the opposite operator (\"not in\") instead.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "pitfall"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "7e6ef983-f5f6-4fee-bfb3-fb96a8382f2c",
+        "rule": "python:S5806",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/no_such_file.py",
+        "project": "human-nvbn__thefuck",
+        "line": 27,
+        "hash": "3329ccc34ee40e98b681ef15192a4373",
+        "textRange": {
+          "startLine": 27,
+          "endLine": 27,
+          "startOffset": 12,
+          "endOffset": 15
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rename this variable; it shadows a builtin.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "bad-practice",
+          "confusing",
+          "pitfall"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "1a15e3bf-b848-454e-8c1e-ad45363ae8d5",
+        "rule": "python:S8786",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/npm_missing_script.py",
+        "project": "human-nvbn__thefuck",
+        "line": 16,
+        "hash": "b9bd25c6dfc171ed718ae4c8c703b41a",
+        "textRange": {
+          "startLine": 16,
+          "endLine": 16,
+          "startOffset": 10,
+          "endOffset": 34
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.",
+        "effort": "20min",
+        "debt": "20min",
+        "author": "",
+        "tags": [
+          "regex",
+          "performance"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "RELIABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "064e5601-4052-4c54-91f5-079671845c31",
+        "rule": "python:S1066",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/path_from_history.py",
+        "project": "human-nvbn__thefuck",
+        "line": 20,
+        "hash": "9dac334977315f3791a035f52c2e49de",
+        "textRange": {
+          "startLine": 20,
+          "endLine": 20,
+          "startOffset": 12,
+          "endOffset": 14
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:thefuck/rules/path_from_history.py",
+                "textRange": {
+                  "startLine": 19,
+                  "endLine": 19,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "enclosing",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Merge this if statement with the enclosing one.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "clumsy"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "5a2966f5-abd9-4ce7-a12a-8c03783b4393",
+        "rule": "python:S8513",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/path_from_history.py",
+        "project": "human-nvbn__thefuck",
+        "line": 35,
+        "hash": "2d92e33fcd64fcf22d449ff021dac144",
+        "textRange": {
+          "startLine": 35,
+          "endLine": 35,
+          "startOffset": 15,
+          "endOffset": 61
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace chained \"startswith\" calls with a single call using a tuple argument.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "performance",
+          "pythonic"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "e46c0092-ff77-444c-8f69-6dee4ccddfe6",
+        "rule": "python:S1871",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/prove_recursively.py",
+        "project": "human-nvbn__thefuck",
+        "line": 9,
+        "hash": "1be759abe43b46d5d210e1cb29fd2b61",
+        "textRange": {
+          "startLine": 9,
+          "endLine": 9,
+          "startOffset": 8,
+          "endOffset": 19
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:thefuck/rules/prove_recursively.py",
+                "textRange": {
+                  "startLine": 7,
+                  "endLine": 7,
+                  "startOffset": 8,
+                  "endOffset": 19
+                },
+                "msg": "Original",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Either merge this branch with the identical one on line \"7\" or change one of the implementations.",
+        "effort": "10min",
+        "debt": "10min",
+        "author": "",
+        "tags": [
+          "design",
+          "suspicious"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "DISTINCT",
+        "cleanCodeAttributeCategory": "ADAPTABLE",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "7b338b66-91b1-420b-adf5-e8139c1e5bf4",
+        "rule": "python:S8786",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/rails_migrations_pending.py",
+        "project": "human-nvbn__thefuck",
+        "line": 5,
+        "hash": "6569c72d64e28d5c7d1b0b914a65e102",
+        "textRange": {
+          "startLine": 5,
+          "endLine": 5,
+          "startOffset": 21,
+          "endOffset": 58
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.",
+        "effort": "20min",
+        "debt": "20min",
+        "author": "",
+        "tags": [
+          "regex",
+          "performance"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "RELIABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "e0a19801-62f1-45be-82e4-a7bcbdd67be1",
+        "rule": "python:S1172",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/sl_ls.py",
+        "project": "human-nvbn__thefuck",
+        "line": 13,
+        "hash": "c7f3744312a23ab697171396cb323b47",
+        "textRange": {
+          "startLine": 13,
+          "endLine": 13,
+          "startOffset": 20,
+          "endOffset": 27
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused function parameter \"command\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "1114ee58-6f2e-412c-be28-64e04b32f548",
+        "rule": "python:S1172",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/ssh_known_hosts.py",
+        "project": "human-nvbn__thefuck",
+        "line": 27,
+        "hash": "6c27bb7787caa1caffe34ff60e40976a",
+        "textRange": {
+          "startLine": 27,
+          "endLine": 27,
+          "startOffset": 25,
+          "endOffset": 32
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused function parameter \"command\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "432922ca-64d5-4533-8983-72daf790aa97",
+        "rule": "python:S7492",
+        "severity": "MINOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/switch_lang.py",
+        "project": "human-nvbn__thefuck",
+        "line": 56,
+        "hash": "299555e756d113cf093564cefeff3f73",
+        "textRange": {
+          "startLine": 56,
+          "endLine": 56,
+          "startOffset": 19,
+          "endOffset": 78
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Unpack this comprehension expression",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "84586bf1-93e9-4629-a7b3-550babbcc392",
+        "rule": "python:S8510",
+        "severity": "CRITICAL",
+        "component": "human-nvbn__thefuck:thefuck/rules/switch_lang.py",
+        "project": "human-nvbn__thefuck",
+        "line": 92,
+        "hash": "4e8f21ced986accbdec42a3c10f326ae",
+        "textRange": {
+          "startLine": 92,
+          "endLine": 92,
+          "startOffset": 16,
+          "endOffset": 18
+        },
+        "flows": [
+          {
+            "locations": [
+              {
+                "component": "human-nvbn__thefuck:thefuck/rules/switch_lang.py",
+                "textRange": {
+                  "startLine": 86,
+                  "endLine": 86,
+                  "startOffset": 8,
+                  "endOffset": 10
+                },
+                "msg": "Outer loop variable.",
+                "msgFormattings": []
+              }
+            ]
+          }
+        ],
+        "status": "OPEN",
+        "message": "Rename this loop variable; it shadows the outer loop variable \"ch\".",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "confusing",
+          "pitfall"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "RELIABILITY",
+            "severity": "HIGH"
+          },
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "HIGH"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "52322387-6581-4884-af1e-77c68f4e6c2e",
+        "rule": "python:S8786",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/touch.py",
+        "project": "human-nvbn__thefuck",
+        "line": 13,
+        "hash": "dde0eeb15db1dc593123835e37421baf",
+        "textRange": {
+          "startLine": 13,
+          "endLine": 13,
+          "startOffset": 10,
+          "endOffset": 46
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.",
+        "effort": "20min",
+        "debt": "20min",
+        "author": "",
+        "tags": [
+          "regex",
+          "performance"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "RELIABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "edacc652-49d0-4871-b57a-f8111a7c20c9",
+        "rule": "python:S8786",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/unknown_command.py",
+        "project": "human-nvbn__thefuck",
+        "line": 6,
+        "hash": "15243f4d64f0eb56f400f11bfba722d1",
+        "textRange": {
+          "startLine": 6,
+          "endLine": 6,
+          "startOffset": 24,
+          "endOffset": 50
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.",
+        "effort": "20min",
+        "debt": "20min",
+        "author": "",
+        "tags": [
+          "regex",
+          "performance"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "RELIABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "01d4d830-9727-4137-9b6d-cd1595c9d221",
+        "rule": "python:S5842",
+        "severity": "MINOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/unknown_command.py",
+        "project": "human-nvbn__thefuck",
+        "line": 7,
+        "hash": "fa1e39409d823207a0d16ea17e50fab1",
+        "textRange": {
+          "startLine": 7,
+          "endLine": 7,
+          "startOffset": 41,
+          "endOffset": 48
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rework this part of the regex to not match the empty string.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "regex"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "BUG",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "LOGICAL",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "RELIABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "d309f02d-b60a-415d-b4eb-877d7ef1f8d0",
+        "rule": "python:S8786",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/unknown_command.py",
+        "project": "human-nvbn__thefuck",
+        "line": 11,
+        "hash": "f98cce2a862fbfa47a055a3f70a53aef",
+        "textRange": {
+          "startLine": 11,
+          "endLine": 11,
+          "startOffset": 30,
+          "endOffset": 56
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Simplify this regular expression to reduce its runtime, as it has super-linear performance due to backtracking.",
+        "effort": "20min",
+        "debt": "20min",
+        "author": "",
+        "tags": [
+          "regex",
+          "performance"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "EFFICIENT",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "RELIABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "289f28cf-0e2a-48ad-9db3-3ca540923381",
+        "rule": "python:S5842",
+        "severity": "MINOR",
+        "component": "human-nvbn__thefuck:thefuck/rules/unknown_command.py",
+        "project": "human-nvbn__thefuck",
+        "line": 12,
+        "hash": "bc0e55673a16ddfd1def46aa1790b60a",
+        "textRange": {
+          "startLine": 12,
+          "endLine": 12,
+          "startOffset": 40,
+          "endOffset": 47
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Rework this part of the regex to not match the empty string.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "regex"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "BUG",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "LOGICAL",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "RELIABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "061003f2-35af-41c2-a8fe-8602c3789706",
+        "rule": "python:S7494",
+        "severity": "MINOR",
+        "component": "human-nvbn__thefuck:thefuck/shells/bash.py",
+        "project": "human-nvbn__thefuck",
+        "line": 65,
+        "hash": "5fb976bff783048bba86969c090acfdc",
+        "textRange": {
+          "startLine": 65,
+          "endLine": 65,
+          "startOffset": 15,
+          "endOffset": 19
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace dict constructor call with a dictionary comprehension.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "34ec4e41-3e9a-4b03-a456-ed38a44e7422",
+        "rule": "python:S1172",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/shells/generic.py",
+        "project": "human-nvbn__thefuck",
+        "line": 49,
+        "hash": "f48b1104631c803c5d9c303914d1704d",
+        "textRange": {
+          "startLine": 49,
+          "endLine": 49,
+          "startOffset": 32,
+          "endOffset": 46
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Remove the unused function parameter \"command_script\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "1d30ec18-5258-4365-a04b-16a3be204c43",
+        "rule": "python:S7494",
+        "severity": "MINOR",
+        "component": "human-nvbn__thefuck:thefuck/shells/tcsh.py",
+        "project": "human-nvbn__thefuck",
+        "line": 23,
+        "hash": "237e3b6da3ce41e05da68d73543052c3",
+        "textRange": {
+          "startLine": 23,
+          "endLine": 23,
+          "startOffset": 15,
+          "endOffset": 19
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace dict constructor call with a dictionary comprehension.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "f17b2892-8d49-4b81-b2b7-6699c56e12c7",
+        "rule": "python:S7494",
+        "severity": "MINOR",
+        "component": "human-nvbn__thefuck:thefuck/shells/zsh.py",
+        "project": "human-nvbn__thefuck",
+        "line": 70,
+        "hash": "5fb976bff783048bba86969c090acfdc",
+        "textRange": {
+          "startLine": 70,
+          "endLine": 70,
+          "startOffset": 15,
+          "endOffset": 19
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace dict constructor call with a dictionary comprehension.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "1d1ee4e0-2c09-46cf-b0fd-9e49208d2014",
+        "rule": "python:S6326",
+        "severity": "MAJOR",
+        "component": "human-nvbn__thefuck:thefuck/specific/npm.py",
+        "project": "human-nvbn__thefuck",
+        "line": 20,
+        "hash": "fe5793b9a3ee5cc180b53d6d7285ba4e",
+        "textRange": {
+          "startLine": 20,
+          "endLine": 20,
+          "startOffset": 41,
+          "endOffset": 42
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace spaces with quantifier `{2}`.",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "regex"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "MEDIUM"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "ab14b974-d922-47e0-8ea3-dbf95ef1bfc3",
+        "rule": "python:S1481",
+        "severity": "MINOR",
+        "component": "human-nvbn__thefuck:thefuck/utils.py",
+        "project": "human-nvbn__thefuck",
+        "line": 59,
+        "hash": "7bd9a67311bc8f09ad6c83ed75de45da",
+        "textRange": {
+          "startLine": 59,
+          "endLine": 59,
+          "startOffset": 15,
+          "endOffset": 20
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Replace the unused local variable \"fname\" with \"_\".",
+        "effort": "5min",
+        "debt": "5min",
+        "author": "",
+        "tags": [
+          "unused"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CLEAR",
+        "cleanCodeAttributeCategory": "INTENTIONAL",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      },
+      {
+        "key": "6ff629c9-c0f8-44b8-afe1-8c1bf56e7ccf",
+        "rule": "python:S1940",
+        "severity": "MINOR",
+        "component": "human-nvbn__thefuck:thefuck/utils.py",
+        "project": "human-nvbn__thefuck",
+        "line": 331,
+        "hash": "dbd2468946442a43ded020078bc7df24",
+        "textRange": {
+          "startLine": 331,
+          "endLine": 331,
+          "startOffset": 49,
+          "endOffset": 75
+        },
+        "flows": [],
+        "status": "OPEN",
+        "message": "Use the opposite operator (\"!=\") instead.",
+        "effort": "2min",
+        "debt": "2min",
+        "author": "",
+        "tags": [
+          "pitfall"
+        ],
+        "creationDate": "2026-09-22T18:29:31+0000",
+        "updateDate": "2026-09-22T18:29:31+0000",
+        "type": "CODE_SMELL",
+        "scope": "MAIN",
+        "quickFixAvailable": false,
+        "messageFormattings": [],
+        "codeVariants": [],
+        "cleanCodeAttribute": "CONVENTIONAL",
+        "cleanCodeAttributeCategory": "CONSISTENT",
+        "impacts": [
+          {
+            "softwareQuality": "MAINTAINABILITY",
+            "severity": "LOW"
+          }
+        ],
+        "issueStatus": "OPEN",
+        "prioritizedRule": false,
+        "fromSonarQubeUpdate": false,
+        "internalTags": [],
+        "linkedTicketStatus": "NOT_LINKED"
+      }
+    ],
+    "paging": {
+      "total": 55
+    }
+  }
+}

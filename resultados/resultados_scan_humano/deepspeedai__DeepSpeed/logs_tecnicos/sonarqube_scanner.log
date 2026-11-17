@@ -1,0 +1,114 @@
+16:07:47.539 INFO  Scanner configuration file: /mnt/c/Users/felipe.fidelis/OneDrive - Vision Cybersecurity/Área de Trabalho/trabalho mestrado/python_prellm_pipeline/pipeline_interno/tools/sonar-scanner/conf/sonar-scanner.properties
+16:07:47.546 INFO  Project root configuration file: NONE
+16:07:47.560 INFO  SonarScanner CLI 8.0.1.6346
+16:07:47.568 INFO  Linux 6.18.33.2-microsoft-standard-WSL2 amd64
+16:07:48.613 INFO  Communicating with SonarQube Community Build 26.9.0.129388
+16:07:48.616 INFO  JRE provisioning is disabled
+16:07:48.617 INFO  The java executable in the PATH will be used
+16:07:48.774 INFO  SONAR_SCANNER_JAVA_OPTS=-Xms256m -Xmx4096m
+16:07:49.017 INFO  Starting SonarScanner Engine...
+16:07:49.019 INFO  Java 21.0.12 Ubuntu (64-bit)
+16:07:49.977 INFO  Load global settings
+16:07:50.061 INFO  Load global settings (done) | time=81ms
+16:07:50.064 INFO  Server id: 147B411E-AaCHMJYtDFq3q1fqGHiY
+16:07:50.073 INFO  Loading required plugins
+16:07:50.075 INFO  Load plugins index
+16:07:50.090 INFO  Load plugins index (done) | time=16ms
+16:07:50.091 INFO  Load/download plugins
+16:07:50.121 INFO  Load/download plugins (done) | time=31ms
+16:07:50.396 INFO  Process project properties
+16:07:50.412 INFO  Process project properties (done) | time=15ms
+16:07:50.423 INFO  Project key: human-deepspeedai__deepspeed
+16:07:50.425 INFO  Base dir: /home/felipefidelis/prellm_deepspeedai__DeepSpeed_M0Mc
+16:07:50.426 INFO  Working dir: /home/felipefidelis/prellm_deepspeedai__DeepSpeed_M0Mc/.scannerwork
+16:07:50.434 INFO  Load project settings for component key: 'human-deepspeedai__deepspeed'
+16:07:50.466 INFO  Load quality profiles
+16:07:50.520 INFO  Load quality profiles (done) | time=54ms
+16:07:50.559 WARN  SCM provider autodetection failed. Please use "sonar.scm.provider" to define SCM of your project, or disable the SCM Sensor in the project settings.
+16:07:50.570 INFO  Load active rules
+16:07:50.963 INFO  Load active rules (done) | time=393ms
+16:07:50.977 INFO  Load analysis cache
+16:07:50.989 INFO  Load analysis cache (404) | time=11ms
+16:07:51.128 INFO  Preprocessing files...
+16:07:51.245 INFO  1 language detected in 125 preprocessed files (done) | time=116ms
+16:07:51.246 INFO  0 files ignored because of inclusion/exclusion patterns
+16:07:51.248 INFO  Loading plugins for detected languages
+16:07:51.250 INFO  Load/download plugins
+16:07:51.257 INFO  Load/download plugins (done) | time=9ms
+16:07:51.411 INFO  Load project repositories
+16:07:51.418 INFO  Load project repositories (done) | time=8ms
+16:07:51.446 INFO  Indexing files...
+16:07:51.447 INFO  Project configuration:
+16:07:51.449 INFO    Included sources: **/*.py
+16:07:51.450 INFO    Excluded sources: **/.git/**, **/.venv/**, **/venv/**, **/vendor/**, **/vendors/**, **/third_party/**, **/node_modules/**, **/build/**, **/dist/**
+16:07:51.467 INFO  125 files indexed (done) | time=20ms
+16:07:51.469 INFO  Quality profile for py: Sonar way
+16:07:51.470 INFO  ------------- Run sensors on module Humano - deepspeedai__DeepSpeed
+16:07:51.541 INFO  Load metrics repository
+16:07:51.638 INFO  Load metrics repository (done) | time=97ms
+16:07:52.444 INFO  Sensor IaC YAML File Type Classification Sensor [iac]
+16:07:52.448 INFO  Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=4ms
+16:07:52.450 INFO  Sensor IaC hadolint report Sensor [iac]
+16:07:52.451 INFO  Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+16:07:52.452 INFO  Sensor Java Config Sensor [iac]
+16:07:52.453 INFO  There are no files to be analyzed for the Java language
+16:07:52.454 INFO  Sensor Java Config Sensor [iac] (done) | time=0ms
+16:07:52.455 INFO  Sensor IaC Docker Sensor [iac]
+16:07:52.456 INFO  There are no files to be analyzed for the Docker language
+16:07:52.457 INFO  Sensor IaC Docker Sensor [iac] (done) | time=4ms
+16:07:52.458 INFO  Sensor Python Sensor [python]
+16:07:52.857 INFO  Starting global symbols computation
+16:07:52.859 INFO  125 source files to be analyzed
+16:07:55.651 INFO  125/125 source files have been analyzed
+16:07:55.652 INFO  Finished step global symbols computation in 2793ms
+16:07:55.741 INFO  Starting rules execution
+16:07:55.743 INFO  125 source files to be analyzed
+16:07:56.158 WARN  Test files were detected using a path heuristic because "sonar.tests" is not set. To improve the analysis accuracy, it is recommended to configure it, e.g.: "sonar.tests=src/test".
+16:08:01.151 INFO  125/125 source files have been analyzed
+16:08:01.152 INFO  Finished step rules execution in 5409ms
+16:08:01.153 INFO  The Python analyzer was able to leverage cached data from previous analyses for 0 out of 125 files. These files were not parsed.
+16:08:01.154 INFO  Sensor Python Sensor [python] (done) | time=8698ms
+16:08:01.155 INFO  Sensor Cobertura Sensor for Python coverage [python]
+16:08:01.160 INFO  Sensor Cobertura Sensor for Python coverage [python] (done) | time=6ms
+16:08:01.161 INFO  Sensor PythonXUnitSensor [python]
+16:08:01.165 INFO  Sensor PythonXUnitSensor [python] (done) | time=4ms
+16:08:01.166 INFO  Sensor Python Dependency Sensor [python]
+16:08:01.169 INFO  Sensor Python Dependency Sensor [python] (done) | time=4ms
+16:08:01.170 INFO  Sensor TextAndSecretsSensor [text]
+16:08:01.189 INFO  Available processors: 8
+16:08:01.190 INFO  Using 8 threads for analysis.
+16:08:01.468 INFO  The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test", "tests", "mock" or "mocks"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+16:08:01.494 INFO  Start fetching files for the text and secrets analysis
+16:08:01.513 INFO  Using Git CLI to retrieve dirty files
+16:08:01.517 WARN  Retrieving only language associated files, make sure to run the analysis inside a git repository to make use of inclusions specified via "sonar.text.inclusions"
+16:08:01.518 INFO  Starting the text and secrets analysis
+16:08:01.520 INFO  125 source files to be analyzed for the text and secrets analysis
+16:08:01.673 INFO  125/125 source files have been analyzed for the text and secrets analysis
+16:08:01.675 INFO  Skipped 49 file(s) in the secrets analysis due to automatic test file detection
+16:08:01.677 INFO  Sensor TextAndSecretsSensor [text] (done) | time=507ms
+16:08:01.679 INFO  ------------- Run sensors on project
+16:08:01.815 INFO  Sensor IaC Project Sensor [iac]
+16:08:01.816 INFO  Sensor IaC Project Sensor [iac] (done) | time=1ms
+16:08:01.817 INFO  Sensor Zero Coverage Sensor
+16:08:01.847 INFO  Sensor Zero Coverage Sensor (done) | time=31ms
+16:08:01.848 INFO  ------------- Gather SCA dependencies on project
+16:08:01.852 INFO  Dependency analysis skipped
+16:08:01.855 INFO  SCM Publisher No SCM system was detected. You can use the 'sonar.scm.provider' property to explicitly specify it.
+16:08:01.881 INFO  CPD Executor 21 files had no CPD blocks
+16:08:01.883 INFO  CPD Executor Calculating CPD for 104 files
+16:08:01.966 INFO  CPD Executor CPD calculation finished (done) | time=84ms
+16:08:02.201 INFO  Analysis report generated in 219ms, dir size=3.5 MB
+16:08:02.387 INFO  Analysis report compressed in 186ms, zip size=1.8 MB
+16:08:02.715 INFO  Analysis report uploaded in 327ms
+16:08:02.718 INFO  ANALYSIS SUCCESSFUL, you can find the results at: http://localhost:9000/dashboard?id=human-deepspeedai__deepspeed
+16:08:02.719 INFO  Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+16:08:02.720 INFO  More about the report processing at http://localhost:9000/api/ce/task?id=bffb1dca-5796-44a4-a146-29fc837dd128
+16:08:02.735 INFO  Analysis total time: 12.571 s
+16:08:02.761 INFO  SonarScanner Engine completed successfully
+16:08:02.809 INFO  EXECUTION SUCCESS
+16:08:02.811 INFO  Total time: 15.283s

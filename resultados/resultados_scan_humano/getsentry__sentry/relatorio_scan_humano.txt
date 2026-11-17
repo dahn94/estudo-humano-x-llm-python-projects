@@ -1,0 +1,101 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 41 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: getsentry/sentry
+####################################################################################################
+Repositorio: https://github.com/getsentry/sentry
+Commit analisado: f96907d7c3d87e47baf540be6970b9f38c0ee602
+Link do commit: https://github.com/getsentry/sentry/commit/f96907d7c3d87e47baf540be6970b9f38c0ee602
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 296603
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 5
+  ERROR: 0
+  WARNING: 5
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 0
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 0
+  Security hotspots: 0
+  Complexidade: 32116
+  Linhas analisadas pelo SonarQube: 270709
+  Severidades: nenhuma
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: src/sentry/buffer/redis.py
+Linha: 295
+Link do codigo: https://github.com/getsentry/sentry/blob/f96907d7c3d87e47baf540be6970b9f38c0ee602/src/sentry/buffer/redis.py#L295
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 2]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: src/sentry/buffer/redis.py
+Linha: 308
+Link do codigo: https://github.com/getsentry/sentry/blob/f96907d7c3d87e47baf540be6970b9f38c0ee602/src/sentry/buffer/redis.py#L308
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 3]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: src/sentry/db/models/fields/gzippeddict.py
+Linha: 34
+Link do codigo: https://github.com/getsentry/sentry/blob/f96907d7c3d87e47baf540be6970b9f38c0ee602/src/sentry/db/models/fields/gzippeddict.py#L34
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 4]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: src/sentry/db/models/fields/node.py
+Linha: 186
+Link do codigo: https://github.com/getsentry/sentry/blob/f96907d7c3d87e47baf540be6970b9f38c0ee602/src/sentry/db/models/fields/node.py#L186
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 5]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: src/sentry/digests/codecs.py
+Linha: 21
+Link do codigo: https://github.com/getsentry/sentry/blob/f96907d7c3d87e47baf540be6970b9f38c0ee602/src/sentry/digests/codecs.py#L21
+Descricao: pickle pode executar código durante a desserialização.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE getsentry/sentry
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

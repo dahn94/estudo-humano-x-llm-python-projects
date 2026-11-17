@@ -1,0 +1,1 @@
+Coloque aqui o projeto gemini gerado com prompts/pandas-dev__pandas/prompt_recriacao.txt.

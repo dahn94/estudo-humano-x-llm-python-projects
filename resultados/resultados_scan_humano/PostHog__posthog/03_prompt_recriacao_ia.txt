@@ -1,0 +1,456 @@
+O QUE E ESTE ARQUIVO
+================================================================================
+Este e o prompt que deve ser enviado ao ChatGPT, Gemini ou Claude para recriar o projeto.
+Ele contem somente informacoes documentais publicas e a arquitetura textual inferida; o corpo do
+codigo-fonte humano nao foi incluido. A resposta da IA devera ser salva separadamente e depois
+avaliada pelas mesmas ferramentas Semgrep e SonarQube usadas no projeto humano.
+
+INSTRUCAO PARA A IA
+================================================================================
+Crie do zero um projeto Python funcionalmente semelhante ao descrito abaixo.
+REGRAS OBRIGATORIAS:
+- Nao procure, copie, traduza ou reproduza o codigo-fonte do repositorio original.
+- Use apenas README, documentacao e manifestos fornecidos neste prompt.
+- Implemente as funcionalidades publicas documentadas, validacao de entrada, tratamento de erros e testes proprios.
+- Nao inclua segredos, credenciais, caminhos absolutos ou dependencias desnecessarias.
+- Entregue todos os arquivos completos e um README de execucao.
+
+REFERENCIA: PostHog/posthog
+COMMIT DOCUMENTAL: 51b291602e718e1bf213438f33a4cb7248761851
+
+README:
+
+--- README.md ---
+<p align="center"><img src="https://posthog-static-files.s3.us-east-2.amazonaws.com/Website-Assets/rebrand/post-logo-800x156.svg" width="400px" /></p>
+
+<br />
+
+PostHog provides open-source product analytics, built for developers. Automate the collection of every event on your website or app, with no need to send data to 3rd parties. With just 1 click you can deploy on your own infrastructure, having full API/SQL access to the underlying data. 
+
+<br /><br />
+
+<img align="left" src="https://posthog-static-files.s3.us-east-2.amazonaws.com/Website-Assets/rebrand/icons/Untitled_Artwork+2.jpg" width="50px" />
+
+## Quick Start
+
+1-click Heroku deploy:
+
+<a href="https://heroku.com/deploy?template=https://github.com/posthog/posthog"><img src="https://www.herokucdn.com/deploy/button.svg" width="250px" /></a>
+
+<br /><br />
+
+<img align="left" src="https://posthog-static-files.s3.us-east-2.amazonaws.com/Website-Assets/rebrand/icons/Untitled_Artwork+3.jpg" width="50px" />
+
+## Make the Most of PostHog
+
+See [PostHog Docs](https://posthog.com/docs/) for in-depth walk-throughs on functionality.
+
+![PostHog dashboard screenshot](https://posthog-static-files.s3.us-east-2.amazonaws.com/Documentation-Assets/app-dashboard.png)
+
+Join [our PostHog Users Slack community](https://join.slack.com/t/posthogusers/shared_invite/enQtOTY0MzU5NjAwMDY3LTc2MWQ0OTZlNjhkODk3ZDI3NDVjMDE1YjgxY2I4ZjI4MzJhZmVmNjJkN2NmMGJmMzc2N2U3Yjc3ZjI5NGFlZDQ) if you need help, want to chat, or are thinking of a new feature. We're here to help - and to make PostHog even better.
+
+<br /><br />
+
+<img align="left" src="https://posthog-static-files.s3.us-east-2.amazonaws.com/Website-Assets/rebrand/icons/Untitled_Artwork+4.jpg" width="50px" />
+
+## Features
+
+- **Event-based** analytics at a user level - see which users are doing what in your application.
+- **Complete control** over your data - host it yourself.
+- **Automatically capture** clicks and page views to do analyze what your users are doing **retroactively**.
+- **Feature flags** to understand the impact of new features before rolling them out more widely
+- **Heatmaps** to understand where in your app or website people are clicking
+- **Ready-made libraries** for **[JS](https://posthog.com/docs/integrations/js-integration), [Python](https://posthog.com/docs/integrations/python-integration), [Ruby](https://posthog.com/docs/integrations/ruby-integration), [Node](https://posthog.com/docs/integrations/node-integration), [Go](https://posthog.com/docs/integrations/go-integration)** + [API](https://posthog.com/docs/integrations/api) for anything else.
+- **Beautiful data visualizations**: [graphs](https://posthog.com/docs/features/trends), [funnels](https://posthog.com/docs/features/funnels), [user cohorts](https://posthog.com/docs/features/cohorts), [user paths](https://posthog.com/docs/features/paths), [retention tables](https://posthog.com/docs/features/retention), and [dashboards](https://posthog.com/docs/features/dashboards).
+- **Analytics right on your website** with the playful [PostHog Toolbar](https://posthog.com/docs/features/toolbar).
+- **Super easy deploy** using Docker or Heroku.
+
+<br /><br />
+
+<img align="left" src="https://posthog-static-files.s3.us-east-2.amazonaws.com/Website-Assets/rebrand/icons/Untitled_Artwork+2+copy+3+1.jpg" width="50px" />
+
+## Event Autocapture
+
+<img src="https://posthog-static-files.s3.us-east-2.amazonaws.com/Documentation-Assets/action-toolbar.gif" width="100%">
+
+<br /><br />
+
+<img align="left" src="https://posthog-static-files.s3.us-east-2.amazonaws.com/Website-Assets/rebrand/icons/Untitled_Artwork+2+copy+4+1.jpg" width="50px" />
+
+## Philosophy
+
+Many engineers find it painful to work out how their products are being used. This makes design decisions tough. PostHog solves that.
+
+In our view, third-party analytics does not work anymore in a world of cookie laws, GDPR, CCPA, and many other four-letter acronyms. There should be an alternative to sending all of your customers' personal information and usage data to third-parties like Google.
+
+PostHog gives you full control over all the data from your users, while allowing anyone to do powerful analytics.
+
+This means you can know who is using your app, how they're using it, and where you lose users, among [many other things](https://posthog.com/product-features).
+
+<br /><br />
+
+<img align="left" src="https://posthog-static-files.s3.us-east-2.amazonaws.com/Website-Assets/rebrand/icons/Untitled_Artwork+2+copy+6+1.jpg" width="50px" />
+
+## What's Cool About This?
+
+PostHog is the only **product-focused** open-source analytics library, with an event and user-driven architecture. That means tracking identifiable (where applicable) user behavior, and creating user profiles. We are an open-source alternative to products such as Mixpanel, Amplitude, or Heap, that's designed to be more developer-friendly than them.
+
+There are a few session-based open-source libraries that are nice alternatives to Google Analytics. That's not what we are focused on. 
+
+<br /><br />
+
+<img align="left" src="https://posthog-static-files.s3.us-east-2.amazonaws.com/Website-Assets/rebrand/icons/Untitled_Artwork+2+copy+7+1.jpg" width="50px" />
+
+## PostHog Cloud
+
+You can [sign up for a free account](https://app.posthog.com/signup) on our hosted platform.
+
+<br /><br />
+
+<img align="left" src="https://posthog-static-files.s3.us-east-2.amazonaws.com/Website-Assets/rebrand/icons/Untitled_Artwork+2+copy+8+1.jpg" width="50px" />
+
+## Deployment Options
+
+Our suggested method for quick deployment is Heroku's one-click option:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/posthog/posthog)
+
+However, PostHog can be deployed anywhere you want! Here are step-by-step tutorials we've written for deployment options using all the major cloud providers:
+
+* [AWS](https://posthog.com/docs/deployment/deploy-aws)
+* [Microsoft Azure](https://posthog.com/docs/deployment/deploy-azure)
+* [Digital Ocean](https://posthog.com/docs/deployment/deploy-digital-ocean)
+* [Google Cloud](https://posthog.com/docs/deployment/deploy-gcs)
+* [Linode](https://posthog.com/docs/deployment/deploy-linode)
+* [Render](https://posthog.com/docs/deployment/deploy-render)
+
+<br /><br />
+
+<img align="left" src="https://posthog-static-files.s3.us-east-2.amazonaws.com/Website-Assets/rebrand/icons/Untitled_Artwork+2+copy+10+1.jpg" width="50px" />
+
+## Production Deployment
+
+[See our Docs for production deployment options.](https://posthog.com/docs/deployment)
+
+<br /><br />
+
+<img align="left" src="https://posthog-static-files.s3.us-east-2.amazonaws.com/Website-Assets/rebrand/icons/Untitled_Artwork+2+copy+11+1.jpg" width="50px" />
+
+## Developing Locally
+
+[See our Docs for instructions on developing locally.](https://posthog.com/docs/developing-locally)
+
+<br /><br />
+
+<img align="left" src="https://posthog-static-files.s3.us-east-2.amazonaws.com/Website-Assets/rebrand/icons/Untitled_Artwork+2+copy+12+1.jpg" width="50px" />
+
+## Contributing
+
+We <3 contributions big or small. [See our Docs for a guide on how to get started.](https://posthog.com/docs/contributing).
+
+Not sure where to start? [Book a free, no-pressure pairing session](mailto:tim@posthog.com?subject=Pairing%20session&body=I'd%20like%20to%20do%20a%20pairing%20session!) with one of our core contributors.
+
+<br /><br />
+
+<img align="left" src="https://posthog-static-files.s3.us-east-2.amazonaws.com/Website-Assets/rebrand/icons/Untitled_Artwork+2+copy+13+1.jpg" width="50px" />
+
+## We're hiring!
+
+Come help us make PostHog even better. We're growing fast, [and would love for you to join us](https://posthog.com/careers).
+
+<br /><br />
+
+<img align="left" src="https://posthog-static-files.s3.us-east-2.amazonaws.com/Website-Assets/rebrand/icons/Untitled_Artwork+2+copy+14+1.jpg" width="50px" />
+
+## Open-Source vs. Paid
+
+This repo is entirely [MIT licensed](/LICENSE), with the exception of the `ee` directory (if applicable). Need _absolutely 💯% FOSS_? Check out our [posthog-foss](https://github.com/PostHog/posthog-foss) repository, which is purged of all proprietary code and features.
+
+Premium features (contained in the `ee` directory) require a PostHog license. Contact us at sales@posthog.com for more information.
+
+<br /><br />
+
+<img align="left" src="https://posthog-static-files.s3.us-east-2.amazonaws.com/Website-Assets/rebrand/icons/Untitled_Artwork+2+copy+15+1.jpg" width="50px" />
+
+## Contributors 🦸
+
+[//]: contributor-faces
+<a href="https://github.com/timgl"><img src="https://avatars1.githubusercontent.com/u/1727427?v=4" title="timgl" width="50" height="50"></a>
+<a href="https://github.com/jamesefhawkins"><img src="https://avatars3.githubusercontent.com/u/47497682?v=4" title="jamesefhawkins" width="50" height="50"></a>
+<a href="https://github.com/mariusandra"><img src="https://avatars2.githubusercontent.com/u/53387?v=4" title="mariusandra" width="50" height="50"></a>
+<a href="https://github.com/EDsCODE"><img src="https://avatars0.githubusercontent.com/u/13127476?v=4" title="EDsCODE" width="50" height="50"></a>
+<a href="https://github.com/Twixes"><img src="https://avatars3.githubusercontent.com/u/4550621?v=4" title="Twixes" width="50" height="50"></a>
+<a href="https://github.com/fuziontech"><img src="https://avatars0.githubusercontent.com/u/391319?v=4" title="fuziontech" width="50" height="50"></a>
+<a href="https://github.com/ungless"><img src="https://avatars2.githubusercontent.com/u/8397061?v=4" title="ungless" width="50" height="50"></a>
+<a href="https://github.com/berntgl"><img src="https://avatars1.githubusercontent.com/u/55957336?v=4" title="berntgl" width="50" height="50"></a>
+<a href="https://github.com/lottiecoxon"><img src="https://avatars2.githubusercontent.com/u/65415371?v=4" title="lottiecoxon" width="50" height="50"></a>
+<a href="https://github.com/yakkomajuri"><img src="https://avatars2.githubusercontent.com/u/38760734?v=4" title="yakkomajuri" width="50" height="50"></a>
+<a href="https://github.com/paolodamico"><img src="https://avatars1.githubusercontent.com/u/5864173?v=4" title="paolodamico" width="50" height="50"></a>
+<a href="https://github.com/dar-mehta"><img src="https://avatars3.githubusercontent.com/u/10489943?v=4" title="dar-mehta" width="50" height="50"></a>
+<a href="https://github.com/bitbreakr"><img src="https://avatars3.githubusercontent.com/u/3123986?v=4" title="bitbreakr" width="50" height="50"></a>
+<a href="https://github.com/Tannergoods"><img src="https://avatars1.githubusercontent.com/u/60791437?v=4" title="Tannergoods" width="50" height="50"></a>
+<a href="https://github.com/casio"><img src="https://avatars0.githubusercontent.com/u/29784?v=4" title="casio" width="50" height="50"></a>
+<a href="https://github.com/andreipopovici"><img src="https://avatars0.githubusercontent.com/u/1143417?v=4" title="andreipopovici" width="50" height="50"></a>
+<a href="https://github.com/wundo"><img src="https://avatars0.githubusercontent.com/u/113942?v=4" title="wundo" width="50" height="50"></a>
+<a href="https://github.com/paulanunda"><img src="https://avatars0.githubusercontent.com/u/155981?v=4" title="paulanunda" width="50" height="50"></a>
+<a href="https://github.com/arosales"><img src="https://avatars3.githubusercontent.com/u/1707853?v=4" title="arosales" width="50" height="50"></a>
+<a href="https://github.com/ChandanSagar"><img src="https://avatars3.githubusercontent.com/u/27363164?v=4" title="ChandanSagar" width="50" height="50"></a>
+<a href="https://github.com/wadenick"><img src="https://avatars1.githubusercontent.com/u/9014043?v=4" title="wadenick" width="50" height="50"></a>
+<a href="https://github.com/jgannondo"><img src="https://avatars0.githubusercontent.com/u/28159071?v=4" title="jgannondo" width="50" height="50"></a>
+<a href="https://github.com/keladhruv"><img src="https://avatars3.githubusercontent.com/u/30433468?v=4" title="keladhruv" width="50" height="50"></a>
+<a href="https://github.com/grellyd"><img src="https://avatars1.githubusercontent.com/u/7812612?v=4" title="grellyd" width="50" height="50"></a>
+<a href="https://github.com/rberrelleza"><img src="https://avatars0.githubusercontent.com/u/475313?v=4" title="rberrelleza" width="50" height="50"></a>
+<a href="https://github.com/scottcrawford03"><img src="https://avatars1.githubusercontent.com/u/8398867?v=4" title="scottcrawford03" width="50" height="50"></a>
+<a href="https://github.com/annanay25"><img src="https://avatars2.githubusercontent.com/u/10982987?v=4" title="annanay25" width="50" height="50"></a>
+<a href="https://github.com/cohix"><img src="https://avatars3.githubusercontent.com/u/5942370?v=4" title="cohix" width="50" height="50"></a>
+<a href="https://github.com/gouthamve"><img src="https://avatars0.githubusercontent.com/u/7354143?v=4" title="gouthamve" width="50" height="50"></a>
+<a href="https://github.com/alexellis"><img src="https://avatars1.githubusercontent.com/u/6358735?v=4" title="alexellis" width="50" height="50"></a>
+<a href="https://github.com/prologic"><img src="https://avatars2.githubusercontent.com/u/1290234?v=4" title="prologic" width="50" height="50"></a>
+<a href="https://github.com/jgustie"><img src="https://avatars2.githubusercontent.com/u/883981?v=4" title="jgustie" width="50" height="50"></a>
+<a href="https://github.com/kubemq"><img src="https://avatars0.githubusercontent.com/u/45835100?v=4" title="kubemq" width="50" height="50"></a>
+<a href="https://github.com/vania-pooh"><img src="https://avatars0.githubusercontent.com/u/829320?v=4" title="vania-pooh" width="50" height="50"></a>
+<a href="https://github.com/irespaldiza"><img src="https://avatars0.githubusercontent.com/u/11633327?v=4" title="irespaldiza" width="50" height="50"></a>
+<a href="https://github.com/croomes"><img src="https://avatars0.githubusercontent.com/u/211994?v=4" title="croomes" width="50" height="50"></a>
+<a href="https://github.com/snormore"><img src="https://avatars1.githubusercontent.com/u/182290?v=4" title="snormore" width="50" height="50"></a>
+<a href="https://github.com/faik"><img src="https://avatars3.githubusercontent.com/u/43129?v=4" title="faik" width="50" height="50"></a>
+<a href="https://github.com/aandryashin"><img src="https://avatars1.githubusercontent.com/u/1412461?v=4" title="aandryashin" width="50" height="50"></a>
+<a href="https://github.com/andrewsomething"><img src="https://avatars0.githubusercontent.com/u/46943?v=4" title="andrewsomething" width="50" height="50"></a>
+<a href="https://github.com/Ferroin"><img src="https://avatars2.githubusercontent.com/u/905151?v=4" title="Ferroin" width="50" height="50"></a>
+<a href="https://github.com/cpanato"><img src="https://avatars2.githubusercontent.com/u/4115580?v=4" title="cpanato" width="50" height="50"></a>
+<a href="https://github.com/cakrit"><img src="https://avatars0.githubusercontent.com/u/43294513?v=4" title="cakrit" width="50" height="50"></a>
+<a href="https://github.com/dkhenry"><img src="https://avatars2.githubusercontent.com/u/489643?v=4" title="dkhenry" width="50" height="50"></a>
+<a href="https://github.com/oxplot"><img src="https://avatars1.githubusercontent.com/u/483682?v=4" title="oxplot" width="50" height="50"></a>
+<a href="https://github.com/marc-barry"><img src="https://avatars1.githubusercontent.com/u/4965634?v=4" title="marc-barry" width="50" height="50"></a>
+<a href="https://github.com/moabu"><img src="https://avatars3.githubusercontent.com/u/47318409?v=4" title="moabu" width="50" height="50"></a>
+<a href="https://github.com/nawazdhandala"><img src="https://avatars1.githubusercontent.com/u/2697338?v=4" title="nawazdhandala" width="50" height="50"></a>
+<a href="https://github.com/ihcsim"><img src="https://avatars1.githubusercontent.com/u/1330522?v=4" title="ihcsim" width="50" height="50"></a>
+<a href="https://github.com/maclcky132"><img src="https://avatars2.githubusercontent.com/u/55850406?v=4" title="maclcky132" width="50" height="50"></a>
+<a href="https://github.com/athreyaanand"><img src="https://avatars2.githubusercontent.com/u/31478366?v=4" title="athreyaanand" width="50" height="50"></a>
+<a href="https://github.com/alexearnshaw"><img src="https://avatars2.githubusercontent.com/u/29064556?v=4" title="alexearnshaw" width="50" height="50"></a>
+<a href="https://github.com/Algogator"><img src="https://avatars0.githubusercontent.com/u/1433469?v=4" title="Algogator" width="50" height="50"></a>
+<a href="https://github.com/callumgare"><img src="https://avatars0.githubusercontent.com/u/346340?v=4" title="callumgare" width="50" height="50"></a>
+<a href="https://github.com/DannyBen"><img src="https://avatars1.githubusercontent.com/u/2405099?v=4" title="DannyBen" width="50" height="50"></a>
+<a href="https://github.com/Epskampie"><img src="https://avatars0.githubusercontent.com/u/1692043?v=4" title="Epskampie" width="50" height="50"></a>
+<a href="https://github.com/itsjwala"><img src="https://avatars1.githubusercontent.com/u/24763310?v=4" title="itsjwala" width="50" height="50"></a>
+<a href="https://github.com/J0"><img src="https://avatars0.githubusercontent.com/u/8011761?v=4" title="J0" width="50" height="50"></a>
+<a href="https://github.com/hassan11196"><img src="https://avatars3.githubusercontent.com/u/33365802?v=4" title="hassan11196" width="50" height="50"></a>
+<a href="https://github.com/rasulkireev"><img src="https://avatars2.githubusercontent.com/u/8257474?v=4" title="rasulkireev" width="50" height="50"></a>
+<a href="https://github.com/sjain07"><img src="https://avatars2.githubusercontent.com/u/2438605?v=4" title="sjain07" width="50" height="50"></a>
+<a href="https://github.com/bhavish-agarwal"><img src="https://avatars3.githubusercontent.com/u/14195048?v=4" title="bhavish-agarwal" width="50" height="50"></a>
+<a href="https://github.com/gzog"><img src="https://avatars0.githubusercontent.com/u/1487006?v=4" title="gzog" width="50" height="50"></a>
+<a href="https://github.com/Tmunayyer"><img src="https://avatars2.githubusercontent.com/u/29887304?v=4" title="Tmunayyer" width="50" height="50"></a>
+<a href="https://github.com/macobo"><img src="https://avatars0.githubusercontent.com/u/148820?v=4" title="macobo" width="50" height="50"></a>
+<a href="https://github.com/SanketDG"><img src="https://avatars3.githubusercontent.com/u/8980971?v=4" title="SanketDG" width="50" height="50"></a>
+<a href="https://github.com/14MR"><img src="https://avatars1.githubusercontent.com/u/5824170?v=4" title="14MR" width="50" height="50"></a>
+<a href="https://github.com/03difoha"><img src="https://avatars3.githubusercontent.com/u/8876615?v=4" title="03difoha" width="50" height="50"></a>
+<a href="https://github.com/Kacppian"><img src="https://avatars1.githubusercontent.com/u/14990078?v=4" title="Kacppian" width="50" height="50"></a>
+<a href="https://github.com/iM
+a"><img src="https://avatars3.githubusercontent.com/u/487897?v=4" title="iMerica" width="50" height="50"></a>
+<a href="https://github.com/pedroapfilho"><img src="https://avatars2.githubusercontent.com/u/13142568?v=4" title="pedroapfilho" width="50" height="50"></a>
+<a href="https://github.com/eLRuLL"><img src="https://avatars3.githubusercontent.com/u/1459486?v=4" title="eLRuLL" width="50" height="50"></a>
+<a href="https://github.com/samcaspus"><img src="https://avatars0.githubusercontent.com/u/19220113?v=4" title="samcaspus" width="50" height="50"></a>
+<a href="https://github.com/anoopemacs"><img src="https://avatars3.githubusercontent.com/u/12211622?v=4" title="anoopemacs" width="50" height="50"></a>
+<a href="https://github.com/CaseGuide"><img src="https://avatars2.githubusercontent.com/u/33905722?v=4" title="CaseGuide" width="50" height="50"></a>
+<a href="https://github.com/budnik"><img src="https://avatars0.githubusercontent.com/u/1160699?v=4" title="budnik" width="50" height="50"></a>
+<a href="https://github.com/ellie"><img src="https://avatars1.githubusercontent.com/u/53315310?v=4" title="ellie" width="50" height="50"></a>
+<a href="https://github.com/tirkarthi"><img src="https://avatars3.githubusercontent.com/u/3972343?v=4" title="tirkarthi" width="50" height="50"></a>
+<a href="https://github.com/mrkurt"><img src="https://avatars1.githubusercontent.com/u/7724?v=4" title="mrkurt" width="50" height="50"></a>
+<a href="https://github.com/manuelfcreis"><img src="https://avatars1.githubusercontent.com/u/29898180?v=4" title="manuelfcreis" width="50" height="50"></a>
+<a href="https://github.com/maximmarakov"><img src="https://avatars1.githubusercontent.com/u/36736392?v=4" title="maximmarakov" width="50" height="50"></a>
+<a href="https://github.com/mikeabrahamsen"><img src="https://avatars2.githubusercontent.com/u/467659?v=4" title="mikeabrahamsen" width="50" height="50"></a>
+<a href="https://github.com/OriPekelman"><img src="https://avatars1.githubusercontent.com/u/138636?v=4" title="OriPekelman" width="50" height="50"></a>
+<a href="https://github.com/sac0"><img src="https://avatars2.githubusercontent.com/u/20946852?v=4" title="sac0" width="50" height="50"></a>
+<a href="https://github.com/sanketsaurav"><img src="https://avatars2.githubusercontent.com/u/881122?v=4" title="sanketsaurav" width="50" height="50"></a>
+<a href="https://github.com/solnsubuga"><img src="https://avatars3.githubusercontent.com/u/23418080?v=4" title="solnsubuga" width="50" height="50"></a>
+<a href="https://github.com/anandvenkat4"><img src="https://avatars2.githubusercontent.com/u/3582757?v=4" title="anandvenkat4" width="50" height="50"></a>
+<a href="https://github.com/abhijitghate"><img src="https://avatars2.githubusercontent.com/u/11834249?v=4" title="abhijitghate" width="50" height="50"></a>
+<a href="https://github.com/Jujhar"><img src="https://avatars0.githubusercontent.com/u/5521110?v=4" title="Jujhar" width="50" height="50"></a>
+<a href="https://github.com/dts"><img src="https://avatars0.githubusercontent.com/u/273856?v=4" title="dts" width="50" height="50"></a>
+<a href="https://github.com/rushabhnagda11"><img src="https://avatars1.githubusercontent.com/u/3235568?v=4" title="rushabhnagda11" width="50" height="50"></a>
+
+
+DOCUMENTACAO PUBLICA:
+
+
+MANIFESTOS PUBLICOS:
+
+--- pyproject.toml ---
+[tool.black]
+line-length = 120
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 8
+ensure_newline_before_comments = true
+line_length = 120
+--- requirements-dev.txt ---
+#
+# This file is autogenerated by pip-compile
+# To update, run:
+#
+#    pip-compile requirements-dev.in
+#
+appdirs==1.4.4            # via black
+asgiref==3.2.7            # via django
+attrs==19.3.0             # via black, flake8-bugbear
+black==19.10b0            # via -r requirements-dev.in
+click==7.1.1              # via black, pip-tools
+django-debug-toolbar==2.2  # via -r requirements-dev.in
+django-stubs==1.5.0       # via -r requirements-dev.in, djangorestframework-stubs
+django==3.0.6             # via django-debug-toolbar, django-stubs
+djangorestframework-stubs==1.1.0  # via -r requirements-dev.in
+entrypoints==0.3          # via flake8
+fakeredis==1.4.4          # via -r requirements-dev.in
+flake8-bugbear==20.1.4    # via -r requirements-dev.in
+flake8-colors==0.1.6      # via -r requirements-dev.in
+flake8-commas==2.0.0      # via -r requirements-dev.in
+flake8-comprehensions==3.2.2  # via -r requirements-dev.in
+flake8-import-order==0.18.1  # via -r requirements-dev.in
+flake8-logging-format==0.6.0  # via -r requirements-dev.in
+flake8-print==3.1.4       # via -r requirements-dev.in
+flake8==3.7.9             # via -r requirements-dev.in, flake8-bugbear, flake8-colors, flake8-commas, flake8-comprehensions, flake8-print
+freezegun==0.3.15         # via -r requirements-dev.in
+isort==5.2.2              # via -r requirements-dev.in
+mccabe==0.6.1             # via flake8
+mypy-extensions==0.4.3    # via -r requirements-dev.in, mypy
+mypy==0.770               # via -r requirements-dev.in, django-stubs, djangorestframework-stubs
+packaging==20.4           # via -r requirements-dev.in
+pathspec==0.8.0           # via black
+pip-tools==5.0.0          # via -r requirements-dev.in
+pycodestyle==2.5.0        # via flake8, flake8-import-order, flake8-print
+pyflakes==2.1.1           # via flake8
+pyparsing==2.4.7          # via packaging
+python-dateutil==2.8.1    # via freezegun
+pytz==2020.1              # via django
+redis==3.5.3              # via fakeredis
+regex==2020.6.8           # via black
+six==1.14.0               # via fakeredis, flake8-print, freezegun, packaging, pip-tools, python-dateutil
+sortedcontainers==2.3.0   # via fakeredis
+sqlparse==0.3.1           # via django, django-debug-toolbar
+toml==0.10.1              # via black
+typed-ast==1.4.1          # via black, mypy
+typing-extensions==3.7.4.2  # via django-stubs, djangorestframework-stubs, mypy
+
+# The following packages are considered to be unsafe in a requirements file:
+# pip
+# setuptools
+
+--- requirements.txt ---
+#
+# This file is autogenerated by pip-compile
+# To update, run:
+#
+#    pip-compile requirements.in
+#
+aioch==0.0.2              # via -r requirements.in
+amqp==2.5.2               # via -r requirements.in, kombu
+asgiref==3.2.7            # via -r requirements.in, django
+backoff==1.6.0            # via posthoganalytics
+billiard==3.6.3.0         # via celery
+celery-redbeat==0.13.0    # via -r requirements.in
+celery==4.4.2             # via -r requirements.in, celery-redbeat
+certifi==2019.11.28       # via requests, sentry-sdk
+cffi==1.14.0              # via cryptography
+chardet==3.0.4            # via requests
+clickhouse-driver==0.1.4  # via -r requirements.in, aioch, clickhouse-pool
+clickhouse-pool==0.4.0    # via -r requirements.in
+cryptography==3.2         # via kafka-helper, social-auth-core
+cssselect==1.1.0          # via toronado
+cssutils==1.0.2           # via toronado
+defusedxml==0.6.0         # via -r requirements.in, python3-openid, social-auth-core
+dj-database-url==0.5.0    # via -r requirements.in
+django-axes==5.9.0        # via -r requirements.in
+django-cors-headers==3.5.0  # via -r requirements.in
+django-deprecate-fields==0.1.0  # via -r requirements.in
+django-extensions==3.0.9  # via -r requirements.in
+django-filter==2.4.0      # via -r requirements.in
+django-ipware==3.0.2      # via django-axes
+django-loginas==0.3.9     # via -r requirements.in
+django-redis==4.12.1      # via -r requirements.in
+git+https://github.com/zapier/django-rest-hooks.git@v1.6.0  # via -r requirements.in
+django-statsd==2.5.2      # via -r requirements.in
+django==3.0.11            # via -r requirements.in, django-axes, django-cors-headers, django-deprecate-fields, django-filter, django-redis, django-rest-hooks, djangorestframework
+djangorestframework-csv==2.1.0  # via -r requirements.in
+djangorestframework==3.12.1  # via -r requirements.in, djangorestframework-csv, drf-exceptions-hog, drf-extensions
+drf-exceptions-hog==0.0.4  # via -r requirements.in
+drf-extensions==0.6.0     # via -r requirements.in
+future==0.18.2            # via lzstring
+grpcio==1.33.1            # via -r requirements.in
+gunicorn==20.0.4          # via -r requirements.in
+idna==2.8                 # via -r requirements.in, requests
+importlib-metadata==1.6.0  # via -r requirements.in
+infi.clickhouse-orm==2.1.0  # via -r requirements.in
+iso8601==0.1.12           # via infi.clickhouse-orm
+kafka-helper==0.2         # via -r requirements.in
+kafka-python==2.0.1       # via -r requirements.in
+kombu==4.6.8              # via -r requirements.in, celery
+lxml==4.6.1               # via toronado
+lzstring==1.0.4           # via -r requirements.in
+monotonic==1.5            # via posthoganalytics
+numpy==1.18.1             # via -r requirements.in, pandas
+oauthlib==3.1.0           # via requests-oauthlib, social-auth-core
+pandas==1.1.3             # via -r requirements.in
+parso==0.6.1              # via -r requirements.in
+pexpect==4.7.0            # via -r requirements.in
+pickleshare==0.7.5        # via -r requirements.in
+posthoganalytics==1.1.3   # via -r requirements.in
+protobuf==3.13.0          # via -r requirements.in
+psycopg2-binary==2.8.4    # via -r requirements.in
+ptyprocess==0.6.0         # via pexpect
+pycparser==2.20           # via cffi
+pyjwt==1.7.1              # via social-auth-core
+python-dateutil==2.8.1    # via -r requirements.in, celery-redbeat, pandas, posthoganalytics
+python-statsd==2.1.0      # via -r requirements.in, django-statsd
+python3-openid==3.1.0     # via -r requirements.in, social-auth-core
+pytz==2019.3              # via -r requirements.in, celery, clickhouse-driver, django, infi.clickhouse-orm, pandas, tzlocal
+redis==3.4.1              # via -r requirements.in, celery-redbeat, django-redis
+requests-oauthlib==1.3.0  # via -r requirements.in, social-auth-core
+requests==2.22.0          # via -r requirements.in, django-rest-hooks, infi.clickhouse-orm, posthoganalytics, requests-oauthlib, social-auth-core
+sentry-sdk==0.19.2        # via -r requirements.in
+six==1.14.0               # via cryptography, djangorestframework-csv, grpcio, posthoganalytics, protobuf, python-dateutil, social-auth-app-django, social-auth-core, tenacity
+social-auth-app-django==3.1.0  # via -r requirements.in
+social-auth-core==3.3.3   # via -r requirements.in, social-auth-app-django
+sqlparse==0.3.0           # via django
+tenacity==6.1.0           # via celery-redbeat
+toronado==0.0.11          # via -r requirements.in
+tzlocal==2.1              # via clickhouse-driver
+unicodecsv==0.14.1        # via djangorestframework-csv
+urllib3==1.25.8           # via requests, sentry-sdk
+vine==1.3.0               # via amqp, celery
+whitenoise==5.0.1         # via -r requirements.in
+zipp==3.1.0               # via importlib-metadata
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools
+
+
+ARQUITETURA TEXTUAL INFERIDA:
+PROJETO
+|
++-- Documentacao e configuracao
+|   +-- CHANGELOG.md
+|   +-- CODE_OF_CONDUCT.md
+|   +-- CONTRIBUTING.md
+|   +-- README.md
+|   +-- docker-compose-config.py
+|   +-- gunicorn.config.py
+|   +-- manage.py
+|   +-- pyproject.toml
+|   +-- requirements-dev.txt
+|   +-- requirements.txt
+|
++-- Modulos/dominios visiveis
+|   +-- .github/
+|   +-- .platform/
+|   +-- cypress/
+|   +-- ee/
+|   +-- plugins/
+|   +-- posthog/
+|
++-- Entradas e interfaces descritas no README
+|   +-- configuracao/parametros
+|   +-- processamento principal
+|   +-- saidas/resultados
+|
++-- Testes proprios a serem criados pela IA

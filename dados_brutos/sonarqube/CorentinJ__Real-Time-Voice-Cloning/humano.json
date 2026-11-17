@@ -1,0 +1,58 @@
+{
+  "component": {
+    "key": "human-corentinj__real-time-voice-cloning",
+    "name": "Humano - CorentinJ__Real-Time-Voice-Cloning",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "bugs",
+        "value": "5",
+        "bestValue": false
+      },
+      {
+        "metric": "complexity",
+        "value": "929"
+      },
+      {
+        "metric": "code_smells",
+        "value": "203",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_reliability_issues",
+        "value": "22",
+        "bestValue": false
+      },
+      {
+        "metric": "ncloc",
+        "value": "5465"
+      },
+      {
+        "metric": "software_quality_maintainability_issues",
+        "value": "199",
+        "bestValue": false
+      },
+      {
+        "metric": "software_quality_security_issues",
+        "value": "5",
+        "bestValue": false
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "5",
+        "bestValue": false
+      },
+      {
+        "metric": "security_hotspots",
+        "value": "0",
+        "bestValue": true
+      }
+    ]
+  },
+  "issues_summary": {
+    "issues": [],
+    "paging": {
+      "total": 0
+    }
+  }
+}

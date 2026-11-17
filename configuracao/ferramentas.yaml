@@ -1,0 +1,18 @@
+semgrep:
+  produto: "Semgrep OSS"
+  versao: "1.176.1"
+  regras: "p/default"
+  metricas: "off"
+  escopo: "todos os arquivos suportados pela politica"
+
+sonarqube:
+  produto: "SonarQube Community Build"
+  versao: "26.9.0.129388"
+  quality_profile: "Sonar way"
+  scanner: "8.0.1.6346"
+  escopo: "**/*.py"
+
+comparacao:
+  normalizar_por_kloc: true
+  somar_resultados_das_ferramentas: false
+  preservar_json_bruto: true

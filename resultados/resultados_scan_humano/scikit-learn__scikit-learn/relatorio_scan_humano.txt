@@ -1,0 +1,128 @@
+====================================================================================================
+RELATORIO DO BASELINE HUMANO - SEMGREP E SONARQUBE
+====================================================================================================
+
+Repositorio 20 da configuracao atual.
+Este arquivo contem somente os resultados deste GitHub.
+Os resultados do Semgrep e SonarQube nao devem ser somados, pois podem apontar o mesmo problema.
+
+####################################################################################################
+GITHUB: scikit-learn/scikit-learn
+####################################################################################################
+Repositorio: https://github.com/scikit-learn/scikit-learn
+Commit analisado: 6b4f82433dc2f219dbff7fe8fa42c10b72379be6
+Link do commit: https://github.com/scikit-learn/scikit-learn/commit/6b4f82433dc2f219dbff7fe8fa42c10b72379be6
+Grupo metodologico: amostra_popular
+Linhas Python aproximadas: 226829
+
+----------------------------------------------------------------------------------------------------
+RESUMO DESTE REPOSITORIO
+----------------------------------------------------------------------------------------------------
+
+SEMGREP
+  Total de achados: 8
+  ERROR: 1
+  WARNING: 7
+  INFO: 0
+  Erros operacionais: 0
+
+SONARQUBE
+  Total de issues: 0
+  Vulnerabilidades: 0
+  Bugs: 0
+  Code smells: 0
+  Security hotspots: 0
+  Complexidade: 19690
+  Linhas analisadas pelo SonarQube: 143259
+  Severidades: nenhuma
+
+CWEs ENCONTRADAS PELO SEMGREP
+  Nenhuma CWE informada.
+
+----------------------------------------------------------------------------------------------------
+SCAN 1 - SEMGREP: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+[SEMGREP 1]
+Severidade: ERROR
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-dangerous-eval
+CWE: nao informada
+Arquivo: asv_benchmarks/benchmarks/common.py
+Linha: 27
+Link do codigo: https://github.com/scikit-learn/scikit-learn/blob/6b4f82433dc2f219dbff7fe8fa42c10b72379be6/asv_benchmarks/benchmarks/common.py#L27
+Descricao: Uso de eval pode permitir execução de código não confiável.
+
+[SEMGREP 2]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: asv_benchmarks/benchmarks/common.py
+Linha: 158
+Link do codigo: https://github.com/scikit-learn/scikit-learn/blob/6b4f82433dc2f219dbff7fe8fa42c10b72379be6/asv_benchmarks/benchmarks/common.py#L158
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 3]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: asv_benchmarks/benchmarks/common.py
+Linha: 197
+Link do codigo: https://github.com/scikit-learn/scikit-learn/blob/6b4f82433dc2f219dbff7fe8fa42c10b72379be6/asv_benchmarks/benchmarks/common.py#L197
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 4]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: asv_benchmarks/benchmarks/common.py
+Linha: 225
+Link do codigo: https://github.com/scikit-learn/scikit-learn/blob/6b4f82433dc2f219dbff7fe8fa42c10b72379be6/asv_benchmarks/benchmarks/common.py#L225
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 5]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: benchmarks/bench_plot_randomized_svd.py
+Linha: 122
+Link do codigo: https://github.com/scikit-learn/scikit-learn/blob/6b4f82433dc2f219dbff7fe8fa42c10b72379be6/benchmarks/bench_plot_randomized_svd.py#L122
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 6]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: sklearn/datasets/_twenty_newsgroups.py
+Linha: 248
+Link do codigo: https://github.com/scikit-learn/scikit-learn/blob/6b4f82433dc2f219dbff7fe8fa42c10b72379be6/sklearn/datasets/_twenty_newsgroups.py#L248
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 7]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: sklearn/utils/estimator_checks.py
+Linha: 1623
+Link do codigo: https://github.com/scikit-learn/scikit-learn/blob/6b4f82433dc2f219dbff7fe8fa42c10b72379be6/sklearn/utils/estimator_checks.py#L1623
+Descricao: pickle pode executar código durante a desserialização.
+
+[SEMGREP 8]
+Severidade: WARNING
+Regra: mnt.c.Users.felipe.fidelis.OneDrive-VisionCybersecurity.readeTrabalho.trabalhomestrado.python_prellm_pipeline.pipeline_interno.python-insecure-pickle-load
+CWE: nao informada
+Arquivo: sklearn/utils/estimator_checks.py
+Linha: 2563
+Link do codigo: https://github.com/scikit-learn/scikit-learn/blob/6b4f82433dc2f219dbff7fe8fa42c10b72379be6/sklearn/utils/estimator_checks.py#L2563
+Descricao: pickle pode executar código durante a desserialização.
+
+ERROS OPERACIONAIS DO SEMGREP
+Nenhum.
+
+----------------------------------------------------------------------------------------------------
+SCAN 2 - SONARQUBE: DETALHAMENTO
+----------------------------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------------------
+FIM DO RELATORIO DE scikit-learn/scikit-learn
+Classificacao: COM ACHADOS
+----------------------------------------------------------------------------------------------------

@@ -1,0 +1,1 @@
+Coloque aqui o projeto claude gerado com prompts/deepspeedai__DeepSpeed/prompt_recriacao.txt.
