@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Se usar este artefato, cite o trabalho abaixo."
+title: "Comparação de vulnerabilidades em código desenvolvido por humanos e código gerado por LLMs"
+type: software
+date-released: 2026-11-16
+authors:
+  - family-names: "Santana"
+    given-names: "Daniel Arruda de"
+    affiliation: "Universidade Estadual de Maringá (UEM)"
+  - family-names: "Nascimento"
+    given-names: "Felipe Fidelis do"
+    affiliation: "Universidade Estadual de Maringá (UEM)"
+  - family-names: "Dacie"
+    given-names: "Gabriel Valentim de Oliveira"
+    affiliation: "Universidade Estadual de Maringá (UEM)"
+  - family-names: "Alberti"
+    given-names: "Luciano Trevisan"
+    affiliation: "Universidade Estadual de Maringá (UEM)"
+keywords:
+  - "LLM"
+  - "segurança de software"
+  - "análise estática"
+  - "Semgrep"
+  - "SonarQube"
+  - "qualidade de software"

@@ -1,11 +1,31 @@
 # Vulnerabilidades em código humano vs. código gerado por LLMs
 
 Artefato de reprodução do trabalho **"Comparação de vulnerabilidades em código
-desenvolvido por humanos e código gerado por LLMs"** — Qualidade de Software,
-Departamento de Informática, Universidade Estadual de Maringá (UEM), 2026.
+desenvolvido por humanos e código gerado por LLMs"**, apresentado na disciplina
+de Qualidade de Software do Programa de Pós-Graduação do Departamento de
+Informática da Universidade Estadual de Maringá (UEM), 2026.
 
-Autores: Daniel Arruda de Santana, Felipe Fidelis do Nascimento,
-Gabriel Valentim de Oliveira Dacie, Luciano Trevisan Alberti.
+## Autores
+
+- Daniel Arruda de Santana
+- Felipe Fidelis do Nascimento
+- Gabriel Valentim de Oliveira Dacie
+- Luciano Trevisan Alberti
+
+Departamento de Informática – Universidade Estadual de Maringá (UEM)
+Av. Colombo, 5790 – 87.020-900 – Maringá – PR – Brasil
+
+## Resumo
+
+Estudo de casos múltiplos, quantitativo e comparativo, entre código
+desenvolvido por humanos e código gerado por ChatGPT, Claude e Gemini. De 50
+repositórios Python populares, 16 foram mantidos após leitura em pares do
+README. O snapshot de cada projeto em 31/12/2020 serve de referência humana, e
+cada LLM reconstrói o projeto a partir do README. As quatro origens passam pelo
+Semgrep e pelo SonarQube com a mesma configuração, e os resultados são
+comparados em números absolutos e por mil linhas de código.
+
+## Questão de pesquisa
 
 > Quais diferenças são observadas na quantidade e na densidade de ocorrências
 > relacionadas à segurança entre código humano e código gerado por LLMs, quando
@@ -124,3 +144,29 @@ a entregou, com um `metadata_geracao.json` opcional:
 Uma geração por modelo; README como especificação; equivalência funcional não
 demonstrada; falsos positivos e negativos da análise estática; 16 projetos
 Python populares. Ver seção 5 do artigo.
+
+## Como citar
+
+```bibtex
+@misc{santana2026vulnerabilidades,
+  title        = {Comparação de vulnerabilidades em código desenvolvido por humanos e código gerado por {LLMs}},
+  author       = {Santana, Daniel Arruda de and Nascimento, Felipe Fidelis do and Dacie, Gabriel Valentim de Oliveira and Alberti, Luciano Trevisan},
+  year         = {2026},
+  institution  = {Departamento de Informática, Universidade Estadual de Maringá},
+  note         = {Trabalho da disciplina de Qualidade de Software}
+}
+```
+
+Os metadados de citação também estão em `CITATION.cff`.
+
+## Referências do trabalho
+
+- Cotroneo, D.; Improta, C.; Liguori, P. (2025). *Human-written vs. AI-generated code: A large-scale study of defects, vulnerabilities, and complexity.* IEEE ISSRE.
+- Cotroneo, D.; Improta, C.; Liguori, P. (2026). *What is the difference between me and you? Benchmarking the quality gap between human-written and AI-generated code.*
+- Eltabakh, T. M.; Soudi, N. N.; Shawky, D. (2024). *Quality of AI-generated vs. human-generated code.* ICCTA, IEEE.
+- Molison, A. S. et al. (2025). *Is LLM-generated code more maintainable & reliable than human-written code?* ESEM, pp. 151–162.
+- Runeson, P.; Höst, M. (2009). *Guidelines for conducting and reporting case study research in software engineering.* Empirical Software Engineering, 14:131–164.
+
+Os repositórios analisados pertencem a seus respectivos autores e licenças;
+este artefato registra apenas o commit de referência e os resultados das
+ferramentas sobre eles.
